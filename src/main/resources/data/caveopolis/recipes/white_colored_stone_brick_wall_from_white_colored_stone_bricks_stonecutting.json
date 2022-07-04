@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "caveopolis:white_colored_stone_bricks"
+  },
+  "result": "caveopolis:white_colored_stone_brick_wall",
+  "count": 1
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM"
+  ],
+  "key": {
+    "M": {
+      "item": "minecraft:moss_carpet"
+    }
+  },
+  "result": {
+    "item": "caveopolis:mossy_string"
+  }
+}

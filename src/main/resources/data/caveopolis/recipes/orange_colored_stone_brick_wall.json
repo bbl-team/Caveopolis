@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "caveopolis:orange_colored_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "caveopolis:orange_colored_stone_brick_wall",
+    "count": 6
+  }
+}

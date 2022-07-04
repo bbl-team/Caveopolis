@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE"
+  ],
+  "key": {
+    "E": {
+      "item": "caveopolis:lime_colored_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "caveopolis:lime_colored_stone_brick_slab",
+    "count": 6
+  }
+}

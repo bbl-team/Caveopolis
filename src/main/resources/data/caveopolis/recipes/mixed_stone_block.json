@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "12",
+    "34"
+  ],
+  "key": {
+    "1": {
+      "item": "caveopolis:granite_pebble"
+    },
+    "2": {
+      "item": "caveopolis:andesite_pebble"
+    },
+    "3": {
+      "item": "caveopolis:stone_pebble"
+    },
+    "4": {
+      "item": "caveopolis:diorite_pebble"
+    }
+  },
+  "result": {
+    "item": "caveopolis:mixed_stone_block"
+  }
+}

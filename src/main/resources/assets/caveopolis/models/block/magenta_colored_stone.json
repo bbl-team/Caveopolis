@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "caveopolis:block/magenta_colored_stone"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "caveopolis:lime_colored_stone"
+  },
+  "result": "caveopolis:lime_colored_stone_wall",
+  "count": 1
+}

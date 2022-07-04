@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "S",
+    "S"
+  ],
+  "key": {
+    "S": {
+      "tag": "forge:stone"
+    }
+  },
+  "result": {
+    "item": "caveopolis:stone_stick",
+    "count": 4
+  }
+}

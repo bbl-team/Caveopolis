@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "caveopolis:block/lime_colored_stone_bricks",
+    "bottom": "caveopolis:block/lime_colored_stone_bricks",
+    "top": "caveopolis:block/lime_colored_stone_bricks"
+  }
+}

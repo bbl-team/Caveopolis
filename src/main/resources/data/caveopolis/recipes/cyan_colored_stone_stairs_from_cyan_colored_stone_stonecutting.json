@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "caveopolis:cyan_colored_stone"
+  },
+  "result": "caveopolis:cyan_colored_stone_stairs",
+  "count": 1
+}

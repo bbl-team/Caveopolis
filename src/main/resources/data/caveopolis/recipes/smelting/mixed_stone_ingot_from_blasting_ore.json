@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "caveopolis:mixed_stone_ore"
+  },
+  "result": "caveopolis:mixed_stone_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}
