@@ -21,4 +21,4 @@ jobs:
           file_path: "build/libs/caveopolis-${{steps.build.outputs.version}}.jar"
           game_endpoint: "minecraft"
           project_id: "639186"
-          token: "ab822699-f4fe-425e-ab9d-1b001019511b"
+          token: "${{ secrets.TOKEN_CURSEFORGE }}"
