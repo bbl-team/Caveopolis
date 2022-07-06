@@ -20,6 +20,6 @@ jobs:
         with:
           file_path: "build/libs/caveopolis-${{steps.build.outputs.version}}.jar"
           game_endpoint: "minecraft"
-          game_versions: "Minecraft 1.18:2.18.2,Java 17,Forge"
+          game_versions: "Minecraft 1.18:1.18.2,Java 17,Forge"
           project_id: "639186"
           token: "${{ secrets.token_secret }}"
