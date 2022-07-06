@@ -11,10 +11,6 @@ buildscript {
     }
 }
 
-plugins {
-    id 'com.matthewprenger.cursegradle' version '1.4.0'
-}
-
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
@@ -200,30 +196,3 @@ jar {
 }
 
 jar.finalizedBy('reobfJar')
-
-
-if (System.getenv("CURSEFORGE")) {
-    curseforge {
-        apiKey = 'ab822699-f4fe-425e-ab9d-1b001019511b'
-        project {
-            id = '639186'
-            changelog = 'Some changes'
-            releaseType = 'alpha'
-            addGameVersion '1.18.2'
-
-            mainArtifact(jar) {
-                displayName = "caveopolis $project.version"
-            }
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
