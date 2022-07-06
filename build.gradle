@@ -202,17 +202,18 @@ jar {
 jar.finalizedBy('reobfJar')
 
 
-if (System.getenv("CURSEFORGE"))
+if (System.getenv("CURSEFORGE")) {
     curseforge {
-        apiKey = System.getenv("CURSEFORGE")
+        apiKey = 'ab822699-f4fe-425e-ab9d-1b001019511b'
         project {
-          id = '639186'
-          changelog = 'Some changes'
-          releaseType = 'alpha'
-         addGameVersion '1.18.2'
+            id = '639186'
+            changelog = 'Some changes'
+            releaseType = 'alpha'
+            addGameVersion '1.18.2'
 
-         mainArtifact(jar) {
-               displayName = "caveopolis $project.version"
+            mainArtifact(jar) {
+                displayName = "caveopolis $project.version"
+            }
         }
     }
 }
