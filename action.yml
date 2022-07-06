@@ -23,4 +23,4 @@ jobs:
           relations: "fabric-api:requiredDependency"
           game_versions: "Minecraft 1.18:1.18.1,Java 17,Fabric"
           project_id: "0"
-          token: "${{ secrets.CF_API_TOKEN }}"
+          token: "${{ secrets.token_secret }}"
