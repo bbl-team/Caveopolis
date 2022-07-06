@@ -19,7 +19,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
 group = 'com.benbenlaw.caveopolis'
-version = '1.18.2-3.0'
+version = '1.18.2-3.1'
 
 java {
     archivesBaseName = 'caveopolis'
@@ -201,21 +201,28 @@ jar {
 
 jar.finalizedBy('reobfJar')
 
-if (System.getenv("CURSEFORGE")) {
+
+if (System.getenv("CURSEFORGE"))
     curseforge {
         apiKey = System.getenv("CURSEFORGE")
         project {
-            id = "639186"
-            addGameVersion mc_version
-            changelogType = "markdown"
-            changelog = file("run/changelog.md")
-            releaseType = "release"
-            mainArtifact(jar) {
-                displayName = "caveopolis-${project.version}"
-            }
-            addArtifact(apiJar) {
-                displayName = "caveopolis-${project.version}-api"
-            }
+          id = '639186'
+          changelog = 'Some changes'
+          releaseType = 'alpha'
+         addGameVersion '1.18.2'
+
+         mainArtifact(jar) {
+               displayName = "caveopolis $project.version"
         }
     }
 }
+
+
+
+
+
+
+
+
+
+

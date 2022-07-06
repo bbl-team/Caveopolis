@@ -113,6 +113,13 @@ public class ModItems {
     public static final RegistryObject<Item> MIXED_STONE_FRAGMENT = ITEMS.register("mixed_stone_fragment",
             () -> new Item(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
 
+    public static final RegistryObject<Item> URANIUM_FRAGMENT = ITEMS.register("uranium_fragment",
+            () -> new Item(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
+
+
+
+
+
     public static final RegistryObject<Item> RAW_MIXED_STONE = ITEMS.register("raw_mixed_stone",
             () -> new Item(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
 
