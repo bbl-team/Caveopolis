@@ -2,6 +2,7 @@ package com.benbenlaw.caveopolis;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.item.ModItems;
+import com.benbenlaw.caveopolis.world.ModWorldEvents;
 import com.sun.security.auth.login.ConfigFile;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;

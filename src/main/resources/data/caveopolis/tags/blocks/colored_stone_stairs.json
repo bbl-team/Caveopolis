@@ -16,6 +16,8 @@
     "caveopolis:white_colored_stone_stairs",
     "caveopolis:brown_colored_stone_stairs",
     "caveopolis:orange_colored_stone_stairs",
-    "caveopolis:cyan_colored_stone_stairs"
+    "caveopolis:cyan_colored_stone_stairs",
+
+    "minecraft:stone_stairs"
   ]
 }

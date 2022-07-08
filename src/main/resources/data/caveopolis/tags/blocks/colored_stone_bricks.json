@@ -16,6 +16,8 @@
     "caveopolis:white_colored_stone_bricks",
     "caveopolis:brown_colored_stone_bricks",
     "caveopolis:orange_colored_stone_bricks",
-    "caveopolis:cyan_colored_stone_bricks"
+    "caveopolis:cyan_colored_stone_bricks",
+
+    "minecraft:stone_bricks"
   ]
 }

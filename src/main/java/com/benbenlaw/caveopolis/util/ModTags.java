@@ -24,6 +24,9 @@ public class ModTags {
         public static final TagKey<Block> COLORED_STONE_WALL = tag("colored_stone_wall");
         public static final TagKey<Block> COLORED_STONE_BRICK_WALL = tag("colored_stone_brick_wall");
 
+        public static final TagKey<Block> COLORED_STONE_SLABS = tag("colored_stone_slabs");
+        public static final TagKey<Block> COLORED_STONE_BRICK_SLABS = tag("colored_stone_brick_slabs");
+
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Caveopolis.MOD_ID, name));
         }

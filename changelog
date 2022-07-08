@@ -1,5 +1,15 @@
 Caveopolis Mod Changelog
 
+4.0
+
+Added spray cans (used to color blocks in world, works on vanilla stone block and bricks too!)
+Added spray can remover
+Changed gray stone brick texture (was to dark)
+Added spray can remover (removes spray color off blocks and turns them into there vanilla variant)
+Added recipes for spray cans
+Added mixed stone ore world gen (between 0-80)
+
+
 3.0
 
 Fixed redstone fragment name

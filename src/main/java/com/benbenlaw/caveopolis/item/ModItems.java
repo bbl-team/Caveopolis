@@ -2,20 +2,13 @@ package com.benbenlaw.caveopolis.item;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
-import com.benbenlaw.caveopolis.block.custom.StoneTorchBlock;
-import com.benbenlaw.caveopolis.block.custom.StoneWallTorchBlock;
-import com.benbenlaw.caveopolis.item.custom.CoalFragment;
+import com.benbenlaw.caveopolis.item.custom.*;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.StandingAndWallBlockItem;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
@@ -24,8 +17,60 @@ public class ModItems {
 
     //New Items
 
-    public static final RegistryObject<Item> WHITE_PAINTER = ITEMS.register("white_painter",
-            () -> new Item(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+    public static final RegistryObject<Item> WHTIE_SPRAY_CAN = ITEMS.register("white_spray_can",
+            () -> new WhiteSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> GRAY_SPRAY_CAN = ITEMS.register("gray_spray_can",
+            () -> new GraySprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> LIGHT_GRAY_SPRAY_CAN = ITEMS.register("light_gray_spray_can",
+            () -> new LightGraySprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> PINK_SPRAY_CAN = ITEMS.register("pink_spray_can",
+            () -> new PinkSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> LIME_SPRAY_CAN = ITEMS.register("lime_spray_can",
+            () -> new LimeSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> YELLOW_SPRAY_CAN = ITEMS.register("yellow_spray_can",
+            () -> new YellowSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> LIGHT_BLUE_SPRAY_CAN = ITEMS.register("light_blue_spray_can",
+            () -> new LightBlueSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> MAGENTA_SPRAY_CAN = ITEMS.register("magenta_spray_can",
+            () -> new MagentaSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> ORANGE_SPRAY_CAN = ITEMS.register("orange_spray_can",
+            () -> new OrangeSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> CYAN_SPRAY_CAN = ITEMS.register("cyan_spray_can",
+            () -> new CyanSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> PURPLE_SPRAY_CAN = ITEMS.register("purple_spray_can",
+            () -> new PurpleSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> BLUE_SPRAY_CAN = ITEMS.register("blue_spray_can",
+            () -> new BlueSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> BROWN_SPRAY_CAN = ITEMS.register("brown_spray_can",
+            () -> new BrownSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> GREEN_SPRAY_CAN = ITEMS.register("green_spray_can",
+            () -> new GreenSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> RED_SPRAY_CAN = ITEMS.register("red_spray_can",
+            () -> new RedSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> BLACK_SPRAY_CAN = ITEMS.register("black_spray_can",
+            () -> new BlackSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
+
+    public static final RegistryObject<Item> SPRAY_CAN_REMOVER = ITEMS.register("spray_can_remover",
+            () -> new SprayCanRemoverItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
+
+
+
+
 
     public static final RegistryObject<Item> STONE_STICK = ITEMS.register("stone_stick",
             () -> new Item(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));

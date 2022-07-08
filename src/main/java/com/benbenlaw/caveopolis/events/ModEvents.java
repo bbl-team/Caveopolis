@@ -156,8 +156,7 @@ public class ModEvents {
 
 
      */
-
-
+/*
 
     @SubscribeEvent
     public static void toColorStoneBrickWall(PlayerInteractEvent.RightClickBlock event) {
@@ -169,7 +168,7 @@ public class ModEvents {
         if (event.getPlayer().getMainHandItem().is(ModItems.WHITE_PAINTER.get())) {
             if (blockState.is(ModTags.Blocks.COLORED_STONE_BRICK_WALL)) {
 
-                world.setBlock(blockPos, ModBlocks.WHITE_COLORED_STONE_BRICK_WALL.get().defaultBlockState(), 1);
+                world.setBlock(blockPos, ModBlocks.WHITE_COLORED_STONE_BRICK_WALL.get().withPropertiesOf(blockState), 1);
 
                 event.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, event.getEntityLiving(),
                         (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
@@ -178,6 +177,12 @@ public class ModEvents {
             }
         }
     }
+
+    */
+
+
+
+
 
 
 }

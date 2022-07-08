@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " M ",
+    "M#M",
+    "M#M"
+  ],
+  "key": {
+    "M": {
+      "item": "caveopolis:mixed_stone_ingot"
+    },
+    "#": {
+      "tag": "forge:dyes/gray"
+    }
+  },
+  "result": {
+    "item": "caveopolis:gray_spray_can"
+  }
+}
