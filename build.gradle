@@ -14,10 +14,8 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'org.parchmentmc.librarian.forgegradle'
 
-apply plugin: 'maven-publish'
-
 group = 'com.benbenlaw.caveopolis'
-version = '1.18.2-3.1'
+version = '1.18.2-4.0'
 
 java {
     archivesBaseName = 'caveopolis'
