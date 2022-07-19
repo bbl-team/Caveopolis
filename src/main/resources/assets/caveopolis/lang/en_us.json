@@ -4,6 +4,7 @@
   "item.caveopolis.bright_shard": "Bright Shard",
   "item.caveopolis.mixed_stone_ingot": "Mixed Stone Ingot",
   "item.caveopolis.mossy_string": "Mossy String",
+  "item.caveopolis.wooden_shears": "Wooden Shears",
 
   "item.caveopolis.white_spray_can": "White Spray Can",
   "item.caveopolis.gray_spray_can": "Gray Spray Can",
@@ -48,6 +49,10 @@
   "item.caveopolis.bedrock_fragment": "Bedrock Fragment",
   "item.caveopolis.mixed_stone_fragment": "Mixed Stone Fragment",
   "item.caveopolis.uranium_fragment": "Uranium Fragment",
+  "item.caveopolis.osmium_fragment": "Osmium Fragment",
+  "item.caveopolis.fluorite_fragment": "Fluorite Fragment",
+
+
   "item.caveopolis.raw_mixed_stone": "Raw Mixed Stone",
   "item.caveopolis.mixed_stone_nugget": "Mixed Stone Nugget",
 
