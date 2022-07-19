@@ -2,19 +2,14 @@ package com.benbenlaw.caveopolis;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.item.ModItems;
-import com.benbenlaw.caveopolis.world.ModWorldEvents;
-import com.sun.security.auth.login.ConfigFile;
-import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
+import com.benbenlaw.caveopolis.world.feature.ModConfiguredFeatures;
+import com.benbenlaw.caveopolis.world.feature.ModPlacedFeatures;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
-import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
@@ -42,28 +37,24 @@ public class Caveopolis {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
-        eventBus.addListener(this::setup);
-        // Register the enqueueIMC method for modloading
-        eventBus.addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
-        eventBus.addListener(this::processIMC);
-        // Register the doClientStuff method for modloading
-    //    eventBus.addListener(this::doClientStuff);
+        ModConfiguredFeatures.register(eventBus);
+        ModPlacedFeatures.register(eventBus);
 
+        eventBus.addListener(this::setup);
+        eventBus.addListener(this::enqueueIMC);
+        eventBus.addListener(this::processIMC);
         eventBus.addListener(this::setup);
         eventBus.addListener(this::doClientStuff);
 
-
     //    ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigFile.SPEC, "caveopolis_common.toml");
 
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getName());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
@@ -92,8 +83,8 @@ public class Caveopolis {
 
         event.enqueueWork(() -> {
 
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.STONE_TORCH.get(), RenderType.cutout());
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.STONE_WALL_TORCH.get(), RenderType.cutout());
+      //      ItemBlockRenderTypes.setRenderLayer(ModBlocks.STONE_TORCH.get(), RenderType.cutout());
+      //      ItemBlockRenderTypes.setRenderLayer(ModBlocks.STONE_WALL_TORCH.get(), RenderType.cutout());
 
         });
     }

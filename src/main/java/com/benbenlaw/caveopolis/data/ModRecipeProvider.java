@@ -21,6 +21,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
 
+        /*
+
         ShapedRecipeBuilder.shaped(ModBlocks.CYAN_COLORED_STONE_BRICK_WALL.get(), 6).define('E', ModBlocks.CYAN_COLORED_STONE_BRICKS.get()).pattern("EEE").pattern("EEE").unlockedBy("has_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CYAN_COLORED_STONE_BRICKS.get()).build())).save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(ModBlocks.CYAN_COLORED_STONE_WALL.get(), 6).define('E', ModBlocks.CYAN_COLORED_STONE.get()).pattern("EEE").pattern("EEE").unlockedBy("has_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CYAN_COLORED_STONE.get()).build())).save(pFinishedRecipeConsumer);
         ShapedRecipeBuilder.shaped(ModBlocks.CYAN_COLORED_STONE_BRICK_STAIRS.get(), 4).define('E', ModBlocks.CYAN_COLORED_STONE_BRICKS.get()).pattern("E  ").pattern("EE ").pattern("EEE").unlockedBy("has_block", inventoryTrigger(ItemPredicate.Builder.item().of(ModBlocks.CYAN_COLORED_STONE_BRICKS.get()).build())).save(pFinishedRecipeConsumer);
@@ -329,6 +331,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
 
 
+
+         */
 
 
 

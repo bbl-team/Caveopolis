@@ -6,11 +6,7 @@ import com.benbenlaw.caveopolis.block.custom.StoneTorchBlock;
 import com.benbenlaw.caveopolis.block.custom.StoneWallTorchBlock;
 import com.benbenlaw.caveopolis.item.ModCreativeModTab;
 import com.benbenlaw.caveopolis.item.ModItems;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -19,17 +15,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
-import org.lwjgl.system.CallbackI;
 
 import java.util.List;
 import java.util.function.Supplier;
-import java.util.function.ToIntFunction;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -44,6 +37,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.MOSS).strength(0.5f).sound(SoundType.MOSS)));
 
     public static final RegistryObject<Block> MIXED_STONE_ORE = registerBlock("mixed_stone_ore",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.5f).sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> DEEPSLATE_MIXED_STONE_ORE = registerBlock("deepslate_mixed_stone_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.5f).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
@@ -436,11 +433,13 @@ public class ModBlocks {
                 new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)){
             @Override
             public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
-                pTooltip.add(new TranslatableComponent(tooltipKey));
+                pTooltip.add(Component.literal(tooltipKey));
             }
         });
 
     }
+
+
 
 
 

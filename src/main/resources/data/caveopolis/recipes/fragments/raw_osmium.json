@@ -12,11 +12,11 @@
   ],
   "key": {
     "F": {
-      "item": "caveopolis:uranium_fragment"
+      "item": "caveopolis:osmium_fragment"
     }
   },
   "result": {
-    "item": "mekanism:raw_uranium",
+    "item": "mekanism:raw_osmium",
     "count": 1
   }
 }

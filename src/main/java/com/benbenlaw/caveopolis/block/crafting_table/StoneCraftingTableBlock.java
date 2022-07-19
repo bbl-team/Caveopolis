@@ -1,7 +1,7 @@
 package com.benbenlaw.caveopolis.block.crafting_table;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.inventory.ContainerLevelAccess;
@@ -18,7 +18,7 @@ public class StoneCraftingTableBlock extends CraftingTableBlock {
     public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos blockPos) {
         return new SimpleMenuProvider((id, inventory, entity) ->
                 new StoneCraftingTableMenu(id, inventory, ContainerLevelAccess.create(level, blockPos), this),
-                new TranslatableComponent("gui.caveopolis.stone_crafting_table"));
+                Component.translatable("gui.caveopolis.stone_crafting_table"));
     }
 
 }

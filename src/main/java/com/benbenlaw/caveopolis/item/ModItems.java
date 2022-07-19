@@ -5,6 +5,7 @@ import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.item.custom.*;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ShearsItem;
 import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -16,6 +17,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, Caveopolis.MOD_ID);
 
     //New Items
+
+    public static final RegistryObject<Item> WOODEN_SHEARS = ITEMS.register("wooden_shears", () -> new ShearsItem(
+            new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).defaultDurability(64)));
 
     public static final RegistryObject<Item> WHTIE_SPRAY_CAN = ITEMS.register("white_spray_can",
             () -> new WhiteSprayCanItem(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS).durability(256)));
@@ -161,6 +165,12 @@ public class ModItems {
     public static final RegistryObject<Item> URANIUM_FRAGMENT = ITEMS.register("uranium_fragment",
             () -> new Item(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
 
+    public static final RegistryObject<Item> FLUORITE_FRAGMENT = ITEMS.register("fluorite_fragment",
+            () -> new Item(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
+
+    public static final RegistryObject<Item> OSMIUM_FRAGMENT = ITEMS.register("osmium_fragment",
+            () -> new Item(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
+
 
 
 
@@ -170,7 +180,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> MIXED_STONE_NUGGET = ITEMS.register("mixed_stone_nugget",
             () -> new Item(new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
-
 
     public static final RegistryObject<Item> STONE_TORCH = ITEMS.register("stone_torch",
             () -> new StandingAndWallBlockItem(ModBlocks.STONE_TORCH.get(), ModBlocks.STONE_WALL_TORCH.get(),

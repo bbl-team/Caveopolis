@@ -9,9 +9,14 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModItemModelProvider extends ItemModelProvider {
+
+
+
     public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
         super(generator, Caveopolis.MOD_ID, existingFileHelper);
     }
+
+
 
     @Override
     protected void registerModels() {
@@ -165,15 +170,19 @@ public class ModItemModelProvider extends ItemModelProvider {
         
     }
 
+    /*
+
     private ItemModelBuilder simpleItem(Item item) {
-        return withExistingParent(item.getRegistryName().getPath(),
+        return withExistingParent(item.getID().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getRegistryName().getPath()));
+                new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getName().getPath()));
     }
 
     private ItemModelBuilder handheldItem(Item item) {
-        return withExistingParent(item.getRegistryName().getPath(),
+        return withExistingParent(item.getName().getPath(),
                 new ResourceLocation("item/handheld")).texture("layer0",
-                new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getRegistryName().getPath()));
+                new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getName().getPath()));
     }
+
+     */
 }

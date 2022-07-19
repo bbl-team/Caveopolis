@@ -1,5 +1,32 @@
 Caveopolis Mod Changelog
 
+1.19.X (1.0)
+
+Updated to 1.19.x
+Mossy stone and bright stone now spawn in the world
+Mixed stone ore more common
+Colored stone now spawns in world in stone layers
+Black, gray and light gray also can spawn in deepslate layers
+
+5.1
+
+Colored stone bricks now mineable
+Wooden sheaers now tagged to forge shears
+
+5.0
+
+Fixed stone stick texture being a pixel to high
+Added wooden shears
+Added fluortie, and osmium fragments
+
+
+4.1
+
+Fixed uranium fragment recipe
+Removed old recipe
+
+
+
 4.0
 
 Added spray cans (used to color blocks in world, works on vanilla stone block and bricks too!)
