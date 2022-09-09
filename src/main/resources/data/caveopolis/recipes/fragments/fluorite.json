@@ -12,11 +12,11 @@
   ],
   "key": {
     "F": {
-      "item": "caveopolis:uranium_fragment"
+      "item": "caveopolis:fluorite_fragment"
     }
   },
   "result": {
-    "item": "mekanism:raw_uranium",
+    "item": "mekanism:fluorite_gem",
     "count": 1
   }
 }
