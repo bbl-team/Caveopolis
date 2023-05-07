@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/template_wall_side_tall",
-  "textures": {
-    "wall": "caveopolis:block/white_colored_stone_bricks"
-  }
-}
