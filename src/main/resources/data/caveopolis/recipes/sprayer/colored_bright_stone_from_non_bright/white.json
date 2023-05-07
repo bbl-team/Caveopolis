@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:glowstone_spray_can"
+      },
+      {
+        "item": "caveopolis:white_colored_stone"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:white_colored_bright_stone"
+  }
+}

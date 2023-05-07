@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:black_spray_can"
+      },
+      {
+        "tag": "forge:glass"
+      }
+  ],
+  "output": {
+    "item": "minecraft:black_stained_glass"
+  }
+}

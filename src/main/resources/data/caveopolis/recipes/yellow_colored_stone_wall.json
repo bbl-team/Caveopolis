@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "E": {
+      "item": "caveopolis:yellow_colored_stone"
+    }
+  },
+  "pattern": [
+    "EEE",
+    "EEE"
+  ],
+  "result": {
+    "count": 6,
+    "item": "caveopolis:yellow_colored_stone_wall"
+  }
+}

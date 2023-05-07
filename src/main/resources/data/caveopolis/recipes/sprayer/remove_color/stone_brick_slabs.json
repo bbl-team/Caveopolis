@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:spray_can_remover"
+      },
+      {
+        "tag": "caveopolis:colored_stone_brick_slabs"
+      }
+  ],
+  "output": {
+    "item": "minecraft:stone_brick_slab"
+  }
+}

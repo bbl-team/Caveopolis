@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": {
+      "item": "caveopolis:osmium_fragment"
+    }
+  },
+  "result": {
+    "item": "mekanism:raw_osmium",
+    "count": 1
+  }
+}

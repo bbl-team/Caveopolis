@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "caveopolis:blue_colored_stone_bricks",
+    "caveopolis:light_blue_colored_stone_bricks",
+    "caveopolis:yellow_colored_stone_bricks",
+    "caveopolis:red_colored_stone_bricks",
+    "caveopolis:gray_colored_stone_bricks",
+    "caveopolis:green_colored_stone_bricks",
+    "caveopolis:light_gray_colored_stone_bricks",
+    "caveopolis:lime_colored_stone_bricks",
+    "caveopolis:purple_colored_stone_bricks",
+    "caveopolis:magenta_colored_stone_bricks",
+    "caveopolis:pink_colored_stone_bricks",
+    "caveopolis:black_colored_stone_bricks",
+    "caveopolis:white_colored_stone_bricks",
+    "caveopolis:brown_colored_stone_bricks",
+    "caveopolis:orange_colored_stone_bricks",
+    "caveopolis:cyan_colored_stone_bricks"
+  ]
+}

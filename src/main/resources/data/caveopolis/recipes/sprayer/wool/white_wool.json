@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:white_spray_can"
+      },
+      {
+        "tag": "minecraft:wool"
+      }
+  ],
+  "output": {
+    "item": "minecraft:white_wool"
+  }
+}

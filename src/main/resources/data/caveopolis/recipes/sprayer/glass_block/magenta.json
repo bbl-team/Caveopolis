@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:magenta_spray_can"
+      },
+      {
+        "tag": "forge:glass"
+      }
+  ],
+  "output": {
+    "item": "minecraft:magenta_stained_glass"
+  }
+}

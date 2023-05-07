@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "caveopolis:block/pink_colored_stone_bricks",
+    "side": "caveopolis:block/pink_colored_stone_bricks",
+    "top": "caveopolis:block/pink_colored_stone_bricks"
+  }
+}

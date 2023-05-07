@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:pink_spray_can"
+      },
+      {
+        "tag": "minecraft:wool"
+      }
+  ],
+  "output": {
+    "item": "minecraft:pink_wool"
+  }
+}

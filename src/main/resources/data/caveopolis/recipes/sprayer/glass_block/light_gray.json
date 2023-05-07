@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:light_gray_spray_can"
+      },
+      {
+        "tag": "forge:glass"
+      }
+  ],
+  "output": {
+    "item": "minecraft:light_gray_stained_glass"
+  }
+}

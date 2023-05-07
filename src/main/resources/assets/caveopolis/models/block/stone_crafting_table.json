@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "caveopolis:block/stone_crafting_table_front",
+    "north": "caveopolis:block/stone_crafting_table_front",
+    "south": "caveopolis:block/stone_crafting_table_side",
+    "east": "caveopolis:block/stone_crafting_table_side",
+    "west": "caveopolis:block/stone_crafting_table_front",
+    "up": "caveopolis:block/stone_crafting_table_top",
+    "down": "minecraft:block/stone"
+  }
+}

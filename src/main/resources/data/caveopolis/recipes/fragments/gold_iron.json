@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FF",
+    "FF"
+  ],
+  "key": {
+    "F": {
+      "item": "caveopolis:gold_fragment"
+    }
+  },
+  "result": {
+    "item": "minecraft:raw_gold",
+    "count": 1
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:pink_spray_can"
+      },
+      {
+        "tag": "forge:glass_panes"
+      }
+  ],
+  "output": {
+    "item": "minecraft:pink_stained_glass_pane"
+  }
+}

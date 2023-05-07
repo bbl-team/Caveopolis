@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "E": {
+      "item": "caveopolis:light_blue_colored_stone_bricks"
+    }
+  },
+  "pattern": [
+    "E  ",
+    "EE ",
+    "EEE"
+  ],
+  "result": {
+    "count": 4,
+    "item": "caveopolis:light_blue_colored_stone_brick_stairs"
+  }
+}

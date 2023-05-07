@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "E": {
+      "item": "caveopolis:yellow_colored_stone"
+    }
+  },
+  "pattern": [
+    "E  ",
+    "EE ",
+    "EEE"
+  ],
+  "result": {
+    "count": 4,
+    "item": "caveopolis:yellow_colored_stone_stairs"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "tag": "caveopolis:colored_bright_stone"
+  },
+  "result": "caveopolis:bright_shard",
+  "cookingtime": 200
+}

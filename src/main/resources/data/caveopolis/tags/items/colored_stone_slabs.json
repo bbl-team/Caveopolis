@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "caveopolis:blue_colored_stone_slab",
+    "caveopolis:light_blue_colored_stone_slab",
+    "caveopolis:yellow_colored_stone_slab",
+    "caveopolis:red_colored_stone_slab",
+    "caveopolis:gray_colored_stone_slab",
+    "caveopolis:green_colored_stone_slab",
+    "caveopolis:light_gray_colored_stone_slab",
+    "caveopolis:lime_colored_stone_slab",
+    "caveopolis:purple_colored_stone_slab",
+    "caveopolis:magenta_colored_stone_slab",
+    "caveopolis:pink_colored_stone_slab",
+    "caveopolis:black_colored_stone_slab",
+    "caveopolis:white_colored_stone_slab",
+    "caveopolis:brown_colored_stone_slab",
+    "caveopolis:orange_colored_stone_slab",
+    "caveopolis:cyan_colored_stone_slab",
+
+    "minecraft:stone_slab"
+  ]
+}
