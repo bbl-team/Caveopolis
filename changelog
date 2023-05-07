@@ -1,0 +1,97 @@
+Caveopolis Mod Changelog
+
+//Todo 1.20 MC, Move to one item for spray cans (NBT colors?)
+
+
+1.2.0
+
+Added the item tags for the blocks tags added
+Double slabs now break correctly giving 2 instead of 1 slab back
+Bright stone variants now give there blocks when broken
+Made the bright stone variant textures just be a brighter version of the original block instead of having loads of random yellow textures over it all
+Removed wooden shears
+Added sprayer block:
+    -Uses spray cans to turn blocks into different colors, uses spray can durability per use, colors 2 blocks per seconds
+    -Has JEI integrations
+    -Has datapack integrations
+
+1.1.1
+
+Fixed massive amounts of duplicated recipes
+
+1.1.0
+
+Added bright colored stones
+Added glowstone spray can (turns normal colored stone into bright colored stone)
+Fixed a lot of data gen
+Added default colored stone to stone forge tag
+Fixed server syncing issues
+
+1.19.X (1.0)
+
+Added stone stick to forge rods tag
+Updated to 1.19.x
+Mossy stone and bright stone now spawn in the world
+Mixed stone ore more common
+Colored stone now spawns in world in stone layers
+Black, gray and light gray also can spawn in deepslate layers
+
+5.1
+
+Colored stone bricks now mineable
+Wooden sheaers now tagged to forge shears
+
+5.0
+
+Fixed stone stick texture being a pixel to high
+Added wooden shears
+Added fluortie, and osmium fragments
+
+
+4.1
+
+Fixed uranium fragment recipe
+Removed old recipe
+
+
+
+4.0
+
+Added spray cans (used to color blocks in world, works on vanilla stone block and bricks too!)
+Added spray can remover
+Changed gray stone brick texture (was to dark)
+Added spray can remover (removes spray color off blocks and turns them into there vanilla variant)
+Added recipes for spray cans
+Added mixed stone ore world gen (between 0-80)
+
+
+3.0
+
+Fixed redstone fragment name
+Added bedrock fragment
+Added raw mixed stone
+Added mixed stone fragment
+Changed mixed stone ingot textures
+Rename mixed stone block to mixed stone ore and changed texture and drops
+Added mixed stone nugget (and recipes)
+Blasting and smelting recipes for the ore and raw variants added
+Added uranium fragments
+
+2.0
+
+Added glowstone, quartz and debris fragments
+Fixed diamond lapis and emerald fragments not having names
+
+
+1.1
+
+Added coal, redstone, lapis, diamond and emerald fragments and recipes
+Added toprock
+Added charcoal fragments
+coal and charcoal fragements craftale
+Fixed some in game names
+Added mossy string made from carpet and green wool recipe using the string
+
+1.0
+
+First Release
