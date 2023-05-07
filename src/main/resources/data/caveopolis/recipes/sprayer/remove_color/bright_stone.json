@@ -2,7 +2,7 @@
   "type": "caveopolis:sprayer",
     "ingredients": [
       {
-        "item": "caveopolis:spray_can_remover"a
+        "item": "caveopolis:spray_can_remover"
       },
       {
         "tag": "caveopolis:colored_bright_stone"

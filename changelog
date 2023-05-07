@@ -2,6 +2,10 @@ Caveopolis Mod Changelog
 
 //Todo 1.20 MC, Move to one item for spray cans (NBT colors?)
 
+1.2.1
+
+Fixed bright stone recipe not removing color with the spray can remover
+Added correct tags and drop for sprayer
 
 1.2.0
 
