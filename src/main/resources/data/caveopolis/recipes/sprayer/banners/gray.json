@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:gray_spray_can"
+      },
+      {
+        "tag": "minecraft:banners"
+      }
+  ],
+  "output": {
+    "item": "minecraft:gray_banner"
+  }
+}

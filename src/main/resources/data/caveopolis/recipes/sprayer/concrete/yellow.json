@@ -5,10 +5,10 @@
         "item": "caveopolis:yellow_spray_can"
       },
       {
-        "tag": "caveopolis:colored_concrete"
+        "tag": "minecraft:beds"
       }
   ],
   "output": {
-    "item": "minecraft:yellow_concrete"
+    "item": "minecraft:yellow_bed"
   }
 }

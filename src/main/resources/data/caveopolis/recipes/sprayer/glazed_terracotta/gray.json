@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:gray_spray_can"
+      },
+      {
+        "tag": "caveopolis:glazed_terracotta"
+      }
+  ],
+  "output": {
+    "item": "minecraft:gray_glazed_terracotta"
+  }
+}

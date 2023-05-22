@@ -1,17 +1,23 @@
 package com.benbenlaw.caveopolis.item.custom;
 
-import com.benbenlaw.caveopolis.block.ModBlocks;
+import com.benbenlaw.caveopolis.item.ModItems;
+import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.util.ModTags;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 
 public class LimeSprayCanItem extends Item {
     public LimeSprayCanItem(Properties pProperties) {
@@ -19,120 +25,43 @@ public class LimeSprayCanItem extends Item {
     }
 
     @Override
-    public InteractionResult useOn(UseOnContext pContext) {
-
-        BlockPos blockPos = pContext.getClickedPos();
-        Level world = pContext.getLevel();
-        BlockState blockState = pContext.getLevel().getBlockState(blockPos);
-
-        if (blockState.is(ModTags.Blocks.COLORED_BRIGHT_STONE)) {
-
-            world.setBlockAndUpdate(blockPos, ModBlocks.LIME_COLORED_BRIGHT_STONE.get().withPropertiesOf(blockState));
-
-            pContext.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, pContext.getPlayer(),
-                    (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
-
-            world.playLocalSound((double) blockPos.getX(), (double) blockPos.getY(), (double) blockPos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f,5,false);
-
-            world.addParticle(ParticleTypes.DRIPPING_WATER, (double) blockPos.getX() + 0.5D, (double) blockPos.getY() + 1.1D, (double) blockPos.getZ() + 0.5D, 0.0D, 0.05D, 0.0D);
+    public @NotNull InteractionResult useOn(UseOnContext pContext) {
+        Level level = pContext.getLevel();
+        BlockPos pos = pContext.getClickedPos();
+        Player player = pContext.getPlayer();
+        BlockState blockState = level.getBlockState(pos);
+        boolean mainHand = true;
+        assert player != null;
+        if (!player.getItemInHand(InteractionHand.MAIN_HAND).is(this)) {
+            mainHand = false;
         }
 
-        if (blockState.is(ModTags.Blocks.COLORED_STONE_BRICK_WALL)) {
+        if (!level.isClientSide()) {
 
-            world.setBlockAndUpdate(blockPos, ModBlocks.LIME_COLORED_STONE_BRICK_WALL.get().withPropertiesOf(blockState));
+            if (blockState.is(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)) {
+                player.sendSystemMessage(Component.literal("This block cannot be converted in world, try the sprayer block instead!"));
+                return InteractionResult.FAIL;
+            }
 
-            pContext.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, pContext.getPlayer(),
-                    (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
+            else for (SprayerRecipe recipe : level.getRecipeManager().getAllRecipesFor(SprayerRecipe.Type.INSTANCE)) {
+                Ingredient targetBlockIngredient = recipe.getIngredients().get(1);
+                BlockState newBlockRecipe = Block.byItem(recipe.getResultItem().getItem()).withPropertiesOf(blockState);
+                ItemStack sprayCan = recipe.getIngredients().get(0).getItems()[0].getItem().getDefaultInstance();
 
-            world.playLocalSound((double) blockPos.getX(), (double) blockPos.getY(), (double) blockPos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f,5,false);
+                if (targetBlockIngredient.test(blockState.getBlock().asItem().getDefaultInstance()) && sprayCan.getItem() == ModItems.LIME_SPRAY_CAN.get()) {
 
-            world.addParticle(ParticleTypes.DRIPPING_WATER, (double) blockPos.getX() + 0.5D, (double) blockPos.getY() + 1.1D, (double) blockPos.getZ() + 0.5D, 0.0D, 0.05D, 0.0D);
+                    level.setBlockAndUpdate(pos, newBlockRecipe);
+                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f, 5, false);
+
+                    if (mainHand) {
+                        player.getItemInHand(InteractionHand.MAIN_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));
+                    } else
+                        player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));
+
+                    return InteractionResult.SUCCESS;
+                }
+            }
         }
-
-        if (blockState.is(ModTags.Blocks.COLORED_STONE_BRICK_STAIRS)) {
-
-            world.setBlockAndUpdate(blockPos, ModBlocks.LIME_COLORED_STONE_BRICK_STAIRS.get().withPropertiesOf(blockState));
-
-            pContext.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, pContext.getPlayer(),
-                    (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
-
-            world.playLocalSound((double) blockPos.getX(), (double) blockPos.getY(), (double) blockPos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f,5,false);
-
-            world.addParticle(ParticleTypes.DRIPPING_WATER, (double) blockPos.getX() + 0.5D, (double) blockPos.getY() + 1.1D, (double) blockPos.getZ() + 0.5D, 0.0D, 0.05D, 0.0D);
-        }
-
-        if (blockState.is(ModTags.Blocks.COLORED_STONE_WALL)) {
-
-            world.setBlockAndUpdate(blockPos, ModBlocks.LIME_COLORED_STONE_WALL.get().withPropertiesOf(blockState));
-
-            pContext.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, pContext.getPlayer(),
-                    (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
-
-            world.playLocalSound((double) blockPos.getX(), (double) blockPos.getY(), (double) blockPos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f,5,false);
-
-            world.addParticle(ParticleTypes.DRIPPING_WATER, (double) blockPos.getX() + 0.5D, (double) blockPos.getY() + 1.1D, (double) blockPos.getZ() + 0.5D, 0.0D, 0.05D, 0.0D);
-        }
-
-        if (blockState.is(ModTags.Blocks.COLORED_STONE_STAIRS)) {
-
-            world.setBlockAndUpdate(blockPos, ModBlocks.LIME_COLORED_STONE_STAIRS.get().withPropertiesOf(blockState));
-
-            pContext.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, pContext.getPlayer(),
-                    (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
-
-            world.playLocalSound((double) blockPos.getX(), (double) blockPos.getY(), (double) blockPos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f,5,false);
-
-            world.addParticle(ParticleTypes.DRIPPING_WATER, (double) blockPos.getX() + 0.5D, (double) blockPos.getY() + 1.1D, (double) blockPos.getZ() + 0.5D, 0.0D, 0.05D, 0.0D);
-        }
-
-        if (blockState.is(ModTags.Blocks.COLORED_STONE)) {
-
-            world.setBlockAndUpdate(blockPos, ModBlocks.LIME_COLORED_STONE.get().withPropertiesOf(blockState));
-
-            pContext.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, pContext.getPlayer(),
-                    (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
-
-            world.playLocalSound((double) blockPos.getX(), (double) blockPos.getY(), (double) blockPos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f,5,false);
-
-            world.addParticle(ParticleTypes.DRIPPING_WATER, (double) blockPos.getX() + 0.5D, (double) blockPos.getY() + 1.1D, (double) blockPos.getZ() + 0.5D, 0.0D, 0.05D, 0.0D);
-        }
-
-        if (blockState.is(ModTags.Blocks.COLORED_STONE_BRICKS)) {
-
-            world.setBlockAndUpdate(blockPos, ModBlocks.LIME_COLORED_STONE_BRICKS.get().withPropertiesOf(blockState));
-
-            pContext.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, pContext.getPlayer(),
-                    (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
-
-            world.playLocalSound((double) blockPos.getX(), (double) blockPos.getY(), (double) blockPos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f,5,false);
-
-            world.addParticle(ParticleTypes.DRIPPING_WATER, (double) blockPos.getX() + 0.5D, (double) blockPos.getY() + 1.1D, (double) blockPos.getZ() + 0.5D, 0.0D, 0.05D, 0.0D);
-        }
-
-        if (blockState.is(ModTags.Blocks.COLORED_STONE_SLABS)) {
-
-            world.setBlockAndUpdate(blockPos, ModBlocks.LIME_COLORED_STONE_SLAB.get().withPropertiesOf(blockState));
-
-            pContext.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, pContext.getPlayer(),
-                    (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
-
-            world.playLocalSound((double) blockPos.getX(), (double) blockPos.getY(), (double) blockPos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f,5,false);
-
-            world.addParticle(ParticleTypes.DRIPPING_WATER, (double) blockPos.getX() + 0.5D, (double) blockPos.getY() + 1.1D, (double) blockPos.getZ() + 0.5D, 0.0D, 0.05D, 0.0D);
-        }
-
-        if (blockState.is(ModTags.Blocks.COLORED_STONE_BRICK_SLABS)) {
-
-            world.setBlockAndUpdate(blockPos, ModBlocks.LIME_COLORED_STONE_BRICK_SLAB.get().withPropertiesOf(blockState));
-
-            pContext.getPlayer().getItemBySlot(EquipmentSlot.MAINHAND).hurtAndBreak(1, pContext.getPlayer(),
-                    (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
-
-            world.playLocalSound((double) blockPos.getX(), (double) blockPos.getY(), (double) blockPos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f,5,false);
-
-            world.addParticle(ParticleTypes.DRIPPING_WATER, (double) blockPos.getX() + 0.5D, (double) blockPos.getY() + 1.1D, (double) blockPos.getZ() + 0.5D, 0.0D, 0.05D, 0.0D);
-        }
-
-        return InteractionResult.SUCCESS;
+        return InteractionResult.FAIL;
     }
 }

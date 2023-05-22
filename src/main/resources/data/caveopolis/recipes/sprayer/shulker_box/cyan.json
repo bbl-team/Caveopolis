@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:cyan_spray_can"
+      },
+      {
+        "tag": "minecraft:shulker_boxes"
+      }
+  ],
+  "output": {
+    "item": "minecraft:cyan_shulker_box"
+  }
+}

@@ -1,6 +1,19 @@
 Caveopolis Mod Changelog
 
-//Todo 1.20 MC, Move to one item for spray cans (NBT colors?)
+
+1.3
+
+Added normal bright stone to colored stone tag
+Added stone rod to the forge tag correctly (removed cosmopolis stuff)
+Added loads more recipes for most vanilla colored blocks
+Improved JEI recipe rendering for sprayer
+Sprayer recipes now work in world with spray cans on a right click
+Added "banned_from_in_world_spraying" to prevent block like beds and shulkers being able to be colored in world
+Optimized imports
+
+1.2.2
+
+Removed wooden shears from the forge tag to fix tag issues
 
 1.2.1
 

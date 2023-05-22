@@ -1,7 +1,7 @@
 package com.benbenlaw.caveopolis.block.custom;
 
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.WallTorchBlock;
 
 public class StoneWallTorchBlock extends WallTorchBlock {
     public StoneWallTorchBlock(Properties pProperties) {

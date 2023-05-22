@@ -5,10 +5,10 @@
         "item": "caveopolis:lime_spray_can"
       },
       {
-        "tag": "caveopolis:colored_concrete"
+        "tag": "minecraft:beds"
       }
   ],
   "output": {
-    "item": "minecraft:lime_concrete"
+    "item": "minecraft:lime_bed"
   }
 }

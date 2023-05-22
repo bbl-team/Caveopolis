@@ -5,10 +5,10 @@
         "item": "caveopolis:pink_spray_can"
       },
       {
-        "tag": "caveopolis:colored_concrete"
+        "tag": "minecraft:beds"
       }
   ],
   "output": {
-    "item": "minecraft:pink_concrete"
+    "item": "minecraft:pink_bed"
   }
 }
