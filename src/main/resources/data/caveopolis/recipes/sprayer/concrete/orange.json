@@ -5,10 +5,10 @@
         "item": "caveopolis:orange_spray_can"
       },
       {
-        "tag": "caveopolis:colored_concrete"
+        "tag": "minecraft:beds"
       }
   ],
   "output": {
-    "item": "minecraft:orange_concrete"
+    "item": "minecraft:orange_bed"
   }
 }

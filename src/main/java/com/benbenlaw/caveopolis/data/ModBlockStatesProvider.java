@@ -1,7 +1,6 @@
 package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
-
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.SlabBlock;
@@ -9,7 +8,6 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
 
 public class ModBlockStatesProvider extends BlockStateProvider {
 

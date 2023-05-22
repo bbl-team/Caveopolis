@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:red_spray_can"
+      },
+      {
+        "tag": "minecraft:shulker_boxes"
+      }
+  ],
+  "output": {
+    "item": "minecraft:red_shulker_box"
+  }
+}

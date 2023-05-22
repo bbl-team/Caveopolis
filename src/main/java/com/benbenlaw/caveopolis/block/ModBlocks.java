@@ -7,9 +7,11 @@ import com.benbenlaw.caveopolis.block.custom.StoneTorchBlock;
 import com.benbenlaw.caveopolis.block.custom.StoneWallTorchBlock;
 import com.benbenlaw.caveopolis.item.ModCreativeModTab;
 import com.benbenlaw.caveopolis.item.ModItems;
-import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -20,10 +22,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.function.Supplier;
 
 public class ModBlocks {

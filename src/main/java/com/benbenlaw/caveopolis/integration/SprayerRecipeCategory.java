@@ -27,7 +27,7 @@ public class SprayerRecipeCategory implements IRecipeCategory<SprayerRecipe> {
     private final IDrawable icon;
 
     public SprayerRecipeCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 85);
+        this.background = helper.createDrawable(TEXTURE, 0, 0, 120, 19);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(ModBlocks.SPRAYER.get()));
     }
 
@@ -53,12 +53,8 @@ public class SprayerRecipeCategory implements IRecipeCategory<SprayerRecipe> {
 
     @Override
     public void setRecipe(IRecipeLayoutBuilder builder, SprayerRecipe recipe, IFocusGroup focuses) {
-        builder.addSlot(RecipeIngredientRole.CATALYST, 12, 16)
-                .addItemStack(new ItemStack(recipe.getIngredients().get(0).getItems()[0].getItem()));
-
-        builder.addSlot(RecipeIngredientRole.INPUT, 86, 16).addIngredients(recipe.getIngredients().get(1));
-
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 86, 60) //.addItemStack(recipe.getResultItem());
-                .addItemStack(new ItemStack(recipe.getResultItem().getItem()));
+        builder.addSlot(RecipeIngredientRole.CATALYST, 12, 2).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 45, 2).addIngredients(recipe.getIngredients().get(1));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 91, 2).addItemStack(new ItemStack(recipe.getResultItem().getItem()));
     }
 }

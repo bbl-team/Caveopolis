@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:red_spray_can"
+      },
+      {
+        "tag": "caveopolis:colored_concrete"
+      }
+  ],
+  "output": {
+    "item": "minecraft:red_concrete"
+  }
+}

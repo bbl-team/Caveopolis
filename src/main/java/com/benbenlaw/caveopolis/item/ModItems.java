@@ -5,7 +5,6 @@ import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.item.custom.*;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ShearsItem;
 import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

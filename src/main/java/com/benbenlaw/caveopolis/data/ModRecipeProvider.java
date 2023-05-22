@@ -6,11 +6,6 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.minecraft.data.recipes.SingleItemRecipeBuilder;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.*;
-import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
