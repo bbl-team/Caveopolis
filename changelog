@@ -5,6 +5,15 @@ Caveopolis Mod Changelog
 2.0.0
 
 Updated to 1.20
+Removed top rock
+Disabled data generation
+Remove all fragments
+Bright stone block no longer spawn in world
+Added bright stone ore and deepslate bright stone ore
+Mossy stone now breaks into mossy ball
+Colored stone world gen tweaked (black, brown, gray and light gray all spawn in deepslate at high rates with a smaller rate of the other colors mixed in
+    excluding the other 4 colors stone all spawns in stone layers at a smaller amount and slightly bigger vien size
+Deleting any file in the caveopolis/forge/biome_modifier folder will remove that feature from the world
 
 1.3.1
 

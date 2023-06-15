@@ -1,12 +1,13 @@
 package com.benbenlaw.caveopolis.data.loot;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
-import com.benbenlaw.caveopolis.item.ModItems;
-import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModBlockLootTables extends BlockLoot {
+public class ModBlockLootTables {}
+/*
+
+extends BlockLoot {
     @Override
     protected void addTables() {
         oreDrops();
@@ -196,3 +197,6 @@ public class ModBlockLootTables extends BlockLoot {
 
 
 }
+
+
+ */

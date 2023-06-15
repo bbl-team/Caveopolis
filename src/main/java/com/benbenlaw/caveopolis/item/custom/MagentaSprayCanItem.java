@@ -4,6 +4,7 @@ import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.util.ModTags;
 import net.minecraft.ChatFormatting;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -65,7 +66,7 @@ public class MagentaSprayCanItem extends Item {
 
             else for (SprayerRecipe recipe : level.getRecipeManager().getAllRecipesFor(SprayerRecipe.Type.INSTANCE)) {
                 Ingredient targetBlockIngredient = recipe.getIngredients().get(1);
-                BlockState newBlockRecipe = Block.byItem(recipe.getResultItem().getItem()).withPropertiesOf(blockState);
+                BlockState newBlockRecipe = Block.byItem(recipe.getResultItem(Minecraft.getInstance().level.registryAccess()).getItem()).withPropertiesOf(blockState);
                 ItemStack sprayCan = recipe.getIngredients().get(0).getItems()[0].getItem().getDefaultInstance();
 
                 if (targetBlockIngredient.test(blockState.getBlock().asItem().getDefaultInstance()) && sprayCan.getItem() == ModItems.MAGENTA_SPRAY_CAN.get()) {

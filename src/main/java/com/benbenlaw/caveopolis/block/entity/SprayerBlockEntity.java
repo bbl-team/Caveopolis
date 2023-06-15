@@ -3,6 +3,7 @@ package com.benbenlaw.caveopolis.block.entity;
 import com.benbenlaw.caveopolis.block.IInventoryHandlingBlockEntity;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.screen.SprayerMenu;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -20,8 +21,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
@@ -121,7 +122,7 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
 
     @Override
     public @NotNull <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
             return lazyItemHandler.cast();
         }
         return super.getCapability(cap);
@@ -130,7 +131,7 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @javax.annotation.Nullable Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
             return directionWrappedHandlerMap.get(side).cast();
         }
 
@@ -219,7 +220,8 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
         if (sprayerRecipe.isPresent()) {
 
             pEntity.itemHandler.extractItem(1, 1, false);
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(sprayerRecipe.get().getResultItem().getItem(),
+            assert Minecraft.getInstance().level != null;
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(sprayerRecipe.get().getResultItem(Minecraft.getInstance().level.registryAccess()).getItem(),
                     pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
 
             if (pEntity.itemHandler.getStackInSlot(0).hurt(1, RandomSource.create(), null)) {
@@ -253,10 +255,13 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
 
  */
         return sprayerRecipe.filter(sprayerRecipeCheck->
-                hasMakingItem(entity, sprayerRecipe.get()) &&
-                hasSprayCan(entity, sprayerRecipe.get()) &&
-                canInsertAmountIntoOutputSlot(inventory) &&
-                canInsertItemIntoOutputSlot(inventory, sprayerRecipeCheck.getResultItem())).isPresent();
+        {
+            if (!hasMakingItem(entity, sprayerRecipe.get()) ||
+                    !hasSprayCan(entity, sprayerRecipe.get()) ||
+                    !canInsertAmountIntoOutputSlot(inventory)) return false;
+            assert Minecraft.getInstance().level != null;
+            return canInsertItemIntoOutputSlot(inventory, sprayerRecipeCheck.getResultItem(Minecraft.getInstance().level.registryAccess()));
+        }).isPresent();
 
     }
 

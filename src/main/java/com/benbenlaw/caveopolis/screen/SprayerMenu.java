@@ -10,7 +10,7 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 
 public class SprayerMenu extends AbstractContainerMenu {
@@ -20,20 +20,20 @@ public class SprayerMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public SprayerMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
 
     public SprayerMenu(int id, Inventory inv, BlockEntity entity, ContainerData data){
         super(ModMenuTypes.SPRAYER_MENU.get(), id);
         checkContainerSize(inv, 3);
         blockEntity = (SprayerBlockEntity) entity;
-        this.level = inv.player.level;
+        this.level = inv.player.level();
         this.data = data;
 
         addPlayerInventory(inv);
         addPlayerHotbar(inv);
 
-        this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+        this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             this.addSlot(new SlotItemHandler(handler, 0, 12, 16));
             this.addSlot(new SlotItemHandler(handler, 1, 86, 16));
             this.addSlot(new ModResultSlot(handler, 2, 86, 60));

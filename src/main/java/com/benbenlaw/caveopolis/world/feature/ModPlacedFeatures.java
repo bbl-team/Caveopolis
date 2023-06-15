@@ -1,8 +1,15 @@
 package com.benbenlaw.caveopolis.world.feature;
 
 import com.benbenlaw.caveopolis.Caveopolis;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -11,6 +18,52 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.List;
 
 public class ModPlacedFeatures {
+
+    public static final ResourceKey<PlacedFeature> MIXED_STONE_ORE_PLACED_KEY = createKey("mixed_stone_ore_placed");
+    public static final ResourceKey<PlacedFeature> BRIGHT_STONE_ORE_PLACED_KEY = createKey("bright_stone_ore_placed");
+    public static final ResourceKey<PlacedFeature> MOSSY_STONE_ORE_PLACED_KEY = createKey("mossy_stone_ore_placed");
+
+    public static final ResourceKey<PlacedFeature> COLORED_STONE_PLACED_KEY = createKey("colored_stone_placed");
+
+    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+        HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
+
+
+        register(context, MIXED_STONE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_MIXED_STONE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(12, // veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-50), VerticalAnchor.absolute(130))));
+
+        register(context, BRIGHT_STONE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_BRIGHT_STONE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(12, // veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-50), VerticalAnchor.absolute(130))));
+
+        register(context, MOSSY_STONE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_MOSSY_STONE_ORE_KEY),
+                ModOrePlacement.commonOrePlacement(16, // veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150))));
+
+        register(context, COLORED_STONE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_COLORED_STONE_KEY),
+                ModOrePlacement.commonOrePlacement(1, // veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150))));
+
+    }
+
+    private static ResourceKey<PlacedFeature> createKey(String name) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Caveopolis.MOD_ID, name));
+    }
+
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 List<PlacementModifier> modifiers) {
+        context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
+    }
+
+    private static void register(BootstapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key, Holder<ConfiguredFeature<?, ?>> configuration,
+                                 PlacementModifier... modifiers) {
+        register(context, key, configuration, List.of(modifiers));
+    }
+}
+
+
+/*
 
     public static final DeferredRegister<PlacedFeature> PLACED_FEATURES =
             DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, Caveopolis.MOD_ID);
@@ -133,3 +186,5 @@ public class ModPlacedFeatures {
         PLACED_FEATURES.register(eventBus);
     }
 }
+
+ */

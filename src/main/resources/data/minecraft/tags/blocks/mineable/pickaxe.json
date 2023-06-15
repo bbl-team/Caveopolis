@@ -21,6 +21,8 @@
 
     "caveopolis:mixed_stone_ore",
     "caveopolis:deepslate_mixed_stone_ore",
+    "caveopolis:bright_stone_ore",
+    "caveopolis:deepslate_bright_stone_ore",
     "caveopolis:bright_stone",
     "caveopolis:mossy_stone",
     "caveopolis:stone_crafting_table",
@@ -110,11 +112,7 @@
     "caveopolis:white_colored_stone_bricks",
     "caveopolis:brown_colored_stone_bricks",
     "caveopolis:orange_colored_stone_bricks",
-    "caveopolis:cyan_colored_stone_bricks",
-
-
-    "caveopolis:toprock"
-
+    "caveopolis:cyan_colored_stone_bricks"
 
 
 

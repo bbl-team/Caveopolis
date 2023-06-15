@@ -4,8 +4,6 @@
   "item.caveopolis.bright_shard": "Bright Shard",
   "item.caveopolis.mixed_stone_ingot": "Mixed Stone Ingot",
   "item.caveopolis.mossy_string": "Mossy String",
-  "item.caveopolis.wooden_shears": "Wooden Shears",
-  "item.caveopolis.wooden_shears": "Wooden Shears",
 
   "item.caveopolis.white_spray_can": "White Spray Can",
   "item.caveopolis.gray_spray_can": "Gray Spray Can",
@@ -64,6 +62,8 @@
   "block.caveopolis.stone_torch": "Stone Torch",
   "block.caveopolis.mixed_stone_ore": "Mixed Stone Ore",
   "block.caveopolis.deepslate_mixed_stone_ore": "Deepslate Mixed Stone Ore",
+  "block.caveopolis.bright_stone_ore": "Bright Stone Ore",
+  "block.caveopolis.deepslate_bright_stone_ore": "Deepslate Bright Stone Ore",
   "block.caveopolis.toprock": "Toprock",
   "block.caveopolis.sprayer": "Sprayer",
 

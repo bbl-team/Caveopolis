@@ -3,6 +3,7 @@ package com.benbenlaw.caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.block.entity.ModBlockEntities;
 import com.benbenlaw.caveopolis.config.ConfigFile;
+import com.benbenlaw.caveopolis.item.ModCreativeModTab;
 import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.recipe.ModRecipes;
 import com.benbenlaw.caveopolis.screen.ModMenuTypes;
@@ -41,14 +42,13 @@ public class Caveopolis {
 
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModTab.register(eventBus);
+
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
         ModRecipes.register(eventBus);
-
-        ModConfiguredFeatures.register(eventBus);
-        ModPlacedFeatures.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);

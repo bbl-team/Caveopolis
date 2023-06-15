@@ -12,7 +12,7 @@ public final class ConfigFile {
     static {
         BUILDER.push("Caveopolis Config File");
 
-        doesColoredStoneGenerateInWorld = BUILDER.comment("Should colored stone spawn in world?, default = true")
+        doesColoredStoneGenerateInWorld = BUILDER.comment("Should colored stone spawn in world?, default = true, OVERRIDE USING DATA PACK INSTEAD!")
                 .define("Spawn Colored Stone", 1);
 
         BUILDER.pop();

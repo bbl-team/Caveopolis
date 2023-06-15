@@ -9,7 +9,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Caveopolis.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class DataGenerators {
+public class DataGenerators {}
+
+    /*
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
@@ -21,3 +23,5 @@ public class DataGenerators {
     //    generator.addProvider(true, new ModItemModelProvider(generator, existingFileHelper));
     }
 }
+
+     */

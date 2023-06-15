@@ -4,10 +4,18 @@ import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.google.common.base.Suppliers;
 import net.minecraft.core.Registry;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.features.OreFeatures;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -17,18 +25,58 @@ import java.util.function.Supplier;
 
 public class ModConfiguredFeatures {
 
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_MIXED_STONE_ORE_KEY = registerKey("mixed_stone_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_BRIGHT_STONE_ORE_KEY = registerKey("bright_stone_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_MOSSY_STONE_ORE_KEY = registerKey("mossy_stone_ore");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_COLORED_STONE_KEY = registerKey("colored_stone");
+
+    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+
+        List<OreConfiguration.TargetBlockState> overworldMixedStoneOres = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.MIXED_STONE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_MIXED_STONE_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> overworldBrightStoneOres = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.BRIGHT_STONE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> overworldMossyStoneOres = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.MOSSY_STONE.get().defaultBlockState()));
+
+        List<OreConfiguration.TargetBlockState> overworldColoredStone = List.of(OreConfiguration.target(stoneReplaceables,
+                        ModBlocks.WHITE_COLORED_STONE.get().defaultBlockState()));
+
+
+
+
+
+        register(context, OVERWORLD_MIXED_STONE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldMixedStoneOres, 9));
+        register(context, OVERWORLD_BRIGHT_STONE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldBrightStoneOres, 9));
+        register(context, OVERWORLD_MOSSY_STONE_ORE_KEY, Feature.ORE, new OreConfiguration(overworldMossyStoneOres, 14));
+
+        register(context, OVERWORLD_COLORED_STONE_KEY, Feature.ORE, new OreConfiguration(overworldColoredStone, 32));
+
+    }
+
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(Caveopolis.MOD_ID, name));
+    }
+
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context,
+                                                                                          ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
+        context.register(key, new ConfiguredFeature<>(feature, configuration));
+    }
+}
+
+    /*
+
+
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES =
             DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, Caveopolis.MOD_ID);
 
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_MIXED_STONE_ORE = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.MIXED_STONE_ORE.get().defaultBlockState()),
-            OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.DEEPSLATE_MIXED_STONE_ORE.get().defaultBlockState())));
-
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_BRIGHT_STONE = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.BRIGHT_STONE.get().defaultBlockState())));
-
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_MOSSY_STONE = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.MOSSY_STONE.get().defaultBlockState())));
 
     public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_WHITE_COLORED_STONE = Suppliers.memoize(() -> List.of(
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.WHITE_COLORED_STONE.get().defaultBlockState())));
@@ -154,3 +202,6 @@ public class ModConfiguredFeatures {
         CONFIGURED_FEATURES.register(eventBus);
     }
 }
+
+
+     */

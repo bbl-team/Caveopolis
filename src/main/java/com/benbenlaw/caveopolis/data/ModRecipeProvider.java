@@ -10,7 +10,10 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
 
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+public class ModRecipeProvider{}
+
+        /*
+        extends RecipeProvider implements IConditionBuilder {
     public ModRecipeProvider(DataGenerator pGenerator) {
         super(pGenerator);
     }
@@ -339,3 +342,5 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
     }
 }
+
+         */

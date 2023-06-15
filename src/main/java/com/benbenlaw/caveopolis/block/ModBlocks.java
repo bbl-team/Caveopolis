@@ -15,7 +15,6 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -38,22 +37,18 @@ public class ModBlocks {
             () -> new StoneCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).strength(1f).sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> MOSSY_STONE = registerBlock("mossy_stone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.MOSS).strength(0.5f).sound(SoundType.MOSS)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).strength(0.5f).sound(SoundType.MOSS)));
 
     public static final RegistryObject<Block> MIXED_STONE_ORE = registerBlock("mixed_stone_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.5f).sound(SoundType.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_MIXED_STONE_ORE = registerBlock("deepslate_mixed_stone_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.5f).sound(SoundType.STONE)
-                    .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> TOPROCK = registerBlock("toprock",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(4.5f).sound(SoundType.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> BRIGHT_STONE = registerBlock("bright_stone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.5f).sound(SoundType.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
                     .lightLevel((state) -> 15)));
 
     public static final RegistryObject<Block> STONE_TORCH = BLOCKS.register("stone_torch",
@@ -62,7 +57,13 @@ public class ModBlocks {
     public static final RegistryObject<Block> STONE_WALL_TORCH = BLOCKS.register("stone_wall_torch",
             () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.STONE_TORCH)));
 
+    public static final RegistryObject<Block> BRIGHT_STONE_ORE = registerBlock("bright_stone_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
 
+    public static final RegistryObject<Block> DEEPSLATE_BRIGHT_STONE_ORE = registerBlock("deepslate_bright_stone_ore",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
 
 
 //Colored Stone
@@ -488,7 +489,7 @@ public class ModBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, String tooltipKey) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)){
+                new Item.Properties()){
             @Override
             public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
                 pTooltip.add(Component.literal(tooltipKey));
@@ -505,7 +506,7 @@ public class ModBlocks {
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
+                new Item.Properties()));
 
     }
 
