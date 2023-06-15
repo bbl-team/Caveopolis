@@ -486,12 +486,6 @@ public class ModBlocks {
                     .lightLevel((state) -> 15)));
 
 
-    private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, String tooltipKey) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tooltipKey);
-        return toReturn;
-    }
-
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, String tooltipKey) {
         ModItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)){
@@ -502,13 +496,6 @@ public class ModBlocks {
         });
 
     }
-
-
-
-
-
-
-
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
@@ -521,10 +508,6 @@ public class ModBlocks {
                 new Item.Properties().tab(ModCreativeModTab.CAVEOPOLIS)));
 
     }
-
-
-
-
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

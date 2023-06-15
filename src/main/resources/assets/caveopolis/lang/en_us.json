@@ -221,6 +221,8 @@
   "block.caveopolis.black_colored_bright_stone": "Black Colored Bright Stone",
   "block.caveopolis.purple_colored_bright_stone": "Purple Colored Bright Stone",
 
+  "tooltips.spray_can.hover.shift": "Press SHIFT for more info",
+  "tooltips.spray_can.shift.held": "Right click to spray blocks in world!",
 
   "itemGroup.caveopolis": "Caveopolis",
 
