@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.45,
+  "group": "mixed_stone",
+  "ingredient": {
+    "item": "caveopolis:raw_mixed_stone"
+  },
+  "result": "caveopolis:mixed_stone_ingot"
+}

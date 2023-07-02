@@ -1,0 +1,18 @@
+{
+  "values": [
+    "#caveopolis:colored_stone",
+    "#caveopolis:colored_stone_wall",
+    "#caveopolis:colored_stone_slabs",
+    "#caveopolis:colored_stone_stairs",
+    "#caveopolis:colored_stone_bricks",
+    "#caveopolis:colored_stone_brick_wall",
+    "#caveopolis:colored_stone_brick_slabs",
+    "#caveopolis:colored_stone_brick_stairs",
+    "caveopolis:mixed_stone_ore",
+    "caveopolis:deepslate_mixed_stone_ore",
+    "caveopolis:bright_stone_ore",
+    "caveopolis:deepslate_bright_stone_ore",
+    "caveopolis:stone_crafting_table",
+    "caveopolis:sprayer"
+  ]
+}

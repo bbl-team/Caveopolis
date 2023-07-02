@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "caveopolis:mixed_stone_ingot"
+    },
+    "B": {
+      "tag": "forge:dusts/glowstone"
+    }
+  },
+  "pattern": [
+    " A ",
+    "ABA",
+    "ABA"
+  ],
+  "result": {
+    "item": "caveopolis:glowstone_spray_can"
+  },
+  "show_notification": true
+}

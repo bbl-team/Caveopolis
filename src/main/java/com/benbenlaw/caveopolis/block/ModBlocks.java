@@ -40,15 +40,15 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).strength(0.5f).sound(SoundType.MOSS)));
 
     public static final RegistryObject<Block> MIXED_STONE_ORE = registerBlock("mixed_stone_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_MIXED_STONE_ORE = registerBlock("deepslate_mixed_stone_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3.0F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> BRIGHT_STONE = registerBlock("bright_stone",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE)
                     .lightLevel((state) -> 15)));
 
     public static final RegistryObject<Block> STONE_TORCH = BLOCKS.register("stone_torch",
@@ -58,11 +58,11 @@ public class ModBlocks {
             () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.STONE_TORCH)));
 
     public static final RegistryObject<Block> BRIGHT_STONE_ORE = registerBlock("bright_stone_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_BRIGHT_STONE_ORE = registerBlock("deepslate_bright_stone_ore",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.5f).sound(SoundType.STONE)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3.0F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
 

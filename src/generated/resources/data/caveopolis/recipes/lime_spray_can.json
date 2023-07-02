@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "caveopolis:mixed_stone_ingot"
+    },
+    "B": {
+      "tag": "forge:dyes/lime"
+    }
+  },
+  "pattern": [
+    " A ",
+    "ABA",
+    "ABA"
+  ],
+  "result": {
+    "item": "caveopolis:lime_spray_can"
+  },
+  "show_notification": true
+}

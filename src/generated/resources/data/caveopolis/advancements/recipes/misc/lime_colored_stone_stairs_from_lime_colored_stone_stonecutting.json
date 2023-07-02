@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lime_colored_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:lime_colored_stone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:lime_colored_stone_stairs_from_lime_colored_stone_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_lime_colored_stone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:lime_colored_stone_stairs_from_lime_colored_stone_stonecutting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

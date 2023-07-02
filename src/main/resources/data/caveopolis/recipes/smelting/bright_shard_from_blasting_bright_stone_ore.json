@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:blasting",
-  "ingredient": {
-    "item": "caveopolis:bright_stone_ore"
-  },
-  "result": "caveopolis:bright_shard",
-  "experience": 0.7,
-  "cookingtime": 200
-}

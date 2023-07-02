@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "caveopolis:mixed_stone_ingot"
+    }
+  ],
+  "result": {
+    "item": "caveopolis:mixed_stone_nugget"
+  }
+}

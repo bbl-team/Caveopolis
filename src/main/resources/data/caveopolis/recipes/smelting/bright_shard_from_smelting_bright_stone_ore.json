@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smelting",
-  "ingredient": {
-    "item": "caveopolis:bright_stone_ore"
-  },
-  "result": "caveopolis:bright_shard",
-  "experience": 0.35,
-  "cookingtime": 200
-}

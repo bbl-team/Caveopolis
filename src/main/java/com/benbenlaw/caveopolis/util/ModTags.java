@@ -29,6 +29,9 @@ public class ModTags {
         public static final TagKey<Block> COLORED_STONE_BRICK_SLABS = tag("colored_stone_brick_slabs");
         public static final TagKey<Block> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");
         public static final TagKey<Block> GLAZED_TERRACOTTA = tag("glazed_terracotta");
+        public static final TagKey<Block> COLORED_CONCRETE = tag("colored_concrete");
+
+        public static final TagKey<Block> SHULKER_BOXES = forgeTag("shulker_boxes");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Caveopolis.MOD_ID, name));
@@ -44,7 +47,6 @@ public class ModTags {
 
 
     public static class Items {
-   //     public static final TagKey<Item> SPACE_SUIT_HELMET = tag("space_suit_helmet");
         public static final TagKey<Item> MIXED_STONE_INGOTS = forgeTag("ingots/mixed_stone_ingot");
         public static final TagKey<Item> BRIGHT_ITEMS = tag("bright_items");
         public static final TagKey<Item> SPRAY_CANS = tag("spray_cans");
@@ -65,6 +67,9 @@ public class ModTags {
         public static final TagKey<Item> COLORED_CONCRETE = tag("colored_concrete");
         public static final TagKey<Item> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");
         public static final TagKey<Item> GLAZED_TERRACOTTA = tag("glazed_terracotta");
+
+        public static final TagKey<Item> SHULKER_BOXES = forgeTag("shulker_boxes");
+        public static final TagKey<Item> RODS_STONE = forgeTag("rods/stone");
 
 
 

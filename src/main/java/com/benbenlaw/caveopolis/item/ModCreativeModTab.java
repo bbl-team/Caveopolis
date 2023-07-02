@@ -23,6 +23,7 @@ public class ModCreativeModTab {
             .displayItems((parameters, output) -> {
 
                 output.accept(ModBlocks.STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.SPRAYER.get());
 
                 output.accept(ModBlocks.BLUE_COLORED_STONE.get());
                 output.accept(ModBlocks.BLUE_COLORED_STONE_BRICKS.get());
@@ -204,6 +205,7 @@ public class ModCreativeModTab {
                 output.accept(ModItems.LIME_SPRAY_CAN.get());
                 output.accept(ModItems.CYAN_SPRAY_CAN.get());
                 output.accept(ModItems.GLOWSTONE_SPRAY_CAN.get());
+                output.accept(ModItems.SPRAY_CAN_REMOVER.get());
 
                 output.accept(ModItems.STONE_STICK.get());
                 output.accept(ModBlocks.STONE_TORCH.get());

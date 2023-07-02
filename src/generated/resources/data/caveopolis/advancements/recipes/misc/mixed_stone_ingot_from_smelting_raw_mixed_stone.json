@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_raw_mixed_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:raw_mixed_stone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:mixed_stone_ingot_from_smelting_raw_mixed_stone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_raw_mixed_stone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:mixed_stone_ingot_from_smelting_raw_mixed_stone"
+    ]
+  },
+  "sends_telemetry_event": false
+}

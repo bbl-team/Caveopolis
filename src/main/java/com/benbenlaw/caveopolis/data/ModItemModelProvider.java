@@ -1,25 +1,53 @@
 package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
+import com.benbenlaw.caveopolis.item.ModItems;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.RegistryObject;
 
-public class ModItemModelProvider {}
+public class ModItemModelProvider extends ItemModelProvider {
 
-/*
-extends ItemModelProvider {
-
-
-
-    public ModItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, Caveopolis.MOD_ID, existingFileHelper);
+    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, Caveopolis.MOD_ID, existingFileHelper);
     }
-
-
 
     @Override
     protected void registerModels() {
+
+        simpleItem(ModItems.BLACK_SPRAY_CAN);
+        simpleItem(ModItems.BLUE_SPRAY_CAN);
+        simpleItem(ModItems.BROWN_SPRAY_CAN);
+        simpleItem(ModItems.PINK_SPRAY_CAN);
+        simpleItem(ModItems.PURPLE_SPRAY_CAN);
+        simpleItem(ModItems.WHTIE_SPRAY_CAN);
+        simpleItem(ModItems.YELLOW_SPRAY_CAN);
+        simpleItem(ModItems.LIGHT_GRAY_SPRAY_CAN);
+        simpleItem(ModItems.LIGHT_BLUE_SPRAY_CAN);
+        simpleItem(ModItems.GRAY_SPRAY_CAN);
+        simpleItem(ModItems.MAGENTA_SPRAY_CAN);
+        simpleItem(ModItems.RED_SPRAY_CAN);
+        simpleItem(ModItems.ORANGE_SPRAY_CAN);
+        simpleItem(ModItems.GREEN_SPRAY_CAN);
+        simpleItem(ModItems.LIME_SPRAY_CAN);
+        simpleItem(ModItems.CYAN_SPRAY_CAN);
+        simpleItem(ModItems.GLOWSTONE_SPRAY_CAN);
+        simpleItem(ModItems.SPRAY_CAN_REMOVER);
+        simpleItem(ModItems.STONE_STICK);
+        simpleItem(ModItems.STONE_TORCH);
+        simpleItem(ModItems.MOSS_BALL);
+        simpleItem(ModItems.MOSSY_STRING);
+        simpleItem(ModItems.BRIGHT_SHARD);
+        simpleItem(ModItems.RAW_MIXED_STONE);
+        simpleItem(ModItems.MIXED_STONE_INGOT);
+        simpleItem(ModItems.MIXED_STONE_NUGGET);
+
+        withExistingParent("stone_crafting_table", modLoc("block/stone_crafting_table"));
 
         withExistingParent("blue_colored_stone", modLoc("block/blue_colored_stone"));
         withExistingParent("blue_colored_stone_bricks", modLoc("block/blue_colored_stone_bricks"));
@@ -184,13 +212,15 @@ extends ItemModelProvider {
 
     }
 
-    /*
 
-    private ItemModelBuilder simpleItem(Item item) {
-        return withExistingParent(item.getID().getPath(),
+
+    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
+        return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getName().getPath()));
+                new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getId().getPath()));
     }
+
+    /*
 
     private ItemModelBuilder handheldItem(Item item) {
         return withExistingParent(item.getName().getPath(),
@@ -198,6 +228,6 @@ extends ItemModelProvider {
                 new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getName().getPath()));
     }
 
-     }
+     */
 
- */
+}

@@ -5,7 +5,7 @@
         "item": "caveopolis:white_spray_can"
       },
       {
-        "tag": "minecraft:shulker_boxes"
+        "tag": "forge:shulker_boxes"
       }
   ],
   "output": {

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:light_blue_colored_stone_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "light_blue_colored_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:light_blue_colored_stone_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "light_blue_colored_stone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:light_blue_colored_stone_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "caveopolis:orange_colored_stone"
-  },
-  "result": "caveopolis:orange_colored_stone_slab",
-  "count": 2
-}
