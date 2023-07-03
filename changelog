@@ -5,10 +5,11 @@ Caveopolis Mod Changelog
 2.1.0
 
 Added Spray Can Remover to create menu
-Added sprayer from to cvreative mod menu
+Added sprayer from to creative mod menu
 Mossy stone now drops 1 to 3 moss balls
 purple colored stone brick stairs now have a sprayer recipe
-Re added Data Gen
+Re added Data Gen, data gen for the core parts of the mod such as crafting and stone cutter recipes, all block textures,
+ will still manually add sprayer recipes as its a lot easier
 
 
 2.0.0
