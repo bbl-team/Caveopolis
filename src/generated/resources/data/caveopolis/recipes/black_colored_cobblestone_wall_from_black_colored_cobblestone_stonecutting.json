@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "caveopolis:black_colored_cobblestone"
+  },
+  "result": "caveopolis:black_colored_cobblestone_wall"
+}

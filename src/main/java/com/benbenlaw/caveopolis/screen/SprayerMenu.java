@@ -2,7 +2,9 @@ package com.benbenlaw.caveopolis.screen;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.block.entity.SprayerBlockEntity;
+import com.benbenlaw.caveopolis.screen.slot.EverythingButSprayCanSlot;
 import com.benbenlaw.caveopolis.screen.slot.ModResultSlot;
+import com.benbenlaw.caveopolis.screen.slot.SprayCanSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -34,8 +36,8 @@ public class SprayerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 12, 16));
-            this.addSlot(new SlotItemHandler(handler, 1, 86, 16));
+            this.addSlot(new SprayCanSlot(handler, 0, 12, 16));
+            this.addSlot(new EverythingButSprayCanSlot(handler, 1, 86, 16));
             this.addSlot(new ModResultSlot(handler, 2, 86, 60));
         });
 

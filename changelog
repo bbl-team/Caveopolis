@@ -2,6 +2,15 @@ Caveopolis Mod Changelog
 
 //TODO: More coloured blocks
 
+2.2.0
+
+Improved sprayer block shift clicking in items (Items will go into the appropriate slot)
+Improved in world interactions with the sprayer block (automation will now go into the correct slots
+In world spray can usages now make a sound when being used
+Added 16 colors of cobblestone in blocks, stairs, slabs and walls
+Added 16 colors of cobblestone bricks in blocks, stairs, slabs and walls
+Added 16 colors of bright cobblestone blocks
+
 2.1.0
 
 Added Spray Can Remover to create menu

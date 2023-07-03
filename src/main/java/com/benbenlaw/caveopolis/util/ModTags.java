@@ -27,6 +27,20 @@ public class ModTags {
 
         public static final TagKey<Block> COLORED_STONE_SLABS = tag("colored_stone_slabs");
         public static final TagKey<Block> COLORED_STONE_BRICK_SLABS = tag("colored_stone_brick_slabs");
+        
+        public static final TagKey<Block> COLORED_COBBLESTONE = tag("colored_cobblestone");
+        public static final TagKey<Block> COLORED_BRIGHT_COBBLESTONE = tag("colored_bright_cobblestone");
+        public static final TagKey<Block> COLORED_COBBLESTONE_BRICKS = tag("colored_cobblestone_bricks");
+
+        public static final TagKey<Block> COLORED_COBBLESTONE_STAIRS = tag("colored_cobblestone_stairs");
+        public static final TagKey<Block> COLORED_COBBLESTONE_BRICK_STAIRS = tag("colored_cobblestone_brick_stairs");
+
+        public static final TagKey<Block> COLORED_COBBLESTONE_WALL = tag("colored_cobblestone_wall");
+        public static final TagKey<Block> COLORED_COBBLESTONE_BRICK_WALL = tag("colored_cobblestone_brick_wall");
+
+        public static final TagKey<Block> COLORED_COBBLESTONE_SLABS = tag("colored_cobblestone_slabs");
+        public static final TagKey<Block> COLORED_COBBLESTONE_BRICK_SLABS = tag("colored_cobblestone_brick_slabs");
+
         public static final TagKey<Block> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");
         public static final TagKey<Block> GLAZED_TERRACOTTA = tag("glazed_terracotta");
         public static final TagKey<Block> COLORED_CONCRETE = tag("colored_concrete");
@@ -63,6 +77,19 @@ public class ModTags {
 
         public static final TagKey<Item> COLORED_STONE_SLABS = tag("colored_stone_slabs");
         public static final TagKey<Item> COLORED_STONE_BRICK_SLABS = tag("colored_stone_brick_slabs");
+
+        public static final TagKey<Item> COLORED_COBBLESTONE = tag("colored_cobblestone");
+        public static final TagKey<Item> COLORED_BRIGHT_COBBLESTONE = tag("colored_bright_cobblestone");
+        public static final TagKey<Item> COLORED_COBBLESTONE_BRICKS = tag("colored_cobblestone_bricks");
+
+        public static final TagKey<Item> COLORED_COBBLESTONE_STAIRS = tag("colored_cobblestone_stairs");
+        public static final TagKey<Item> COLORED_COBBLESTONE_BRICK_STAIRS = tag("colored_cobblestone_brick_stairs");
+
+        public static final TagKey<Item> COLORED_COBBLESTONE_WALL = tag("colored_cobblestone_wall");
+        public static final TagKey<Item> COLORED_COBBLESTONE_BRICK_WALL = tag("colored_cobblestone_brick_wall");
+
+        public static final TagKey<Item> COLORED_COBBLESTONE_SLABS = tag("colored_cobblestone_slabs");
+        public static final TagKey<Item> COLORED_COBBLESTONE_BRICK_SLABS = tag("colored_cobblestone_brick_slabs");
 
         public static final TagKey<Item> COLORED_CONCRETE = tag("colored_concrete");
         public static final TagKey<Item> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");

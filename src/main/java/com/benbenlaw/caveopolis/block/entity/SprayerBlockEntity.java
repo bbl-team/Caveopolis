@@ -1,8 +1,11 @@
 package com.benbenlaw.caveopolis.block.entity;
 
 import com.benbenlaw.caveopolis.block.IInventoryHandlingBlockEntity;
+import com.benbenlaw.caveopolis.block.networking.ModMessages;
+import com.benbenlaw.caveopolis.block.networking.packets.PacketSyncItemStackToClient;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.screen.SprayerMenu;
+import com.benbenlaw.caveopolis.util.ModTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -38,9 +41,10 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
         @Override
         protected void onContentsChanged(int slot) {
             setChanged();
-            //         if(!level.isClientSide()) {
-            //             ModMessages.sendToClients(new PacketSyncItemStackToClient(this, worldPosition));
-            //         }
+            assert level != null;
+            if (!level.isClientSide()) {
+                ModMessages.sendToClients(new PacketSyncItemStackToClient(this, worldPosition));
+            }
         }
     };
 
@@ -49,19 +53,71 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
             Map.of(Direction.DOWN, LazyOptional.of(() -> new WrappedHandler(itemHandler, (i) -> i == 2, (i, s) -> false)),
 
                     Direction.UP, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
-                            (index, stack) -> index == 1 && itemHandler.isItemValid(1, stack))),
+                            (index, stack) -> {
+                                if (index == 0 && itemHandler.isItemValid(0, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                if (index == 1 && itemHandler.isItemValid(1, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return !stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                return false;
+                            })),
 
-                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0,
-                            (index, stack) -> index == 0 && itemHandler.isItemValid(0, stack))),
+                    Direction.NORTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
+                            (index, stack) -> {
+                                if (index == 0 && itemHandler.isItemValid(0, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                if (index == 1 && itemHandler.isItemValid(1, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return !stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                return false;
+                            })),
 
-                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0,
-                            (index, stack) -> index == 0 && itemHandler.isItemValid(0, stack))),
+                    Direction.SOUTH, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
+                            (index, stack) -> {
+                                if (index == 0 && itemHandler.isItemValid(0, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                if (index == 1 && itemHandler.isItemValid(1, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return !stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                return false;
+                            })),
 
-                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0,
-                            (index, stack) -> index == 0 && itemHandler.isItemValid(0, stack))),
+                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
+                            (index, stack) -> {
+                                if (index == 0 && itemHandler.isItemValid(0, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                if (index == 1 && itemHandler.isItemValid(1, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return !stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                return false;
+                            })),
 
-                    Direction.EAST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 0,
-                            (index, stack) -> index == 0 && itemHandler.isItemValid(0, stack)))
+                    Direction.WEST, LazyOptional.of(() -> new WrappedHandler(itemHandler, (index) -> index == 1,
+                            (index, stack) -> {
+                                if (index == 0 && itemHandler.isItemValid(0, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                if (index == 1 && itemHandler.isItemValid(1, stack)) {
+                                    // Add a condition to check for the specific item you want to allow
+                                    return !stack.getTags().anyMatch(ModTags.Items.SPRAY_CANS::equals);
+                                }
+                                return false;
+                            }))
+
+
             );
 
     protected final ContainerData data;

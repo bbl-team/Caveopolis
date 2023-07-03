@@ -1,14 +1,18 @@
 package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
+import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.item.ModItems;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -39,185 +43,118 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.GLOWSTONE_SPRAY_CAN);
         simpleItem(ModItems.SPRAY_CAN_REMOVER);
         simpleItem(ModItems.STONE_STICK);
-        simpleItem(ModItems.STONE_TORCH);
         simpleItem(ModItems.MOSS_BALL);
         simpleItem(ModItems.MOSSY_STRING);
         simpleItem(ModItems.BRIGHT_SHARD);
         simpleItem(ModItems.RAW_MIXED_STONE);
         simpleItem(ModItems.MIXED_STONE_INGOT);
         simpleItem(ModItems.MIXED_STONE_NUGGET);
+        simpleTorch(ModBlocks.STONE_TORCH);
 
-        withExistingParent("stone_crafting_table", modLoc("block/stone_crafting_table"));
+        wallItem(ModBlocks.PURPLE_COLORED_COBBLESTONE_WALL, ModBlocks.PURPLE_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.PURPLE_COLORED_STONE_WALL, ModBlocks.PURPLE_COLORED_STONE);
+        wallItem(ModBlocks.PURPLE_COLORED_STONE_BRICK_WALL, ModBlocks.PURPLE_COLORED_STONE_BRICKS);
 
-        withExistingParent("blue_colored_stone", modLoc("block/blue_colored_stone"));
-        withExistingParent("blue_colored_stone_bricks", modLoc("block/blue_colored_stone_bricks"));
-        withExistingParent("blue_colored_stone_brick_slab", modLoc("block/blue_colored_stone_brick_slab"));
-        withExistingParent("blue_colored_stone_brick_stairs", modLoc("block/blue_colored_stone_brick_stairs"));
-        withExistingParent("blue_colored_stone_brick_wall", modLoc("block/blue_colored_stone_brick_wall_inventory"));
-        withExistingParent("blue_colored_stone_slab", modLoc("block/blue_colored_stone_slab"));
-        withExistingParent("blue_colored_stone_stairs", modLoc("block/blue_colored_stone_stairs"));
-        withExistingParent("blue_colored_stone_wall", modLoc("block/blue_colored_stone_wall_inventory"));
+        wallItem(ModBlocks.GREEN_COLORED_COBBLESTONE_WALL, ModBlocks.GREEN_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.GREEN_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.GREEN_COLORED_STONE_WALL, ModBlocks.GREEN_COLORED_STONE);
+        wallItem(ModBlocks.GREEN_COLORED_STONE_BRICK_WALL, ModBlocks.GREEN_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.CYAN_COLORED_COBBLESTONE_WALL, ModBlocks.CYAN_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.CYAN_COLORED_STONE_WALL, ModBlocks.CYAN_COLORED_STONE);
+        wallItem(ModBlocks.CYAN_COLORED_STONE_BRICK_WALL, ModBlocks.CYAN_COLORED_STONE_BRICKS);
 
-        withExistingParent("light_blue_colored_stone", modLoc("block/light_blue_colored_stone"));
-        withExistingParent("light_blue_colored_stone_bricks", modLoc("block/light_blue_colored_stone_bricks"));
-        withExistingParent("light_blue_colored_stone_brick_slab", modLoc("block/light_blue_colored_stone_brick_slab"));
-        withExistingParent("light_blue_colored_stone_brick_stairs", modLoc("block/light_blue_colored_stone_brick_stairs"));
-        withExistingParent("light_blue_colored_stone_brick_wall", modLoc("block/light_blue_colored_stone_brick_wall_inventory"));
-        withExistingParent("light_blue_colored_stone_slab", modLoc("block/light_blue_colored_stone_slab"));
-        withExistingParent("light_blue_colored_stone_stairs", modLoc("block/light_blue_colored_stone_stairs"));
-        withExistingParent("light_blue_colored_stone_wall", modLoc("block/light_blue_colored_stone_wall_inventory"));
+        wallItem(ModBlocks.LIME_COLORED_COBBLESTONE_WALL, ModBlocks.LIME_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.LIME_COLORED_STONE_WALL, ModBlocks.LIME_COLORED_STONE);
+        wallItem(ModBlocks.LIME_COLORED_STONE_BRICK_WALL, ModBlocks.LIME_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.ORANGE_COLORED_COBBLESTONE_WALL, ModBlocks.ORANGE_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.ORANGE_COLORED_STONE_WALL, ModBlocks.ORANGE_COLORED_STONE);
+        wallItem(ModBlocks.ORANGE_COLORED_STONE_BRICK_WALL, ModBlocks.ORANGE_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.RED_COLORED_COBBLESTONE_WALL, ModBlocks.RED_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.RED_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.RED_COLORED_STONE_WALL, ModBlocks.RED_COLORED_STONE);
+        wallItem(ModBlocks.RED_COLORED_STONE_BRICK_WALL, ModBlocks.RED_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.MAGENTA_COLORED_COBBLESTONE_WALL, ModBlocks.MAGENTA_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.MAGENTA_COLORED_STONE_WALL, ModBlocks.MAGENTA_COLORED_STONE);
+        wallItem(ModBlocks.MAGENTA_COLORED_STONE_BRICK_WALL, ModBlocks.MAGENTA_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.YELLOW_COLORED_COBBLESTONE_WALL, ModBlocks.YELLOW_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.YELLOW_COLORED_STONE_WALL, ModBlocks.YELLOW_COLORED_STONE);
+        wallItem(ModBlocks.YELLOW_COLORED_STONE_BRICK_WALL, ModBlocks.YELLOW_COLORED_STONE_BRICKS);
 
-        withExistingParent("yellow_colored_stone", modLoc("block/yellow_colored_stone"));
-        withExistingParent("yellow_colored_stone_bricks", modLoc("block/yellow_colored_stone_bricks"));
-        withExistingParent("yellow_colored_stone_brick_slab", modLoc("block/yellow_colored_stone_brick_slab"));
-        withExistingParent("yellow_colored_stone_brick_stairs", modLoc("block/yellow_colored_stone_brick_stairs"));
-        withExistingParent("yellow_colored_stone_brick_wall", modLoc("block/yellow_colored_stone_brick_wall_inventory"));
-        withExistingParent("yellow_colored_stone_slab", modLoc("block/yellow_colored_stone_slab"));
-        withExistingParent("yellow_colored_stone_stairs", modLoc("block/yellow_colored_stone_stairs"));
-        withExistingParent("yellow_colored_stone_wall", modLoc("block/yellow_colored_stone_wall_inventory"));
+        wallItem(ModBlocks.PINK_COLORED_COBBLESTONE_WALL, ModBlocks.PINK_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.PINK_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.PINK_COLORED_STONE_WALL, ModBlocks.PINK_COLORED_STONE);
+        wallItem(ModBlocks.PINK_COLORED_STONE_BRICK_WALL, ModBlocks.PINK_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.BLACK_COLORED_COBBLESTONE_WALL, ModBlocks.BLACK_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.BLACK_COLORED_STONE_WALL, ModBlocks.BLACK_COLORED_STONE);
+        wallItem(ModBlocks.BLACK_COLORED_STONE_BRICK_WALL, ModBlocks.BLACK_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.WHITE_COLORED_COBBLESTONE_WALL, ModBlocks.WHITE_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.WHITE_COLORED_STONE_WALL, ModBlocks.WHITE_COLORED_STONE);
+        wallItem(ModBlocks.WHITE_COLORED_STONE_BRICK_WALL, ModBlocks.WHITE_COLORED_STONE_BRICKS);
 
-        withExistingParent("red_colored_stone", modLoc("block/red_colored_stone"));
-        withExistingParent("red_colored_stone_bricks", modLoc("block/red_colored_stone_bricks"));
-        withExistingParent("red_colored_stone_brick_slab", modLoc("block/red_colored_stone_brick_slab"));
-        withExistingParent("red_colored_stone_brick_stairs", modLoc("block/red_colored_stone_brick_stairs"));
-        withExistingParent("red_colored_stone_brick_wall", modLoc("block/red_colored_stone_brick_wall_inventory"));
-        withExistingParent("red_colored_stone_slab", modLoc("block/red_colored_stone_slab"));
-        withExistingParent("red_colored_stone_stairs", modLoc("block/red_colored_stone_stairs"));
-        withExistingParent("red_colored_stone_wall", modLoc("block/red_colored_stone_wall_inventory"));
+        wallItem(ModBlocks.BROWN_COLORED_COBBLESTONE_WALL, ModBlocks.BROWN_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.BROWN_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.BROWN_COLORED_STONE_WALL, ModBlocks.BROWN_COLORED_STONE);
+        wallItem(ModBlocks.BROWN_COLORED_STONE_BRICK_WALL, ModBlocks.BROWN_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_WALL, ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.LIGHT_BLUE_COLORED_STONE_WALL, ModBlocks.LIGHT_BLUE_COLORED_STONE);
+        wallItem(ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICK_WALL, ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.BLUE_COLORED_COBBLESTONE_WALL, ModBlocks.BLUE_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.BLUE_COLORED_STONE_WALL, ModBlocks.BLUE_COLORED_STONE);
+        wallItem(ModBlocks.BLUE_COLORED_STONE_BRICK_WALL, ModBlocks.BLUE_COLORED_STONE_BRICKS);        
+        
+        wallItem(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_WALL, ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.LIGHT_GRAY_COLORED_STONE_WALL, ModBlocks.LIGHT_GRAY_COLORED_STONE);
+        wallItem(ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICK_WALL, ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICKS);
+        
+        wallItem(ModBlocks.GRAY_COLORED_COBBLESTONE_WALL, ModBlocks.GRAY_COLORED_COBBLESTONE);
+        wallItem(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.GRAY_COLORED_COBBLESTONE_BRICKS);
+        wallItem(ModBlocks.GRAY_COLORED_STONE_WALL, ModBlocks.GRAY_COLORED_STONE);
+        wallItem(ModBlocks.GRAY_COLORED_STONE_BRICK_WALL, ModBlocks.GRAY_COLORED_STONE);
 
-        withExistingParent("gray_colored_stone", modLoc("block/gray_colored_stone"));
-        withExistingParent("gray_colored_stone_bricks", modLoc("block/gray_colored_stone_bricks"));
-        withExistingParent("gray_colored_stone_brick_slab", modLoc("block/gray_colored_stone_brick_slab"));
-        withExistingParent("gray_colored_stone_brick_stairs", modLoc("block/gray_colored_stone_brick_stairs"));
-        withExistingParent("gray_colored_stone_brick_wall", modLoc("block/gray_colored_stone_brick_wall_inventory"));
-        withExistingParent("gray_colored_stone_slab", modLoc("block/gray_colored_stone_slab"));
-        withExistingParent("gray_colored_stone_stairs", modLoc("block/gray_colored_stone_stairs"));
-        withExistingParent("gray_colored_stone_wall", modLoc("block/gray_colored_stone_wall_inventory"));
 
-        withExistingParent("green_colored_stone", modLoc("block/green_colored_stone"));
-        withExistingParent("green_colored_stone_bricks", modLoc("block/green_colored_stone_bricks"));
-        withExistingParent("green_colored_stone_brick_slab", modLoc("block/green_colored_stone_brick_slab"));
-        withExistingParent("green_colored_stone_brick_stairs", modLoc("block/green_colored_stone_brick_stairs"));
-        withExistingParent("green_colored_stone_brick_wall", modLoc("block/green_colored_stone_brick_wall_inventory"));
-        withExistingParent("green_colored_stone_slab", modLoc("block/green_colored_stone_slab"));
-        withExistingParent("green_colored_stone_stairs", modLoc("block/green_colored_stone_stairs"));
-        withExistingParent("green_colored_stone_wall", modLoc("block/green_colored_stone_wall_inventory"));
+        wallItem(ModBlocks.COBBLESTONE_BRICK_WALL, ModBlocks.COBBLESTONE_BRICKS);
 
-        withExistingParent("light_gray_colored_stone", modLoc("block/light_gray_colored_stone"));
-        withExistingParent("light_gray_colored_stone_bricks", modLoc("block/light_gray_colored_stone_bricks"));
-        withExistingParent("light_gray_colored_stone_brick_slab", modLoc("block/light_gray_colored_stone_brick_slab"));
-        withExistingParent("light_gray_colored_stone_brick_stairs", modLoc("block/light_gray_colored_stone_brick_stairs"));
-        withExistingParent("light_gray_colored_stone_brick_wall", modLoc("block/light_gray_colored_stone_brick_wall_inventory"));
-        withExistingParent("light_gray_colored_stone_slab", modLoc("block/light_gray_colored_stone_slab"));
-        withExistingParent("light_gray_colored_stone_stairs", modLoc("block/light_gray_colored_stone_stairs"));
-        withExistingParent("light_gray_colored_stone_wall", modLoc("block/light_gray_colored_stone_wall_inventory"));
 
-        withExistingParent("lime_colored_stone", modLoc("block/lime_colored_stone"));
-        withExistingParent("lime_colored_stone_bricks", modLoc("block/lime_colored_stone_bricks"));
-        withExistingParent("lime_colored_stone_brick_slab", modLoc("block/lime_colored_stone_brick_slab"));
-        withExistingParent("lime_colored_stone_brick_stairs", modLoc("block/lime_colored_stone_brick_stairs"));
-        withExistingParent("lime_colored_stone_brick_wall", modLoc("block/lime_colored_stone_brick_wall_inventory"));
-        withExistingParent("lime_colored_stone_slab", modLoc("block/lime_colored_stone_slab"));
-        withExistingParent("lime_colored_stone_stairs", modLoc("block/lime_colored_stone_stairs"));
-        withExistingParent("lime_colored_stone_wall", modLoc("block/lime_colored_stone_wall_inventory"));
+//todo fix        simpleItem(ModItems.STONE_TORCH);
 
-        withExistingParent("purple_colored_stone", modLoc("block/purple_colored_stone"));
-        withExistingParent("purple_colored_stone_bricks", modLoc("block/purple_colored_stone_bricks"));
-        withExistingParent("purple_colored_stone_brick_slab", modLoc("block/purple_colored_stone_brick_slab"));
-        withExistingParent("purple_colored_stone_brick_stairs", modLoc("block/purple_colored_stone_brick_stairs"));
-        withExistingParent("purple_colored_stone_brick_wall", modLoc("block/purple_colored_stone_brick_wall_inventory"));
-        withExistingParent("purple_colored_stone_slab", modLoc("block/purple_colored_stone_slab"));
-        withExistingParent("purple_colored_stone_stairs", modLoc("block/purple_colored_stone_stairs"));
-        withExistingParent("purple_colored_stone_wall", modLoc("block/purple_colored_stone_wall_inventory"));
-
-        withExistingParent("magenta_colored_stone", modLoc("block/magenta_colored_stone"));
-        withExistingParent("magenta_colored_stone_bricks", modLoc("block/magenta_colored_stone_bricks"));
-        withExistingParent("magenta_colored_stone_brick_slab", modLoc("block/magenta_colored_stone_brick_slab"));
-        withExistingParent("magenta_colored_stone_brick_stairs", modLoc("block/magenta_colored_stone_brick_stairs"));
-        withExistingParent("magenta_colored_stone_brick_wall", modLoc("block/magenta_colored_stone_brick_wall_inventory"));
-        withExistingParent("magenta_colored_stone_slab", modLoc("block/magenta_colored_stone_slab"));
-        withExistingParent("magenta_colored_stone_stairs", modLoc("block/magenta_colored_stone_stairs"));
-        withExistingParent("magenta_colored_stone_wall", modLoc("block/magenta_colored_stone_wall_inventory"));
-
-        withExistingParent("pink_colored_stone", modLoc("block/pink_colored_stone"));
-        withExistingParent("pink_colored_stone_bricks", modLoc("block/pink_colored_stone_bricks"));
-        withExistingParent("pink_colored_stone_brick_slab", modLoc("block/pink_colored_stone_brick_slab"));
-        withExistingParent("pink_colored_stone_brick_stairs", modLoc("block/pink_colored_stone_brick_stairs"));
-        withExistingParent("pink_colored_stone_brick_wall", modLoc("block/pink_colored_stone_brick_wall_inventory"));
-        withExistingParent("pink_colored_stone_slab", modLoc("block/pink_colored_stone_slab"));
-        withExistingParent("pink_colored_stone_stairs", modLoc("block/pink_colored_stone_stairs"));
-        withExistingParent("pink_colored_stone_wall", modLoc("block/pink_colored_stone_wall_inventory"));
-
-        withExistingParent("black_colored_stone", modLoc("block/black_colored_stone"));
-        withExistingParent("black_colored_stone_bricks", modLoc("block/black_colored_stone_bricks"));
-        withExistingParent("black_colored_stone_brick_slab", modLoc("block/black_colored_stone_brick_slab"));
-        withExistingParent("black_colored_stone_brick_stairs", modLoc("block/black_colored_stone_brick_stairs"));
-        withExistingParent("black_colored_stone_brick_wall", modLoc("block/black_colored_stone_brick_wall_inventory"));
-        withExistingParent("black_colored_stone_slab", modLoc("block/black_colored_stone_slab"));
-        withExistingParent("black_colored_stone_stairs", modLoc("block/black_colored_stone_stairs"));
-        withExistingParent("black_colored_stone_wall", modLoc("block/black_colored_stone_wall_inventory"));
-
-        withExistingParent("white_colored_stone", modLoc("block/white_colored_stone"));
-        withExistingParent("white_colored_stone_bricks", modLoc("block/white_colored_stone_bricks"));
-        withExistingParent("white_colored_stone_brick_slab", modLoc("block/white_colored_stone_brick_slab"));
-        withExistingParent("white_colored_stone_brick_stairs", modLoc("block/white_colored_stone_brick_stairs"));
-        withExistingParent("white_colored_stone_brick_wall", modLoc("block/white_colored_stone_brick_wall_inventory"));
-        withExistingParent("white_colored_stone_slab", modLoc("block/white_colored_stone_slab"));
-        withExistingParent("white_colored_stone_stairs", modLoc("block/white_colored_stone_stairs"));
-        withExistingParent("white_colored_stone_wall", modLoc("block/white_colored_stone_wall_inventory"));
-
-        withExistingParent("brown_colored_stone", modLoc("block/brown_colored_stone"));
-        withExistingParent("brown_colored_stone_bricks", modLoc("block/brown_colored_stone_bricks"));
-        withExistingParent("brown_colored_stone_brick_slab", modLoc("block/brown_colored_stone_brick_slab"));
-        withExistingParent("brown_colored_stone_brick_stairs", modLoc("block/brown_colored_stone_brick_stairs"));
-        withExistingParent("brown_colored_stone_brick_wall", modLoc("block/brown_colored_stone_brick_wall_inventory"));
-        withExistingParent("brown_colored_stone_slab", modLoc("block/brown_colored_stone_slab"));
-        withExistingParent("brown_colored_stone_stairs", modLoc("block/brown_colored_stone_stairs"));
-        withExistingParent("brown_colored_stone_wall", modLoc("block/brown_colored_stone_wall_inventory"));
-
-        withExistingParent("orange_colored_stone", modLoc("block/orange_colored_stone"));
-        withExistingParent("orange_colored_stone_bricks", modLoc("block/orange_colored_stone_bricks"));
-        withExistingParent("orange_colored_stone_brick_slab", modLoc("block/orange_colored_stone_brick_slab"));
-        withExistingParent("orange_colored_stone_brick_stairs", modLoc("block/orange_colored_stone_brick_stairs"));
-        withExistingParent("orange_colored_stone_brick_wall", modLoc("block/orange_colored_stone_brick_wall_inventory"));
-        withExistingParent("orange_colored_stone_slab", modLoc("block/orange_colored_stone_slab"));
-        withExistingParent("orange_colored_stone_stairs", modLoc("block/orange_colored_stone_stairs"));
-        withExistingParent("orange_colored_stone_wall", modLoc("block/orange_colored_stone_wall_inventory"));
-
-        withExistingParent("cyan_colored_stone", modLoc("block/cyan_colored_stone"));
-        withExistingParent("cyan_colored_stone_bricks", modLoc("block/cyan_colored_stone_bricks"));
-        withExistingParent("cyan_colored_stone_brick_slab", modLoc("block/cyan_colored_stone_brick_slab"));
-        withExistingParent("cyan_colored_stone_brick_stairs", modLoc("block/cyan_colored_stone_brick_stairs"));
-        withExistingParent("cyan_colored_stone_brick_wall", modLoc("block/cyan_colored_stone_brick_wall_inventory"));
-        withExistingParent("cyan_colored_stone_slab", modLoc("block/cyan_colored_stone_slab"));
-        withExistingParent("cyan_colored_stone_stairs", modLoc("block/cyan_colored_stone_stairs"));
-        withExistingParent("cyan_colored_stone_wall", modLoc("block/cyan_colored_stone_wall_inventory"));
-
-        withExistingParent("brown_colored_bright_stone", modLoc("block/brown_colored_bright_stone"));
-        withExistingParent("magenta_colored_bright_stone", modLoc("block/magenta_colored_bright_stone"));
-        withExistingParent("purple_colored_bright_stone", modLoc("block/purple_colored_bright_stone"));
-        withExistingParent("white_colored_bright_stone", modLoc("block/white_colored_bright_stone"));
-        withExistingParent("yellow_colored_bright_stone", modLoc("block/yellow_colored_bright_stone"));
-        withExistingParent("light_gray_colored_bright_stone", modLoc("block/light_gray_colored_bright_stone"));
-        withExistingParent("blue_colored_bright_stone", modLoc("block/blue_colored_bright_stone"));
-        withExistingParent("light_blue_colored_bright_stone", modLoc("block/light_blue_colored_bright_stone"));
-        withExistingParent("gray_colored_bright_stone", modLoc("block/gray_colored_bright_stone"));
-        withExistingParent("pink_colored_bright_stone", modLoc("block/pink_colored_bright_stone"));
-        withExistingParent("red_colored_bright_stone", modLoc("block/red_colored_bright_stone"));
-        withExistingParent("black_colored_bright_stone", modLoc("block/black_colored_bright_stone"));
-        withExistingParent("orange_colored_bright_stone", modLoc("block/orange_colored_bright_stone"));
-        withExistingParent("green_colored_bright_stone", modLoc("block/green_colored_bright_stone"));
-        withExistingParent("lime_colored_bright_stone", modLoc("block/lime_colored_bright_stone"));
-        withExistingParent("cyan_colored_bright_stone", modLoc("block/cyan_colored_bright_stone"));
 
     }
-
-
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder simpleTorch(RegistryObject<Block> block) {
+        return withExistingParent(block.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Caveopolis.MOD_ID,"block/" + block.getId().getPath()));
+    }
+
+    private void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall", new ResourceLocation(Caveopolis.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     /*

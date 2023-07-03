@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "caveopolis:green_colored_stone"
+  },
+  "result": "caveopolis:green_colored_cobblestone"
+}

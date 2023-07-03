@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "caveopolis:block/pink_colored_cobblestone"
+  }
+}

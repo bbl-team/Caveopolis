@@ -2,6 +2,7 @@ package com.benbenlaw.caveopolis;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.block.entity.ModBlockEntities;
+import com.benbenlaw.caveopolis.block.networking.ModMessages;
 import com.benbenlaw.caveopolis.config.ConfigFile;
 import com.benbenlaw.caveopolis.item.ModCreativeModTab;
 import com.benbenlaw.caveopolis.item.ModItems;
@@ -50,11 +51,13 @@ public class Caveopolis {
         ModMenuTypes.register(eventBus);
         ModRecipes.register(eventBus);
 
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
         eventBus.addListener(this::processIMC);
         eventBus.addListener(this::setup);
         eventBus.addListener(this::doClientStuff);
+        eventBus.addListener(this::commonSetup);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ConfigFile.SPEC, "caveopolis.toml");
 
@@ -65,6 +68,12 @@ public class Caveopolis {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getName());
+    }
+
+
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(ModMessages::register);
+
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

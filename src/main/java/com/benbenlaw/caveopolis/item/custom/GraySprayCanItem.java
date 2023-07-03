@@ -8,6 +8,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -72,7 +73,7 @@ public class GraySprayCanItem extends Item {
                 if (targetBlockIngredient.test(blockState.getBlock().asItem().getDefaultInstance()) && sprayCan.getItem() == ModItems.GRAY_SPRAY_CAN.get()) {
 
                     level.setBlockAndUpdate(pos, newBlockRecipe);
-                    level.playLocalSound(pos.getX(), pos.getY(), pos.getZ(), SoundType.SLIME_BLOCK.getStepSound(), SoundSource.BLOCKS, 1f, 5, false);
+                    level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, Minecraft.getInstance().options.getSoundSourceVolume(SoundSource.MASTER) * 15 , 0.5F);
 
                     if (mainHand) {
                         player.getItemInHand(InteractionHand.MAIN_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));

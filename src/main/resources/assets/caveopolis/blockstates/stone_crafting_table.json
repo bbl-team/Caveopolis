@@ -1,7 +1,7 @@
 {
-  "variants": {
-    "": {
-      "model": "caveopolis:block/stone_crafting_table"
-    }
-  }
-}
+   "variants": {
+     "": {
+       "model": "caveopolis:block/stone_crafting_table"
+     }
+   }
+ }

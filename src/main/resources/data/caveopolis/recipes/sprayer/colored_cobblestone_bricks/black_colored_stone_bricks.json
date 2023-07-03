@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:black_spray_can"
+      },
+      {
+        "tag": "caveopolis:colored_cobblestone_bricks"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:black_colored_cobblestone_bricks"
+  }
+}

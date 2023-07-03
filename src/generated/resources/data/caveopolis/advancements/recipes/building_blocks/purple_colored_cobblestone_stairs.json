@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:purple_colored_cobblestone_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purple_colored_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:purple_colored_cobblestone_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purple_colored_cobblestone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:purple_colored_cobblestone_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

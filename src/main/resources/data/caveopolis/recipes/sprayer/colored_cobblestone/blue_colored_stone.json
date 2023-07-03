@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:blue_spray_can"
+      },
+      {
+        "tag": "caveopolis:colored_cobblestone"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:blue_colored_cobblestone"
+  }
+}

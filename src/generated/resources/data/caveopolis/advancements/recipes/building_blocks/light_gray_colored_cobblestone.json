@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_light_gray_colored_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:light_gray_colored_stone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:light_gray_colored_cobblestone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_light_gray_colored_stone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:light_gray_colored_cobblestone"
+    ]
+  },
+  "sends_telemetry_event": false
+}

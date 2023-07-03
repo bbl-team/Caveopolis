@@ -51,6 +51,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE)
                     .lightLevel((state) -> 15)));
 
+    public static final RegistryObject<Block> BRIGHT_COBBLESTONE = registerBlock("bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
     public static final RegistryObject<Block> STONE_TORCH = BLOCKS.register("stone_torch",
             () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
@@ -483,6 +487,435 @@ public class ModBlocks {
                     .lightLevel((state) -> 15)));
 
     public static final RegistryObject<Block> BROWN_COLORED_BRIGHT_STONE = registerBlock("brown_colored_bright_stone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+//Colored Cobblestone
+
+
+    public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE = registerBlock("white_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE_SLAB = registerBlock("white_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE_STAIRS = registerBlock("white_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.WHITE_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE_WALL = registerBlock("white_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE_BRICKS = registerBlock("white_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("white_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("white_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("white_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+
+    public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE = registerBlock("black_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_SLAB = registerBlock("black_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_STAIRS = registerBlock("black_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.BLACK_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_WALL = registerBlock("black_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    
+    public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_BRICKS = registerBlock("black_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("black_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("black_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("black_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> RED_COLORED_COBBLESTONE = registerBlock("red_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_SLAB = registerBlock("red_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_STAIRS = registerBlock("red_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.RED_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_WALL = registerBlock("red_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_BRICKS = registerBlock("red_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("red_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("red_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.RED_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("red_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+    
+    public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE = registerBlock("yellow_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_SLAB = registerBlock("yellow_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_STAIRS = registerBlock("yellow_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.YELLOW_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_WALL = registerBlock("yellow_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_BRICKS = registerBlock("yellow_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("yellow_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("yellow_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("yellow_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE = registerBlock("blue_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_SLAB = registerBlock("blue_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_STAIRS = registerBlock("blue_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.BLUE_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_WALL = registerBlock("blue_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_BRICKS = registerBlock("blue_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("blue_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("blue_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("blue_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE = registerBlock("pink_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_SLAB = registerBlock("pink_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_STAIRS = registerBlock("pink_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.PINK_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_WALL = registerBlock("pink_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_BRICKS = registerBlock("pink_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("pink_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("pink_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.PINK_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("pink_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE = registerBlock("purple_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_SLAB = registerBlock("purple_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_STAIRS = registerBlock("purple_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.PURPLE_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_WALL = registerBlock("purple_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_BRICKS = registerBlock("purple_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("purple_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("purple_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("purple_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE = registerBlock("magenta_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_SLAB = registerBlock("magenta_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_STAIRS = registerBlock("magenta_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.MAGENTA_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_WALL = registerBlock("magenta_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_BRICKS = registerBlock("magenta_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("magenta_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("magenta_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("magenta_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE = registerBlock("light_blue_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_SLAB = registerBlock("light_blue_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_STAIRS = registerBlock("light_blue_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_WALL = registerBlock("light_blue_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS = registerBlock("light_blue_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("light_blue_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("light_blue_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("light_blue_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE = registerBlock("cyan_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_SLAB = registerBlock("cyan_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_STAIRS = registerBlock("cyan_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.CYAN_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_WALL = registerBlock("cyan_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_BRICKS = registerBlock("cyan_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("cyan_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("cyan_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("cyan_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE = registerBlock("gray_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_SLAB = registerBlock("gray_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_STAIRS = registerBlock("gray_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.GRAY_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_WALL = registerBlock("gray_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_BRICKS = registerBlock("gray_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("gray_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("gray_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.GRAY_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("gray_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+    public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE = registerBlock("brown_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_SLAB = registerBlock("brown_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_STAIRS = registerBlock("brown_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.BROWN_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_WALL = registerBlock("brown_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_BRICKS = registerBlock("brown_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("brown_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("brown_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.BROWN_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("brown_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE = registerBlock("light_gray_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_SLAB = registerBlock("light_gray_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_STAIRS = registerBlock("light_gray_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_WALL = registerBlock("light_gray_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS = registerBlock("light_gray_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("light_gray_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("light_gray_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("light_gray_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+
+
+    public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE = registerBlock("orange_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_SLAB = registerBlock("orange_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_STAIRS = registerBlock("orange_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.ORANGE_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_WALL = registerBlock("orange_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_BRICKS = registerBlock("orange_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("orange_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("orange_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("orange_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+
+    public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE = registerBlock("green_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_SLAB = registerBlock("green_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_STAIRS = registerBlock("green_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.GREEN_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_WALL = registerBlock("green_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_BRICKS = registerBlock("green_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("green_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("green_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.GREEN_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("green_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+
+    public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE = registerBlock("lime_colored_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_SLAB = registerBlock("lime_colored_cobblestone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_STAIRS = registerBlock("lime_colored_cobblestone_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIME_COLORED_COBBLESTONE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_WALL = registerBlock("lime_colored_cobblestone_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_BRICKS = registerBlock("lime_colored_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_BRICK_SLAB = registerBlock("lime_colored_cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_BRICK_STAIRS = registerBlock("lime_colored_cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("lime_colored_cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> COBBLESTONE_BRICKS = registerBlock("cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> COBBLESTONE_BRICK_SLAB = registerBlock("cobblestone_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> COBBLESTONE_BRICK_STAIRS = registerBlock("cobblestone_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.COBBLESTONE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> COBBLESTONE_BRICK_WALL = registerBlock("cobblestone_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> LIME_COLORED_BRIGHT_COBBLESTONE = registerBlock("lime_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> GREEN_COLORED_BRIGHT_COBBLESTONE = registerBlock("green_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> ORANGE_COLORED_BRIGHT_COBBLESTONE = registerBlock("orange_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> WHITE_COLORED_BRIGHT_COBBLESTONE = registerBlock("white_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> BLACK_COLORED_BRIGHT_COBBLESTONE = registerBlock("black_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> RED_COLORED_BRIGHT_COBBLESTONE = registerBlock("red_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> YELLOW_COLORED_BRIGHT_COBBLESTONE = registerBlock("yellow_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> BLUE_COLORED_BRIGHT_COBBLESTONE = registerBlock("blue_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> PINK_COLORED_BRIGHT_COBBLESTONE = registerBlock("pink_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> PURPLE_COLORED_BRIGHT_COBBLESTONE = registerBlock("purple_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> MAGENTA_COLORED_BRIGHT_COBBLESTONE = registerBlock("magenta_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_BRIGHT_COBBLESTONE = registerBlock("light_blue_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> CYAN_COLORED_BRIGHT_COBBLESTONE = registerBlock("cyan_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_BRIGHT_COBBLESTONE = registerBlock("light_gray_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> GRAY_COLORED_BRIGHT_COBBLESTONE = registerBlock("gray_colored_bright_cobblestone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
+                    .lightLevel((state) -> 15)));
+
+    public static final RegistryObject<Block> BROWN_COLORED_BRIGHT_COBBLESTONE = registerBlock("brown_colored_bright_cobblestone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
                     .lightLevel((state) -> 15)));
 

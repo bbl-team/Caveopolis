@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:glowstone_spray_can"
+      },
+      {
+        "item": "minecraft:cobblestone"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:bright_cobblestone"
+  }
+}

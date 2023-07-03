@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_wall_post",
+  "textures": {
+    "wall": "caveopolis:block/black_colored_cobblestone_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "caveopolis:magenta_colored_cobblestone_bricks"
+  },
+  "result": "caveopolis:magenta_colored_cobblestone_brick_slab"
+}

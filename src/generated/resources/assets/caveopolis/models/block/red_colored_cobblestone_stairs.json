@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "caveopolis:block/red_colored_cobblestone",
+    "side": "caveopolis:block/red_colored_cobblestone",
+    "top": "caveopolis:block/red_colored_cobblestone"
+  }
+}

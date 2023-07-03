@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "caveopolis:block/blue_colored_cobblestone_bricks"
+  }
+}

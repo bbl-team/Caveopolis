@@ -153,15 +153,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.BROWN_COLORED_STONE_STAIRS.get());
         this.dropSelf(ModBlocks.BROWN_COLORED_STONE_WALL.get());
 
-        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE.get());
-        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_BRICKS.get());
-        this.add(ModBlocks.ORANGE_COLORED_STONE_BRICK_SLAB.get(), this::createSlabItemTable);
-        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_BRICK_STAIRS.get());
-        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_BRICK_WALL.get());
-        this.add(ModBlocks.ORANGE_COLORED_STONE_SLAB.get(), this::createSlabItemTable);
-        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_STAIRS.get());
-        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_WALL.get());
-
         this.dropSelf(ModBlocks.CYAN_COLORED_STONE.get());
         this.dropSelf(ModBlocks.CYAN_COLORED_STONE_BRICKS.get());
         this.add(ModBlocks.CYAN_COLORED_STONE_BRICK_SLAB.get(), this::createSlabItemTable);
@@ -170,6 +161,15 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.CYAN_COLORED_STONE_SLAB.get(), this::createSlabItemTable);
         this.dropSelf(ModBlocks.CYAN_COLORED_STONE_STAIRS.get());
         this.dropSelf(ModBlocks.CYAN_COLORED_STONE_WALL.get());
+        
+        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_BRICKS.get());
+        this.add(ModBlocks.ORANGE_COLORED_STONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_BRICK_WALL.get());
+        this.add(ModBlocks.ORANGE_COLORED_STONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_STAIRS.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_WALL.get());
 
         this.dropSelf(ModBlocks.BROWN_COLORED_BRIGHT_STONE.get());
         this.dropSelf(ModBlocks.MAGENTA_COLORED_BRIGHT_STONE.get());
@@ -183,10 +183,11 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PINK_COLORED_BRIGHT_STONE.get());
         this.dropSelf(ModBlocks.RED_COLORED_BRIGHT_STONE.get());
         this.dropSelf(ModBlocks.BLACK_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.ORANGE_COLORED_BRIGHT_STONE.get());
+        this.dropSelf(ModBlocks.BRIGHT_STONE.get());
         this.dropSelf(ModBlocks.GREEN_COLORED_BRIGHT_STONE.get());
         this.dropSelf(ModBlocks.LIME_COLORED_BRIGHT_STONE.get());
         this.dropSelf(ModBlocks.CYAN_COLORED_BRIGHT_STONE.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_BRIGHT_STONE.get());
 
         this.dropSelf(ModBlocks.STONE_CRAFTING_TABLE.get());
         this.dropSelf(ModBlocks.BRIGHT_STONE.get());
@@ -208,6 +209,173 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.MOSSY_STONE.get(),
                 block -> createOreDrop(ModBlocks.MOSSY_STONE.get(), ModItems.MOSS_BALL.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)));
 
+        this.dropSelf(ModBlocks.BLUE_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.BLUE_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.BLUE_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_COBBLESTONE_WALL.get());
+
+
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.YELLOW_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.YELLOW_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.YELLOW_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.RED_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.RED_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.RED_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.RED_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.RED_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.GRAY_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.GRAY_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.GRAY_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.GREEN_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.GREEN_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.GREEN_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.LIME_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.LIME_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.LIME_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.PURPLE_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.PURPLE_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.PURPLE_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.MAGENTA_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.PINK_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.PINK_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.PINK_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.BLACK_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.BLACK_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.BLACK_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.WHITE_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.WHITE_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.WHITE_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.BROWN_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.BROWN_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.BROWN_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.BROWN_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.COBBLESTONE_BRICK_WALL.get());
+
+        this.dropSelf(ModBlocks.CYAN_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.CYAN_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.CYAN_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICKS.get());
+        this.add(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.add(ModBlocks.ORANGE_COLORED_COBBLESTONE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE_WALL.get());
+
+        this.dropSelf(ModBlocks.BROWN_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.RED_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_BRIGHT_COBBLESTONE.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_BRIGHT_COBBLESTONE.get());
 
 
 

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:orange_colored_cobblestone_brick_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "orange_colored_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:orange_colored_cobblestone_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "orange_colored_cobblestone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:orange_colored_cobblestone_brick_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}
