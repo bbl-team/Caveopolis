@@ -41,6 +41,10 @@ public class ModTags {
         public static final TagKey<Block> COLORED_COBBLESTONE_SLABS = tag("colored_cobblestone_slabs");
         public static final TagKey<Block> COLORED_COBBLESTONE_BRICK_SLABS = tag("colored_cobblestone_brick_slabs");
 
+        public static final TagKey<Block> COLORED_WOODEN_PLANKS = tag("colored_wooden_planks");
+        public static final TagKey<Block> COLORED_WOODEN_PLANK_STAIRS = tag("colored_wooden_plank_stairs");
+        public static final TagKey<Block> COLORED_WOODEN_PLANK_SLABS = tag("colored_wooden_plank_slabs");
+
         public static final TagKey<Block> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");
         public static final TagKey<Block> GLAZED_TERRACOTTA = tag("glazed_terracotta");
         public static final TagKey<Block> COLORED_CONCRETE = tag("colored_concrete");
@@ -90,6 +94,10 @@ public class ModTags {
 
         public static final TagKey<Item> COLORED_COBBLESTONE_SLABS = tag("colored_cobblestone_slabs");
         public static final TagKey<Item> COLORED_COBBLESTONE_BRICK_SLABS = tag("colored_cobblestone_brick_slabs");
+
+        public static final TagKey<Item> COLORED_WOODEN_PLANKS = tag("colored_wooden_planks");
+        public static final TagKey<Item> COLORED_WOODEN_PLANK_STAIRS = tag("colored_wooden_plank_stairs");
+        public static final TagKey<Item> COLORED_WOODEN_PLANK_SLABS = tag("colored_wooden_plank_slabs");
 
         public static final TagKey<Item> COLORED_CONCRETE = tag("colored_concrete");
         public static final TagKey<Item> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");

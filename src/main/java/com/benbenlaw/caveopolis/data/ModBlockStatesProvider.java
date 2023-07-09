@@ -654,6 +654,109 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.COBBLESTONE_BRICK_STAIRS);
 
 
+        //PLANKS
+
+        blockWithItem(ModBlocks.BROWN_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.WHITE_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.BLUE_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.GRAY_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.PINK_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.RED_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.BLACK_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.GREEN_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.LIME_COLORED_WOODEN_PLANKS);
+        blockWithItem(ModBlocks.CYAN_COLORED_WOODEN_PLANKS);
+
+        stairsBlock((StairBlock) ModBlocks.BROWN_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.PURPLE_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.WHITE_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.YELLOW_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.BLUE_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.GRAY_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.PINK_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.RED_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.BLACK_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.ORANGE_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.GREEN_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.LIME_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()));
+        stairsBlock((StairBlock) ModBlocks.CYAN_COLORED_WOODEN_PLANK_STAIRS.get(), blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()));
+
+        blockItem(ModBlocks.BROWN_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.WHITE_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.BLUE_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.GRAY_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.PINK_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.RED_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.BLACK_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_STAIRS);
+        blockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_STAIRS);
+
+        slabBlock((SlabBlock) ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()));
+        slabBlock((SlabBlock) ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB.get(), blockTexture(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()),
+                blockTexture(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()));
+
+        blockItem(ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB);
+        blockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB);
+        
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

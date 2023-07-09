@@ -7,6 +7,7 @@ import com.benbenlaw.caveopolis.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ClipContext;
@@ -776,6 +777,93 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.ORANGE_SPRAY_CAN.get().asItem())
                 .add(ModItems.CYAN_SPRAY_CAN.get().asItem())
         ;
+
+        //PLANKS
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get().asItem())
+        ;
+
+        this.tag(ModTags.Items.COLORED_WOODEN_PLANKS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get().asItem())
+                .add(Blocks.OAK_PLANKS.asItem())
+        ;
+
+        this.tag(ModTags.Items.COLORED_WOODEN_PLANK_STAIRS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_STAIRS.get().asItem())
+                .add(Blocks.OAK_STAIRS.asItem())
+        ;
+
+        this.tag(ModTags.Items.COLORED_WOODEN_PLANK_SLABS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get().asItem())
+                .add(Blocks.OAK_SLAB.asItem())
+        ;
+
+        this.tag(ItemTags.WOODEN_STAIRS)
+                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_STAIRS);
+
+        this.tag(ItemTags.WOODEN_SLABS)
+                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_SLABS);
 
         this.tag(ModTags.Items.RODS_STONE).add(ModItems.STONE_STICK.get());
         this.tag(Tags.Items.RODS).addTag(ModTags.Items.RODS_STONE);

@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:red_spray_can"
+      },
+      {
+        "tag": "caveopolis:colored_wooden_plank_slabs"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:red_colored_wooden_plank_slab"
+  }
+}

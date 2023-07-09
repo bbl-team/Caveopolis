@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "blue_colored_wooden_plank": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:blue_colored_wooden_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:blue_colored_wooden_plank_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "blue_colored_wooden_plank",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:blue_colored_wooden_plank_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

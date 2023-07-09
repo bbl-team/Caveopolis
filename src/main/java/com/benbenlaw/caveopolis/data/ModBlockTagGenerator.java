@@ -738,6 +738,104 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(Blocks.CYAN_GLAZED_TERRACOTTA)
         ;
 
+        //PLANKS
+        
+        this.tag(BlockTags.PLANKS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get())
+        ;
+
+        this.tag(ModTags.Blocks.COLORED_WOODEN_PLANKS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get())
+                .add(Blocks.OAK_PLANKS)
+        ;
+
+        this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_STAIRS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_STAIRS.get())
+                .add(Blocks.OAK_STAIRS)
+        ;
+
+        this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_SLABS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get())
+                .add(Blocks.OAK_SLAB)
+        ;
+
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANKS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_STAIRS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_SLABS)
+        ;
+
+        this.tag(BlockTags.WOODEN_STAIRS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_STAIRS)
+        ;
+
+        this.tag(BlockTags.WOODEN_SLABS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_STAIRS)
+        ;
+
+
+
+
         this.tag(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)
                 .addTag(BlockTags.BEDS)
                 .addTag(ModTags.Blocks.SHULKER_BOXES)

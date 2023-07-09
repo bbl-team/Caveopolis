@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:spray_can_remover"
+      },
+      {
+        "tag": "caveopolis:colored_wooden_plank_slabs"
+      }
+  ],
+  "output": {
+    "item": "minecraft:oak_slab"
+  }
+}

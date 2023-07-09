@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "caveopolis:green_colored_wooden_planks"
+  },
+  "result": "caveopolis:green_colored_wooden_plank_slab"
+}

@@ -355,6 +355,59 @@ public class ModCreativeModTab {
                 output.accept(ModBlocks.GREEN_COLORED_BRIGHT_COBBLESTONE.get());
                 output.accept(ModBlocks.LIME_COLORED_BRIGHT_COBBLESTONE.get());
                 output.accept(ModBlocks.CYAN_COLORED_BRIGHT_COBBLESTONE.get());
+                
+                //PLANKS
+
+                output.accept(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.RED_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get());
+                
+                output.accept(ModBlocks.BROWN_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.WHITE_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.BLUE_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.GRAY_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.PINK_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.RED_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.BLACK_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.GREEN_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.LIME_COLORED_WOODEN_PLANK_STAIRS.get());
+                output.accept(ModBlocks.CYAN_COLORED_WOODEN_PLANK_STAIRS.get());
+                
+                output.accept(ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get());
+                output.accept(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get());
 
                 output.accept(ModItems.BLUE_SPRAY_CAN.get());
                 output.accept(ModItems.BROWN_SPRAY_CAN.get());
@@ -389,6 +442,9 @@ public class ModCreativeModTab {
                 output.accept(ModItems.MIXED_STONE_NUGGET.get());
                 output.accept(ModItems.MIXED_STONE_INGOT.get());
                 output.accept(ModItems.STONE_TORCH.get());
+                
+                
+                
 
             }).build());
 

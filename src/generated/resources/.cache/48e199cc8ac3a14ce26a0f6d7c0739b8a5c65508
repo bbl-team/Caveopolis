@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-03T13:51:50.2137613	Item Tags
+// 1.20.1	2023-07-09T16:51:06.9633394	Item Tags
 01969256f0313b876b95051db627dbc28dc3ad6e data/caveopolis/tags/items/banned_from_in_world_spraying.json
 452cb5e7cc90920191dd1ec03e94db99bb3d122b data/caveopolis/tags/items/bright_items.json
 4f1925d0ade579f02c59f9bd5ec5bea4f4251542 data/caveopolis/tags/items/colored_bright_cobblestone.json
@@ -20,6 +20,9 @@ e9ff4d6cf5afb80bb3b3d8201ec8c6651a76c2cb data/caveopolis/tags/items/colored_ston
 641abd5cf48b7ef31e69c8f9e906246cab0bac90 data/caveopolis/tags/items/colored_stone_slabs.json
 43c226a45c747227a54daef742a061fe140a35fb data/caveopolis/tags/items/colored_stone_stairs.json
 1a558e55eb1bd0fba6346e315a04da61a9f70e75 data/caveopolis/tags/items/colored_stone_wall.json
+063ba529e0b1b51a3bcd72599a2d1f5783204ce5 data/caveopolis/tags/items/colored_wooden_planks.json
+0e4d91673e65ffc6221450889f95357dc0451836 data/caveopolis/tags/items/colored_wooden_plank_slabs.json
+012197e9b0bd218fe0945412719239b7ccbb2119 data/caveopolis/tags/items/colored_wooden_plank_stairs.json
 6e08277e9074f30f11b80731b0aa22bcf27c4795 data/caveopolis/tags/items/glazed_terracotta.json
 092a7d03e8c39c73819a9f777c9e231a5157d3eb data/caveopolis/tags/items/spray_cans.json
 7caa63657956bc78c7f2a2e35af6477587dfb926 data/forge/tags/items/cobblestone.json
@@ -29,7 +32,10 @@ c4f6b4e8062366b08ac0b9faaf43b0e6b3cbab50 data/forge/tags/items/ingots/mixed_ston
 ba3bba9acc2ecbbf21aabe92a1c67df689717a7e data/forge/tags/items/rods/stone.json
 e2feff85afb7e4871204d6f5d72b8760e2780187 data/forge/tags/items/shulker_boxes.json
 7695b5a5a0f2edb5471254ffd713751c466a12c3 data/forge/tags/items/stone.json
+110ab49e5e14d911108872ae80df55865bd0af2f data/minecraft/tags/items/planks.json
 13d7059f6121f0d0f9aa8c4f2aed7198aac35d32 data/minecraft/tags/items/slabs.json
 babafc82364bba38a45c3f41d1abcb1659f5b8a9 data/minecraft/tags/items/stairs.json
 0faede20a76ff0b743c5fc439457f5a02131bd6b data/minecraft/tags/items/stone_bricks.json
 77acd3493b35ad2127eea95956ac27879c059692 data/minecraft/tags/items/walls.json
+9fc4137f5bc6e6de1d0086fafbf8d611e89b93f8 data/minecraft/tags/items/wooden_slabs.json
+908714f182399d57fa509cb9258ccb1f88f8cbd4 data/minecraft/tags/items/wooden_stairs.json

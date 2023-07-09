@@ -5,7 +5,6 @@ import com.benbenlaw.caveopolis.block.crafting_table.StoneCraftingTableBlock;
 import com.benbenlaw.caveopolis.block.custom.SprayerBlock;
 import com.benbenlaw.caveopolis.block.custom.StoneTorchBlock;
 import com.benbenlaw.caveopolis.block.custom.StoneWallTorchBlock;
-import com.benbenlaw.caveopolis.item.ModCreativeModTab;
 import com.benbenlaw.caveopolis.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
@@ -918,6 +917,130 @@ public class ModBlocks {
     public static final RegistryObject<Block> BROWN_COLORED_BRIGHT_COBBLESTONE = registerBlock("brown_colored_bright_cobblestone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
                     .lightLevel((state) -> 15)));
+
+
+    //Colored Planks
+
+    public static final RegistryObject<Block> WHITE_COLORED_WOODEN_PLANKS = registerBlock("white_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_WOODEN_PLANKS = registerBlock("light_gray_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_WOODEN_PLANKS = registerBlock("light_blue_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BLUE_COLORED_WOODEN_PLANKS = registerBlock("blue_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> GRAY_COLORED_WOODEN_PLANKS = registerBlock("gray_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PINK_COLORED_WOODEN_PLANKS = registerBlock("pink_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> GREEN_COLORED_WOODEN_PLANKS = registerBlock("green_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LIME_COLORED_WOODEN_PLANKS = registerBlock("lime_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> YELLOW_COLORED_WOODEN_PLANKS = registerBlock("yellow_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MAGENTA_COLORED_WOODEN_PLANKS = registerBlock("magenta_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PURPLE_COLORED_WOODEN_PLANKS = registerBlock("purple_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BLACK_COLORED_WOODEN_PLANKS = registerBlock("black_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> CYAN_COLORED_WOODEN_PLANKS = registerBlock("cyan_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BROWN_COLORED_WOODEN_PLANKS = registerBlock("brown_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> RED_COLORED_WOODEN_PLANKS = registerBlock("red_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> ORANGE_COLORED_WOODEN_PLANKS = registerBlock("orange_colored_wooden_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).strength(2f).sound(SoundType.WOOD)));
+
+
+    public static final RegistryObject<Block> WHITE_COLORED_WOODEN_PLANK_STAIRS = registerBlock("white_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_WOODEN_PLANK_STAIRS = registerBlock("light_gray_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_WOODEN_PLANK_STAIRS = registerBlock("light_blue_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BLUE_COLORED_WOODEN_PLANK_STAIRS = registerBlock("blue_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> GRAY_COLORED_WOODEN_PLANK_STAIRS = registerBlock("gray_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PINK_COLORED_WOODEN_PLANK_STAIRS = registerBlock("pink_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.PINK_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> GREEN_COLORED_WOODEN_PLANK_STAIRS = registerBlock("green_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LIME_COLORED_WOODEN_PLANK_STAIRS = registerBlock("lime_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.LIME_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> YELLOW_COLORED_WOODEN_PLANK_STAIRS = registerBlock("yellow_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MAGENTA_COLORED_WOODEN_PLANK_STAIRS = registerBlock("magenta_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PURPLE_COLORED_WOODEN_PLANK_STAIRS = registerBlock("purple_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BLACK_COLORED_WOODEN_PLANK_STAIRS = registerBlock("black_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> CYAN_COLORED_WOODEN_PLANK_STAIRS = registerBlock("cyan_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BROWN_COLORED_WOODEN_PLANK_STAIRS = registerBlock("brown_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> RED_COLORED_WOODEN_PLANK_STAIRS = registerBlock("red_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.RED_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> ORANGE_COLORED_WOODEN_PLANK_STAIRS = registerBlock("orange_colored_wooden_plank_stairs",
+            () -> new StairBlock(() -> ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).strength(2f).sound(SoundType.WOOD)));
+
+
+
+    public static final RegistryObject<Block> WHITE_COLORED_WOODEN_PLANK_SLAB = registerBlock("white_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB = registerBlock("light_gray_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB = registerBlock("light_blue_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BLUE_COLORED_WOODEN_PLANK_SLAB = registerBlock("blue_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> GRAY_COLORED_WOODEN_PLANK_SLAB = registerBlock("gray_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PINK_COLORED_WOODEN_PLANK_SLAB = registerBlock("pink_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> GREEN_COLORED_WOODEN_PLANK_SLAB = registerBlock("green_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> LIME_COLORED_WOODEN_PLANK_SLAB = registerBlock("lime_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> YELLOW_COLORED_WOODEN_PLANK_SLAB = registerBlock("yellow_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> MAGENTA_COLORED_WOODEN_PLANK_SLAB = registerBlock("magenta_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> PURPLE_COLORED_WOODEN_PLANK_SLAB = registerBlock("purple_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BLACK_COLORED_WOODEN_PLANK_SLAB = registerBlock("black_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> CYAN_COLORED_WOODEN_PLANK_SLAB = registerBlock("cyan_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> BROWN_COLORED_WOODEN_PLANK_SLAB = registerBlock("brown_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> RED_COLORED_WOODEN_PLANK_SLAB = registerBlock("red_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> ORANGE_COLORED_WOODEN_PLANK_SLAB = registerBlock("orange_colored_wooden_plank_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).strength(2f).sound(SoundType.WOOD)));
+
+
+
 
 
     private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block, String tooltipKey) {

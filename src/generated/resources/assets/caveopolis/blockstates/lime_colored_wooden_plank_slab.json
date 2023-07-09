@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caveopolis:block/lime_colored_wooden_plank_slab"
+    },
+    "type=double": {
+      "model": "caveopolis:block/lime_colored_wooden_planks"
+    },
+    "type=top": {
+      "model": "caveopolis:block/lime_colored_wooden_plank_slab_top"
+    }
+  }
+}

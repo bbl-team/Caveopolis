@@ -376,8 +376,59 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIME_COLORED_BRIGHT_COBBLESTONE.get());
         this.dropSelf(ModBlocks.CYAN_COLORED_BRIGHT_COBBLESTONE.get());
         this.dropSelf(ModBlocks.ORANGE_COLORED_BRIGHT_COBBLESTONE.get());
+        
+        //PLANKS
+        
+        this.dropSelf(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.RED_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get());
 
+        this.dropSelf(ModBlocks.BROWN_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.RED_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_WOODEN_PLANK_STAIRS.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_STAIRS.get());
 
+        this.add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
+        this.add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
 
     }
 
