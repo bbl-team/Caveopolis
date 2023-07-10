@@ -1,0 +1,21 @@
+{
+  "values": [
+    "caveopolis:blue_colored_stone_button",
+    "caveopolis:light_blue_colored_stone_button",
+    "caveopolis:yellow_colored_stone_button",
+    "caveopolis:red_colored_stone_button",
+    "caveopolis:gray_colored_stone_button",
+    "caveopolis:green_colored_stone_button",
+    "caveopolis:light_gray_colored_stone_button",
+    "caveopolis:lime_colored_stone_button",
+    "caveopolis:purple_colored_stone_button",
+    "caveopolis:magenta_colored_stone_button",
+    "caveopolis:pink_colored_stone_button",
+    "caveopolis:black_colored_stone_button",
+    "caveopolis:white_colored_stone_button",
+    "caveopolis:brown_colored_stone_button",
+    "caveopolis:orange_colored_stone_button",
+    "caveopolis:cyan_colored_stone_button",
+    "minecraft:stone_button"
+  ]
+}

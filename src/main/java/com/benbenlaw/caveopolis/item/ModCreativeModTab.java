@@ -355,25 +355,59 @@ public class ModCreativeModTab {
                 output.accept(ModBlocks.GREEN_COLORED_BRIGHT_COBBLESTONE.get());
                 output.accept(ModBlocks.LIME_COLORED_BRIGHT_COBBLESTONE.get());
                 output.accept(ModBlocks.CYAN_COLORED_BRIGHT_COBBLESTONE.get());
+
+                output.accept(ModBlocks.BROWN_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.PURPLE_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.WHITE_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.YELLOW_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.BLUE_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.GRAY_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.PINK_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.RED_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.BLACK_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.ORANGE_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.GREEN_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.LIME_COLORED_STONE_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.CYAN_COLORED_STONE_PRESSURE_PLATE.get());
+
+                output.accept(ModBlocks.BROWN_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.PURPLE_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.WHITE_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.YELLOW_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.BLUE_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.GRAY_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.PINK_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.RED_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.BLACK_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.ORANGE_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.GREEN_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.LIME_COLORED_STONE_BUTTON.get());
+                output.accept(ModBlocks.CYAN_COLORED_STONE_BUTTON.get());
                 
                 //PLANKS
 
-                output.accept(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.RED_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get());
-                output.accept(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get());
+                output.accept(ModBlocks.BROWN_COLORED_STONE.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_STONE.get());
+                output.accept(ModBlocks.PURPLE_COLORED_STONE.get());
+                output.accept(ModBlocks.WHITE_COLORED_STONE.get());
+                output.accept(ModBlocks.YELLOW_COLORED_STONE.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE.get());
+                output.accept(ModBlocks.BLUE_COLORED_STONE.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE.get());
+                output.accept(ModBlocks.GRAY_COLORED_STONE.get());
+                output.accept(ModBlocks.PINK_COLORED_STONE.get());
+                output.accept(ModBlocks.RED_COLORED_STONE.get());
+                output.accept(ModBlocks.BLACK_COLORED_STONE.get());
+                output.accept(ModBlocks.ORANGE_COLORED_STONE.get());
+                output.accept(ModBlocks.GREEN_COLORED_STONE.get());
+                output.accept(ModBlocks.LIME_COLORED_STONE.get());
+                output.accept(ModBlocks.CYAN_COLORED_STONE.get());
                 
                 output.accept(ModBlocks.BROWN_COLORED_WOODEN_PLANK_STAIRS.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_STAIRS.get());
@@ -408,6 +442,40 @@ public class ModCreativeModTab {
                 output.accept(ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get());
                 output.accept(ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get());
                 output.accept(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get());
+                
+                output.accept(ModBlocks.BROWN_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.WHITE_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.BLUE_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.GRAY_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.PINK_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.RED_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.BLACK_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.GREEN_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.LIME_COLORED_WOODEN_PLANK_BUTTON.get());
+                output.accept(ModBlocks.CYAN_COLORED_WOODEN_PLANK_BUTTON.get());
+                
+                output.accept(ModBlocks.BROWN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.WHITE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.PINK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.RED_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.BLACK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.GREEN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.LIME_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+                output.accept(ModBlocks.CYAN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
 
                 output.accept(ModItems.BLUE_SPRAY_CAN.get());
                 output.accept(ModItems.BROWN_SPRAY_CAN.get());

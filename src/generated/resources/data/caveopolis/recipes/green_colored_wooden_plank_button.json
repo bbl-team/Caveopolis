@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "caveopolis:green_colored_wooden_planks"
+    }
+  ],
+  "result": {
+    "item": "caveopolis:green_colored_wooden_plank_button"
+  }
+}

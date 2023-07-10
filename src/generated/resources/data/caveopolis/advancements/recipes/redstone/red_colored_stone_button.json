@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:red_colored_stone_button"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "red_colored_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:red_colored_stone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "red_colored_stone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:red_colored_stone_button"
+    ]
+  },
+  "sends_telemetry_event": false
+}

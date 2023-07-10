@@ -1,0 +1,21 @@
+{
+  "values": [
+    "caveopolis:blue_colored_stone_pressure_plate",
+    "caveopolis:light_blue_colored_stone_pressure_plate",
+    "caveopolis:yellow_colored_stone_pressure_plate",
+    "caveopolis:red_colored_stone_pressure_plate",
+    "caveopolis:gray_colored_stone_pressure_plate",
+    "caveopolis:green_colored_stone_pressure_plate",
+    "caveopolis:light_gray_colored_stone_pressure_plate",
+    "caveopolis:lime_colored_stone_pressure_plate",
+    "caveopolis:purple_colored_stone_pressure_plate",
+    "caveopolis:magenta_colored_stone_pressure_plate",
+    "caveopolis:pink_colored_stone_pressure_plate",
+    "caveopolis:black_colored_stone_pressure_plate",
+    "caveopolis:white_colored_stone_pressure_plate",
+    "caveopolis:brown_colored_stone_pressure_plate",
+    "caveopolis:orange_colored_stone_pressure_plate",
+    "caveopolis:cyan_colored_stone_pressure_plate",
+    "minecraft:stone_pressure_plate"
+  ]
+}

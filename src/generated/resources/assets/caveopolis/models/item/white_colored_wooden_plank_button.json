@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "caveopolis:block/white_colored_wooden_planks"
+  }
+}

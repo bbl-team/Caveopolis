@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "textures": {
+    "texture": "caveopolis:block/black_colored_wooden_planks"
+  }
+}

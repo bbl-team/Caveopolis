@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "caveopolis:cyan_colored_stone"
+    }
+  ],
+  "result": {
+    "item": "caveopolis:cyan_colored_stone_button"
+  }
+}

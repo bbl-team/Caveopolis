@@ -27,6 +27,9 @@ public class ModTags {
 
         public static final TagKey<Block> COLORED_STONE_SLABS = tag("colored_stone_slabs");
         public static final TagKey<Block> COLORED_STONE_BRICK_SLABS = tag("colored_stone_brick_slabs");
+
+        public static final TagKey<Block> COLORED_STONE_BUTTONS = tag("colored_stone_buttons");
+        public static final TagKey<Block> COLORED_STONE_PRESSURE_PLATES = tag("colored_stone_pressure_plates");
         
         public static final TagKey<Block> COLORED_COBBLESTONE = tag("colored_cobblestone");
         public static final TagKey<Block> COLORED_BRIGHT_COBBLESTONE = tag("colored_bright_cobblestone");
@@ -44,6 +47,8 @@ public class ModTags {
         public static final TagKey<Block> COLORED_WOODEN_PLANKS = tag("colored_wooden_planks");
         public static final TagKey<Block> COLORED_WOODEN_PLANK_STAIRS = tag("colored_wooden_plank_stairs");
         public static final TagKey<Block> COLORED_WOODEN_PLANK_SLABS = tag("colored_wooden_plank_slabs");
+        public static final TagKey<Block> COLORED_WOODEN_PLANK_BUTTONS = tag("colored_wooden_plank_buttons");
+        public static final TagKey<Block> COLORED_WOODEN_PLANK_PRESSURE_PLATES = tag("colored_wooden_plank_pressure_plates");
 
         public static final TagKey<Block> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");
         public static final TagKey<Block> GLAZED_TERRACOTTA = tag("glazed_terracotta");
@@ -81,6 +86,8 @@ public class ModTags {
 
         public static final TagKey<Item> COLORED_STONE_SLABS = tag("colored_stone_slabs");
         public static final TagKey<Item> COLORED_STONE_BRICK_SLABS = tag("colored_stone_brick_slabs");
+        public static final TagKey<Item> COLORED_STONE_BUTTONS = tag("colored_stone_buttons");
+        public static final TagKey<Item> COLORED_STONE_PRESSURE_PLATES = tag("colored_stone_pressure_plates");
 
         public static final TagKey<Item> COLORED_COBBLESTONE = tag("colored_cobblestone");
         public static final TagKey<Item> COLORED_BRIGHT_COBBLESTONE = tag("colored_bright_cobblestone");
@@ -98,6 +105,8 @@ public class ModTags {
         public static final TagKey<Item> COLORED_WOODEN_PLANKS = tag("colored_wooden_planks");
         public static final TagKey<Item> COLORED_WOODEN_PLANK_STAIRS = tag("colored_wooden_plank_stairs");
         public static final TagKey<Item> COLORED_WOODEN_PLANK_SLABS = tag("colored_wooden_plank_slabs");
+        public static final TagKey<Item> COLORED_WOODEN_PLANK_BUTTONS = tag("colored_wooden_plank_buttons");
+        public static final TagKey<Item> COLORED_WOODEN_PLANK_PRESSURE_PLATES = tag("colored_wooden_plank_pressure_plates");
 
         public static final TagKey<Item> COLORED_CONCRETE = tag("colored_concrete");
         public static final TagKey<Item> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");

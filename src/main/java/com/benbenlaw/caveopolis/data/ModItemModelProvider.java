@@ -8,6 +8,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -130,12 +131,46 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallItem(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.GRAY_COLORED_COBBLESTONE_BRICKS);
         wallItem(ModBlocks.GRAY_COLORED_STONE_WALL, ModBlocks.GRAY_COLORED_STONE);
         wallItem(ModBlocks.GRAY_COLORED_STONE_BRICK_WALL, ModBlocks.GRAY_COLORED_STONE);
-
-
         wallItem(ModBlocks.COBBLESTONE_BRICK_WALL, ModBlocks.COBBLESTONE_BRICKS);
 
+        buttonItem(ModBlocks.BROWN_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.BROWN_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.PURPLE_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.WHITE_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.WHITE_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.YELLOW_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.BLUE_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.BLUE_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.GRAY_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.GRAY_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.PINK_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.PINK_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.RED_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.RED_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.BLACK_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.BLACK_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.ORANGE_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.GREEN_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.LIME_COLORED_WOODEN_PLANKS);
+        buttonItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_BUTTON, ModBlocks.CYAN_COLORED_WOODEN_PLANKS);
+        
+        buttonItem(ModBlocks.BROWN_COLORED_STONE_BUTTON, ModBlocks.BROWN_COLORED_STONE);
+        buttonItem(ModBlocks.MAGENTA_COLORED_STONE_BUTTON, ModBlocks.MAGENTA_COLORED_STONE);
+        buttonItem(ModBlocks.PURPLE_COLORED_STONE_BUTTON, ModBlocks.PURPLE_COLORED_STONE);
+        buttonItem(ModBlocks.WHITE_COLORED_STONE_BUTTON, ModBlocks.WHITE_COLORED_STONE);
+        buttonItem(ModBlocks.YELLOW_COLORED_STONE_BUTTON, ModBlocks.YELLOW_COLORED_STONE);
+        buttonItem(ModBlocks.LIGHT_GRAY_COLORED_STONE_BUTTON, ModBlocks.LIGHT_GRAY_COLORED_STONE);
+        buttonItem(ModBlocks.LIGHT_BLUE_COLORED_STONE_BUTTON, ModBlocks.LIGHT_BLUE_COLORED_STONE);
+        buttonItem(ModBlocks.BLUE_COLORED_STONE_BUTTON, ModBlocks.BLUE_COLORED_STONE);
+        buttonItem(ModBlocks.GRAY_COLORED_STONE_BUTTON, ModBlocks.GRAY_COLORED_STONE);
+        buttonItem(ModBlocks.PINK_COLORED_STONE_BUTTON, ModBlocks.PINK_COLORED_STONE);
+        buttonItem(ModBlocks.RED_COLORED_STONE_BUTTON, ModBlocks.RED_COLORED_STONE);
+        buttonItem(ModBlocks.BLACK_COLORED_STONE_BUTTON, ModBlocks.BLACK_COLORED_STONE);
+        buttonItem(ModBlocks.ORANGE_COLORED_STONE_BUTTON, ModBlocks.ORANGE_COLORED_STONE);
+        buttonItem(ModBlocks.GREEN_COLORED_STONE_BUTTON, ModBlocks.GREEN_COLORED_STONE);
+        buttonItem(ModBlocks.LIME_COLORED_STONE_BUTTON, ModBlocks.LIME_COLORED_STONE);
+        buttonItem(ModBlocks.CYAN_COLORED_STONE_BUTTON, ModBlocks.CYAN_COLORED_STONE);
 
-//todo fix        simpleItem(ModItems.STONE_TORCH);
+
+
+
+
 
 
     }
@@ -156,6 +191,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall", new ResourceLocation(Caveopolis.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
+
+    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  new ResourceLocation(Caveopolis.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+
 
     /*
 

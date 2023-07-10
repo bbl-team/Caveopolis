@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "caveopolis:block/red_colored_stone"
+  }
+}

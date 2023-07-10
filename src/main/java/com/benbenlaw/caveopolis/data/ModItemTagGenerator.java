@@ -858,12 +858,98 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get().asItem())
                 .add(Blocks.OAK_SLAB.asItem())
         ;
+        this.tag(ModTags.Items.COLORED_WOODEN_PLANK_BUTTONS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_BUTTON.get().asItem())
+                .add(Blocks.OAK_BUTTON.asItem())
+        ;
+        this.tag(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get().asItem())
+                .add(Blocks.OAK_PRESSURE_PLATE.asItem())
+        ;
+        this.tag(ModTags.Items.COLORED_STONE_BUTTONS)
+                .add(ModBlocks.BLUE_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.RED_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.LIME_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.PINK_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_STONE_BUTTON.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_STONE_BUTTON.get().asItem())
+                .add(Blocks.STONE_BUTTON.asItem())
+        ;
+
+        this.tag(ModTags.Items.COLORED_STONE_PRESSURE_PLATES)
+                .add(ModBlocks.BLUE_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.RED_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.LIME_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.PINK_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_STONE_PRESSURE_PLATE.get().asItem())
+                .add(Blocks.STONE_PRESSURE_PLATE.asItem())
+        ;
 
         this.tag(ItemTags.WOODEN_STAIRS)
                 .addTag(ModTags.Items.COLORED_WOODEN_PLANK_STAIRS);
 
         this.tag(ItemTags.WOODEN_SLABS)
                 .addTag(ModTags.Items.COLORED_WOODEN_PLANK_SLABS);
+
+        this.tag(ItemTags.WOODEN_BUTTONS)
+                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_BUTTONS);
+
+        this.tag(ItemTags.WOODEN_PRESSURE_PLATES)
+                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES);
+
+        this.tag(ItemTags.STONE_BUTTONS)
+                .addTag(ModTags.Items.COLORED_STONE_BUTTONS);
 
         this.tag(ModTags.Items.RODS_STONE).add(ModItems.STONE_STICK.get());
         this.tag(Tags.Items.RODS).addTag(ModTags.Items.RODS_STONE);

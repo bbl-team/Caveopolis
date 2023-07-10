@@ -430,6 +430,74 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
         this.add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get(), this::createSlabItemTable);
 
+        this.dropSelf(ModBlocks.BROWN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.RED_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get());
+        
+        this.dropSelf(ModBlocks.BROWN_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.RED_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_WOODEN_PLANK_BUTTON.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_BUTTON.get());
+
+        this.dropSelf(ModBlocks.BROWN_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.RED_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_PRESSURE_PLATE.get());
+        
+        this.dropSelf(ModBlocks.BROWN_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.RED_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_STONE_BUTTON.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_BUTTON.get());
+
     }
 
 

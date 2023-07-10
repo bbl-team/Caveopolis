@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:gray_spray_can"
+      },
+      {
+        "tag": "caveopolis:colored_stone_pressure_plates"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:gray_colored_stone_pressure_plate"
+  }
+}

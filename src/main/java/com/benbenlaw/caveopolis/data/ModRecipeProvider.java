@@ -1229,39 +1229,240 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_STAIRS.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), 1);
 
+        //BUITTON WOODEN PRESUUR EPLATES
 
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIME_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIME_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.PINK_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.PINK_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.RED_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.RED_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get(), 2);
-        slab(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get());
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get(), 2);
+        buttonBuilder(ModBlocks.WHITE_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("WHITE_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("YELLOW_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("ORANGE_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.LIME_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("LIME_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.LIME_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.GREEN_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("GREEN_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.RED_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("RED_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.RED_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.CYAN_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("CYAN_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("PURPLE_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("MAGENTA_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.PINK_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("PINK_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.PINK_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.BLUE_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("BLUE_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("LIGHT_BLUE_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.GRAY_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("GRAY_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("LIGHT_GRAY_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.BLACK_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("BLACK_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get(), 1);
+
+        buttonBuilder(ModBlocks.BROWN_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()))
+                .unlockedBy("BROWN_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), 1);
+        
+        //break
+        
+        buttonBuilder(ModBlocks.WHITE_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.WHITE_COLORED_STONE.get()))
+                .unlockedBy("WHITE_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.WHITE_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_STONE_BUTTON.get(), ModBlocks.WHITE_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.YELLOW_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.YELLOW_COLORED_STONE.get()))
+                .unlockedBy("YELLOW_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.YELLOW_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_BUTTON.get(), ModBlocks.YELLOW_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.ORANGE_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.ORANGE_COLORED_STONE.get()))
+                .unlockedBy("ORANGE_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.ORANGE_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_STONE_BUTTON.get(), ModBlocks.ORANGE_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.LIME_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.LIME_COLORED_STONE.get()))
+                .unlockedBy("LIME_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.LIME_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_STONE_BUTTON.get(), ModBlocks.LIME_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.GREEN_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.GREEN_COLORED_STONE.get()))
+                .unlockedBy("GREEN_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.GREEN_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_STONE_BUTTON.get(), ModBlocks.GREEN_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.RED_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.RED_COLORED_STONE.get()))
+                .unlockedBy("RED_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.RED_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_STONE_BUTTON.get(), ModBlocks.RED_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.CYAN_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.CYAN_COLORED_STONE.get()))
+                .unlockedBy("CYAN_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.CYAN_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_BUTTON.get(), ModBlocks.CYAN_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.PURPLE_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.PURPLE_COLORED_STONE.get()))
+                .unlockedBy("PURPLE_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.PURPLE_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_STONE_BUTTON.get(), ModBlocks.PURPLE_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.MAGENTA_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.MAGENTA_COLORED_STONE.get()))
+                .unlockedBy("MAGENTA_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.MAGENTA_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_STONE_BUTTON.get(), ModBlocks.MAGENTA_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.PINK_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.PINK_COLORED_STONE.get()))
+                .unlockedBy("PINK_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.PINK_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_STONE_BUTTON.get(), ModBlocks.PINK_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.BLUE_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.BLUE_COLORED_STONE.get()))
+                .unlockedBy("BLUE_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.BLUE_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_STONE_BUTTON.get(), ModBlocks.BLUE_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.LIGHT_BLUE_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.LIGHT_BLUE_COLORED_STONE.get()))
+                .unlockedBy("LIGHT_BLUE_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.LIGHT_BLUE_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_BUTTON.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.GRAY_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.GRAY_COLORED_STONE.get()))
+                .unlockedBy("GRAY_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.GRAY_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_STONE_BUTTON.get(), ModBlocks.GRAY_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.LIGHT_GRAY_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.LIGHT_GRAY_COLORED_STONE.get()))
+                .unlockedBy("LIGHT_GRAY_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.LIGHT_GRAY_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_STONE_BUTTON.get(), ModBlocks.LIGHT_GRAY_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.BLACK_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.BLACK_COLORED_STONE.get()))
+                .unlockedBy("BLACK_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.BLACK_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_STONE_BUTTON.get(), ModBlocks.BLACK_COLORED_STONE.get(), 1);
+
+        buttonBuilder(ModBlocks.BROWN_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.BROWN_COLORED_STONE.get()))
+                .unlockedBy("BROWN_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.BROWN_COLORED_STONE.get()).build())).save(pWriter);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_BUTTON.get(), ModBlocks.BROWN_COLORED_STONE.get(), 1);
+        
+        //breaj
+        
+        pressurePlate(pWriter, ModBlocks.BLACK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.PINK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.PINK_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.PINK_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.RED_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.RED_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.RED_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.YELLOW_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.ORANGE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.CYAN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.LIME_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.LIME_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.LIME_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.GREEN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.BROWN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), 1);
+        pressurePlate(pWriter, ModBlocks.WHITE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get(), 1);
+        
+        //breaj
+        
+        pressurePlate(pWriter, ModBlocks.BLACK_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.BLACK_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.BLACK_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.PURPLE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.PURPLE_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.PURPLE_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.PINK_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.PINK_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.PINK_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.MAGENTA_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.MAGENTA_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.MAGENTA_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.RED_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.RED_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.RED_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.YELLOW_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.YELLOW_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.YELLOW_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.ORANGE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.ORANGE_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.ORANGE_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.GRAY_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.GRAY_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.GRAY_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.LIGHT_GRAY_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.LIGHT_GRAY_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.LIGHT_GRAY_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.LIGHT_BLUE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.BLUE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.BLUE_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.BLUE_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.CYAN_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.CYAN_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.CYAN_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.LIME_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.LIME_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.LIME_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.GREEN_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.GREEN_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.GREEN_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.BROWN_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.BROWN_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.BROWN_COLORED_STONE.get(), 1);
+        pressurePlate(pWriter, ModBlocks.WHITE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.WHITE_COLORED_STONE.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.WHITE_COLORED_STONE.get(), 1);
+
 
 
 

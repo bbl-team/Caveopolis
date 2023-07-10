@@ -321,6 +321,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.COLORED_STONE_BRICK_WALL)
                 .addTag(ModTags.Blocks.COLORED_STONE_BRICK_SLABS)
                 .addTag(ModTags.Blocks.COLORED_STONE_BRICK_STAIRS)
+                .addTag(ModTags.Blocks.COLORED_STONE_BUTTONS)
+                .addTag(ModTags.Blocks.COLORED_STONE_PRESSURE_PLATES)
 
                 .addTag(ModTags.Blocks.COLORED_BRIGHT_COBBLESTONE)
                 .addTag(ModTags.Blocks.COLORED_COBBLESTONE)
@@ -818,11 +820,93 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get())
                 .add(Blocks.OAK_SLAB)
         ;
+        
+        this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_BUTTONS)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_BUTTON.get())
+                .add(Blocks.OAK_BUTTON)
+        ;                
+        
+        this.tag(ModTags.Blocks.COLORED_STONE_BUTTONS)
+                .add(ModBlocks.BLUE_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.YELLOW_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.RED_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.GRAY_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.GREEN_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.LIME_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.PURPLE_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.MAGENTA_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.PINK_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.BLACK_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.WHITE_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.BROWN_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.ORANGE_COLORED_STONE_BUTTON.get())
+                .add(ModBlocks.CYAN_COLORED_STONE_BUTTON.get())
+                .add(Blocks.STONE_BUTTON)
+        ;        
+        
+        this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_PRESSURE_PLATES)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
+                .add(Blocks.OAK_PRESSURE_PLATE)
+        ;        
+        
+        this.tag(ModTags.Blocks.COLORED_STONE_PRESSURE_PLATES)
+                .add(ModBlocks.BLUE_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.YELLOW_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.RED_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.GRAY_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.GREEN_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.LIME_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.PURPLE_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.MAGENTA_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.PINK_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.BLACK_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.WHITE_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.BROWN_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.ORANGE_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(ModBlocks.CYAN_COLORED_STONE_PRESSURE_PLATE.get())
+                .add(Blocks.STONE_PRESSURE_PLATE)
+        ;
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANKS)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_STAIRS)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_SLABS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_BUTTONS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_PRESSURE_PLATES)
         ;
 
         this.tag(BlockTags.WOODEN_STAIRS)
@@ -833,7 +917,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_STAIRS)
         ;
 
+        this.tag(BlockTags.WOODEN_PRESSURE_PLATES)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_PRESSURE_PLATES)
+        ;
 
+        this.tag(BlockTags.WOODEN_BUTTONS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_BUTTONS)
+        ;
 
 
         this.tag(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)
