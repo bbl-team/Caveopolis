@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-10T10:16:56.9142574	Block Tags
+// 1.20.1	2023-07-11T14:05:15.280412	Block Tags
 01969256f0313b876b95051db627dbc28dc3ad6e data/caveopolis/tags/blocks/banned_from_in_world_spraying.json
 4f1925d0ade579f02c59f9bd5ec5bea4f4251542 data/caveopolis/tags/blocks/colored_bright_cobblestone.json
 9179a1107ef70112d93e18c4ac19f04d53a8d280 data/caveopolis/tags/blocks/colored_bright_stone.json
@@ -23,14 +23,17 @@ eeb445a3ee8011088d7af97b104a3f20509e4a20 data/caveopolis/tags/blocks/colored_sto
 1a558e55eb1bd0fba6346e315a04da61a9f70e75 data/caveopolis/tags/blocks/colored_stone_wall.json
 063ba529e0b1b51a3bcd72599a2d1f5783204ce5 data/caveopolis/tags/blocks/colored_wooden_planks.json
 17911c5184345387dd4859b34564fd54ce39b0ab data/caveopolis/tags/blocks/colored_wooden_plank_buttons.json
+5ca3ff242b440cb6c3d5e5f3a7b66a30918d505d data/caveopolis/tags/blocks/colored_wooden_plank_fences.json
+7c7d0475fa8b22e53fdd5da2f9a0749c6a7acf4c data/caveopolis/tags/blocks/colored_wooden_plank_fence_gates.json
 fa534c294d851bce391dbd2027515adb7b08204b data/caveopolis/tags/blocks/colored_wooden_plank_pressure_plates.json
 0e4d91673e65ffc6221450889f95357dc0451836 data/caveopolis/tags/blocks/colored_wooden_plank_slabs.json
 012197e9b0bd218fe0945412719239b7ccbb2119 data/caveopolis/tags/blocks/colored_wooden_plank_stairs.json
 6e08277e9074f30f11b80731b0aa22bcf27c4795 data/caveopolis/tags/blocks/glazed_terracotta.json
 7caa63657956bc78c7f2a2e35af6477587dfb926 data/forge/tags/blocks/cobblestone.json
+365f4e0b92ca5a45f6b689ed84d4c8c6aca5bef1 data/forge/tags/blocks/fence_gates/wooden.json
 e2feff85afb7e4871204d6f5d72b8760e2780187 data/forge/tags/blocks/shulker_boxes.json
 7695b5a5a0f2edb5471254ffd713751c466a12c3 data/forge/tags/blocks/stone.json
-0411a727415539dee38ef469749266010cb6bd3a data/minecraft/tags/blocks/mineable/axe.json
+9c9283b9804974286740ac5cad7f8bc7fbb2c73e data/minecraft/tags/blocks/mineable/axe.json
 d15f5fc5fa75b5f1f42393eec0eeaf4a4c1d4024 data/minecraft/tags/blocks/mineable/pickaxe.json
 110ab49e5e14d911108872ae80df55865bd0af2f data/minecraft/tags/blocks/planks.json
 e6748ad826f910f82c37f1c0266bf41041a0430b data/minecraft/tags/blocks/slabs.json
@@ -39,6 +42,7 @@ e6748ad826f910f82c37f1c0266bf41041a0430b data/minecraft/tags/blocks/slabs.json
 fe38749b14723a7e1b8a37c905ad0b3483d421c3 data/minecraft/tags/blocks/stone_ore_replaceables.json
 77acd3493b35ad2127eea95956ac27879c059692 data/minecraft/tags/blocks/walls.json
 efa1e505673119fbf7ad52aa2729d353a90df948 data/minecraft/tags/blocks/wooden_buttons.json
+c80a12e3d7c4ef8047b20bc8cc7fa793d262dc49 data/minecraft/tags/blocks/wooden_fences.json
 2f832ef7602443269c213004059f80170e5d110c data/minecraft/tags/blocks/wooden_pressure_plates.json
 908714f182399d57fa509cb9258ccb1f88f8cbd4 data/minecraft/tags/blocks/wooden_slabs.json
 908714f182399d57fa509cb9258ccb1f88f8cbd4 data/minecraft/tags/blocks/wooden_stairs.json

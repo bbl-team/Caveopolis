@@ -855,7 +855,57 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.GREEN_COLORED_STONE_PRESSURE_PLATE);
         blockItem(ModBlocks.LIME_COLORED_STONE_PRESSURE_PLATE);
         blockItem(ModBlocks.CYAN_COLORED_STONE_PRESSURE_PLATE);
-        
+
+        fenceBlock((FenceBlock) ModBlocks.BROWN_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.PURPLE_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.WHITE_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.YELLOW_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.BLUE_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.GRAY_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.PINK_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.RED_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.BLACK_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.ORANGE_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.GREEN_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()));
+        fenceBlock((FenceBlock) ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE.get(), blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()));
+
+        fenceGateBlock((FenceGateBlock) ModBlocks.BROWN_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.PURPLE_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.WHITE_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.YELLOW_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.BLUE_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.GRAY_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.PINK_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.RED_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.BLACK_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.ORANGE_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.GREEN_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()));
+        fenceGateBlock((FenceGateBlock) ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE_GATE.get(), blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()));
+
+        blockItem(ModBlocks.BROWN_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.WHITE_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.BLUE_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.GRAY_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.PINK_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.RED_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.BLACK_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE_GATE);
+        blockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE_GATE);
     }
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

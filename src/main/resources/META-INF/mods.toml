@@ -6,6 +6,7 @@ modId="caveopolis" #mandatory
 version="${file.jarVersion}" #mandatory
 displayName="Caveopolis" #mandatory
 authors="benbenlaw" #optional
+logoFile="logo.png" #optional
 description='''
 Caveopolis items and blocks
 '''

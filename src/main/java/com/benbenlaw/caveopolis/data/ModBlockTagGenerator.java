@@ -901,12 +901,54 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(Blocks.STONE_PRESSURE_PLATE)
         ;
 
+        this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_FENCES)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE.get())
+                .add(Blocks.OAK_FENCE)
+        ;
+        
+        this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_FENCE_GATES)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE_GATE.get())
+                .add(Blocks.OAK_FENCE_GATE)
+        ;
+
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANKS)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_STAIRS)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_SLABS)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_BUTTONS)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_PRESSURE_PLATES)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_FENCES)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_FENCE_GATES)
         ;
 
         this.tag(BlockTags.WOODEN_STAIRS)
@@ -924,6 +966,13 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.WOODEN_BUTTONS)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_BUTTONS)
         ;
+
+        this.tag(BlockTags.WOODEN_FENCES)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_FENCES)
+        ;
+
+        this.tag(Tags.Blocks.FENCE_GATES_WOODEN)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_FENCE_GATES);
 
 
         this.tag(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)

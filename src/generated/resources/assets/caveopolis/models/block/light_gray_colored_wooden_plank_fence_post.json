@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "caveopolis:block/light_gray_colored_wooden_planks"
+  }
+}

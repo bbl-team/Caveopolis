@@ -936,6 +936,45 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(Blocks.STONE_PRESSURE_PLATE.asItem())
         ;
 
+        this.tag(ModTags.Items.COLORED_WOODEN_PLANK_FENCES)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE.get().asItem())
+                .add(Blocks.OAK_FENCE.asItem())
+        ;
+        this.tag(ModTags.Items.COLORED_WOODEN_PLANK_FENCE_GATES)
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE_GATE.get().asItem())
+                .add(Blocks.OAK_FENCE_GATE.asItem())
+        ;
+
         this.tag(ItemTags.WOODEN_STAIRS)
                 .addTag(ModTags.Items.COLORED_WOODEN_PLANK_STAIRS);
 
@@ -946,6 +985,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .addTag(ModTags.Items.COLORED_WOODEN_PLANK_BUTTONS);
 
         this.tag(ItemTags.WOODEN_PRESSURE_PLATES)
+                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES);
+
+        this.tag(ItemTags.WOODEN_FENCES)
+                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES);
+
+        this.tag(Tags.Items.FENCE_GATES_WOODEN)
                 .addTag(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES);
 
         this.tag(ItemTags.STONE_BUTTONS)

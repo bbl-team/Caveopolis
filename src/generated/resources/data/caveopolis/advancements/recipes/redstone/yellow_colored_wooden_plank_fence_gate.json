@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:yellow_colored_wooden_plank_fence_gate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "yellow_colored_wooden_plank": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:yellow_colored_wooden_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "yellow_colored_wooden_plank",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:yellow_colored_wooden_plank_fence_gate"
+    ]
+  },
+  "sends_telemetry_event": false
+}

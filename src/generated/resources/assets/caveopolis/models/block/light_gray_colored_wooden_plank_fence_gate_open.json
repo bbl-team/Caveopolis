@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate_open",
+  "textures": {
+    "texture": "caveopolis:block/light_gray_colored_wooden_planks"
+  }
+}

@@ -167,7 +167,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         buttonItem(ModBlocks.LIME_COLORED_STONE_BUTTON, ModBlocks.LIME_COLORED_STONE);
         buttonItem(ModBlocks.CYAN_COLORED_STONE_BUTTON, ModBlocks.CYAN_COLORED_STONE);
 
-
+        fenceItem(ModBlocks.BROWN_COLORED_WOODEN_PLANK_FENCE, ModBlocks.BROWN_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_FENCE, ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_FENCE, ModBlocks.PURPLE_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.WHITE_COLORED_WOODEN_PLANK_FENCE, ModBlocks.WHITE_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_FENCE, ModBlocks.YELLOW_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_FENCE, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_FENCE, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.BLUE_COLORED_WOODEN_PLANK_FENCE, ModBlocks.BLUE_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.GRAY_COLORED_WOODEN_PLANK_FENCE, ModBlocks.GRAY_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.PINK_COLORED_WOODEN_PLANK_FENCE, ModBlocks.PINK_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.RED_COLORED_WOODEN_PLANK_FENCE, ModBlocks.RED_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.BLACK_COLORED_WOODEN_PLANK_FENCE, ModBlocks.BLACK_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_FENCE, ModBlocks.ORANGE_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_FENCE, ModBlocks.GREEN_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE, ModBlocks.LIME_COLORED_WOODEN_PLANKS);
+        fenceItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE, ModBlocks.CYAN_COLORED_WOODEN_PLANKS);
 
 
 
@@ -187,6 +202,11 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation(Caveopolis.MOD_ID,"block/" + block.getId().getPath()));
     }
 
+    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  new ResourceLocation(Caveopolis.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+    
     private void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall", new ResourceLocation(Caveopolis.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));

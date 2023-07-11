@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:green_spray_can"
+      },
+      {
+        "tag": "caveopolis:colored_wooden_plank_fences"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:green_colored_wooden_plank_fence"
+  }
+}
