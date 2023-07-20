@@ -481,7 +481,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.WHITE_COLORED_COBBLESTONE.get().asItem())
                 .add(ModBlocks.ORANGE_COLORED_COBBLESTONE.get().asItem())
                 .add(ModBlocks.CYAN_COLORED_COBBLESTONE.get().asItem())
-                .add(Blocks.STONE.asItem())
+                .add(Blocks.COBBLESTONE.asItem())
         ;
         
         this.tag(ModTags.Items.COLORED_STONE_SLABS)

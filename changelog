@@ -5,7 +5,9 @@ Caveopolis Mod Changelog
 
 2.3.5
 
-Server Fixes
+Fixed crashes on servers when the sprayer is used
+Fixed in world spray can recipes
+Fixed minecraft stone being in the caveopolis colored cobblestone stone tag
 
 2.3.4
 

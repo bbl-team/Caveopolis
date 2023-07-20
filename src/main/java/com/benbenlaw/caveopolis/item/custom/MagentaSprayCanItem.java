@@ -58,6 +58,12 @@ public class MagentaSprayCanItem extends Item {
             mainHand = false;
         }
 
+        float sound = 0;
+        if (level.isClientSide) {
+            sound = Minecraft.getInstance().options.getSoundSourceVolume(SoundSource.MASTER);
+        }
+        else sound = 5;
+
         if (!level.isClientSide()) {
 
             if (blockState.is(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)) {
@@ -67,13 +73,13 @@ public class MagentaSprayCanItem extends Item {
 
             else for (SprayerRecipe recipe : level.getRecipeManager().getAllRecipesFor(SprayerRecipe.Type.INSTANCE)) {
                 Ingredient targetBlockIngredient = recipe.getIngredients().get(1);
-                BlockState newBlockRecipe = Block.byItem(recipe.getResultItem(Minecraft.getInstance().level.registryAccess()).getItem()).withPropertiesOf(blockState);
+                BlockState newBlockRecipe = Block.byItem(recipe.getResultItem(level.registryAccess()).getItem()).withPropertiesOf(blockState);
                 ItemStack sprayCan = recipe.getIngredients().get(0).getItems()[0].getItem().getDefaultInstance();
 
                 if (targetBlockIngredient.test(blockState.getBlock().asItem().getDefaultInstance()) && sprayCan.getItem() == ModItems.MAGENTA_SPRAY_CAN.get()) {
 
                     level.setBlockAndUpdate(pos, newBlockRecipe);
-                    level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, Minecraft.getInstance().options.getSoundSourceVolume(SoundSource.MASTER) * 15 , 0.5F);
+                    level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, sound * 15 , 0.5F);
 
                     if (mainHand) {
                         player.getItemInHand(InteractionHand.MAIN_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));

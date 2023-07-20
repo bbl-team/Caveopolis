@@ -33,6 +33,7 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.annotation.Nonnull;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
 
 public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IInventoryHandlingBlockEntity {
@@ -262,7 +263,7 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
 
 
 
-    private static void craftItem(SprayerBlockEntity pEntity) {
+    private void craftItem(SprayerBlockEntity pEntity) {
         Level level = pEntity.level;
         SimpleContainer inventory = new SimpleContainer(pEntity.itemHandler.getSlots());
         for (int i = 0; i < pEntity.itemHandler.getSlots(); i++) {
@@ -277,7 +278,7 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
 
             pEntity.itemHandler.extractItem(1, 1, false);
             assert Minecraft.getInstance().level != null;
-            pEntity.itemHandler.setStackInSlot(2, new ItemStack(sprayerRecipe.get().getResultItem(Minecraft.getInstance().level.registryAccess()).getItem(),
+            pEntity.itemHandler.setStackInSlot(2, new ItemStack(sprayerRecipe.get().getResultItem(Objects.requireNonNull(getLevel()).registryAccess()).getItem(),
                     pEntity.itemHandler.getStackInSlot(2).getCount() + 1));
 
             if (pEntity.itemHandler.getStackInSlot(0).hurt(1, RandomSource.create(), null)) {
@@ -292,7 +293,7 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
 
 
 
-    private static boolean hasRecipe(SprayerBlockEntity entity) {
+    private boolean hasRecipe(SprayerBlockEntity entity) {
         Level level = entity.level;
         SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
         for (int i = 0; i < entity.itemHandler.getSlots(); i++) {
@@ -316,24 +317,24 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
                     !hasSprayCan(entity, sprayerRecipe.get()) ||
                     !canInsertAmountIntoOutputSlot(inventory)) return false;
             assert Minecraft.getInstance().level != null;
-            return canInsertItemIntoOutputSlot(inventory, sprayerRecipeCheck.getResultItem(Minecraft.getInstance().level.registryAccess()));
+            return canInsertItemIntoOutputSlot(inventory, sprayerRecipeCheck.getResultItem(Objects.requireNonNull(getLevel()).registryAccess()));
         }).isPresent();
 
     }
 
-    private static boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
+    private boolean canInsertItemIntoOutputSlot(SimpleContainer inventory, ItemStack stack) {
         return inventory.getItem(2).getItem() == stack.getItem() || inventory.getItem(2).isEmpty();
     }
 
-    private static boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
+    private boolean canInsertAmountIntoOutputSlot(SimpleContainer inventory) {
         return inventory.getItem(2).getMaxStackSize() > inventory.getItem(2).getCount();
     }
 
-    private static boolean hasSprayCan(SprayerBlockEntity entity, SprayerRecipe recipe) {
+    private boolean hasSprayCan(SprayerBlockEntity entity, SprayerRecipe recipe) {
     //    return ModItems.BLUE_SPRAY_CAN.get() == entity.itemHandler.getStackInSlot(0).getItem();
         return recipe.getIngredients().get(0).test(entity.itemHandler.getStackInSlot(0));
     }
-    private static boolean hasMakingItem(SprayerBlockEntity entity, SprayerRecipe recipe) {
+    private boolean hasMakingItem(SprayerBlockEntity entity, SprayerRecipe recipe) {
         return  recipe.getIngredients().get(1).test(entity.itemHandler.getStackInSlot(1));
     }
 
