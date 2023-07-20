@@ -1,6 +1,10 @@
 {
   "values": [
     "#minecraft:beds",
-    "#forge:shulker_boxes"
+    "#forge:shulker_boxes",
+    "#caveopolis:colored_hanging_signs",
+    "#caveopolis:colored_signs",
+    "#caveopolis:colored_wall_hanging_signs",
+    "#caveopolis:colored_wall_signs"
   ]
 }

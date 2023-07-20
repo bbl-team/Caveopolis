@@ -11,6 +11,7 @@ import net.minecraftforge.client.model.generators.BlockModelBuilder;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -906,7 +907,382 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_FENCE_GATE);
         blockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE_GATE);
         blockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE_GATE);
+
+        doorBlockWithRenderType((DoorBlock) ModBlocks.BROWN_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/brown_colored_wooden_plank_door_bottom"),
+                modLoc("block/brown_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/magenta_colored_wooden_plank_door_bottom"),
+                modLoc("block/magenta_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.PURPLE_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/purple_colored_wooden_plank_door_bottom"),
+                modLoc("block/purple_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.WHITE_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/white_colored_wooden_plank_door_bottom"),
+                modLoc("block/white_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.YELLOW_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/yellow_colored_wooden_plank_door_bottom"),
+                modLoc("block/yellow_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/light_gray_colored_wooden_plank_door_bottom"),
+                modLoc("block/light_gray_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.GRAY_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/gray_colored_wooden_plank_door_bottom"),
+                modLoc("block/gray_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.BLUE_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/blue_colored_wooden_plank_door_bottom"),
+                modLoc("block/blue_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/light_blue_colored_wooden_plank_door_bottom"),
+                modLoc("block/light_blue_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.PINK_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/pink_colored_wooden_plank_door_bottom"),
+                modLoc("block/pink_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.RED_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/red_colored_wooden_plank_door_bottom"),
+                modLoc("block/red_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.BLACK_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/black_colored_wooden_plank_door_bottom"),
+                modLoc("block/black_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.ORANGE_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/orange_colored_wooden_plank_door_bottom"),
+                modLoc("block/orange_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.GREEN_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/green_colored_wooden_plank_door_bottom"),
+                modLoc("block/green_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.LIME_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/lime_colored_wooden_plank_door_bottom"),
+                modLoc("block/lime_colored_wooden_plank_door_top"), "cutout");
+        doorBlockWithRenderType((DoorBlock) ModBlocks.CYAN_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/cyan_colored_wooden_plank_door_bottom"),
+                modLoc("block/cyan_colored_wooden_plank_door_top"), "cutout");
+        
+
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.BROWN_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/brown_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/magenta_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.PURPLE_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/purple_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.WHITE_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/white_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.YELLOW_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/yellow_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/light_gray_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.GRAY_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/gray_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.BLUE_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/blue_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/light_blue_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.PINK_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/pink_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.RED_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/red_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.BLACK_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/black_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.ORANGE_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/orange_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.GREEN_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/green_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.LIME_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/lime_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+        trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.CYAN_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/cyan_colored_wooden_plank_trapdoor"),
+                true, "cutout");
+
+        blockItem(ModBlocks.BROWN_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.WHITE_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.BLUE_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.GRAY_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.PINK_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.RED_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.BLACK_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        blockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
+        
+        
+        logBlock(((RotatedPillarBlock) ModBlocks.BROWN_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.MAGENTA_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.PURPLE_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.WHITE_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.YELLOW_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.LIGHT_GRAY_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.LIGHT_BLUE_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.BLUE_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.GRAY_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.PINK_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.RED_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.BLACK_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.ORANGE_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.GREEN_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.LIME_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.CYAN_COLORED_LOG.get()));        
+        
+        axisBlock(((RotatedPillarBlock) ModBlocks.BROWN_COLORED_WOOD.get()),blockTexture(ModBlocks.BROWN_COLORED_LOG.get()),blockTexture(ModBlocks.BROWN_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.MAGENTA_COLORED_WOOD.get()),blockTexture(ModBlocks.MAGENTA_COLORED_LOG.get()),blockTexture(ModBlocks.MAGENTA_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.PURPLE_COLORED_WOOD.get()),blockTexture(ModBlocks.PURPLE_COLORED_LOG.get()),blockTexture(ModBlocks.PURPLE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.WHITE_COLORED_WOOD.get()),blockTexture(ModBlocks.WHITE_COLORED_LOG.get()),blockTexture(ModBlocks.WHITE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.YELLOW_COLORED_WOOD.get()),blockTexture(ModBlocks.YELLOW_COLORED_LOG.get()),blockTexture(ModBlocks.YELLOW_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.LIGHT_GRAY_COLORED_WOOD.get()),blockTexture(ModBlocks.LIGHT_GRAY_COLORED_LOG.get()),blockTexture(ModBlocks.LIGHT_GRAY_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.LIGHT_BLUE_COLORED_WOOD.get()),blockTexture(ModBlocks.LIGHT_BLUE_COLORED_LOG.get()),blockTexture(ModBlocks.LIGHT_BLUE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.BLUE_COLORED_WOOD.get()),blockTexture(ModBlocks.BLUE_COLORED_LOG.get()),blockTexture(ModBlocks.BLUE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.GRAY_COLORED_WOOD.get()),blockTexture(ModBlocks.GRAY_COLORED_LOG.get()),blockTexture(ModBlocks.GRAY_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.PINK_COLORED_WOOD.get()),blockTexture(ModBlocks.PINK_COLORED_LOG.get()),blockTexture(ModBlocks.PINK_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.RED_COLORED_WOOD.get()),blockTexture(ModBlocks.RED_COLORED_LOG.get()),blockTexture(ModBlocks.RED_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.BLACK_COLORED_WOOD.get()),blockTexture(ModBlocks.BLACK_COLORED_LOG.get()),blockTexture(ModBlocks.BLACK_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.ORANGE_COLORED_WOOD.get()),blockTexture(ModBlocks.ORANGE_COLORED_LOG.get()),blockTexture(ModBlocks.ORANGE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.GREEN_COLORED_WOOD.get()),blockTexture(ModBlocks.GREEN_COLORED_LOG.get()),blockTexture(ModBlocks.GREEN_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.LIME_COLORED_WOOD.get()),blockTexture(ModBlocks.LIME_COLORED_LOG.get()),blockTexture(ModBlocks.LIME_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.CYAN_COLORED_WOOD.get()),blockTexture(ModBlocks.CYAN_COLORED_LOG.get()),blockTexture(ModBlocks.CYAN_COLORED_LOG.get()));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BROWN_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BROWN_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WHITE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_white_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_white_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WHITE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_white_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_white_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIME_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_lime_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_lime_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIME_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_lime_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_lime_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GREEN_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_green_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_green_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GREEN_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_green_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_green_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_RED_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_red_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_red_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_RED_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_red_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_red_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PINK_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_pink_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_pink_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PINK_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_pink_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_pink_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_MAGENTA_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_MAGENTA_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PURPLE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_purple_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_purple_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PURPLE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_purple_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_purple_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GRAY_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_gray_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_gray_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GRAY_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_gray_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_gray_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLUE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_blue_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_blue_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLUE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_blue_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_blue_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_CYAN_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_CYAN_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_ORANGE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_orange_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_orange_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_ORANGE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_orange_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_orange_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_YELLOW_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_YELLOW_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log"));
+
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLACK_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_black_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_black_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLACK_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_black_colored_log"),
+                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_black_colored_log"));
+
+
+        blockItem(ModBlocks.STRIPPED_BROWN_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_MAGENTA_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_PURPLE_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_WHITE_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_YELLOW_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_BLUE_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_GRAY_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_PINK_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_RED_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_BLACK_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_ORANGE_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_GREEN_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_LIME_COLORED_WOOD);
+        blockItem(ModBlocks.STRIPPED_CYAN_COLORED_WOOD);
+        
+        blockItem(ModBlocks.STRIPPED_BROWN_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_MAGENTA_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_PURPLE_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_WHITE_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_YELLOW_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_BLUE_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_GRAY_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_PINK_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_RED_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_BLACK_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_ORANGE_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_GREEN_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_LIME_COLORED_LOG);
+        blockItem(ModBlocks.STRIPPED_CYAN_COLORED_LOG);
+
+        blockItem(ModBlocks.BROWN_COLORED_WOOD);
+        blockItem(ModBlocks.MAGENTA_COLORED_WOOD);
+        blockItem(ModBlocks.PURPLE_COLORED_WOOD);
+        blockItem(ModBlocks.WHITE_COLORED_WOOD);
+        blockItem(ModBlocks.YELLOW_COLORED_WOOD);
+        blockItem(ModBlocks.LIGHT_GRAY_COLORED_WOOD);
+        blockItem(ModBlocks.LIGHT_BLUE_COLORED_WOOD);
+        blockItem(ModBlocks.BLUE_COLORED_WOOD);
+        blockItem(ModBlocks.GRAY_COLORED_WOOD);
+        blockItem(ModBlocks.PINK_COLORED_WOOD);
+        blockItem(ModBlocks.RED_COLORED_WOOD);
+        blockItem(ModBlocks.BLACK_COLORED_WOOD);
+        blockItem(ModBlocks.ORANGE_COLORED_WOOD);
+        blockItem(ModBlocks.GREEN_COLORED_WOOD);
+        blockItem(ModBlocks.LIME_COLORED_WOOD);
+        blockItem(ModBlocks.CYAN_COLORED_WOOD);
+        
+        blockItem(ModBlocks.BROWN_COLORED_LOG);
+        blockItem(ModBlocks.MAGENTA_COLORED_LOG);
+        blockItem(ModBlocks.PURPLE_COLORED_LOG);
+        blockItem(ModBlocks.WHITE_COLORED_LOG);
+        blockItem(ModBlocks.YELLOW_COLORED_LOG);
+        blockItem(ModBlocks.LIGHT_GRAY_COLORED_LOG);
+        blockItem(ModBlocks.LIGHT_BLUE_COLORED_LOG);
+        blockItem(ModBlocks.BLUE_COLORED_LOG);
+        blockItem(ModBlocks.GRAY_COLORED_LOG);
+        blockItem(ModBlocks.PINK_COLORED_LOG);
+        blockItem(ModBlocks.RED_COLORED_LOG);
+        blockItem(ModBlocks.BLACK_COLORED_LOG);
+        blockItem(ModBlocks.ORANGE_COLORED_LOG);
+        blockItem(ModBlocks.GREEN_COLORED_LOG);
+        blockItem(ModBlocks.LIME_COLORED_LOG);
+        blockItem(ModBlocks.CYAN_COLORED_LOG);
+
+        signBlock(((StandingSignBlock) ModBlocks.BLACK_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.BLACK_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.BLACK_COLORED_HANGING_SIGN.get(),  ModBlocks.BLACK_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.WHITE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.WHITE_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.WHITE_COLORED_HANGING_SIGN.get(),  ModBlocks.WHITE_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.BROWN_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.BROWN_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.BROWN_COLORED_HANGING_SIGN.get(),  ModBlocks.BROWN_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.GRAY_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.GRAY_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.GRAY_COLORED_HANGING_SIGN.get(),  ModBlocks.GRAY_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.LIGHT_GRAY_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.LIGHT_GRAY_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.LIGHT_GRAY_COLORED_HANGING_SIGN.get(),  ModBlocks.LIGHT_GRAY_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.LIGHT_BLUE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.LIGHT_BLUE_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.LIGHT_BLUE_COLORED_HANGING_SIGN.get(),  ModBlocks.LIGHT_BLUE_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.BLUE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.BLUE_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.BLUE_COLORED_HANGING_SIGN.get(),  ModBlocks.BLUE_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.CYAN_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.CYAN_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.CYAN_COLORED_HANGING_SIGN.get(),  ModBlocks.CYAN_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.LIME_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.LIME_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.LIME_COLORED_HANGING_SIGN.get(),  ModBlocks.LIME_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.GREEN_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.GREEN_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.GREEN_COLORED_HANGING_SIGN.get(),  ModBlocks.GREEN_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.YELLOW_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.YELLOW_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.YELLOW_COLORED_HANGING_SIGN.get(),  ModBlocks.YELLOW_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.ORANGE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.ORANGE_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.ORANGE_COLORED_HANGING_SIGN.get(),  ModBlocks.ORANGE_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.RED_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.RED_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.RED_COLORED_HANGING_SIGN.get(),  ModBlocks.RED_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.PINK_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.PINK_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.PINK_COLORED_HANGING_SIGN.get(),  ModBlocks.PINK_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.MAGENTA_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.MAGENTA_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.MAGENTA_COLORED_HANGING_SIGN.get(),  ModBlocks.MAGENTA_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()));
+
+        signBlock(((StandingSignBlock) ModBlocks.PURPLE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.PURPLE_COLORED_WALL_SIGN.get()),
+                blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()));
+        hangingSignBlock(ModBlocks.PURPLE_COLORED_HANGING_SIGN.get(),  ModBlocks.PURPLE_COLORED_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()));
+        
+
     }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
+        ModelFile sign = models().sign(name(signBlock), texture);
+        hangingSignBlock(signBlock, wallSignBlock, sign);
+    }
+
+    public void hangingSignBlock(Block signBlock, Block wallSignBlock, ModelFile sign) {
+        simpleBlock(signBlock, sign);
+        simpleBlock(wallSignBlock, sign);
+    }
+
+    private String name(Block block) {
+        return key(block).getPath();
+    }
+
+    private ResourceLocation key(Block block) {
+        return ForgeRegistries.BLOCKS.getKey(block);
+    }
+
+
+
+    private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("caveopolis:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
+    }
+
 
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("caveopolis:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));

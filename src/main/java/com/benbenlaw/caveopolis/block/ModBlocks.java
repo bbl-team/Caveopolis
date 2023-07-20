@@ -2,10 +2,73 @@ package com.benbenlaw.caveopolis.block;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.crafting_table.StoneCraftingTableBlock;
-import com.benbenlaw.caveopolis.block.custom.SprayerBlock;
-import com.benbenlaw.caveopolis.block.custom.StoneTorchBlock;
-import com.benbenlaw.caveopolis.block.custom.StoneWallTorchBlock;
+import com.benbenlaw.caveopolis.block.custom.*;
+import com.benbenlaw.caveopolis.block.custom.sign.black.BlackHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.black.BlackStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.black.BlackWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.black.BlackWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.blue.BlueHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.blue.BlueStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.blue.BlueWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.blue.BlueWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.brown.BrownHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.brown.BrownStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.brown.BrownWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.brown.BrownWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.cyan.CyanHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.cyan.CyanStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.cyan.CyanWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.cyan.CyanWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.gray.GrayHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.gray.GrayStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.gray.GrayWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.gray.GrayWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.green.GreenHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.green.GreenStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.green.GreenWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.green.GreenWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.light_blue.LightBlueHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.light_blue.LightBlueStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.light_blue.LightBlueWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.light_blue.LightBlueWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.light_gray.LightGrayHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.light_gray.LightGrayStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.light_gray.LightGrayWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.light_gray.LightGrayWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.lime.LimeHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.lime.LimeStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.lime.LimeWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.lime.LimeWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.magenta.MagentaHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.magenta.MagentaStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.magenta.MagentaWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.magenta.MagentaWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.orange.OrangeHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.orange.OrangeStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.orange.OrangeWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.orange.OrangeWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.pink.PinkHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.pink.PinkStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.pink.PinkWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.pink.PinkWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.purple.PurpleHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.purple.PurpleStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.purple.PurpleWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.purple.PurpleWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.red.RedHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.red.RedStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.red.RedWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.red.RedWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.white.WhiteHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.white.WhiteStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.white.WhiteWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.white.WhiteWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.yellow.YellowHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.yellow.YellowStandingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.yellow.YellowWallHangingSignBlock;
+import com.benbenlaw.caveopolis.block.custom.sign.yellow.YellowWallSignBlock;
 import com.benbenlaw.caveopolis.item.ModItems;
+import com.benbenlaw.caveopolis.util.ModWoodTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
@@ -1303,6 +1366,381 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
     public static final RegistryObject<Block> ORANGE_COLORED_WOODEN_PLANK_FENCE_GATE = registerBlock("orange_colored_wooden_plank_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    
+    
+    public static final RegistryObject<Block> WHITE_COLORED_WOODEN_PLANK_DOOR = registerBlock("white_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_WOODEN_PLANK_DOOR = registerBlock("light_gray_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_WOODEN_PLANK_DOOR = registerBlock("light_blue_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> BLUE_COLORED_WOODEN_PLANK_DOOR = registerBlock("blue_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> GRAY_COLORED_WOODEN_PLANK_DOOR = registerBlock("gray_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> PINK_COLORED_WOODEN_PLANK_DOOR = registerBlock("pink_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> GREEN_COLORED_WOODEN_PLANK_DOOR = registerBlock("green_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> LIME_COLORED_WOODEN_PLANK_DOOR = registerBlock("lime_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> YELLOW_COLORED_WOODEN_PLANK_DOOR = registerBlock("yellow_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> MAGENTA_COLORED_WOODEN_PLANK_DOOR = registerBlock("magenta_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> PURPLE_COLORED_WOODEN_PLANK_DOOR = registerBlock("purple_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> BLACK_COLORED_WOODEN_PLANK_DOOR = registerBlock("black_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> CYAN_COLORED_WOODEN_PLANK_DOOR = registerBlock("cyan_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> BROWN_COLORED_WOODEN_PLANK_DOOR = registerBlock("brown_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> RED_COLORED_WOODEN_PLANK_DOOR = registerBlock("red_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> ORANGE_COLORED_WOODEN_PLANK_DOOR = registerBlock("orange_colored_wooden_plank_door",
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR), BlockSetType.OAK));
+
+    
+    public static final RegistryObject<Block> WHITE_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("white_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("light_gray_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("light_blue_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> BLUE_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("blue_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> GRAY_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("gray_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> PINK_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("pink_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> GREEN_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("green_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> LIME_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("lime_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> YELLOW_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("yellow_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> MAGENTA_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("magenta_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> PURPLE_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("purple_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> BLACK_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("black_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> CYAN_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("cyan_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> BROWN_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("brown_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> RED_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("red_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+    public static final RegistryObject<Block> ORANGE_COLORED_WOODEN_PLANK_TRAPDOOR = registerBlock("orange_colored_wooden_plank_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR), BlockSetType.OAK));
+
+    //LOGS
+
+    public static final RegistryObject<Block> WHITE_COLORED_LOG = registerBlock("white_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> WHITE_COLORED_WOOD = registerBlock("white_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_WHITE_COLORED_LOG = registerBlock("stripped_white_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_WHITE_COLORED_WOOD = registerBlock("stripped_white_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> PURPLE_COLORED_LOG = registerBlock("purple_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> PURPLE_COLORED_WOOD = registerBlock("purple_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_PURPLE_COLORED_LOG = registerBlock("stripped_purple_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_PURPLE_COLORED_WOOD = registerBlock("stripped_purple_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> PINK_COLORED_LOG = registerBlock("pink_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> PINK_COLORED_WOOD = registerBlock("pink_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_PINK_COLORED_LOG = registerBlock("stripped_pink_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_PINK_COLORED_WOOD = registerBlock("stripped_pink_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> MAGENTA_COLORED_LOG = registerBlock("magenta_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> MAGENTA_COLORED_WOOD = registerBlock("magenta_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_MAGENTA_COLORED_LOG = registerBlock("stripped_magenta_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_MAGENTA_COLORED_WOOD = registerBlock("stripped_magenta_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> LIME_COLORED_LOG = registerBlock("lime_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> LIME_COLORED_WOOD = registerBlock("lime_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_LIME_COLORED_LOG = registerBlock("stripped_lime_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_LIME_COLORED_WOOD = registerBlock("stripped_lime_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> GREEN_COLORED_LOG = registerBlock("green_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> GREEN_COLORED_WOOD = registerBlock("green_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_GREEN_COLORED_LOG = registerBlock("stripped_green_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_GREEN_COLORED_WOOD = registerBlock("stripped_green_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> CYAN_COLORED_LOG = registerBlock("cyan_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> CYAN_COLORED_WOOD = registerBlock("cyan_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_CYAN_COLORED_LOG = registerBlock("stripped_cyan_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_CYAN_COLORED_WOOD = registerBlock("stripped_cyan_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> GRAY_COLORED_LOG = registerBlock("gray_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> GRAY_COLORED_WOOD = registerBlock("gray_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_GRAY_COLORED_LOG = registerBlock("stripped_gray_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_GRAY_COLORED_WOOD = registerBlock("stripped_gray_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_LOG = registerBlock("light_gray_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_WOOD = registerBlock("light_gray_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_LIGHT_GRAY_COLORED_LOG = registerBlock("stripped_light_gray_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_LIGHT_GRAY_COLORED_WOOD = registerBlock("stripped_light_gray_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_LOG = registerBlock("light_blue_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_WOOD = registerBlock("light_blue_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_LIGHT_BLUE_COLORED_LOG = registerBlock("stripped_light_blue_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_LIGHT_BLUE_COLORED_WOOD = registerBlock("stripped_light_blue_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> BLUE_COLORED_LOG = registerBlock("blue_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> BLUE_COLORED_WOOD = registerBlock("blue_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_BLUE_COLORED_LOG = registerBlock("stripped_blue_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_BLUE_COLORED_WOOD = registerBlock("stripped_blue_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> RED_COLORED_LOG = registerBlock("red_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> RED_COLORED_WOOD = registerBlock("red_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_RED_COLORED_LOG = registerBlock("stripped_red_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_RED_COLORED_WOOD = registerBlock("stripped_red_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> ORANGE_COLORED_LOG = registerBlock("orange_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> ORANGE_COLORED_WOOD = registerBlock("orange_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_ORANGE_COLORED_LOG = registerBlock("stripped_orange_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_ORANGE_COLORED_WOOD = registerBlock("stripped_orange_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> YELLOW_COLORED_LOG = registerBlock("yellow_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> YELLOW_COLORED_WOOD = registerBlock("yellow_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_YELLOW_COLORED_LOG = registerBlock("stripped_yellow_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_YELLOW_COLORED_WOOD = registerBlock("stripped_yellow_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> BROWN_COLORED_LOG = registerBlock("brown_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> BROWN_COLORED_WOOD = registerBlock("brown_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_BROWN_COLORED_LOG = registerBlock("stripped_brown_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_BROWN_COLORED_WOOD = registerBlock("stripped_brown_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> BLACK_COLORED_LOG = registerBlock("black_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> BLACK_COLORED_WOOD = registerBlock("black_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
+    public static final RegistryObject<Block> STRIPPED_BLACK_COLORED_LOG = registerBlock("stripped_black_colored_log",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_BLACK_COLORED_WOOD = registerBlock("stripped_black_colored_wood",
+            () -> new FlammableLogBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
+
+    //SIGNS
+
+    public static final RegistryObject<Block> BLACK_COLORED_SIGN = BLOCKS.register("black_colored_sign",
+            () -> new BlackStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.BLACK));
+    public static final RegistryObject<Block> BLACK_COLORED_WALL_SIGN = BLOCKS.register("black_colored_wall_sign",
+            () -> new BlackWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.BLACK));
+    public static final RegistryObject<Block> BLACK_COLORED_HANGING_SIGN = BLOCKS.register("black_colored_hanging_sign",
+            () -> new BlackHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.BLACK));
+    public static final RegistryObject<Block> BLACK_COLORED_WALL_HANGING_SIGN = BLOCKS.register("black_colored_wall_hanging_sign",
+            () -> new BlackWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.BLACK));
+    
+    public static final RegistryObject<Block> BLUE_COLORED_SIGN = BLOCKS.register("blue_colored_sign",
+            () -> new BlueStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.BLUE));
+    public static final RegistryObject<Block> BLUE_COLORED_WALL_SIGN = BLOCKS.register("blue_colored_wall_sign",
+            () -> new BlueWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.BLUE));
+    public static final RegistryObject<Block> BLUE_COLORED_HANGING_SIGN = BLOCKS.register("blue_colored_hanging_sign",
+            () -> new BlueHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.BLUE));
+    public static final RegistryObject<Block> BLUE_COLORED_WALL_HANGING_SIGN = BLOCKS.register("blue_colored_wall_hanging_sign",
+            () -> new BlueWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.BLUE));
+    
+    public static final RegistryObject<Block> BROWN_COLORED_SIGN = BLOCKS.register("brown_colored_sign",
+            () -> new BrownStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.BROWN));
+    public static final RegistryObject<Block> BROWN_COLORED_WALL_SIGN = BLOCKS.register("brown_colored_wall_sign",
+            () -> new BrownWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.BROWN));
+    public static final RegistryObject<Block> BROWN_COLORED_HANGING_SIGN = BLOCKS.register("brown_colored_hanging_sign",
+            () -> new BrownHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.BROWN));
+    public static final RegistryObject<Block> BROWN_COLORED_WALL_HANGING_SIGN = BLOCKS.register("brown_colored_wall_hanging_sign",
+            () -> new BrownWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.BROWN));
+    
+    public static final RegistryObject<Block> CYAN_COLORED_SIGN = BLOCKS.register("cyan_colored_sign",
+            () -> new CyanStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.CYAN));
+    public static final RegistryObject<Block> CYAN_COLORED_WALL_SIGN = BLOCKS.register("cyan_colored_wall_sign",
+            () -> new CyanWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.CYAN));
+    public static final RegistryObject<Block> CYAN_COLORED_HANGING_SIGN = BLOCKS.register("cyan_colored_hanging_sign",
+            () -> new CyanHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.CYAN));
+    public static final RegistryObject<Block> CYAN_COLORED_WALL_HANGING_SIGN = BLOCKS.register("cyan_colored_wall_hanging_sign",
+            () -> new CyanWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.CYAN));
+    
+    public static final RegistryObject<Block> GRAY_COLORED_SIGN = BLOCKS.register("gray_colored_sign",
+            () -> new GrayStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.GRAY));
+    public static final RegistryObject<Block> GRAY_COLORED_WALL_SIGN = BLOCKS.register("gray_colored_wall_sign",
+            () -> new GrayWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.GRAY));
+    public static final RegistryObject<Block> GRAY_COLORED_HANGING_SIGN = BLOCKS.register("gray_colored_hanging_sign",
+            () -> new GrayHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.GRAY));
+    public static final RegistryObject<Block> GRAY_COLORED_WALL_HANGING_SIGN = BLOCKS.register("gray_colored_wall_hanging_sign",
+            () -> new GrayWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.GRAY));
+    
+    public static final RegistryObject<Block> GREEN_COLORED_SIGN = BLOCKS.register("green_colored_sign",
+            () -> new GreenStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.GREEN));
+    public static final RegistryObject<Block> GREEN_COLORED_WALL_SIGN = BLOCKS.register("green_colored_wall_sign",
+            () -> new GreenWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.GREEN));
+    public static final RegistryObject<Block> GREEN_COLORED_HANGING_SIGN = BLOCKS.register("green_colored_hanging_sign",
+            () -> new GreenHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.GREEN));
+    public static final RegistryObject<Block> GREEN_COLORED_WALL_HANGING_SIGN = BLOCKS.register("green_colored_wall_hanging_sign",
+            () -> new GreenWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.GREEN));
+    
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_SIGN = BLOCKS.register("light_blue_colored_sign",
+            () -> new LightBlueStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.LIGHT_BLUE));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_WALL_SIGN = BLOCKS.register("light_blue_colored_wall_sign",
+            () -> new LightBlueWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.LIGHT_BLUE));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_HANGING_SIGN = BLOCKS.register("light_blue_colored_hanging_sign",
+            () -> new LightBlueHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.LIGHT_BLUE));
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_WALL_HANGING_SIGN = BLOCKS.register("light_blue_colored_wall_hanging_sign",
+            () -> new LightBlueWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.LIGHT_BLUE));
+    
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_SIGN = BLOCKS.register("light_gray_colored_sign",
+            () -> new LightGrayStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.LIGHT_GRAY));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_WALL_SIGN = BLOCKS.register("light_gray_colored_wall_sign",
+            () -> new LightGrayWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.LIGHT_GRAY));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_HANGING_SIGN = BLOCKS.register("light_gray_colored_hanging_sign",
+            () -> new LightGrayHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.LIGHT_GRAY));
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_WALL_HANGING_SIGN = BLOCKS.register("light_gray_colored_wall_hanging_sign",
+            () -> new LightGrayWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.LIGHT_GRAY));
+    
+    public static final RegistryObject<Block> LIME_COLORED_SIGN = BLOCKS.register("lime_colored_sign",
+            () -> new LimeStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.LIME));
+    public static final RegistryObject<Block> LIME_COLORED_WALL_SIGN = BLOCKS.register("lime_colored_wall_sign",
+            () -> new LimeWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.LIME));
+    public static final RegistryObject<Block> LIME_COLORED_HANGING_SIGN = BLOCKS.register("lime_colored_hanging_sign",
+            () -> new LimeHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.LIME));
+    public static final RegistryObject<Block> LIME_COLORED_WALL_HANGING_SIGN = BLOCKS.register("lime_colored_wall_hanging_sign",
+            () -> new LimeWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.LIME));
+    
+    public static final RegistryObject<Block> MAGENTA_COLORED_SIGN = BLOCKS.register("magenta_colored_sign",
+            () -> new MagentaStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.MAGENTA));
+    public static final RegistryObject<Block> MAGENTA_COLORED_WALL_SIGN = BLOCKS.register("magenta_colored_wall_sign",
+            () -> new MagentaWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.MAGENTA));
+    public static final RegistryObject<Block> MAGENTA_COLORED_HANGING_SIGN = BLOCKS.register("magenta_colored_hanging_sign",
+            () -> new MagentaHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.MAGENTA));
+    public static final RegistryObject<Block> MAGENTA_COLORED_WALL_HANGING_SIGN = BLOCKS.register("magenta_colored_wall_hanging_sign",
+            () -> new MagentaWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.MAGENTA));
+    
+    public static final RegistryObject<Block> ORANGE_COLORED_SIGN = BLOCKS.register("orange_colored_sign",
+            () -> new OrangeStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.ORANGE));
+    public static final RegistryObject<Block> ORANGE_COLORED_WALL_SIGN = BLOCKS.register("orange_colored_wall_sign",
+            () -> new OrangeWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.ORANGE));
+    public static final RegistryObject<Block> ORANGE_COLORED_HANGING_SIGN = BLOCKS.register("orange_colored_hanging_sign",
+            () -> new OrangeHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.ORANGE));
+    public static final RegistryObject<Block> ORANGE_COLORED_WALL_HANGING_SIGN = BLOCKS.register("orange_colored_wall_hanging_sign",
+            () -> new OrangeWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.ORANGE));
+    
+    public static final RegistryObject<Block> PINK_COLORED_SIGN = BLOCKS.register("pink_colored_sign",
+            () -> new PinkStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.PINK));
+    public static final RegistryObject<Block> PINK_COLORED_WALL_SIGN = BLOCKS.register("pink_colored_wall_sign",
+            () -> new PinkWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.PINK));
+    public static final RegistryObject<Block> PINK_COLORED_HANGING_SIGN = BLOCKS.register("pink_colored_hanging_sign",
+            () -> new PinkHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.PINK));
+    public static final RegistryObject<Block> PINK_COLORED_WALL_HANGING_SIGN = BLOCKS.register("pink_colored_wall_hanging_sign",
+            () -> new PinkWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.PINK));
+    
+    public static final RegistryObject<Block> PURPLE_COLORED_SIGN = BLOCKS.register("purple_colored_sign",
+            () -> new PurpleStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.PURPLE));
+    public static final RegistryObject<Block> PURPLE_COLORED_WALL_SIGN = BLOCKS.register("purple_colored_wall_sign",
+            () -> new PurpleWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.PURPLE));
+    public static final RegistryObject<Block> PURPLE_COLORED_HANGING_SIGN = BLOCKS.register("purple_colored_hanging_sign",
+            () -> new PurpleHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.PURPLE));
+    public static final RegistryObject<Block> PURPLE_COLORED_WALL_HANGING_SIGN = BLOCKS.register("purple_colored_wall_hanging_sign",
+            () -> new PurpleWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.PURPLE));
+    
+    public static final RegistryObject<Block> RED_COLORED_SIGN = BLOCKS.register("red_colored_sign",
+            () -> new RedStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.RED));
+    public static final RegistryObject<Block> RED_COLORED_WALL_SIGN = BLOCKS.register("red_colored_wall_sign",
+            () -> new RedWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.RED));
+    public static final RegistryObject<Block> RED_COLORED_HANGING_SIGN = BLOCKS.register("red_colored_hanging_sign",
+            () -> new RedHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.RED));
+    public static final RegistryObject<Block> RED_COLORED_WALL_HANGING_SIGN = BLOCKS.register("red_colored_wall_hanging_sign",
+            () -> new RedWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.RED));
+    
+    public static final RegistryObject<Block> WHITE_COLORED_SIGN = BLOCKS.register("white_colored_sign",
+            () -> new WhiteStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.WHITE));
+    public static final RegistryObject<Block> WHITE_COLORED_WALL_SIGN = BLOCKS.register("white_colored_wall_sign",
+            () -> new WhiteWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.WHITE));
+    public static final RegistryObject<Block> WHITE_COLORED_HANGING_SIGN = BLOCKS.register("white_colored_hanging_sign",
+            () -> new WhiteHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.WHITE));
+    public static final RegistryObject<Block> WHITE_COLORED_WALL_HANGING_SIGN = BLOCKS.register("white_colored_wall_hanging_sign",
+            () -> new WhiteWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.WHITE));
+    
+    public static final RegistryObject<Block> YELLOW_COLORED_SIGN = BLOCKS.register("yellow_colored_sign",
+            () -> new YellowStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.YELLOW));
+    public static final RegistryObject<Block> YELLOW_COLORED_WALL_SIGN = BLOCKS.register("yellow_colored_wall_sign",
+            () -> new YellowWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.YELLOW));
+    public static final RegistryObject<Block> YELLOW_COLORED_HANGING_SIGN = BLOCKS.register("yellow_colored_hanging_sign",
+            () -> new YellowHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), ModWoodTypes.YELLOW));
+    public static final RegistryObject<Block> YELLOW_COLORED_WALL_HANGING_SIGN = BLOCKS.register("yellow_colored_wall_hanging_sign",
+            () -> new YellowWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.YELLOW));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

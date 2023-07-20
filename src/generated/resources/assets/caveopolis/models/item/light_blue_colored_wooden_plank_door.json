@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "caveopolis:item/light_blue_colored_wooden_plank_door"
+  }
+}

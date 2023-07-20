@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "green_colored_wooden_plank": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:green_colored_wooden_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:green_colored_sign"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "green_colored_wooden_plank",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:green_colored_sign"
+    ]
+  },
+  "sends_telemetry_event": false
+}

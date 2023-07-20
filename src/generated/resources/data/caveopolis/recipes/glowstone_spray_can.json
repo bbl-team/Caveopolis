@@ -6,7 +6,7 @@
       "item": "caveopolis:mixed_stone_ingot"
     },
     "B": {
-      "tag": "forge:dusts/glowstone"
+      "tag": "caveopolis:bright_items"
     }
   },
   "pattern": [

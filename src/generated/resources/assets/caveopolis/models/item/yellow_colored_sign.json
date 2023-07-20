@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "caveopolis:item/yellow_colored_sign"
+  }
+}

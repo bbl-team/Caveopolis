@@ -533,6 +533,254 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE.get());
         this.dropSelf(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_FENCE.get());
 
+        this.dropSelf(ModBlocks.BROWN_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.RED_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_TRAPDOOR.get());
+
+        this.add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.PINK_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.RED_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.LIME_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+        this.add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_DOOR.get(), this::createDoorTable);
+
+        this.dropSelf(ModBlocks.STRIPPED_BROWN_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAGENTA_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_PURPLE_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_WHITE_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_YELLOW_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_BLUE_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_GRAY_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_PINK_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_RED_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_BLACK_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_GREEN_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIME_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_CYAN_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_ORANGE_COLORED_WOOD.get());
+        
+        this.dropSelf(ModBlocks.STRIPPED_BROWN_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_MAGENTA_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_PURPLE_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_WHITE_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_YELLOW_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_BLUE_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_GRAY_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_PINK_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_RED_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_BLACK_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_GREEN_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_LIME_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_CYAN_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_ORANGE_COLORED_LOG.get());
+
+        this.dropSelf(ModBlocks.BROWN_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.RED_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_WOOD.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_WOOD.get());
+        
+        this.dropSelf(ModBlocks.BROWN_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.RED_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_LOG.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_LOG.get());
+        
+//SIGNS
+
+        this.add(ModBlocks.BLACK_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BLACK_COLORED_SIGN.get()));
+        this.add(ModBlocks.BLACK_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BLACK_COLORED_SIGN.get()));
+        this.add(ModBlocks.BLACK_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BLACK_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.BLACK_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BLACK_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.GREEN_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.GREEN_COLORED_SIGN.get()));
+        this.add(ModBlocks.GREEN_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.GREEN_COLORED_SIGN.get()));
+        this.add(ModBlocks.GREEN_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.GREEN_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.GREEN_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.GREEN_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.BROWN_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BROWN_COLORED_SIGN.get()));
+        this.add(ModBlocks.BROWN_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BROWN_COLORED_SIGN.get()));
+        this.add(ModBlocks.BROWN_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BROWN_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.BROWN_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BROWN_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.CYAN_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CYAN_COLORED_SIGN.get()));
+        this.add(ModBlocks.CYAN_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CYAN_COLORED_SIGN.get()));
+        this.add(ModBlocks.CYAN_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CYAN_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.CYAN_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.CYAN_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.GRAY_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.GRAY_COLORED_SIGN.get()));
+        this.add(ModBlocks.GRAY_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.GRAY_COLORED_SIGN.get()));
+        this.add(ModBlocks.GRAY_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.GRAY_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.GRAY_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.GRAY_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.BLUE_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BLUE_COLORED_SIGN.get()));
+        this.add(ModBlocks.BLUE_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BLUE_COLORED_SIGN.get()));
+        this.add(ModBlocks.BLUE_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BLUE_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.BLUE_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.BLUE_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.LIGHT_BLUE_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIGHT_BLUE_COLORED_SIGN.get()));
+        this.add(ModBlocks.LIGHT_BLUE_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIGHT_BLUE_COLORED_SIGN.get()));
+        this.add(ModBlocks.LIGHT_BLUE_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIGHT_BLUE_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.LIGHT_BLUE_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIGHT_BLUE_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.LIGHT_GRAY_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIGHT_GRAY_COLORED_SIGN.get()));
+        this.add(ModBlocks.LIGHT_GRAY_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIGHT_GRAY_COLORED_SIGN.get()));
+        this.add(ModBlocks.LIGHT_GRAY_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIGHT_GRAY_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.LIGHT_GRAY_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIGHT_GRAY_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.LIME_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIME_COLORED_SIGN.get()));
+        this.add(ModBlocks.LIME_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIME_COLORED_SIGN.get()));
+        this.add(ModBlocks.LIME_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIME_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.LIME_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.LIME_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.MAGENTA_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAGENTA_COLORED_SIGN.get()));
+        this.add(ModBlocks.MAGENTA_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAGENTA_COLORED_SIGN.get()));
+        this.add(ModBlocks.MAGENTA_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAGENTA_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.MAGENTA_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.MAGENTA_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.ORANGE_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.ORANGE_COLORED_SIGN.get()));
+        this.add(ModBlocks.ORANGE_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.ORANGE_COLORED_SIGN.get()));
+        this.add(ModBlocks.ORANGE_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.ORANGE_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.ORANGE_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.ORANGE_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.PINK_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PINK_COLORED_SIGN.get()));
+        this.add(ModBlocks.PINK_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PINK_COLORED_SIGN.get()));
+        this.add(ModBlocks.PINK_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PINK_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.PINK_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PINK_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.PURPLE_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PURPLE_COLORED_SIGN.get()));
+        this.add(ModBlocks.PURPLE_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PURPLE_COLORED_SIGN.get()));
+        this.add(ModBlocks.PURPLE_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PURPLE_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.PURPLE_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.PURPLE_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.RED_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.RED_COLORED_SIGN.get()));
+        this.add(ModBlocks.RED_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.RED_COLORED_SIGN.get()));
+        this.add(ModBlocks.RED_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.RED_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.RED_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.RED_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.WHITE_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.WHITE_COLORED_SIGN.get()));
+        this.add(ModBlocks.WHITE_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.WHITE_COLORED_SIGN.get()));
+        this.add(ModBlocks.WHITE_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.WHITE_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.WHITE_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.WHITE_COLORED_HANGING_SIGN.get()));
+
+        this.add(ModBlocks.YELLOW_COLORED_SIGN.get(), block ->
+                createSingleItemTable(ModItems.YELLOW_COLORED_SIGN.get()));
+        this.add(ModBlocks.YELLOW_COLORED_WALL_SIGN.get(), block ->
+                createSingleItemTable(ModItems.YELLOW_COLORED_SIGN.get()));
+        this.add(ModBlocks.YELLOW_COLORED_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.YELLOW_COLORED_HANGING_SIGN.get()));
+        this.add(ModBlocks.YELLOW_COLORED_WALL_HANGING_SIGN.get(), block ->
+                createSingleItemTable(ModItems.YELLOW_COLORED_HANGING_SIGN.get()));
+
 
     }
 

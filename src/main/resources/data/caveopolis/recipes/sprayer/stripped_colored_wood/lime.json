@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:lime_spray_can"
+      },
+      {
+        "tag": "caveopolis:stripped_colored_woods"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:stripped_lime_colored_wood"
+  }
+}

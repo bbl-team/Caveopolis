@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:blue_spray_can"
+      },
+      {
+        "tag": "caveopolis:stripped_colored_logs"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:stripped_blue_colored_log"
+  }
+}

@@ -9,9 +9,11 @@ import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.recipe.ModRecipes;
 import com.benbenlaw.caveopolis.screen.ModMenuTypes;
 import com.benbenlaw.caveopolis.screen.SprayerScreen;
+import com.benbenlaw.caveopolis.util.ModWoodTypes;
 import com.benbenlaw.caveopolis.world.feature.ModConfiguredFeatures;
 import com.benbenlaw.caveopolis.world.feature.ModPlacedFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -101,6 +103,22 @@ public class Caveopolis {
     private void doClientStuff(final FMLClientSetupEvent event) {
 
         event.enqueueWork(() -> {
+            Sheets.addWoodType(ModWoodTypes.BROWN);
+            Sheets.addWoodType(ModWoodTypes.BLACK);
+            Sheets.addWoodType(ModWoodTypes.BLUE);
+            Sheets.addWoodType(ModWoodTypes.LIGHT_BLUE);
+            Sheets.addWoodType(ModWoodTypes.LIGHT_GRAY);
+            Sheets.addWoodType(ModWoodTypes.GRAY);
+            Sheets.addWoodType(ModWoodTypes.ORANGE);
+            Sheets.addWoodType(ModWoodTypes.YELLOW);
+            Sheets.addWoodType(ModWoodTypes.RED);
+            Sheets.addWoodType(ModWoodTypes.LIME);
+            Sheets.addWoodType(ModWoodTypes.GREEN);
+            Sheets.addWoodType(ModWoodTypes.PINK);
+            Sheets.addWoodType(ModWoodTypes.MAGENTA);
+            Sheets.addWoodType(ModWoodTypes.PURPLE);
+            Sheets.addWoodType(ModWoodTypes.WHITE);
+            Sheets.addWoodType(ModWoodTypes.CYAN);
 
             MenuScreens.register(ModMenuTypes.SPRAYER_MENU.get(), SprayerScreen::new);
 

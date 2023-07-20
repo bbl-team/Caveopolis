@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "caveopolis:green_colored_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "caveopolis:green_colored_wooden_planks"
+  }
+}

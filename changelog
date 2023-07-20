@@ -2,7 +2,25 @@ Caveopolis Mod Changelog
 
 //TODO: More coloured blocks
 //TODO: ALL BLOCK BRIGHT OPTION
-//TODO: doors, trapdoors, hanging signs and normal signs
+
+2.3.5
+
+Server Fixes
+
+2.3.4
+
+Fixed light blue spray can to colored cobblestone recipe
+Added wooden doors to banned from in world spraying tag
+
+2.3.4
+
+Added logs, stripped logs, wood and stripped wood blocks
+Added signs and hanging signs
+Glowstone spray can can now uses bright shards in its recipe
+
+2.3.3
+
+Added colored wooden doors and trapdoors
 
 2.3.2
 

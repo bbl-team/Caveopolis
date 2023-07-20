@@ -52,6 +52,54 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.MIXED_STONE_NUGGET);
         simpleTorch(ModBlocks.STONE_TORCH);
 
+        simpleItem(ModItems.BLACK_COLORED_SIGN);
+        simpleItem(ModItems.BLACK_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.CYAN_COLORED_SIGN);
+        simpleItem(ModItems.CYAN_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.LIME_COLORED_SIGN);
+        simpleItem(ModItems.LIME_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.GREEN_COLORED_SIGN);
+        simpleItem(ModItems.GREEN_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.GRAY_COLORED_SIGN);
+        simpleItem(ModItems.GRAY_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.LIGHT_GRAY_COLORED_SIGN);
+        simpleItem(ModItems.LIGHT_GRAY_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.LIGHT_BLUE_COLORED_SIGN);
+        simpleItem(ModItems.LIGHT_BLUE_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.BLUE_COLORED_SIGN);
+        simpleItem(ModItems.BLUE_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.PURPLE_COLORED_SIGN);
+        simpleItem(ModItems.PURPLE_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.MAGENTA_COLORED_SIGN);
+        simpleItem(ModItems.MAGENTA_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.PINK_COLORED_SIGN);
+        simpleItem(ModItems.PINK_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.ORANGE_COLORED_SIGN);
+        simpleItem(ModItems.ORANGE_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.RED_COLORED_SIGN);
+        simpleItem(ModItems.RED_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.YELLOW_COLORED_SIGN);
+        simpleItem(ModItems.YELLOW_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.BROWN_COLORED_SIGN);
+        simpleItem(ModItems.BROWN_COLORED_HANGING_SIGN);
+
+        simpleItem(ModItems.WHITE_COLORED_SIGN);
+        simpleItem(ModItems.WHITE_COLORED_HANGING_SIGN);
+
         wallItem(ModBlocks.PURPLE_COLORED_COBBLESTONE_WALL, ModBlocks.PURPLE_COLORED_COBBLESTONE);
         wallItem(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_WALL, ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS);
         wallItem(ModBlocks.PURPLE_COLORED_STONE_WALL, ModBlocks.PURPLE_COLORED_STONE);
@@ -184,12 +232,30 @@ public class ModItemModelProvider extends ItemModelProvider {
         fenceItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_FENCE, ModBlocks.LIME_COLORED_WOODEN_PLANKS);
         fenceItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE, ModBlocks.CYAN_COLORED_WOODEN_PLANKS);
 
-
-
-
-
+        simpleBlockItem(ModBlocks.BROWN_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.WHITE_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.BLUE_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.GRAY_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.PINK_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.RED_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.BLACK_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_DOOR);
+        simpleBlockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_DOOR);
     }
 
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getId().getPath()));
+    }
+    
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",

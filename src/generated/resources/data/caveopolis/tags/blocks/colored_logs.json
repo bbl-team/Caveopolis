@@ -1,0 +1,21 @@
+{
+  "values": [
+    "caveopolis:blue_colored_log",
+    "caveopolis:light_blue_colored_log",
+    "caveopolis:yellow_colored_log",
+    "caveopolis:red_colored_log",
+    "caveopolis:gray_colored_log",
+    "caveopolis:green_colored_log",
+    "caveopolis:light_gray_colored_log",
+    "caveopolis:lime_colored_log",
+    "caveopolis:purple_colored_log",
+    "caveopolis:magenta_colored_log",
+    "caveopolis:pink_colored_log",
+    "caveopolis:black_colored_log",
+    "caveopolis:white_colored_log",
+    "caveopolis:brown_colored_log",
+    "caveopolis:orange_colored_log",
+    "caveopolis:cyan_colored_log",
+    "minecraft:oak_log"
+  ]
+}

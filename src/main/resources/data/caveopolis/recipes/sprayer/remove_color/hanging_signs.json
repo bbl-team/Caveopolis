@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:spray_can_remover"
+      },
+      {
+        "tag": "caveopolis:colored_hanging_signs"
+      }
+  ],
+  "output": {
+    "item": "minecraft:oak_hanging_sign"
+  }
+}

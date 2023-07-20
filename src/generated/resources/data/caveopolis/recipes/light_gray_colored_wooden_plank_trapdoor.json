@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": {
+      "item": "caveopolis:light_gray_colored_wooden_planks"
+    }
+  },
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "caveopolis:light_gray_colored_wooden_plank_trapdoor"
+  },
+  "show_notification": true
+}

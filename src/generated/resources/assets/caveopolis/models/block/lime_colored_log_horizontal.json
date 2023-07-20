@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "caveopolis:block/lime_colored_log_top",
+    "side": "caveopolis:block/lime_colored_log"
+  }
+}

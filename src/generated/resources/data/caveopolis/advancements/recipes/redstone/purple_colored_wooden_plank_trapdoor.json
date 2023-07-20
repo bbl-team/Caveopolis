@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:purple_colored_wooden_plank_trapdoor"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "purple_colored_wooden_plank": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:purple_colored_wooden_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "purple_colored_wooden_plank",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:purple_colored_wooden_plank_trapdoor"
+    ]
+  },
+  "sends_telemetry_event": false
+}

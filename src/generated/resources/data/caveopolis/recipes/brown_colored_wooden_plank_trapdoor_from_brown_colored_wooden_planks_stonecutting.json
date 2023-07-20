@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "caveopolis:brown_colored_wooden_planks"
+  },
+  "result": "caveopolis:brown_colored_wooden_plank_trapdoor"
+}

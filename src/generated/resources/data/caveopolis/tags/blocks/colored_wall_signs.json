@@ -1,0 +1,21 @@
+{
+  "values": [
+    "caveopolis:blue_colored_wall_sign",
+    "caveopolis:light_blue_colored_wall_sign",
+    "caveopolis:yellow_colored_wall_sign",
+    "caveopolis:red_colored_wall_sign",
+    "caveopolis:gray_colored_wall_sign",
+    "caveopolis:green_colored_wall_sign",
+    "caveopolis:light_gray_colored_wall_sign",
+    "caveopolis:lime_colored_wall_sign",
+    "caveopolis:purple_colored_wall_sign",
+    "caveopolis:magenta_colored_wall_sign",
+    "caveopolis:pink_colored_wall_sign",
+    "caveopolis:black_colored_wall_sign",
+    "caveopolis:white_colored_wall_sign",
+    "caveopolis:brown_colored_wall_sign",
+    "caveopolis:orange_colored_wall_sign",
+    "caveopolis:cyan_colored_wall_sign",
+    "minecraft:oak_wall_sign"
+  ]
+}

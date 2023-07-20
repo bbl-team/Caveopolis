@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:spray_can_remover"
+      },
+      {
+        "tag": "caveopolis:stripped_colored_woods"
+      }
+  ],
+  "output": {
+    "item": "minecraft:stripped_oak_wood"
+  }
+}

@@ -49,8 +49,38 @@ public class ModTags {
         public static final TagKey<Block> COLORED_WOODEN_PLANK_SLABS = tag("colored_wooden_plank_slabs");
         public static final TagKey<Block> COLORED_WOODEN_PLANK_BUTTONS = tag("colored_wooden_plank_buttons");
         public static final TagKey<Block> COLORED_WOODEN_PLANK_PRESSURE_PLATES = tag("colored_wooden_plank_pressure_plates");
+
         public static final TagKey<Block> COLORED_WOODEN_PLANK_FENCES = tag("colored_wooden_plank_fences");
         public static final TagKey<Block> COLORED_WOODEN_PLANK_FENCE_GATES = tag("colored_wooden_plank_fence_gates");
+        public static final TagKey<Block> COLORED_WOODEN_PLANK_DOORS = tag("colored_wooden_plank_doors");
+        public static final TagKey<Block> COLORED_WOODEN_PLANK_TRAPDOORS = tag("colored_wooden_plank_trapdoors");
+
+        public static final TagKey<Block> COLORED_SIGNS = tag("colored_signs");
+        public static final TagKey<Block> COLORED_WALL_SIGNS = tag("colored_wall_signs");
+        public static final TagKey<Block> COLORED_HANGING_SIGNS = tag("colored_hanging_signs");
+        public static final TagKey<Block> COLORED_WALL_HANGING_SIGNS = tag("colored_wall_hanging_signs");
+
+        public static final TagKey<Block> BROWN_COLORED_LOGS = tag("brown_colored_logs");
+        public static final TagKey<Block> BLACK_COLORED_LOGS = tag("black_colored_logs");
+        public static final TagKey<Block> GREEN_COLORED_LOGS = tag("green_colored_logs");
+        public static final TagKey<Block> LIME_COLORED_LOGS = tag("lime_colored_logs");
+        public static final TagKey<Block> CYAN_COLORED_LOGS = tag("cyan_colored_logs");
+        public static final TagKey<Block> BLUE_COLORED_LOGS = tag("blue_colored_logs");
+        public static final TagKey<Block> LIGHT_BLUE_COLORED_LOGS = tag("light_blue_colored_logs");
+        public static final TagKey<Block> LIGHT_GRAY_COLORED_LOGS = tag("light_gray_colored_logs");
+        public static final TagKey<Block> GRAY_COLORED_LOGS = tag("gray_colored_logs");
+        public static final TagKey<Block> ORANGE_COLORED_LOGS = tag("orange_colored_logs");
+        public static final TagKey<Block> YELLOW_COLORED_LOGS = tag("yellow_colored_logs");
+        public static final TagKey<Block> WHITE_COLORED_LOGS = tag("white_colored_logs");
+        public static final TagKey<Block> PURPLE_COLORED_LOGS = tag("purple_colored_logs");
+        public static final TagKey<Block> MAGENTA_COLORED_LOGS = tag("magenta_colored_logs");
+        public static final TagKey<Block> PINK_COLORED_LOGS = tag("pink_colored_logs");
+        public static final TagKey<Block> RED_COLORED_LOGS = tag("red_colored_logs");
+
+        public static final TagKey<Block> COLORED_WOODS = tag("colored_woods");
+        public static final TagKey<Block> COLORED_LOGS = tag("colored_logs");
+        public static final TagKey<Block> STRIPPED_COLORED_WOODS = tag("stripped_colored_woods");
+        public static final TagKey<Block> STRIPPED_COLORED_LOGS = tag("stripped_colored_logs");
 
         public static final TagKey<Block> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");
         public static final TagKey<Block> GLAZED_TERRACOTTA = tag("glazed_terracotta");
@@ -111,6 +141,56 @@ public class ModTags {
         public static final TagKey<Item> COLORED_WOODEN_PLANK_PRESSURE_PLATES = tag("colored_wooden_plank_pressure_plates");
         public static final TagKey<Item> COLORED_WOODEN_PLANK_FENCES = tag("colored_wooden_plank_fences");
         public static final TagKey<Item> COLORED_WOODEN_PLANK_FENCE_GATES = tag("colored_wooden_plank_fence_gates");
+        public static final TagKey<Item> COLORED_WOODEN_PLANK_DOORS = tag("colored_wooden_plank_doors");
+        public static final TagKey<Item> COLORED_WOODEN_PLANK_TRAPDOORS = tag("colored_wooden_plank_trapdoors");
+
+        public static final TagKey<Item> COLORED_SIGNS = tag("colored_signs");
+        public static final TagKey<Item> COLORED_WALL_SIGNS = tag("colored_wall_signs");
+        public static final TagKey<Item> COLORED_HANGING_SIGNS = tag("colored_hanging_signs");
+        public static final TagKey<Item> COLORED_WALL_HANGING_SIGNS = tag("colored_wall_hanging_signs");
+
+        public static final TagKey<Item> COLORED_WOODS = tag("colored_woods");
+        public static final TagKey<Item> COLORED_LOGS = tag("colored_logs");
+        public static final TagKey<Item> STRIPPED_COLORED_WOODS = tag("stripped_colored_woods");
+        public static final TagKey<Item> STRIPPED_COLORED_LOGS = tag("stripped_colored_logs");
+
+
+        public static final TagKey<Item> BROWN_COLORED_LOGS = tag("brown_colored_logs");
+        public static final TagKey<Item> BLACK_COLORED_LOGS = tag("black_colored_logs");
+        public static final TagKey<Item> GREEN_COLORED_LOGS = tag("green_colored_logs");
+        public static final TagKey<Item> LIME_COLORED_LOGS = tag("lime_colored_logs");
+        public static final TagKey<Item> CYAN_COLORED_LOGS = tag("cyan_colored_logs");
+        public static final TagKey<Item> BLUE_COLORED_LOGS = tag("blue_colored_logs");
+        public static final TagKey<Item> LIGHT_BLUE_COLORED_LOGS = tag("light_blue_colored_logs");
+        public static final TagKey<Item> LIGHT_GRAY_COLORED_LOGS = tag("light_gray_colored_logs");
+        public static final TagKey<Item> GRAY_COLORED_LOGS = tag("gray_colored_logs");
+        public static final TagKey<Item> ORANGE_COLORED_LOGS = tag("orange_colored_logs");
+        public static final TagKey<Item> YELLOW_COLORED_LOGS = tag("yellow_colored_logs");
+        public static final TagKey<Item> WHITE_COLORED_LOGS = tag("white_colored_logs");
+        public static final TagKey<Item> PURPLE_COLORED_LOGS = tag("purple_colored_logs");
+        public static final TagKey<Item> MAGENTA_COLORED_LOGS = tag("magenta_colored_logs");
+        public static final TagKey<Item> PINK_COLORED_LOGS = tag("pink_colored_logs");
+        public static final TagKey<Item> RED_COLORED_LOGS = tag("red_colored_logs");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public static final TagKey<Item> COLORED_CONCRETE = tag("colored_concrete");
         public static final TagKey<Item> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");

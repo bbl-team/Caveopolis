@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:yellow_spray_can"
+      },
+      {
+        "tag": "caveopolis:colored_hanging_signs"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:yellow_colored_hanging_sign"
+  }
+}

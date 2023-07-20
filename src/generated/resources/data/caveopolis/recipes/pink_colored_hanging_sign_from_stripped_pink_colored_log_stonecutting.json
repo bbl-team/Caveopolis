@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "caveopolis:stripped_pink_colored_log"
+  },
+  "result": "caveopolis:pink_colored_hanging_sign"
+}
