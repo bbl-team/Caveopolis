@@ -64,6 +64,8 @@
     "caveopolis:orange_colored_cobblestone_brick_wall",
     "caveopolis:cyan_colored_cobblestone_wall",
     "caveopolis:cyan_colored_cobblestone_brick_wall",
-    "caveopolis:cobblestone_brick_wall"
+    "caveopolis:cobblestone_brick_wall",
+    "caveopolis:marble_wall",
+    "caveopolis:marble_brick_wall"
   ]
 }

@@ -1727,7 +1727,27 @@ public class ModBlocks {
     public static final RegistryObject<Block> YELLOW_COLORED_WALL_HANGING_SIGN = BLOCKS.register("yellow_colored_wall_hanging_sign",
             () -> new YellowWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), ModWoodTypes.YELLOW));
 
+    //MARBLE
 
+    public static final RegistryObject<Block> MARBLE = registerBlock("marble",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MARBLE_SLAB = registerBlock("marble_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MARBLE_STAIRS = registerBlock("marble_stairs",
+            () -> new StairBlock(() -> ModBlocks.MARBLE.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MARBLE_WALL = registerBlock("marble_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> MARBLE_BRICKS = registerBlock("marble_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MARBLE_BRICK_SLAB = registerBlock("marble_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.STONE_SLAB).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MARBLE_BRICK_STAIRS = registerBlock("marble_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.MARBLE_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MARBLE_BRICK_WALL = registerBlock("marble_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 

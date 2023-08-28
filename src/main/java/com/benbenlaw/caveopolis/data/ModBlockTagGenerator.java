@@ -92,6 +92,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_COBBLESTONE_WALL.get())
                 .add(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_WALL.get())
                 .add(ModBlocks.COBBLESTONE_BRICK_WALL.get())
+
+                .add(ModBlocks.MARBLE_WALL.get())
+                .add(ModBlocks.MARBLE_BRICK_WALL.get())
         ;
 
         this.tag(BlockTags.STONE_BRICKS)
@@ -180,6 +183,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_STAIRS.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_STAIRS.get())
                 .add(ModBlocks.BLUE_COLORED_COBBLESTONE_STAIRS.get())
+
+                .add(ModBlocks.MARBLE_STAIRS.get())
+                .add(ModBlocks.MARBLE_BRICK_STAIRS.get())
         ;
         this.tag(BlockTags.SLABS)
 
@@ -249,6 +255,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_SLAB.get())
                 .add(ModBlocks.BLUE_COLORED_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.BLUE_COLORED_COBBLESTONE_SLAB.get())
+
+                .add(ModBlocks.MARBLE_SLAB.get())
+                .add(ModBlocks.MARBLE_BRICK_SLAB.get())
         ;
 
         this.tag(ModTags.Blocks.SHULKER_BOXES)
@@ -323,6 +332,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.COLORED_STONE_BRICK_STAIRS)
                 .addTag(ModTags.Blocks.COLORED_STONE_BUTTONS)
                 .addTag(ModTags.Blocks.COLORED_STONE_PRESSURE_PLATES)
+                .addTag(ModTags.Blocks.MARBLE_BLOCKS)
 
                 .addTag(ModTags.Blocks.COLORED_BRIGHT_COBBLESTONE)
                 .addTag(ModTags.Blocks.COLORED_COBBLESTONE)
@@ -1268,6 +1278,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.STRIPPED_COLORED_WOODS)
                 .addTag(ModTags.Blocks.COLORED_LOGS)
                 .addTag(ModTags.Blocks.COLORED_WOODS)
+        ;
+        
+        this.tag(ModTags.Blocks.MARBLE_BLOCKS)
+                .add(ModBlocks.MARBLE.get())
+                .add(ModBlocks.MARBLE_BRICKS.get())
+                .add(ModBlocks.MARBLE_SLAB.get())
+                .add(ModBlocks.MARBLE_BRICK_SLAB.get())
+                .add(ModBlocks.MARBLE_STAIRS.get())
+                .add(ModBlocks.MARBLE_BRICK_STAIRS.get())
+                .add(ModBlocks.MARBLE_WALL.get())
+                .add(ModBlocks.MARBLE_BRICK_WALL.get())
         ;
 
         this.tag(BlockTags.WOODEN_STAIRS)

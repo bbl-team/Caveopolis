@@ -64,6 +64,8 @@
     "caveopolis:light_blue_colored_cobblestone_slab",
     "caveopolis:light_blue_colored_cobblestone_brick_slab",
     "caveopolis:blue_colored_cobblestone_slab",
-    "caveopolis:blue_colored_cobblestone_slab"
+    "caveopolis:blue_colored_cobblestone_slab",
+    "caveopolis:marble_slab",
+    "caveopolis:marble_brick_slab"
   ]
 }

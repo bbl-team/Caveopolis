@@ -669,7 +669,14 @@
   "block.caveopolis.yellow_colored_sign": "Yellow Colored Sign",
   "block.caveopolis.yellow_colored_hanging_sign": "Yellow Colored Hanging Sign",
 
-
+  "block.caveopolis.marble": "Marble",
+  "block.caveopolis.marble_bricks": "Marble Bricks",
+  "block.caveopolis.marble_slab": "Marble Slab",
+  "block.caveopolis.marble_brick_slab": "Marble Brick Slab",
+  "block.caveopolis.marble_stairs": "Marble Stairs",
+  "block.caveopolis.marble_brick_stairs": "Marble Brick Stairs",
+  "block.caveopolis.marble_wall": "Marble Wall",
+  "block.caveopolis.marble_brick_wall": "Marble Brick Wall",
 
   "tooltips.spray_can.hover.shift": "Press SHIFT for more info",
   "tooltips.spray_can.shift.held": "Right click to spray blocks in world!",

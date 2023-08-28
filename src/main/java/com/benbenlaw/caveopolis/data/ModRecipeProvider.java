@@ -11,6 +11,7 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -480,7 +481,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_WALL.get(), ModBlocks.YELLOW_COLORED_STONE.get(), 1);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_SLAB.get(), ModBlocks.YELLOW_COLORED_STONE.get(), 2);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_STAIRS.get(), ModBlocks.YELLOW_COLORED_STONE.get(), 1);
-        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_BRICKS.get(), ModBlocks.BLACK_COLORED_STONE.get(), 1);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_BRICKS.get(), ModBlocks.YELLOW_COLORED_STONE.get(), 1);
 
         //BROWN COLORED STONE AND STONE BRICKS
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_WALL.get(), ModBlocks.BROWN_COLORED_STONE.get());
@@ -1961,6 +1962,42 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_HANGING_SIGN.get(), ModBlocks.STRIPPED_MAGENTA_COLORED_LOG.get(), 1);
         hangingSign(pWriter, ModBlocks.PINK_COLORED_HANGING_SIGN.get(), ModBlocks.STRIPPED_PINK_COLORED_LOG.get());
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_HANGING_SIGN.get(), ModBlocks.STRIPPED_PINK_COLORED_LOG.get(), 1);
+        
+        //MARBLE
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARBLE.get(), 4)
+                .pattern("SW")
+                .pattern("WS")
+                .define('S', Items.STONE)
+                .define('W', ModBlocks.WHITE_COLORED_STONE.get())
+                .unlockedBy("has_white_stone", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.WHITE_COLORED_STONE.get()).build()))
+                .save(pWriter);
+
+        wall(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_WALL.get(), ModBlocks.MARBLE.get());
+        wall(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICK_WALL.get(), ModBlocks.MARBLE_BRICKS.get());
+
+        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICKS.get(), ModBlocks.MARBLE.get());
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_SLAB.get(), ModBlocks.MARBLE.get());
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICK_SLAB.get(), ModBlocks.MARBLE_BRICKS.get());
+
+        stairBuilder(ModBlocks.MARBLE_STAIRS.get(), Ingredient.of(ModBlocks.MARBLE.get()))
+                .unlockedBy("MARBLE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.MARBLE_BRICKS.get()).build())).save(pWriter);
+
+        stairBuilder(ModBlocks.MARBLE_BRICK_STAIRS.get(), Ingredient.of(ModBlocks.MARBLE_BRICKS.get()))
+                .unlockedBy("MARBLE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModBlocks.MARBLE_BRICKS.get()).build())).save(pWriter);
+
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICK_WALL.get(), ModBlocks.MARBLE_BRICKS.get(), 1);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICK_SLAB.get(), ModBlocks.MARBLE_BRICKS.get(), 2);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICK_STAIRS.get(), ModBlocks.MARBLE_BRICKS.get(), 1);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_WALL.get(), ModBlocks.MARBLE.get(), 1);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_SLAB.get(), ModBlocks.MARBLE.get(), 2);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_STAIRS.get(), ModBlocks.MARBLE.get(), 1);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICKS.get(), ModBlocks.MARBLE.get(), 1);
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE.get(), ModBlocks.WHITE_COLORED_STONE.get(), 1);
+
     }
 
   // protected static void planksFromLogs(Consumer<FinishedRecipe> finishedRecipeConsumer, ItemLike itemLike, Item itemLike1) {

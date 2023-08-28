@@ -1256,6 +1256,25 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         hangingSignBlock(ModBlocks.PURPLE_COLORED_HANGING_SIGN.get(),  ModBlocks.PURPLE_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()));
         
+        //MARBLE
+
+        blockWithItem(ModBlocks.MARBLE);
+        slabBlock((SlabBlock) ModBlocks.MARBLE_SLAB.get(), blockTexture(ModBlocks.MARBLE.get()),
+                blockTexture(ModBlocks.MARBLE.get()));
+        stairsBlock((StairBlock) ModBlocks.MARBLE_STAIRS.get(), blockTexture(ModBlocks.MARBLE.get()));
+        wallBlock((WallBlock) ModBlocks.MARBLE_WALL.get(), blockTexture(ModBlocks.MARBLE.get()));
+        blockItem(ModBlocks.MARBLE_SLAB);
+        blockItem(ModBlocks.MARBLE_STAIRS);
+
+        blockWithItem(ModBlocks.MARBLE_BRICKS);
+        slabBlock((SlabBlock) ModBlocks.MARBLE_BRICK_SLAB.get(), blockTexture(ModBlocks.MARBLE_BRICKS.get()),
+                blockTexture(ModBlocks.MARBLE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.MARBLE_BRICK_STAIRS.get(), blockTexture(ModBlocks.MARBLE_BRICKS.get()));
+        wallBlock((WallBlock) ModBlocks.MARBLE_BRICK_WALL.get(), blockTexture(ModBlocks.MARBLE_BRICKS.get()));
+        blockItem(ModBlocks.MARBLE_BRICK_SLAB);
+        blockItem(ModBlocks.MARBLE_BRICK_STAIRS);
+
+
 
     }
 

@@ -63,6 +63,8 @@
     "caveopolis:yellow_colored_cobblestone_brick_stairs",
     "caveopolis:light_blue_colored_cobblestone_stairs",
     "caveopolis:light_blue_colored_cobblestone_brick_stairs",
-    "caveopolis:blue_colored_cobblestone_stairs"
+    "caveopolis:blue_colored_cobblestone_stairs",
+    "caveopolis:marble_stairs",
+    "caveopolis:marble_brick_stairs"
   ]
 }

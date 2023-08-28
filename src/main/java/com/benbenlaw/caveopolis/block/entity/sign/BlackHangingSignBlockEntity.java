@@ -7,9 +7,9 @@ import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class BlackHangingSignBlockEntity extends SignBlockEntity {
+public class BlackHangingSignBlockEntity extends HangingSignBlockEntity {
     public BlackHangingSignBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.BLACK_HANGING_SIGN.get(), pos, state);
+        super(pos, state);
     }
 
     @Override

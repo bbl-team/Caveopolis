@@ -248,6 +248,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_DOOR);
         simpleBlockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_DOOR);
         simpleBlockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_DOOR);
+
+        wallItem(ModBlocks.MARBLE_BRICK_WALL, ModBlocks.MARBLE);
+        wallItem(ModBlocks.MARBLE_WALL, ModBlocks.MARBLE_BRICKS);
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {

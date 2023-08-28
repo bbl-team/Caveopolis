@@ -3,6 +3,22 @@ Caveopolis Mod Changelog
 //TODO: More coloured blocks
 //TODO: ALL BLOCK BRIGHT OPTION
 
+2.4.2
+
+Fixed wooden fences and fences gates having the pressure pad tag
+Fixed crashing with Supplementaries when placing hanging signs
+Added correct textures to hanging signs when typing into the sign
+Added Spray Can Remover to spray can tag to fix spray can not going into the spray slot
+
+2.4.1
+
+Fixed yellow stone bricks recipe in the stone cutter
+
+2.4.0
+
+Added Marble bricks, stairs, slabs and walls
+Added Marble stairs, slabs and walls
+
 2.3.5
 
 Fixed crashes on servers when the sprayer is used

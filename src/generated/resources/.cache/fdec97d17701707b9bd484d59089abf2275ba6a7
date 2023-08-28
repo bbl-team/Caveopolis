@@ -1,4 +1,4 @@
-// 1.20.1	2023-07-14T09:33:25.6028489	Item Models: caveopolis
+// 1.20.1	2023-07-28T09:05:05.5686788	Item Models: caveopolis
 2bde41b8d3fc8f75699a4dd35a257f56ca9a286b assets/caveopolis/models/item/black_colored_cobblestone_brick_wall.json
 29a8a7549f85666eee9256ce3afe162574a7a451 assets/caveopolis/models/item/black_colored_cobblestone_wall.json
 826f1e6467ca7c51ed2545eb397e8b3a9c4e293e assets/caveopolis/models/item/black_colored_hanging_sign.json
@@ -112,6 +112,8 @@ a252f15b81b7716a1f8fcc72cc5b4cb52c2e1b27 assets/caveopolis/models/item/magenta_c
 6f96b7f0bf185514f5d79d662a51804bf3a1af6f assets/caveopolis/models/item/magenta_colored_wooden_plank_door.json
 d5892feae22c5cd0f0cdaadb5311277996fc02f0 assets/caveopolis/models/item/magenta_colored_wooden_plank_fence.json
 079fcef2690171cb0271e145c0f331f61e67e366 assets/caveopolis/models/item/magenta_spray_can.json
+0987f19b4e0f6406e53de3d1350738fec2d8b1fa assets/caveopolis/models/item/marble_brick_wall.json
+57b7b35f67b51c8c8f856a30555ae5d9f08ebf23 assets/caveopolis/models/item/marble_wall.json
 f4eb54bd354c13eea1eb58c4147c99367bce1512 assets/caveopolis/models/item/mixed_stone_ingot.json
 0e8c2babc7482577c039d94259b6c2bd1ebd502a assets/caveopolis/models/item/mixed_stone_nugget.json
 4df04ea6cc6ba4354dd698c401c1c411ffc63ef6 assets/caveopolis/models/item/mossy_string.json

@@ -781,6 +781,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.BROWN_SPRAY_CAN.get().asItem())
                 .add(ModItems.ORANGE_SPRAY_CAN.get().asItem())
                 .add(ModItems.CYAN_SPRAY_CAN.get().asItem())
+                .add(ModItems.SPRAY_CAN_REMOVER.get().asItem())
         ;
 
         //PLANKS
@@ -1298,7 +1299,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .addTag(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES);
 
         this.tag(ItemTags.WOODEN_FENCES)
-                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES);
+                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_FENCES);
 
         this.tag(ItemTags.WOODEN_DOORS)
                 .addTag(ModTags.Items.COLORED_WOODEN_PLANK_DOORS);
@@ -1307,7 +1308,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .addTag(ModTags.Items.COLORED_WOODEN_PLANK_TRAPDOORS);
 
         this.tag(Tags.Items.FENCE_GATES_WOODEN)
-                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES);
+                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_FENCE_GATES);
 
         this.tag(ItemTags.STONE_BUTTONS)
                 .addTag(ModTags.Items.COLORED_STONE_BUTTONS);

@@ -88,6 +88,8 @@ public class ModTags {
 
         public static final TagKey<Block> SHULKER_BOXES = forgeTag("shulker_boxes");
 
+        public static final TagKey<Block> MARBLE_BLOCKS = tag("marble_blocks");
+
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Caveopolis.MOD_ID, name));
         }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caveopolis:block/marble_slab"
+    },
+    "type=double": {
+      "model": "caveopolis:block/marble"
+    },
+    "type=top": {
+      "model": "caveopolis:block/marble_slab_top"
+    }
+  }
+}

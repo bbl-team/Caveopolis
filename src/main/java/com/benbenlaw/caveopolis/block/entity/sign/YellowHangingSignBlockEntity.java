@@ -3,12 +3,13 @@ package com.benbenlaw.caveopolis.block.entity.sign;
 import com.benbenlaw.caveopolis.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
 import net.minecraft.world.level.block.entity.SignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class YellowHangingSignBlockEntity extends SignBlockEntity {
+public class YellowHangingSignBlockEntity extends HangingSignBlockEntity {
     public YellowHangingSignBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.YELLOW_HANGING_SIGN.get(), pos, state);
+        super(pos, state);
     }
 
     @Override

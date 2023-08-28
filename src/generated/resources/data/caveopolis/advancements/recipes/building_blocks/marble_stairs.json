@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:marble_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "marble": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:marble_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "marble",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:marble_stairs"
+    ]
+  },
+  "sends_telemetry_event": false
+}

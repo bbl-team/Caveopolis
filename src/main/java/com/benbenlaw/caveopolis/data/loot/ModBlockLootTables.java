@@ -781,6 +781,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.add(ModBlocks.YELLOW_COLORED_WALL_HANGING_SIGN.get(), block ->
                 createSingleItemTable(ModItems.YELLOW_COLORED_HANGING_SIGN.get()));
 
+        //MARBLE
+
+        this.dropSelf(ModBlocks.MARBLE.get());
+        this.dropSelf(ModBlocks.MARBLE_BRICKS.get());
+        this.add(ModBlocks.MARBLE_BRICK_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.MARBLE_BRICK_STAIRS.get());
+        this.dropSelf(ModBlocks.MARBLE_BRICK_WALL.get());
+        this.add(ModBlocks.MARBLE_SLAB.get(), this::createSlabItemTable);
+        this.dropSelf(ModBlocks.MARBLE_STAIRS.get());
+        this.dropSelf(ModBlocks.MARBLE_WALL.get());
+
 
     }
 

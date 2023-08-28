@@ -647,6 +647,15 @@ public class ModCreativeModTab {
                 output.accept(ModBlocks.LIME_COLORED_HANGING_SIGN.get());
                 output.accept(ModBlocks.CYAN_COLORED_HANGING_SIGN.get());
 
+                output.accept(ModBlocks.MARBLE.get());
+                output.accept(ModBlocks.MARBLE_BRICKS.get());
+                output.accept(ModBlocks.MARBLE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.MARBLE_BRICK_STAIRS.get());
+                output.accept(ModBlocks.MARBLE_BRICK_WALL.get());
+                output.accept(ModBlocks.MARBLE_SLAB.get());;
+                output.accept(ModBlocks.MARBLE_STAIRS.get());
+                output.accept(ModBlocks.MARBLE_WALL.get());
+
                 output.accept(ModItems.BLUE_SPRAY_CAN.get());
                 output.accept(ModItems.BROWN_SPRAY_CAN.get());
                 output.accept(ModItems.MAGENTA_SPRAY_CAN.get());
