@@ -315,7 +315,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.MIXED_STONE_NUGGET.get()).build()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MIXED_STONE_NUGGET.get()).requires(ModItems.MIXED_STONE_INGOT.get(), 1)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MIXED_STONE_NUGGET.get(), 9).requires(ModItems.MIXED_STONE_INGOT.get(), 1)
                 .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
                         of(ModItems.MIXED_STONE_INGOT.get()).build()))
                 .save(pWriter);
