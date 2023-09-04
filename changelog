@@ -3,6 +3,10 @@ Caveopolis Mod Changelog
 //TODO: More coloured blocks
 //TODO: ALL BLOCK BRIGHT OPTION
 
+2.4.4
+
+Fixed glass pane remove color recipe turning them from panes to full blocks
+
 2.4.3
 
 Fixed nugget recipe

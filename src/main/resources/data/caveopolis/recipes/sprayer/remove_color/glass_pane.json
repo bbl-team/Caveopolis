@@ -9,6 +9,6 @@
       }
   ],
   "output": {
-    "item": "minecraft:glass"
+    "item": "minecraft:glass_pane"
   }
 }
