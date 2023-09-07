@@ -89,8 +89,8 @@ public class RedSprayCanItem extends Item {
                     level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, sound * 15 , 0.5F);
 
 
-                    int dur =  player.getItemInHand(InteractionHand.MAIN_HAND).getDamageValue();
-                    player.sendSystemMessage(Component.literal(String.valueOf(dur)));
+                //    int dur =  player.getItemInHand(InteractionHand.MAIN_HAND).getDamageValue();
+                //    player.sendSystemMessage(Component.literal(String.valueOf(dur)));
 
 
                     if (mainHand) {
