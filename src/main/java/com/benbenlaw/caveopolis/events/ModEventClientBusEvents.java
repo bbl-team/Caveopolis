@@ -48,4 +48,6 @@ public class ModEventClientBusEvents {
         event.registerBlockEntityRenderer(ModBlockEntities.WHITE_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.WHITE_HANGING_SIGN.get(), HangingSignRenderer::new);
     }
+
+
 }

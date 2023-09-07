@@ -9,12 +9,12 @@ import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.recipe.ModRecipes;
 import com.benbenlaw.caveopolis.screen.ModMenuTypes;
 import com.benbenlaw.caveopolis.screen.SprayerScreen;
+import com.benbenlaw.caveopolis.util.ModItemProperties;
 import com.benbenlaw.caveopolis.util.ModWoodTypes;
-import com.benbenlaw.caveopolis.world.feature.ModConfiguredFeatures;
-import com.benbenlaw.caveopolis.world.feature.ModPlacedFeatures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -129,4 +129,14 @@ public class Caveopolis {
         });
     }
 
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus =Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            event.enqueueWork(() -> {
+                ModItemProperties.addCustomItemProperties();
+                ModItemProperties.addCustomItemProperties();
+            });
+        }
+    }
 }

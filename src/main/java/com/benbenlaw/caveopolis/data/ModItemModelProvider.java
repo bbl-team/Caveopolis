@@ -25,24 +25,24 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
-        simpleItem(ModItems.BLACK_SPRAY_CAN);
-        simpleItem(ModItems.BLUE_SPRAY_CAN);
-        simpleItem(ModItems.BROWN_SPRAY_CAN);
-        simpleItem(ModItems.PINK_SPRAY_CAN);
-        simpleItem(ModItems.PURPLE_SPRAY_CAN);
-        simpleItem(ModItems.WHTIE_SPRAY_CAN);
-        simpleItem(ModItems.YELLOW_SPRAY_CAN);
-        simpleItem(ModItems.LIGHT_GRAY_SPRAY_CAN);
-        simpleItem(ModItems.LIGHT_BLUE_SPRAY_CAN);
-        simpleItem(ModItems.GRAY_SPRAY_CAN);
-        simpleItem(ModItems.MAGENTA_SPRAY_CAN);
-        simpleItem(ModItems.RED_SPRAY_CAN);
-        simpleItem(ModItems.ORANGE_SPRAY_CAN);
-        simpleItem(ModItems.GREEN_SPRAY_CAN);
-        simpleItem(ModItems.LIME_SPRAY_CAN);
-        simpleItem(ModItems.CYAN_SPRAY_CAN);
-        simpleItem(ModItems.GLOWSTONE_SPRAY_CAN);
-        simpleItem(ModItems.SPRAY_CAN_REMOVER);
+    //    simpleItem(ModItems.BLACK_SPRAY_CAN);
+    //    simpleItem(ModItems.BLUE_SPRAY_CAN);
+    //    simpleItem(ModItems.BROWN_SPRAY_CAN);
+    //    simpleItem(ModItems.PINK_SPRAY_CAN);
+    //    simpleItem(ModItems.PURPLE_SPRAY_CAN);
+    //    simpleItem(ModItems.WHTIE_SPRAY_CAN);
+    //    simpleItem(ModItems.YELLOW_SPRAY_CAN);
+    //    simpleItem(ModItems.LIGHT_GRAY_SPRAY_CAN);
+    //    simpleItem(ModItems.LIGHT_BLUE_SPRAY_CAN);
+    //    simpleItem(ModItems.GRAY_SPRAY_CAN);
+    //    simpleItem(ModItems.MAGENTA_SPRAY_CAN);
+    //    simpleItem(ModItems.RED_SPRAY_CAN);
+    //    simpleItem(ModItems.ORANGE_SPRAY_CAN);
+    //    simpleItem(ModItems.GREEN_SPRAY_CAN);
+    //    simpleItem(ModItems.LIME_SPRAY_CAN);
+    //    simpleItem(ModItems.CYAN_SPRAY_CAN);
+    //    simpleItem(ModItems.GLOWSTONE_SPRAY_CAN);
+    //    simpleItem(ModItems.SPRAY_CAN_REMOVER);
         simpleItem(ModItems.STONE_STICK);
         simpleItem(ModItems.MOSS_BALL);
         simpleItem(ModItems.MOSSY_STRING);

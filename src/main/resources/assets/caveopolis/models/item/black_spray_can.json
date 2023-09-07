@@ -1,0 +1,20 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "caveopolis:item/black_spray_can"
+    },
+    "overrides": [
+        {
+            "predicate": {
+                "caveopolis:change": 1
+            },
+            "model": "caveopolis:item/black_spray_can_2"
+        },
+        {
+            "predicate": {
+                "caveopolis:change": 2
+            },
+            "model": "caveopolis:item/black_spray_can_1"
+        }
+    ]
+}
