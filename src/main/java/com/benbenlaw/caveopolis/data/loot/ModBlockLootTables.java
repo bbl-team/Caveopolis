@@ -171,23 +171,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_STAIRS.get());
         this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_WALL.get());
 
-        this.dropSelf(ModBlocks.BROWN_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.MAGENTA_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.PURPLE_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.WHITE_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.YELLOW_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.BLUE_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.GRAY_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.PINK_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.RED_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.BLACK_COLORED_BRIGHT_STONE.get());
         this.dropSelf(ModBlocks.BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.GREEN_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.LIME_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.CYAN_COLORED_BRIGHT_STONE.get());
-        this.dropSelf(ModBlocks.ORANGE_COLORED_BRIGHT_STONE.get());
 
         this.dropSelf(ModBlocks.STONE_CRAFTING_TABLE.get());
         this.dropSelf(ModBlocks.BRIGHT_STONE.get());
@@ -359,23 +343,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE_STAIRS.get());
         this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE_WALL.get());
 
-        this.dropSelf(ModBlocks.BROWN_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.MAGENTA_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.PURPLE_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.WHITE_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.YELLOW_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.BLUE_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.GRAY_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.PINK_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.RED_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.BLACK_COLORED_BRIGHT_COBBLESTONE.get());
         this.dropSelf(ModBlocks.BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.GREEN_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.LIME_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.CYAN_COLORED_BRIGHT_COBBLESTONE.get());
-        this.dropSelf(ModBlocks.ORANGE_COLORED_BRIGHT_COBBLESTONE.get());
         
         //PLANKS
         
@@ -792,6 +760,58 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.MARBLE_STAIRS.get());
         this.dropSelf(ModBlocks.MARBLE_WALL.get());
 
+        
+        //SAPLINGS
+
+        this.dropSelf(ModBlocks.BROWN_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.RED_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_SAPLING.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_SAPLING.get());
+
+        this.add(ModBlocks.BROWN_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BROWN_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.MAGENTA_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.MAGENTA_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.PURPLE_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.PURPLE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.WHITE_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.WHITE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.YELLOW_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.YELLOW_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.LIGHT_GRAY_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.LIGHT_GRAY_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.GRAY_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.GRAY_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.LIGHT_BLUE_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.LIGHT_BLUE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.BLUE_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BLUE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.PINK_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.PINK_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.RED_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.RED_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.BLACK_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.BLACK_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.GREEN_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.GREEN_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.LIME_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.LIME_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.CYAN_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.CYAN_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        this.add(ModBlocks.ORANGE_COLORED_LEAVES.get(), block ->
+                createLeavesDrops(block, ModBlocks.ORANGE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
     }
 

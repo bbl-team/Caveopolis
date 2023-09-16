@@ -281,7 +281,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.YELLOW_COLORED_STONE);
         slabBlock((SlabBlock) ModBlocks.YELLOW_COLORED_STONE_SLAB.get(), blockTexture(ModBlocks.YELLOW_COLORED_STONE.get()),
                 blockTexture(ModBlocks.YELLOW_COLORED_STONE.get()));
-        stairsBlock((StairBlock) ModBlocks.YELLOW_COLORED_STONE_STAIRS.get(), blockTexture(ModBlocks.YELLOW_COLORED_STONE_BRICKS.get()));
+        stairsBlock((StairBlock) ModBlocks.YELLOW_COLORED_STONE_STAIRS.get(), blockTexture(ModBlocks.YELLOW_COLORED_STONE.get()));
         wallBlock((WallBlock) ModBlocks.YELLOW_COLORED_STONE_WALL.get(), blockTexture(ModBlocks.YELLOW_COLORED_STONE.get()));
 
         blockWithItem(ModBlocks.YELLOW_COLORED_STONE_BRICKS);
@@ -312,25 +312,6 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.BROWN_COLORED_STONE_STAIRS);
         blockItem(ModBlocks.BROWN_COLORED_STONE_BRICK_SLAB);
         blockItem(ModBlocks.BROWN_COLORED_STONE_BRICK_STAIRS);
-
-        //BRIGHT STONE
-        blockWithItem(ModBlocks.BROWN_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.MAGENTA_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.PURPLE_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.WHITE_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.YELLOW_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.LIGHT_GRAY_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.BLUE_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.LIGHT_BLUE_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.GRAY_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.PINK_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.RED_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.BLACK_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.ORANGE_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.GREEN_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.LIME_COLORED_BRIGHT_STONE);
-        blockWithItem(ModBlocks.CYAN_COLORED_BRIGHT_STONE);
-
 
         //BLACK
         blockWithItem(ModBlocks.BLACK_COLORED_COBBLESTONE);
@@ -623,22 +604,6 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_STAIRS);
 
         //BRIGHT STONE
-        blockWithItem(ModBlocks.BROWN_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.MAGENTA_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.PURPLE_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.WHITE_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.YELLOW_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.LIGHT_GRAY_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.BLUE_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.LIGHT_BLUE_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.GRAY_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.PINK_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.RED_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.BLACK_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.ORANGE_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.GREEN_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.LIME_COLORED_BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.CYAN_COLORED_BRIGHT_COBBLESTONE);
         blockWithItem(ModBlocks.BRIGHT_COBBLESTONE);
         blockWithItem(ModBlocks.BRIGHT_STONE);
 
@@ -1274,8 +1239,51 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.MARBLE_BRICK_SLAB);
         blockItem(ModBlocks.MARBLE_BRICK_STAIRS);
 
+        //Leaves
 
+        blockWithItem(ModBlocks.BLACK_COLORED_LEAVES);
+        blockWithItem(ModBlocks.BROWN_COLORED_LEAVES);
+        blockWithItem(ModBlocks.WHITE_COLORED_LEAVES);
+        blockWithItem(ModBlocks.YELLOW_COLORED_LEAVES);
+        blockWithItem(ModBlocks.ORANGE_COLORED_LEAVES);
+        blockWithItem(ModBlocks.RED_COLORED_LEAVES);
+        blockWithItem(ModBlocks.PINK_COLORED_LEAVES);
+        blockWithItem(ModBlocks.PURPLE_COLORED_LEAVES);
+        blockWithItem(ModBlocks.MAGENTA_COLORED_LEAVES);
+        blockWithItem(ModBlocks.BLUE_COLORED_LEAVES);
+        blockWithItem(ModBlocks.LIGHT_BLUE_COLORED_LEAVES);
+        blockWithItem(ModBlocks.GRAY_COLORED_LEAVES);
+        blockWithItem(ModBlocks.LIGHT_GRAY_COLORED_LEAVES);
+        blockWithItem(ModBlocks.GREEN_COLORED_LEAVES);
+        blockWithItem(ModBlocks.LIME_COLORED_LEAVES);
+        blockWithItem(ModBlocks.CYAN_COLORED_LEAVES);
 
+        //SAPLING
+
+        saplingBlock(ModBlocks.BLACK_COLORED_SAPLING);
+        saplingBlock(ModBlocks.BROWN_COLORED_SAPLING);
+        saplingBlock(ModBlocks.WHITE_COLORED_SAPLING);
+        saplingBlock(ModBlocks.YELLOW_COLORED_SAPLING);
+        saplingBlock(ModBlocks.ORANGE_COLORED_SAPLING);
+        saplingBlock(ModBlocks.RED_COLORED_SAPLING);
+        saplingBlock(ModBlocks.PINK_COLORED_SAPLING);
+        saplingBlock(ModBlocks.PURPLE_COLORED_SAPLING);
+        saplingBlock(ModBlocks.MAGENTA_COLORED_SAPLING);
+        saplingBlock(ModBlocks.BLUE_COLORED_SAPLING);
+        saplingBlock(ModBlocks.LIGHT_BLUE_COLORED_SAPLING);
+        saplingBlock(ModBlocks.GRAY_COLORED_SAPLING);
+        saplingBlock(ModBlocks.LIGHT_GRAY_COLORED_SAPLING);
+        saplingBlock(ModBlocks.GREEN_COLORED_SAPLING);
+        saplingBlock(ModBlocks.LIME_COLORED_SAPLING);
+        saplingBlock(ModBlocks.CYAN_COLORED_SAPLING);
+    }
+
+    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(), models().cubeAll(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    }
+
+    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(), models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {

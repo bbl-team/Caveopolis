@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:pink_spray_can"
+      },
+      {
+        "tag": "caveopolis:colored_leaves"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:pink_colored_leaves"
+  }
+}

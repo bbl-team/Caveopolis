@@ -249,8 +249,35 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleBlockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_DOOR);
         simpleBlockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_DOOR);
 
-        wallItem(ModBlocks.MARBLE_BRICK_WALL, ModBlocks.MARBLE);
-        wallItem(ModBlocks.MARBLE_WALL, ModBlocks.MARBLE_BRICKS);
+        wallItem(ModBlocks.MARBLE_BRICK_WALL, ModBlocks.MARBLE_BRICKS);
+        wallItem(ModBlocks.MARBLE_WALL, ModBlocks.MARBLE);
+
+        saplingItem(ModBlocks.BROWN_COLORED_SAPLING);
+        saplingItem(ModBlocks.MAGENTA_COLORED_SAPLING);
+        saplingItem(ModBlocks.PURPLE_COLORED_SAPLING);
+        saplingItem(ModBlocks.WHITE_COLORED_SAPLING);
+        saplingItem(ModBlocks.YELLOW_COLORED_SAPLING);
+        saplingItem(ModBlocks.LIGHT_GRAY_COLORED_SAPLING);
+        saplingItem(ModBlocks.LIGHT_BLUE_COLORED_SAPLING);
+        saplingItem(ModBlocks.BLUE_COLORED_SAPLING);
+        saplingItem(ModBlocks.GRAY_COLORED_SAPLING);
+        saplingItem(ModBlocks.PINK_COLORED_SAPLING);
+        saplingItem(ModBlocks.RED_COLORED_SAPLING);
+        saplingItem(ModBlocks.BLACK_COLORED_SAPLING);
+        saplingItem(ModBlocks.ORANGE_COLORED_SAPLING);
+        saplingItem(ModBlocks.GREEN_COLORED_SAPLING);
+        saplingItem(ModBlocks.LIME_COLORED_SAPLING);
+        saplingItem(ModBlocks.CYAN_COLORED_SAPLING);
+
+
+
+
+    }
+
+    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                new ResourceLocation("item/generated")).texture("layer0",
+                new ResourceLocation(Caveopolis.MOD_ID, "block/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {

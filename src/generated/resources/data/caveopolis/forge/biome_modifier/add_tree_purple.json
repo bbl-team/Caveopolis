@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_forest",
+  "features": "caveopolis:purple_tree_placed",
+  "step": "vegetal_decoration"
+}

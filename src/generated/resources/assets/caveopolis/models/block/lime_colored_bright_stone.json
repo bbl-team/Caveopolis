@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "caveopolis:block/lime_colored_bright_stone"
-  }
-}

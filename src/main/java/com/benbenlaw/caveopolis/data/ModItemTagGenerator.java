@@ -388,41 +388,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         ;
 
         this.tag(ModTags.Items.COLORED_BRIGHT_STONE)
-                .add(ModBlocks.BLUE_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.LIGHT_BLUE_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.YELLOW_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.RED_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.GRAY_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.GREEN_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.LIGHT_GRAY_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.LIME_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.PURPLE_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.MAGENTA_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.PINK_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.BLACK_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.BROWN_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.WHITE_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.ORANGE_COLORED_BRIGHT_STONE.get().asItem())
-                .add(ModBlocks.CYAN_COLORED_BRIGHT_STONE.get().asItem())
                 .add(ModBlocks.BRIGHT_STONE.get().asItem())
         ;
         this.tag(ModTags.Items.COLORED_BRIGHT_COBBLESTONE)
-                .add(ModBlocks.BLUE_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.LIGHT_BLUE_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.YELLOW_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.RED_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.GRAY_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.GREEN_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.LIGHT_GRAY_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.LIME_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.PURPLE_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.MAGENTA_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.PINK_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.BLACK_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.BROWN_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.WHITE_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.ORANGE_COLORED_BRIGHT_COBBLESTONE.get().asItem())
-                .add(ModBlocks.CYAN_COLORED_BRIGHT_COBBLESTONE.get().asItem())
                 .add(ModBlocks.BRIGHT_COBBLESTONE.get().asItem())
         ;
 
@@ -1318,6 +1286,54 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.tag(ModTags.Items.MIXED_STONE_INGOTS).add(ModItems.MIXED_STONE_INGOT.get());
         this.tag(Tags.Items.INGOTS).add(ModItems.MIXED_STONE_INGOT.get());
+
+        this.tag(ModTags.Items.COLORED_LEAVES)
+                .add(ModBlocks.BLUE_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.RED_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.LIME_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.PINK_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_LEAVES.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_LEAVES.get().asItem())
+                .add(Blocks.OAK_LEAVES.asItem())
+        ;
+
+        this.tag(ModTags.Items.COLORED_SAPLINGS)
+                .add(ModBlocks.BLUE_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.RED_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.LIME_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.PINK_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.WHITE_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_SAPLING.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_SAPLING.get().asItem())
+                .add(Blocks.OAK_SAPLING.asItem())
+        ;
+
+        this.tag(ItemTags.LEAVES)
+                .addTag(ModTags.Items.COLORED_LEAVES)
+        ;
+        this.tag(ItemTags.SAPLINGS)
+                .addTag(ModTags.Items.COLORED_SAPLINGS)
+        ;
+        
     }
 
     @Override

@@ -1,8 +1,10 @@
 package com.benbenlaw.caveopolis.item.custom;
 
+import com.benbenlaw.caveopolis.block.custom.brightblock.*;
 import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.util.ModTags;
+import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
@@ -20,12 +22,15 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.client.gui.overlay.VanillaGuiOverlay;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
+
+import static com.benbenlaw.caveopolis.block.custom.brightblock.BrightFullBlock.LIT;
 
 public class GlowstoneSprayCanItem extends Item {
     public GlowstoneSprayCanItem(Properties pProperties) {
@@ -66,7 +71,36 @@ public class GlowstoneSprayCanItem extends Item {
 
         if (!level.isClientSide()) {
 
-            if (blockState.is(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)) {
+            if ( blockState.getBlock() instanceof BrightLeavesBlock || blockState.getBlock() instanceof BrightButtonBlock || blockState.getBlock() instanceof BrightTrapDoorBlock || blockState.getBlock() instanceof BrightDoorBlock || blockState.getBlock() instanceof BrightPressurePlateBlock || blockState.getBlock() instanceof BrightFlammableLogBlock || blockState.getBlock() instanceof BrightFenceGateBlock || blockState.getBlock() instanceof BrightFenceBlock || blockState.getBlock() instanceof BrightSlabBlock || blockState.getBlock() instanceof BrightFullBlock || blockState.getBlock() instanceof BrightStairBlock) {
+                if (blockState.getValue(LIT) == Boolean.TRUE) {
+                    level.setBlockAndUpdate(pos, blockState.setValue(LIT, Boolean.FALSE));
+                    level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, sound * 15 , 0.5F);
+                    if(player.isCrouching()) {
+                        player.sendSystemMessage(Component.literal("This block is Unlit!"));
+                    }
+                    if (mainHand) {
+                        player.getItemInHand(InteractionHand.MAIN_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));
+                    } else
+                        player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));
+
+                    return InteractionResult.SUCCESS;
+                }
+                else if (blockState.getValue(LIT) == Boolean.FALSE) {
+                    level.setBlockAndUpdate(pos, blockState.setValue(LIT, Boolean.TRUE));
+                    level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, sound * 15 , 0.5F);
+                    if(player.isCrouching()) {
+                        player.sendSystemMessage(Component.literal("This block is Lit!"));
+                    }
+                    if (mainHand) {
+                        player.getItemInHand(InteractionHand.MAIN_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));
+                    } else
+                        player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));
+
+                    return InteractionResult.SUCCESS;
+                }
+            }
+
+            else if (blockState.is(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)) {
                 player.sendSystemMessage(Component.literal("This block cannot be converted in world, try the sprayer block instead!"));
                 return InteractionResult.FAIL;
             }
@@ -92,4 +126,6 @@ public class GlowstoneSprayCanItem extends Item {
         }
         return InteractionResult.FAIL;
     }
+
+
 }

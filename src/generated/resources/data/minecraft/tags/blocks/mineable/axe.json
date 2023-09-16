@@ -16,6 +16,23 @@
     "#caveopolis:colored_signs",
     "#caveopolis:colored_wall_signs",
     "#caveopolis:colored_hanging_signs",
+    "#caveopolis:colored_wall_hanging_signs",
+    "#caveopolis:colored_wooden_planks",
+    "#caveopolis:colored_wooden_plank_stairs",
+    "#caveopolis:colored_wooden_plank_slabs",
+    "#caveopolis:colored_wooden_plank_buttons",
+    "#caveopolis:colored_wooden_plank_pressure_plates",
+    "#caveopolis:colored_wooden_plank_fences",
+    "#caveopolis:colored_wooden_plank_fence_gates",
+    "#caveopolis:colored_wooden_plank_trapdoors",
+    "#caveopolis:colored_wooden_plank_doors",
+    "#caveopolis:stripped_colored_logs",
+    "#caveopolis:stripped_colored_woods",
+    "#caveopolis:colored_logs",
+    "#caveopolis:colored_woods",
+    "#caveopolis:colored_signs",
+    "#caveopolis:colored_wall_signs",
+    "#caveopolis:colored_hanging_signs",
     "#caveopolis:colored_wall_hanging_signs"
   ]
 }

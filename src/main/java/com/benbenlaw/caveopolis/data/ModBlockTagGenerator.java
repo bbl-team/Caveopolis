@@ -356,42 +356,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         ;
 
         this.tag(ModTags.Blocks.COLORED_BRIGHT_STONE)
-                .add(ModBlocks.BLUE_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.LIGHT_BLUE_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.YELLOW_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.RED_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.GRAY_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.GREEN_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.LIGHT_GRAY_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.LIME_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.PURPLE_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.MAGENTA_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.PINK_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.BLACK_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.BROWN_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.WHITE_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.ORANGE_COLORED_BRIGHT_STONE.get())
-                .add(ModBlocks.CYAN_COLORED_BRIGHT_STONE.get())
                 .add(ModBlocks.BRIGHT_STONE.get())
         ;
         
         this.tag(ModTags.Blocks.COLORED_BRIGHT_COBBLESTONE)
-                .add(ModBlocks.BLUE_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.LIGHT_BLUE_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.YELLOW_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.RED_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.GRAY_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.GREEN_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.LIGHT_GRAY_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.LIME_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.PURPLE_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.MAGENTA_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.PINK_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.BLACK_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.BROWN_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.WHITE_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.ORANGE_COLORED_BRIGHT_COBBLESTONE.get())
-                .add(ModBlocks.CYAN_COLORED_BRIGHT_COBBLESTONE.get())
                 .add(ModBlocks.BRIGHT_COBBLESTONE.get())
         ;
 
@@ -1143,6 +1111,46 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_COLORED_WALL_HANGING_SIGN.get())
                 .add(ModBlocks.CYAN_COLORED_WALL_HANGING_SIGN.get())
                 .add(Blocks.OAK_WALL_HANGING_SIGN)
+        ;        
+        
+        this.tag(ModTags.Blocks.COLORED_LEAVES)
+                .add(ModBlocks.BLUE_COLORED_LEAVES.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_LEAVES.get())
+                .add(ModBlocks.YELLOW_COLORED_LEAVES.get())
+                .add(ModBlocks.RED_COLORED_LEAVES.get())
+                .add(ModBlocks.GRAY_COLORED_LEAVES.get())
+                .add(ModBlocks.GREEN_COLORED_LEAVES.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_LEAVES.get())
+                .add(ModBlocks.LIME_COLORED_LEAVES.get())
+                .add(ModBlocks.PURPLE_COLORED_LEAVES.get())
+                .add(ModBlocks.MAGENTA_COLORED_LEAVES.get())
+                .add(ModBlocks.PINK_COLORED_LEAVES.get())
+                .add(ModBlocks.BLACK_COLORED_LEAVES.get())
+                .add(ModBlocks.WHITE_COLORED_LEAVES.get())
+                .add(ModBlocks.BROWN_COLORED_LEAVES.get())
+                .add(ModBlocks.ORANGE_COLORED_LEAVES.get())
+                .add(ModBlocks.CYAN_COLORED_LEAVES.get())
+                .add(Blocks.OAK_LEAVES)
+        ;       
+        
+        this.tag(ModTags.Blocks.COLORED_SAPLINGS)
+                .add(ModBlocks.BLUE_COLORED_SAPLING.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_SAPLING.get())
+                .add(ModBlocks.YELLOW_COLORED_SAPLING.get())
+                .add(ModBlocks.RED_COLORED_SAPLING.get())
+                .add(ModBlocks.GRAY_COLORED_SAPLING.get())
+                .add(ModBlocks.GREEN_COLORED_SAPLING.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_SAPLING.get())
+                .add(ModBlocks.LIME_COLORED_SAPLING.get())
+                .add(ModBlocks.PURPLE_COLORED_SAPLING.get())
+                .add(ModBlocks.MAGENTA_COLORED_SAPLING.get())
+                .add(ModBlocks.PINK_COLORED_SAPLING.get())
+                .add(ModBlocks.BLACK_COLORED_SAPLING.get())
+                .add(ModBlocks.WHITE_COLORED_SAPLING.get())
+                .add(ModBlocks.BROWN_COLORED_SAPLING.get())
+                .add(ModBlocks.ORANGE_COLORED_SAPLING.get())
+                .add(ModBlocks.CYAN_COLORED_SAPLING.get())
+                .add(Blocks.OAK_SAPLING)
         ;
 
 
@@ -1330,6 +1338,38 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.COLORED_WALL_SIGNS)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_DOORS)
         ;
+
+        this.tag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANKS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_STAIRS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_SLABS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_BUTTONS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_PRESSURE_PLATES)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_FENCES)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_FENCE_GATES)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_TRAPDOORS)
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_DOORS)
+                .addTag(ModTags.Blocks.STRIPPED_COLORED_LOGS)
+                .addTag(ModTags.Blocks.STRIPPED_COLORED_WOODS)
+                .addTag(ModTags.Blocks.COLORED_LOGS)
+                .addTag(ModTags.Blocks.COLORED_WOODS)
+                .addTag(ModTags.Blocks.COLORED_SIGNS)
+                .addTag(ModTags.Blocks.COLORED_WALL_SIGNS)
+                .addTag(ModTags.Blocks.COLORED_HANGING_SIGNS)
+                .addTag(ModTags.Blocks.COLORED_WALL_HANGING_SIGNS)
+                ;
+
+        this.tag(BlockTags.MINEABLE_WITH_HOE)
+                .addTag(ModTags.Blocks.COLORED_LEAVES)
+                ;
+
+        this.tag(BlockTags.LEAVES)
+                .addTag(ModTags.Blocks.COLORED_LEAVES)
+                ;
+        this.tag(BlockTags.SAPLINGS)
+                .addTag(ModTags.Blocks.COLORED_SAPLINGS)
+                ;
+
 
     }
 

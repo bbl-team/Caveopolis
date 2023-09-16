@@ -90,6 +90,9 @@ public class ModTags {
 
         public static final TagKey<Block> MARBLE_BLOCKS = tag("marble_blocks");
 
+        public static final TagKey<Block> COLORED_LEAVES = tag("colored_leaves");
+        public static final TagKey<Block> COLORED_SAPLINGS = tag("colored_saplings");
+
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(Caveopolis.MOD_ID, name));
         }
@@ -173,6 +176,9 @@ public class ModTags {
         public static final TagKey<Item> MAGENTA_COLORED_LOGS = tag("magenta_colored_logs");
         public static final TagKey<Item> PINK_COLORED_LOGS = tag("pink_colored_logs");
         public static final TagKey<Item> RED_COLORED_LOGS = tag("red_colored_logs");
+
+        public static final TagKey<Item> COLORED_LEAVES = tag("colored_leaves");
+        public static final TagKey<Item> COLORED_SAPLINGS = tag("colored_saplings");
 
 
 

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "caveopolis:block/marble_bricks"
+    "wall": "caveopolis:block/marble"
   }
 }

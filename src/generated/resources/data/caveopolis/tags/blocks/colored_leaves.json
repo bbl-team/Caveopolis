@@ -1,0 +1,21 @@
+{
+  "values": [
+    "caveopolis:blue_colored_leaves",
+    "caveopolis:light_blue_colored_leaves",
+    "caveopolis:yellow_colored_leaves",
+    "caveopolis:red_colored_leaves",
+    "caveopolis:gray_colored_leaves",
+    "caveopolis:green_colored_leaves",
+    "caveopolis:light_gray_colored_leaves",
+    "caveopolis:lime_colored_leaves",
+    "caveopolis:purple_colored_leaves",
+    "caveopolis:magenta_colored_leaves",
+    "caveopolis:pink_colored_leaves",
+    "caveopolis:black_colored_leaves",
+    "caveopolis:white_colored_leaves",
+    "caveopolis:brown_colored_leaves",
+    "caveopolis:orange_colored_leaves",
+    "caveopolis:cyan_colored_leaves",
+    "minecraft:oak_leaves"
+  ]
+}

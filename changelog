@@ -2,6 +2,23 @@ Caveopolis Mod Changelog
 
 //TODO: More coloured blocks
 //TODO: ALL BLOCK BRIGHT OPTION
+//TODO: Add walls bright option
+//TODO: Add a colorful biome
+
+2.6.0
+
+Added saplings and leaves for all colored trees
+Fixed planks, stairs, slabs, fences and fence gates not being flammable
+Removed old world package replace with worldgen package
+All new saplings have there own trees, most tree world gen can be enable via datapack
+
+2.5.0
+
+Removed Bright stones
+Fixed yellow stone stairs having yellow stone brick texture
+Fixed marble brick wall and marble walls having the wrong textures
+Removed sprayer recipes for glowstone spray cans
+Glowstone spray will now convert all caveopolis blocks into bright variant in world
 
 2.4.6
 
