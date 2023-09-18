@@ -151,7 +151,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.WHITE_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> WHITE_COLORED_STONE_WALL = registerBlock("white_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 

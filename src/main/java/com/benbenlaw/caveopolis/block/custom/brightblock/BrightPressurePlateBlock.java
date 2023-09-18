@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class BrightPressurePlateBlock extends PressurePlateBlock {
+public class BrightPressurePlateBlock extends PressurePlateBlock implements Brightable {
 
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 

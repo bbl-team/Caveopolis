@@ -20,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 
 import javax.xml.stream.FactoryConfigurationError;
 
-public class BrightStairBlock extends StairBlock {
+public class BrightStairBlock extends StairBlock implements Brightable {
 
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;

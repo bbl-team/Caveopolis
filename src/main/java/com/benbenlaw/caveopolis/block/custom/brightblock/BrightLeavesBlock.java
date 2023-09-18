@@ -16,7 +16,7 @@ import net.minecraft.world.level.material.Fluids;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class BrightLeavesBlock extends LeavesBlock {
+public class BrightLeavesBlock extends LeavesBlock implements Brightable {
 
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 

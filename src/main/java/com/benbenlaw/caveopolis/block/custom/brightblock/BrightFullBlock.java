@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class BrightFullBlock extends Block {
+public class BrightFullBlock extends Block implements Brightable {
 
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 

@@ -19,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
 
-public class BrightTrapDoorBlock extends TrapDoorBlock {
+public class BrightTrapDoorBlock extends TrapDoorBlock implements Brightable {
 
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 

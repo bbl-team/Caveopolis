@@ -71,7 +71,7 @@ public class GlowstoneSprayCanItem extends Item {
 
         if (!level.isClientSide()) {
 
-            if ( blockState.getBlock() instanceof BrightLeavesBlock || blockState.getBlock() instanceof BrightButtonBlock || blockState.getBlock() instanceof BrightTrapDoorBlock || blockState.getBlock() instanceof BrightDoorBlock || blockState.getBlock() instanceof BrightPressurePlateBlock || blockState.getBlock() instanceof BrightFlammableLogBlock || blockState.getBlock() instanceof BrightFenceGateBlock || blockState.getBlock() instanceof BrightFenceBlock || blockState.getBlock() instanceof BrightSlabBlock || blockState.getBlock() instanceof BrightFullBlock || blockState.getBlock() instanceof BrightStairBlock) {
+            if ( blockState.getBlock() instanceof Brightable) {
                 if (blockState.getValue(LIT) == Boolean.TRUE) {
                     level.setBlockAndUpdate(pos, blockState.setValue(LIT, Boolean.FALSE));
                     level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, sound * 15 , 0.5F);

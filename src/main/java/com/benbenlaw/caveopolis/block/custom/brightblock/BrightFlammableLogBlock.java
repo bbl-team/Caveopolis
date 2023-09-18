@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class BrightFlammableLogBlock extends FlammableLogBlock {
+public class BrightFlammableLogBlock extends FlammableLogBlock implements Brightable {
 
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
