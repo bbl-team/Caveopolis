@@ -164,7 +164,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.WHITE_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> WHITE_COLORED_STONE_BRICK_WALL = registerBlock("white_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -178,7 +178,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BLACK_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BLACK_COLORED_STONE_WALL = registerBlock("black_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     
     public static final RegistryObject<Block> BLACK_COLORED_STONE_BRICKS = registerBlock("black_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -189,7 +189,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BLACK_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BLACK_COLORED_STONE_BRICK_WALL = registerBlock("black_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -202,7 +202,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.RED_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> RED_COLORED_STONE_WALL = registerBlock("red_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RED_COLORED_STONE_BRICKS = registerBlock("red_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -213,7 +213,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.RED_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> RED_COLORED_STONE_BRICK_WALL = registerBlock("red_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     
@@ -226,7 +226,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.YELLOW_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> YELLOW_COLORED_STONE_WALL = registerBlock("yellow_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> YELLOW_COLORED_STONE_BRICKS = registerBlock("yellow_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -237,7 +237,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.YELLOW_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> YELLOW_COLORED_STONE_BRICK_WALL = registerBlock("yellow_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -250,7 +250,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BLUE_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BLUE_COLORED_STONE_WALL = registerBlock("blue_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> BLUE_COLORED_STONE_BRICKS = registerBlock("blue_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -261,7 +261,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BLUE_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BLUE_COLORED_STONE_BRICK_WALL = registerBlock("blue_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -274,7 +274,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.PINK_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> PINK_COLORED_STONE_WALL = registerBlock("pink_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> PINK_COLORED_STONE_BRICKS = registerBlock("pink_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -285,7 +285,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.PINK_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> PINK_COLORED_STONE_BRICK_WALL = registerBlock("pink_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -298,7 +298,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.PURPLE_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> PURPLE_COLORED_STONE_WALL = registerBlock("purple_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> PURPLE_COLORED_STONE_BRICKS = registerBlock("purple_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -309,7 +309,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.PURPLE_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> PURPLE_COLORED_STONE_BRICK_WALL = registerBlock("purple_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -322,7 +322,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.MAGENTA_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> MAGENTA_COLORED_STONE_WALL = registerBlock("magenta_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MAGENTA_COLORED_STONE_BRICKS = registerBlock("magenta_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -333,7 +333,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.MAGENTA_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> MAGENTA_COLORED_STONE_BRICK_WALL = registerBlock("magenta_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     public static final RegistryObject<Block> LIGHT_BLUE_COLORED_STONE = registerBlock("light_blue_colored_stone",
@@ -345,7 +345,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIGHT_BLUE_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIGHT_BLUE_COLORED_STONE_WALL = registerBlock("light_blue_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> LIGHT_BLUE_COLORED_STONE_BRICKS = registerBlock("light_blue_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -356,7 +356,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIGHT_BLUE_COLORED_STONE_BRICK_WALL = registerBlock("light_blue_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -369,7 +369,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.CYAN_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> CYAN_COLORED_STONE_WALL = registerBlock("cyan_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CYAN_COLORED_STONE_BRICKS = registerBlock("cyan_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -380,7 +380,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.CYAN_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> CYAN_COLORED_STONE_BRICK_WALL = registerBlock("cyan_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -393,7 +393,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.GRAY_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> GRAY_COLORED_STONE_WALL = registerBlock("gray_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> GRAY_COLORED_STONE_BRICKS = registerBlock("gray_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -404,7 +404,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.GRAY_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> GRAY_COLORED_STONE_BRICK_WALL = registerBlock("gray_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     public static final RegistryObject<Block> BROWN_COLORED_STONE = registerBlock("brown_colored_stone",
@@ -416,7 +416,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BROWN_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BROWN_COLORED_STONE_WALL = registerBlock("brown_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> BROWN_COLORED_STONE_BRICKS = registerBlock("brown_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -427,7 +427,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BROWN_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BROWN_COLORED_STONE_BRICK_WALL = registerBlock("brown_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -440,7 +440,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIGHT_GRAY_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIGHT_GRAY_COLORED_STONE_WALL = registerBlock("light_gray_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> LIGHT_GRAY_COLORED_STONE_BRICKS = registerBlock("light_gray_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -451,7 +451,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIGHT_GRAY_COLORED_STONE_BRICK_WALL = registerBlock("light_gray_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -466,7 +466,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.ORANGE_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> ORANGE_COLORED_STONE_WALL = registerBlock("orange_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> ORANGE_COLORED_STONE_BRICKS = registerBlock("orange_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -477,7 +477,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.ORANGE_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> ORANGE_COLORED_STONE_BRICK_WALL = registerBlock("orange_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -490,7 +490,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.GREEN_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> GREEN_COLORED_STONE_WALL = registerBlock("green_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> GREEN_COLORED_STONE_BRICKS = registerBlock("green_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -501,7 +501,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.GREEN_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> GREEN_COLORED_STONE_BRICK_WALL = registerBlock("green_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     public static final RegistryObject<Block> LIME_COLORED_STONE = registerBlock("lime_colored_stone",
@@ -513,7 +513,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIME_COLORED_STONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIME_COLORED_STONE_WALL = registerBlock("lime_colored_stone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> LIME_COLORED_STONE_BRICKS = registerBlock("lime_colored_stone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -524,7 +524,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIME_COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIME_COLORED_STONE_BRICK_WALL = registerBlock("lime_colored_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     
 //Colored Cobblestone
 
@@ -539,7 +539,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.WHITE_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE_WALL = registerBlock("white_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -553,7 +553,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> WHITE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("white_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -568,7 +568,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BLACK_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_WALL = registerBlock("black_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     
     public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_BRICKS = registerBlock("black_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -580,7 +580,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BLACK_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("black_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -588,13 +588,13 @@ public class ModBlocks {
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
                     .lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_SLAB = registerBlock("red_colored_cobblestone_slab",
-            () -> new BrightSlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_SLAB).strength(1f).sound(SoundType.STONE).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops()));    
+            () -> new BrightSlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_SLAB).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_STAIRS = registerBlock("red_colored_cobblestone_stairs",
             () -> {BlockState blockState = ModBlocks.RED_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_WALL = registerBlock("red_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_BRICKS = registerBlock("red_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -606,7 +606,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.RED_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> RED_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("red_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     
@@ -620,7 +620,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.YELLOW_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_WALL = registerBlock("yellow_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_BRICKS = registerBlock("yellow_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -632,7 +632,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> YELLOW_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("yellow_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -640,13 +640,13 @@ public class ModBlocks {
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
                     .lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_SLAB = registerBlock("blue_colored_cobblestone_slab",
-            () -> new BrightSlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_SLAB).strength(1f).sound(SoundType.STONE).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops()));    
+            () -> new BrightSlabBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_SLAB).strength(1f).sound(SoundType.STONE).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_STAIRS = registerBlock("blue_colored_cobblestone_stairs",
             () -> {BlockState blockState = ModBlocks.BLUE_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_WALL = registerBlock("blue_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_BRICKS = registerBlock("blue_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -658,7 +658,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BLUE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("blue_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -672,7 +672,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.PINK_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_WALL = registerBlock("pink_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_BRICKS = registerBlock("pink_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -684,7 +684,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.PINK_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> PINK_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("pink_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -698,7 +698,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.PURPLE_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_WALL = registerBlock("purple_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_BRICKS = registerBlock("purple_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -710,7 +710,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> PURPLE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("purple_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -724,7 +724,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.MAGENTA_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_WALL = registerBlock("magenta_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_BRICKS = registerBlock("magenta_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -736,7 +736,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> MAGENTA_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("magenta_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE = registerBlock("light_blue_colored_cobblestone",
@@ -749,7 +749,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_WALL = registerBlock("light_blue_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS = registerBlock("light_blue_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -761,7 +761,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("light_blue_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -775,7 +775,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.CYAN_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_WALL = registerBlock("cyan_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_BRICKS = registerBlock("cyan_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -787,7 +787,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> CYAN_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("cyan_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -801,7 +801,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.GRAY_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_WALL = registerBlock("gray_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_BRICKS = registerBlock("gray_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -813,7 +813,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> GRAY_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("gray_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE = registerBlock("brown_colored_cobblestone",
@@ -826,7 +826,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BROWN_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_WALL = registerBlock("brown_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_BRICKS = registerBlock("brown_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -838,7 +838,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.BROWN_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> BROWN_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("brown_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -852,7 +852,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_WALL = registerBlock("light_gray_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS = registerBlock("light_gray_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -864,7 +864,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("light_gray_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -880,7 +880,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.ORANGE_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_WALL = registerBlock("orange_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_BRICKS = registerBlock("orange_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -892,7 +892,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> ORANGE_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("orange_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
 
@@ -906,7 +906,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.GREEN_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_WALL = registerBlock("green_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_BRICKS = registerBlock("green_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -918,7 +918,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.GREEN_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> GREEN_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("green_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE = registerBlock("lime_colored_cobblestone",
@@ -931,7 +931,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIME_COLORED_COBBLESTONE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_WALL = registerBlock("lime_colored_cobblestone_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_BRICKS = registerBlock("lime_colored_cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -943,7 +943,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> LIME_COLORED_COBBLESTONE_BRICK_WALL = registerBlock("lime_colored_cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> COBBLESTONE_BRICKS = registerBlock("cobblestone_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).strength(1f).sound(SoundType.STONE)
@@ -955,7 +955,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.STONE_STAIRS).strength(1f).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> COBBLESTONE_BRICK_WALL = registerBlock("cobblestone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
 
     //Colored Planks
@@ -1775,7 +1775,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.MARBLE.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).sound(SoundType.STONE).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> MARBLE_WALL = registerBlock("marble_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MARBLE_BRICKS = registerBlock("marble_bricks",
             () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1f).sound(SoundType.STONE)
@@ -1786,7 +1786,7 @@ public class ModBlocks {
             () -> {BlockState blockState = ModBlocks.MARBLE_BRICKS.get().defaultBlockState();
                 return new BrightStairBlock(blockState, BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).sound(SoundType.STONE).lightLevel(litBlockEmission(15)).requiresCorrectToolForDrops());});
     public static final RegistryObject<Block> MARBLE_BRICK_WALL = registerBlock("marble_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new BrightWallBlock(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     
     //Colored Leaves
 

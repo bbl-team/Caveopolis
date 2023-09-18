@@ -1,9 +1,12 @@
 Caveopolis Mod Changelog
 
 //TODO: More coloured blocks
-//TODO: ALL BLOCK BRIGHT OPTION
-//TODO: Add walls bright option
 //TODO: Add a colorful biome
+
+1.6.1
+
+Moved to interface for bright block to make adding additional bright blocks easier
+Walls now have bright options
 
 2.6.0
 
