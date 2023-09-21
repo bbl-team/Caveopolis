@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-16T11:31:29.5853809	Item Tags
+// 1.20.1	2023-09-21T16:11:42.1141791	Item Tags
 c78ada5968685a6ca96af0fb49dde74df66426f6 data/caveopolis/tags/items/banned_from_in_world_spraying.json
 42a14e0c7cfecab025c809c468c8fb21b74fa037 data/caveopolis/tags/items/black_colored_logs.json
 b1fd5a13e6f8ea035e617d75894f72925b64225c data/caveopolis/tags/items/blue_colored_logs.json
@@ -54,7 +54,7 @@ a85fc1a0542c90174a957561af8b484f48e68540 data/caveopolis/tags/items/green_colore
 56e1afae61b595bf4e76dbed75bcee1d4466300e data/caveopolis/tags/items/pink_colored_logs.json
 71229f38191e97fccbe668ea4d5465557882e613 data/caveopolis/tags/items/purple_colored_logs.json
 b0ae93378212f63d83102f90b19dbe032c8b7208 data/caveopolis/tags/items/red_colored_logs.json
-8a2a57437b81cf53cbdaaad1b4271a1442ecb97a data/caveopolis/tags/items/spray_cans.json
+546ce6321a3a1181d53f153660ba912170e56747 data/caveopolis/tags/items/spray_cans.json
 5df337e9d7dfebf95e8f8792c67ae7f9eb3a01e4 data/caveopolis/tags/items/stripped_colored_logs.json
 d8aa7530351f1c79931d2bb9883d2023f6f1e41b data/caveopolis/tags/items/stripped_colored_woods.json
 fcb022e2cb44367bac4736ffa518c57c10a4580a data/caveopolis/tags/items/white_colored_logs.json

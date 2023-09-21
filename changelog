@@ -3,7 +3,12 @@ Caveopolis Mod Changelog
 //TODO: More coloured blocks
 //TODO: Add a colorful biome
 
-1.6.1
+2.6.2
+
+Opolis Utilities now a dependency moved to slot handler and inventory handlers from here instead
+Added glowstone spray can to the spray can tag
+
+2.6.1
 
 Moved to interface for bright block to make adding additional bright blocks easier
 Walls now have bright options

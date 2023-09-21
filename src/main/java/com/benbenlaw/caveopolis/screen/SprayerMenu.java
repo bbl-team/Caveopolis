@@ -2,9 +2,10 @@ package com.benbenlaw.caveopolis.screen;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.block.entity.SprayerBlockEntity;
-import com.benbenlaw.caveopolis.screen.slot.EverythingButSprayCanSlot;
-import com.benbenlaw.caveopolis.screen.slot.ModResultSlot;
-import com.benbenlaw.caveopolis.screen.slot.SprayCanSlot;
+import com.benbenlaw.caveopolis.util.ModTags;
+import com.benbenlaw.opolisutilities.screen.slot.utils.BlacklistTagInputSlot;
+import com.benbenlaw.opolisutilities.screen.slot.utils.ModResultSlot;
+import com.benbenlaw.opolisutilities.screen.slot.utils.WhitelistTagInputSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -13,7 +14,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.items.SlotItemHandler;
 
 public class SprayerMenu extends AbstractContainerMenu {
 
@@ -36,8 +36,8 @@ public class SprayerMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new SprayCanSlot(handler, 0, 12, 16));
-            this.addSlot(new EverythingButSprayCanSlot(handler, 1, 86, 16));
+            this.addSlot(new WhitelistTagInputSlot(handler, 0, 12, 16, ModTags.Items.SPRAY_CANS, 1));
+            this.addSlot(new BlacklistTagInputSlot(handler, 1, 86, 16, ModTags.Items.SPRAY_CANS, 64));
             this.addSlot(new ModResultSlot(handler, 2, 86, 60));
         });
 

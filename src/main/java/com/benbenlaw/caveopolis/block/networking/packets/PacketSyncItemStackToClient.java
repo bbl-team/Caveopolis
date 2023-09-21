@@ -1,6 +1,6 @@
 package com.benbenlaw.caveopolis.block.networking.packets;
 
-import com.benbenlaw.caveopolis.block.IInventoryHandlingBlockEntity;
+import com.benbenlaw.opolisutilities.util.inventory.IInventoryHandlingBlockEntity;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;

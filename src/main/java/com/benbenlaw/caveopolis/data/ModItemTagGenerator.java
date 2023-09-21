@@ -750,6 +750,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.ORANGE_SPRAY_CAN.get().asItem())
                 .add(ModItems.CYAN_SPRAY_CAN.get().asItem())
                 .add(ModItems.SPRAY_CAN_REMOVER.get().asItem())
+                .add(ModItems.GLOWSTONE_SPRAY_CAN.get().asItem())
         ;
 
         //PLANKS
