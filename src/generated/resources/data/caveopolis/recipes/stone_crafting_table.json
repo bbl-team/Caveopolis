@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "A": {
-      "tag": "caveopolis:colored_stone_bricks"
+      "item": "minecraft:stone_bricks"
     }
   },
   "pattern": [

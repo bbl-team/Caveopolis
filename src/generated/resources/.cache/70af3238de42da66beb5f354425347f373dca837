@@ -1,10 +1,8 @@
-// 1.20.1	2023-09-16T11:31:29.5808768	Block Tags
+// 1.20.1	2023-09-27T13:41:25.9941635	Block Tags
 c78ada5968685a6ca96af0fb49dde74df66426f6 data/caveopolis/tags/blocks/banned_from_in_world_spraying.json
 42a14e0c7cfecab025c809c468c8fb21b74fa037 data/caveopolis/tags/blocks/black_colored_logs.json
 b1fd5a13e6f8ea035e617d75894f72925b64225c data/caveopolis/tags/blocks/blue_colored_logs.json
 e65b4509c754c92ed856e581feb7a00d58935994 data/caveopolis/tags/blocks/brown_colored_logs.json
-3b168ccff350615e02523f5f6bd875cb04c378ce data/caveopolis/tags/blocks/colored_bright_cobblestone.json
-53697067954063690bd8749a81ba2cf997bd1e17 data/caveopolis/tags/blocks/colored_bright_stone.json
 83c41689d255b8fc8db23e170aa9aaa33561f899 data/caveopolis/tags/blocks/colored_cobblestone.json
 b42c93b16b40503610e6cb6951eb236299ef7564 data/caveopolis/tags/blocks/colored_cobblestone_bricks.json
 a0b1e2bd8b387522a5b729b214b0130193363042 data/caveopolis/tags/blocks/colored_cobblestone_brick_slabs.json
@@ -25,6 +23,7 @@ c9edb635fc57312a10ab834b0c8d49db21b65205 data/caveopolis/tags/blocks/colored_sto
 eeb445a3ee8011088d7af97b104a3f20509e4a20 data/caveopolis/tags/blocks/colored_stone_brick_stairs.json
 0f6a64ae78fce05f32b00bb68ceb5ebcb597b576 data/caveopolis/tags/blocks/colored_stone_brick_wall.json
 6003d7c587e9de23f13232e8ba2dc0a8b58c38ec data/caveopolis/tags/blocks/colored_stone_buttons.json
+cd1f92ab88bf0a95f3a0f56c4d1e0b73b92dab39 data/caveopolis/tags/blocks/colored_stone_crafting_tables.json
 705114f0a0d2f67c48d1064e673c8a34f8802b90 data/caveopolis/tags/blocks/colored_stone_pressure_plates.json
 641abd5cf48b7ef31e69c8f9e906246cab0bac90 data/caveopolis/tags/blocks/colored_stone_slabs.json
 43c226a45c747227a54daef742a061fe140a35fb data/caveopolis/tags/blocks/colored_stone_stairs.json
@@ -33,6 +32,7 @@ eeb445a3ee8011088d7af97b104a3f20509e4a20 data/caveopolis/tags/blocks/colored_sto
 3de85bdb82979077cca5c22391fe9c9b15952ff1 data/caveopolis/tags/blocks/colored_wall_signs.json
 063ba529e0b1b51a3bcd72599a2d1f5783204ce5 data/caveopolis/tags/blocks/colored_wooden_planks.json
 17911c5184345387dd4859b34564fd54ce39b0ab data/caveopolis/tags/blocks/colored_wooden_plank_buttons.json
+0a879eda058c79dc96e6b975992b7b1dbf633a00 data/caveopolis/tags/blocks/colored_wooden_plank_crafting_tables.json
 1a44ebf01c18651f3fcec845127e8e57b4a6373b data/caveopolis/tags/blocks/colored_wooden_plank_doors.json
 5ca3ff242b440cb6c3d5e5f3a7b66a30918d505d data/caveopolis/tags/blocks/colored_wooden_plank_fences.json
 7c7d0475fa8b22e53fdd5da2f9a0749c6a7acf4c data/caveopolis/tags/blocks/colored_wooden_plank_fence_gates.json
@@ -65,9 +65,9 @@ e2feff85afb7e4871204d6f5d72b8760e2780187 data/forge/tags/blocks/shulker_boxes.js
 9ede023d0e4c4e1ae872d8343f37dd5b8fc315b4 data/minecraft/tags/blocks/ceiling_hanging_signs.json
 7944cdee0a1fb73528d63a81cb5286387c5cdfe1 data/minecraft/tags/blocks/leaves.json
 f80d302b5dc931529689045b69162799e9508779 data/minecraft/tags/blocks/logs_that_burn.json
-a84655837070e5af064df7b7b8abf3a73c821283 data/minecraft/tags/blocks/mineable/axe.json
+387f8d90a5b96edc79464015cb8049148b5e5bbc data/minecraft/tags/blocks/mineable/axe.json
 7944cdee0a1fb73528d63a81cb5286387c5cdfe1 data/minecraft/tags/blocks/mineable/hoe.json
-e98145d5855f921cd202c543f1f4516c86666ce5 data/minecraft/tags/blocks/mineable/pickaxe.json
+a5fba63d5f17a0035eac5b8425d6e541f0c3e122 data/minecraft/tags/blocks/mineable/pickaxe.json
 110ab49e5e14d911108872ae80df55865bd0af2f data/minecraft/tags/blocks/planks.json
 a797eb797f7bb3be3fc9fb52d3e84880c53b47d9 data/minecraft/tags/blocks/saplings.json
 fb7605d4441bf4201dce973e6e59364024dd90b2 data/minecraft/tags/blocks/signs.json

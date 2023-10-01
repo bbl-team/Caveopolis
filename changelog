@@ -3,6 +3,14 @@ Caveopolis Mod Changelog
 //TODO: More coloured blocks
 //TODO: Add a colorful biome
 
+2.7.0
+
+Added colored plank crafting tables and colored stone crafting tables
+Removed bright stone and cobblestone
+stone torch recipe now makes 4 torches instead of 1
+Leaves now drop when using any shears
+Fixed wooden slabs not having recipes
+
 2.6.2
 
 Opolis Utilities now a dependency moved to slot handler and inventory handlers from here instead

@@ -387,13 +387,6 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.BRIGHT_SHARD.get())
         ;
 
-        this.tag(ModTags.Items.COLORED_BRIGHT_STONE)
-                .add(ModBlocks.BRIGHT_STONE.get().asItem())
-        ;
-        this.tag(ModTags.Items.COLORED_BRIGHT_COBBLESTONE)
-                .add(ModBlocks.BRIGHT_COBBLESTONE.get().asItem())
-        ;
-
         this.tag(ModTags.Items.COLORED_CONCRETE)
                 .add(Blocks.BLUE_CONCRETE.asItem())
                 .add(Blocks.LIGHT_BLUE_CONCRETE.asItem())
@@ -745,7 +738,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModItems.MAGENTA_SPRAY_CAN.get().asItem())
                 .add(ModItems.PINK_SPRAY_CAN.get().asItem())
                 .add(ModItems.BLACK_SPRAY_CAN.get().asItem())
-                .add(ModItems.WHTIE_SPRAY_CAN.get().asItem())
+                .add(ModItems.WHITE_SPRAY_CAN.get().asItem())
                 .add(ModItems.BROWN_SPRAY_CAN.get().asItem())
                 .add(ModItems.ORANGE_SPRAY_CAN.get().asItem())
                 .add(ModItems.CYAN_SPRAY_CAN.get().asItem())
@@ -1141,6 +1134,47 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.BROWN_COLORED_WALL_SIGN.get().asItem())
                 .add(ModBlocks.ORANGE_COLORED_WALL_SIGN.get().asItem())
                 .add(ModBlocks.CYAN_COLORED_WALL_SIGN.get().asItem())
+        ;
+
+        this.tag(ModTags.Items.COLORED_WOODEN_PLANK_CRAFTING_TABLES)
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get().asItem())
+                .add(Blocks.CRAFTING_TABLE.asItem())
+        ;
+
+        this.tag(ModTags.Items.COLORED_STONE_CRAFTING_TABLES)
+                .add(ModBlocks.WHITE_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.ORANGE_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.MAGENTA_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.YELLOW_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.LIME_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.PINK_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.CYAN_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.PURPLE_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.BLUE_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.BROWN_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.GREEN_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.RED_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.BLACK_COLORED_STONE_CRAFTING_TABLE.get().asItem())
+                .add(ModBlocks.STONE_CRAFTING_TABLE.get().asItem())
+
         ;
 
         this.tag(ItemTags.SIGNS)

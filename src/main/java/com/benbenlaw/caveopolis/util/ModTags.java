@@ -55,6 +55,9 @@ public class ModTags {
         public static final TagKey<Block> COLORED_WOODEN_PLANK_DOORS = tag("colored_wooden_plank_doors");
         public static final TagKey<Block> COLORED_WOODEN_PLANK_TRAPDOORS = tag("colored_wooden_plank_trapdoors");
 
+        public static final TagKey<Block> COLORED_STONE_CRAFTING_TABLES = tag("colored_stone_crafting_tables");
+        public static final TagKey<Block> COLORED_WOODEN_PLANK_CRAFTING_TABLES = tag("colored_wooden_plank_crafting_tables");
+
         public static final TagKey<Block> COLORED_SIGNS = tag("colored_signs");
         public static final TagKey<Block> COLORED_WALL_SIGNS = tag("colored_wall_signs");
         public static final TagKey<Block> COLORED_HANGING_SIGNS = tag("colored_hanging_signs");
@@ -159,6 +162,8 @@ public class ModTags {
         public static final TagKey<Item> STRIPPED_COLORED_WOODS = tag("stripped_colored_woods");
         public static final TagKey<Item> STRIPPED_COLORED_LOGS = tag("stripped_colored_logs");
 
+        public static final TagKey<Item> COLORED_STONE_CRAFTING_TABLES = tag("colored_stone_crafting_tables");
+        public static final TagKey<Item> COLORED_WOODEN_PLANK_CRAFTING_TABLES = tag("colored_wooden_plank_crafting_tables");
 
         public static final TagKey<Item> BROWN_COLORED_LOGS = tag("brown_colored_logs");
         public static final TagKey<Item> BLACK_COLORED_LOGS = tag("black_colored_logs");

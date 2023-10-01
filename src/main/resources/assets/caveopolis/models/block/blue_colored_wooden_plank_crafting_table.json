@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "caveopolis:block/blue_colored_wooden_plank_crafting_table_front",
+    "north": "caveopolis:block/blue_colored_wooden_plank_crafting_table_front",
+    "south": "caveopolis:block/blue_colored_wooden_plank_crafting_table_side",
+    "east": "caveopolis:block/blue_colored_wooden_plank_crafting_table_side",
+    "west": "caveopolis:block/blue_colored_wooden_plank_crafting_table_front",
+    "up": "caveopolis:block/blue_colored_wooden_plank_crafting_table_top",
+    "down": "caveopolis:block/blue_colored_wooden_planks"
+  }
+}

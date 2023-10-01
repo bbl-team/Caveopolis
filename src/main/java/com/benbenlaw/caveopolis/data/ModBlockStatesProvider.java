@@ -15,6 +15,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ModBlockStatesProvider extends BlockStateProvider {
 
     public ModBlockStatesProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -253,7 +256,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.CYAN_COLORED_STONE_BRICKS.get()));
         stairsBlock((StairBlock) ModBlocks.CYAN_COLORED_STONE_BRICK_STAIRS.get(), blockTexture(ModBlocks.CYAN_COLORED_STONE_BRICKS.get()));
         wallBlock((WallBlock) ModBlocks.CYAN_COLORED_STONE_BRICK_WALL.get(), blockTexture(ModBlocks.CYAN_COLORED_STONE_BRICKS.get()));
-        
+
         blockItem(ModBlocks.CYAN_COLORED_STONE_SLAB);
         blockItem(ModBlocks.CYAN_COLORED_STONE_STAIRS);
         blockItem(ModBlocks.CYAN_COLORED_STONE_BRICK_SLAB);
@@ -322,7 +325,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
 
         blockWithItem(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS);
         slabBlock((SlabBlock) ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_SLAB.get(), blockTexture(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get()),
-                 blockTexture(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get()));
+                blockTexture(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get()));
         stairsBlock((StairBlock) ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_STAIRS.get(), blockTexture(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get()));
         wallBlock((WallBlock) ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_WALL.get(), blockTexture(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get()));
 
@@ -367,7 +370,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_SLAB);
         blockItem(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_STAIRS);
 
-        
+
         //LIME
         blockWithItem(ModBlocks.LIME_COLORED_COBBLESTONE);
         slabBlock((SlabBlock) ModBlocks.LIME_COLORED_COBBLESTONE_SLAB.get(), blockTexture(ModBlocks.LIME_COLORED_COBBLESTONE.get()),
@@ -458,7 +461,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_SLAB);
         blockItem(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_STAIRS);
 
-        
+
         //RED
         blockWithItem(ModBlocks.RED_COLORED_COBBLESTONE);
         slabBlock((SlabBlock) ModBlocks.RED_COLORED_COBBLESTONE_SLAB.get(), blockTexture(ModBlocks.RED_COLORED_COBBLESTONE.get()),
@@ -603,9 +606,6 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_SLAB);
         blockItem(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_STAIRS);
 
-        //BRIGHT STONE
-        blockWithItem(ModBlocks.BRIGHT_COBBLESTONE);
-        blockWithItem(ModBlocks.BRIGHT_STONE);
 
         blockWithItem(ModBlocks.COBBLESTONE_BRICKS);
         slabBlock((SlabBlock) ModBlocks.COBBLESTONE_BRICK_SLAB.get(), blockTexture(ModBlocks.COBBLESTONE_BRICKS.get()),
@@ -736,7 +736,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         buttonBlock((ButtonBlock) ModBlocks.GREEN_COLORED_WOODEN_PLANK_BUTTON.get(), blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()));
         buttonBlock((ButtonBlock) ModBlocks.LIME_COLORED_WOODEN_PLANK_BUTTON.get(), blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()));
         buttonBlock((ButtonBlock) ModBlocks.CYAN_COLORED_WOODEN_PLANK_BUTTON.get(), blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()));
-        
+
         buttonBlock((ButtonBlock) ModBlocks.BROWN_COLORED_STONE_BUTTON.get(), blockTexture(ModBlocks.BROWN_COLORED_STONE.get()));
         buttonBlock((ButtonBlock) ModBlocks.MAGENTA_COLORED_STONE_BUTTON.get(), blockTexture(ModBlocks.MAGENTA_COLORED_STONE.get()));
         buttonBlock((ButtonBlock) ModBlocks.PURPLE_COLORED_STONE_BUTTON.get(), blockTexture(ModBlocks.PURPLE_COLORED_STONE.get()));
@@ -787,7 +787,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_PRESSURE_PLATE);
         blockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_PRESSURE_PLATE);
         blockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_PRESSURE_PLATE);
-        
+
         pressurePlateBlock((PressurePlateBlock) ModBlocks.BROWN_COLORED_STONE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.BROWN_COLORED_STONE.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.MAGENTA_COLORED_STONE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.MAGENTA_COLORED_STONE.get()));
         pressurePlateBlock((PressurePlateBlock) ModBlocks.PURPLE_COLORED_STONE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.PURPLE_COLORED_STONE.get()));
@@ -905,7 +905,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
                 modLoc("block/lime_colored_wooden_plank_door_top"), "cutout");
         doorBlockWithRenderType((DoorBlock) ModBlocks.CYAN_COLORED_WOODEN_PLANK_DOOR.get(), modLoc("block/cyan_colored_wooden_plank_door_bottom"),
                 modLoc("block/cyan_colored_wooden_plank_door_top"), "cutout");
-        
+
 
         trapdoorBlockWithRenderType((TrapDoorBlock) ModBlocks.BROWN_COLORED_WOODEN_PLANK_TRAPDOOR.get(), modLoc("block/brown_colored_wooden_plank_trapdoor"),
                 true, "cutout");
@@ -956,8 +956,8 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.GREEN_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
         blockItem(ModBlocks.LIME_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
         blockItem(ModBlocks.CYAN_COLORED_WOODEN_PLANK_TRAPDOOR, "_bottom");
-        
-        
+
+
         logBlock(((RotatedPillarBlock) ModBlocks.BROWN_COLORED_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.MAGENTA_COLORED_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.PURPLE_COLORED_LOG.get()));
@@ -973,24 +973,24 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         logBlock(((RotatedPillarBlock) ModBlocks.ORANGE_COLORED_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.GREEN_COLORED_LOG.get()));
         logBlock(((RotatedPillarBlock) ModBlocks.LIME_COLORED_LOG.get()));
-        logBlock(((RotatedPillarBlock) ModBlocks.CYAN_COLORED_LOG.get()));        
-        
-        axisBlock(((RotatedPillarBlock) ModBlocks.BROWN_COLORED_WOOD.get()),blockTexture(ModBlocks.BROWN_COLORED_LOG.get()),blockTexture(ModBlocks.BROWN_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.MAGENTA_COLORED_WOOD.get()),blockTexture(ModBlocks.MAGENTA_COLORED_LOG.get()),blockTexture(ModBlocks.MAGENTA_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.PURPLE_COLORED_WOOD.get()),blockTexture(ModBlocks.PURPLE_COLORED_LOG.get()),blockTexture(ModBlocks.PURPLE_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.WHITE_COLORED_WOOD.get()),blockTexture(ModBlocks.WHITE_COLORED_LOG.get()),blockTexture(ModBlocks.WHITE_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.YELLOW_COLORED_WOOD.get()),blockTexture(ModBlocks.YELLOW_COLORED_LOG.get()),blockTexture(ModBlocks.YELLOW_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.LIGHT_GRAY_COLORED_WOOD.get()),blockTexture(ModBlocks.LIGHT_GRAY_COLORED_LOG.get()),blockTexture(ModBlocks.LIGHT_GRAY_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.LIGHT_BLUE_COLORED_WOOD.get()),blockTexture(ModBlocks.LIGHT_BLUE_COLORED_LOG.get()),blockTexture(ModBlocks.LIGHT_BLUE_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.BLUE_COLORED_WOOD.get()),blockTexture(ModBlocks.BLUE_COLORED_LOG.get()),blockTexture(ModBlocks.BLUE_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.GRAY_COLORED_WOOD.get()),blockTexture(ModBlocks.GRAY_COLORED_LOG.get()),blockTexture(ModBlocks.GRAY_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.PINK_COLORED_WOOD.get()),blockTexture(ModBlocks.PINK_COLORED_LOG.get()),blockTexture(ModBlocks.PINK_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.RED_COLORED_WOOD.get()),blockTexture(ModBlocks.RED_COLORED_LOG.get()),blockTexture(ModBlocks.RED_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.BLACK_COLORED_WOOD.get()),blockTexture(ModBlocks.BLACK_COLORED_LOG.get()),blockTexture(ModBlocks.BLACK_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.ORANGE_COLORED_WOOD.get()),blockTexture(ModBlocks.ORANGE_COLORED_LOG.get()),blockTexture(ModBlocks.ORANGE_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.GREEN_COLORED_WOOD.get()),blockTexture(ModBlocks.GREEN_COLORED_LOG.get()),blockTexture(ModBlocks.GREEN_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.LIME_COLORED_WOOD.get()),blockTexture(ModBlocks.LIME_COLORED_LOG.get()),blockTexture(ModBlocks.LIME_COLORED_LOG.get()));
-        axisBlock(((RotatedPillarBlock) ModBlocks.CYAN_COLORED_WOOD.get()),blockTexture(ModBlocks.CYAN_COLORED_LOG.get()),blockTexture(ModBlocks.CYAN_COLORED_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.CYAN_COLORED_LOG.get()));
+
+        axisBlock(((RotatedPillarBlock) ModBlocks.BROWN_COLORED_WOOD.get()), blockTexture(ModBlocks.BROWN_COLORED_LOG.get()), blockTexture(ModBlocks.BROWN_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.MAGENTA_COLORED_WOOD.get()), blockTexture(ModBlocks.MAGENTA_COLORED_LOG.get()), blockTexture(ModBlocks.MAGENTA_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.PURPLE_COLORED_WOOD.get()), blockTexture(ModBlocks.PURPLE_COLORED_LOG.get()), blockTexture(ModBlocks.PURPLE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.WHITE_COLORED_WOOD.get()), blockTexture(ModBlocks.WHITE_COLORED_LOG.get()), blockTexture(ModBlocks.WHITE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.YELLOW_COLORED_WOOD.get()), blockTexture(ModBlocks.YELLOW_COLORED_LOG.get()), blockTexture(ModBlocks.YELLOW_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.LIGHT_GRAY_COLORED_WOOD.get()), blockTexture(ModBlocks.LIGHT_GRAY_COLORED_LOG.get()), blockTexture(ModBlocks.LIGHT_GRAY_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.LIGHT_BLUE_COLORED_WOOD.get()), blockTexture(ModBlocks.LIGHT_BLUE_COLORED_LOG.get()), blockTexture(ModBlocks.LIGHT_BLUE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.BLUE_COLORED_WOOD.get()), blockTexture(ModBlocks.BLUE_COLORED_LOG.get()), blockTexture(ModBlocks.BLUE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.GRAY_COLORED_WOOD.get()), blockTexture(ModBlocks.GRAY_COLORED_LOG.get()), blockTexture(ModBlocks.GRAY_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.PINK_COLORED_WOOD.get()), blockTexture(ModBlocks.PINK_COLORED_LOG.get()), blockTexture(ModBlocks.PINK_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.RED_COLORED_WOOD.get()), blockTexture(ModBlocks.RED_COLORED_LOG.get()), blockTexture(ModBlocks.RED_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.BLACK_COLORED_WOOD.get()), blockTexture(ModBlocks.BLACK_COLORED_LOG.get()), blockTexture(ModBlocks.BLACK_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.ORANGE_COLORED_WOOD.get()), blockTexture(ModBlocks.ORANGE_COLORED_LOG.get()), blockTexture(ModBlocks.ORANGE_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.GREEN_COLORED_WOOD.get()), blockTexture(ModBlocks.GREEN_COLORED_LOG.get()), blockTexture(ModBlocks.GREEN_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.LIME_COLORED_WOOD.get()), blockTexture(ModBlocks.LIME_COLORED_LOG.get()), blockTexture(ModBlocks.LIME_COLORED_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.CYAN_COLORED_WOOD.get()), blockTexture(ModBlocks.CYAN_COLORED_LOG.get()), blockTexture(ModBlocks.CYAN_COLORED_LOG.get()));
 
         axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BROWN_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"),
                 new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log_top"));
@@ -1089,7 +1089,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.STRIPPED_GREEN_COLORED_WOOD);
         blockItem(ModBlocks.STRIPPED_LIME_COLORED_WOOD);
         blockItem(ModBlocks.STRIPPED_CYAN_COLORED_WOOD);
-        
+
         blockItem(ModBlocks.STRIPPED_BROWN_COLORED_LOG);
         blockItem(ModBlocks.STRIPPED_MAGENTA_COLORED_LOG);
         blockItem(ModBlocks.STRIPPED_PURPLE_COLORED_LOG);
@@ -1123,7 +1123,7 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockItem(ModBlocks.GREEN_COLORED_WOOD);
         blockItem(ModBlocks.LIME_COLORED_WOOD);
         blockItem(ModBlocks.CYAN_COLORED_WOOD);
-        
+
         blockItem(ModBlocks.BROWN_COLORED_LOG);
         blockItem(ModBlocks.MAGENTA_COLORED_LOG);
         blockItem(ModBlocks.PURPLE_COLORED_LOG);
@@ -1143,84 +1143,84 @@ public class ModBlockStatesProvider extends BlockStateProvider {
 
         signBlock(((StandingSignBlock) ModBlocks.BLACK_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.BLACK_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.BLACK_COLORED_HANGING_SIGN.get(),  ModBlocks.BLACK_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.BLACK_COLORED_HANGING_SIGN.get(), ModBlocks.BLACK_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.WHITE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.WHITE_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.WHITE_COLORED_HANGING_SIGN.get(),  ModBlocks.WHITE_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.WHITE_COLORED_HANGING_SIGN.get(), ModBlocks.WHITE_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.BROWN_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.BROWN_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.BROWN_COLORED_HANGING_SIGN.get(),  ModBlocks.BROWN_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.BROWN_COLORED_HANGING_SIGN.get(), ModBlocks.BROWN_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.GRAY_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.GRAY_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.GRAY_COLORED_HANGING_SIGN.get(),  ModBlocks.GRAY_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.GRAY_COLORED_HANGING_SIGN.get(), ModBlocks.GRAY_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.LIGHT_GRAY_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.LIGHT_GRAY_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.LIGHT_GRAY_COLORED_HANGING_SIGN.get(),  ModBlocks.LIGHT_GRAY_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.LIGHT_GRAY_COLORED_HANGING_SIGN.get(), ModBlocks.LIGHT_GRAY_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.LIGHT_BLUE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.LIGHT_BLUE_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.LIGHT_BLUE_COLORED_HANGING_SIGN.get(),  ModBlocks.LIGHT_BLUE_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.LIGHT_BLUE_COLORED_HANGING_SIGN.get(), ModBlocks.LIGHT_BLUE_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.BLUE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.BLUE_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.BLUE_COLORED_HANGING_SIGN.get(),  ModBlocks.BLUE_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.BLUE_COLORED_HANGING_SIGN.get(), ModBlocks.BLUE_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.CYAN_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.CYAN_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.CYAN_COLORED_HANGING_SIGN.get(),  ModBlocks.CYAN_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.CYAN_COLORED_HANGING_SIGN.get(), ModBlocks.CYAN_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.LIME_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.LIME_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.LIME_COLORED_HANGING_SIGN.get(),  ModBlocks.LIME_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.LIME_COLORED_HANGING_SIGN.get(), ModBlocks.LIME_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.LIME_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.GREEN_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.GREEN_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.GREEN_COLORED_HANGING_SIGN.get(),  ModBlocks.GREEN_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.GREEN_COLORED_HANGING_SIGN.get(), ModBlocks.GREEN_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.YELLOW_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.YELLOW_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.YELLOW_COLORED_HANGING_SIGN.get(),  ModBlocks.YELLOW_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.YELLOW_COLORED_HANGING_SIGN.get(), ModBlocks.YELLOW_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.ORANGE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.ORANGE_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.ORANGE_COLORED_HANGING_SIGN.get(),  ModBlocks.ORANGE_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.ORANGE_COLORED_HANGING_SIGN.get(), ModBlocks.ORANGE_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.RED_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.RED_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.RED_COLORED_HANGING_SIGN.get(),  ModBlocks.RED_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.RED_COLORED_HANGING_SIGN.get(), ModBlocks.RED_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.RED_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.PINK_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.PINK_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.PINK_COLORED_HANGING_SIGN.get(),  ModBlocks.PINK_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.PINK_COLORED_HANGING_SIGN.get(), ModBlocks.PINK_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.PINK_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.MAGENTA_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.MAGENTA_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.MAGENTA_COLORED_HANGING_SIGN.get(),  ModBlocks.MAGENTA_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.MAGENTA_COLORED_HANGING_SIGN.get(), ModBlocks.MAGENTA_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get()));
 
         signBlock(((StandingSignBlock) ModBlocks.PURPLE_COLORED_SIGN.get()), ((WallSignBlock) ModBlocks.PURPLE_COLORED_WALL_SIGN.get()),
                 blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()));
-        hangingSignBlock(ModBlocks.PURPLE_COLORED_HANGING_SIGN.get(),  ModBlocks.PURPLE_COLORED_WALL_HANGING_SIGN.get(),
+        hangingSignBlock(ModBlocks.PURPLE_COLORED_HANGING_SIGN.get(), ModBlocks.PURPLE_COLORED_WALL_HANGING_SIGN.get(),
                 blockTexture(ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get()));
-        
+
         //MARBLE
 
         blockWithItem(ModBlocks.MARBLE);
@@ -1276,7 +1276,11 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         saplingBlock(ModBlocks.GREEN_COLORED_SAPLING);
         saplingBlock(ModBlocks.LIME_COLORED_SAPLING);
         saplingBlock(ModBlocks.CYAN_COLORED_SAPLING);
+
+
     }
+
+                        
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlock(blockRegistryObject.get(), models().cubeAll(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));

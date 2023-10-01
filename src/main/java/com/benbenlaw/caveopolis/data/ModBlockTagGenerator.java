@@ -279,9 +279,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(Blocks.WHITE_SHULKER_BOX)
                 .add(Blocks.YELLOW_SHULKER_BOX)
         ;
-        
+
         this.tag(BlockTags.STONE_ORE_REPLACEABLES).addTag(ModTags.Blocks.COLORED_STONE);
-        
+
         this.tag(Tags.Blocks.STONE)
                 .add(ModBlocks.BLUE_COLORED_STONE.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_STONE.get())
@@ -299,8 +299,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_COLORED_STONE.get())
                 .add(ModBlocks.BROWN_COLORED_STONE.get())
                 .add(ModBlocks.CYAN_COLORED_STONE.get())
-        ;      
-        
+        ;
+
         this.tag(Tags.Blocks.COBBLESTONE)
                 .add(ModBlocks.BLUE_COLORED_COBBLESTONE.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get())
@@ -321,7 +321,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         ;
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .addTag(ModTags.Blocks.COLORED_BRIGHT_STONE)
                 .addTag(ModTags.Blocks.COLORED_STONE)
                 .addTag(ModTags.Blocks.COLORED_STONE_WALL)
                 .addTag(ModTags.Blocks.COLORED_STONE_SLABS)
@@ -334,7 +333,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.COLORED_STONE_PRESSURE_PLATES)
                 .addTag(ModTags.Blocks.MARBLE_BLOCKS)
 
-                .addTag(ModTags.Blocks.COLORED_BRIGHT_COBBLESTONE)
                 .addTag(ModTags.Blocks.COLORED_COBBLESTONE)
                 .addTag(ModTags.Blocks.COLORED_COBBLESTONE_WALL)
                 .addTag(ModTags.Blocks.COLORED_COBBLESTONE_SLABS)
@@ -343,24 +341,17 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.COLORED_COBBLESTONE_BRICK_WALL)
                 .addTag(ModTags.Blocks.COLORED_COBBLESTONE_BRICK_SLABS)
                 .addTag(ModTags.Blocks.COLORED_COBBLESTONE_BRICK_STAIRS)
+                .addTag(ModTags.Blocks.COLORED_STONE_CRAFTING_TABLES)
                 .add(ModBlocks.MIXED_STONE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_MIXED_STONE_ORE.get())
                 .add(ModBlocks.BRIGHT_STONE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE.get())
-                .add(ModBlocks.STONE_CRAFTING_TABLE.get())
                 .add(ModBlocks.SPRAYER.get())
                 .add(ModBlocks.COBBLESTONE_BRICKS.get())
                 .add(ModBlocks.COBBLESTONE_BRICK_SLAB.get())
                 .add(ModBlocks.COBBLESTONE_BRICK_STAIRS.get())
                 .add(ModBlocks.COBBLESTONE_BRICK_WALL.get())
-        ;
-
-        this.tag(ModTags.Blocks.COLORED_BRIGHT_STONE)
-                .add(ModBlocks.BRIGHT_STONE.get())
-        ;
-        
-        this.tag(ModTags.Blocks.COLORED_BRIGHT_COBBLESTONE)
-                .add(ModBlocks.BRIGHT_COBBLESTONE.get())
+                .add(ModBlocks.STONE_CRAFTING_TABLE.get())
         ;
 
         this.tag(ModTags.Blocks.COLORED_CONCRETE)
@@ -441,7 +432,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_STONE_SLAB.get())
                 .add(Blocks.STONE_SLAB)
         ;
-        
+
         this.tag(ModTags.Blocks.COLORED_COBBLESTONE_SLABS)
                 .add(ModBlocks.BLUE_COLORED_COBBLESTONE_SLAB.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_SLAB.get())
@@ -482,7 +473,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_STONE_STAIRS.get())
                 .add(Blocks.STONE_STAIRS)
         ;
-        
+
         this.tag(ModTags.Blocks.COLORED_COBBLESTONE_STAIRS)
                 .add(ModBlocks.BLUE_COLORED_COBBLESTONE_STAIRS.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_STAIRS.get())
@@ -678,7 +669,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_STONE_BRICKS.get())
                 .add(Blocks.STONE_BRICKS)
         ;
-        
+
         this.tag(ModTags.Blocks.COLORED_COBBLESTONE_BRICKS)
                 .add(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS.get())
@@ -719,7 +710,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         ;
 
         //PLANKS
-        
+
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get())
@@ -798,7 +789,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get())
                 .add(Blocks.OAK_SLAB)
         ;
-        
+
         this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_BUTTONS)
                 .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_BUTTON.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_BUTTON.get())
@@ -817,8 +808,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_BUTTON.get())
                 .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_BUTTON.get())
                 .add(Blocks.OAK_BUTTON)
-        ;                
-        
+        ;
+
         this.tag(ModTags.Blocks.COLORED_STONE_BUTTONS)
                 .add(ModBlocks.BLUE_COLORED_STONE_BUTTON.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_STONE_BUTTON.get())
@@ -837,8 +828,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_COLORED_STONE_BUTTON.get())
                 .add(ModBlocks.CYAN_COLORED_STONE_BUTTON.get())
                 .add(Blocks.STONE_BUTTON)
-        ;        
-        
+        ;
+
         this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_PRESSURE_PLATES)
                 .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
@@ -857,8 +848,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
                 .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get())
                 .add(Blocks.OAK_PRESSURE_PLATE)
-        ;        
-        
+        ;
+
         this.tag(ModTags.Blocks.COLORED_STONE_PRESSURE_PLATES)
                 .add(ModBlocks.BLUE_COLORED_STONE_PRESSURE_PLATE.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_STONE_PRESSURE_PLATE.get())
@@ -898,7 +889,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_FENCE.get())
                 .add(Blocks.OAK_FENCE)
         ;
-        
+
         this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_FENCE_GATES)
                 .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_FENCE_GATE.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_FENCE_GATE.get())
@@ -955,8 +946,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_DOOR.get())
                 .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_DOOR.get())
                 .add(Blocks.OAK_DOOR)
-        ;        
-        
+        ;
+
         this.tag(ModTags.Blocks.COLORED_WOODS)
                 .add(ModBlocks.BLUE_COLORED_WOOD.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_WOOD.get())
@@ -976,7 +967,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_WOOD.get())
                 .add(Blocks.OAK_WOOD)
         ;
-        
+
         this.tag(ModTags.Blocks.COLORED_LOGS)
                 .add(ModBlocks.BLUE_COLORED_LOG.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_LOG.get())
@@ -1015,7 +1006,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_CYAN_COLORED_WOOD.get())
                 .add(Blocks.STRIPPED_OAK_WOOD)
         ;
-        
+
         this.tag(ModTags.Blocks.STRIPPED_COLORED_LOGS)
                 .add(ModBlocks.STRIPPED_BLUE_COLORED_LOG.get())
                 .add(ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_LOG.get())
@@ -1111,8 +1102,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_COLORED_WALL_HANGING_SIGN.get())
                 .add(ModBlocks.CYAN_COLORED_WALL_HANGING_SIGN.get())
                 .add(Blocks.OAK_WALL_HANGING_SIGN)
-        ;        
-        
+        ;
+
         this.tag(ModTags.Blocks.COLORED_LEAVES)
                 .add(ModBlocks.BLUE_COLORED_LEAVES.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_LEAVES.get())
@@ -1131,8 +1122,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.ORANGE_COLORED_LEAVES.get())
                 .add(ModBlocks.CYAN_COLORED_LEAVES.get())
                 .add(Blocks.OAK_LEAVES)
-        ;       
-        
+        ;
+
         this.tag(ModTags.Blocks.COLORED_SAPLINGS)
                 .add(ModBlocks.BLUE_COLORED_SAPLING.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_SAPLING.get())
@@ -1250,7 +1241,49 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.STRIPPED_BLACK_COLORED_LOG.get())
                 .add(ModBlocks.STRIPPED_BLACK_COLORED_WOOD.get())
         ;
-        
+
+        this.tag(ModTags.Blocks.COLORED_STONE_CRAFTING_TABLES)
+                .add(ModBlocks.WHITE_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.ORANGE_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.MAGENTA_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.YELLOW_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.LIME_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.PINK_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.GRAY_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.CYAN_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.PURPLE_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.BLUE_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.BROWN_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.GREEN_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.RED_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.BLACK_COLORED_STONE_CRAFTING_TABLE.get())
+                .add(ModBlocks.STONE_CRAFTING_TABLE.get())
+        ;
+
+        this.tag(ModTags.Blocks.COLORED_WOODEN_PLANK_CRAFTING_TABLES)
+
+                .add(ModBlocks.WHITE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.LIME_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.PINK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.CYAN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.BROWN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.GREEN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.RED_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(ModBlocks.BLACK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .add(Blocks.CRAFTING_TABLE)
+        ;
+
+
 
         this.tag(BlockTags.MINEABLE_WITH_AXE)
                 .addTag(ModTags.Blocks.COLORED_WOODEN_PLANKS)
@@ -1270,9 +1303,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.COLORED_WALL_SIGNS)
                 .addTag(ModTags.Blocks.COLORED_HANGING_SIGNS)
                 .addTag(ModTags.Blocks.COLORED_WALL_HANGING_SIGNS)
-
+                .addTag(ModTags.Blocks.COLORED_WOODEN_PLANK_CRAFTING_TABLES)
         ;
-
+        
         this.tag(BlockTags.SIGNS)
                 .addTag(ModTags.Blocks.COLORED_SIGNS)
 

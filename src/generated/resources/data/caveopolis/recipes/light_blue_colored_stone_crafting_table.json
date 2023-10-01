@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "caveopolis:light_blue_colored_stone_bricks"
+    }
+  },
+  "pattern": [
+    "AA",
+    "AA"
+  ],
+  "result": {
+    "item": "caveopolis:light_blue_colored_stone_crafting_table"
+  },
+  "show_notification": true
+}

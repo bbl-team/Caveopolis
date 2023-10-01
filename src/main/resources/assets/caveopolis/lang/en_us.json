@@ -702,6 +702,40 @@
   "block.caveopolis.white_colored_sapling": "White Colored Sapling",
   "block.caveopolis.black_colored_sapling": "Black Colored Sapling",
   "block.caveopolis.purple_colored_sapling": "Purple Colored Sapling",
+  
+  "block.caveopolis.lime_colored_stone_crafting_table": "Lime Colored Stone Crafting Table",
+  "block.caveopolis.green_colored_stone_crafting_table": "Green Colored Stone Crafting Table",
+  "block.caveopolis.cyan_colored_stone_crafting_table": "Cyan Colored Stone Crafting Table",
+  "block.caveopolis.red_colored_stone_crafting_table": "Red Colored Stone Crafting Table",
+  "block.caveopolis.blue_colored_stone_crafting_table": "Blue Colored Stone Crafting Table",
+  "block.caveopolis.light_blue_colored_stone_crafting_table": "Light Blue Colored Stone Crafting Table",
+  "block.caveopolis.gray_colored_stone_crafting_table": "Gray Colored Stone Crafting Table",
+  "block.caveopolis.light_gray_colored_stone_crafting_table": "Light Gray Colored Stone Crafting Table",
+  "block.caveopolis.yellow_colored_stone_crafting_table": "Yellow Colored Stone Crafting Table",
+  "block.caveopolis.orange_colored_stone_crafting_table": "Orange Colored Stone Crafting Table",
+  "block.caveopolis.magenta_colored_stone_crafting_table": "Magenta Colored Stone Crafting Table",
+  "block.caveopolis.pink_colored_stone_crafting_table": "Pink Colored Stone Crafting Table",
+  "block.caveopolis.brown_colored_stone_crafting_table": "Brown Colored Stone Crafting Table",
+  "block.caveopolis.white_colored_stone_crafting_table": "White Colored Stone Crafting Table",
+  "block.caveopolis.black_colored_stone_crafting_table": "Black Colored Stone Crafting Table",
+  "block.caveopolis.purple_colored_stone_crafting_table": "Purple Colored Stone Crafting Table",
+  
+  "block.caveopolis.lime_colored_wooden_plank_crafting_table": "Lime Colored Wooden Plank Crafting Table",
+  "block.caveopolis.green_colored_wooden_plank_crafting_table": "Green Colored Wooden Plank Crafting Table",
+  "block.caveopolis.cyan_colored_wooden_plank_crafting_table": "Cyan Colored Wooden Plank Crafting Table",
+  "block.caveopolis.red_colored_wooden_plank_crafting_table": "Red Colored Wooden Plank Crafting Table",
+  "block.caveopolis.blue_colored_wooden_plank_crafting_table": "Blue Colored Wooden Plank Crafting Table",
+  "block.caveopolis.light_blue_colored_wooden_plank_crafting_table": "Light Blue Colored Wooden Plank Crafting Table",
+  "block.caveopolis.gray_colored_wooden_plank_crafting_table": "Gray Colored Wooden Plank Crafting Table",
+  "block.caveopolis.light_gray_colored_wooden_plank_crafting_table": "Light Gray Colored Wooden Plank Crafting Table",
+  "block.caveopolis.yellow_colored_wooden_plank_crafting_table": "Yellow Colored Wooden Plank Crafting Table",
+  "block.caveopolis.orange_colored_wooden_plank_crafting_table": "Orange Colored Wooden Plank Crafting Table",
+  "block.caveopolis.magenta_colored_wooden_plank_crafting_table": "Magenta Colored Wooden Plank Crafting Table",
+  "block.caveopolis.pink_colored_wooden_plank_crafting_table": "Pink Colored Wooden Plank Crafting Table",
+  "block.caveopolis.brown_colored_wooden_plank_crafting_table": "Brown Colored Wooden Plank Crafting Table",
+  "block.caveopolis.white_colored_wooden_plank_crafting_table": "White Colored Wooden Plank Crafting Table",
+  "block.caveopolis.black_colored_wooden_plank_crafting_table": "Black Colored Wooden Plank Crafting Table",
+  "block.caveopolis.purple_colored_wooden_plank_crafting_table": "Purple Colored Wooden Plank Crafting Table",
 
   "block.caveopolis.marble": "Marble",
   "block.caveopolis.marble_bricks": "Marble Bricks",
@@ -717,6 +751,6 @@
 
   "itemGroup.caveopolis": "Caveopolis",
 
-  "gui.caveopolis.stone_crafting_table": "Stone Crafting Table"
+  "gui.caveopolis.crafting_table": "Crafting Table"
 
 }

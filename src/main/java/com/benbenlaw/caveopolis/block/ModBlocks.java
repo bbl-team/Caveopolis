@@ -1,7 +1,7 @@
 package com.benbenlaw.caveopolis.block;
 
 import com.benbenlaw.caveopolis.Caveopolis;
-import com.benbenlaw.caveopolis.block.crafting_table.StoneCraftingTableBlock;
+import com.benbenlaw.caveopolis.block.custom.brightblock.BrightCraftingTableBlock;
 import com.benbenlaw.caveopolis.block.custom.*;
 import com.benbenlaw.caveopolis.block.custom.brightblock.*;
 import com.benbenlaw.caveopolis.block.custom.sign.black.BlackHangingSignBlock;
@@ -103,7 +103,7 @@ public class ModBlocks {
             () -> new SprayerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(1f).sound(SoundType.METAL)));
 
     public static final RegistryObject<Block> STONE_CRAFTING_TABLE = registerBlock("stone_crafting_table",
-            () -> new StoneCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).strength(1f).sound(SoundType.STONE)));
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE)));
 
     public static final RegistryObject<Block> MOSSY_STONE = registerBlock("mossy_stone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.MOSS_BLOCK).strength(0.5f).sound(SoundType.MOSS)));
@@ -115,14 +115,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_MIXED_STONE_ORE = registerBlock("deepslate_mixed_stone_ore",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3.0F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> BRIGHT_STONE = registerBlock("bright_stone",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE)
-                    .lightLevel((state) -> 15)));
-
-    public static final RegistryObject<Block> BRIGHT_COBBLESTONE = registerBlock("bright_cobblestone",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.COBBLESTONE).sound(SoundType.STONE)
-                    .lightLevel((state) -> 15)));
 
     public static final RegistryObject<Block> STONE_TORCH = BLOCKS.register("stone_torch",
             () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
@@ -1906,6 +1898,105 @@ public class ModBlocks {
             () -> new SaplingBlock(new OrangeTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING).sound(SoundType.GRASS)
                     ));
 
+    //CRAFTING TABLES
+
+    public static final RegistryObject<Block> WHITE_COLORED_STONE_CRAFTING_TABLE = registerBlock("white_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> ORANGE_COLORED_STONE_CRAFTING_TABLE = registerBlock("orange_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> MAGENTA_COLORED_STONE_CRAFTING_TABLE = registerBlock("magenta_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_STONE_CRAFTING_TABLE = registerBlock("light_blue_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> YELLOW_COLORED_STONE_CRAFTING_TABLE = registerBlock("yellow_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> LIME_COLORED_STONE_CRAFTING_TABLE = registerBlock("lime_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> PINK_COLORED_STONE_CRAFTING_TABLE = registerBlock("pink_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> GRAY_COLORED_STONE_CRAFTING_TABLE = registerBlock("gray_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_STONE_CRAFTING_TABLE = registerBlock("light_gray_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> CYAN_COLORED_STONE_CRAFTING_TABLE = registerBlock("cyan_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> PURPLE_COLORED_STONE_CRAFTING_TABLE = registerBlock("purple_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> BLUE_COLORED_STONE_CRAFTING_TABLE = registerBlock("blue_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> BROWN_COLORED_STONE_CRAFTING_TABLE = registerBlock("brown_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> GREEN_COLORED_STONE_CRAFTING_TABLE = registerBlock("green_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> RED_COLORED_STONE_CRAFTING_TABLE = registerBlock("red_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> BLACK_COLORED_STONE_CRAFTING_TABLE = registerBlock("black_colored_stone_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.STONE).lightLevel(litBlockEmission(15))));
+
+
+
+    public static final RegistryObject<Block> WHITE_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("white_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> ORANGE_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("orange_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> MAGENTA_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("magenta_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("light_blue_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> YELLOW_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("yellow_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> LIME_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("lime_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> PINK_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("pink_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("gray_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("light_gray_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> CYAN_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("cyan_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> PURPLE_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("purple_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("blue_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> BROWN_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("brown_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> GREEN_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("green_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> RED_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("red_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> BLACK_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("black_colored_wooden_plank_crafting_table",
+            () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
 
 
 

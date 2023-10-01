@@ -2,16 +2,27 @@ package com.benbenlaw.caveopolis.data.loot;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.item.ModItems;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.LootPool;
+import net.minecraft.world.level.storage.loot.LootTable;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
+import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.MatchTool;
+import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
@@ -171,10 +182,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_STAIRS.get());
         this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_WALL.get());
 
-        this.dropSelf(ModBlocks.BRIGHT_STONE.get());
-
         this.dropSelf(ModBlocks.STONE_CRAFTING_TABLE.get());
-        this.dropSelf(ModBlocks.BRIGHT_STONE.get());
         this.dropSelf(ModBlocks.STONE_TORCH.get());
         this.dropSelf(ModBlocks.SPRAYER.get());
 
@@ -343,8 +351,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE_STAIRS.get());
         this.dropSelf(ModBlocks.ORANGE_COLORED_COBBLESTONE_WALL.get());
 
-        this.dropSelf(ModBlocks.BRIGHT_COBBLESTONE.get());
-        
+
         //PLANKS
         
         this.dropSelf(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get());
@@ -779,39 +786,75 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.LIME_COLORED_SAPLING.get());
         this.dropSelf(ModBlocks.CYAN_COLORED_SAPLING.get());
         this.dropSelf(ModBlocks.ORANGE_COLORED_SAPLING.get());
+        
+        //CRAFTING TABLES
+
+        this.dropSelf(ModBlocks.BROWN_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.RED_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_STONE_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_STONE_CRAFTING_TABLE.get());
+
+        this.dropSelf(ModBlocks.BROWN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.WHITE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.PINK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.RED_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.BLACK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.GREEN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.LIME_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.CYAN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+        this.dropSelf(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
 
         this.add(ModBlocks.BROWN_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.BROWN_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.BROWN_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.MAGENTA_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.MAGENTA_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.MAGENTA_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.PURPLE_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.PURPLE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.PURPLE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.WHITE_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.WHITE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.WHITE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.YELLOW_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.YELLOW_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.YELLOW_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.LIGHT_GRAY_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.LIGHT_GRAY_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.LIGHT_GRAY_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.GRAY_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.GRAY_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.GRAY_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.LIGHT_BLUE_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.LIGHT_BLUE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.LIGHT_BLUE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.BLUE_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.BLUE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.BLUE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.PINK_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.PINK_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.PINK_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.RED_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.RED_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.RED_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.BLACK_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.BLACK_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.BLACK_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.GREEN_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.GREEN_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.GREEN_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.LIME_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.LIME_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.LIME_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.CYAN_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.CYAN_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.CYAN_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.ORANGE_COLORED_LEAVES.get(), block ->
-                createLeavesDrops(block, ModBlocks.ORANGE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+                createLeavesDropsShearsTag(block, ModBlocks.ORANGE_COLORED_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
     }
 
@@ -820,4 +863,18 @@ public class ModBlockLootTables extends BlockLootSubProvider {
     protected @NotNull Iterable<Block> getKnownBlocks() {
         return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
     }
+
+    private static final LootItemCondition.Builder HAS_SHEARS_TAG = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS));
+    private static final LootItemCondition.Builder HAS_SHEARS_OR_SILK_TOUCH = HAS_SHEARS_TAG.or(HAS_SILK_TOUCH);
+    private static final LootItemCondition.Builder HAS_NO_SHEARS_OR_SILK_TOUCH = HAS_SHEARS_OR_SILK_TOUCH.invert();
+    private static final float[] NORMAL_LEAVES_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
+
+    protected LootTable.Builder createLeavesDropsShearsTag(Block p_250088_, Block p_250731_, float... p_248949_) {
+        return createSilkTouchOrShearsDispatchTable(p_250088_, this.applyExplosionCondition(p_250088_, LootItem.lootTableItem(p_250731_)).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, p_248949_))).withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(HAS_NO_SHEARS_OR_SILK_TOUCH).add(this.applyExplosionDecay(p_250088_, LootItem.lootTableItem(Items.STICK).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, NORMAL_LEAVES_STICK_CHANCES))));
+    }
+
+    protected static LootTable.Builder createSilkTouchOrShearsDispatchTable(Block p_250539_, LootPoolEntryContainer.Builder<?> p_251459_) {
+        return createSelfDropDispatchTable(p_250539_, HAS_SHEARS_OR_SILK_TOUCH, p_251459_);
+    }
+
 }

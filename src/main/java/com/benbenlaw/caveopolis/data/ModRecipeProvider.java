@@ -49,9 +49,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
-                .define('A', ModTags.Items.COLORED_STONE_BRICKS)
+                .define('A', Blocks.STONE_BRICKS)
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModTags.Items.COLORED_STONE_BRICKS).build()))
+                        of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.GREEN_WOOL)
@@ -62,7 +62,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         of(ModItems.MOSSY_STRING.get()).build()))
                 .save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STONE_TORCH.get())
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STONE_TORCH.get(), 4)
                 .pattern("A")
                 .pattern("B")
                 .define('A', ItemTags.COALS)
@@ -156,7 +156,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURPLE_SPRAY_CAN.get()).requires(ModItems.PURPLE_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_PURPLE)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WHTIE_SPRAY_CAN.get())
+          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WHITE_SPRAY_CAN.get())
                   .pattern(" A ")
                   .pattern("ABA")
                   .pattern("ABA")
@@ -1231,6 +1231,56 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .of(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_STAIRS.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), 1);
 
+        //SLAB
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIME_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIME_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.RED_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.RED_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.PINK_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.PINK_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get(), 2);
+
+        slab(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get());
+        stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_SLAB.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), 2);
+
         //BUITTON WOODEN PRESUUR EPLATES
 
         buttonBuilder(ModBlocks.WHITE_COLORED_WOODEN_PLANK_BUTTON.get(), Ingredient.of(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()))
@@ -1997,6 +2047,267 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_STAIRS.get(), ModBlocks.MARBLE.get(), 1);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICKS.get(), ModBlocks.MARBLE.get(), 1);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE.get(), ModBlocks.WHITE_COLORED_STONE.get(), 1);
+
+        //CRAFTING TABLE
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.WHITE_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.BLACK_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.BLUE_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.GRAY_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.YELLOW_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.ORANGE_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.RED_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.LIME_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.GREEN_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.BROWN_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.CYAN_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.PINK_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.PURPLE_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_STONE_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.MAGENTA_COLORED_STONE_BRICKS.get())
+                .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.STONE_BRICKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.WHITE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLACK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.BLUE_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.GRAY_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.YELLOW_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.ORANGE_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.RED_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.LIME_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GREEN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.CYAN_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.PINK_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+        
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get())
+                .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(Blocks.OAK_PLANKS).build()))
+                .save(pWriter);
+
+
+
 
     }
 

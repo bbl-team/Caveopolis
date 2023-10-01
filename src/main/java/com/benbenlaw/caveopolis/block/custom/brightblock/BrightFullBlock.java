@@ -29,9 +29,4 @@ public class BrightFullBlock extends Block implements Brightable {
         return this.defaultBlockState().setValue(LIT, Boolean.FALSE);
     }
 
-    @Override
-    public @NotNull RenderShape getRenderShape(BlockState pState) {
-        return RenderShape.MODEL;
-    }
-
 }

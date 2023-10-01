@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:sprayer",
+    "ingredients": [
+      {
+        "item": "caveopolis:light_blue_spray_can"
+      },
+      {
+        "tag": "caveopolis:colored_wooden_plank_crafting_tables"
+      }
+  ],
+  "output": {
+    "item": "caveopolis:light_blue_colored_wooden_plank_crafting_table"
+  }
+}

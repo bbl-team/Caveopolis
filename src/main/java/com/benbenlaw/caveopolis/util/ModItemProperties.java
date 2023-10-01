@@ -233,7 +233,7 @@ public class ModItemProperties {
                     return 0.0F;
                 });
 
-        ItemProperties.register(ModItems.WHTIE_SPRAY_CAN.get(), new ResourceLocation(Caveopolis.MOD_ID, "change"),
+        ItemProperties.register(ModItems.WHITE_SPRAY_CAN.get(), new ResourceLocation(Caveopolis.MOD_ID, "change"),
                 (stack, level, entity, seed) -> {
                     if (stack.getDamageValue() >= 1 && stack.getDamageValue() <= 85) {
                         return 0F;

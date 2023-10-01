@@ -23,7 +23,7 @@ public class ModItems {
     public static final RegistryObject<Item> GLOWSTONE_SPRAY_CAN = ITEMS.register("glowstone_spray_can",
             () -> new GlowstoneSprayCanItem(new Item.Properties().durability(256)));
 
-    public static final RegistryObject<Item> WHTIE_SPRAY_CAN = ITEMS.register("white_spray_can",
+    public static final RegistryObject<Item> WHITE_SPRAY_CAN = ITEMS.register("white_spray_can",
             () -> new WhiteSprayCanItem(new Item.Properties().durability(256)));
 
     public static final RegistryObject<Item> GRAY_SPRAY_CAN = ITEMS.register("gray_spray_can",

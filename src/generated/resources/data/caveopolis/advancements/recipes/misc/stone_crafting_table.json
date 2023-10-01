@@ -5,7 +5,9 @@
       "conditions": {
         "items": [
           {
-            "tag": "caveopolis:colored_stone_bricks"
+            "items": [
+              "minecraft:stone_bricks"
+            ]
           }
         ]
       },

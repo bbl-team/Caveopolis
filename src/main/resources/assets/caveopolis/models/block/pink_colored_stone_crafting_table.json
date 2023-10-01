@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "caveopolis:block/pink_colored_stone_crafting_table_front",
+    "north": "caveopolis:block/pink_colored_stone_crafting_table_front",
+    "south": "caveopolis:block/pink_colored_stone_crafting_table_side",
+    "east": "caveopolis:block/pink_colored_stone_crafting_table_side",
+    "west": "caveopolis:block/pink_colored_stone_crafting_table_front",
+    "up": "caveopolis:block/pink_colored_stone_crafting_table_top",
+    "down": "caveopolis:block/pink_colored_stone"
+  }
+}

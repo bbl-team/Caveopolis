@@ -1,13 +1,11 @@
 package com.benbenlaw.caveopolis.item;
 
-
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -16,7 +14,7 @@ public class ModCreativeModTab {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Caveopolis.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> CAVEOPOLIS_UTILITIES_TAB = CREATIVE_MODE_TABS.register("caveopolis", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> CAVEOPOLIS_TAB = CREATIVE_MODE_TABS.register("caveopolis", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ModItems.STONE_STICK.get().getDefaultInstance())
             .title(Component.translatable("itemGroup.caveopolis"))
@@ -27,150 +25,148 @@ public class ModCreativeModTab {
 
                 output.accept(ModBlocks.BLUE_COLORED_STONE.get());
                 output.accept(ModBlocks.BLUE_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.BLUE_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.BLUE_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.BLUE_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.BLUE_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.BLUE_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.BLUE_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.BLUE_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.BLUE_COLORED_STONE_WALL.get());
 
 
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.YELLOW_COLORED_STONE.get());
                 output.accept(ModBlocks.YELLOW_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.YELLOW_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.YELLOW_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.YELLOW_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.YELLOW_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.YELLOW_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.YELLOW_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.YELLOW_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.YELLOW_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.RED_COLORED_STONE.get());
                 output.accept(ModBlocks.RED_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.RED_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.RED_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.RED_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.RED_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.RED_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.RED_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.RED_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.RED_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.GRAY_COLORED_STONE.get());
                 output.accept(ModBlocks.GRAY_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.GRAY_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.GRAY_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.GRAY_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.GRAY_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.GRAY_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.GRAY_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.GRAY_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.GRAY_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.GREEN_COLORED_STONE.get());
                 output.accept(ModBlocks.GREEN_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.GREEN_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.GREEN_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.GREEN_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.GREEN_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.GREEN_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.GREEN_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.GREEN_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.GREEN_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.LIME_COLORED_STONE.get());
                 output.accept(ModBlocks.LIME_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.LIME_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.LIME_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.LIME_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.LIME_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.LIME_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.LIME_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.LIME_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.LIME_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.PURPLE_COLORED_STONE.get());
                 output.accept(ModBlocks.PURPLE_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.PURPLE_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.PURPLE_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.PURPLE_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.PURPLE_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.PURPLE_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.PURPLE_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.PURPLE_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.PURPLE_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.MAGENTA_COLORED_STONE.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.MAGENTA_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.MAGENTA_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.MAGENTA_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.MAGENTA_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.PINK_COLORED_STONE.get());
                 output.accept(ModBlocks.PINK_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.PINK_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.PINK_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.PINK_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.PINK_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.PINK_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.PINK_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.PINK_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.PINK_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.BLACK_COLORED_STONE.get());
                 output.accept(ModBlocks.BLACK_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.BLACK_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.BLACK_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.BLACK_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.BLACK_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.BLACK_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.BLACK_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.BLACK_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.BLACK_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.WHITE_COLORED_STONE.get());
                 output.accept(ModBlocks.WHITE_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.WHITE_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.WHITE_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.WHITE_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.WHITE_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.WHITE_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.WHITE_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.WHITE_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.WHITE_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.BROWN_COLORED_STONE.get());
                 output.accept(ModBlocks.BROWN_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.BROWN_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.BROWN_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.BROWN_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.BROWN_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.BROWN_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.BROWN_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.BROWN_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.BROWN_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.ORANGE_COLORED_STONE.get());
                 output.accept(ModBlocks.ORANGE_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.ORANGE_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.ORANGE_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.ORANGE_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.ORANGE_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.ORANGE_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.ORANGE_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.ORANGE_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.ORANGE_COLORED_STONE_WALL.get());
 
                 output.accept(ModBlocks.CYAN_COLORED_STONE.get());
                 output.accept(ModBlocks.CYAN_COLORED_STONE_BRICKS.get());
-                output.accept(ModBlocks.CYAN_COLORED_STONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.CYAN_COLORED_STONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.CYAN_COLORED_STONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.CYAN_COLORED_STONE_BRICK_WALL.get());
-                output.accept(ModBlocks.CYAN_COLORED_STONE_SLAB.get());;
+                output.accept(ModBlocks.CYAN_COLORED_STONE_SLAB.get());
                 output.accept(ModBlocks.CYAN_COLORED_STONE_STAIRS.get());
                 output.accept(ModBlocks.CYAN_COLORED_STONE_WALL.get());
-
-                output.accept(ModBlocks.BRIGHT_STONE.get());
 
                 output.accept(ModBlocks.COBBLESTONE_BRICKS.get());
                 output.accept(ModBlocks.COBBLESTONE_BRICK_SLAB.get());
@@ -179,150 +175,148 @@ public class ModCreativeModTab {
 
                 output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.BLUE_COLORED_COBBLESTONE_WALL.get());
 
 
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.YELLOW_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.RED_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.RED_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.RED_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.RED_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.RED_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.RED_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.GRAY_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.GREEN_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.LIME_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.LIME_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.LIME_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.LIME_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.LIME_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.PURPLE_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.PINK_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.PINK_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.PINK_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.PINK_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.PINK_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.PINK_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.BLACK_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.WHITE_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.BROWN_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.ORANGE_COLORED_COBBLESTONE_WALL.get());
 
                 output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE.get());
                 output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS.get());
-                output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_SLAB.get());
                 output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_WALL.get());
-                output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE_SLAB.get());;
+                output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE_SLAB.get());
                 output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE_STAIRS.get());
                 output.accept(ModBlocks.CYAN_COLORED_COBBLESTONE_WALL.get());
-
-                output.accept(ModBlocks.BRIGHT_COBBLESTONE.get());
 
                 output.accept(ModBlocks.BROWN_COLORED_STONE_PRESSURE_PLATE.get());
                 output.accept(ModBlocks.MAGENTA_COLORED_STONE_PRESSURE_PLATE.get());
@@ -617,10 +611,10 @@ public class ModCreativeModTab {
 
                 output.accept(ModBlocks.MARBLE.get());
                 output.accept(ModBlocks.MARBLE_BRICKS.get());
-                output.accept(ModBlocks.MARBLE_BRICK_SLAB.get());;
+                output.accept(ModBlocks.MARBLE_BRICK_SLAB.get());
                 output.accept(ModBlocks.MARBLE_BRICK_STAIRS.get());
                 output.accept(ModBlocks.MARBLE_BRICK_WALL.get());
-                output.accept(ModBlocks.MARBLE_SLAB.get());;
+                output.accept(ModBlocks.MARBLE_SLAB.get());
                 output.accept(ModBlocks.MARBLE_STAIRS.get());
                 output.accept(ModBlocks.MARBLE_WALL.get());
 
@@ -642,6 +636,41 @@ public class ModCreativeModTab {
                 output.accept(ModBlocks.GREEN_COLORED_LEAVES.get());
                 output.accept(ModBlocks.LIME_COLORED_LEAVES.get());
                 output.accept(ModBlocks.CYAN_COLORED_LEAVES.get());
+
+                //CRAFTING TABLE
+
+                output.accept(ModBlocks.WHITE_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.WHITE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.ORANGE_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.ORANGE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.YELLOW_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.YELLOW_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.LIME_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.LIME_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.PINK_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.PINK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.GRAY_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.LIGHT_GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.CYAN_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.CYAN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.PURPLE_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.PURPLE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.BLUE_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.BROWN_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.BROWN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.GREEN_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.GREEN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.RED_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.RED_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.BLACK_COLORED_STONE_CRAFTING_TABLE.get());
+                output.accept(ModBlocks.BLACK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get());
 
                 //SAPLING
 
@@ -666,7 +695,7 @@ public class ModCreativeModTab {
                 output.accept(ModItems.BROWN_SPRAY_CAN.get());
                 output.accept(ModItems.MAGENTA_SPRAY_CAN.get());
                 output.accept(ModItems.PURPLE_SPRAY_CAN.get());
-                output.accept(ModItems.WHTIE_SPRAY_CAN.get());
+                output.accept(ModItems.WHITE_SPRAY_CAN.get());
                 output.accept(ModItems.YELLOW_SPRAY_CAN.get());
                 output.accept(ModItems.LIGHT_GRAY_SPRAY_CAN.get());
                 output.accept(ModItems.LIGHT_BLUE_SPRAY_CAN.get());
