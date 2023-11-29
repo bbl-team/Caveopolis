@@ -1,0 +1,75 @@
+{
+  "temperature": 0.6,
+  "downfall": 0,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 0,
+    "fog_color": 0,
+    "water_color": 4159204,
+    "water_fog_color": 329011,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    }
+  },
+  "spawners": {
+    "monster": [],
+    "creature": [],
+    "ambient": [],
+    "axolotls": [],
+    "underground_water_creature": [],
+    "water_creature": [],
+    "water_ambient": [],
+    "misc": []
+  },
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon",
+      "minecraft:nether_cave"
+    ]
+  },
+  "features": [
+    [
+      "minecraft:glow_lichen",
+      "minecraft:spring_water",
+      "caveopolis:black_colored_stone_placed_dim",
+      "caveopolis:blue_colored_stone_placed_dim",
+      "caveopolis:light_blue_colored_stone_placed_dim",
+      "caveopolis:light_gray_colored_stone_placed_dim",
+      "caveopolis:gray_colored_stone_placed_dim",
+      "caveopolis:yellow_colored_stone_placed_dim",
+      "caveopolis:orange_colored_stone_placed_dim",
+      "caveopolis:brown_colored_stone_placed_dim",
+      "caveopolis:lime_colored_stone_placed_dim",
+      "caveopolis:white_colored_stone_placed_dim",
+      "caveopolis:purple_colored_stone_placed_dim",
+      "caveopolis:magenta_colored_stone_placed_dim",
+      "caveopolis:red_colored_stone_placed_dim",
+      "caveopolis:cyan_colored_stone_placed_dim",
+
+      "caveopolis:black_tree_placed_dim",
+      "caveopolis:blue_tree_placed_dim",
+      "caveopolis:light_blue_tree_placed_dim",
+      "caveopolis:light_gray_tree_placed_dim",
+      "caveopolis:gray_tree_placed_dim",
+      "caveopolis:yellow_tree_placed_dim",
+      "caveopolis:orange_tree_placed_dim",
+      "caveopolis:brown_tree_placed_dim",
+      "caveopolis:lime_tree_placed_dim",
+      "caveopolis:white_tree_placed_dim",
+      "caveopolis:purple_tree_placed_dim",
+      "caveopolis:magenta_tree_placed_dim",
+      "caveopolis:red_tree_placed_dim",
+      "caveopolis:cyan_tree_placed_dim",
+      "caveopolis:pink_tree_placed_dim",
+      "caveopolis:green_tree_placed_dim",
+
+      "caveopolis:pile_colored_stone"
+    ]
+  ]
+}

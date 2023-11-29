@@ -367,7 +367,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_WALL.get(), ModBlocks.CYAN_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_BRICK_WALL.get(), ModBlocks.CYAN_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_BRICKS.get(), ModBlocks.CYAN_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_SLAB.get(), ModBlocks.CYAN_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.CYAN_COLORED_STONE_BRICKS.get());
 
@@ -387,11 +386,142 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_STAIRS.get(), ModBlocks.CYAN_COLORED_STONE.get(), 1);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_BRICKS.get(), ModBlocks.CYAN_COLORED_STONE.get(), 1);
 
+        
+        //COLORED STONE AND COBBLESTONE BRICKS TO 4
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.LIGHT_BLUE_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.LIGHT_BLUE_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.BLUE_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.BLUE_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.LIGHT_GRAY_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.LIGHT_GRAY_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.GRAY_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.GRAY_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.ORANGE_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.ORANGE_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.RED_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.RED_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.PINK_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.PINK_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.MAGENTA_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.MAGENTA_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.PURPLE_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.PURPLE_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.BLACK_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.BLACK_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.WHITE_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.WHITE_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.BROWN_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.BROWN_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.CYAN_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.CYAN_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.YELLOW_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.YELLOW_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.GREEN_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.GREEN_COLORED_STONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_COLORED_STONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.LIME_COLORED_STONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_stone", has(ModBlocks.LIME_COLORED_STONE.get())).save(pWriter);
+
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.BLUE_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.BLUE_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.GRAY_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.GRAY_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.ORANGE_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.ORANGE_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.RED_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.RED_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.PINK_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.PINK_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.MAGENTA_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.MAGENTA_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.PURPLE_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.PURPLE_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.BLACK_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.BLACK_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.WHITE_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.WHITE_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.BROWN_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.BROWN_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.CYAN_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.CYAN_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.YELLOW_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.YELLOW_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.GREEN_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.GREEN_COLORED_COBBLESTONE.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', ModBlocks.LIME_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
+                .unlockedBy("has_end_cobblestone", has(ModBlocks.LIME_COLORED_COBBLESTONE.get())).save(pWriter);
+        
         //LIGHT_BLUE COLORED STONE AND STONE BRICKS
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_WALL.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICK_WALL.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get());
-
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE.get());
+        
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get());
 
@@ -415,7 +545,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_STONE_WALL.get(), ModBlocks.BLUE_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_STONE_BRICK_WALL.get(), ModBlocks.BLUE_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_STONE_BRICKS.get(), ModBlocks.BLUE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_STONE_SLAB.get(), ModBlocks.BLUE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.BLUE_COLORED_STONE_BRICKS.get());
 
@@ -439,7 +568,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_STONE_WALL.get(), ModBlocks.BLACK_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_STONE_BRICK_WALL.get(), ModBlocks.BLACK_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_STONE_BRICKS.get(), ModBlocks.BLACK_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_STONE_SLAB.get(), ModBlocks.BLACK_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.BLACK_COLORED_STONE_BRICKS.get());
 
@@ -463,7 +591,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_WALL.get(), ModBlocks.YELLOW_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_BRICK_WALL.get(), ModBlocks.YELLOW_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_BRICKS.get(), ModBlocks.YELLOW_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_SLAB.get(), ModBlocks.YELLOW_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.YELLOW_COLORED_STONE_BRICKS.get());
 
@@ -487,7 +614,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_WALL.get(), ModBlocks.BROWN_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_BRICK_WALL.get(), ModBlocks.BROWN_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_BRICKS.get(), ModBlocks.BROWN_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_SLAB.get(), ModBlocks.BROWN_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.BROWN_COLORED_STONE_BRICKS.get());
 
@@ -511,7 +637,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_STONE_WALL.get(), ModBlocks.GRAY_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_STONE_BRICK_WALL.get(), ModBlocks.GRAY_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_STONE_BRICKS.get(), ModBlocks.GRAY_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_STONE_SLAB.get(), ModBlocks.GRAY_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.GRAY_COLORED_STONE_BRICKS.get());
 
@@ -535,7 +660,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_STONE_WALL.get(), ModBlocks.LIGHT_GRAY_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICK_WALL.get(), ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICKS.get(), ModBlocks.LIGHT_GRAY_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_STONE_SLAB.get(), ModBlocks.LIGHT_GRAY_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.LIGHT_GRAY_COLORED_STONE_BRICKS.get());
 
@@ -559,7 +683,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_STONE_WALL.get(), ModBlocks.GREEN_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_STONE_BRICK_WALL.get(), ModBlocks.GREEN_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_STONE_BRICKS.get(), ModBlocks.GREEN_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_STONE_SLAB.get(), ModBlocks.GREEN_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.GREEN_COLORED_STONE_BRICKS.get());
 
@@ -584,7 +707,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_STONE_WALL.get(), ModBlocks.LIME_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_STONE_BRICK_WALL.get(), ModBlocks.LIME_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_STONE_BRICKS.get(), ModBlocks.LIME_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_STONE_SLAB.get(), ModBlocks.LIME_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.LIME_COLORED_STONE_BRICKS.get());
 
@@ -608,7 +730,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_STONE_WALL.get(), ModBlocks.MAGENTA_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_STONE_BRICK_WALL.get(), ModBlocks.MAGENTA_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_STONE_BRICKS.get(), ModBlocks.MAGENTA_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_STONE_SLAB.get(), ModBlocks.MAGENTA_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.MAGENTA_COLORED_STONE_BRICKS.get());
 
@@ -632,7 +753,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_STONE_WALL.get(), ModBlocks.ORANGE_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_STONE_BRICK_WALL.get(), ModBlocks.ORANGE_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_STONE_BRICKS.get(), ModBlocks.ORANGE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_STONE_SLAB.get(), ModBlocks.ORANGE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.ORANGE_COLORED_STONE_BRICKS.get());
 
@@ -656,7 +776,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_STONE_WALL.get(), ModBlocks.PINK_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_STONE_BRICK_WALL.get(), ModBlocks.PINK_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_STONE_BRICKS.get(), ModBlocks.PINK_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_STONE_SLAB.get(), ModBlocks.PINK_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.PINK_COLORED_STONE_BRICKS.get());
 
@@ -680,7 +799,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_STONE_WALL.get(), ModBlocks.WHITE_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_STONE_BRICK_WALL.get(), ModBlocks.WHITE_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_STONE_BRICKS.get(), ModBlocks.WHITE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_STONE_SLAB.get(), ModBlocks.WHITE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.WHITE_COLORED_STONE_BRICKS.get());
 
@@ -704,7 +822,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_STONE_WALL.get(), ModBlocks.PURPLE_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_STONE_BRICK_WALL.get(), ModBlocks.PURPLE_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_STONE_BRICKS.get(), ModBlocks.PURPLE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_STONE_SLAB.get(), ModBlocks.PURPLE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.PURPLE_COLORED_STONE_BRICKS.get());
 
@@ -728,7 +845,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_STONE_WALL.get(), ModBlocks.RED_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_STONE_BRICK_WALL.get(), ModBlocks.RED_COLORED_STONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_STONE_BRICKS.get(), ModBlocks.RED_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_STONE_SLAB.get(), ModBlocks.RED_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.RED_COLORED_STONE_BRICKS.get());
 
@@ -752,7 +868,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_COBBLESTONE_WALL.get(), ModBlocks.CYAN_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.CYAN_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.CYAN_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.CYAN_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -776,7 +891,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_WALL.get(), ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -800,7 +914,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_COBBLESTONE_WALL.get(), ModBlocks.BLUE_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.BLUE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.BLUE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -824,7 +937,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_COBBLESTONE_WALL.get(), ModBlocks.BLACK_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.BLACK_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.BLACK_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.BLACK_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -848,7 +960,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_COBBLESTONE_WALL.get(), ModBlocks.YELLOW_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.YELLOW_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.YELLOW_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.YELLOW_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -872,7 +983,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_COBBLESTONE_WALL.get(), ModBlocks.BROWN_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.BROWN_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.BROWN_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.BROWN_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.BROWN_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -896,7 +1006,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_COBBLESTONE_WALL.get(), ModBlocks.GRAY_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.GRAY_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.GRAY_COLORED_COBBLESTONE.get());
+
         slab(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.GRAY_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.GRAY_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -920,7 +1030,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_WALL.get(), ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.LIGHT_GRAY_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -944,7 +1053,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_COBBLESTONE_WALL.get(), ModBlocks.GREEN_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.GREEN_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.GREEN_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.GREEN_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.GREEN_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -969,7 +1077,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_COBBLESTONE_WALL.get(), ModBlocks.LIME_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.LIME_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.LIME_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIME_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -993,7 +1100,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_COBBLESTONE_WALL.get(), ModBlocks.MAGENTA_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.MAGENTA_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.MAGENTA_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.MAGENTA_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -1017,7 +1123,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_COBBLESTONE_WALL.get(), ModBlocks.ORANGE_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.ORANGE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.ORANGE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.ORANGE_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -1041,7 +1146,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_COBBLESTONE_WALL.get(), ModBlocks.PINK_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.PINK_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.PINK_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.PINK_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.PINK_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -1065,7 +1169,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_COBBLESTONE_WALL.get(), ModBlocks.WHITE_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.WHITE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.WHITE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -1089,7 +1192,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_COBBLESTONE_WALL.get(), ModBlocks.PURPLE_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.PURPLE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.PURPLE_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.PURPLE_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -1113,7 +1215,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_COBBLESTONE_WALL.get(), ModBlocks.RED_COLORED_COBBLESTONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_COBBLESTONE_BRICK_WALL.get(), ModBlocks.RED_COLORED_COBBLESTONE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_COBBLESTONE_BRICKS.get(), ModBlocks.RED_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_COBBLESTONE_SLAB.get(), ModBlocks.RED_COLORED_COBBLESTONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.RED_COLORED_COBBLESTONE_BRICK_SLAB.get(), ModBlocks.RED_COLORED_COBBLESTONE_BRICKS.get());
 
@@ -1137,7 +1238,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         //COBBLESTONE BRICKS
 
         wall(pWriter, RecipeCategory.MISC, ModBlocks.COBBLESTONE_BRICK_WALL.get(), ModBlocks.COBBLESTONE_BRICKS.get());
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.COBBLESTONE_BRICKS.get(), Blocks.COBBLESTONE);
         slab(pWriter, RecipeCategory.MISC, ModBlocks.COBBLESTONE_BRICK_SLAB.get(), ModBlocks.COBBLESTONE_BRICKS.get());
 
         stairBuilder(ModBlocks.COBBLESTONE_BRICK_STAIRS.get(), Ingredient.of(ModBlocks.COBBLESTONE_BRICKS.get()))
@@ -2027,7 +2127,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         wall(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_WALL.get(), ModBlocks.MARBLE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICK_WALL.get(), ModBlocks.MARBLE_BRICKS.get());
 
-        twoByTwoPacker(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICKS.get(), ModBlocks.MARBLE.get());
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARBLE_BRICKS.get(), 4)
+                .pattern("AA")
+                .pattern("AA")
+                .define('A', ModBlocks.MARBLE.get())
+                .unlockedBy("has_marble", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModBlocks.MARBLE.get()).build()))
+                .save(pWriter);
         slab(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_SLAB.get(), ModBlocks.MARBLE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.MARBLE_BRICK_SLAB.get(), ModBlocks.MARBLE_BRICKS.get());
 

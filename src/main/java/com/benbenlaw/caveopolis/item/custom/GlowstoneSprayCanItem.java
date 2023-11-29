@@ -75,9 +75,9 @@ public class GlowstoneSprayCanItem extends Item {
                 if (blockState.getValue(LIT) == Boolean.TRUE) {
                     level.setBlockAndUpdate(pos, blockState.setValue(LIT, Boolean.FALSE));
                     level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, sound * 15 , 0.5F);
-                    if(player.isCrouching()) {
-                        player.sendSystemMessage(Component.literal("This block is Unlit!"));
-                    }
+                //    if(player.isCrouching()) {
+                //        player.sendSystemMessage(Component.literal("This block is Unlit!"));
+                //    }
                     if (mainHand) {
                         player.getItemInHand(InteractionHand.MAIN_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));
                     } else
@@ -88,9 +88,9 @@ public class GlowstoneSprayCanItem extends Item {
                 else if (blockState.getValue(LIT) == Boolean.FALSE) {
                     level.setBlockAndUpdate(pos, blockState.setValue(LIT, Boolean.TRUE));
                     level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, sound * 15 , 0.5F);
-                    if(player.isCrouching()) {
-                        player.sendSystemMessage(Component.literal("This block is Lit!"));
-                    }
+                //    if(player.isCrouching()) {
+                //        player.sendSystemMessage(Component.literal("This block is Lit!"));
+               //     }
                     if (mainHand) {
                         player.getItemInHand(InteractionHand.MAIN_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));
                     } else

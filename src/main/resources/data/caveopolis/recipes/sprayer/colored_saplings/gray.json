@@ -5,10 +5,10 @@
         "item": "caveopolis:gray_spray_can"
       },
       {
-        "tag": "caveopolis:colored_leaves"
+        "tag": "caveopolis:colored_saplings"
       }
   ],
   "output": {
-    "item": "caveopolis:gray_colored_leaves"
+    "item": "caveopolis:gray_colored_sapling"
   }
 }

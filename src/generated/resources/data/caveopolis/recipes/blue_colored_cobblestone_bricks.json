@@ -1,6 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "#": {
       "item": "caveopolis:blue_colored_cobblestone"
@@ -11,6 +11,7 @@
     "##"
   ],
   "result": {
+    "count": 4,
     "item": "caveopolis:blue_colored_cobblestone_bricks"
   },
   "show_notification": true

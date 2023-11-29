@@ -1,0 +1,11 @@
+{
+  "type": "caveopolis:colored_caves",
+  "generator": {
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "caveopolis:colored_caves"
+    },
+    "settings": "caveopolis:colored_caves",
+    "type": "minecraft:noise"
+  }
+}

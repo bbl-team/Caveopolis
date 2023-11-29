@@ -3,13 +3,34 @@ Caveopolis Mod Changelog
 //TODO: More coloured blocks
 //TODO: Add a colorful biome
 
+2.8.0
+
+Fixed Gray colored sapling recipe not working
+Colored Caves Dimension. Not finished but can be entered using commands
+
+2.7.2
+
+Update to latest Opolis Utilities Version
+Fixed stone to stone brick and cobblestone to cobblestone brick recipes only giving 1 brick instead of 4 in crafting
+Fixed cobblestone brick names
+Fixed so error logging messages about recipe that don't work
+Holding a glowstone spray can or opolis utilities wrench will tell you if a block is lit or not, remove the chat message when right clicking in favor of this
+
+2.7.1
+
+Fixed dependencies for opolis utilities
+Fixed magenta saplings growing lime trees
+Fixed purple crafting and pink crafting table items using the white crafting table texture
+
 2.7.0
 
 Added colored plank crafting tables and colored stone crafting tables
 Removed bright stone and cobblestone
-stone torch recipe now makes 4 torches instead of 1
+Stone torch recipe now makes 4 torches instead of 1
 Leaves now drop when using any shears
 Fixed wooden slabs not having recipes
+Fixed marble brick recipe only giving 1 instead of 4
+Press U on the crafting tables now shows that they are crafting tables in JEI
 
 2.6.2
 

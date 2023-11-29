@@ -31,10 +31,10 @@ Caveopolis items and blocks
    ordering="NONE"
    side="BOTH"
 
-[[dependencies.strainers]]
-   modId="caveopolis"
+[[dependencies.caveopolis]]
+   modId="opolisutilities"
    mandatory=true
    # This version range declares a minimum of the current minecraft version up to but not including the next major version
-   versionRange="[1.20.1-2.4.0,)"
+   versionRange="[1.20.1-2.6.7,)"
    ordering="NONE"
    side="BOTH"

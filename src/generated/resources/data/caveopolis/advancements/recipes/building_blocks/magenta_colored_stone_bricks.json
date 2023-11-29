@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_end_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "caveopolis:magenta_colored_stone"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:magenta_colored_stone_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_end_stone",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:magenta_colored_stone_bricks"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -11,6 +11,6 @@ public class MagentaTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean hasFlowers) {
-        return ModConfiguredFeatures.LIME_TREE_KEY;
+        return ModConfiguredFeatures.MAGENTA_TREE_KEY;
     }
 }
