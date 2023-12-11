@@ -22,6 +22,7 @@ public class ModCreativeModTab {
 
                 output.accept(ModBlocks.STONE_CRAFTING_TABLE.get());
                 output.accept(ModBlocks.SPRAYER.get());
+                output.accept(ModBlocks.COLORED_CAVES_PORTAL.get());
 
                 output.accept(ModBlocks.BLUE_COLORED_STONE.get());
                 output.accept(ModBlocks.BLUE_COLORED_STONE_BRICKS.get());

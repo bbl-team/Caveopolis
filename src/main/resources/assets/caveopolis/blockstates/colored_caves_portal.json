@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "caveopolis:block/colored_caves_portal",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "caveopolis:block/colored_caves_portal"
+    },
+    "facing=south": {
+      "model": "caveopolis:block/colored_caves_portal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "caveopolis:block/colored_caves_portal",
+      "y": 270
+    }
+  }
+}

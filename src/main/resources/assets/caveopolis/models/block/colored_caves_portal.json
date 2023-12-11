@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "caveopolis:block/portal_front",
+    "side": "caveopolis:block/portal_side",
+    "top": "caveopolis:block/portal_top"
+  }
+}

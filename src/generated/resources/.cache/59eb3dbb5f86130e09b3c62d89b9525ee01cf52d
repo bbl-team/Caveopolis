@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-28T17:12:45.3621069	Loot Tables
+// 1.20.1	2023-12-11T14:17:18.0148301	Loot Tables
 00d66cf5faad6ca8c7f7a94785fe4f1e7b0136fc data/caveopolis/loot_tables/blocks/black_colored_cobblestone.json
 77dbdb162e262c7c1c309b7276c0728974b23640 data/caveopolis/loot_tables/blocks/black_colored_cobblestone_bricks.json
 bf9c704207db8b5078f3b7e4763749368a75e864 data/caveopolis/loot_tables/blocks/black_colored_cobblestone_brick_slab.json
@@ -115,6 +115,7 @@ e5fedcd244ef22a79f017c186c8a2bb5e1e56284 data/caveopolis/loot_tables/blocks/brow
 cd4991c4dabf8cda60278f18db6d44b314f91f34 data/caveopolis/loot_tables/blocks/cobblestone_brick_slab.json
 a03cf50e30bc812c0321a87ab7cd11e561bfc43e data/caveopolis/loot_tables/blocks/cobblestone_brick_stairs.json
 113754d531d869b066650541362b9121636b5b77 data/caveopolis/loot_tables/blocks/cobblestone_brick_wall.json
+815b8b9d0f495b394a63aa5c95dcb771954e2bf8 data/caveopolis/loot_tables/blocks/colored_caves_portal.json
 3f0445653f351593757ea8a2bc8617baf1a359ea data/caveopolis/loot_tables/blocks/cyan_colored_cobblestone.json
 d0bf418f8c33733f667b7f6a37a454125677ecfd data/caveopolis/loot_tables/blocks/cyan_colored_cobblestone_bricks.json
 e5d568d7e36020cdf177a936031c3715c57fc869 data/caveopolis/loot_tables/blocks/cyan_colored_cobblestone_brick_slab.json

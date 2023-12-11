@@ -347,6 +347,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.BRIGHT_STONE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE.get())
                 .add(ModBlocks.SPRAYER.get())
+                .add(ModBlocks.COLORED_CAVES_PORTAL.get())
                 .add(ModBlocks.COBBLESTONE_BRICKS.get())
                 .add(ModBlocks.COBBLESTONE_BRICK_SLAB.get())
                 .add(ModBlocks.COBBLESTONE_BRICK_STAIRS.get())

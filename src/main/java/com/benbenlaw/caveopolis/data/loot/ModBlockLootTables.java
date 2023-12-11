@@ -185,6 +185,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.STONE_CRAFTING_TABLE.get());
         this.dropSelf(ModBlocks.STONE_TORCH.get());
         this.dropSelf(ModBlocks.SPRAYER.get());
+        this.dropSelf(ModBlocks.COLORED_CAVES_PORTAL.get());
 
         this.add(ModBlocks.MIXED_STONE_ORE.get(),
                 block -> createOreDrop(ModBlocks.MIXED_STONE_ORE.get(), ModItems.RAW_MIXED_STONE.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)));

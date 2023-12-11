@@ -65,6 +65,7 @@
   "block.caveopolis.bright_stone_ore": "Bright Stone Ore",
   "block.caveopolis.deepslate_bright_stone_ore": "Deepslate Bright Stone Ore",
   "block.caveopolis.sprayer": "Sprayer",
+  "block.caveopolis.colored_caves_portal": "Colored Caves Portal",
 
   "block.caveopolis.lime_colored_stone_bricks": "Lime Colored Stone Bricks",
   "block.caveopolis.lime_colored_stone": "Lime Colored Stone",
@@ -732,6 +733,8 @@
   "block.caveopolis.marble_brick_stairs": "Marble Brick Stairs",
   "block.caveopolis.marble_wall": "Marble Wall",
   "block.caveopolis.marble_brick_wall": "Marble Brick Wall",
+
+  "biome.caveopolis.colored_caves": "Colored Caves",
 
   "tooltips.spray_can.hover.shift": "Press SHIFT for more info",
   "tooltips.spray_can.shift.held": "Right click to spray blocks in world!",

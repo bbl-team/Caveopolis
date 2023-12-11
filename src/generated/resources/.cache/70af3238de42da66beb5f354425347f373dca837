@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-27T13:41:25.9941635	Block Tags
+// 1.20.1	2023-12-11T14:17:18.0123127	Block Tags
 c78ada5968685a6ca96af0fb49dde74df66426f6 data/caveopolis/tags/blocks/banned_from_in_world_spraying.json
 42a14e0c7cfecab025c809c468c8fb21b74fa037 data/caveopolis/tags/blocks/black_colored_logs.json
 b1fd5a13e6f8ea035e617d75894f72925b64225c data/caveopolis/tags/blocks/blue_colored_logs.json
@@ -67,7 +67,7 @@ e2feff85afb7e4871204d6f5d72b8760e2780187 data/forge/tags/blocks/shulker_boxes.js
 f80d302b5dc931529689045b69162799e9508779 data/minecraft/tags/blocks/logs_that_burn.json
 387f8d90a5b96edc79464015cb8049148b5e5bbc data/minecraft/tags/blocks/mineable/axe.json
 7944cdee0a1fb73528d63a81cb5286387c5cdfe1 data/minecraft/tags/blocks/mineable/hoe.json
-a5fba63d5f17a0035eac5b8425d6e541f0c3e122 data/minecraft/tags/blocks/mineable/pickaxe.json
+d48e0f1a8345c854d0a26dd6152439d6ffd289a7 data/minecraft/tags/blocks/mineable/pickaxe.json
 110ab49e5e14d911108872ae80df55865bd0af2f data/minecraft/tags/blocks/planks.json
 a797eb797f7bb3be3fc9fb52d3e84880c53b47d9 data/minecraft/tags/blocks/saplings.json
 fb7605d4441bf4201dce973e6e59364024dd90b2 data/minecraft/tags/blocks/signs.json

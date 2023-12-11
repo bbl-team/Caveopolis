@@ -13,8 +13,13 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, Caveopolis.MOD_ID);
 
+    public static final RegistryObject<BlockEntityType<ColoredCavesPortalBlockEntity>> COLORED_CAVES_PORTAL_BLOCK_ENTITY =
+            BLOCK_ENTITIES.register("colored_caves_portal_block_entity", () ->
+                    BlockEntityType.Builder.of(ColoredCavesPortalBlockEntity::new,
+                            ModBlocks.COLORED_CAVES_PORTAL.get()).build(null));
+
     public static final RegistryObject<BlockEntityType<SprayerBlockEntity>> SPRAYER =
-            BLOCK_ENTITIES.register("block_breaker_block_entity", () ->
+            BLOCK_ENTITIES.register("sprayer", () ->
                     BlockEntityType.Builder.of(SprayerBlockEntity::new,
                             ModBlocks.SPRAYER.get()).build(null));
 

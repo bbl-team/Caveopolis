@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "M": {
+      "item": "caveopolis:mixed_stone_ingot"
+    },
+    "C": {
+      "tag": "caveopolis:colored_stone"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "MMM",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "item": "caveopolis:colored_caves_portal"
+  }
+}
