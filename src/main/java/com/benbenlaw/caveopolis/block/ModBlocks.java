@@ -99,6 +99,9 @@ public class ModBlocks {
 
     //New Blocks
 
+    public static final RegistryObject<Block> COLORED_CAVES_PORTAL = registerBlock("colored_caves_portal",
+            () -> new ColoredCavesPortalBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(1f).sound(SoundType.METAL)));
+
     public static final RegistryObject<Block> SPRAYER = registerBlock("sprayer",
             () -> new SprayerBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(1f).sound(SoundType.METAL)));
 

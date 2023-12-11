@@ -10,9 +10,11 @@ import com.benbenlaw.caveopolis.recipe.ModRecipes;
 import com.benbenlaw.caveopolis.screen.ModMenuTypes;
 import com.benbenlaw.caveopolis.screen.SprayerScreen;
 import com.benbenlaw.caveopolis.util.ModItemProperties;
+import com.benbenlaw.caveopolis.util.ModTags;
 import com.benbenlaw.caveopolis.util.ModWoodTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -75,7 +77,6 @@ public class Caveopolis {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         event.enqueueWork(ModMessages::register);
-
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
