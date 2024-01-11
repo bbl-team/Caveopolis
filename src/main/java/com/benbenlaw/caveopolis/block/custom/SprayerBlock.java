@@ -27,8 +27,6 @@ public class SprayerBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     /* FACING */
-
-
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
@@ -49,7 +47,6 @@ public class SprayerBlock extends BaseEntityBlock {
         pBuilder.add(FACING);
     }
 
-
     public SprayerBlock(Properties properties) {
         super(properties);
     }
@@ -58,8 +55,6 @@ public class SprayerBlock extends BaseEntityBlock {
     public RenderShape getRenderShape(BlockState pState) {
         return RenderShape.MODEL;
     }
-
-
 
     @Override
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving) {

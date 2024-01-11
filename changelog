@@ -3,10 +3,19 @@ Caveopolis Mod Changelog
 //TODO: More coloured blocks
 //TODO: Add a colorful biome
 
+2.8.3
+
+Added leaves and saplings to the composter
+
+2.8.2
+
+Blue cobblestone block now longer tagged to walls
+Gray cobblestone wall now tagged to walls
+
 2.8.1
 
-Changed world gen
-Portal block added
+Changed world gen in colored caves
+Portal block added should function
 
 2.8.0
 

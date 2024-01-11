@@ -15,7 +15,9 @@ import com.benbenlaw.caveopolis.util.ModWoodTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.server.ServerStartingEvent;
@@ -76,7 +78,46 @@ public class Caveopolis {
 
 
     private void commonSetup(final FMLCommonSetupEvent event) {
+
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.BLACK_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.BLACK_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.WHITE_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.WHITE_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.BLUE_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.BLUE_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIGHT_BLUE_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIGHT_BLUE_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIGHT_GRAY_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIGHT_GRAY_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.GRAY_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.GRAY_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.ORANGE_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.ORANGE_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.YELLOW_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.YELLOW_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.RED_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.RED_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.BROWN_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.BROWN_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.CYAN_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.CYAN_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.PINK_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.PINK_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.PURPLE_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.PURPLE_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.MAGENTA_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.MAGENTA_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.GREEN_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.GREEN_COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIME_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIME_COLORED_LEAVES.get().asItem(),  0.3F);
+
+        });
+
         event.enqueueWork(ModMessages::register);
+
+
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

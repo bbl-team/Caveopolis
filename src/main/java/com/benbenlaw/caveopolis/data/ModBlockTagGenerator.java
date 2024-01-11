@@ -67,7 +67,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.YELLOW_COLORED_COBBLESTONE_WALL.get())
                 .add(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_WALL.get())
                 .add(ModBlocks.RED_COLORED_COBBLESTONE_WALL.get())
-                .add(ModBlocks.BLUE_COLORED_COBBLESTONE.get())
+                .add(ModBlocks.GRAY_COLORED_COBBLESTONE_WALL.get())
                 .add(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_WALL.get())
                 .add(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_WALL.get())
                 .add(ModBlocks.GREEN_COLORED_COBBLESTONE_WALL.get())

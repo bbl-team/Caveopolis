@@ -129,7 +129,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
                 .add(ModBlocks.YELLOW_COLORED_COBBLESTONE_WALL.get().asItem())
                 .add(ModBlocks.RED_COLORED_COBBLESTONE_BRICK_WALL.get().asItem())
                 .add(ModBlocks.RED_COLORED_COBBLESTONE_WALL.get().asItem())
-                .add(ModBlocks.BLUE_COLORED_COBBLESTONE.get().asItem())
+                .add(ModBlocks.GRAY_COLORED_COBBLESTONE_WALL.get().asItem())
                 .add(ModBlocks.GRAY_COLORED_COBBLESTONE_BRICK_WALL.get().asItem())
                 .add(ModBlocks.GREEN_COLORED_COBBLESTONE_BRICK_WALL.get().asItem())
                 .add(ModBlocks.GREEN_COLORED_COBBLESTONE_WALL.get().asItem())
