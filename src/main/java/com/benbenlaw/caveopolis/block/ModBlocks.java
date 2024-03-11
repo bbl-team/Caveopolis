@@ -195,10 +195,10 @@ public class ModBlocks {
             () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIGHT_GRAY_TORCH)));
 
     public static final RegistryObject<Block> PINK_TORCH = BLOCKS.register("pink_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new PinkTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> PINK_WALL_TORCH = BLOCKS.register("pink_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.PINK_TORCH)));
+            () -> new PinkWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.PINK_TORCH)));
 
 
     public static final RegistryObject<Block> COLORED_CAVES_PORTAL = registerBlock("colored_caves_portal",

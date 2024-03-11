@@ -2,6 +2,10 @@ Caveopolis Mod Changelog
 
 //todo fix stupid BlockBehaviour.StatePredicate for .isSuffocating() leaves
 
+2.10.1
+
+Added custom particles
+
 2.10.0
 
 Added Colored Dirt

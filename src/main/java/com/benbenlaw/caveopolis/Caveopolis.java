@@ -15,6 +15,7 @@ import com.benbenlaw.caveopolis.util.ModTags;
 import com.benbenlaw.caveopolis.util.ModWoodTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
@@ -52,9 +53,9 @@ public class Caveopolis {
 
         ModCreativeModTab.register(eventBus);
 
-        ModParticles.register(eventBus);
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModParticles.register(eventBus);
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
         ModRecipes.register(eventBus);
@@ -162,6 +163,7 @@ public class Caveopolis {
             Sheets.addWoodType(ModWoodTypes.PURPLE);
             Sheets.addWoodType(ModWoodTypes.WHITE);
             Sheets.addWoodType(ModWoodTypes.CYAN);
+
 
             MenuScreens.register(ModMenuTypes.SPRAYER_MENU.get(), SprayerScreen::new);
 
