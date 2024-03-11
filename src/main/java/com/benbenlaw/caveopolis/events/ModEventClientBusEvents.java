@@ -2,8 +2,12 @@ package com.benbenlaw.caveopolis.events;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.entity.ModBlockEntities;
+import com.benbenlaw.caveopolis.particles.ModParticles;
+import com.benbenlaw.caveopolis.particles.custom.*;
+import com.benbenlaw.opolisutilities.particles.custom.EnderOreParticles;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
@@ -14,7 +18,9 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.joml.Matrix3f;
@@ -59,5 +65,4 @@ public class ModEventClientBusEvents {
         event.registerBlockEntityRenderer(ModBlockEntities.WHITE_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(ModBlockEntities.WHITE_HANGING_SIGN.get(), HangingSignRenderer::new);
     }
-
 }

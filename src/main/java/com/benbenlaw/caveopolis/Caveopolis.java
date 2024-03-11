@@ -6,6 +6,7 @@ import com.benbenlaw.caveopolis.block.networking.ModMessages;
 import com.benbenlaw.caveopolis.config.ConfigFile;
 import com.benbenlaw.caveopolis.item.ModCreativeModTab;
 import com.benbenlaw.caveopolis.item.ModItems;
+import com.benbenlaw.caveopolis.particles.ModParticles;
 import com.benbenlaw.caveopolis.recipe.ModRecipes;
 import com.benbenlaw.caveopolis.screen.ModMenuTypes;
 import com.benbenlaw.caveopolis.screen.SprayerScreen;
@@ -51,12 +52,12 @@ public class Caveopolis {
 
         ModCreativeModTab.register(eventBus);
 
+        ModParticles.register(eventBus);
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
         ModRecipes.register(eventBus);
-
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::enqueueIMC);
@@ -163,10 +164,6 @@ public class Caveopolis {
             Sheets.addWoodType(ModWoodTypes.CYAN);
 
             MenuScreens.register(ModMenuTypes.SPRAYER_MENU.get(), SprayerScreen::new);
-
-
-            //      ItemBlockRenderTypes.setRenderLayer(ModBlocks.STONE_TORCH.get(), RenderType.cutout());
-      //      ItemBlockRenderTypes.setRenderLayer(ModBlocks.STONE_WALL_TORCH.get(), RenderType.cutout());
 
         });
     }

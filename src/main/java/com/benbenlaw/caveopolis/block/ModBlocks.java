@@ -68,15 +68,18 @@ import com.benbenlaw.caveopolis.block.custom.sign.yellow.YellowHangingSignBlock;
 import com.benbenlaw.caveopolis.block.custom.sign.yellow.YellowStandingSignBlock;
 import com.benbenlaw.caveopolis.block.custom.sign.yellow.YellowWallHangingSignBlock;
 import com.benbenlaw.caveopolis.block.custom.sign.yellow.YellowWallSignBlock;
+import com.benbenlaw.caveopolis.block.custom.torches.*;
 import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.util.ModWoodTypes;
 import com.benbenlaw.caveopolis.worldgen.tree.*;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -98,6 +101,105 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, Caveopolis.MOD_ID);
 
     //New Blocks
+
+
+
+    public static final RegistryObject<Block> BLUE_TORCH = BLOCKS.register("blue_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> BLUE_WALL_TORCH = BLOCKS.register("blue_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BLUE_TORCH)));
+
+    public static final RegistryObject<Block> RED_TORCH = BLOCKS.register("red_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> RED_WALL_TORCH = BLOCKS.register("red_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.RED_TORCH)));
+
+    public static final RegistryObject<Block> GREEN_TORCH = BLOCKS.register("green_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> GREEN_WALL_TORCH = BLOCKS.register("green_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.GREEN_TORCH)));
+
+    public static final RegistryObject<Block> BLACK_TORCH = BLOCKS.register("black_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> BLACK_WALL_TORCH = BLOCKS.register("black_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BLACK_TORCH)));
+
+    public static final RegistryObject<Block> WHITE_TORCH = BLOCKS.register("white_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> WHITE_WALL_TORCH = BLOCKS.register("white_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.WHITE_TORCH)));
+
+    public static final RegistryObject<Block> YELLOW_TORCH = BLOCKS.register("yellow_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> YELLOW_WALL_TORCH = BLOCKS.register("yellow_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.YELLOW_TORCH)));
+
+    public static final RegistryObject<Block> ORANGE_TORCH = BLOCKS.register("orange_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> ORANGE_WALL_TORCH = BLOCKS.register("orange_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.ORANGE_TORCH)));
+
+    public static final RegistryObject<Block> BROWN_TORCH = BLOCKS.register("brown_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> BROWN_WALL_TORCH = BLOCKS.register("brown_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BROWN_TORCH)));
+
+    public static final RegistryObject<Block> LIME_TORCH = BLOCKS.register("lime_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> LIME_WALL_TORCH = BLOCKS.register("lime_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIME_TORCH)));
+
+    public static final RegistryObject<Block> MAGENTA_TORCH = BLOCKS.register("magenta_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> MAGENTA_WALL_TORCH = BLOCKS.register("magenta_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.MAGENTA_TORCH)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_TORCH = BLOCKS.register("light_blue_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_WALL_TORCH = BLOCKS.register("light_blue_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIGHT_BLUE_TORCH)));
+
+    public static final RegistryObject<Block> CYAN_TORCH = BLOCKS.register("cyan_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> CYAN_WALL_TORCH = BLOCKS.register("cyan_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.CYAN_TORCH)));
+
+    public static final RegistryObject<Block> PURPLE_TORCH = BLOCKS.register("purple_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> PURPLE_WALL_TORCH = BLOCKS.register("purple_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.PURPLE_TORCH)));
+
+    public static final RegistryObject<Block> GRAY_TORCH = BLOCKS.register("gray_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> GRAY_WALL_TORCH = BLOCKS.register("gray_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.GRAY_TORCH)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_TORCH = BLOCKS.register("light_gray_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_WALL_TORCH = BLOCKS.register("light_gray_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIGHT_GRAY_TORCH)));
+
+    public static final RegistryObject<Block> PINK_TORCH = BLOCKS.register("pink_torch",
+            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+
+    public static final RegistryObject<Block> PINK_WALL_TORCH = BLOCKS.register("pink_wall_torch",
+            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.PINK_TORCH)));
+
 
     public static final RegistryObject<Block> COLORED_CAVES_PORTAL = registerBlock("colored_caves_portal",
             () -> new ColoredCavesPortalBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).strength(1f).sound(SoundType.METAL)));
@@ -133,8 +235,83 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(3.0F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
+    //Colored Stone
 
-//Colored Stone
+    public static final RegistryObject<Block> WHITE_DIRT = registerBlock("white_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> ORANGE_DIRT = registerBlock("orange_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> MAGENTA_DIRT = registerBlock("magenta_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> LIGHT_BLUE_DIRT = registerBlock("light_blue_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> YELLOW_DIRT = registerBlock("yellow_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> LIME_DIRT = registerBlock("lime_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> PINK_DIRT = registerBlock("pink_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> BLACK_DIRT = registerBlock("black_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> RED_DIRT = registerBlock("red_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> BLUE_DIRT = registerBlock("blue_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> GREEN_DIRT = registerBlock("green_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> CYAN_DIRT = registerBlock("cyan_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> LIGHT_GRAY_DIRT = registerBlock("light_gray_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> GRAY_DIRT = registerBlock("gray_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> BROWN_DIRT = registerBlock("brown_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+    public static final RegistryObject<Block> PURPLE_DIRT = registerBlock("purple_dirt",
+            () -> new BrightFullBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission(15))));
+
+
+
+
+
+
+
+
+
+
+
+    //Colored Stone
 
 
     public static final RegistryObject<Block> WHITE_COLORED_STONE = registerBlock("white_colored_stone",
@@ -1787,66 +1964,82 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WHITE_COLORED_LEAVES = registerBlock("white_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> LIGHT_GRAY_COLORED_LEAVES = registerBlock("light_gray_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> LIGHT_BLUE_COLORED_LEAVES = registerBlock("light_blue_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> BLUE_COLORED_LEAVES = registerBlock("blue_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> GRAY_COLORED_LEAVES = registerBlock("gray_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> PINK_COLORED_LEAVES = registerBlock("pink_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> GREEN_COLORED_LEAVES = registerBlock("green_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> LIME_COLORED_LEAVES = registerBlock("lime_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> YELLOW_COLORED_LEAVES = registerBlock("yellow_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> MAGENTA_COLORED_LEAVES = registerBlock("magenta_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> PURPLE_COLORED_LEAVES = registerBlock("purple_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> BLACK_COLORED_LEAVES = registerBlock("black_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> CYAN_COLORED_LEAVES = registerBlock("cyan_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> BROWN_COLORED_LEAVES = registerBlock("brown_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> RED_COLORED_LEAVES = registerBlock("red_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
             ));
     public static final RegistryObject<Block> ORANGE_COLORED_LEAVES = registerBlock("orange_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
+                    .noOcclusion()
                     .lightLevel(litBlockEmission(15))
                     ));
 
@@ -2000,13 +2193,6 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> BLACK_COLORED_WOODEN_PLANK_CRAFTING_TABLE = registerBlock("black_colored_wooden_plank_crafting_table",
             () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission(15))));
-
-
-
-
-
-
-
 
     private static ToIntFunction<BlockState> litBlockEmission(int lightLevel) {
         return (blockState) -> blockState.getValue(BlockStateProperties.LIT) ? lightLevel : 0;

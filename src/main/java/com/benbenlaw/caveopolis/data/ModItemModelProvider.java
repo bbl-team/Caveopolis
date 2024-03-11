@@ -43,6 +43,41 @@ public class ModItemModelProvider extends ItemModelProvider {
     //    simpleItem(ModItems.CYAN_SPRAY_CAN);
     //    simpleItem(ModItems.GLOWSTONE_SPRAY_CAN);
     //    simpleItem(ModItems.SPRAY_CAN_REMOVER);
+
+        simpleItem(ModItems.BROWN_APPLE);
+        simpleItem(ModItems.MAGENTA_APPLE);
+        simpleItem(ModItems.PURPLE_APPLE);
+        simpleItem(ModItems.WHITE_APPLE);
+        simpleItem(ModItems.YELLOW_APPLE);
+        simpleItem(ModItems.LIGHT_GRAY_APPLE);
+        simpleItem(ModItems.LIGHT_BLUE_APPLE);
+        simpleItem(ModItems.BLUE_APPLE);
+        simpleItem(ModItems.GRAY_APPLE);
+        simpleItem(ModItems.PINK_APPLE);
+        simpleItem(ModItems.RED_APPLE);
+        simpleItem(ModItems.BLACK_APPLE);
+        simpleItem(ModItems.ORANGE_APPLE);
+        simpleItem(ModItems.GREEN_APPLE);
+        simpleItem(ModItems.LIME_APPLE);
+        simpleItem(ModItems.CYAN_APPLE);
+        
+        simpleTorch(ModBlocks.BROWN_TORCH);
+        simpleTorch(ModBlocks.MAGENTA_TORCH);
+        simpleTorch(ModBlocks.PURPLE_TORCH);
+        simpleTorch(ModBlocks.WHITE_TORCH);
+        simpleTorch(ModBlocks.YELLOW_TORCH);
+        simpleTorch(ModBlocks.LIGHT_GRAY_TORCH);
+        simpleTorch(ModBlocks.LIGHT_BLUE_TORCH);
+        simpleTorch(ModBlocks.BLUE_TORCH);
+        simpleTorch(ModBlocks.GRAY_TORCH);
+        simpleTorch(ModBlocks.PINK_TORCH);
+        simpleTorch(ModBlocks.RED_TORCH);
+        simpleTorch(ModBlocks.BLACK_TORCH);
+        simpleTorch(ModBlocks.ORANGE_TORCH);
+        simpleTorch(ModBlocks.GREEN_TORCH);
+        simpleTorch(ModBlocks.LIME_TORCH);
+        simpleTorch(ModBlocks.CYAN_TORCH);
+
         simpleItem(ModItems.STONE_STICK);
         simpleItem(ModItems.MOSS_BALL);
         simpleItem(ModItems.MOSSY_STRING);

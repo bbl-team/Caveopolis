@@ -16,6 +16,8 @@ public class ModTags {
 
 
         public static final TagKey<Block> COLORED_STONE = tag("colored_stone");
+        public static final TagKey<Block> COLORED_DIRT = tag("colored_dirt");
+        public static final TagKey<Block> COLORED_TORCHES = tag("colored_torches");
         public static final TagKey<Block> COLORED_BRIGHT_STONE = tag("colored_bright_stone");
         public static final TagKey<Block> COLORED_STONE_BRICKS = tag("colored_stone_bricks");
 
@@ -115,6 +117,9 @@ public class ModTags {
         public static final TagKey<Item> SPRAY_CANS = tag("spray_cans");
 
         public static final TagKey<Item> COLORED_STONE = tag("colored_stone");
+        public static final TagKey<Item> COLORED_DIRT = tag("colored_dirt");
+        public static final TagKey<Item> COLORED_TORCHES = tag("colored_torches");
+
         public static final TagKey<Item> COLORED_BRIGHT_STONE = tag("colored_bright_stone");
         public static final TagKey<Item> COLORED_STONE_BRICKS = tag("colored_stone_bricks");
 

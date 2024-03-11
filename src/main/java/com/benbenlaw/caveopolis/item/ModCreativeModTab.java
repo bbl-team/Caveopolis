@@ -24,6 +24,57 @@ public class ModCreativeModTab {
                 output.accept(ModBlocks.SPRAYER.get());
                 output.accept(ModBlocks.COLORED_CAVES_PORTAL.get());
 
+                output.accept(ModBlocks.BROWN_TORCH.get());
+                output.accept(ModBlocks.MAGENTA_TORCH.get());
+                output.accept(ModBlocks.PURPLE_TORCH.get());
+                output.accept(ModBlocks.WHITE_TORCH.get());
+                output.accept(ModBlocks.YELLOW_TORCH.get());
+                output.accept(ModBlocks.LIGHT_GRAY_TORCH.get());
+                output.accept(ModBlocks.BLUE_TORCH.get());
+                output.accept(ModBlocks.LIGHT_BLUE_TORCH.get());
+                output.accept(ModBlocks.GRAY_TORCH.get());
+                output.accept(ModBlocks.PINK_TORCH.get());
+                output.accept(ModBlocks.RED_TORCH.get());
+                output.accept(ModBlocks.BLACK_TORCH.get());
+                output.accept(ModBlocks.ORANGE_TORCH.get());
+                output.accept(ModBlocks.GREEN_TORCH.get());
+                output.accept(ModBlocks.LIME_TORCH.get());
+                output.accept(ModBlocks.CYAN_TORCH.get());
+
+                output.accept(ModBlocks.BROWN_DIRT.get());
+                output.accept(ModBlocks.MAGENTA_DIRT.get());
+                output.accept(ModBlocks.PURPLE_DIRT.get());
+                output.accept(ModBlocks.WHITE_DIRT.get());
+                output.accept(ModBlocks.YELLOW_DIRT.get());
+                output.accept(ModBlocks.LIGHT_GRAY_DIRT.get());
+                output.accept(ModBlocks.BLUE_DIRT.get());
+                output.accept(ModBlocks.LIGHT_BLUE_DIRT.get());
+                output.accept(ModBlocks.GRAY_DIRT.get());
+                output.accept(ModBlocks.PINK_DIRT.get());
+                output.accept(ModBlocks.RED_DIRT.get());
+                output.accept(ModBlocks.BLACK_DIRT.get());
+                output.accept(ModBlocks.ORANGE_DIRT.get());
+                output.accept(ModBlocks.GREEN_DIRT.get());
+                output.accept(ModBlocks.LIME_DIRT.get());
+                output.accept(ModBlocks.CYAN_DIRT.get());
+                
+                output.accept(ModItems.BROWN_APPLE.get());
+                output.accept(ModItems.MAGENTA_APPLE.get());
+                output.accept(ModItems.PURPLE_APPLE.get());
+                output.accept(ModItems.WHITE_APPLE.get());
+                output.accept(ModItems.YELLOW_APPLE.get());
+                output.accept(ModItems.LIGHT_GRAY_APPLE.get());
+                output.accept(ModItems.BLUE_APPLE.get());
+                output.accept(ModItems.LIGHT_BLUE_APPLE.get());
+                output.accept(ModItems.GRAY_APPLE.get());
+                output.accept(ModItems.PINK_APPLE.get());
+                output.accept(ModItems.RED_APPLE.get());
+                output.accept(ModItems.BLACK_APPLE.get());
+                output.accept(ModItems.ORANGE_APPLE.get());
+                output.accept(ModItems.GREEN_APPLE.get());
+                output.accept(ModItems.LIME_APPLE.get());
+                output.accept(ModItems.CYAN_APPLE.get());
+
                 output.accept(ModBlocks.BLUE_COLORED_STONE.get());
                 output.accept(ModBlocks.BLUE_COLORED_STONE_BRICKS.get());
                 output.accept(ModBlocks.BLUE_COLORED_STONE_BRICK_SLAB.get());

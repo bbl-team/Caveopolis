@@ -1,7 +1,16 @@
 Caveopolis Mod Changelog
 
-//TODO: More coloured blocks
-//TODO: Add a colorful biome
+//todo fix stupid BlockBehaviour.StatePredicate for .isSuffocating() leaves
+
+2.10.0
+
+Added Colored Dirt
+Added Colored Torches
+
+2.9.0
+
+Added colored apples
+Added botany trees support
 
 2.8.4
 

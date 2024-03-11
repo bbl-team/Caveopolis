@@ -5,6 +5,7 @@ import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.item.custom.*;
 import net.minecraft.core.Direction;
 import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
@@ -17,6 +18,58 @@ import net.minecraftforge.registries.RegistryObject;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Caveopolis.MOD_ID);
+
+    //Apples
+
+    public static final RegistryObject<Item> BLACK_APPLE = ITEMS.register("black_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> MAGENTA_APPLE = ITEMS.register("magenta_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> PINK_APPLE = ITEMS.register("pink_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> YELLOW_APPLE = ITEMS.register("yellow_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> LIME_APPLE = ITEMS.register("lime_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> GREEN_APPLE = ITEMS.register("green_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> LIGHT_BLUE_APPLE = ITEMS.register("light_blue_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> CYAN_APPLE = ITEMS.register("cyan_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> ORANGE_APPLE = ITEMS.register("orange_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> RED_APPLE = ITEMS.register("red_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> PURPLE_APPLE = ITEMS.register("purple_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> BROWN_APPLE = ITEMS.register("brown_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+    public static final RegistryObject<Item> WHITE_APPLE = ITEMS.register("white_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+    public static final RegistryObject<Item> BLUE_APPLE = ITEMS.register("blue_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+    public static final RegistryObject<Item> LIGHT_GRAY_APPLE = ITEMS.register("light_gray_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+    public static final RegistryObject<Item> GRAY_APPLE = ITEMS.register("gray_apple",
+            () -> new Item(new Item.Properties().food(Foods.APPLE)));
+
+
+
+
+
 
     //New Items
 
@@ -101,6 +154,73 @@ public class ModItems {
     public static final RegistryObject<Item> STONE_TORCH = ITEMS.register("stone_torch",
             () -> new StandingAndWallBlockItem(ModBlocks.STONE_TORCH.get(), ModBlocks.STONE_WALL_TORCH.get(),
                     new Item.Properties(), Direction.DOWN));
+
+
+    public static final RegistryObject<Item> BLUE_TORCH = ITEMS.register("blue_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.BLUE_TORCH.get(), ModBlocks.BLUE_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> BLACK_TORCH = ITEMS.register("black_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.BLACK_TORCH.get(), ModBlocks.BLACK_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> RED_TORCH = ITEMS.register("red_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.RED_TORCH.get(), ModBlocks.RED_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> GREEN_TORCH = ITEMS.register("green_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.GREEN_TORCH.get(), ModBlocks.GREEN_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> BROWN_TORCH = ITEMS.register("brown_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.BROWN_TORCH.get(), ModBlocks.BROWN_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> PURPLE_TORCH = ITEMS.register("purple_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.PURPLE_TORCH.get(), ModBlocks.PURPLE_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> CYAN_TORCH = ITEMS.register("cyan_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.CYAN_TORCH.get(), ModBlocks.CYAN_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> ORANGE_TORCH = ITEMS.register("orange_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.ORANGE_TORCH.get(), ModBlocks.ORANGE_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> LIGHT_BLUE_TORCH = ITEMS.register("light_blue_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.LIGHT_BLUE_TORCH.get(), ModBlocks.LIGHT_BLUE_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> MAGENTA_TORCH = ITEMS.register("magenta_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.MAGENTA_TORCH.get(), ModBlocks.MAGENTA_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> PINK_TORCH = ITEMS.register("pink_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.PINK_TORCH.get(), ModBlocks.PINK_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> LIME_TORCH = ITEMS.register("lime_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.LIME_TORCH.get(), ModBlocks.LIME_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> YELLOW_TORCH = ITEMS.register("yellow_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.YELLOW_TORCH.get(), ModBlocks.YELLOW_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> LIGHT_GRAY_TORCH = ITEMS.register("light_gray_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.LIGHT_GRAY_TORCH.get(), ModBlocks.LIGHT_GRAY_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> GRAY_TORCH = ITEMS.register("gray_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.GRAY_TORCH.get(), ModBlocks.GRAY_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+    public static final RegistryObject<Item> WHITE_TORCH = ITEMS.register("white_torch",
+            () -> new StandingAndWallBlockItem(ModBlocks.WHITE_TORCH.get(), ModBlocks.WHITE_WALL_TORCH.get(),
+                    new Item.Properties(), Direction.DOWN));
+
+
 
 
 

@@ -1,4 +1,4 @@
-// 1.20.1	2024-01-05T14:45:47.1943136	Item Tags
+// 1.20.1	2024-03-11T08:07:27.8285835	Item Tags
 c78ada5968685a6ca96af0fb49dde74df66426f6 data/caveopolis/tags/items/banned_from_in_world_spraying.json
 42a14e0c7cfecab025c809c468c8fb21b74fa037 data/caveopolis/tags/items/black_colored_logs.json
 b1fd5a13e6f8ea035e617d75894f72925b64225c data/caveopolis/tags/items/blue_colored_logs.json
@@ -13,6 +13,7 @@ ee665e50be5f44207a997c4c303a6e381230ca27 data/caveopolis/tags/items/colored_cobb
 19a5f712f12a5360a32aaed10a7133e492b26fce data/caveopolis/tags/items/colored_cobblestone_stairs.json
 5211eab912c0d6097b5068a74d6dff18da4d90f7 data/caveopolis/tags/items/colored_cobblestone_wall.json
 25eab00b87366dd7afa6e9e072e85742661f794e data/caveopolis/tags/items/colored_concrete.json
+04abac3f2faabacb2f01012f36e81c8db5bdbd63 data/caveopolis/tags/items/colored_dirt.json
 f6ffd2d7cb5e939dce88a85a6457c52e777bb3e1 data/caveopolis/tags/items/colored_hanging_signs.json
 98457aa8d9808185f6aa76bcbdba9d56c12efd42 data/caveopolis/tags/items/colored_leaves.json
 89b8d87d552264c673411a2cbaa38dbe868214f6 data/caveopolis/tags/items/colored_logs.json
@@ -29,6 +30,7 @@ cd1f92ab88bf0a95f3a0f56c4d1e0b73b92dab39 data/caveopolis/tags/items/colored_ston
 641abd5cf48b7ef31e69c8f9e906246cab0bac90 data/caveopolis/tags/items/colored_stone_slabs.json
 43c226a45c747227a54daef742a061fe140a35fb data/caveopolis/tags/items/colored_stone_stairs.json
 1a558e55eb1bd0fba6346e315a04da61a9f70e75 data/caveopolis/tags/items/colored_stone_wall.json
+79382ec029db4b473842fd0e4a8b8963ae1a9cc7 data/caveopolis/tags/items/colored_torches.json
 9684d10596f93f89891b658565f48ff54d485e5f data/caveopolis/tags/items/colored_wall_hanging_signs.json
 4fb68ec3990de5a4ac89c34fd9e01b40ba7fab14 data/caveopolis/tags/items/colored_wall_signs.json
 063ba529e0b1b51a3bcd72599a2d1f5783204ce5 data/caveopolis/tags/items/colored_wooden_planks.json
@@ -67,6 +69,7 @@ c4f6b4e8062366b08ac0b9faaf43b0e6b3cbab50 data/forge/tags/items/ingots/mixed_ston
 ba3bba9acc2ecbbf21aabe92a1c67df689717a7e data/forge/tags/items/rods/stone.json
 e2feff85afb7e4871204d6f5d72b8760e2780187 data/forge/tags/items/shulker_boxes.json
 7695b5a5a0f2edb5471254ffd713751c466a12c3 data/forge/tags/items/stone.json
+7380493506fb017172e17130054de32af9b53530 data/minecraft/tags/items/dirt.json
 9ede023d0e4c4e1ae872d8343f37dd5b8fc315b4 data/minecraft/tags/items/hanging_signs.json
 7944cdee0a1fb73528d63a81cb5286387c5cdfe1 data/minecraft/tags/items/leaves.json
 f80d302b5dc931529689045b69162799e9508779 data/minecraft/tags/items/logs_that_burn.json

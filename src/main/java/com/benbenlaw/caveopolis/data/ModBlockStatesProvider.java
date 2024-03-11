@@ -33,6 +33,23 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_MIXED_STONE_ORE);
         blockWithItem(ModBlocks.MOSSY_STONE);
 
+        blockWithItem(ModBlocks.BROWN_DIRT);
+        blockWithItem(ModBlocks.MAGENTA_DIRT);
+        blockWithItem(ModBlocks.PURPLE_DIRT);
+        blockWithItem(ModBlocks.WHITE_DIRT);
+        blockWithItem(ModBlocks.YELLOW_DIRT);
+        blockWithItem(ModBlocks.LIGHT_GRAY_DIRT);
+        blockWithItem(ModBlocks.BLUE_DIRT);
+        blockWithItem(ModBlocks.LIGHT_BLUE_DIRT);
+        blockWithItem(ModBlocks.GRAY_DIRT);
+        blockWithItem(ModBlocks.PINK_DIRT);
+        blockWithItem(ModBlocks.RED_DIRT);
+        blockWithItem(ModBlocks.BLACK_DIRT);
+        blockWithItem(ModBlocks.ORANGE_DIRT);
+        blockWithItem(ModBlocks.GREEN_DIRT);
+        blockWithItem(ModBlocks.LIME_DIRT);
+        blockWithItem(ModBlocks.CYAN_DIRT);
+
         //BLACK
         blockWithItem(ModBlocks.BLACK_COLORED_STONE);
         slabBlock((SlabBlock) ModBlocks.BLACK_COLORED_STONE_SLAB.get(), blockTexture(ModBlocks.BLACK_COLORED_STONE.get()),

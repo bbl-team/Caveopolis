@@ -40,4 +40,5 @@ public class FlammableBrightLeavesBlock extends BrightLeavesBlock {
         return 30;
     }
 
+
 }

@@ -1,0 +1,21 @@
+{
+  "values": [
+    "caveopolis:blue_torch",
+    "caveopolis:light_blue_torch",
+    "caveopolis:red_torch",
+    "caveopolis:yellow_torch",
+    "caveopolis:gray_torch",
+    "caveopolis:green_torch",
+    "caveopolis:light_gray_torch",
+    "caveopolis:lime_torch",
+    "caveopolis:purple_torch",
+    "caveopolis:magenta_torch",
+    "caveopolis:pink_torch",
+    "caveopolis:black_torch",
+    "caveopolis:white_torch",
+    "caveopolis:orange_torch",
+    "caveopolis:brown_torch",
+    "caveopolis:cyan_torch",
+    "minecraft:torch"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "values": [
+    "caveopolis:blue_dirt",
+    "caveopolis:light_blue_dirt",
+    "caveopolis:red_dirt",
+    "caveopolis:yellow_dirt",
+    "caveopolis:gray_dirt",
+    "caveopolis:green_dirt",
+    "caveopolis:light_gray_dirt",
+    "caveopolis:lime_dirt",
+    "caveopolis:purple_dirt",
+    "caveopolis:magenta_dirt",
+    "caveopolis:pink_dirt",
+    "caveopolis:black_dirt",
+    "caveopolis:white_dirt",
+    "caveopolis:orange_dirt",
+    "caveopolis:brown_dirt",
+    "caveopolis:cyan_dirt",
+    "minecraft:dirt"
+  ]
+}
