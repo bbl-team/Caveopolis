@@ -2,7 +2,6 @@ package com.benbenlaw.caveopolis.item;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
-import com.benbenlaw.caveopolis.item.custom.*;
 import net.minecraft.core.Direction;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
@@ -10,6 +9,7 @@ import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SignItem;
 import net.minecraft.world.item.StandingAndWallBlockItem;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -74,58 +74,58 @@ public class ModItems {
     //New Items
 
     public static final RegistryObject<Item> GLOWSTONE_SPRAY_CAN = ITEMS.register("glowstone_spray_can",
-            () -> new GlowstoneSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), null));
 
     public static final RegistryObject<Item> WHITE_SPRAY_CAN = ITEMS.register("white_spray_can",
-            () -> new WhiteSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.WHITE_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> GRAY_SPRAY_CAN = ITEMS.register("gray_spray_can",
-            () -> new GraySprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.GRAY_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> LIGHT_GRAY_SPRAY_CAN = ITEMS.register("light_gray_spray_can",
-            () -> new LightGraySprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.LIGHT_GRAY_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> PINK_SPRAY_CAN = ITEMS.register("pink_spray_can",
-            () -> new PinkSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.PINK_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> LIME_SPRAY_CAN = ITEMS.register("lime_spray_can",
-            () -> new LimeSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.LIME_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> YELLOW_SPRAY_CAN = ITEMS.register("yellow_spray_can",
-            () -> new YellowSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.YELLOW_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> LIGHT_BLUE_SPRAY_CAN = ITEMS.register("light_blue_spray_can",
-            () -> new LightBlueSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.LIGHT_BLUE_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> MAGENTA_SPRAY_CAN = ITEMS.register("magenta_spray_can",
-            () -> new MagentaSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.MAGENTA_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> ORANGE_SPRAY_CAN = ITEMS.register("orange_spray_can",
-            () -> new OrangeSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.ORANGE_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> CYAN_SPRAY_CAN = ITEMS.register("cyan_spray_can",
-            () -> new CyanSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.CYAN_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> PURPLE_SPRAY_CAN = ITEMS.register("purple_spray_can",
-            () -> new PurpleSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.PURPLE_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> BLUE_SPRAY_CAN = ITEMS.register("blue_spray_can",
-            () -> new BlueSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.BLUE_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> BROWN_SPRAY_CAN = ITEMS.register("brown_spray_can",
-            () -> new BrownSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.BROWN_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> GREEN_SPRAY_CAN = ITEMS.register("green_spray_can",
-            () -> new GreenSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.GREEN_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> RED_SPRAY_CAN = ITEMS.register("red_spray_can",
-            () -> new RedSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.RED_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> BLACK_SPRAY_CAN = ITEMS.register("black_spray_can",
-            () -> new BlackSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(256), ModBlocks.BLACK_WALL_TORCH.get()));
 
     public static final RegistryObject<Item> SPRAY_CAN_REMOVER = ITEMS.register("spray_can_remover",
-            () -> new SprayCanRemoverItem(new Item.Properties()));
+            () -> new ColorSprayCanItem(new Item.Properties(), Blocks.WALL_TORCH));
 
     public static final RegistryObject<Item> STONE_STICK = ITEMS.register("stone_stick",
             () -> new Item(new Item.Properties()));

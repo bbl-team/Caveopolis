@@ -29,6 +29,26 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider p_256380_) {
 
+        this.tag(ModTags.Items.COLORED_APPLES)
+                .add(ModItems.BLUE_APPLE.get().asItem())
+                .add(ModItems.LIGHT_BLUE_APPLE.get().asItem())
+                .add(ModItems.RED_APPLE.get().asItem())
+                .add(ModItems.YELLOW_APPLE.get().asItem())
+                .add(ModItems.GRAY_APPLE.get().asItem())
+                .add(ModItems.GREEN_APPLE.get().asItem())
+                .add(ModItems.LIGHT_GRAY_APPLE.get().asItem())
+                .add(ModItems.LIME_APPLE.get().asItem())
+                .add(ModItems.PURPLE_APPLE.get().asItem())
+                .add(ModItems.MAGENTA_APPLE.get().asItem())
+                .add(ModItems.PINK_APPLE.get().asItem())
+                .add(ModItems.BLACK_APPLE.get().asItem())
+                .add(ModItems.WHITE_APPLE.get().asItem())
+                .add(ModItems.ORANGE_APPLE.get().asItem())
+                .add(ModItems.BROWN_APPLE.get().asItem())
+                .add(ModItems.CYAN_APPLE.get().asItem())
+                .add(Items.APPLE.asItem())
+        ;
+
         this.tag(ModTags.Items.COLORED_TORCHES)
                 .add(ModBlocks.BLUE_TORCH.get().asItem())
                 .add(ModBlocks.LIGHT_BLUE_TORCH.get().asItem())

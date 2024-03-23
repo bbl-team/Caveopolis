@@ -2,7 +2,7 @@ package com.benbenlaw.caveopolis;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.block.entity.ModBlockEntities;
-import com.benbenlaw.caveopolis.block.networking.ModMessages;
+import com.benbenlaw.caveopolis.networking.ModMessages;
 import com.benbenlaw.caveopolis.config.ConfigFile;
 import com.benbenlaw.caveopolis.item.ModCreativeModTab;
 import com.benbenlaw.caveopolis.item.ModItems;
@@ -11,13 +11,9 @@ import com.benbenlaw.caveopolis.recipe.ModRecipes;
 import com.benbenlaw.caveopolis.screen.ModMenuTypes;
 import com.benbenlaw.caveopolis.screen.SprayerScreen;
 import com.benbenlaw.caveopolis.util.ModItemProperties;
-import com.benbenlaw.caveopolis.util.ModTags;
 import com.benbenlaw.caveopolis.util.ModWoodTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
@@ -115,11 +111,9 @@ public class Caveopolis {
             ComposterBlock.COMPOSTABLES.put(ModBlocks.LIME_COLORED_SAPLING.get().asItem(),  0.3F);
             ComposterBlock.COMPOSTABLES.put(ModBlocks.LIME_COLORED_LEAVES.get().asItem(),  0.3F);
 
+            ModMessages.register();
+
         });
-
-        event.enqueueWork(ModMessages::register);
-
-
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

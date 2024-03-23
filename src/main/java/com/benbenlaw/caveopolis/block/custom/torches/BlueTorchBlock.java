@@ -4,8 +4,8 @@ import com.benbenlaw.caveopolis.particles.ModParticles;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.block.TorchBlock;
 
-public class BlueTorchBlock extends TorchBlock {
+public class BlueTorchBlock extends ModTorchBlock {
     public BlueTorchBlock(Properties pProperties) {
-        super(pProperties, ParticleTypes.FLAME);
+        super(pProperties, ModParticles.BLUE_FLAME_PARTICLES::get);
     }
 }

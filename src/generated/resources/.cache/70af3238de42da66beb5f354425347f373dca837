@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-11T08:07:27.8225467	Block Tags
+// 1.20.1	2024-03-11T11:20:12.0329621	Block Tags
 c78ada5968685a6ca96af0fb49dde74df66426f6 data/caveopolis/tags/blocks/banned_from_in_world_spraying.json
 42a14e0c7cfecab025c809c468c8fb21b74fa037 data/caveopolis/tags/blocks/black_colored_logs.json
 b1fd5a13e6f8ea035e617d75894f72925b64225c data/caveopolis/tags/blocks/blue_colored_logs.json
@@ -80,6 +80,7 @@ fb7605d4441bf4201dce973e6e59364024dd90b2 data/minecraft/tags/blocks/signs.json
 0faede20a76ff0b743c5fc439457f5a02131bd6b data/minecraft/tags/blocks/stone_bricks.json
 fe38749b14723a7e1b8a37c905ad0b3483d421c3 data/minecraft/tags/blocks/stone_ore_replaceables.json
 f54bb15794f727fb25cccdafd755f7a709bf93c8 data/minecraft/tags/blocks/walls.json
+f97596cab0eb36341d68d05fd7dae1ecceff9dec data/minecraft/tags/blocks/wall_post_override.json
 efa1e505673119fbf7ad52aa2729d353a90df948 data/minecraft/tags/blocks/wooden_buttons.json
 f9d4b6a1f3f3486b5cc3d9ba890ec98629072752 data/minecraft/tags/blocks/wooden_doors.json
 c80a12e3d7c4ef8047b20bc8cc7fa793d262dc49 data/minecraft/tags/blocks/wooden_fences.json

@@ -1,9 +1,10 @@
-// 1.20.1	2024-03-11T08:07:27.8285835	Item Tags
+// 1.20.1	2024-03-11T11:14:32.0985818	Item Tags
 c78ada5968685a6ca96af0fb49dde74df66426f6 data/caveopolis/tags/items/banned_from_in_world_spraying.json
 42a14e0c7cfecab025c809c468c8fb21b74fa037 data/caveopolis/tags/items/black_colored_logs.json
 b1fd5a13e6f8ea035e617d75894f72925b64225c data/caveopolis/tags/items/blue_colored_logs.json
 430a587a82f0222edff7421a378f0c081a336833 data/caveopolis/tags/items/bright_items.json
 e65b4509c754c92ed856e581feb7a00d58935994 data/caveopolis/tags/items/brown_colored_logs.json
+80c504514b99afe100f4c1ac4597e633695a8260 data/caveopolis/tags/items/colored_apples.json
 76c22ae56c111dacc9db0a187831805db98b53b1 data/caveopolis/tags/items/colored_cobblestone.json
 022d1cfb5f2399a367ad16ef6cd0b42049a59b74 data/caveopolis/tags/items/colored_cobblestone_bricks.json
 b48781aca10b5648c886f88357a831e3e39ee058 data/caveopolis/tags/items/colored_cobblestone_brick_slabs.json

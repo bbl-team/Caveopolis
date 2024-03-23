@@ -1,4 +1,4 @@
-package com.benbenlaw.caveopolis.block.networking.packets;
+package com.benbenlaw.caveopolis.networking.packets;
 
 import com.benbenlaw.opolisutilities.util.inventory.IInventoryHandlingBlockEntity;
 import net.minecraft.client.Minecraft;

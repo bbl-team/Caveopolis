@@ -1,7 +1,7 @@
 package com.benbenlaw.caveopolis.block.entity;
 
-import com.benbenlaw.caveopolis.block.networking.ModMessages;
-import com.benbenlaw.caveopolis.block.networking.packets.PacketSyncItemStackToClient;
+import com.benbenlaw.caveopolis.networking.ModMessages;
+import com.benbenlaw.caveopolis.networking.packets.PacketSyncItemStackToClient;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.screen.SprayerMenu;
 import com.benbenlaw.caveopolis.util.ModTags;

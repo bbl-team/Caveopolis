@@ -2,9 +2,23 @@ Caveopolis Mod Changelog
 
 //todo fix stupid BlockBehaviour.StatePredicate for .isSuffocating() leaves
 
+2.11.0
+
+Fixed botany recipes loading without botany pots installed
+Absolute colossal rework of the spray cans
+    - Spray cans now use one base class instead of a class for each color
+
+Spray can improvements
+
+2.10.2
+
+Fixed leaves not dropping when using shears
+
 2.10.1
 
-Added custom particles
+Added custom particles for torches
+Added "colored_apples" tag
+Stone torches now correctly create wall posts when placed on walls
 
 2.10.0
 

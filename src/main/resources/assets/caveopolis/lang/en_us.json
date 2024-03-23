@@ -787,7 +787,12 @@
   "biome.caveopolis.colored_caves": "Colored Caves",
 
   "tooltips.spray_can.hover.shift": "Press SHIFT for more info",
-  "tooltips.spray_can.shift.held": "Right click to spray blocks in world!",
+  "tooltips.spray_can.shift.held_1": "Right click to spray blocks in world!",
+  "tooltips.spray_can.shift.held_2": "When in off hand right click and shift right click to set two positions!",
+  "tooltips.spray_can.shift.held_3": "Press I to mass spray blocks in that area!",
+  "tooltips.spray_can.invalid_block": "This block cannot be converted in world, try the sprayer block instead!",
+  "tooltips.spray_can.pos_1": "Setting Position 1",
+  "tooltips.spray_can.pos_2": "Setting Position 2",
 
   "itemGroup.caveopolis": "Caveopolis",
 

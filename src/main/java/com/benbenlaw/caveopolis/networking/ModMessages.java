@@ -1,8 +1,10 @@
-package com.benbenlaw.caveopolis.block.networking;
+package com.benbenlaw.caveopolis.networking;
 
 import com.benbenlaw.caveopolis.Caveopolis;
-import com.benbenlaw.caveopolis.block.networking.packets.PacketSyncItemStackToClient;
+import com.benbenlaw.caveopolis.networking.packets.ExampleC2SPacket;
+import com.benbenlaw.caveopolis.networking.packets.PacketSyncItemStackToClient;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.network.NetworkDirection;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
@@ -33,9 +35,21 @@ public class ModMessages {
                 .consumerMainThread(PacketSyncItemStackToClient::handle)
                 .add();
 
+        net.messageBuilder(ExampleC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(ExampleC2SPacket::new)
+                .encoder(ExampleC2SPacket::toBytes)
+                .consumerMainThread(ExampleC2SPacket::handle)
+                .add();
+
     }
 
+    public static <MSG> void sendToServer(MSG message) {
+        INSTANCE.sendToServer(message);
+    }
 
+    public static <MSG> void sendToPlayer(MSG message, ServerPlayer player) {
+        INSTANCE.send(PacketDistributor.PLAYER.with(() -> player), message);
+    }
     public static <MSG> void sendToClients(MSG message) {
         INSTANCE.send(PacketDistributor.ALL.noArg(), message);
     }

@@ -105,94 +105,94 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> BLUE_TORCH = BLOCKS.register("blue_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new BlueTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> BLUE_WALL_TORCH = BLOCKS.register("blue_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BLUE_TORCH)));
+            () -> new BlueWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BLUE_TORCH)));
 
     public static final RegistryObject<Block> RED_TORCH = BLOCKS.register("red_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new RedTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> RED_WALL_TORCH = BLOCKS.register("red_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.RED_TORCH)));
+            () -> new RedWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.RED_TORCH)));
 
     public static final RegistryObject<Block> GREEN_TORCH = BLOCKS.register("green_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new GreenTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> GREEN_WALL_TORCH = BLOCKS.register("green_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.GREEN_TORCH)));
+            () -> new GreenWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.GREEN_TORCH)));
 
     public static final RegistryObject<Block> BLACK_TORCH = BLOCKS.register("black_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new BlackTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> BLACK_WALL_TORCH = BLOCKS.register("black_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BLACK_TORCH)));
+            () -> new BlackWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BLACK_TORCH)));
 
     public static final RegistryObject<Block> WHITE_TORCH = BLOCKS.register("white_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new WhiteTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> WHITE_WALL_TORCH = BLOCKS.register("white_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.WHITE_TORCH)));
+            () -> new WhiteWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.WHITE_TORCH)));
 
     public static final RegistryObject<Block> YELLOW_TORCH = BLOCKS.register("yellow_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new YellowTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> YELLOW_WALL_TORCH = BLOCKS.register("yellow_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.YELLOW_TORCH)));
+            () -> new YellowWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.YELLOW_TORCH)));
 
     public static final RegistryObject<Block> ORANGE_TORCH = BLOCKS.register("orange_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new OrangeTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> ORANGE_WALL_TORCH = BLOCKS.register("orange_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.ORANGE_TORCH)));
+            () -> new OrangeWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.ORANGE_TORCH)));
 
     public static final RegistryObject<Block> BROWN_TORCH = BLOCKS.register("brown_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new BrownTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> BROWN_WALL_TORCH = BLOCKS.register("brown_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BROWN_TORCH)));
+            () -> new BrownWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BROWN_TORCH)));
 
     public static final RegistryObject<Block> LIME_TORCH = BLOCKS.register("lime_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new LimeTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> LIME_WALL_TORCH = BLOCKS.register("lime_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIME_TORCH)));
+            () -> new LimeWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIME_TORCH)));
 
     public static final RegistryObject<Block> MAGENTA_TORCH = BLOCKS.register("magenta_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new MagentaTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> MAGENTA_WALL_TORCH = BLOCKS.register("magenta_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.MAGENTA_TORCH)));
+            () -> new MagentaWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.MAGENTA_TORCH)));
 
     public static final RegistryObject<Block> LIGHT_BLUE_TORCH = BLOCKS.register("light_blue_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new LightBlueTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> LIGHT_BLUE_WALL_TORCH = BLOCKS.register("light_blue_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIGHT_BLUE_TORCH)));
+            () -> new LightBlueWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIGHT_BLUE_TORCH)));
 
     public static final RegistryObject<Block> CYAN_TORCH = BLOCKS.register("cyan_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new CyanTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> CYAN_WALL_TORCH = BLOCKS.register("cyan_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.CYAN_TORCH)));
+            () -> new CyanWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.CYAN_TORCH)));
 
     public static final RegistryObject<Block> PURPLE_TORCH = BLOCKS.register("purple_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new PurpleTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> PURPLE_WALL_TORCH = BLOCKS.register("purple_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.PURPLE_TORCH)));
+            () -> new PurpleWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.PURPLE_TORCH)));
 
     public static final RegistryObject<Block> GRAY_TORCH = BLOCKS.register("gray_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new GrayTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> GRAY_WALL_TORCH = BLOCKS.register("gray_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.GRAY_TORCH)));
+            () -> new GrayWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.GRAY_TORCH)));
 
     public static final RegistryObject<Block> LIGHT_GRAY_TORCH = BLOCKS.register("light_gray_torch",
-            () -> new StoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
+            () -> new LightGrayTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final RegistryObject<Block> LIGHT_GRAY_WALL_TORCH = BLOCKS.register("light_gray_wall_torch",
-            () -> new StoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIGHT_GRAY_TORCH)));
+            () -> new LightGrayWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIGHT_GRAY_TORCH)));
 
     public static final RegistryObject<Block> PINK_TORCH = BLOCKS.register("pink_torch",
             () -> new PinkTorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).lightLevel((state) -> 14)));

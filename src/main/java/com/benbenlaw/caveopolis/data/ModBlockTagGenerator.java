@@ -25,6 +25,11 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
 
+        this.tag(BlockTags.WALL_POST_OVERRIDE)
+                .addTag(ModTags.Blocks.COLORED_TORCHES)
+                .add(ModBlocks.STONE_TORCH.get())
+        ;
+
         this.tag(ModTags.Blocks.COLORED_TORCHES)
                 .add(ModBlocks.BLUE_TORCH.get())
                 .add(ModBlocks.LIGHT_BLUE_TORCH.get())
