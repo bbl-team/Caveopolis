@@ -6,9 +6,18 @@ Caveopolis Mod Changelog
 
 Fixed botany recipes loading without botany pots installed
 Absolute colossal rework of the spray cans
+    - They still work the same as before just additional functionality for off hand mass spraying
     - Spray cans now use one base class instead of a class for each color
+    - Spray can tooltips are now translatable
+    - Spray cans now have a mass spraying ability (off hand right click and shift right click to set positions),
+        Use "S" key to mass spray blocks in that area!
+    - Mass spray works in a Box area of the 2 set positions and replaces ALL valid blocks in that area so you can easily change a large area of multiple different blocks
+    - Key can be changed in the controls menu under the caveopolis category
+    - Spray cans now marked as (BETA) as they are still a work in progress
+    - Spray cans now show as a item in the sprayer category in JEI
 
-Spray can improvements
+
+
 
 2.10.2
 

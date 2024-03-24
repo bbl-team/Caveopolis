@@ -2,7 +2,7 @@ package com.benbenlaw.caveopolis.events.client;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.networking.ModMessages;
-import com.benbenlaw.caveopolis.networking.packets.ExampleC2SPacket;
+import com.benbenlaw.caveopolis.networking.packets.MassSprayingPacket;
 import com.benbenlaw.caveopolis.util.KeyBinding;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.InputEvent;
@@ -20,7 +20,7 @@ public class ClientEvents {
         //        ModMessages.sendToServer(new MassSprayPacket());
        //     }
             if(KeyBinding.MASS_SPRAY.isDown()) {
-                ModMessages.sendToServer(new ExampleC2SPacket());
+                ModMessages.sendToServer(new MassSprayingPacket());
             }
 
         }

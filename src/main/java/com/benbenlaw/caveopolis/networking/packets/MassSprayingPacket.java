@@ -2,6 +2,8 @@ package com.benbenlaw.caveopolis.networking.packets;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.block.custom.brightblock.Brightable;
+import com.benbenlaw.caveopolis.block.custom.torches.ModWallTorchBlock;
+import com.benbenlaw.caveopolis.item.ColorSprayCanItem;
 import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.util.ModTags;
@@ -9,30 +11,33 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraftforge.fml.loading.targets.ForgeServerDevLaunchHandler;
 import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Supplier;
 
-public class ExampleC2SPacket {
-    public ExampleC2SPacket() {
+public class MassSprayingPacket {
+    public MassSprayingPacket() {
 
     }
 
-    public ExampleC2SPacket(FriendlyByteBuf buf) {
+    public MassSprayingPacket(FriendlyByteBuf buf) {
 
     }
 
@@ -74,13 +79,21 @@ public class ExampleC2SPacket {
                         BlockState newBlockRecipe = Block.byItem(recipe.getResultItem(level.registryAccess()).getItem()).withPropertiesOf(blockState);
                         ItemStack sprayCan = recipe.getIngredients().get(0).getItems()[0].getItem().getDefaultInstance();
 
-
-                        //Check for banned blocks, matching blocks and matching spray can dont forget @benbenlaw
+                        //Check for banned blocks, matching blocks and matching spray can dont forget
                         if (targetBlockIngredient.test(blockState.getBlock().asItem().getDefaultInstance()) && sprayCan.getItem() == player.getOffhandItem().getItem() && !blockState.is(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)) {
+                            //Handle Wall Torches due to being a different block
                             if (blockState.getBlock() instanceof WallTorchBlock) {
-                                BlockState wallTorch = ModBlocks.BLUE_WALL_TORCH.get().withPropertiesOf(blockState);
-                                level.setBlockAndUpdate(pos, wallTorch);
-                            } else {
+                                if (newBlockRecipe.getBlock() instanceof TorchBlock) {
+                                    String torch = newBlockRecipe.toString().replace("Block{", "").replace("}", "");
+                                    Block wallTorch = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(torch.replace("torch", "wall_torch")));
+                                    if (wallTorch == null) {
+                                        wallTorch = Blocks.WALL_TORCH;
+                                    }
+                                    level.setBlockAndUpdate(pos, wallTorch.withPropertiesOf(blockState));
+                                }
+                            }
+                            //Standard same block type replacements
+                            else {
                                 level.setBlockAndUpdate(pos, newBlockRecipe);
                             }
                             player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(InteractionHand.OFF_HAND));
@@ -101,5 +114,6 @@ public class ExampleC2SPacket {
         });
         return true;
     }
+
 
 }

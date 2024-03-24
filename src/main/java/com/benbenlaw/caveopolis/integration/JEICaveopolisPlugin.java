@@ -2,6 +2,7 @@ package com.benbenlaw.caveopolis.integration;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
+import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.util.ModTags;
 import mezz.jei.api.IModPlugin;
@@ -47,6 +48,24 @@ public class JEICaveopolisPlugin implements IModPlugin {
     public void registerRecipeCatalysts(@NotNull IRecipeCatalystRegistration registration) {
 
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.SPRAYER.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.SPRAY_CAN_REMOVER.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.GLOWSTONE_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.WHITE_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.BLACK_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.CYAN_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.PURPLE_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.MAGENTA_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.PINK_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.GREEN_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.BROWN_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.ORANGE_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.RED_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.YELLOW_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.LIME_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.GRAY_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.LIGHT_GRAY_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.LIGHT_BLUE_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
+        registration.addRecipeCatalyst(new ItemStack(ModItems.BLUE_SPRAY_CAN.get()), SprayerRecipeCategory.RECIPE_TYPE);
 
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.STONE_CRAFTING_TABLE.get()), RecipeTypes.CRAFTING);
         registration.addRecipeCatalyst(new ItemStack(ModBlocks.WHITE_COLORED_STONE_CRAFTING_TABLE.get()), RecipeTypes.CRAFTING);

@@ -1,7 +1,7 @@
 package com.benbenlaw.caveopolis.networking;
 
 import com.benbenlaw.caveopolis.Caveopolis;
-import com.benbenlaw.caveopolis.networking.packets.ExampleC2SPacket;
+import com.benbenlaw.caveopolis.networking.packets.MassSprayingPacket;
 import com.benbenlaw.caveopolis.networking.packets.PacketSyncItemStackToClient;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
@@ -35,10 +35,10 @@ public class ModMessages {
                 .consumerMainThread(PacketSyncItemStackToClient::handle)
                 .add();
 
-        net.messageBuilder(ExampleC2SPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
-                .decoder(ExampleC2SPacket::new)
-                .encoder(ExampleC2SPacket::toBytes)
-                .consumerMainThread(ExampleC2SPacket::handle)
+        net.messageBuilder(MassSprayingPacket.class, id(), NetworkDirection.PLAY_TO_SERVER)
+                .decoder(MassSprayingPacket::new)
+                .encoder(MassSprayingPacket::toBytes)
+                .consumerMainThread(MassSprayingPacket::handle)
                 .add();
 
     }

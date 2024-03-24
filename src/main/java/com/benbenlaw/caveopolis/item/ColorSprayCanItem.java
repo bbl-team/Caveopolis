@@ -3,6 +3,7 @@ package com.benbenlaw.caveopolis.item;
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.block.custom.torches.ModWallTorchBlock;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
+import com.benbenlaw.caveopolis.util.KeyBinding;
 import com.benbenlaw.caveopolis.util.ModTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
@@ -10,6 +11,7 @@ import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -22,29 +24,29 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
 public class ColorSprayCanItem extends Item {
-    private final Block wallTorchBlock;
-
-    public ColorSprayCanItem(Properties properties, Block wallTorchBlock) {
+    public ColorSprayCanItem(Properties properties) {
         super(properties);
-        this.wallTorchBlock = wallTorchBlock;
     }
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> components, TooltipFlag flag) {
         if (Screen.hasShiftDown()) {
-            components.add(Component.translatable("tooltips.spray_can.shift.held_1").withStyle(ChatFormatting.BLUE));
-            components.add(Component.translatable("tooltips.spray_can.shift.held_2").withStyle(ChatFormatting.BLUE));
-            components.add(Component.translatable("tooltips.spray_can.shift.held_3").withStyle(ChatFormatting.BLUE));
+            components.add(Component.translatable("tooltips.spray_can.shift.held_1").withStyle(ChatFormatting.GREEN));
+            components.add(Component.translatable("tooltips.spray_can.shift.held_2").withStyle(ChatFormatting.GREEN));
+            components.add(Component.translatable("tooltips.spray_can.shift.held_3", KeyBinding.MASS_SPRAY.getTranslatedKeyMessage()).withStyle(ChatFormatting.GREEN));
         } else {
-            components.add(Component.translatable("tooltips.spray_can.hover.shift").withStyle(ChatFormatting.GREEN));
+            components.add(Component.translatable("tooltips.spray_can.hover.shift").withStyle(ChatFormatting.BLUE));
         }
 
         super.appendHoverText(stack, level, components, flag);
@@ -80,10 +82,17 @@ public class ColorSprayCanItem extends Item {
                         ItemStack sprayCan = recipe.getIngredients().get(0).getItems()[0].getItem().getDefaultInstance();
 
                         if (targetBlockIngredient.test(blockState.getBlock().asItem().getDefaultInstance()) && sprayCan.getItem() == this) {
-                            if (blockState.getBlock() instanceof WallTorchBlock && wallTorchBlock != null) {
-                                BlockState wallTorch = wallTorchBlock.defaultBlockState();
-                                level.setBlockAndUpdate(pos, wallTorch);
-                            } else {
+                            if (blockState.getBlock() instanceof WallTorchBlock) {
+                                if (newBlockRecipe.getBlock() instanceof TorchBlock) {
+                                    String torch = newBlockRecipe.toString().replace("Block{", "").replace("}", "");
+                                    Block wallTorch = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(torch.replace("torch", "wall_torch")));
+                                    if (wallTorch == null) {
+                                        wallTorch = Blocks.WALL_TORCH;
+                                    }
+                                    level.setBlockAndUpdate(pos, wallTorch.withPropertiesOf(blockState));
+                                }
+                            }
+                            else {
                                 level.setBlockAndUpdate(pos, newBlockRecipe.getBlock().withPropertiesOf(blockState));
                             }
                             player.getItemInHand(context.getHand()).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));

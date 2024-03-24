@@ -39,7 +39,7 @@ public class SprayerRecipeCategory implements IRecipeCategory<SprayerRecipe> {
 
     @Override
     public Component getTitle() {
-        return Component.literal("Sprayer");
+        return Component.literal("Sprayer / Spraying");
     }
 
     @Override
