@@ -1,14 +1,19 @@
 package com.benbenlaw.caveopolis.item;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
+import com.benbenlaw.caveopolis.block.custom.brightblock.Brightable;
 import com.benbenlaw.caveopolis.block.custom.torches.ModWallTorchBlock;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.util.KeyBinding;
 import com.benbenlaw.caveopolis.util.ModTags;
+import com.benbenlaw.caveopolis.util.SprayCanParticleMappings;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleType;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -28,6 +33,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.TorchBlock;
 import net.minecraft.world.level.block.WallTorchBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -52,6 +58,7 @@ public class ColorSprayCanItem extends Item {
         super.appendHoverText(stack, level, components, flag);
     }
 
+
     @Override
     public @NotNull InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
@@ -66,13 +73,22 @@ public class ColorSprayCanItem extends Item {
             sound = Minecraft.getInstance().options.getSoundSourceVolume(SoundSource.MASTER);
         } else sound = 5;
 
-
         if (!level.isClientSide) {
             if (mainHand) {
                 //Banned block check
+
                 if (blockState.is(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)) {
+                    assert player != null;
                     player.sendSystemMessage(Component.translatable("tooltips.spray_can.invalid_block"));
                     return InteractionResult.FAIL;
+                }
+
+                assert player != null;
+                if (player.getItemInHand(InteractionHand.MAIN_HAND).is(ModItems.GLOWSTONE_SPRAY_CAN.get()) && blockState.getBlock() instanceof Brightable) {
+                    level.setBlockAndUpdate(pos, blockState.cycle(BlockStateProperties.LIT));
+                    player.getItemInHand(context.getHand()).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(player.getUsedItemHand()));
+                    level.playSound(null, pos, SoundEvents.BUBBLE_COLUMN_BUBBLE_POP, SoundSource.PLAYERS, sound, 0.5F);
+                    return InteractionResult.SUCCESS;
                 }
 
                 else {
@@ -120,6 +136,7 @@ public class ColorSprayCanItem extends Item {
                     player.sendSystemMessage(Component.translatable("tooltips.spray_can.pos_2"));
                 }
             }
+
         }
         return InteractionResult.FAIL;
     }

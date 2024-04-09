@@ -5,10 +5,14 @@ import com.benbenlaw.caveopolis.block.custom.brightblock.Brightable;
 import com.benbenlaw.caveopolis.block.custom.torches.ModWallTorchBlock;
 import com.benbenlaw.caveopolis.item.ColorSprayCanItem;
 import com.benbenlaw.caveopolis.item.ModItems;
+import com.benbenlaw.caveopolis.particles.ModParticles;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.util.ModTags;
+import com.benbenlaw.caveopolis.util.SprayCanParticleMappings;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -30,6 +34,8 @@ import net.minecraftforge.fml.loading.targets.ForgeServerDevLaunchHandler;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.function.Supplier;
 
 public class MassSprayingPacket {
@@ -44,6 +50,8 @@ public class MassSprayingPacket {
     public void toBytes(FriendlyByteBuf buf) {
 
     }
+
+
 
     public boolean handle(Supplier<NetworkEvent.Context> supplier) {
         NetworkEvent.Context context = supplier.get();
@@ -73,11 +81,11 @@ public class MassSprayingPacket {
                         player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(InteractionHand.OFF_HAND));
                     }
                 } else {
-
                     for (SprayerRecipe recipe : level.getRecipeManager().getAllRecipesFor(SprayerRecipe.Type.INSTANCE)) {
                         Ingredient targetBlockIngredient = recipe.getIngredients().get(1);
                         BlockState newBlockRecipe = Block.byItem(recipe.getResultItem(level.registryAccess()).getItem()).withPropertiesOf(blockState);
                         ItemStack sprayCan = recipe.getIngredients().get(0).getItems()[0].getItem().getDefaultInstance();
+                        ParticleOptions particle = SprayCanParticleMappings.getParticleForSprayCan(sprayCan.getItem());
 
                         //Check for banned blocks, matching blocks and matching spray can dont forget
                         if (targetBlockIngredient.test(blockState.getBlock().asItem().getDefaultInstance()) && sprayCan.getItem() == player.getOffhandItem().getItem() && !blockState.is(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)) {
@@ -90,13 +98,16 @@ public class MassSprayingPacket {
                                         wallTorch = Blocks.WALL_TORCH;
                                     }
                                     level.setBlockAndUpdate(pos, wallTorch.withPropertiesOf(blockState));
+
                                 }
                             }
                             //Standard same block type replacements
                             else {
                                 level.setBlockAndUpdate(pos, newBlockRecipe);
+
                             }
                             player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(InteractionHand.OFF_HAND));
+                            level.sendParticles(particle, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 0, 0, 0, 0, 1);
                         }
                     }
                 }

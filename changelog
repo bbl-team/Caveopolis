@@ -2,6 +2,13 @@ Caveopolis Mod Changelog
 
 //todo fix stupid BlockBehaviour.StatePredicate for .isSuffocating() leaves
 
+2.11.1
+
+Tweaked Mass Spraying Activation Key (WIP)
+Mass Spray key now "H" not "S" by default
+Fixed normal glowstone spray can not working correctly in normal mode
+Mass Spraying now produces particles when spraying
+
 2.11.0
 
 Fixed botany recipes loading without botany pots installed
