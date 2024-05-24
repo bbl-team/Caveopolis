@@ -2,6 +2,15 @@ Caveopolis Mod Changelog
 
 //todo fix stupid BlockBehaviour.StatePredicate for .isSuffocating() leaves
 
+2.11.3
+
+fixed purple stone colored stair recipe
+
+2.11.2
+
+Fixed mass spray causing server hangs when positions are not selected correctly
+Error message added when mass spray is used without both positions selected
+
 2.11.1
 
 Tweaked Mass Spraying Activation Key (WIP)

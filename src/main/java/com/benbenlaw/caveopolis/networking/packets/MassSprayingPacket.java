@@ -69,45 +69,59 @@ public class MassSprayingPacket {
             ItemStack stack = player.getOffhandItem();
 
             assert stack.getTag() != null;
-            BlockPos pos1 = new BlockPos (stack.getTag().getInt("pos_1_x"), stack.getTag().getInt("pos_1_y"), stack.getTag().getInt("pos_1_z"));
-            BlockPos pos2 = new BlockPos (stack.getTag().getInt("pos_2_x"), stack.getTag().getInt("pos_2_y"), stack.getTag().getInt("pos_2_z"));
 
-            for (BlockPos pos : BlockPos.betweenClosed(pos1, pos2)) {
-                BlockState blockState = level.getBlockState(pos);
+            BlockPos pos1 = null;
+            if (stack.getTag().contains("pos_1_x") && stack.getTag().contains("pos_1_y") && stack.getTag().contains("pos_1_z")) {
+                pos1 = new BlockPos(stack.getTag().getInt("pos_1_x"), stack.getTag().getInt("pos_1_y"), stack.getTag().getInt("pos_1_z"));
+            }
 
-                if (player.getOffhandItem().is(ModItems.GLOWSTONE_SPRAY_CAN.get())) {
-                    if (blockState.getBlock() instanceof Brightable) {
-                        level.setBlockAndUpdate(pos, blockState.cycle(BlockStateProperties.LIT));
-                        player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(InteractionHand.OFF_HAND));
-                    }
-                } else {
-                    for (SprayerRecipe recipe : level.getRecipeManager().getAllRecipesFor(SprayerRecipe.Type.INSTANCE)) {
-                        Ingredient targetBlockIngredient = recipe.getIngredients().get(1);
-                        BlockState newBlockRecipe = Block.byItem(recipe.getResultItem(level.registryAccess()).getItem()).withPropertiesOf(blockState);
-                        ItemStack sprayCan = recipe.getIngredients().get(0).getItems()[0].getItem().getDefaultInstance();
-                        ParticleOptions particle = SprayCanParticleMappings.getParticleForSprayCan(sprayCan.getItem());
+            BlockPos pos2 = null;
+            if (stack.getTag().contains("pos_2_x") && stack.getTag().contains("pos_2_y") && stack.getTag().contains("pos_2_z")) {
+                pos2 = new BlockPos(stack.getTag().getInt("pos_2_x"), stack.getTag().getInt("pos_2_y"), stack.getTag().getInt("pos_2_z"));
+            }
 
-                        //Check for banned blocks, matching blocks and matching spray can dont forget
-                        if (targetBlockIngredient.test(blockState.getBlock().asItem().getDefaultInstance()) && sprayCan.getItem() == player.getOffhandItem().getItem() && !blockState.is(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)) {
-                            //Handle Wall Torches due to being a different block
-                            if (blockState.getBlock() instanceof WallTorchBlock) {
-                                if (newBlockRecipe.getBlock() instanceof TorchBlock) {
-                                    String torch = newBlockRecipe.toString().replace("Block{", "").replace("}", "");
-                                    Block wallTorch = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(torch.replace("torch", "wall_torch")));
-                                    if (wallTorch == null) {
-                                        wallTorch = Blocks.WALL_TORCH;
+            if (pos1 == null || pos2 == null) {
+                player.sendSystemMessage(Component.literal("No area selected!"));
+                return;
+            } else {
+
+                for (BlockPos pos : BlockPos.betweenClosed(pos1, pos2)) {
+                    BlockState blockState = level.getBlockState(pos);
+
+                    if (player.getOffhandItem().is(ModItems.GLOWSTONE_SPRAY_CAN.get())) {
+                        if (blockState.getBlock() instanceof Brightable) {
+                            level.setBlockAndUpdate(pos, blockState.cycle(BlockStateProperties.LIT));
+                            player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(InteractionHand.OFF_HAND));
+                        }
+                    } else {
+                        for (SprayerRecipe recipe : level.getRecipeManager().getAllRecipesFor(SprayerRecipe.Type.INSTANCE)) {
+                            Ingredient targetBlockIngredient = recipe.getIngredients().get(1);
+                            BlockState newBlockRecipe = Block.byItem(recipe.getResultItem(level.registryAccess()).getItem()).withPropertiesOf(blockState);
+                            ItemStack sprayCan = recipe.getIngredients().get(0).getItems()[0].getItem().getDefaultInstance();
+                            ParticleOptions particle = SprayCanParticleMappings.getParticleForSprayCan(sprayCan.getItem());
+
+                            //Check for banned blocks, matching blocks and matching spray can dont forget
+                            if (targetBlockIngredient.test(blockState.getBlock().asItem().getDefaultInstance()) && sprayCan.getItem() == player.getOffhandItem().getItem() && !blockState.is(ModTags.Blocks.BANNED_FROM_IN_WORLD_SPRAYING)) {
+                                //Handle Wall Torches due to being a different block
+                                if (blockState.getBlock() instanceof WallTorchBlock) {
+                                    if (newBlockRecipe.getBlock() instanceof TorchBlock) {
+                                        String torch = newBlockRecipe.toString().replace("Block{", "").replace("}", "");
+                                        Block wallTorch = ForgeRegistries.BLOCKS.getValue(new ResourceLocation(torch.replace("torch", "wall_torch")));
+                                        if (wallTorch == null) {
+                                            wallTorch = Blocks.WALL_TORCH;
+                                        }
+                                        level.setBlockAndUpdate(pos, wallTorch.withPropertiesOf(blockState));
+
                                     }
-                                    level.setBlockAndUpdate(pos, wallTorch.withPropertiesOf(blockState));
+                                }
+                                //Standard same block type replacements
+                                else {
+                                    level.setBlockAndUpdate(pos, newBlockRecipe);
 
                                 }
+                                player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(InteractionHand.OFF_HAND));
+                                level.sendParticles(particle, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 0, 0, 0, 0, 1);
                             }
-                            //Standard same block type replacements
-                            else {
-                                level.setBlockAndUpdate(pos, newBlockRecipe);
-
-                            }
-                            player.getItemInHand(InteractionHand.OFF_HAND).hurtAndBreak(1, player, (player1) -> player.broadcastBreakEvent(InteractionHand.OFF_HAND));
-                            level.sendParticles(particle, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 0, 0, 0, 0, 1);
                         }
                     }
                 }
