@@ -2,7 +2,6 @@ package com.benbenlaw.caveopolis.block.custom.brightblock;
 
 import com.benbenlaw.caveopolis.screen.CraftingTableMenu;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleMenuProvider;
@@ -13,7 +12,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CraftingTableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.AttachFace;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.Nullable;

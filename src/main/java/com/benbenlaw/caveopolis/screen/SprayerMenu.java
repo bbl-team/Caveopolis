@@ -6,45 +6,46 @@ import com.benbenlaw.caveopolis.util.ModTags;
 import com.benbenlaw.opolisutilities.screen.slot.utils.BlacklistTagInputSlot;
 import com.benbenlaw.opolisutilities.screen.slot.utils.ModResultSlot;
 import com.benbenlaw.opolisutilities.screen.slot.utils.WhitelistTagInputSlot;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import org.jetbrains.annotations.NotNull;
 
 public class SprayerMenu extends AbstractContainerMenu {
 
-    public final SprayerBlockEntity blockEntity;
-    private final Level level;
-    private final ContainerData data;
+    protected SprayerBlockEntity blockEntity;
+    protected Level level;
+    protected ContainerData data;
+    protected Player player;
+    protected BlockPos blockPos;
 
-    public SprayerMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-        this(id, inv, inv.player.level().getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+    public SprayerMenu(int containerID, Inventory inventory, FriendlyByteBuf extraData) {
+        this(containerID, inventory, extraData.readBlockPos(), new SimpleContainerData(3));
+
     }
-
-    public SprayerMenu(int id, Inventory inv, BlockEntity entity, ContainerData data){
-        super(ModMenuTypes.SPRAYER_MENU.get(), id);
-        checkContainerSize(inv, 3);
-        blockEntity = (SprayerBlockEntity) entity;
-        this.level = inv.player.level();
+    public SprayerMenu(int containerID, Inventory inventory, BlockPos blockPos, ContainerData data) {
+        super(ModMenuTypes.SPRAYER_MENU.get(), containerID);
+        this.player = inventory.player;
+        this.blockPos = blockPos;
+        this.level = inventory.player.level();
         this.data = data;
+        this.blockEntity = (SprayerBlockEntity) this.level.getBlockEntity(blockPos);
 
-        addPlayerInventory(inv);
-        addPlayerHotbar(inv);
+        checkContainerSize(inventory, 3);
+        addPlayerInventory(inventory);
+        addPlayerHotbar(inventory);
 
-        this.blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            this.addSlot(new WhitelistTagInputSlot(handler, 0, 12, 16, ModTags.Items.SPRAY_CANS, 1));
-            this.addSlot(new BlacklistTagInputSlot(handler, 1, 86, 16, ModTags.Items.SPRAY_CANS, 64));
-            this.addSlot(new ModResultSlot(handler, 2, 86, 60));
-        });
+        this.addSlot(new WhitelistTagInputSlot(blockEntity.getItemStackHandler(), blockEntity.INPUT_SLOT, 12, 16, ModTags.Items.SPRAY_CANS, 1));
+        this.addSlot(new BlacklistTagInputSlot(blockEntity.getItemStackHandler(), blockEntity.SPRAY_CAN_SLOT, 86, 16, ModTags.Items.SPRAY_CANS, 64));
+        this.addSlot(new ModResultSlot(blockEntity.getItemStackHandler(), blockEntity.OUTPUT_SLOT, 86, 60));
 
         addDataSlots(data);
 
     }
-
 
     public boolean isCrafting() {
         return data.get(0) > 0;
@@ -110,10 +111,11 @@ public class SprayerMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public boolean stillValid(Player player) {
-        return stillValid(ContainerLevelAccess.create(level, blockEntity.getBlockPos()),
+    public boolean stillValid(@NotNull Player player) {
+        return stillValid(ContainerLevelAccess.create(player.level(), blockPos),
                 player, ModBlocks.SPRAYER.get());
     }
+
 
     private void addPlayerInventory(Inventory playerInventory) {
         for (int i = 0; i < 3; ++i) {

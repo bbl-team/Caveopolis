@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:magenta_colored_stone"
-            ]
+            "items": "caveopolis:magenta_colored_stone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_magenta_colored_stone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_magenta_colored_stone"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:magenta_colored_cobblestone"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

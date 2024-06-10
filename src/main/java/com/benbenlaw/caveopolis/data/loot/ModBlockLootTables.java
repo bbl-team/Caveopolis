@@ -2,21 +2,18 @@ package com.benbenlaw.caveopolis.data.loot;
 
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.item.ModItems;
+import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.Explosion;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
-import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
@@ -24,8 +21,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Set;
@@ -225,19 +221,19 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.COLORED_CAVES_PORTAL.get());
 
         this.add(ModBlocks.MIXED_STONE_ORE.get(),
-                block -> createOreDrop(ModBlocks.MIXED_STONE_ORE.get(), ModItems.RAW_MIXED_STONE.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)));
+                block -> createOreDrop(ModBlocks.MIXED_STONE_ORE.get(), ModItems.RAW_MIXED_STONE.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.FORTUNE)));
 
         this.add(ModBlocks.DEEPSLATE_MIXED_STONE_ORE.get(),
-                block -> createOreDrop(ModBlocks.DEEPSLATE_MIXED_STONE_ORE.get(), ModItems.RAW_MIXED_STONE.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)));
+                block -> createOreDrop(ModBlocks.DEEPSLATE_MIXED_STONE_ORE.get(), ModItems.RAW_MIXED_STONE.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.FORTUNE)));
 
         this.add(ModBlocks.BRIGHT_STONE_ORE.get(),
-                block -> createOreDrop(ModBlocks.BRIGHT_STONE_ORE.get(), ModItems.BRIGHT_SHARD.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)));
+                block -> createOreDrop(ModBlocks.BRIGHT_STONE_ORE.get(), ModItems.BRIGHT_SHARD.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.FORTUNE)));
 
         this.add(ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE.get(),
-                block -> createOreDrop(ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE.get(), ModItems.BRIGHT_SHARD.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)));
+                block -> createOreDrop(ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE.get(), ModItems.BRIGHT_SHARD.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 4.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.FORTUNE)));
 
         this.add(ModBlocks.MOSSY_STONE.get(),
-                block -> createOreDrop(ModBlocks.MOSSY_STONE.get(), ModItems.MOSS_BALL.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE)));
+                block -> createOreDrop(ModBlocks.MOSSY_STONE.get(), ModItems.MOSS_BALL.get()).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 3.0F))).apply(ApplyBonusCount.addOreBonusCount(Enchantments.FORTUNE)));
 
         this.dropSelf(ModBlocks.BLUE_COLORED_COBBLESTONE.get());
         this.dropSelf(ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.get());
@@ -896,24 +892,31 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     }
 
+    private final Set<Block> knownBlocks = new ReferenceOpenHashSet<>();
+    @Override
+    protected void add(@NotNull Block block, @NotNull LootTable.Builder table) {
+        //Overwrite the core register method to add to our list of known blocks
+        super.add(block, table);
+        knownBlocks.add(block);
+    }
 
     @Override
     protected @NotNull Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
+        return knownBlocks;
     }
 
-    private static final LootItemCondition.Builder HAS_SHEARS_TAG = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.SHEARS));
+    private static final LootItemCondition.Builder HAS_SHEARS_TAG = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.TOOLS_SHEARS));
     private static final LootItemCondition.Builder HAS_SHEARS_OR_SILK_TOUCH = HAS_SHEARS_TAG.or(HAS_SILK_TOUCH);
     private static final LootItemCondition.Builder HAS_NO_SHEARS_OR_SILK_TOUCH = HAS_SHEARS_OR_SILK_TOUCH.invert();
     private static final float[] NORMAL_LEAVES_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
 
 
     protected LootTable.Builder createColoredLeavesDrops(Block p_249535_, Block p_251505_, Item apple, float... p_250753_) {
-        return this.createLeavesDrops(p_249535_, p_251505_, p_250753_).withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(HAS_NO_SHEARS_OR_SILK_TOUCH).add(this.applyExplosionCondition(p_249535_, LootItem.lootTableItem(apple).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F)))));
+        return this.createLeavesDrops(p_249535_, p_251505_, p_250753_).withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(HAS_NO_SHEARS_OR_SILK_TOUCH).add(this.applyExplosionCondition(p_249535_, LootItem.lootTableItem(apple).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.FORTUNE, 0.005F, 0.0055555557F, 0.00625F, 0.008333334F, 0.025F)))));
     }
 
     protected LootTable.Builder createLeavesDrops(Block p_250088_, Block p_250731_, float... p_248949_) {
-        return createSilkTouchOrShearsDispatchTable(p_250088_, this.applyExplosionCondition(p_250088_, LootItem.lootTableItem(p_250731_)).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, p_248949_))).withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(HAS_NO_SHEARS_OR_SILK_TOUCH).add(this.applyExplosionDecay(p_250088_, LootItem.lootTableItem(Items.STICK).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.BLOCK_FORTUNE, NORMAL_LEAVES_STICK_CHANCES))));
+        return createSilkTouchOrShearsDispatchTable(p_250088_, this.applyExplosionCondition(p_250088_, LootItem.lootTableItem(p_250731_)).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.FORTUNE, p_248949_))).withPool(LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F)).when(HAS_NO_SHEARS_OR_SILK_TOUCH).add(this.applyExplosionDecay(p_250088_, LootItem.lootTableItem(Items.STICK).apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))).when(BonusLevelTableCondition.bonusLevelFlatChance(Enchantments.FORTUNE, NORMAL_LEAVES_STICK_CHANCES))));
     }
 
     protected static LootTable.Builder createSilkTouchOrShearsDispatchTable(Block p_250539_, LootPoolEntryContainer.Builder<?> p_251459_) {

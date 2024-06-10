@@ -1,5 +1,5 @@
-// 1.20.1	2024-03-11T11:20:12.0329621	Block Tags
-c78ada5968685a6ca96af0fb49dde74df66426f6 data/caveopolis/tags/blocks/banned_from_in_world_spraying.json
+// 1.20.6	2024-06-10T16:11:20.4646995	Block Tags
+fcef69663962a70c62dc1bb7619f99c598d2318b data/caveopolis/tags/blocks/banned_from_in_world_spraying.json
 42a14e0c7cfecab025c809c468c8fb21b74fa037 data/caveopolis/tags/blocks/black_colored_logs.json
 b1fd5a13e6f8ea035e617d75894f72925b64225c data/caveopolis/tags/blocks/blue_colored_logs.json
 e65b4509c754c92ed856e581feb7a00d58935994 data/caveopolis/tags/blocks/brown_colored_logs.json
@@ -60,10 +60,10 @@ b0ae93378212f63d83102f90b19dbe032c8b7208 data/caveopolis/tags/blocks/red_colored
 d8aa7530351f1c79931d2bb9883d2023f6f1e41b data/caveopolis/tags/blocks/stripped_colored_woods.json
 fcb022e2cb44367bac4736ffa518c57c10a4580a data/caveopolis/tags/blocks/white_colored_logs.json
 bf572a5d6f49fe2f7168d96e66563fded67cbabe data/caveopolis/tags/blocks/yellow_colored_logs.json
-7caa63657956bc78c7f2a2e35af6477587dfb926 data/forge/tags/blocks/cobblestone.json
-365f4e0b92ca5a45f6b689ed84d4c8c6aca5bef1 data/forge/tags/blocks/fence_gates/wooden.json
-e2feff85afb7e4871204d6f5d72b8760e2780187 data/forge/tags/blocks/shulker_boxes.json
-7695b5a5a0f2edb5471254ffd713751c466a12c3 data/forge/tags/blocks/stone.json
+7caa63657956bc78c7f2a2e35af6477587dfb926 data/c/tags/blocks/cobblestones.json
+365f4e0b92ca5a45f6b689ed84d4c8c6aca5bef1 data/c/tags/blocks/fence_gates/wooden.json
+e2feff85afb7e4871204d6f5d72b8760e2780187 data/c/tags/blocks/shulker_boxes.json
+7695b5a5a0f2edb5471254ffd713751c466a12c3 data/c/tags/blocks/stones.json
 9ede023d0e4c4e1ae872d8343f37dd5b8fc315b4 data/minecraft/tags/blocks/ceiling_hanging_signs.json
 7380493506fb017172e17130054de32af9b53530 data/minecraft/tags/blocks/dirt.json
 7944cdee0a1fb73528d63a81cb5286387c5cdfe1 data/minecraft/tags/blocks/leaves.json

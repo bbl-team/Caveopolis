@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class PurpleStandingSignBlock extends StandingSignBlock {
     public PurpleStandingSignBlock(Properties properties, WoodType woodType) {
-        super(properties, woodType);
+        super(woodType, properties);
     }
 
     @Override

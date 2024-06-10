@@ -2,6 +2,10 @@ Caveopolis Mod Changelog
 
 //todo fix stupid BlockBehaviour.StatePredicate for .isSuffocating() leaves
 
+2.11.4
+
+Fixed colored caves portal not checking for colored stone blocks causing issue with portal placement
+
 2.11.3
 
 fixed purple stone colored stair recipe

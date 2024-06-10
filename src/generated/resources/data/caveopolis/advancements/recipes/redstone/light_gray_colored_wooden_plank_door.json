@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:light_gray_colored_wooden_planks"
-            ]
+            "items": "caveopolis:light_gray_colored_wooden_planks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "light_gray_colored_wooden_plank",
-      "has_the_recipe"
+      "has_the_recipe",
+      "light_gray_colored_wooden_plank"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:light_gray_colored_wooden_plank_door"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

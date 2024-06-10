@@ -3,18 +3,15 @@ package com.benbenlaw.caveopolis.worldgen;
 import com.benbenlaw.caveopolis.Caveopolis;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BiomeTags;
-import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraftforge.common.BiomeManager;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.world.BiomeModifier;
-import net.minecraftforge.common.world.ForgeBiomeModifiers;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.world.BiomeModifier;
+import net.neoforged.neoforge.common.world.BiomeModifiers;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
 
 public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_BLACK = registerKey("add_tree_black");
@@ -35,88 +32,88 @@ public class ModBiomeModifiers {
     public static final ResourceKey<BiomeModifier> ADD_TREE_YELLOW = registerKey("add_tree_yellow");
 
 
-    public static void  bootstrap(BootstapContext<BiomeModifier> context) {
+    public static void  bootstrap(BootstrapContext<BiomeModifier> context) {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
 
-        context.register(ADD_TREE_BLACK, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_BLACK, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_SWAMP),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BLACK_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
 
-        context.register(ADD_TREE_BLUE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_BLUE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_SNOWY),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BLUE_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_BROWN, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_BROWN, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_SWAMP),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.BROWN_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_CYAN, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_CYAN, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_SNOWY),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.CYAN_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_GRAY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_GRAY, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_MOUNTAIN),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GRAY_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_GREEN, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_GREEN, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_JUNGLE),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.GREEN_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_LIGHT_BLUE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_LIGHT_BLUE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_SNOWY),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LIGHT_BLUE_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_LIGHT_GRAY, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_LIGHT_GRAY, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_MOUNTAIN),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LIGHT_GRAY_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_LIME, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_LIME, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_JUNGLE),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.LIME_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_MAGENTA, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_MAGENTA, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_FOREST),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MAGENTA_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_ORANGE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_ORANGE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_SAVANNA),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.ORANGE_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_PINK, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_PINK, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_FOREST),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.PINK_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_PURPLE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_PURPLE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_FOREST),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.PURPLE_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_RED, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_RED, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_BADLANDS),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.RED_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_WHITE, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_WHITE, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_SNOWY),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.WHITE_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 
-        context.register(ADD_TREE_YELLOW, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        context.register(ADD_TREE_YELLOW, new BiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(BiomeTags.IS_SAVANNA),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.YELLOW_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
@@ -128,7 +125,7 @@ public class ModBiomeModifiers {
 
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {
-        return ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(Caveopolis.MOD_ID, name));
+        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, new ResourceLocation(Caveopolis.MOD_ID, name));
     }
 
 }

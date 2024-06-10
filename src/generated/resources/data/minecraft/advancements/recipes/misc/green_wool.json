@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:mossy_string"
-            ]
+            "items": "caveopolis:mossy_string"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_mossy_string",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_mossy_string"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:green_wool"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:yellow_colored_cobblestone"
-            ]
+            "items": "caveopolis:yellow_colored_cobblestone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_yellow_colored_cobblestone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_yellow_colored_cobblestone"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:yellow_colored_stone"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

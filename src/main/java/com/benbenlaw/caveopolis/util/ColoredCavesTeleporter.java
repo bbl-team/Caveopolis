@@ -10,29 +10,19 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.Main;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.vehicle.DismountHelper;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.chunk.LevelChunk;
-import net.minecraft.world.level.levelgen.structure.templatesystem.AxisAlignedLinearPosTest;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.util.ITeleporter;
+import net.neoforged.neoforge.common.util.ITeleporter;
 import org.checkerframework.checker.nullness.qual.Nullable;
 
-import java.util.Comparator;
 import java.util.Map;
-import java.util.Objects;
 import java.util.function.Function;
 
 public class ColoredCavesTeleporter implements ITeleporter {
@@ -139,7 +129,7 @@ public class ColoredCavesTeleporter implements ITeleporter {
 
     private boolean isAirOrStone(LevelChunk chunk, BlockPos pos) {
         BlockState state = chunk.getBlockState(pos);
-        return state.getBlock().equals(Blocks.STONE) || state.isAir();
+        return state.is(Blocks.STONE) || state.isAir() || state.is(ModTags.Blocks.COLORED_STONE);
     }
 
     private boolean isReplaceable(Level world, BlockPos pos) {

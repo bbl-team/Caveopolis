@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:magenta_colored_wooden_planks"
-            ]
+            "items": "caveopolis:magenta_colored_wooden_planks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "magenta_colored_wooden_plank",
-      "has_the_recipe"
+      "has_the_recipe",
+      "magenta_colored_wooden_plank"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:magenta_colored_wooden_plank_stairs"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

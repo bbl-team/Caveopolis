@@ -1,42 +1,6 @@
 package com.benbenlaw.caveopolis.networking.packets;
 
-import com.benbenlaw.caveopolis.block.ModBlocks;
-import com.benbenlaw.caveopolis.block.custom.brightblock.Brightable;
-import com.benbenlaw.caveopolis.block.custom.torches.ModWallTorchBlock;
-import com.benbenlaw.caveopolis.item.ColorSprayCanItem;
-import com.benbenlaw.caveopolis.item.ModItems;
-import com.benbenlaw.caveopolis.particles.ModParticles;
-import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
-import com.benbenlaw.caveopolis.util.ModTags;
-import com.benbenlaw.caveopolis.util.SprayCanParticleMappings;
-import net.minecraft.client.Minecraft;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleOptions;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.TorchBlock;
-import net.minecraft.world.level.block.WallTorchBlock;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraftforge.fml.loading.targets.ForgeServerDevLaunchHandler;
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.registries.ForgeRegistries;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Supplier;
 
 public class MassSprayingPacket {
     public MassSprayingPacket() {
@@ -52,6 +16,7 @@ public class MassSprayingPacket {
     }
 
 
+    /*
 
     public boolean handle(Supplier<NetworkEvent.Context> supplier) {
         NetworkEvent.Context context = supplier.get();
@@ -139,6 +104,8 @@ public class MassSprayingPacket {
         });
         return true;
     }
+
+     */
 
 
 }

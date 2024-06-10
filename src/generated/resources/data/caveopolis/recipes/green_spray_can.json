@@ -6,7 +6,7 @@
       "item": "caveopolis:mixed_stone_ingot"
     },
     "B": {
-      "tag": "forge:dyes/green"
+      "tag": "c:dyes/green"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "ABA"
   ],
   "result": {
-    "item": "caveopolis:green_spray_can"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:green_spray_can"
+  }
 }

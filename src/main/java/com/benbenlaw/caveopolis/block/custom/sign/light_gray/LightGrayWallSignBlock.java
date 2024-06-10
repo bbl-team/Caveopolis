@@ -9,7 +9,7 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class LightGrayWallSignBlock extends WallSignBlock {
     public LightGrayWallSignBlock(Properties properties, WoodType woodType) {
-        super(properties, woodType);
+        super(woodType, properties);
     }
 
     @Override

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:green_colored_log"
-            ]
+            "items": "caveopolis:green_colored_log"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_log",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_log"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:green_colored_wood"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

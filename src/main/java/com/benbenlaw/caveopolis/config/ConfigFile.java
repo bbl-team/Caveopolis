@@ -1,13 +1,13 @@
 package com.benbenlaw.caveopolis.config;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 
 public final class ConfigFile {
 
-    public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
-    public static final ForgeConfigSpec SPEC;
+    public static final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
+    public static final ModConfigSpec SPEC;
 
-    public static final ForgeConfigSpec.ConfigValue<Integer> doesColoredStoneGenerateInWorld;
+    public static final ModConfigSpec.ConfigValue<Integer> doesColoredStoneGenerateInWorld;
 
     static {
         BUILDER.push("Caveopolis Config File");

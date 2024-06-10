@@ -17,7 +17,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "caveopolis:yellow_colored_sign"
-  },
-  "show_notification": true
+    "id": "caveopolis:yellow_colored_sign"
+  }
 }

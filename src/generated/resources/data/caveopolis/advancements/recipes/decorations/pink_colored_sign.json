@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:pink_colored_wooden_planks"
-            ]
+            "items": "caveopolis:pink_colored_wooden_planks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "pink_colored_wooden_plank",
-      "has_the_recipe"
+      "has_the_recipe",
+      "pink_colored_wooden_plank"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:pink_colored_sign"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

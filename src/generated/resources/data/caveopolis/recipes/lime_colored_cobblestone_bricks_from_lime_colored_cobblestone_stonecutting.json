@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "caveopolis:lime_colored_cobblestone"
-  },
-  "result": "caveopolis:lime_colored_cobblestone_bricks"
-}

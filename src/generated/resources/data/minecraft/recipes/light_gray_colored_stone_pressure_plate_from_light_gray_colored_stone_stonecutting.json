@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "caveopolis:light_gray_colored_stone"
+  },
+  "result": {
+    "count": 1,
+    "id": "caveopolis:light_gray_colored_stone_pressure_plate"
+  }
+}

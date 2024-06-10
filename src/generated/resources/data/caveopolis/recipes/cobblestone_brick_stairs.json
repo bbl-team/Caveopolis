@@ -13,7 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "caveopolis:cobblestone_brick_stairs"
-  },
-  "show_notification": true
+    "id": "caveopolis:cobblestone_brick_stairs"
+  }
 }

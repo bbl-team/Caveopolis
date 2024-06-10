@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:cyan_colored_cobblestone"
-            ]
+            "items": "caveopolis:cyan_colored_cobblestone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_cyan_colored_cobblestone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_cyan_colored_cobblestone"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:cyan_colored_stone"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

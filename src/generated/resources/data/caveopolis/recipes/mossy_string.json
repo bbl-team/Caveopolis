@@ -10,7 +10,7 @@
     "AAA"
   ],
   "result": {
-    "item": "caveopolis:mossy_string"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:mossy_string"
+  }
 }

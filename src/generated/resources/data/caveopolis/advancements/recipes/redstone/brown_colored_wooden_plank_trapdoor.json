@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:brown_colored_wooden_planks"
-            ]
+            "items": "caveopolis:brown_colored_wooden_planks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "brown_colored_wooden_plank",
-      "has_the_recipe"
+      "has_the_recipe",
+      "brown_colored_wooden_plank"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:brown_colored_wooden_plank_trapdoor"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

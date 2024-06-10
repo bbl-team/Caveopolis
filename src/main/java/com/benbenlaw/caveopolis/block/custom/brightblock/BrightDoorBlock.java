@@ -7,7 +7,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -22,7 +21,7 @@ public class BrightDoorBlock extends DoorBlock implements Brightable {
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
     public BrightDoorBlock(Properties properties, BlockSetType type) {
-        super(properties, type);
+        super(type, properties);
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_55484_) {

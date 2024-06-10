@@ -6,11 +6,10 @@ import com.benbenlaw.caveopolis.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -351,7 +350,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
 
         this.tag(BlockTags.STONE_ORE_REPLACEABLES).addTag(ModTags.Blocks.COLORED_STONE);
 
-        this.tag(Tags.Blocks.STONE)
+        this.tag(Tags.Blocks.STONES)
                 .add(ModBlocks.BLUE_COLORED_STONE.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_STONE.get())
                 .add(ModBlocks.RED_COLORED_STONE.get())
@@ -370,7 +369,7 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.CYAN_COLORED_STONE.get())
         ;
 
-        this.tag(Tags.Blocks.COBBLESTONE)
+        this.tag(Tags.Blocks.COBBLESTONES)
                 .add(ModBlocks.BLUE_COLORED_COBBLESTONE.get())
                 .add(ModBlocks.LIGHT_BLUE_COLORED_COBBLESTONE.get())
                 .add(ModBlocks.RED_COLORED_COBBLESTONE.get())

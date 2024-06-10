@@ -11,7 +11,6 @@
   ],
   "result": {
     "count": 6,
-    "item": "caveopolis:cyan_colored_cobblestone_slab"
-  },
-  "show_notification": true
+    "id": "caveopolis:cyan_colored_cobblestone_slab"
+  }
 }

@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:light_blue_colored_stone_bricks"
-            ]
+            "items": "caveopolis:light_blue_colored_stone_bricks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "light_blue_colored_stone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "light_blue_colored_stone"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:light_blue_colored_stone_brick_stairs"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

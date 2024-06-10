@@ -10,7 +10,7 @@
     "##"
   ],
   "result": {
-    "item": "caveopolis:gray_colored_stone_pressure_plate"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:gray_colored_stone_pressure_plate"
+  }
 }

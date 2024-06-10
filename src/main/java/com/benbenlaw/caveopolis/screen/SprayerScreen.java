@@ -2,26 +2,25 @@ package com.benbenlaw.caveopolis.screen;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.mojang.blaze3d.systems.RenderSystem;
-import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.level.Level;
 
 public class SprayerScreen extends AbstractContainerScreen<SprayerMenu> {
+
+    Level level;
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Caveopolis.MOD_ID,"textures/gui/sprayer_gui.png");
 
     public SprayerScreen(SprayerMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component);
+        this.level = menu.level;
     }
 
-    @Override
-    protected void init() {
-        super.init();
-    }
 
     @Override
     protected void renderBg(GuiGraphics guiGraphics, float pPartialTick, int pMouseX, int pMouseY) {
@@ -41,7 +40,7 @@ public class SprayerScreen extends AbstractContainerScreen<SprayerMenu> {
 
     @Override
     public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float delta) {
-        renderBackground(guiGraphics);
+        renderBackground(guiGraphics, mouseX, mouseY, delta);
         super.render(guiGraphics, mouseX, mouseY, delta);
         renderTooltip(guiGraphics, mouseX, mouseY);
     }

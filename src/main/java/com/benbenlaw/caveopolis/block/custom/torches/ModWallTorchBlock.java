@@ -13,8 +13,8 @@ import java.util.function.Supplier;
 
 public class ModWallTorchBlock extends WallTorchBlock {
     private final Supplier<ParticleOptions> particleOptionsSupplier;
-    public ModWallTorchBlock(Properties p_57491_, Supplier<ParticleOptions> particleOptionsSupplier) {
-        super(p_57491_, ParticleTypes.CLOUD);
+    public ModWallTorchBlock(Properties properties, Supplier<ParticleOptions> particleOptionsSupplier) {
+        super(ParticleTypes.CLOUD, properties);
         this.particleOptionsSupplier = particleOptionsSupplier;
     }
 

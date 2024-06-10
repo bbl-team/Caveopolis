@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:black_colored_cobblestone"
-            ]
+            "items": "caveopolis:black_colored_cobblestone"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_end_cobblestone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_end_cobblestone"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:black_colored_cobblestone_bricks"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

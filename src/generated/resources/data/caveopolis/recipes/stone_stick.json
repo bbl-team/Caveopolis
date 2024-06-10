@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "A": {
-      "tag": "forge:stone"
+      "tag": "c:stones"
     }
   },
   "pattern": [
@@ -11,7 +11,7 @@
     "A"
   ],
   "result": {
-    "item": "caveopolis:stone_stick"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:stone_stick"
+  }
 }

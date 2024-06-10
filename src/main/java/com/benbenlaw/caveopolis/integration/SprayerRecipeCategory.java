@@ -1,21 +1,6 @@
 package com.benbenlaw.caveopolis.integration;
 
-import com.benbenlaw.caveopolis.Caveopolis;
-import com.benbenlaw.caveopolis.block.ModBlocks;
-import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
-import mezz.jei.api.constants.VanillaTypes;
-import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
-import mezz.jei.api.gui.drawable.IDrawable;
-import mezz.jei.api.helpers.IGuiHelper;
-import mezz.jei.api.recipe.IFocusGroup;
-import mezz.jei.api.recipe.RecipeIngredientRole;
-import mezz.jei.api.recipe.RecipeType;
-import mezz.jei.api.recipe.category.IRecipeCategory;
-import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.ItemStack;
-
+/*
 public class SprayerRecipeCategory implements IRecipeCategory<SprayerRecipe> {
     public final static ResourceLocation UID = new ResourceLocation(Caveopolis.MOD_ID, "sprayer");
     public final static ResourceLocation TEXTURE =
@@ -60,3 +45,5 @@ public class SprayerRecipeCategory implements IRecipeCategory<SprayerRecipe> {
         builder.addSlot(RecipeIngredientRole.OUTPUT, 91, 2).addItemStack(new ItemStack(recipe.getResultItem(Minecraft.getInstance().level.registryAccess()).getItem()));
     }
 }
+
+ */

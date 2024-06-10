@@ -2,21 +2,14 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
-import net.minecraft.core.Direction;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
-import net.minecraftforge.client.model.generators.BlockModelBuilder;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.client.model.generators.ModelFile;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-
-import java.util.Arrays;
-import java.util.List;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ModelFile;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class ModBlockStatesProvider extends BlockStateProvider {
 
@@ -1299,12 +1292,12 @@ public class ModBlockStatesProvider extends BlockStateProvider {
 
                         
 
-    private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
-        simpleBlock(blockRegistryObject.get(), models().cubeAll(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    private void leavesBlock(DeferredBlock<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(), models().cubeAll(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
-    private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
-        simpleBlock(blockRegistryObject.get(), models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
+    private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {
+        simpleBlock(blockRegistryObject.get(), models().cross(BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
 
     public void hangingSignBlock(Block signBlock, Block wallSignBlock, ResourceLocation texture) {
@@ -1322,21 +1315,21 @@ public class ModBlockStatesProvider extends BlockStateProvider {
     }
 
     private ResourceLocation key(Block block) {
-        return ForgeRegistries.BLOCKS.getKey(block);
+        return BuiltInRegistries.BLOCK.getKey(block);
     }
 
 
 
-    private void blockItem(RegistryObject<Block> blockRegistryObject, String appendix) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("caveopolis:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + appendix));
+    private void blockItem(DeferredBlock<Block> blockRegistryObject, String appendix) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("caveopolis:block/" + BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath() + appendix));
     }
 
 
-    private void blockItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("caveopolis:block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));
+    private void blockItem(DeferredBlock<Block> blockRegistryObject) {
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile("caveopolis:block/" + BuiltInRegistries.BLOCK.getKey(blockRegistryObject.get()).getPath()));
     }
 
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+    private void blockWithItem(DeferredBlock<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 

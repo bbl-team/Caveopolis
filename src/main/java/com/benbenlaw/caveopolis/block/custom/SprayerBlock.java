@@ -2,11 +2,15 @@ package com.benbenlaw.caveopolis.block.custom;
 
 import com.benbenlaw.caveopolis.block.entity.ModBlockEntities;
 import com.benbenlaw.caveopolis.block.entity.SprayerBlockEntity;
+import com.benbenlaw.caveopolis.screen.SprayerMenu;
+import com.benbenlaw.opolisutilities.screen.custom.BlockBreakerMenu;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.InteractionHand;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
@@ -18,11 +22,17 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class SprayerBlock extends BaseEntityBlock {
+
+    public static final MapCodec<SprayerBlock> CODEC = simpleCodec(SprayerBlock::new);
+
+    @Override
+    protected @NotNull MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
+    }
 
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
@@ -68,18 +78,29 @@ public class SprayerBlock extends BaseEntityBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos,
-                                 Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
-        if (!pLevel.isClientSide()) {
-            BlockEntity entity = pLevel.getBlockEntity(pPos);
-            if(entity instanceof SprayerBlockEntity) {
-                NetworkHooks.openScreen(((ServerPlayer)pPlayer), (SprayerBlockEntity)entity, pPos);
-            } else {
-                throw new IllegalStateException("Our Container provider is missing!");
-            }
+    public @NotNull InteractionResult useWithoutItem(@NotNull BlockState blockState, Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull BlockHitResult hit) {
+
+        if (level.isClientSide()) {
+            return InteractionResult.SUCCESS;
         }
 
-        return InteractionResult.sidedSuccess(pLevel.isClientSide());
+        if (!level.isClientSide()) {
+
+            SprayerBlockEntity sprayerBlockEntity = (SprayerBlockEntity) level.getBlockEntity(blockPos);
+
+
+            //MENU OPEN//
+
+            if (sprayerBlockEntity instanceof SprayerBlockEntity) {
+                ContainerData data = sprayerBlockEntity.data;
+                player.openMenu(new SimpleMenuProvider(
+                        (windowId, playerInventory, playerEntity) -> new SprayerMenu(windowId, playerInventory, blockPos, data),
+                        Component.translatable("block.caveopolis.sprayer")), (buf -> buf.writeBlockPos(blockPos)));
+
+            }
+            return InteractionResult.SUCCESS;
+        }
+        return InteractionResult.FAIL;
     }
 
     @Nullable

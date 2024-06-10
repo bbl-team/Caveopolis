@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:blue_colored_wooden_planks"
-            ]
+            "items": "caveopolis:blue_colored_wooden_planks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "blue_colored_wooden_plank",
-      "has_the_recipe"
+      "has_the_recipe",
+      "blue_colored_wooden_plank"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:blue_colored_wooden_plank_stairs"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

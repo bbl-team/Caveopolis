@@ -13,7 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "caveopolis:black_colored_stone_brick_stairs"
-  },
-  "show_notification": true
+    "id": "caveopolis:black_colored_stone_brick_stairs"
+  }
 }

@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:moss_ball"
-            ]
+            "items": "caveopolis:moss_ball"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_moss_ball",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_moss_ball"
     ]
   ],
   "rewards": {
     "recipes": [
       "minecraft:moss_block"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

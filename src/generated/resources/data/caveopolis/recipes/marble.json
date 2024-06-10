@@ -15,7 +15,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "caveopolis:marble"
-  },
-  "show_notification": true
+    "id": "caveopolis:marble"
+  }
 }

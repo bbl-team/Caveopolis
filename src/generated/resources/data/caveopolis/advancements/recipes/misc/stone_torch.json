@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:rods/stone"
+            "items": "#forge:rods/stone"
           }
         ]
       },
@@ -20,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_stone_rod",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_stone_rod"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:stone_torch"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

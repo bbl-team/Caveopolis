@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "caveopolis:yellow_colored_stone"
+  },
+  "result": {
+    "count": 1,
+    "id": "caveopolis:yellow_colored_stone_button"
+  }
+}

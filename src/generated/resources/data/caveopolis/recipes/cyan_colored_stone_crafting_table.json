@@ -11,7 +11,7 @@
     "AA"
   ],
   "result": {
-    "item": "caveopolis:cyan_colored_stone_crafting_table"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:cyan_colored_stone_crafting_table"
+  }
 }

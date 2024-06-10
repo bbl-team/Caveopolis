@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.WallTorchBlock;
 
 public class StoneWallTorchBlock extends WallTorchBlock {
     public StoneWallTorchBlock(Properties pProperties) {
-        super(pProperties, ParticleTypes.FLAME);
+        super(ParticleTypes.FLAME, pProperties);
     }
 
 }

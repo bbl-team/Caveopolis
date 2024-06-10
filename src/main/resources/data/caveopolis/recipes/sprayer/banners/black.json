@@ -1,14 +1,12 @@
 {
   "type": "caveopolis:sprayer",
-    "ingredients": [
-      {
-        "item": "caveopolis:black_spray_can"
-      },
-      {
-        "tag": "minecraft:banners"
-      }
-  ],
+  "input": {
+    "item": "minecraft:sand"
+  },
+  "spraycan": {
+    "item": "caveopolis:blue_spray_can"
+  },
   "output": {
-    "item": "minecraft:black_banner"
+    "id": "minecraft:mud"
   }
 }

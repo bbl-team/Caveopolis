@@ -4,8 +4,8 @@ package com.benbenlaw.caveopolis.particles.custom;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class CyanFlameParticles extends TextureSheetParticle {
     protected CyanFlameParticles(ClientLevel level, double xCoord, double yCoord, double zCoord,

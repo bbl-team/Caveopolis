@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:lime_colored_stone_bricks"
-            ]
+            "items": "caveopolis:lime_colored_stone_bricks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "lime_colored_stone",
-      "has_the_recipe"
+      "has_the_recipe",
+      "lime_colored_stone"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:lime_colored_stone_brick_stairs"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

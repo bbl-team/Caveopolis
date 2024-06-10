@@ -17,7 +17,6 @@
   ],
   "result": {
     "count": 6,
-    "item": "caveopolis:magenta_colored_hanging_sign"
-  },
-  "show_notification": true
+    "id": "caveopolis:magenta_colored_hanging_sign"
+  }
 }

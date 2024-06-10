@@ -12,7 +12,6 @@
   ],
   "result": {
     "count": 2,
-    "item": "caveopolis:yellow_colored_wooden_plank_trapdoor"
-  },
-  "show_notification": true
+    "id": "caveopolis:yellow_colored_wooden_plank_trapdoor"
+  }
 }

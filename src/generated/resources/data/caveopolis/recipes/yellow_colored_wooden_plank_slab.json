@@ -11,7 +11,6 @@
   ],
   "result": {
     "count": 6,
-    "item": "caveopolis:yellow_colored_wooden_plank_slab"
-  },
-  "show_notification": true
+    "id": "caveopolis:yellow_colored_wooden_plank_slab"
+  }
 }

@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "caveopolis:cobblestone_bricks"
-  },
-  "result": "caveopolis:cobblestone_brick_stairs"
-}

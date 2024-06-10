@@ -6,7 +6,7 @@
       "item": "caveopolis:mixed_stone_ingot"
     },
     "B": {
-      "tag": "forge:dyes/black"
+      "tag": "c:dyes/black"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "ABA"
   ],
   "result": {
-    "item": "caveopolis:black_spray_can"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:black_spray_can"
+  }
 }

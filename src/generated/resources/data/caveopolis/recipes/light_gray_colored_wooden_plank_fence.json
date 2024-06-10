@@ -15,7 +15,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "caveopolis:light_gray_colored_wooden_plank_fence"
-  },
-  "show_notification": true
+    "id": "caveopolis:light_gray_colored_wooden_plank_fence"
+  }
 }

@@ -11,9 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:yellow_colored_stone_bricks"
-            ]
+            "items": "caveopolis:yellow_colored_stone_bricks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_yellow_colored_stone_bricks",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_yellow_colored_stone_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:yellow_colored_stone_brick_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

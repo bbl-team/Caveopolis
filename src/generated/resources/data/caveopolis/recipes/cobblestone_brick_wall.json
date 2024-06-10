@@ -12,7 +12,6 @@
   ],
   "result": {
     "count": 6,
-    "item": "caveopolis:cobblestone_brick_wall"
-  },
-  "show_notification": true
+    "id": "caveopolis:cobblestone_brick_wall"
+  }
 }

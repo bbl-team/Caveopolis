@@ -1,21 +1,29 @@
 package com.benbenlaw.caveopolis.recipe;
 
 import com.benbenlaw.caveopolis.Caveopolis;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
 
 public class ModRecipes {
 
-    public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
-            DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Caveopolis.MOD_ID);
+    public static final DeferredRegister<RecipeSerializer<?>> SERIALIZER =
+            DeferredRegister.create(BuiltInRegistries.RECIPE_SERIALIZER, Caveopolis.MOD_ID);
+    public static final DeferredRegister<RecipeType<?>> TYPES =
+            DeferredRegister.create(BuiltInRegistries.RECIPE_TYPE, Caveopolis.MOD_ID);
 
-    public static final RegistryObject<RecipeSerializer<SprayerRecipe>> SPRAYER_SERIALIZER =
-            SERIALIZERS.register("sprayer", () -> SprayerRecipe.Serializer.INSTANCE);
+    //Scrayer
+    public static final Supplier<RecipeSerializer<SprayerRecipe>> SPRAYER_SERIALIZER =
+            SERIALIZER.register("sprayer", () -> SprayerRecipe.Serializer.INSTANCE);
+    public static final Supplier<RecipeType<SprayerRecipe>> SPRAYER_TYPE =
+            TYPES.register("sprayer", () -> SprayerRecipe.Type.INSTANCE);
+
 
     public static void register(IEventBus eventBus) {
-        SERIALIZERS.register(eventBus);
+        SERIALIZER.register(eventBus);
     }
 }

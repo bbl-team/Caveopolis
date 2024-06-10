@@ -6,7 +6,7 @@
       "item": "caveopolis:mixed_stone_ingot"
     },
     "B": {
-      "tag": "forge:dyes/light_blue"
+      "tag": "c:dyes/light_blue"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "ABA"
   ],
   "result": {
-    "item": "caveopolis:light_blue_spray_can"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:light_blue_spray_can"
+  }
 }

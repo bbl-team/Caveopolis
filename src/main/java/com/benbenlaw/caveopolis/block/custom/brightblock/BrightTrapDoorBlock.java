@@ -1,30 +1,26 @@
 package com.benbenlaw.caveopolis.block.custom.brightblock;
 
-import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.*;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.Half;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
-
-import javax.annotation.Nullable;
 
 public class BrightTrapDoorBlock extends TrapDoorBlock implements Brightable {
 
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
     public BrightTrapDoorBlock(Properties properties, BlockSetType type) {
-        super(properties, type);
+        super(type, properties);
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_55484_) {

@@ -103,7 +103,7 @@ public class ModTags {
         }
 
         private static TagKey<Block> forgeTag(String name) {
-            return BlockTags.create(new ResourceLocation("forge", name));
+            return BlockTags.create(new ResourceLocation("c", name));
         }
 
     }

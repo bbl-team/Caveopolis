@@ -13,7 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "caveopolis:green_colored_cobblestone_stairs"
-  },
-  "show_notification": true
+    "id": "caveopolis:green_colored_cobblestone_stairs"
+  }
 }

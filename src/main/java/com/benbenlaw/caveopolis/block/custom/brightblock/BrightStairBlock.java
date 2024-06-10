@@ -18,8 +18,6 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import javax.xml.stream.FactoryConfigurationError;
-
 public class BrightStairBlock extends StairBlock implements Brightable {
 
     public static final BooleanProperty LIT = BlockStateProperties.LIT;

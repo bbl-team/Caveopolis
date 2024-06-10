@@ -13,7 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "caveopolis:cyan_colored_wooden_plank_stairs"
-  },
-  "show_notification": true
+    "id": "caveopolis:cyan_colored_wooden_plank_stairs"
+  }
 }

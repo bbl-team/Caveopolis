@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:orange_colored_wooden_planks"
-            ]
+            "items": "caveopolis:orange_colored_wooden_planks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_orange_colored_wooden_planks",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_orange_colored_wooden_planks"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:orange_colored_wooden_plank_slab"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

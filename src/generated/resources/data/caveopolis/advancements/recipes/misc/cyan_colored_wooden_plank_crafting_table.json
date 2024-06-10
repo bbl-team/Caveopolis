@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:oak_planks"
-            ]
+            "items": "minecraft:oak_planks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_colored_WOODEN_PLANKS",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_colored_WOODEN_PLANKS"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:cyan_colored_wooden_plank_crafting_table"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

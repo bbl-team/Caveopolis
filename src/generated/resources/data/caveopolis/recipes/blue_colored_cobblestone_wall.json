@@ -12,7 +12,6 @@
   ],
   "result": {
     "count": 6,
-    "item": "caveopolis:blue_colored_cobblestone_wall"
-  },
-  "show_notification": true
+    "id": "caveopolis:blue_colored_cobblestone_wall"
+  }
 }

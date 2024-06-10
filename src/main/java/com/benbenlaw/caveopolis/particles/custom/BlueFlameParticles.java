@@ -1,11 +1,10 @@
 package com.benbenlaw.caveopolis.particles.custom;
 
-import com.benbenlaw.opolisutilities.particles.custom.EnderOreParticles;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.*;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class BlueFlameParticles extends TextureSheetParticle {
     protected BlueFlameParticles(ClientLevel level, double xCoord, double yCoord, double zCoord,

@@ -11,7 +11,7 @@
     "AA"
   ],
   "result": {
-    "item": "minecraft:moss_block"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "minecraft:moss_block"
+  }
 }

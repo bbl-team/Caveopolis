@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "mixed_stone",
+  "ingredient": {
+    "item": "caveopolis:deepslate_mixed_stone_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "caveopolis:mixed_stone_ingot"
+  }
+}

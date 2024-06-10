@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": ["caveopolis:cyan_colored_stone_placed", "caveopolis:orange_colored_stone_placed", "caveopolis:brown_colored_stone_placed", "caveopolis:black_colored_stone_placed", "caveopolis:pink_colored_stone_placed", "caveopolis:magenta_colored_stone_placed", "caveopolis:purple_colored_stone_placed", "caveopolis:lime_colored_stone_placed", "caveopolis:white_colored_stone_placed", "caveopolis:red_colored_stone_placed", "caveopolis:blue_colored_stone_placed", "caveopolis:light_blue_colored_stone_placed", "caveopolis:yellow_colored_stone_placed", "caveopolis:gray_colored_stone_placed", "caveopolis:green_colored_stone_placed", "caveopolis:light_gray_colored_stone_placed"],
-  "step": "underground_ores"
-}

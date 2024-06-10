@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:mixed_stone_ingot"
-            ]
+            "items": "caveopolis:mixed_stone_ingot"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_mixed_stone_ingot",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_mixed_stone_ingot"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:mixed_stone_nugget"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

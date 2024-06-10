@@ -13,7 +13,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "caveopolis:stripped_magenta_colored_wood"
-  },
-  "show_notification": true
+    "id": "caveopolis:stripped_magenta_colored_wood"
+  }
 }

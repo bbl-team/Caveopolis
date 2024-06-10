@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "caveopolis:pink_colored_cobblestone"
+  },
+  "result": {
+    "count": 1,
+    "id": "caveopolis:pink_colored_cobblestone_wall"
+  }
+}

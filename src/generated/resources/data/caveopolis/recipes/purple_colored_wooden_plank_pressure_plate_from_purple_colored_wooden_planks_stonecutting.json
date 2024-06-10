@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "caveopolis:purple_colored_wooden_planks"
-  },
-  "result": "caveopolis:purple_colored_wooden_plank_pressure_plate"
-}

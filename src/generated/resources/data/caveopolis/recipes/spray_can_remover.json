@@ -12,7 +12,7 @@
     "A A"
   ],
   "result": {
-    "item": "caveopolis:spray_can_remover"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:spray_can_remover"
+  }
 }

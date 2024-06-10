@@ -2,19 +2,19 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
+import com.benbenlaw.caveopolis.block.custom.StoneTorchBlock;
 import com.benbenlaw.caveopolis.item.ModItems;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.PressurePlateBlock;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -60,7 +60,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.GREEN_APPLE);
         simpleItem(ModItems.LIME_APPLE);
         simpleItem(ModItems.CYAN_APPLE);
-        
+
+        /*
         simpleTorch(ModBlocks.BROWN_TORCH);
         simpleTorch(ModBlocks.MAGENTA_TORCH);
         simpleTorch(ModBlocks.PURPLE_TORCH);
@@ -77,6 +78,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleTorch(ModBlocks.GREEN_TORCH);
         simpleTorch(ModBlocks.LIME_TORCH);
         simpleTorch(ModBlocks.CYAN_TORCH);
+
+         */
 
         simpleItem(ModItems.STONE_STICK);
         simpleItem(ModItems.MOSS_BALL);
@@ -309,43 +312,43 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     }
 
-    private ItemModelBuilder saplingItem(RegistryObject<Block> item) {
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Caveopolis.MOD_ID, "block/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
+    private ItemModelBuilder simpleBlockItem(DeferredBlock<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getId().getPath()));
     }
     
-    private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
+    private ItemModelBuilder simpleItem(DeferredItem<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleTorch(RegistryObject<Block> block) {
+    private ItemModelBuilder simpleTorch(DeferredHolder<Block, StoneTorchBlock> block) {
         return withExistingParent(block.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Caveopolis.MOD_ID,"block/" + block.getId().getPath()));
     }
 
-    public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation(Caveopolis.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    public void fenceItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
+                .texture("texture",  new ResourceLocation(Caveopolis.MOD_ID, "block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
     }
     
-    private void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall", new ResourceLocation(Caveopolis.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    private void wallItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
+                .texture("wall", new ResourceLocation(Caveopolis.MOD_ID, "block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
     }
 
-    public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
-        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(Caveopolis.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
+        this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
+                .texture("texture",  new ResourceLocation(Caveopolis.MOD_ID, "block/" + BuiltInRegistries.BLOCK.getKey(baseBlock.get()).getPath()));
     }
 
 

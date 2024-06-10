@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_stripped_green_colored_log": {
+      "conditions": {
+        "items": [
+          {
+            "items": "caveopolis:stripped_green_colored_log"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:green_colored_hanging_sign_from_stripped_green_colored_log_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_stripped_green_colored_log"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:green_colored_hanging_sign_from_stripped_green_colored_log_stonecutting"
+    ]
+  }
+}

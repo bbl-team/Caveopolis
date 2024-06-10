@@ -6,5 +6,8 @@
   "ingredient": {
     "item": "caveopolis:black_colored_stone"
   },
-  "result": "caveopolis:black_colored_cobblestone"
+  "result": {
+    "count": 1,
+    "id": "caveopolis:black_colored_cobblestone"
+  }
 }

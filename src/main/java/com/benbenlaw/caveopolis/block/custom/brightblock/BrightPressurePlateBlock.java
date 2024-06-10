@@ -10,14 +10,13 @@ import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 public class BrightPressurePlateBlock extends PressurePlateBlock implements Brightable {
 
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
 
-    public BrightPressurePlateBlock(Sensitivity sensitivity, Properties properties, BlockSetType type) {
-        super(sensitivity, properties, type);
+    public BrightPressurePlateBlock(BlockSetType.PressurePlateSensitivity sensitivity, Properties properties, BlockSetType type) {
+        super(type, properties);
     }
 
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> p_55484_) {

@@ -6,7 +6,7 @@
       "item": "caveopolis:mixed_stone_ingot"
     },
     "B": {
-      "tag": "forge:dyes/brown"
+      "tag": "c:dyes/brown"
     }
   },
   "pattern": [
@@ -15,7 +15,7 @@
     "ABA"
   ],
   "result": {
-    "item": "caveopolis:brown_spray_can"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:brown_spray_can"
+  }
 }

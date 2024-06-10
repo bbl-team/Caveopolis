@@ -6,15 +6,15 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModCreativeModTab {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Caveopolis.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> CAVEOPOLIS_TAB = CREATIVE_MODE_TABS.register("caveopolis", () -> CreativeModeTab.builder()
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CAVEOPOLIS_TAB = CREATIVE_MODE_TABS.register("caveopolis", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ModItems.STONE_STICK.get().getDefaultInstance())
             .title(Component.translatable("itemGroup.caveopolis"))
@@ -763,7 +763,6 @@ public class ModCreativeModTab {
                 output.accept(ModItems.SPRAY_CAN_REMOVER.get());
 
                 output.accept(ModItems.STONE_STICK.get());
-                output.accept(ModBlocks.STONE_TORCH.get());
                 output.accept(ModBlocks.MOSSY_STONE.get());
                 output.accept(ModItems.MOSS_BALL.get());
                 output.accept(ModItems.MOSSY_STRING.get());

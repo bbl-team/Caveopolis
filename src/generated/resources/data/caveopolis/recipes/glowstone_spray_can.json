@@ -15,7 +15,7 @@
     "ABA"
   ],
   "result": {
-    "item": "caveopolis:glowstone_spray_can"
-  },
-  "show_notification": true
+    "count": 1,
+    "id": "caveopolis:glowstone_spray_can"
+  }
 }

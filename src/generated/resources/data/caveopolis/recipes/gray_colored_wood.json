@@ -13,7 +13,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "caveopolis:gray_colored_wood"
-  },
-  "show_notification": true
+    "id": "caveopolis:gray_colored_wood"
+  }
 }

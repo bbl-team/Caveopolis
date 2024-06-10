@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "caveopolis:marble_bricks"
-            ]
+            "items": "caveopolis:marble_bricks"
           }
         ]
       },
@@ -22,14 +20,13 @@
   },
   "requirements": [
     [
-      "has_marble_bricks",
-      "has_the_recipe"
+      "has_the_recipe",
+      "has_marble_bricks"
     ]
   ],
   "rewards": {
     "recipes": [
       "caveopolis:marble_brick_wall"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

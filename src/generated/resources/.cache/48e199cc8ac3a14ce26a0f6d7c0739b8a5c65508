@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-11T11:14:32.0985818	Item Tags
+// 1.20.6	2024-06-10T16:11:20.4826465	Item Tags
 c78ada5968685a6ca96af0fb49dde74df66426f6 data/caveopolis/tags/items/banned_from_in_world_spraying.json
 42a14e0c7cfecab025c809c468c8fb21b74fa037 data/caveopolis/tags/items/black_colored_logs.json
 b1fd5a13e6f8ea035e617d75894f72925b64225c data/caveopolis/tags/items/blue_colored_logs.json
@@ -62,14 +62,14 @@ b0ae93378212f63d83102f90b19dbe032c8b7208 data/caveopolis/tags/items/red_colored_
 d8aa7530351f1c79931d2bb9883d2023f6f1e41b data/caveopolis/tags/items/stripped_colored_woods.json
 fcb022e2cb44367bac4736ffa518c57c10a4580a data/caveopolis/tags/items/white_colored_logs.json
 bf572a5d6f49fe2f7168d96e66563fded67cbabe data/caveopolis/tags/items/yellow_colored_logs.json
-7caa63657956bc78c7f2a2e35af6477587dfb926 data/forge/tags/items/cobblestone.json
-365f4e0b92ca5a45f6b689ed84d4c8c6aca5bef1 data/forge/tags/items/fence_gates/wooden.json
-c4f6b4e8062366b08ac0b9faaf43b0e6b3cbab50 data/forge/tags/items/ingots.json
+7caa63657956bc78c7f2a2e35af6477587dfb926 data/c/tags/items/cobblestones.json
+365f4e0b92ca5a45f6b689ed84d4c8c6aca5bef1 data/c/tags/items/fence_gates/wooden.json
+c4f6b4e8062366b08ac0b9faaf43b0e6b3cbab50 data/c/tags/items/ingots.json
+78f73832a87b0e326b00cf86c824dbb61bb29c2c data/c/tags/items/rods.json
+7695b5a5a0f2edb5471254ffd713751c466a12c3 data/c/tags/items/stones.json
 c4f6b4e8062366b08ac0b9faaf43b0e6b3cbab50 data/forge/tags/items/ingots/mixed_stone_ingot.json
-78f73832a87b0e326b00cf86c824dbb61bb29c2c data/forge/tags/items/rods.json
 ba3bba9acc2ecbbf21aabe92a1c67df689717a7e data/forge/tags/items/rods/stone.json
 e2feff85afb7e4871204d6f5d72b8760e2780187 data/forge/tags/items/shulker_boxes.json
-7695b5a5a0f2edb5471254ffd713751c466a12c3 data/forge/tags/items/stone.json
 7380493506fb017172e17130054de32af9b53530 data/minecraft/tags/items/dirt.json
 9ede023d0e4c4e1ae872d8343f37dd5b8fc315b4 data/minecraft/tags/items/hanging_signs.json
 7944cdee0a1fb73528d63a81cb5286387c5cdfe1 data/minecraft/tags/items/leaves.json

@@ -3,8 +3,8 @@ package com.benbenlaw.caveopolis.block.custom;
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.entity.ColoredCavesPortalBlockEntity;
 import com.benbenlaw.caveopolis.block.entity.ModBlockEntities;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import com.benbenlaw.caveopolis.util.ColoredCavesTeleporter;
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
@@ -12,7 +12,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -30,9 +29,16 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class ColoredCavesPortalBlock extends BaseEntityBlock {
+
+    public static final MapCodec<ColoredCavesPortalBlock> CODEC = simpleCodec(ColoredCavesPortalBlock::new);
     public ColoredCavesPortalBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(this.getStateDefinition().any().setValue(FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected @NotNull MapCodec<? extends BaseEntityBlock> codec() {
+        return CODEC;
     }
 
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
@@ -58,11 +64,10 @@ public class ColoredCavesPortalBlock extends BaseEntityBlock {
         pBuilder.add(FACING);
 
     }
-    @Override
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+    public @NotNull InteractionResult useWithoutItem(@NotNull BlockState blockState, Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull BlockHitResult hit) {
 
         if(player.canChangeDimensions()) {
-            coloredCavesPortal(player, pos);
+            coloredCavesPortal(player, blockPos);
             return InteractionResult.SUCCESS;
         } else {
             return InteractionResult.FAIL;

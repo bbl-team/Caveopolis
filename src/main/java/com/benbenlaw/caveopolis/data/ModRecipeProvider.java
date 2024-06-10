@@ -2,48 +2,38 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
-import com.benbenlaw.caveopolis.data.custom.SprayerRecipeBuilder;
 import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.util.ModTags;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.CachedOutput;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import net.neoforged.neoforge.common.Tags;
 
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+public class ModRecipeProvider extends RecipeProvider {
 
     private final List<ItemLike> MIXED_STONE_SMELTABLES = List.of(ModItems.RAW_MIXED_STONE.get(), ModBlocks.MIXED_STONE_ORE.get(), ModBlocks.DEEPSLATE_MIXED_STONE_ORE.get());
     private final List<ItemLike> BRIGHT_STONE_SMELTABLES = List.of(ModBlocks.BRIGHT_STONE_ORE.get(), ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE.get());
 
-    public ModRecipeProvider(PackOutput packOutput) {
-        super(packOutput);
+    public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> completableFuture) {
+        super(output, completableFuture);
     }
 
     @Override
-    public CompletableFuture<?> run(CachedOutput p_254020_) {
-        return super.run(p_254020_);
-    }
-
-    @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> pWriter) {
+    protected void buildRecipes(RecipeOutput pWriter) {
 
         //MISC
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STONE_CRAFTING_TABLE.get())
@@ -74,9 +64,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.STONE_STICK.get())
                 .pattern("A")
                 .pattern("A")
-                .define('A', Tags.Items.STONE)
+                .define('A', Tags.Items.STONES)
                 .unlockedBy("has_stone", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Tags.Items.STONE).build()))
+                        of(Tags.Items.STONES).build()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MOSSY_STRING.get())
@@ -2421,26 +2411,5 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
   //     ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, itemLike, 4).requires(itemLike1).group("planks").unlockedBy("has_log", has(itemLike1)).save(finishedRecipeConsumer);
   // }
 
-    protected static void stonecutterResultFromBase(Consumer<FinishedRecipe> finishedRecipeConsumer, RecipeCategory category, ItemLike itemLike, ItemLike itemLike1, int i) {
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(itemLike1), category, itemLike, i).unlockedBy(getHasName(itemLike1), has(itemLike1)).save(finishedRecipeConsumer, Caveopolis.MOD_ID + ":" + getConversionRecipeName(itemLike, itemLike1) + "_stonecutting");
-    }
-
-    protected static void oreSmelting(Consumer<FinishedRecipe> p_250654_, List<ItemLike> p_250172_, RecipeCategory p_250588_, ItemLike p_251868_, float p_250789_, int p_252144_, String p_251687_) {
-        oreCooking(p_250654_, RecipeSerializer.SMELTING_RECIPE, p_250172_, p_250588_, p_251868_, p_250789_, p_252144_, p_251687_, "_from_smelting");
-    }
-
-    protected static void oreBlasting(Consumer<FinishedRecipe> p_248775_, List<ItemLike> p_251504_, RecipeCategory p_248846_, ItemLike p_249735_, float p_248783_, int p_250303_, String p_251984_) {
-        oreCooking(p_248775_, RecipeSerializer.BLASTING_RECIPE, p_251504_, p_248846_, p_249735_, p_248783_, p_250303_, p_251984_, "_from_blasting");
-    }
-
-    protected static void oreCooking(Consumer<FinishedRecipe> finishedRecipeConsumer, RecipeSerializer<? extends AbstractCookingRecipe> recipeSerializer,
-                                     List<ItemLike> pIngredients, RecipeCategory recipeCategory, ItemLike pResult, float pExperiance, int pCookingTime, String pGroup, String pRecipeName) {
-        for(ItemLike itemlike : pIngredients) {
-            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), recipeCategory, pResult, pExperiance, pCookingTime,
-                    recipeSerializer).group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(finishedRecipeConsumer, Caveopolis.MOD_ID + ":" + getItemName(pResult) + pRecipeName + "_" + getItemName(itemlike));
-        }
-
-    }
 
 }
