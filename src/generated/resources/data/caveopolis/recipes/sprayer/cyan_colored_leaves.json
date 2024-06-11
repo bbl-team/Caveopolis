@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_leaves"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:cyan_colored_leaves"
+  },
+  "spraycan": {
+    "item": "caveopolis:cyan_spray_can"
+  }
+}

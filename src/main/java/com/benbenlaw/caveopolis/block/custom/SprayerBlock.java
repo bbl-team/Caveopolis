@@ -111,10 +111,9 @@ public class SprayerBlock extends BaseEntityBlock {
 
     @Nullable
     @Override
-    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.SPRAYER.get(),
-                (world, blockPos, blockState, blockEntity) -> ((SprayerBlockEntity) blockEntity).tick());
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(@NotNull Level level, @NotNull BlockState blockState, @NotNull BlockEntityType<T> blockEntityType) {
+        return createTickerHelper(blockEntityType, ModBlockEntities.SPRAYER.get(),
+                (world, blockPos, thisBlockState, blockEntity) -> blockEntity.tick());
     }
-
 }
 

@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_wooden_plank_trapdoors"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:pink_colored_wooden_plank_trapdoor"
+  },
+  "spraycan": {
+    "item": "caveopolis:pink_spray_can"
+  }
+}

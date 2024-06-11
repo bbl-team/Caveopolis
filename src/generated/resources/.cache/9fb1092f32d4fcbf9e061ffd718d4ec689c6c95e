@@ -1,4 +1,4 @@
-// 1.20.6	2024-06-10T16:11:20.4677213	Recipes
+// 1.20.6	2024-06-11T19:17:21.0669694	Recipes
 6b1962a65532387cc3fce3d4c8e981dcbb8cd0e9 data/caveopolis/advancements/recipes/building_blocks/black_colored_cobblestone.json
 c98a706464ba661c8475ccf1a813cb85b8c0bbec data/caveopolis/advancements/recipes/building_blocks/black_colored_cobblestone_bricks.json
 8e09628a7d799c93a0a2b2e58afce40a57d47cd9 data/caveopolis/advancements/recipes/building_blocks/black_colored_cobblestone_brick_stairs.json
@@ -1040,7 +1040,7 @@ c6cc69b3f40d5afc010baefb94fdfcb7ebc2261e data/caveopolis/recipes/red_colored_woo
 7ea9efd9c47ed219d6f1d08aa1c492d9609c5f71 data/caveopolis/recipes/red_colored_wooden_plank_trapdoor.json
 a226840cd9e339c69177bfdf5d064a923523de1f data/caveopolis/recipes/red_spray_can.json
 23072272e6480874bca9eb20b5b38d9b88e2240c data/caveopolis/recipes/spray_can_remover.json
-1e702c0225cd65ae645e1b1963cae05dac435dc7 data/caveopolis/recipes/stone_crafting_table.json
+791f1a61622d4453b6eb48bb98750d7e6e199ca1 data/caveopolis/recipes/stone_crafting_table.json
 6ebf8f1d02b6b78476e353a69ff0417d869e31ee data/caveopolis/recipes/stone_stick.json
 c7e61598eb8f2e6c153e3aeea291255fd9bc2739 data/caveopolis/recipes/stone_torch.json
 84db10fa462e3a03333c4faf1249415b1c23fd22 data/caveopolis/recipes/stripped_black_colored_wood.json

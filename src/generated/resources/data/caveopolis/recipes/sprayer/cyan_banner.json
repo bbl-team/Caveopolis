@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "minecraft:banners"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:cyan_banner"
+  },
+  "spraycan": {
+    "item": "caveopolis:cyan_spray_can"
+  }
+}

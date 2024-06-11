@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_wooden_planks"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:magenta_colored_wooden_planks"
+  },
+  "spraycan": {
+    "item": "caveopolis:magenta_spray_can"
+  }
+}

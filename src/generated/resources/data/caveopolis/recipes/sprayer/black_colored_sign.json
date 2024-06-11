@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_signs"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:black_colored_sign"
+  },
+  "spraycan": {
+    "item": "caveopolis:black_spray_can"
+  }
+}

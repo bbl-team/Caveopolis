@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "has_bed": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:beds"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:sprayer/blue_bed"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_bed"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:sprayer/blue_bed"
+    ]
+  },
+  "sends_telemetry_event": true
+}

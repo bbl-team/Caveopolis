@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:stripped_colored_woods"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:stripped_red_colored_wood"
+  },
+  "spraycan": {
+    "item": "caveopolis:red_spray_can"
+  }
+}

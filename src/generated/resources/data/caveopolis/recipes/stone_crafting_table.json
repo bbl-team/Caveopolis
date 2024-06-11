@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "group": "caveopolis",
   "key": {
     "A": {
       "item": "minecraft:stone_bricks"

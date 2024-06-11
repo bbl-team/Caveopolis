@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "has_plank_slabs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#caveopolis:colored_wooden_plank_doors"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:sprayer/orange_colored_wooden_plank_door"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plank_slabs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:sprayer/orange_colored_wooden_plank_door"
+    ]
+  },
+  "sends_telemetry_event": true
+}

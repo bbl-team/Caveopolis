@@ -6,6 +6,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -15,7 +16,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-public record SprayerRecipe(Ingredient input, Ingredient spraycan, ItemStack output) implements Recipe<SimpleContainer> {
+public record SprayerRecipe(Ingredient input, Ingredient spraycan, ItemStack output) implements Recipe<SimpleContainer>{
 
     @Override
     public @NotNull NonNullList<Ingredient> getIngredients() {
@@ -29,8 +30,8 @@ public record SprayerRecipe(Ingredient input, Ingredient spraycan, ItemStack out
             return false;
         }
 
-        if (input.test(pContainer.getItem(0))) {
-            return spraycan.test(pContainer.getItem(1));
+        if (input.test(pContainer.getItem(2))) {
+            return spraycan.test(pContainer.getItem(0));
         }
         return false;
     }

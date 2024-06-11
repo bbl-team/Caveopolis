@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "has_plank_slabs": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:candles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:sprayer/gray_candle"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_plank_slabs"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:sprayer/gray_candle"
+    ]
+  },
+  "sends_telemetry_event": true
+}

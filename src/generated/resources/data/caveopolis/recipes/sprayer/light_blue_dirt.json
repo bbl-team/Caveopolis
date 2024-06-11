@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_dirt"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:light_blue_dirt"
+  },
+  "spraycan": {
+    "item": "caveopolis:light_blue_spray_can"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "caveopolis:stripped_cyan_colored_wood"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "caveopolis:blocks/stripped_cyan_colored_wood"
+}

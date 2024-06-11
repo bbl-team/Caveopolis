@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_stone_wall"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:pink_colored_stone_wall"
+  },
+  "spraycan": {
+    "item": "caveopolis:pink_spray_can"
+  }
+}

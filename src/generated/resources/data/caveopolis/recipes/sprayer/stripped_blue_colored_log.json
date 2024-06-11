@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:stripped_colored_logs"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:stripped_blue_colored_log"
+  },
+  "spraycan": {
+    "item": "caveopolis:blue_spray_can"
+  }
+}

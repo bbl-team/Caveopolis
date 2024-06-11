@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "minecraft:candles"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:black_candle"
+  },
+  "spraycan": {
+    "item": "caveopolis:black_spray_can"
+  }
+}

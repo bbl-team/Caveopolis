@@ -1,5 +1,6 @@
 package com.benbenlaw.caveopolis.item;
 
+import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.opolisutilities.OpolisUtilities;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.component.DataComponentType;
@@ -13,15 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class ModDataComponents {
 
-    public static final DeferredRegister<DataComponentType<?>> COMPONENTS = DeferredRegister.createDataComponents(OpolisUtilities.MOD_ID);
-
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<String>> ENTITY_TYPE =
-            COMPONENTS.register("entity_type", () ->
-                    DataComponentType.<String>builder().persistent(Codec.STRING).networkSynchronized(ByteBufCodecs.STRING_UTF8).build());
-
-    public static final DeferredHolder<DataComponentType<?>, DataComponentType<String>> DIMENSION =
-            COMPONENTS.register("dimension", () ->
-                    DataComponentType.<String>builder().persistent(Codec.STRING).networkSynchronized(ByteBufCodecs.STRING_UTF8).build());
+    public static final DeferredRegister<DataComponentType<?>> COMPONENTS = DeferredRegister.createDataComponents(Caveopolis.MOD_ID);
 
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> INT_X_1 =
             COMPONENTS.register("int_x_1", () ->

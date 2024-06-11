@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_saplings"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:light_blue_colored_sapling"
+  },
+  "spraycan": {
+    "item": "caveopolis:light_blue_spray_can"
+  }
+}

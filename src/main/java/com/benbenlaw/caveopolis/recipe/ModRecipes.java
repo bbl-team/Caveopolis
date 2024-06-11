@@ -16,7 +16,7 @@ public class ModRecipes {
     public static final DeferredRegister<RecipeType<?>> TYPES =
             DeferredRegister.create(BuiltInRegistries.RECIPE_TYPE, Caveopolis.MOD_ID);
 
-    //Scrayer
+    //Sprayer
     public static final Supplier<RecipeSerializer<SprayerRecipe>> SPRAYER_SERIALIZER =
             SERIALIZER.register("sprayer", () -> SprayerRecipe.Serializer.INSTANCE);
     public static final Supplier<RecipeType<SprayerRecipe>> SPRAYER_TYPE =

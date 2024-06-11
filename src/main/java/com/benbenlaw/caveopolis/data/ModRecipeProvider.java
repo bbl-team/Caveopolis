@@ -2,13 +2,16 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
+import com.benbenlaw.caveopolis.data.recipes.SprayerRecipeBuilder;
 import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.util.ModTags;
+import com.benbenlaw.opolisutilities.OpolisUtilities;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
@@ -17,6 +20,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Locale;
@@ -24,6 +28,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider {
+
 
     private final List<ItemLike> MIXED_STONE_SMELTABLES = List.of(ModItems.RAW_MIXED_STONE.get(), ModBlocks.MIXED_STONE_ORE.get(), ModBlocks.DEEPSLATE_MIXED_STONE_ORE.get());
     private final List<ItemLike> BRIGHT_STONE_SMELTABLES = List.of(ModBlocks.BRIGHT_STONE_ORE.get(), ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE.get());
@@ -36,13 +41,16 @@ public class ModRecipeProvider extends RecipeProvider {
     protected void buildRecipes(RecipeOutput pWriter) {
 
         //MISC
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
                 .define('A', Blocks.STONE_BRICKS)
+                .group("caveopolis")
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
+
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.GREEN_WOOL)
                 .pattern("AA")
@@ -94,8 +102,8 @@ public class ModRecipeProvider extends RecipeProvider {
                         of(ModItems.MIXED_STONE_INGOT.get()).build()))
                 .save(pWriter);
 
-       // ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLACK_SPRAY_CAN.get()).requires(ModItems.BLACK_SPRAY_CAN.get()).requires(Tags.Items.DYES_BLACK)
-       //         .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
+        // ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLACK_SPRAY_CAN.get()).requires(ModItems.BLACK_SPRAY_CAN.get()).requires(Tags.Items.DYES_BLACK)
+        //         .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLUE_SPRAY_CAN.get())
                 .pattern(" A ")
@@ -110,183 +118,183 @@ public class ModRecipeProvider extends RecipeProvider {
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLUE_SPRAY_CAN.get()).requires(ModItems.BLUE_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_BLUE)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BROWN_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_BROWN)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BROWN_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_BROWN)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BROWN_SPRAY_CAN.get()).requires(ModItems.BROWN_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_BROWN)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MAGENTA_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_MAGENTA)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MAGENTA_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_MAGENTA)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MAGENTA_SPRAY_CAN.get()).requires(ModItems.MAGENTA_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_MAGENTA)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURPLE_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_PURPLE)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PURPLE_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_PURPLE)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURPLE_SPRAY_CAN.get()).requires(ModItems.PURPLE_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_PURPLE)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WHITE_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_WHITE)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
-         // ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WHTIE_SPRAY_CAN.get()).requires(ModItems.WHTIE_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_WHITE)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.WHITE_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_WHITE)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
+        // ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WHTIE_SPRAY_CAN.get()).requires(ModItems.WHTIE_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_WHITE)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.YELLOW_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_YELLOW)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.YELLOW_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_YELLOW)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YELLOW_SPRAY_CAN.get()).requires(ModItems.YELLOW_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_YELLOW)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIGHT_GRAY_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_LIGHT_GRAY)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIGHT_GRAY_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_LIGHT_GRAY)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LIGHT_GRAY_SPRAY_CAN.get()).requires(ModItems.LIGHT_GRAY_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_LIGHT_GRAY)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIGHT_BLUE_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_LIGHT_BLUE)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIGHT_BLUE_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_LIGHT_BLUE)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LIGHT_BLUE_SPRAY_CAN.get()).requires(ModItems.LIGHT_BLUE_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_LIGHT_BLUE)
-         //         .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
+        //         .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GRAY_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_GRAY)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GRAY_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_GRAY)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GRAY_SPRAY_CAN.get()).requires(ModItems.GRAY_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_GRAY)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PINK_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_PINK)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.PINK_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_PINK)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PINK_SPRAY_CAN.get()).requires(ModItems.PINK_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_PINK)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RED_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_RED)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.RED_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_RED)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RED_SPRAY_CAN.get()).requires(ModItems.RED_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_RED)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ORANGE_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', Tags.Items.DYES_ORANGE)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ORANGE_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_ORANGE)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ORANGE_SPRAY_CAN.get()).requires(ModItems.ORANGE_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_ORANGE)
         //          .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GREEN_SPRAY_CAN.get())
-              .pattern(" A ")
-              .pattern("ABA")
-              .pattern("ABA")
-              .define('A', ModItems.MIXED_STONE_INGOT.get())
-              .define('B', Tags.Items.DYES_GREEN)
-              .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                      of(ModItems.MIXED_STONE_INGOT.get()).build()))
-              .save(pWriter);
-       //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GREEN_SPRAY_CAN.get()).requires(ModItems.GREEN_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_GREEN)
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GREEN_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_GREEN)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
+        //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GREEN_SPRAY_CAN.get()).requires(ModItems.GREEN_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_GREEN)
         //      .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIME_SPRAY_CAN.get())
-              .pattern(" A ")
-              .pattern("ABA")
-              .pattern("ABA")
-              .define('A', ModItems.MIXED_STONE_INGOT.get())
-              .define('B', Tags.Items.DYES_LIME)
-              .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                      of(ModItems.MIXED_STONE_INGOT.get()).build()))
-              .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.LIME_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_LIME)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LIME_SPRAY_CAN.get()).requires(ModItems.LIME_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_LIME)
         //      .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CYAN_SPRAY_CAN.get())
-              .pattern(" A ")
-              .pattern("ABA")
-              .pattern("ABA")
-              .define('A', ModItems.MIXED_STONE_INGOT.get())
-              .define('B', Tags.Items.DYES_CYAN)
-              .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                      of(ModItems.MIXED_STONE_INGOT.get()).build()))
-              .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.CYAN_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', Tags.Items.DYES_CYAN)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CYAN_SPRAY_CAN.get()).requires(ModItems.CYAN_SPRAY_CAN.get(), 1).requires(Tags.Items.DYES_CYAN)
-         //     .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
+        //     .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
-          ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLOWSTONE_SPRAY_CAN.get())
-                  .pattern(" A ")
-                  .pattern("ABA")
-                  .pattern("ABA")
-                  .define('A', ModItems.MIXED_STONE_INGOT.get())
-                  .define('B', ModTags.Items.BRIGHT_ITEMS)
-                  .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
-                          of(ModItems.MIXED_STONE_INGOT.get()).build()))
-                  .save(pWriter);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GLOWSTONE_SPRAY_CAN.get())
+                .pattern(" A ")
+                .pattern("ABA")
+                .pattern("ABA")
+                .define('A', ModItems.MIXED_STONE_INGOT.get())
+                .define('B', ModTags.Items.BRIGHT_ITEMS)
+                .unlockedBy("has_mixed_stone_ingot", inventoryTrigger(ItemPredicate.Builder.item().
+                        of(ModItems.MIXED_STONE_INGOT.get()).build()))
+                .save(pWriter);
         //  ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GLOWSTONE_SPRAY_CAN.get()).requires(ModItems.GLOWSTONE_SPRAY_CAN.get(), 1).requires(Tags.Items.DUSTS_GLOWSTONE)
         //        .unlockedBy("has_spray_can", inventoryTrigger(ItemPredicate.Builder.item().of(ModTags.Items.SPRAY_CANS).build())).save(pWriter);
 
@@ -376,7 +384,7 @@ public class ModRecipeProvider extends RecipeProvider {
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_STAIRS.get(), ModBlocks.CYAN_COLORED_STONE.get(), 1);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_BRICKS.get(), ModBlocks.CYAN_COLORED_STONE.get(), 1);
 
-        
+
         //COLORED STONE AND COBBLESTONE BRICKS TO 4
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get(), 4)
@@ -507,11 +515,11 @@ public class ModRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_COLORED_COBBLESTONE_BRICKS.get(), 4)
                 .define('#', ModBlocks.LIME_COLORED_COBBLESTONE.get()).pattern("##").pattern("##")
                 .unlockedBy("has_end_cobblestone", has(ModBlocks.LIME_COLORED_COBBLESTONE.get())).save(pWriter);
-        
+
         //LIGHT_BLUE COLORED STONE AND STONE BRICKS
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_WALL.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE.get());
         wall(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICK_WALL.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get());
-        
+
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE.get());
         slab(pWriter, RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICK_SLAB.get(), ModBlocks.LIGHT_BLUE_COLORED_STONE_BRICKS.get());
 
@@ -1238,7 +1246,7 @@ public class ModRecipeProvider extends RecipeProvider {
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.COBBLESTONE_BRICK_SLAB.get(), ModBlocks.COBBLESTONE_BRICKS.get(), 2);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.COBBLESTONE_BRICK_STAIRS.get(), ModBlocks.COBBLESTONE_BRICKS.get(), 1);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.COBBLESTONE_BRICKS.get(), Blocks.COBBLESTONE, 1);
-    
+
         //PLANKS
 
         stairBuilder(ModBlocks.WHITE_COLORED_WOODEN_PLANK_STAIRS.get(), Ingredient.of(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()))
@@ -1452,9 +1460,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("BROWN_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_BUTTON.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), 1);
-        
+
         //break
-        
+
         buttonBuilder(ModBlocks.WHITE_COLORED_STONE_BUTTON.get(), Ingredient.of(ModBlocks.WHITE_COLORED_STONE.get()))
                 .unlockedBy("WHITE_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModBlocks.WHITE_COLORED_STONE.get()).build())).save(pWriter);
@@ -1534,9 +1542,9 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("BROWN_COLORED_STONE".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModBlocks.BROWN_COLORED_STONE.get()).build())).save(pWriter);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_STONE_BUTTON.get(), ModBlocks.BROWN_COLORED_STONE.get(), 1);
-        
-        //breaj
-        
+
+        //break
+
         pressurePlate(pWriter, ModBlocks.BLACK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get());
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get(), 1);
         pressurePlate(pWriter, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.PURPLE_COLORED_WOODEN_PLANKS.get());
@@ -1569,9 +1577,9 @@ public class ModRecipeProvider extends RecipeProvider {
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), 1);
         pressurePlate(pWriter, ModBlocks.WHITE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get());
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.WHITE_COLORED_WOODEN_PLANK_PRESSURE_PLATE.get(), ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get(), 1);
-        
+
         //breaj
-        
+
         pressurePlate(pWriter, ModBlocks.BLACK_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.BLACK_COLORED_STONE.get());
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BLACK_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.BLACK_COLORED_STONE.get(), 1);
         pressurePlate(pWriter, ModBlocks.PURPLE_COLORED_STONE_PRESSURE_PLATE.get(), ModBlocks.PURPLE_COLORED_STONE.get());
@@ -1686,8 +1694,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("BROWN_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.BROWN_COLORED_WOODEN_PLANK_FENCE.get(), ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), 1);
-        
-        
+
+
         fenceGateBuilder(ModBlocks.WHITE_COLORED_WOODEN_PLANK_FENCE_GATE.get(), Ingredient.of(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()))
                 .unlockedBy("WHITE_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()).build())).save(pWriter);
@@ -1951,7 +1959,7 @@ public class ModRecipeProvider extends RecipeProvider {
         woodFromLogs(pWriter, ModBlocks.PURPLE_COLORED_WOOD.get(), ModBlocks.PURPLE_COLORED_LOG.get());
         woodFromLogs(pWriter, ModBlocks.MAGENTA_COLORED_WOOD.get(), ModBlocks.MAGENTA_COLORED_LOG.get());
         woodFromLogs(pWriter, ModBlocks.PINK_COLORED_WOOD.get(), ModBlocks.PINK_COLORED_LOG.get());
-        
+
         woodFromLogs(pWriter, ModBlocks.STRIPPED_BROWN_COLORED_WOOD.get(), ModBlocks.STRIPPED_BROWN_COLORED_LOG.get());
         woodFromLogs(pWriter, ModBlocks.STRIPPED_BLACK_COLORED_WOOD.get(), ModBlocks.STRIPPED_BLACK_COLORED_LOG.get());
         woodFromLogs(pWriter, ModBlocks.STRIPPED_GREEN_COLORED_WOOD.get(), ModBlocks.STRIPPED_GREEN_COLORED_LOG.get());
@@ -1968,7 +1976,7 @@ public class ModRecipeProvider extends RecipeProvider {
         woodFromLogs(pWriter, ModBlocks.STRIPPED_PURPLE_COLORED_WOOD.get(), ModBlocks.STRIPPED_PURPLE_COLORED_LOG.get());
         woodFromLogs(pWriter, ModBlocks.STRIPPED_MAGENTA_COLORED_WOOD.get(), ModBlocks.STRIPPED_MAGENTA_COLORED_LOG.get());
         woodFromLogs(pWriter, ModBlocks.STRIPPED_PINK_COLORED_WOOD.get(), ModBlocks.STRIPPED_PINK_COLORED_LOG.get());
-        
+
         planksFromLogs(pWriter, ModBlocks.BROWN_COLORED_WOODEN_PLANKS.get(), ModTags.Items.BROWN_COLORED_LOGS, 4);
         planksFromLogs(pWriter, ModBlocks.BLACK_COLORED_WOODEN_PLANKS.get(), ModTags.Items.BLACK_COLORED_LOGS, 4);
         planksFromLogs(pWriter, ModBlocks.GREEN_COLORED_WOODEN_PLANKS.get(), ModTags.Items.GREEN_COLORED_LOGS, 4);
@@ -1986,7 +1994,7 @@ public class ModRecipeProvider extends RecipeProvider {
         planksFromLogs(pWriter, ModBlocks.MAGENTA_COLORED_WOODEN_PLANKS.get(), ModTags.Items.MAGENTA_COLORED_LOGS, 4);
         planksFromLogs(pWriter, ModBlocks.PINK_COLORED_WOODEN_PLANKS.get(), ModTags.Items.PINK_COLORED_LOGS, 4);
 
-    //SIGN
+        //SIGN
 
         signBuilder(ModBlocks.WHITE_COLORED_SIGN.get(), Ingredient.of(ModBlocks.WHITE_COLORED_WOODEN_PLANKS.get()))
                 .unlockedBy("WHITE_COLORED_WOODEN_PLANK".toLowerCase(Locale.ROOT), inventoryTrigger(ItemPredicate.Builder.item()
@@ -2102,7 +2110,7 @@ public class ModRecipeProvider extends RecipeProvider {
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_HANGING_SIGN.get(), ModBlocks.STRIPPED_MAGENTA_COLORED_LOG.get(), 1);
         hangingSign(pWriter, ModBlocks.PINK_COLORED_HANGING_SIGN.get(), ModBlocks.STRIPPED_PINK_COLORED_LOG.get());
         stonecutterResultFromBase(pWriter, RecipeCategory.MISC, ModBlocks.PINK_COLORED_HANGING_SIGN.get(), ModBlocks.STRIPPED_PINK_COLORED_LOG.get(), 1);
-        
+
         //MARBLE
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MARBLE.get(), 4)
@@ -2161,7 +2169,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2169,7 +2177,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2185,7 +2193,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2201,7 +2209,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2209,7 +2217,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2217,7 +2225,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2241,7 +2249,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2249,7 +2257,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2257,7 +2265,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2265,7 +2273,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_stone_bricks", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_STONE_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2289,7 +2297,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2297,7 +2305,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIGHT_BLUE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2313,7 +2321,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.GRAY_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2329,7 +2337,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.ORANGE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2337,7 +2345,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RED_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2345,7 +2353,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.LIME_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2369,7 +2377,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.CYAN_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2377,7 +2385,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PINK_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2385,7 +2393,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.PURPLE_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2393,7 +2401,7 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_colored_WOODEN_PLANKS", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
-        
+
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MAGENTA_COLORED_WOODEN_PLANK_CRAFTING_TABLE.get())
                 .pattern("AA")
                 .pattern("AA")
@@ -2402,14 +2410,6 @@ public class ModRecipeProvider extends RecipeProvider {
                         of(Blocks.OAK_PLANKS).build()))
                 .save(pWriter);
 
-
-
-
     }
-
-  // protected static void planksFromLogs(Consumer<FinishedRecipe> finishedRecipeConsumer, ItemLike itemLike, Item itemLike1) {
-  //     ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, itemLike, 4).requires(itemLike1).group("planks").unlockedBy("has_log", has(itemLike1)).save(finishedRecipeConsumer);
-  // }
-
 
 }

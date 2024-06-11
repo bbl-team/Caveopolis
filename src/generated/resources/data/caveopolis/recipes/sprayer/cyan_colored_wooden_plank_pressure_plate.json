@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_wooden_plank_pressure_plates"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:cyan_colored_wooden_plank_pressure_plate"
+  },
+  "spraycan": {
+    "item": "caveopolis:cyan_spray_can"
+  }
+}

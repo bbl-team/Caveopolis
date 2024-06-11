@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_stone_pressure_plates"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:green_colored_stone_pressure_plate"
+  },
+  "spraycan": {
+    "item": "caveopolis:green_spray_can"
+  }
+}

@@ -103,100 +103,100 @@ public class ModBlocks {
 
 
 
-    public static final DeferredHolder<Block, BlueTorchBlock> BLUE_TORCH = BLOCKS.register("blue_torch",
+    public static final DeferredBlock<Block> BLUE_TORCH = registerBlockWithoutBlockItem("blue_torch",
             () -> new BlueTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, BlueWallTorchBlock> BLUE_WALL_TORCH = BLOCKS.register("blue_wall_torch",
+    public static final DeferredBlock<Block> BLUE_WALL_TORCH = registerBlockWithoutBlockItem("blue_wall_torch",
             () -> new BlueWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BLUE_TORCH)));
 
-    public static final DeferredHolder<Block, RedTorchBlock> RED_TORCH = BLOCKS.register("red_torch",
+    public static final DeferredBlock<Block> RED_TORCH = registerBlockWithoutBlockItem("red_torch",
             () -> new RedTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, RedWallTorchBlock> RED_WALL_TORCH = BLOCKS.register("red_wall_torch",
+    public static final DeferredBlock<Block> RED_WALL_TORCH = registerBlockWithoutBlockItem("red_wall_torch",
             () -> new RedWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.RED_TORCH)));
 
-    public static final DeferredHolder<Block, GreenTorchBlock> GREEN_TORCH = BLOCKS.register("green_torch",
+    public static final DeferredBlock<Block> GREEN_TORCH = registerBlockWithoutBlockItem("green_torch",
             () -> new GreenTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, GreenWallTorchBlock> GREEN_WALL_TORCH = BLOCKS.register("green_wall_torch",
+    public static final DeferredBlock<Block> GREEN_WALL_TORCH = registerBlockWithoutBlockItem("green_wall_torch",
             () -> new GreenWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.GREEN_TORCH)));
 
-    public static final DeferredHolder<Block, BlackTorchBlock> BLACK_TORCH = BLOCKS.register("black_torch",
+    public static final DeferredBlock<Block> BLACK_TORCH = registerBlockWithoutBlockItem("black_torch",
             () -> new BlackTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, BlackWallTorchBlock> BLACK_WALL_TORCH = BLOCKS.register("black_wall_torch",
+    public static final DeferredBlock<Block> BLACK_WALL_TORCH = registerBlockWithoutBlockItem("black_wall_torch",
             () -> new BlackWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BLACK_TORCH)));
 
-    public static final DeferredHolder<Block, WhiteTorchBlock> WHITE_TORCH = BLOCKS.register("white_torch",
+    public static final DeferredBlock<Block> WHITE_TORCH = registerBlockWithoutBlockItem("white_torch",
             () -> new WhiteTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, WhiteWallTorchBlock> WHITE_WALL_TORCH = BLOCKS.register("white_wall_torch",
+    public static final DeferredBlock<Block> WHITE_WALL_TORCH = registerBlockWithoutBlockItem("white_wall_torch",
             () -> new WhiteWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.WHITE_TORCH)));
 
-    public static final DeferredHolder<Block, YellowTorchBlock> YELLOW_TORCH = BLOCKS.register("yellow_torch",
+    public static final DeferredBlock<Block> YELLOW_TORCH = registerBlockWithoutBlockItem("yellow_torch",
             () -> new YellowTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, YellowWallTorchBlock> YELLOW_WALL_TORCH = BLOCKS.register("yellow_wall_torch",
+    public static final DeferredBlock<Block> YELLOW_WALL_TORCH = registerBlockWithoutBlockItem("yellow_wall_torch",
             () -> new YellowWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.YELLOW_TORCH)));
 
-    public static final DeferredHolder<Block, OrangeTorchBlock> ORANGE_TORCH = BLOCKS.register("orange_torch",
+    public static final DeferredBlock<Block> ORANGE_TORCH = registerBlockWithoutBlockItem("orange_torch",
             () -> new OrangeTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, OrangeWallTorchBlock> ORANGE_WALL_TORCH = BLOCKS.register("orange_wall_torch",
+    public static final DeferredBlock<Block> ORANGE_WALL_TORCH = registerBlockWithoutBlockItem("orange_wall_torch",
             () -> new OrangeWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.ORANGE_TORCH)));
 
-    public static final DeferredHolder<Block, BrownTorchBlock> BROWN_TORCH = BLOCKS.register("brown_torch",
+    public static final DeferredBlock<Block> BROWN_TORCH = registerBlockWithoutBlockItem("brown_torch",
             () -> new BrownTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, BrownWallTorchBlock> BROWN_WALL_TORCH = BLOCKS.register("brown_wall_torch",
+    public static final  DeferredBlock<Block> BROWN_WALL_TORCH = registerBlockWithoutBlockItem("brown_wall_torch",
             () -> new BrownWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.BROWN_TORCH)));
 
-    public static final DeferredHolder<Block, LimeTorchBlock> LIME_TORCH = BLOCKS.register("lime_torch",
+    public static final DeferredBlock<Block> LIME_TORCH = registerBlockWithoutBlockItem("lime_torch",
             () -> new LimeTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, LimeWallTorchBlock> LIME_WALL_TORCH = BLOCKS.register("lime_wall_torch",
+    public static final DeferredBlock<Block>  LIME_WALL_TORCH = registerBlockWithoutBlockItem("lime_wall_torch",
             () -> new LimeWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIME_TORCH)));
 
-    public static final DeferredHolder<Block, MagentaTorchBlock> MAGENTA_TORCH = BLOCKS.register("magenta_torch",
+    public static final  DeferredBlock<Block> MAGENTA_TORCH = registerBlockWithoutBlockItem("magenta_torch",
             () -> new MagentaTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, MagentaWallTorchBlock> MAGENTA_WALL_TORCH = BLOCKS.register("magenta_wall_torch",
+    public static final  DeferredBlock<Block> MAGENTA_WALL_TORCH = registerBlockWithoutBlockItem("magenta_wall_torch",
             () -> new MagentaWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.MAGENTA_TORCH)));
 
-    public static final DeferredHolder<Block, LightBlueTorchBlock> LIGHT_BLUE_TORCH = BLOCKS.register("light_blue_torch",
+    public static final  DeferredBlock<Block> LIGHT_BLUE_TORCH = registerBlockWithoutBlockItem("light_blue_torch",
             () -> new LightBlueTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, LightBlueWallTorchBlock> LIGHT_BLUE_WALL_TORCH = BLOCKS.register("light_blue_wall_torch",
+    public static final  DeferredBlock<Block> LIGHT_BLUE_WALL_TORCH = registerBlockWithoutBlockItem("light_blue_wall_torch",
             () -> new LightBlueWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIGHT_BLUE_TORCH)));
 
-    public static final DeferredHolder<Block, CyanTorchBlock> CYAN_TORCH = BLOCKS.register("cyan_torch",
+    public static final  DeferredBlock<Block> CYAN_TORCH = registerBlockWithoutBlockItem("cyan_torch",
             () -> new CyanTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, CyanWallTorchBlock> CYAN_WALL_TORCH = BLOCKS.register("cyan_wall_torch",
+    public static final  DeferredBlock<Block> CYAN_WALL_TORCH = registerBlockWithoutBlockItem("cyan_wall_torch",
             () -> new CyanWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.CYAN_TORCH)));
 
-    public static final DeferredHolder<Block, PurpleTorchBlock> PURPLE_TORCH = BLOCKS.register("purple_torch",
+    public static final  DeferredBlock<Block> PURPLE_TORCH = registerBlockWithoutBlockItem("purple_torch",
             () -> new PurpleTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, PurpleWallTorchBlock> PURPLE_WALL_TORCH = BLOCKS.register("purple_wall_torch",
+    public static final  DeferredBlock<Block> PURPLE_WALL_TORCH = registerBlockWithoutBlockItem("purple_wall_torch",
             () -> new PurpleWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.PURPLE_TORCH)));
 
-    public static final DeferredHolder<Block, GrayTorchBlock> GRAY_TORCH = BLOCKS.register("gray_torch",
+    public static final  DeferredBlock<Block> GRAY_TORCH = registerBlockWithoutBlockItem("gray_torch",
             () -> new GrayTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, GrayWallTorchBlock> GRAY_WALL_TORCH = BLOCKS.register("gray_wall_torch",
+    public static final  DeferredBlock<Block> GRAY_WALL_TORCH = registerBlockWithoutBlockItem("gray_wall_torch",
             () -> new GrayWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.GRAY_TORCH)));
 
-    public static final DeferredHolder<Block, LightGrayTorchBlock> LIGHT_GRAY_TORCH = BLOCKS.register("light_gray_torch",
+    public static final  DeferredBlock<Block> LIGHT_GRAY_TORCH = registerBlockWithoutBlockItem("light_gray_torch",
             () -> new LightGrayTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, LightGrayWallTorchBlock> LIGHT_GRAY_WALL_TORCH = BLOCKS.register("light_gray_wall_torch",
+    public static final  DeferredBlock<Block> LIGHT_GRAY_WALL_TORCH = registerBlockWithoutBlockItem("light_gray_wall_torch",
             () -> new LightGrayWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.LIGHT_GRAY_TORCH)));
 
-    public static final DeferredHolder<Block, PinkTorchBlock> PINK_TORCH = BLOCKS.register("pink_torch",
+    public static final  DeferredBlock<Block> PINK_TORCH = registerBlockWithoutBlockItem("pink_torch",
             () -> new PinkTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
-    public static final DeferredHolder<Block, PinkWallTorchBlock> PINK_WALL_TORCH = BLOCKS.register("pink_wall_torch",
+    public static final DeferredBlock<Block> PINK_WALL_TORCH = registerBlockWithoutBlockItem("pink_wall_torch",
             () -> new PinkWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).lightLevel((state) -> 14).lootFrom(ModBlocks.PINK_TORCH)));
 
 
@@ -220,7 +220,7 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(3.0F, 6.0F).sound(SoundType.STONE)
                     .requiresCorrectToolForDrops()));
 
-    public static final DeferredHolder<Block, StoneTorchBlock> STONE_TORCH = BLOCKS.register("stone_torch",
+    public static final DeferredBlock<Block> STONE_TORCH = registerBlockWithoutBlockItem("stone_torch",
             () -> new StoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).lightLevel((state) -> 14)));
 
     public static final DeferredHolder<Block, StoneWallTorchBlock> STONE_WALL_TORCH = BLOCKS.register("stone_wall_torch",

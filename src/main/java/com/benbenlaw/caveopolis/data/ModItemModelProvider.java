@@ -2,8 +2,9 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
-import com.benbenlaw.caveopolis.block.custom.StoneTorchBlock;
+import com.benbenlaw.caveopolis.block.custom.torches.LightBlueTorchBlock;
 import com.benbenlaw.caveopolis.item.ModItems;
+import com.benbenlaw.opolisutilities.OpolisUtilities;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -15,6 +16,9 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
+import org.jetbrains.annotations.NotNull;
+
+import javax.swing.*;
 
 public class ModItemModelProvider extends ItemModelProvider {
 
@@ -61,7 +65,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.LIME_APPLE);
         simpleItem(ModItems.CYAN_APPLE);
 
-        /*
+
         simpleTorch(ModBlocks.BROWN_TORCH);
         simpleTorch(ModBlocks.MAGENTA_TORCH);
         simpleTorch(ModBlocks.PURPLE_TORCH);
@@ -78,8 +82,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleTorch(ModBlocks.GREEN_TORCH);
         simpleTorch(ModBlocks.LIME_TORCH);
         simpleTorch(ModBlocks.CYAN_TORCH);
+        simpleTorch(ModBlocks.STONE_TORCH);
 
-         */
+
 
         simpleItem(ModItems.STONE_STICK);
         simpleItem(ModItems.MOSS_BALL);
@@ -88,7 +93,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RAW_MIXED_STONE);
         simpleItem(ModItems.MIXED_STONE_INGOT);
         simpleItem(ModItems.MIXED_STONE_NUGGET);
-        simpleTorch(ModBlocks.STONE_TORCH);
 
         simpleItem(ModItems.BLACK_COLORED_SIGN);
         simpleItem(ModItems.BLACK_COLORED_HANGING_SIGN);
@@ -330,11 +334,13 @@ public class ModItemModelProvider extends ItemModelProvider {
                 new ResourceLocation(Caveopolis.MOD_ID,"item/" + item.getId().getPath()));
     }
 
-    private ItemModelBuilder simpleTorch(DeferredHolder<Block, StoneTorchBlock> block) {
+    private ItemModelBuilder simpleTorch(DeferredBlock<Block> block) {
         return withExistingParent(block.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Caveopolis.MOD_ID,"block/" + block.getId().getPath()));
     }
+
+
 
     public void fenceItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
         this.withExistingParent(BuiltInRegistries.BLOCK.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
@@ -362,5 +368,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     }
 
      */
+
+    @Override
+    public @NotNull String getName() {
+        return OpolisUtilities.MOD_ID + " Item Tags";
+    }
 
 }

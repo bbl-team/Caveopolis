@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_cobblestone_slabs"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:purple_colored_cobblestone_slab"
+  },
+  "spraycan": {
+    "item": "caveopolis:purple_spray_can"
+  }
+}

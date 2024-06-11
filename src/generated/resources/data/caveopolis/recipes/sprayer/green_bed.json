@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "minecraft:beds"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:green_bed"
+  },
+  "spraycan": {
+    "item": "caveopolis:green_spray_can"
+  }
+}

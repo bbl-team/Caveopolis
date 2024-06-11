@@ -39,8 +39,8 @@ public class SprayerMenu extends AbstractContainerMenu {
         addPlayerInventory(inventory);
         addPlayerHotbar(inventory);
 
-        this.addSlot(new WhitelistTagInputSlot(blockEntity.getItemStackHandler(), blockEntity.INPUT_SLOT, 12, 16, ModTags.Items.SPRAY_CANS, 1));
-        this.addSlot(new BlacklistTagInputSlot(blockEntity.getItemStackHandler(), blockEntity.SPRAY_CAN_SLOT, 86, 16, ModTags.Items.SPRAY_CANS, 64));
+        this.addSlot(new WhitelistTagInputSlot(blockEntity.getItemStackHandler(), blockEntity.SPRAY_CAN_SLOT, 12, 16, ModTags.Items.SPRAY_CANS, 1));
+        this.addSlot(new BlacklistTagInputSlot(blockEntity.getItemStackHandler(), blockEntity.INPUT_SLOT, 86, 16, ModTags.Items.SPRAY_CANS, 64));
         this.addSlot(new ModResultSlot(blockEntity.getItemStackHandler(), blockEntity.OUTPUT_SLOT, 86, 60));
 
         addDataSlots(data);

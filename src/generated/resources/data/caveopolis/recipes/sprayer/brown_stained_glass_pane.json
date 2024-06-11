@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "c:glass_panes"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:brown_stained_glass_pane"
+  },
+  "spraycan": {
+    "item": "caveopolis:brown_spray_can"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_concrete"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:blue_concrete"
+  },
+  "spraycan": {
+    "item": "caveopolis:blue_spray_can"
+  }
+}
