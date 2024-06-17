@@ -3,10 +3,10 @@ plugins {
     id 'eclipse'
     id 'idea'
     id 'maven-publish'
-    id 'net.neoforged.gradle.userdev' version '7.0.109'
+    id 'net.neoforged.gradle.userdev' version '7.0.142'
 }
 
-version = mod_version
+version = "${minecraft_version}-${mod_version}"
 group = mod_group_id
 
 repositories {
@@ -94,8 +94,13 @@ dependencies {
 
     //Opolis Utilities
 
-    compileOnly "curse.maven:opolis-utilities-649644:5409781"
-    runtimeOnly "curse.maven:opolis-utilities-649644:5409781"
+    compileOnly "curse.maven:opolis-utilities-649644:5437779"
+    runtimeOnly "curse.maven:opolis-utilities-649644:5437779"
+
+    //JEI
+
+    compileOnly "curse.maven:jei-238222:5437447"
+    //   runtimeOnly "curse.maven:jei-238222:5437447"
 
 }
 

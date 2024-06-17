@@ -46,7 +46,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 public abstract class RecipeProviderModded implements DataProvider {
-    private static final ResourceLocation ROOT_RECIPE_ADVANCEMENT = new ResourceLocation("recipes/root");
+    private static final ResourceLocation ROOT_RECIPE_ADVANCEMENT = ResourceLocation.withDefaultNamespace("recipes/root");
     protected final PackOutput.PathProvider recipePathProvider;
     protected final PackOutput.PathProvider advancementPathProvider;
     private final CompletableFuture<HolderLookup.Provider> registries;
@@ -540,7 +540,7 @@ public abstract class RecipeProviderModded implements DataProvider {
                 .requires(pPacked)
                 .group(pUnpackedGroup)
                 .unlockedBy(getHasName(pPacked), has(pPacked))
-                .save(pRecipeOutput, new ResourceLocation(pUnpackedName));
+                .save(pRecipeOutput, ResourceLocation.withDefaultNamespace(pUnpackedName));
         ShapedRecipeBuilder.shaped(pPackedCategory, pPacked)
                 .define('#', pUnpacked)
                 .pattern("###")
@@ -548,7 +548,7 @@ public abstract class RecipeProviderModded implements DataProvider {
                 .pattern("###")
                 .group(pPackedGroup)
                 .unlockedBy(getHasName(pUnpacked), has(pUnpacked))
-                .save(pRecipeOutput, new ResourceLocation(pPackedName));
+                .save(pRecipeOutput, ResourceLocation.withDefaultNamespace(pPackedName));
     }
 
     protected static void copySmithingTemplate(RecipeOutput pRecipeOutput, ItemLike pTemplate, TagKey<Item> pBaseMaterial) {

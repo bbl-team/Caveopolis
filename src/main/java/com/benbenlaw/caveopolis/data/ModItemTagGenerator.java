@@ -27,6 +27,11 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider p_256380_) {
 
+        this.tag(ItemTags.DURABILITY_ENCHANTABLE).addTag(ModTags.Items.SPRAY_CANS);
+
+        this.tag(ModTags.Items.BANNED_FROM_IN_WORLD_MASS_SPRAYING)
+                .addTag(ModTags.Items.COLORED_TORCHES);
+
         this.tag(ModTags.Items.COLORED_APPLES)
                 .add(ModItems.BLUE_APPLE.get().asItem())
                 .add(ModItems.LIGHT_BLUE_APPLE.get().asItem())

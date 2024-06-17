@@ -21,8 +21,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         super(output, lookupProvider, Caveopolis.MOD_ID, existingFileHelper);
     }
 
+
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
+
+        this.tag(ModTags.Blocks.BANNED_FROM_IN_WORLD_MASS_SPRAYING)
+                .addTag(ModTags.Blocks.COLORED_TORCHES);
 
         this.tag(BlockTags.WALL_POST_OVERRIDE)
                 .addTag(ModTags.Blocks.COLORED_TORCHES)

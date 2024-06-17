@@ -1,0 +1,32 @@
+{
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "caveopolis:sprayer/spray_can_remover/shulker_box"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "spray_can_remover": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:shulker_boxes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "spray_can_remover"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "caveopolis:sprayer/spray_can_remover/shulker_box"
+    ]
+  },
+  "sends_telemetry_event": true
+}

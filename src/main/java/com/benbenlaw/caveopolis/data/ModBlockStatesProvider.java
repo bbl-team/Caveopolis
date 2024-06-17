@@ -24,7 +24,6 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE);
         blockWithItem(ModBlocks.MIXED_STONE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_MIXED_STONE_ORE);
-        blockWithItem(ModBlocks.MOSSY_STONE);
 
         blockWithItem(ModBlocks.BROWN_DIRT);
         blockWithItem(ModBlocks.MAGENTA_DIRT);
@@ -1002,85 +1001,85 @@ public class ModBlockStatesProvider extends BlockStateProvider {
         axisBlock(((RotatedPillarBlock) ModBlocks.LIME_COLORED_WOOD.get()), blockTexture(ModBlocks.LIME_COLORED_LOG.get()), blockTexture(ModBlocks.LIME_COLORED_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.CYAN_COLORED_WOOD.get()), blockTexture(ModBlocks.CYAN_COLORED_LOG.get()), blockTexture(ModBlocks.CYAN_COLORED_LOG.get()));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BROWN_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BROWN_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BROWN_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_brown_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BROWN_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_brown_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WHITE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_white_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_white_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WHITE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_white_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_white_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WHITE_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_white_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_white_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_WHITE_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_white_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_white_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIME_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_lime_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_lime_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIME_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_lime_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_lime_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIME_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_lime_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_lime_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIME_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_lime_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_lime_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GREEN_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_green_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_green_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GREEN_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_green_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_green_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GREEN_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_green_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_green_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GREEN_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_green_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_green_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_RED_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_red_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_red_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_RED_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_red_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_red_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_RED_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_red_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_red_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_RED_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_red_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_red_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PINK_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_pink_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_pink_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PINK_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_pink_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_pink_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PINK_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_pink_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_pink_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PINK_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_pink_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_pink_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_MAGENTA_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_MAGENTA_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_MAGENTA_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_MAGENTA_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_magenta_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PURPLE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_purple_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_purple_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PURPLE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_purple_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_purple_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PURPLE_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_purple_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_purple_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_PURPLE_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_purple_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_purple_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GRAY_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_gray_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_gray_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GRAY_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_gray_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_gray_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GRAY_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_gray_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_gray_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_GRAY_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_gray_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_gray_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_GRAY_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_light_gray_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_LIGHT_BLUE_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_light_blue_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLUE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_blue_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_blue_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLUE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_blue_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_blue_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLUE_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_blue_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_blue_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLUE_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_blue_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_blue_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_CYAN_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_CYAN_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_CYAN_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_CYAN_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_cyan_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_ORANGE_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_orange_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_orange_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_ORANGE_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_orange_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_orange_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_ORANGE_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_orange_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_orange_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_ORANGE_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_orange_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_orange_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_YELLOW_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_YELLOW_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_YELLOW_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_YELLOW_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_yellow_colored_log"));
 
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLACK_COLORED_LOG.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_black_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_black_colored_log_top"));
-        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLACK_COLORED_WOOD.get(), new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_black_colored_log"),
-                new ResourceLocation(Caveopolis.MOD_ID, "block/stripped_black_colored_log"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLACK_COLORED_LOG.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_black_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_black_colored_log_top"));
+        axisBlock((RotatedPillarBlock) ModBlocks.STRIPPED_BLACK_COLORED_WOOD.get(), ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_black_colored_log"),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/stripped_black_colored_log"));
 
 
         blockItem(ModBlocks.STRIPPED_BROWN_COLORED_WOOD);

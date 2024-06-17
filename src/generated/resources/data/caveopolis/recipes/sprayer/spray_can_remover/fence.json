@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "caveopolis:colored_wooden_plank_fences"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:oak_fence"
+  },
+  "spraycan": {
+    "item": "caveopolis:spray_can_remover"
+  }
+}

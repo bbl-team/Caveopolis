@@ -3,7 +3,6 @@ package com.benbenlaw.caveopolis.block.custom;
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.entity.ColoredCavesPortalBlockEntity;
 import com.benbenlaw.caveopolis.block.entity.ModBlockEntities;
-import com.benbenlaw.caveopolis.util.ColoredCavesTeleporter;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -24,6 +23,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.level.portal.DimensionTransition;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -66,7 +66,7 @@ public class ColoredCavesPortalBlock extends BaseEntityBlock {
     }
     public @NotNull InteractionResult useWithoutItem(@NotNull BlockState blockState, Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull BlockHitResult hit) {
 
-        if(player.canChangeDimensions()) {
+        if(player.canChangeDimensions(level, level)) {
             coloredCavesPortal(player, blockPos);
             return InteractionResult.SUCCESS;
         } else {
@@ -78,13 +78,13 @@ public class ColoredCavesPortalBlock extends BaseEntityBlock {
 
         if (player.level() instanceof ServerLevel serverLevel) {
             MinecraftServer minecraftServer = serverLevel.getServer();
-            ResourceKey<Level> coloredCavesDim = ResourceKey.create(Registries.DIMENSION, new ResourceLocation(Caveopolis.MOD_ID, "colored_caves"));
+            ResourceKey<Level> coloredCavesDim = ResourceKey.create(Registries.DIMENSION, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "colored_caves"));
             ResourceKey<Level> resourceKey = player.level().dimension() == coloredCavesDim ? Level.OVERWORLD : coloredCavesDim;
 
             ServerLevel portalDim = minecraftServer.getLevel(resourceKey);
 
             if (portalDim != null && !player.isPassenger()) {
-                player.changeDimension(portalDim, new ColoredCavesTeleporter(pos, true));
+                player.changeDimension(new DimensionTransition(portalDim, player, DimensionTransition.DO_NOTHING));
             }
         }
     }

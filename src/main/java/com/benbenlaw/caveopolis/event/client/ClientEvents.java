@@ -12,6 +12,8 @@ import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 
 public class ClientEvents {
 
+    // ********** Unused in 1.20.6 + ********** //
+
     @EventBusSubscriber(modid = Caveopolis.MOD_ID ,value = Dist.CLIENT)
     public static class ClientForgeEvents {
         @SubscribeEvent

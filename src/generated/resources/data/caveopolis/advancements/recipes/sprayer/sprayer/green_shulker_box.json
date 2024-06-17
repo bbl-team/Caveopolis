@@ -4,7 +4,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#forge:shulker_boxes"
+            "items": "#c:shulker_boxes"
           }
         ]
       },

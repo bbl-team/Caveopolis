@@ -73,69 +73,61 @@ public class ModItems {
     //New Items
 
     public static final DeferredItem<Item> GLOWSTONE_SPRAY_CAN = ITEMS.register("glowstone_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> WHITE_SPRAY_CAN = ITEMS.register("white_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> GRAY_SPRAY_CAN = ITEMS.register("gray_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> LIGHT_GRAY_SPRAY_CAN = ITEMS.register("light_gray_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> PINK_SPRAY_CAN = ITEMS.register("pink_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> LIME_SPRAY_CAN = ITEMS.register("lime_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> YELLOW_SPRAY_CAN = ITEMS.register("yellow_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> LIGHT_BLUE_SPRAY_CAN = ITEMS.register("light_blue_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> MAGENTA_SPRAY_CAN = ITEMS.register("magenta_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> ORANGE_SPRAY_CAN = ITEMS.register("orange_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> CYAN_SPRAY_CAN = ITEMS.register("cyan_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> PURPLE_SPRAY_CAN = ITEMS.register("purple_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> BLUE_SPRAY_CAN = ITEMS.register("blue_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> BROWN_SPRAY_CAN = ITEMS.register("brown_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> GREEN_SPRAY_CAN = ITEMS.register("green_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> RED_SPRAY_CAN = ITEMS.register("red_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> BLACK_SPRAY_CAN = ITEMS.register("black_spray_can",
-            () -> new ColorSprayCanItem(new Item.Properties().durability(256)));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> SPRAY_CAN_REMOVER = ITEMS.register("spray_can_remover",
             () -> new ColorSprayCanItem(new Item.Properties()));
 
     public static final DeferredItem<Item> STONE_STICK = ITEMS.register("stone_stick",
             () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> MOSSY_STRING = ITEMS.register("mossy_string",
-            () -> new Item(new Item.Properties()));
-
-    public static final DeferredItem<Item> MOSS_BALL = ITEMS.register("moss_ball",
-            () -> new Item(new Item.Properties().food(
-                    new FoodProperties.Builder().nutrition(3).saturationModifier(0.2f).build()
-            )));
 
     public static final DeferredItem<Item> BRIGHT_SHARD = ITEMS.register("bright_shard",
             () -> new Item(new Item.Properties()));

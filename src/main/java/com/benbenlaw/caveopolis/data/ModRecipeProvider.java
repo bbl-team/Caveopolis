@@ -51,15 +51,6 @@ public class ModRecipeProvider extends RecipeProvider {
                         of(Blocks.STONE_BRICKS).build()))
                 .save(pWriter);
 
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.GREEN_WOOL)
-                .pattern("AA")
-                .pattern("AA")
-                .define('A', ModItems.MOSSY_STRING.get())
-                .unlockedBy("has_mossy_string", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.MOSSY_STRING.get()).build()))
-                .save(pWriter);
-
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STONE_TORCH.get(), 4)
                 .pattern("A")
                 .pattern("B")
@@ -75,21 +66,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .define('A', Tags.Items.STONES)
                 .unlockedBy("has_stone", inventoryTrigger(ItemPredicate.Builder.item().
                         of(Tags.Items.STONES).build()))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MOSSY_STRING.get())
-                .pattern("AAA")
-                .define('A', Blocks.MOSS_CARPET.asItem())
-                .unlockedBy("has_moss", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(Blocks.MOSS_CARPET).build()))
-                .save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, Blocks.MOSS_BLOCK)
-                .pattern("AA")
-                .pattern("AA")
-                .define('A', ModItems.MOSS_BALL.get())
-                .unlockedBy("has_moss_ball", inventoryTrigger(ItemPredicate.Builder.item().
-                        of(ModItems.MOSS_BALL.get()).build()))
                 .save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.BLACK_SPRAY_CAN.get())

@@ -59,7 +59,7 @@ public class SprayerRecipeBuilder implements RecipeBuilder {
     }
 
     public void save(@NotNull RecipeOutput recipeOutput) {
-        this.save(recipeOutput, new ResourceLocation(Caveopolis.MOD_ID, "sprayer/" +
+        this.save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/" +
                 BuiltInRegistries.ITEM.getKey(this.output.getItem()).getPath()));
     }
 

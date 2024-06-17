@@ -1,0 +1,13 @@
+{
+  "type": "caveopolis:sprayer",
+  "input": {
+    "tag": "c:shulker_boxes"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:shulker_box"
+  },
+  "spraycan": {
+    "item": "caveopolis:spray_can_remover"
+  }
+}

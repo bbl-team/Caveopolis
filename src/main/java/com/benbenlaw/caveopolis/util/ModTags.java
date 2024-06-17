@@ -88,6 +88,7 @@ public class ModTags {
         public static final TagKey<Block> STRIPPED_COLORED_LOGS = tag("stripped_colored_logs");
 
         public static final TagKey<Block> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");
+        public static final TagKey<Block> BANNED_FROM_IN_WORLD_MASS_SPRAYING = tag("banned_from_in_world_mass_spraying");
         public static final TagKey<Block> GLAZED_TERRACOTTA = tag("glazed_terracotta");
         public static final TagKey<Block> COLORED_CONCRETE = tag("colored_concrete");
 
@@ -99,11 +100,11 @@ public class ModTags {
         public static final TagKey<Block> COLORED_SAPLINGS = tag("colored_saplings");
 
         private static TagKey<Block> tag(String name) {
-            return BlockTags.create(new ResourceLocation(Caveopolis.MOD_ID, name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, name));
         }
 
         private static TagKey<Block> forgeTag(String name) {
-            return BlockTags.create(new ResourceLocation("c", name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
         }
 
     }
@@ -213,6 +214,9 @@ public class ModTags {
 
         public static final TagKey<Item> COLORED_CONCRETE = tag("colored_concrete");
         public static final TagKey<Item> BANNED_FROM_IN_WORLD_SPRAYING = tag("banned_from_in_world_spraying");
+
+        public static final TagKey<Item> BANNED_FROM_IN_WORLD_MASS_SPRAYING = tag("banned_from_in_world_mass_spraying");
+
         public static final TagKey<Item> GLAZED_TERRACOTTA = tag("glazed_terracotta");
 
         public static final TagKey<Item> SHULKER_BOXES = forgeTag("shulker_boxes");
@@ -222,11 +226,11 @@ public class ModTags {
 
 
         private static TagKey<Item> tag(String name) {
-            return ItemTags.create(new ResourceLocation(Caveopolis.MOD_ID, name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, name));
         }
 
         private static TagKey<Item> forgeTag(String name) {
-            return ItemTags.create(new ResourceLocation("forge", name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath("c", name));
         }
 
     }

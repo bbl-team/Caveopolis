@@ -763,9 +763,6 @@ public class ModCreativeModTab {
                 output.accept(ModItems.SPRAY_CAN_REMOVER.get());
 
                 output.accept(ModItems.STONE_STICK.get());
-                output.accept(ModBlocks.MOSSY_STONE.get());
-                output.accept(ModItems.MOSS_BALL.get());
-                output.accept(ModItems.MOSSY_STRING.get());
                 output.accept(ModBlocks.BRIGHT_STONE_ORE.get());
                 output.accept(ModBlocks.DEEPSLATE_BRIGHT_STONE_ORE.get());
                 output.accept(ModItems.BRIGHT_SHARD.get());

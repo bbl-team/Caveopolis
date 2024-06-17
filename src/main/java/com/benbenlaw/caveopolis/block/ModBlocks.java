@@ -209,8 +209,6 @@ public class ModBlocks {
     public static final DeferredBlock<Block> STONE_CRAFTING_TABLE = registerBlock("stone_crafting_table",
             () -> new BrightCraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).lightLevel(litBlockEmission(15)).strength(1f).sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> MOSSY_STONE = registerBlock("mossy_stone",
-            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.MOSS_BLOCK).strength(0.5f).sound(SoundType.MOSS)));
 
     public static final DeferredBlock<Block> MIXED_STONE_ORE = registerBlock("mixed_stone_ore",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(1.5F, 6.0F).sound(SoundType.STONE)

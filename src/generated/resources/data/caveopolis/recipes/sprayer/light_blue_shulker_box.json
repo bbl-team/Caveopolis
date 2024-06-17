@@ -1,7 +1,7 @@
 {
   "type": "caveopolis:sprayer",
   "input": {
-    "tag": "forge:shulker_boxes"
+    "tag": "c:shulker_boxes"
   },
   "output": {
     "count": 1,

@@ -37,6 +37,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.RecipeInput;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.TorchBlock;
@@ -211,10 +212,17 @@ public class SprayerBlockEntity extends BlockEntity implements MenuProvider, IIn
         assert level != null;
         if (!level.isClientSide()) {
 
-            SimpleContainer inventory = new SimpleContainer(this.itemHandler.getSlots());
-            for (int i = 0; i < this.itemHandler.getSlots(); i++) {
-                inventory.setItem(i, this.itemHandler.getStackInSlot(i));
-            }
+            RecipeInput inventory = new RecipeInput() {
+                @Override
+                public ItemStack getItem(int index) {
+                    return itemHandler.getStackInSlot(index);
+                }
+
+                @Override
+                public int size() {
+                    return itemHandler.getSlots();
+                }
+            };
 
             Optional<RecipeHolder<SprayerRecipe>> selectedRecipe = Optional.empty();
 

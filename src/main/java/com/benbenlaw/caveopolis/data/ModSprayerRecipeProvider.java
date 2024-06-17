@@ -1,14 +1,18 @@
 package com.benbenlaw.caveopolis.data;
 
+import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.ModBlocks;
 import com.benbenlaw.caveopolis.data.recipes.RecipeProviderModded;
 import com.benbenlaw.caveopolis.data.recipes.SprayerRecipeBuilder;
 import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.util.ModTags;
+import com.benbenlaw.opolisutilities.OpolisUtilities;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
@@ -1447,7 +1451,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_STONE_PRESSURE_PLATE.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_PRESSURE_PLATES)).save(pWriter);
 
 
-        //Colored Stone CRAFTING TABLE
+        //Colored Stone Crafting Table
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_CRAFTING_TABLES), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_STONE_CRAFTING_TABLE.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_CRAFTING_TABLES)).save(pWriter);
@@ -1498,7 +1502,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_STONE_CRAFTING_TABLE.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_CRAFTING_TABLES)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Stone Buttons
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_BUTTONS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_STONE_BUTTON.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_BUTTONS)).save(pWriter);
@@ -1549,7 +1553,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_STONE_BUTTON.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_BUTTONS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Stone Brick Wall
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_BRICK_WALL), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_STONE_BRICK_WALL.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_BRICK_WALL)).save(pWriter);
@@ -1600,7 +1604,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_STONE_BRICK_WALL.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_BRICK_WALL)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Stone Brick Stairs
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_BRICK_STAIRS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_STONE_BRICK_STAIRS.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_BRICK_STAIRS)).save(pWriter);
@@ -1651,7 +1655,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_STONE_BRICK_STAIRS.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_BRICK_STAIRS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Stone Brick Slab
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_BRICK_SLABS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_STONE_BRICK_SLAB.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_BRICK_SLABS)).save(pWriter);
@@ -1702,7 +1706,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_STONE_BRICK_SLAB.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_STONE_BRICK_SLABS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Signs
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_SIGNS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModItems.BLUE_COLORED_SIGN.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_SIGNS)).save(pWriter);
@@ -1753,7 +1757,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModItems.WHITE_COLORED_SIGN.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_SIGNS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Saplings
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_SAPLINGS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_SAPLING.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_SAPLINGS)).save(pWriter);
@@ -1804,7 +1808,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_SAPLING.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_SAPLINGS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Logs
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_LOGS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_LOG.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_LOGS)).save(pWriter);
@@ -1855,7 +1859,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_LOG.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_LOGS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Leaves
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_LEAVES), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_LEAVES.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_LEAVES)).save(pWriter);
@@ -1906,7 +1910,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_LEAVES.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_LEAVES)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Hanging Sign
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_HANGING_SIGNS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModItems.BLUE_COLORED_HANGING_SIGN.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_HANGING_SIGNS)).save(pWriter);
@@ -1957,7 +1961,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModItems.WHITE_COLORED_HANGING_SIGN.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_HANGING_SIGNS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Dirt
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_DIRT), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_DIRT.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_DIRT)).save(pWriter);
@@ -2008,7 +2012,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_DIRT.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_DIRT)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Cobblestone Wall
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_COBBLESTONE_WALL), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_COBBLESTONE_WALL.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_WALL)).save(pWriter);
@@ -2059,7 +2063,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_COBBLESTONE_WALL.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_WALL)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Cobblestone Stairs
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_COBBLESTONE_STAIRS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_COBBLESTONE_STAIRS.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_STAIRS)).save(pWriter);
@@ -2110,7 +2114,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_COBBLESTONE_STAIRS.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_STAIRS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Cobblestone Slabs
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_COBBLESTONE_SLABS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_COBBLESTONE_SLAB.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_SLABS)).save(pWriter);
@@ -2161,7 +2165,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_COBBLESTONE_SLAB.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_SLABS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Cobblestone Brick Wall
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_COBBLESTONE_BRICK_WALL), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_WALL.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_BRICK_WALL)).save(pWriter);
@@ -2212,7 +2216,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_WALL.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_BRICK_WALL)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Cobblestone Brick Slabs
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_COBBLESTONE_BRICK_SLABS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_COBBLESTONE_BRICK_SLAB.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_BRICK_SLABS)).save(pWriter);
@@ -2263,7 +2267,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_COBBLESTONE_BRICK_SLAB.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_BRICK_SLABS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Cobblestone Bricks
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_COBBLESTONE_BRICKS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_COBBLESTONE_BRICKS.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_BRICKS)).save(pWriter);
@@ -2314,7 +2318,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_COBBLESTONE_BRICKS.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE_BRICKS)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Cobblestone
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_COBBLESTONE), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 ModBlocks.BLUE_COLORED_COBBLESTONE.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE)).save(pWriter);
@@ -2365,7 +2369,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
                 ModBlocks.WHITE_COLORED_COBBLESTONE.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ModTags.Items.COLORED_COBBLESTONE)).save(pWriter);
 
 
-        //Colored Stone Pressure Pad
+        //Colored Candles
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.CANDLES), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 Blocks.BLUE_CANDLE.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ItemTags.CANDLES)).save(pWriter);
@@ -2415,7 +2419,7 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.CANDLES), Ingredient.of(ModItems.WHITE_SPRAY_CAN),
                 Blocks.WHITE_CANDLE.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ItemTags.CANDLES)).save(pWriter);
 
-        //Colored Stone Pressure Pad
+        //Colored Banners
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.BANNERS), Ingredient.of(ModItems.BLUE_SPRAY_CAN),
                 Blocks.BLUE_BANNER.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ItemTags.BANNERS)).save(pWriter);
@@ -2464,6 +2468,116 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
 
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.BANNERS), Ingredient.of(ModItems.WHITE_SPRAY_CAN),
                 Blocks.WHITE_BANNER.asItem().getDefaultInstance()).unlockedBy("has_plank_slabs", has(ItemTags.BANNERS)).save(pWriter);
+
+        // ********** REMOVE COLOR ********** //
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.WOOL), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.WHITE_WOOL.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ItemTags.WOOL)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/wool"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODEN_PLANK_TRAPDOORS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_TRAPDOOR.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODEN_PLANK_TRAPDOORS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/trapdoor"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODEN_PLANKS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_PLANKS.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODEN_PLANKS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/planks"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODEN_PLANK_STAIRS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_STAIRS.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODEN_PLANK_STAIRS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stairs"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODEN_PLANK_SLABS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_SLAB.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODEN_PLANK_SLABS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/slab"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODEN_PLANK_FENCES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_FENCE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODEN_PLANK_FENCES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/fence"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODEN_PLANK_DOORS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_DOOR.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODEN_PLANK_DOORS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/door"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODEN_PLANK_BUTTONS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_BUTTON.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODEN_PLANK_BUTTONS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/button"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_PRESSURE_PLATE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODEN_PLANK_PRESSURE_PLATES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/pressure_plate"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_SIGNS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_SIGN.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_SIGNS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/sign"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_WOOD.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/wood"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_LOGS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_LOG.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_LOGS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/log"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.STRIPPED_COLORED_WOODS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.STRIPPED_OAK_WOOD.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.STRIPPED_COLORED_WOODS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stripped_wood"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.STRIPPED_COLORED_LOGS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.STRIPPED_OAK_LOG.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.STRIPPED_COLORED_LOGS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stripped_log"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_TORCHES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.TORCH.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_TORCHES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/torch"));
+
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.STONE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_STONE)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stone"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_STAIRS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.STONE_STAIRS.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_STONE_STAIRS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stone_stairs"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_SLABS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.STONE_SLAB.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_STONE_SLABS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stone_slab"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_BUTTONS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.STONE_BUTTON.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_STONE_BUTTONS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stone_button"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_PRESSURE_PLATES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.STONE_PRESSURE_PLATE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_STONE_PRESSURE_PLATES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stone_pressure_plate"));
+
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_BRICKS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.STONE_BRICKS.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_STONE_BRICKS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stone_bricks"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_BRICK_STAIRS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.STONE_BRICK_STAIRS.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_STONE_BRICK_STAIRS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stone_brick_stairs"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.SHULKER_BOXES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.SHULKER_BOX.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.SHULKER_BOXES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/shulker_box"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_SAPLINGS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_SAPLING.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_SAPLINGS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/saplings"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(Tags.Items.GLASS_PANES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.GLASS_PANE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(Tags.Items.GLASS_PANES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/glass_pane"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(Tags.Items.GLASS_BLOCKS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.GLASS.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(Tags.Items.GLASS_BLOCKS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/glass"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_DIRT), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.DIRT.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_DIRT)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/dirt"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_CONCRETE), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.WHITE_CONCRETE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_CONCRETE)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/concrete"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_WOODEN_PLANK_CRAFTING_TABLES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.CRAFTING_TABLE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_WOODEN_PLANK_CRAFTING_TABLES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/crafting_table"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_STONE_CRAFTING_TABLES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                ModBlocks.STONE_CRAFTING_TABLE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_STONE_CRAFTING_TABLES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/stone_crafting_table"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.CANDLES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.CANDLE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ItemTags.CANDLES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/candle"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.BEDS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.WHITE_BED.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ItemTags.BEDS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/bed"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ModTags.Items.COLORED_APPLES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Items.APPLE.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ModTags.Items.COLORED_APPLES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/apples"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.BANNERS), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.WHITE_BANNER.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ItemTags.BANNERS)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/banner"));
+
+        SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.LEAVES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
+                Blocks.OAK_LEAVES.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ItemTags.LEAVES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/leaves"));
+
 
     }
 }

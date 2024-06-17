@@ -5,6 +5,9 @@
   "item.caveopolis.mixed_stone_ingot": "Mixed Stone Ingot",
   "item.caveopolis.mossy_string": "Mossy String",
 
+
+  "tag.item.caveopolis.colored_dirt": "Colored Dirt",
+
   "item.caveopolis.white_spray_can": "White Spray Can (BETA)",
   "item.caveopolis.gray_spray_can": "Gray Spray Can (BETA)",
   "item.caveopolis.light_gray_spray_can": "Light Gray Spray Can (BETA)",
@@ -788,13 +791,8 @@
 
   "tooltips.spray_can.hover.shift": "Press SHIFT for more info",
   "tooltips.spray_can.shift.held_1": "Right click to spray blocks in world! Use inside a Sprayer to auto spray!",
-  "tooltips.spray_can.shift.held_2": "When in off hand right click and shift right click to set two positions!",
-  "tooltips.spray_can.shift.held_3": "Press %1$s to mass spray blocks in that area!",
+  "tooltips.spray_can.shift.held_2": "Crouch right click to switch between mass spray and normal spray!",
   "tooltips.spray_can.invalid_block": "This block cannot be converted in world, try the sprayer block instead!",
-  "tooltips.spray_can.pos_1": "Setting Position 1",
-  "tooltips.spray_can.pos_2": "Setting Position 2",
-
-  "key.caveopolis.mass_spray": "Mass Spraying Key",
 
   "itemGroup.caveopolis": "Caveopolis",
 

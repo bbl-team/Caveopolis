@@ -2,6 +2,28 @@ Caveopolis Mod Changelog
 
 //todo fix stupid BlockBehaviour.StatePredicate for .isSuffocating() leaves
 
+4.0.0
+
+Update to Minecraft 1.21
+
+3.0.1
+
+Added JEI Support back
+Added banned_in_world_mass_spraying tag, prevents blocks from being mass sprayed in world (added caveopolis:colored_torches)
+Added removed color recipes back to the spray can remover
+Fixed version naming not containing minecraft version
+
+3.0.0
+
+Ported to 1.20.6
+Removed mossy stone, mossy string and moss balls
+Removed colored caves dimension (may come back in an addon mod)
+Removed all colored caves related world gen files
+Added tree spawning in the overworld, all colored trees can spawn in the overworld in different biomes
+Removed old mass spraying system
+Added new mass spraying system
+Spray Cans now support unbreaking
+
 2.11.4
 
 Fixed colored caves portal not checking for colored stone blocks causing issue with portal placement

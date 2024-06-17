@@ -40,6 +40,11 @@ public class ModDataComponents {
             COMPONENTS.register("int_z_2", () ->
                     DataComponentType.<Integer>builder().persistent(Codec.INT).networkSynchronized(ByteBufCodecs.INT).build());
 
+    public static final DeferredHolder<DataComponentType<?>, DataComponentType<Boolean>> MASS_SPRAYING =
+            COMPONENTS.register("mass_spraying", () ->
+                    DataComponentType.<Boolean>builder().persistent(Codec.BOOL).networkSynchronized(ByteBufCodecs.BOOL).build());
+
+
 
 
 

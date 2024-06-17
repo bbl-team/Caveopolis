@@ -14,7 +14,7 @@ public class SprayerScreen extends AbstractContainerScreen<SprayerMenu> {
 
     Level level;
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(Caveopolis.MOD_ID,"textures/gui/sprayer_gui.png");
+            ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID,"textures/gui/sprayer_gui.png");
 
     public SprayerScreen(SprayerMenu menu, Inventory inventory, Component component) {
         super(menu, inventory, component);
