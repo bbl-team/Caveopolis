@@ -1962,82 +1962,82 @@ public class ModBlocks {
     public static final DeferredBlock<Block> WHITE_COLORED_LEAVES = registerBlock("white_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> LIGHT_GRAY_COLORED_LEAVES = registerBlock("light_gray_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> LIGHT_BLUE_COLORED_LEAVES = registerBlock("light_blue_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> BLUE_COLORED_LEAVES = registerBlock("blue_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> GRAY_COLORED_LEAVES = registerBlock("gray_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> PINK_COLORED_LEAVES = registerBlock("pink_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> GREEN_COLORED_LEAVES = registerBlock("green_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> LIME_COLORED_LEAVES = registerBlock("lime_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> YELLOW_COLORED_LEAVES = registerBlock("yellow_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> MAGENTA_COLORED_LEAVES = registerBlock("magenta_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> PURPLE_COLORED_LEAVES = registerBlock("purple_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> BLACK_COLORED_LEAVES = registerBlock("black_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> CYAN_COLORED_LEAVES = registerBlock("cyan_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> BROWN_COLORED_LEAVES = registerBlock("brown_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> RED_COLORED_LEAVES = registerBlock("red_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
             ));
     public static final DeferredBlock<Block> ORANGE_COLORED_LEAVES = registerBlock("orange_colored_leaves",
             () -> new FlammableBrightLeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
                     .noOcclusion()
-                    .lightLevel(litBlockEmission(15))
+                    .lightLevel(litBlockEmission(15)).isSuffocating((state, world, pos) -> false)
                     ));
 
     //Colored Saplings

@@ -1,6 +1,13 @@
 Caveopolis Mod Changelog
 
-//todo fix stupid BlockBehaviour.StatePredicate for .isSuffocating() leaves
+4.0.2
+
+Fixed sprayer recipes not working in world or in sprayer
+
+4.0.1
+
+Fixed blue colored stone n ot spawning
+Fixed leaves causing suffocation damage
 
 4.0.0
 

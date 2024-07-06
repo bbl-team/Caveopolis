@@ -67,8 +67,6 @@ public class Caveopolis {
         ModMessages.registerNetworking(event);
     }
 
-
-
     private void commonSetupCompostable(final FMLCommonSetupEvent event) {
 
         event.enqueueWork(() -> {

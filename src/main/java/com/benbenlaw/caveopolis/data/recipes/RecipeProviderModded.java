@@ -46,7 +46,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 public abstract class RecipeProviderModded implements DataProvider {
-    private static final ResourceLocation ROOT_RECIPE_ADVANCEMENT = ResourceLocation.withDefaultNamespace("recipes/root");
+    private static final ResourceLocation ROOT_RECIPE_ADVANCEMENT = ResourceLocation.withDefaultNamespace("recipe/root");
     protected final PackOutput.PathProvider recipePathProvider;
     protected final PackOutput.PathProvider advancementPathProvider;
     private final CompletableFuture<HolderLookup.Provider> registries;
@@ -69,8 +69,8 @@ public abstract class RecipeProviderModded implements DataProvider {
             .build();
 
     public RecipeProviderModded(PackOutput p_248933_, CompletableFuture<HolderLookup.Provider> p_323846_) {
-        this.recipePathProvider = p_248933_.createPathProvider(PackOutput.Target.DATA_PACK, "recipes");
-        this.advancementPathProvider = p_248933_.createPathProvider(PackOutput.Target.DATA_PACK, "advancements");
+        this.recipePathProvider = p_248933_.createPathProvider(PackOutput.Target.DATA_PACK, "recipe");
+        this.advancementPathProvider = p_248933_.createPathProvider(PackOutput.Target.DATA_PACK, "advancement");
         this.registries = p_323846_;
     }
 

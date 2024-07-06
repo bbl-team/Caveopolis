@@ -71,7 +71,7 @@ public class SprayerRecipeBuilder implements RecipeBuilder {
                 .requirements(AdvancementRequirements.Strategy.OR);
         this.criteria.forEach(builder::addCriterion);
         SprayerRecipe sprayerRecipe = new SprayerRecipe(this.input, this.spraycan, this.output);
-        recipeOutput.accept(id, sprayerRecipe, builder.build(id.withPrefix("recipes/sprayer/")));
+        recipeOutput.accept(id, sprayerRecipe, builder.build(id.withPrefix("recipe/sprayer/")));
 
     }
 }
