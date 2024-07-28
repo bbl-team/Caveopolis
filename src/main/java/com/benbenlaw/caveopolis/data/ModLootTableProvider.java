@@ -922,7 +922,7 @@ public class ModLootTableProvider extends VanillaBlockLoot {
     private static final float[] NORMAL_LEAVES_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
 
 
-    protected static final LootItemCondition.Builder HAS_SHEARS = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.TOOLS_SHEARS));
+    protected static final LootItemCondition.Builder HAS_SHEARS = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.TOOLS_SHEAR));
     private LootItemCondition.Builder hasShearsOrSilkTouch() {
         return HAS_SHEARS.or(this.hasSilkTouch());
     }

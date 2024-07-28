@@ -1,5 +1,18 @@
 Caveopolis Mod Changelog
 
+Join the discord here for mod and modpack updates and support https://discord.gg/benbenlaw
+
+4.0.4
+
+Fixed colored trees spawning in water!
+Tweak spawn rates of colored trees
+
+
+4.0.3
+Fixed mass spray not working with the spray can remover
+Fixed dependencies for caveopolis not needed opolis utilities even though it does
+Fixed Spray can remover not having a durability
+
 4.0.2
 
 Fixed sprayer recipes not working in world or in sprayer

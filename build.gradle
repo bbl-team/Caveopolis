@@ -92,16 +92,15 @@ dependencies {
 
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    //Opolis Utilities
+    //Opolis Utilities (External Version 1.21-4.1.4)
 
-    compileOnly "curse.maven:opolis-utilities-649644:5437779"
-    runtimeOnly "curse.maven:opolis-utilities-649644:5437779"
+    compileOnly "curse.maven:opolis-utilities-649644:5468425"
+    runtimeOnly "curse.maven:opolis-utilities-649644:5468425"
 
     //JEI
 
-    compileOnly "curse.maven:jei-238222:5437447"
-    //   runtimeOnly "curse.maven:jei-238222:5437447"
-
+    compileOnly "curse.maven:jei-238222:5466551"
+    runtimeOnly "curse.maven:jei-238222:5466551"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

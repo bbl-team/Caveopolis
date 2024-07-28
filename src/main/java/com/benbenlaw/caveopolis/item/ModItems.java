@@ -124,7 +124,7 @@ public class ModItems {
             () -> new ColorSprayCanItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> SPRAY_CAN_REMOVER = ITEMS.register("spray_can_remover",
-            () -> new ColorSprayCanItem(new Item.Properties()));
+            () -> new ColorSprayCanItem(new Item.Properties().durability(1024 * 4)));
 
     public static final DeferredItem<Item> STONE_STICK = ITEMS.register("stone_stick",
             () -> new Item(new Item.Properties()));
