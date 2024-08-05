@@ -2,7 +2,14 @@ Caveopolis Mod Changelog
 
 Join the discord here for mod and modpack updates and support https://discord.gg/benbenlaw
 
-4.0.4
+4.5.0
+
+Fixed version number
+Tweaked creative tab
+update to opolis utils 4.1.0
+Re run data gen to fix leaves
+
+4.4.1
 
 Fixed colored trees spawning in water!
 Tweak spawn rates of colored trees

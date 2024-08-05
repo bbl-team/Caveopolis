@@ -10,11 +10,13 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.function.Supplier;
+
 public class ModCreativeModTab {
 
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Caveopolis.MOD_ID);
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> CAVEOPOLIS_TAB = CREATIVE_MODE_TABS.register("caveopolis", () -> CreativeModeTab.builder()
+    public static final Supplier<CreativeModeTab> CAVEOPOLIS_TAB = CREATIVE_MODE_TABS.register("caveopolis", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ModItems.STONE_STICK.get().getDefaultInstance())
             .title(Component.translatable("itemGroup.caveopolis"))
