@@ -27,6 +27,10 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider p_256380_) {
 
+        this.tag(Tags.Items.PLAYER_WORKSTATIONS_CRAFTING_TABLES)
+                .addTag(ModTags.Items.COLORED_STONE_CRAFTING_TABLES)
+                .addTag(ModTags.Items.COLORED_WOODEN_PLANK_CRAFTING_TABLES);
+
         this.tag(ItemTags.DURABILITY_ENCHANTABLE).addTag(ModTags.Items.SPRAY_CANS);
 
         this.tag(ModTags.Items.BANNED_FROM_IN_WORLD_MASS_SPRAYING)

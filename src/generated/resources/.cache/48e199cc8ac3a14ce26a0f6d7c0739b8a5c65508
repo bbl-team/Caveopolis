@@ -1,4 +1,4 @@
-// 1.21	2024-06-17T14:10:35.6810186	Item Tags
+// 1.21	2024-08-26T10:21:51.5665011	Item Tags
 c4fb0b52913c9ace1dbb222affcd23372036120f data/caveopolis/tags/item/banned_from_in_world_mass_spraying.json
 fcef69663962a70c62dc1bb7619f99c598d2318b data/caveopolis/tags/item/banned_from_in_world_spraying.json
 42a14e0c7cfecab025c809c468c8fb21b74fa037 data/caveopolis/tags/item/black_colored_logs.json
@@ -67,6 +67,7 @@ bf572a5d6f49fe2f7168d96e66563fded67cbabe data/caveopolis/tags/item/yellow_colore
 365f4e0b92ca5a45f6b689ed84d4c8c6aca5bef1 data/c/tags/item/fence_gates/wooden.json
 c4f6b4e8062366b08ac0b9faaf43b0e6b3cbab50 data/c/tags/item/ingots.json
 c4f6b4e8062366b08ac0b9faaf43b0e6b3cbab50 data/c/tags/item/ingots/mixed_stone_ingot.json
+f0fe76dc826b15e6582cb3bd8bb687afef37ecfa data/c/tags/item/player_workstations/crafting_tables.json
 30fad41a61c022db543b5c96cbcb912cb19bc4d2 data/c/tags/item/rods.json
 ba3bba9acc2ecbbf21aabe92a1c67df689717a7e data/c/tags/item/rods/stone.json
 e2feff85afb7e4871204d6f5d72b8760e2780187 data/c/tags/item/shulker_boxes.json
