@@ -7,11 +7,13 @@ import com.benbenlaw.caveopolis.data.recipes.SprayerRecipeBuilder;
 import com.benbenlaw.caveopolis.item.ModItems;
 import com.benbenlaw.caveopolis.util.ModTags;
 import com.benbenlaw.opolisutilities.OpolisUtilities;
+import com.benbenlaw.opolisutilities.datagen.recipes.ClocheRecipeBuilder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -2578,6 +2580,167 @@ public class ModSprayerRecipeProvider extends RecipeProviderModded {
         SprayerRecipeBuilder.SprayerRecipeBuilder(Ingredient.of(ItemTags.LEAVES), Ingredient.of(ModItems.SPRAY_CAN_REMOVER),
                 Blocks.OAK_LEAVES.asItem().getDefaultInstance()).unlockedBy("spray_can_remover", has(ItemTags.LEAVES)).save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "sprayer/spray_can_remover/leaves"));
 
+        //********** Opolis Utilities Cloche **********//
+
+        //Blue Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.BLUE_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.BLUE_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.BLUE_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.BLUE_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/blue_colored_sapling"));
+
+        //Light Blue Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.LIGHT_BLUE_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.LIGHT_BLUE_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.LIGHT_BLUE_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.LIGHT_BLUE_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/light_blue_colored_sapling"));
+
+        //Light Gray Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.LIGHT_GRAY_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.LIGHT_GRAY_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.LIGHT_GRAY_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.LIGHT_GRAY_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/light_gray_colored_sapling"));
+
+        //Gray Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.GRAY_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.GRAY_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.GRAY_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.GRAY_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/gray_colored_sapling"));
+
+        //Yellow Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.YELLOW_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.YELLOW_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.YELLOW_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.YELLOW_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/yellow_colored_sapling"));
+
+        //Orange Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.ORANGE_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.ORANGE_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.ORANGE_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.ORANGE_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/orange_colored_sapling"));
+
+        //Red Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.RED_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.RED_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.RED_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.RED_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/red_colored_sapling"));
+
+        //Lime Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.LIME_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.LIME_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.LIME_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.LIME_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/lime_colored_sapling"));
+
+        //Green Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.GREEN_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.GREEN_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.GREEN_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.GREEN_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/green_colored_sapling"));
+
+        //Brown Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.BROWN_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.BROWN_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.BROWN_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.BROWN_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/brown_colored_sapling"));
+
+        //Cyan Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.CYAN_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.CYAN_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.CYAN_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.CYAN_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/cyan_colored_sapling"));
+
+        //Pink Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.PINK_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.PINK_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.PINK_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.PINK_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/pink_colored_sapling"));
+
+        //Purple Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.PURPLE_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.PURPLE_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.PURPLE_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.PURPLE_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/purple_colored_sapling"));
+
+        //Magenta Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.MAGENTA_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.MAGENTA_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.MAGENTA_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.MAGENTA_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/magenta_colored_sapling"));
+
+        //Black Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.BLACK_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.BLACK_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.BLACK_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.BLACK_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/black_colored_sapling"));
+
+        //White Sapling
+        ClocheRecipeBuilder.ClocheBuilder(Ingredient.of(ModBlocks.WHITE_COLORED_SAPLING), null, Ingredient.of(ItemTags.DIRT),
+                        new ItemStack(ModBlocks.WHITE_COLORED_LOG, 2),
+                        new ItemStack(ModBlocks.WHITE_COLORED_SAPLING), 0.15,
+                        new ItemStack(ModItems.WHITE_APPLE.get()), 0.05,
+                        null, 0,
+                        2.0)
+                .unlockedBy("has_item", has(Items.OAK_SAPLING))
+                .save(pWriter, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "cloche/white_colored_sapling"));
 
     }
 }

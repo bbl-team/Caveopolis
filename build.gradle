@@ -92,10 +92,10 @@ dependencies {
 
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    //Opolis Utilities (External Version 1.21-4.4.1)
+    //Opolis Utilities (External Version 1.21-4.6.0)
 
-    compileOnly "curse.maven:opolis-utilities-649644:5598320"
-    runtimeOnly "curse.maven:opolis-utilities-649644:5598320"
+    compileOnly "curse.maven:opolis-utilities-649644:5643921"
+    runtimeOnly "curse.maven:opolis-utilities-649644:5643921"
 
     //JEI
 

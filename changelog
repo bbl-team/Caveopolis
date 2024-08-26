@@ -2,6 +2,15 @@ Caveopolis Mod Changelog
 
 Join the discord here for mod and modpack updates and support https://discord.gg/benbenlaw
 
+//Add crafting tables to the player_workstations/crafting_table tag
+
+
+4.5.1
+
+Updated to opolis utilities 4.6.0
+Added saplings to the new opolis utilities cloche
+Updated to neo forge 21.0.166
+
 4.5.0
 
 Fixed version number
