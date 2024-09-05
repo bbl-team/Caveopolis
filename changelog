@@ -7,6 +7,13 @@ Join the discord here for mod and modpack updates and support https://discord.gg
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING
 //*******//
 
+4.5.4
+
+Fixed particle events being fired server side
+
+4.5.3 \n\
+- Added opolis utilities as a dependency for auto updating.
+
 4.5.2 \n\
 - Added caveopolis crafting tables to the player_workstations/crafting_table tag. \n\
 - Added automatic updating to curse forge and modrinth. \n\
