@@ -55,7 +55,7 @@ public class Caveopolis {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::commonSetupCompostable);
 
-        ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.COMMON, ConfigFile.SPEC, "caveopolis.toml");
+        ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.STARTUP, ConfigFile.SPEC, "caveopolis.toml");
 
     }
 

@@ -68,13 +68,13 @@ dependencies {
 
     //Opolis Utilities (External Version 1.21-4.6.0)
 
-    compileOnly "curse.maven:opolis-utilities-649644:5643921"
-    runtimeOnly "curse.maven:opolis-utilities-649644:5643921"
+    compileOnly "curse.maven:opolis-utilities-649644:5728507"
+    runtimeOnly "curse.maven:opolis-utilities-649644:5728507"
 
     //JEI
 
-    compileOnly "curse.maven:jei-238222:5466551"
-    runtimeOnly "curse.maven:jei-238222:5466551"
+    compileOnly "curse.maven:jei-238222:5606861"
+    runtimeOnly "curse.maven:jei-238222:5606861"
 }
 
 tasks.withType(ProcessResources).configureEach {
