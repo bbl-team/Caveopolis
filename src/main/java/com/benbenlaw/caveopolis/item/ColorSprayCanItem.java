@@ -1,6 +1,7 @@
 package com.benbenlaw.caveopolis.item;
 
 import com.benbenlaw.caveopolis.block.custom.brightblock.Brightable;
+import com.benbenlaw.caveopolis.config.ConfigFile;
 import com.benbenlaw.caveopolis.recipe.SprayerRecipe;
 import com.benbenlaw.caveopolis.util.KeyBinding;
 import com.benbenlaw.caveopolis.util.ModTags;
@@ -127,16 +128,25 @@ public class ColorSprayCanItem extends Item {
         }
     }
 
+
+    private static final int MAX_BLOCKS_PER_TICK = ConfigFile.maxMassBlockState.get();
     private void massToggleBlockState(Level level, BlockPos startPos, BlockState targetState, Player player, ItemStack itemStack) {
         Queue<BlockPos> toVisit = new LinkedList<>();
         Set<BlockPos> visited = new HashSet<>();
         toVisit.add(startPos);
 
-        while (!toVisit.isEmpty() && itemStack.getDamageValue() < itemStack.getMaxDamage()) {
+        int processed = 0;
+
+        while (!toVisit.isEmpty() && itemStack.getDamageValue() < itemStack.getMaxDamage() && ConfigFile.maxMassBlockStateAllowed.get()) {
             BlockPos currentPos = toVisit.poll();
             if (!visited.contains(currentPos) && level.getBlockState(currentPos).getBlock() == targetState.getBlock()) {
                 visited.add(currentPos);
                 toggleBlockState(level, currentPos, targetState, player, itemStack);
+
+                processed++;
+                if (processed >= MAX_BLOCKS_PER_TICK) {
+                    break;
+                }
 
                 for (Direction direction : Direction.values()) {
                     BlockPos adjacentPos = currentPos.relative(direction);
@@ -145,6 +155,9 @@ public class ColorSprayCanItem extends Item {
                     }
                 }
             }
+        }
+        if (!ConfigFile.maxMassBlockStateAllowed.get()) {
+            player.sendSystemMessage(Component.translatable("tooltips.spray_can.mass_spraying_disabled"));
         }
     }
 

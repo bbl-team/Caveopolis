@@ -792,6 +792,7 @@
   "tooltips.spray_can.shift.held_1": "Right click to spray blocks in world! Use inside a Sprayer to auto spray!",
   "tooltips.spray_can.shift.held_2": "Crouch right click to switch between mass spray and normal spray!",
   "tooltips.spray_can.invalid_block": "This block cannot be converted in world, try the sprayer block instead!",
+  "tooltips.spray_can.mass_spraying_disabled": "Mass spraying is disabled!",
 
   "itemGroup.caveopolis": "Caveopolis",
 
