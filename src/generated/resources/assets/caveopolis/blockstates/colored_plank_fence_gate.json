@@ -1,0 +1,1220 @@
+{
+  "variants": {
+    "color=black,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=black,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=black,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=black,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=black,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=black,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=black,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=black,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=black,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=black,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=black,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=black,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=black,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=black,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=black,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=black,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=blue,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=blue,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=blue,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=blue,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=blue,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=blue,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=blue,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=blue,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=blue,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=blue,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=blue,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=blue,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=blue,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=blue,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=blue,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=blue,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=brown,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=brown,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=brown,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=brown,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=brown,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=brown,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=brown,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=brown,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=brown,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=brown,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=brown,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=brown,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=brown,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=brown,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=brown,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=brown,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=cyan,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=cyan,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=cyan,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=cyan,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=cyan,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=cyan,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=cyan,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=cyan,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=cyan,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=cyan,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=cyan,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=cyan,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=cyan,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=cyan,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=cyan,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=cyan,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=gray,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=gray,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=gray,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=gray,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=gray,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=gray,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=gray,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=gray,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=gray,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=gray,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=gray,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=gray,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=gray,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=gray,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=gray,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=gray,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=green,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=green,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=green,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=green,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=green,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=green,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=green,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=green,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=green,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=green,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=green,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=green,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=green,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=green,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=green,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=green,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=light_blue,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=light_blue,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=light_blue,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=light_blue,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=light_blue,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=light_blue,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=light_blue,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=light_blue,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=light_blue,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=light_blue,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=light_blue,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=light_blue,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=light_blue,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=light_blue,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=light_blue,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=light_blue,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=light_gray,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=light_gray,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=light_gray,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=light_gray,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=light_gray,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=light_gray,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=light_gray,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=light_gray,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=light_gray,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=light_gray,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=light_gray,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=light_gray,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=light_gray,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=light_gray,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=light_gray,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=light_gray,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=lime,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=lime,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=lime,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=lime,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=lime,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=lime,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=lime,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=lime,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=lime,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=lime,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=lime,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=lime,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=lime,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=lime,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=lime,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=lime,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=magenta,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=magenta,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=magenta,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=magenta,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=magenta,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=magenta,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=magenta,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=magenta,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=magenta,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=magenta,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=magenta,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=magenta,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=magenta,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=magenta,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=magenta,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=magenta,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=orange,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=orange,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=orange,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=orange,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=orange,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=orange,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=orange,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=orange,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=orange,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=orange,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=orange,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=orange,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=orange,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=orange,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=orange,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=orange,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=pink,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=pink,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=pink,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=pink,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=pink,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=pink,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=pink,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=pink,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=pink,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=pink,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=pink,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=pink,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=pink,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=pink,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=pink,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=pink,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=purple,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=purple,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=purple,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=purple,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=purple,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=purple,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=purple,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=purple,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=purple,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=purple,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=purple,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=purple,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=purple,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=purple,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=purple,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=purple,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=red,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=red,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=red,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=red,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=red,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=red,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=red,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=red,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=red,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=red,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=red,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=red,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=red,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=red,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=red,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=red,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=white,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=white,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=white,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=white,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=white,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=white,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=white,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=white,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=white,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=white,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=white,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=white,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=white,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=white,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=white,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=white,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=yellow,facing=east,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=yellow,facing=east,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=yellow,facing=east,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=yellow,facing=east,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 270
+    },
+    "color=yellow,facing=north,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=yellow,facing=north,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=yellow,facing=north,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=yellow,facing=north,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 180
+    },
+    "color=yellow,facing=south,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true
+    },
+    "color=yellow,facing=south,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true
+    },
+    "color=yellow,facing=south,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true
+    },
+    "color=yellow,facing=south,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true
+    },
+    "color=yellow,facing=west,in_wall=false,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=yellow,facing=west,in_wall=false,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_open",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=yellow,facing=west,in_wall=true,open=false": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall",
+      "uvlock": true,
+      "y": 90
+    },
+    "color=yellow,facing=west,in_wall=true,open=true": {
+      "model": "caveopolis:block/colored_plank_fence_gate_wall_open",
+      "uvlock": true,
+      "y": 90
+    }
+  }
+}

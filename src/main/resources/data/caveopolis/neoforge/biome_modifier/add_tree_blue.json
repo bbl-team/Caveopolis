@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "#c:is_snowy",
-  "features": "caveopolis:blue_tree_placed",
-  "step": "vegetal_decoration"
-}

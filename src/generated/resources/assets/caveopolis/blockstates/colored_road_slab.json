@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caveopolis:block/colored_road_slab"
+    },
+    "type=double": {
+      "model": "caveopolis:block/colored_road"
+    },
+    "type=top": {
+      "model": "caveopolis:block/colored_road_slab_top"
+    }
+  }
+}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "caveopolis:block/light_gray_colored_cobblestone_bricks",
-    "side": "caveopolis:block/light_gray_colored_cobblestone_bricks",
-    "top": "caveopolis:block/light_gray_colored_cobblestone_bricks"
-  }
-}

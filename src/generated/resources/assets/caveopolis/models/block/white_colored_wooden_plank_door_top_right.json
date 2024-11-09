@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "bottom": "caveopolis:block/white_colored_wooden_plank_door_bottom",
-    "top": "caveopolis:block/white_colored_wooden_plank_door_top"
-  }
-}

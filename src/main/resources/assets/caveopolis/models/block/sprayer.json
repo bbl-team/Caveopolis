@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "caveopolis:block/sprayer_front",
-    "side": "caveopolis:block/sprayer_side",
-    "top": "caveopolis:block/sprayer_top"
-  }
-}

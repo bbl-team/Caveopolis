@@ -7,6 +7,12 @@ Join the discord here for mod and modpack updates and support https://discord.gg
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING
 //*******//
 
+
+5.0.0
+
+Caveopolis 2 - NOT COMPATIBLE WITH OLDER VERSIONS OF CAVEOPOLIS (4.5.5 and below)
+This is a full rewrite of the mod stuff will be missing/broken
+
 4.5.5
 
 Added "Glowstone Spray Can Range" to the config file, this is the range of blocks that the glowstone spray can will convert blockstates

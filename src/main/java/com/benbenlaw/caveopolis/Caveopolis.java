@@ -1,20 +1,13 @@
 package com.benbenlaw.caveopolis;
 
-import com.benbenlaw.caveopolis.block.ModBlocks;
-import com.benbenlaw.caveopolis.block.entity.ModBlockEntities;
-import com.benbenlaw.caveopolis.config.ConfigFile;
-import com.benbenlaw.caveopolis.item.ModCreativeModTab;
-import com.benbenlaw.caveopolis.item.ModDataComponents;
-import com.benbenlaw.caveopolis.item.ModItems;
-import com.benbenlaw.caveopolis.networking.ModMessages;
-import com.benbenlaw.caveopolis.particles.ModParticles;
-import com.benbenlaw.caveopolis.recipe.ModRecipes;
-import com.benbenlaw.caveopolis.screen.ModMenuTypes;
-import com.benbenlaw.caveopolis.screen.SprayerScreen;
-import com.benbenlaw.caveopolis.util.ModItemProperties;
-import com.benbenlaw.caveopolis.util.ModWoodTypes;
-import net.minecraft.client.renderer.Sheets;
-import net.minecraft.world.level.block.ComposterBlock;
+import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
+import com.benbenlaw.caveopolis.block.LogMaps;
+import com.benbenlaw.caveopolis.item.CaveopolisCreativeTab;
+import com.benbenlaw.caveopolis.item.CaveopolisItems;
+import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
+import com.benbenlaw.caveopolis.screen.CaveopolisMenuTypes;
+import com.benbenlaw.caveopolis.screen.WorktableScreen;
+import com.benbenlaw.caveopolis.util.CaveopolisColorHandler;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -24,6 +17,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
@@ -39,92 +33,73 @@ public class Caveopolis {
 
     public Caveopolis(IEventBus modEventBus) {
 
-        ModItems.register(modEventBus);
-        ModDataComponents.COMPONENTS.register(modEventBus);
+        CaveopolisBlocks.BLOCKS.register(modEventBus);
+        CaveopolisItems.ITEMS.register(modEventBus);
+        CaveopolisCreativeTab.CREATIVE_TABS.register(modEventBus);
 
-        ModBlocks.register(modEventBus);
-        ModCreativeModTab.register(modEventBus);
-        ModBlockEntities.register(modEventBus);
+        CaveopolisMenuTypes.MENUS.register(modEventBus);
+        CaveopolisRecipes.register(modEventBus);
 
+
+
+
+        if (FMLEnvironment.dist == Dist.CLIENT) {
+            modEventBus.register(new CaveopolisColorHandler());
+        }
+
+    //    ModItems.register(modEventBus);
+    //    ModDataComponents.COMPONENTS.register(modEventBus);
+
+   //     ModBlocks.register(modEventBus);
+   //     ModCreativeModTab.register(modEventBus);
+//
         modEventBus.addListener(this::registerCapabilities);
 
-        ModParticles.register(modEventBus);
-        ModMenuTypes.register(modEventBus);
-        ModRecipes.register(modEventBus);
+    //    ModParticles.register(modEventBus);
+   //     ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::commonSetupCompostable);
+       // modEventBus.addListener(this::commonSetupCompostable);
 
-        ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.STARTUP, ConfigFile.SPEC, "caveopolis.toml");
+     //   ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.STARTUP, ConfigFile.SPEC, "caveopolis.toml");
 
     }
 
     public void registerCapabilities(RegisterCapabilitiesEvent event) {
-        ModBlockEntities.registerCapabilities(event);
+       // ModBlockEntities.registerCapabilities(event);
     }
 
-    public void commonSetup(RegisterPayloadHandlersEvent event) {
-        ModMessages.registerNetworking(event);
-    }
 
-    private void commonSetupCompostable(final FMLCommonSetupEvent event) {
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        LogMaps logMaps = new LogMaps();
+        logMaps.updateLogMaps();
 
         event.enqueueWork(() -> {
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.BLACK_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.BLACK_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.WHITE_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.WHITE_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.BLUE_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.BLUE_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIGHT_BLUE_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIGHT_BLUE_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIGHT_GRAY_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIGHT_GRAY_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.GRAY_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.GRAY_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.ORANGE_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.ORANGE_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.YELLOW_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.YELLOW_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.RED_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.RED_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.BROWN_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.BROWN_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.CYAN_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.CYAN_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.PINK_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.PINK_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.PURPLE_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.PURPLE_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.MAGENTA_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.MAGENTA_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.GREEN_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.GREEN_COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIME_COLORED_SAPLING.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(ModBlocks.LIME_COLORED_LEAVES.get().asItem(),  0.3F);
-
+          //  ComposterBlock.COMPOSTABLES.put(ModBlocks.BLACK_COLORED_SAPLING.get().asItem(),  0.3F);
         });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
 
+
+
         event.enqueueWork(() -> {
-            Sheets.addWoodType(ModWoodTypes.BROWN);
-            Sheets.addWoodType(ModWoodTypes.BLACK);
-            Sheets.addWoodType(ModWoodTypes.BLUE);
-            Sheets.addWoodType(ModWoodTypes.LIGHT_BLUE);
-            Sheets.addWoodType(ModWoodTypes.LIGHT_GRAY);
-            Sheets.addWoodType(ModWoodTypes.GRAY);
-            Sheets.addWoodType(ModWoodTypes.ORANGE);
-            Sheets.addWoodType(ModWoodTypes.YELLOW);
-            Sheets.addWoodType(ModWoodTypes.RED);
-            Sheets.addWoodType(ModWoodTypes.LIME);
-            Sheets.addWoodType(ModWoodTypes.GREEN);
-            Sheets.addWoodType(ModWoodTypes.PINK);
-            Sheets.addWoodType(ModWoodTypes.MAGENTA);
-            Sheets.addWoodType(ModWoodTypes.PURPLE);
-            Sheets.addWoodType(ModWoodTypes.WHITE);
-            Sheets.addWoodType(ModWoodTypes.CYAN);
+        //    Sheets.addWoodType(ModWoodTypes.BROWN);
+        //    Sheets.addWoodType(ModWoodTypes.BLACK);
+        //    Sheets.addWoodType(ModWoodTypes.BLUE);
+        //    Sheets.addWoodType(ModWoodTypes.LIGHT_BLUE);
+        //    Sheets.addWoodType(ModWoodTypes.LIGHT_GRAY);
+        //    Sheets.addWoodType(ModWoodTypes.GRAY);
+        //    Sheets.addWoodType(ModWoodTypes.ORANGE);
+        //    Sheets.addWoodType(ModWoodTypes.YELLOW);
+        //    Sheets.addWoodType(ModWoodTypes.RED);
+        //    Sheets.addWoodType(ModWoodTypes.LIME);
+        //    Sheets.addWoodType(ModWoodTypes.GREEN);
+        //    Sheets.addWoodType(ModWoodTypes.PINK);
+        //    Sheets.addWoodType(ModWoodTypes.MAGENTA);
+        //    Sheets.addWoodType(ModWoodTypes.PURPLE);
+        //    Sheets.addWoodType(ModWoodTypes.WHITE);
+        //    Sheets.addWoodType(ModWoodTypes.CYAN);
 
         });
     }
@@ -134,14 +109,17 @@ public class Caveopolis {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
-                ModItemProperties.addCustomItemProperties();
-                ModItemProperties.addCustomItemProperties();
+
+
+
+            //    ModItemProperties.addCustomItemProperties();
+            //    ModItemProperties.addCustomItemProperties();
             });
         }
 
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
-            event.register(ModMenuTypes.SPRAYER_MENU.get(), SprayerScreen::new);
+            event.register(CaveopolisMenuTypes.WORKTABLE_MENU.get(), WorktableScreen::new);
         }
     }
 }

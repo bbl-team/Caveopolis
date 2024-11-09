@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "caveopolis:block/deepslate_bright_stone_ore"
-  }
-}

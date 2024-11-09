@@ -1,0 +1,7 @@
+{
+  "parent": "caveopolis:block/button/tintable_button_pressed",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "caveopolis:block/colored_road"
+  }
+}

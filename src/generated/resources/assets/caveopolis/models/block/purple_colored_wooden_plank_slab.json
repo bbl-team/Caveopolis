@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "caveopolis:block/purple_colored_wooden_planks",
-    "side": "caveopolis:block/purple_colored_wooden_planks",
-    "top": "caveopolis:block/purple_colored_wooden_planks"
-  }
-}

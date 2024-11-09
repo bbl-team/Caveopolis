@@ -1,0 +1,21 @@
+// 1.21	2024-11-09T14:34:52.4300003	caveopolis Block Tags
+d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/block/cobblestones.json
+ca5c1c08d1d17f1db70cd7b627a3cd92d3e917bf data/c/tags/block/stones.json
+c0b4a42794d160e1d6c8dc2db4452c4b2c238175 data/minecraft/tags/block/buttons.json
+86c36de1c1071ab57ddc81f6262ac0325013dd1a data/minecraft/tags/block/dirt.json
+216122d541d4c8c3a2b032c32a0779c6f064cbd9 data/minecraft/tags/block/fences.json
+8c747cb3532b4a729a8ef7b053d59486ab17762b data/minecraft/tags/block/fence_gates.json
+fb427480bae956b646af4b3fdb08e622bcb5ad41 data/minecraft/tags/block/leaves.json
+4ca75022e59bb48bec31cff30f92c44cb17b1bde data/minecraft/tags/block/logs.json
+4ca75022e59bb48bec31cff30f92c44cb17b1bde data/minecraft/tags/block/logs_that_burn.json
+30952bb8b8e1d8a1597c69ca1ae70adb66cd3a6a data/minecraft/tags/block/mineable/axe.json
+fb427480bae956b646af4b3fdb08e622bcb5ad41 data/minecraft/tags/block/mineable/hoe.json
+d0934f6190b96fc28a8ee6512de4b003bd54209f data/minecraft/tags/block/mineable/pickaxe.json
+c7aa2d079ea9449c5e8e5e8728a5afc68ef7f0f1 data/minecraft/tags/block/planks.json
+94d1a4ecb0efb4b545256328e80e03152a7e6cd6 data/minecraft/tags/block/pressure_plates.json
+4ec02bcfc70a5e3459bb78d47b1646208cc88bee data/minecraft/tags/block/slabs.json
+865a2385f2660ac102fe764ad913dbe30078c2ee data/minecraft/tags/block/stairs.json
+1a54c464969f15e8ad47f25c7f5ee01130f7ddf1 data/minecraft/tags/block/stone_bricks.json
+e1d61a3908bff90e876752dab8da2e0d941b3c10 data/minecraft/tags/block/walls.json
+cb2da7e47f75a97d327fa16a3cdd19201713cb4f data/minecraft/tags/block/wooden_doors.json
+359f0f7c02e90546b19a8521dc059d268a024150 data/minecraft/tags/block/wooden_trapdoors.json

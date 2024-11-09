@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "caveopolis:block/stripped_colored_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "caveopolis:block/stripped_colored_wood"
+    },
+    "axis=z": {
+      "model": "caveopolis:block/stripped_colored_wood",
+      "x": 90
+    }
+  }
+}

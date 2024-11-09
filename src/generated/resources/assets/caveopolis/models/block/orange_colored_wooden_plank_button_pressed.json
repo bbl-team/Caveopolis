@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/button_pressed",
-  "textures": {
-    "texture": "caveopolis:block/orange_colored_wooden_planks"
-  }
-}

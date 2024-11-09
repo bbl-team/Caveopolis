@@ -1,0 +1,16 @@
+// 1.21	2024-11-09T14:34:52.4235214	Tags for minecraft:item mod id caveopolis
+d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/item/cobblestones.json
+ca5c1c08d1d17f1db70cd7b627a3cd92d3e917bf data/c/tags/item/stones.json
+fa36cc47217da151b1c64bc8186f080eb47652b2 data/minecraft/tags/item/buttons.json
+86c36de1c1071ab57ddc81f6262ac0325013dd1a data/minecraft/tags/item/dirt.json
+216122d541d4c8c3a2b032c32a0779c6f064cbd9 data/minecraft/tags/item/fences.json
+8c747cb3532b4a729a8ef7b053d59486ab17762b data/minecraft/tags/item/fence_gates.json
+fb427480bae956b646af4b3fdb08e622bcb5ad41 data/minecraft/tags/item/leaves.json
+4ca75022e59bb48bec31cff30f92c44cb17b1bde data/minecraft/tags/item/logs.json
+c7aa2d079ea9449c5e8e5e8728a5afc68ef7f0f1 data/minecraft/tags/item/planks.json
+4ec02bcfc70a5e3459bb78d47b1646208cc88bee data/minecraft/tags/item/slabs.json
+865a2385f2660ac102fe764ad913dbe30078c2ee data/minecraft/tags/item/stairs.json
+1a54c464969f15e8ad47f25c7f5ee01130f7ddf1 data/minecraft/tags/item/stone_bricks.json
+229fc20d5e7b3c7ca136bf2064197f5237dab12e data/minecraft/tags/item/walls.json
+cb2da7e47f75a97d327fa16a3cdd19201713cb4f data/minecraft/tags/item/wooden_doors.json
+359f0f7c02e90546b19a8521dc059d268a024150 data/minecraft/tags/item/wooden_trapdoors.json

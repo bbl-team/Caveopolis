@@ -1,0 +1,9 @@
+{
+  "parent": "caveopolis:block/slab/tintable_slab",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "caveopolis:block/colored_braid",
+    "side": "caveopolis:block/colored_braid",
+    "top": "caveopolis:block/colored_braid"
+  }
+}

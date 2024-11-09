@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "caveopolis:block/lime_colored_cobblestone",
-    "side": "caveopolis:block/lime_colored_cobblestone",
-    "top": "caveopolis:block/lime_colored_cobblestone"
-  }
-}

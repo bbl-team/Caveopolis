@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "caveopolis:block/green_colored_stone",
-    "side": "caveopolis:block/green_colored_stone",
-    "top": "caveopolis:block/green_colored_stone"
-  }
-}

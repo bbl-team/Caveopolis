@@ -1,0 +1,11 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "item": "caveopolis:colored_stone"
+  },
+  "output": {
+    "count": 1,
+    "id": "caveopolis:colored_stone"
+  }
+}

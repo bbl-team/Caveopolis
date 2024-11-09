@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "caveopolis:block/light_blue_colored_cobblestone_bricks",
-    "side": "caveopolis:block/light_blue_colored_cobblestone_bricks",
-    "top": "caveopolis:block/light_blue_colored_cobblestone_bricks"
-  }
-}

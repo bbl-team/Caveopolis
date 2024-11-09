@@ -1,0 +1,7 @@
+{
+  "parent": "caveopolis:block/door/tintable_door_bottom_right_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "caveopolis:block/colored_plank_door_bottom"
+  }
+}

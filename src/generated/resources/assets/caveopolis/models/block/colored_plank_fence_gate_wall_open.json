@@ -1,0 +1,7 @@
+{
+  "parent": "caveopolis:block/fence_gate/tintable_fence_gate_wall_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "caveopolis:block/colored_planks"
+  }
+}

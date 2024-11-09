@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "caveopolis:block/magenta_colored_wooden_planks",
-    "side": "caveopolis:block/magenta_colored_wooden_planks",
-    "top": "caveopolis:block/magenta_colored_wooden_planks"
-  }
-}

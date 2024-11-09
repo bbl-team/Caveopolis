@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "caveopolis:block/black_colored_cobblestone_bricks",
-    "side": "caveopolis:block/black_colored_cobblestone_bricks",
-    "top": "caveopolis:block/black_colored_cobblestone_bricks"
-  }
-}

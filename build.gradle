@@ -66,10 +66,9 @@ dependencies {
 
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    //Opolis Utilities (External Version 1.21-4.6.0)
-
-    compileOnly "curse.maven:opolis-utilities-649644:5728507"
-    runtimeOnly "curse.maven:opolis-utilities-649644:5728507"
+    //BBL Core
+    compileOnly "curse.maven:bbl-core-1135181:5888806"
+    runtimeOnly "curse.maven:bbl-core-1135181:5888806"
 
     //JEI
 
