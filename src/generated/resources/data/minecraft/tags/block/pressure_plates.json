@@ -1,0 +1,17 @@
+{
+  "values": [
+    "caveopolis:colored_stone_pressure_plate",
+    "caveopolis:colored_stone_brick_pressure_plate",
+    "caveopolis:colored_brick_pressure_plate",
+    "caveopolis:colored_cobblestone_pressure_plate",
+    "caveopolis:colored_cobblestone_brick_pressure_plate",
+    "caveopolis:colored_marble_pressure_plate",
+    "caveopolis:colored_marble_brick_pressure_plate",
+    "caveopolis:colored_mosaic_pressure_plate",
+    "caveopolis:colored_chaotic_pressure_plate",
+    "caveopolis:colored_triple_pressure_plate",
+    "caveopolis:colored_braid_pressure_plate",
+    "caveopolis:colored_encased_pressure_plate",
+    "caveopolis:colored_road_pressure_plate"
+  ]
+}

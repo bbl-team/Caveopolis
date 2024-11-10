@@ -45,7 +45,6 @@ public class WorktableMenu extends AbstractContainerMenu {
     public ItemStack lastInput = ItemStack.EMPTY;
     long lastSoundTime;
     public Slot inputSlot;
-    public Slot copySlot;
     public Slot resultSlot;
     Runnable slotUpdateListener = () -> {
     };
@@ -59,7 +58,7 @@ public class WorktableMenu extends AbstractContainerMenu {
     public final ResultContainer resultContainer = new ResultContainer();
 
     public WorktableMenu(int containerID, Inventory inventory, FriendlyByteBuf extraData) {
-        this(containerID, inventory, extraData.readBlockPos(), new SimpleContainerData(3));
+        this(containerID, inventory, extraData.readBlockPos(), new SimpleContainerData(2));
     }
 
     public WorktableMenu(int containerID, Inventory inventory, BlockPos blockPos, ContainerData data) {
@@ -67,7 +66,6 @@ public class WorktableMenu extends AbstractContainerMenu {
         this.access = ContainerLevelAccess.create(inventory.player.level(), blockPos);
         this.level = inventory.player.level();
         this.inputSlot = this.addSlot(new Slot(this.container, 0, 26, 44));
-        this.copySlot = this.addSlot(new Slot(this.container, 2, 142, 32));
         this.resultSlot = this.addSlot(new Slot(this.resultContainer, 1, 142, 56) {
 
             public boolean mayPlace(@NotNull ItemStack p_40362_) {
@@ -205,6 +203,11 @@ public class WorktableMenu extends AbstractContainerMenu {
                         DataComponentMap outputComponents = outputStack.getComponents();
                         Object outputColor = outputComponents.get(CoreDataComponents.COLOR.get());
 
+                        // If inputColor is null, allow all color outputs
+                        if (inputColor == null) {
+                            return matchesInput;  // Only filter based on the input match
+                        }
+
                         // Check if both colors are non-null and match
                         return matchesInput && inputColor != null && inputColor.equals(outputColor);
                     })
@@ -229,8 +232,6 @@ public class WorktableMenu extends AbstractContainerMenu {
                 setupResultSlot();
         }
     }
-
-
 
     void setupResultSlot() {
         if (!this.recipes.isEmpty() && this.isValidRecipeIndex(this.selectedRecipeIndex.get())) {

@@ -1,12 +1,7 @@
 {
   "type": "caveopolis:worktable",
   "input": {
-    "components": {
-      "core:color": "green",
-      "core:lit": false
-    },
-    "count": 1,
-    "id": "caveopolis:colored_encased"
+    "item": "caveopolis:colored_encased"
   },
   "output": {
     "components": {

@@ -257,7 +257,7 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
 
         if (this.menu.getSelectedRecipeIndex() != -1 && this.menu.getRecipes().size() >= this.menu.getSelectedRecipeIndex() + 1) {
             WorktableRecipe recipe = this.menu.getRecipes().get(this.menu.getSelectedRecipeIndex()).value();
-            ItemStack stack = recipe.input();
+            ItemStack stack = recipe.input().getItems()[0];
             stack.setCount(1);
             stack.set(CoreDataComponents.COLOR,  recipe.output().get(CoreDataComponents.COLOR));
 

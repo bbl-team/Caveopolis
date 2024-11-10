@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "tag": "c:cobblestones"
+  },
+  "output": {
+    "components": {
+      "core:color": "cyan",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_cobblestone_bricks"
+  }
+}

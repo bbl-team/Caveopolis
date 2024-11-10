@@ -1,0 +1,17 @@
+{
+  "values": [
+    "caveopolis:colored_stone_wall",
+    "caveopolis:colored_stone_brick_wall",
+    "caveopolis:colored_brick_wall",
+    "caveopolis:colored_cobblestone_wall",
+    "caveopolis:colored_cobblestone_brick_wall",
+    "caveopolis:colored_marble_wall",
+    "caveopolis:colored_marble_brick_wall",
+    "caveopolis:colored_mosaic_wall",
+    "caveopolis:colored_chaotic_wall",
+    "caveopolis:colored_triple_wall",
+    "caveopolis:colored_braid_wall",
+    "caveopolis:colored_encased_wall",
+    "caveopolis:colored_road_wall"
+  ]
+}

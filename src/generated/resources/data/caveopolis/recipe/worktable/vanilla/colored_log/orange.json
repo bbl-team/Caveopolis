@@ -1,0 +1,14 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "tag": "minecraft:logs"
+  },
+  "output": {
+    "components": {
+      "core:color": "orange",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_log"
+  }
+}

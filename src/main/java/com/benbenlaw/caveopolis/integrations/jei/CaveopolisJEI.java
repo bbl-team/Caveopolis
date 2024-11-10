@@ -140,12 +140,6 @@ public class CaveopolisJEI implements IModPlugin {
 
 
 
-        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BRICKS.asItem(), new BlockSubtypeInterpreter());
-        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_BRICKS.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_DIRT.asItem(), new BlockSubtypeInterpreter());
-        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE.asItem(), new BlockSubtypeInterpreter());
-        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.asItem(), new BlockSubtypeInterpreter());
-        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE.asItem(), new BlockSubtypeInterpreter());
-        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_BRICKS.asItem(), new BlockSubtypeInterpreter());
     }
 }

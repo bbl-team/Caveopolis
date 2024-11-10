@@ -4,15 +4,23 @@ import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.data.recipes.ColorSprayCanMap;
 import com.benbenlaw.caveopolis.data.recipes.WorktableRecipeBuilder;
+import com.benbenlaw.caveopolis.recipe.ColoringRecipe;
 import com.benbenlaw.core.item.CoreDataComponents;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.BookCloningRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
+import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
 
 import java.util.concurrent.CompletableFuture;
@@ -31,89 +39,30 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
                 "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"
         };
 
-        //Spraying Full Blocks
-        for (String color : colors) {
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_STONE.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_STONE.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_STONE.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/stone/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_BRICKS.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_BRICKS.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_BRICKS.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/bricks/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_STONE_BRICKS.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_STONE_BRICKS.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_STONE_BRICKS.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/stone_bricks/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_COBBLESTONE.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_COBBLESTONE.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/cobblestone/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/cobblestone_bricks/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_MARBLE.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_MARBLE.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_MARBLE.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/marble/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BRICKS.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_MARBLE_BRICKS.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_MARBLE_BRICKS.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/marble_bricks/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_MOSAIC.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_MOSAIC.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_MOSAIC.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/mosaic/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_CHAOTIC.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_CHAOTIC.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_CHAOTIC.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/chaotic/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_TRIPLE.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_TRIPLE.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_TRIPLE.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/triple/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_BRAID.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_BRAID.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_BRAID.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/braid/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_ENCASED.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_ENCASED.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_ENCASED.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/encased/" + color));
-
-            ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(CaveopolisBlocks.COLORED_ROAD.get(), 8), color))
-                    .requires(CaveopolisBlocks.COLORED_ROAD.get(), 8)
-                    .requires(new ItemStack(ColorSprayCanMap.getSprayCan(color).getItem()).getItem())
-                    .unlockedBy("has_item", has(CaveopolisBlocks.COLORED_ROAD.get()))
-                    .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spraying/road/" + color));
-        }
+        SpecialRecipeBuilder.special(ColoringRecipe::new).save(consumer, "coloring");
 
         for (String color : colors) {
+
+            //Vanilla To Caveopolis
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_STONE.get(), 1, Tags.Items.STONES, 1, "colored_stone");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_STONE_BRICKS.get(), 1, ItemTags.STONE_BRICKS, 1, "colored_stone_bricks");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_BRICKS.get(), 1, Blocks.BRICKS, 1, "colored_bricks");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_COBBLESTONE.get(), 1, Tags.Items.COBBLESTONES, 1, "colored_cobblestone");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get(), 1, Tags.Items.COBBLESTONES, 1, "colored_cobblestone_bricks");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_MARBLE.get(), 1, Items.CALCITE, 1, "colored_marble");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_MARBLE_BRICKS.get(), 1, Items.CALCITE, 1, "colored_marble_bricks");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_MOSAIC.get(), 1, Tags.Items.STONES, 1, "colored_mosaic");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_CHAOTIC.get(), 1, Tags.Items.STONES, 1, "colored_chaotic");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_TRIPLE.get(), 1, Tags.Items.STONES, 1, "colored_triple");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_BRAID.get(), 1, Tags.Items.STONES, 1, "colored_braid");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_ENCASED.get(), 1, Tags.Items.STONES, 1, "colored_encased");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_ROAD.get(), 1, Tags.Items.STONES, 1, "colored_road");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_LOG.get(), 1, ItemTags.LOGS, 1, "colored_log");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_WOOD.get(), 1, ItemTags.LOGS, 1, "colored_wood");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.STRIPPED_COLORED_LOG.get(), 1, ItemTags.LOGS, 1, "stripped_colored_log");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.STRIPPED_COLORED_WOOD.get(), 1, ItemTags.LOGS, 1, "stripped_colored_wood");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_PLANKS.get(), 1, ItemTags.PLANKS, 1, "colored_planks");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_LEAVES.get(), 1, ItemTags.LEAVES, 1, "colored_leaves");
 
             // Colored Stone
             createRecipe(consumer, color, "stone", CaveopolisBlocks.COLORED_STONE_STAIRS.get(), 1, CaveopolisBlocks.COLORED_STONE.get(), 1, "stairs");
@@ -219,8 +168,6 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
             createRecipe(consumer, color, "road", CaveopolisBlocks.COLORED_ROAD_BUTTON.get(), 4, CaveopolisBlocks.COLORED_ROAD.get(), 1, "button");
             createRecipe(consumer, color, "road", CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get(), 3, CaveopolisBlocks.COLORED_ROAD.get(), 1, "pressure_plate");
 
-
-
         }
 
 
@@ -228,8 +175,17 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
     }
 
     private void createRecipe(RecipeOutput consumer, String color, String blockType, ItemLike output, int outputCount, ItemLike input, int inputCount, String path) {
+
+        Ingredient inputIngredient = Ingredient.of(iconWithColor(new ItemStack(input, inputCount), color));
         WorktableRecipeBuilder.worktableRecipeBuilder(iconWithColor(new ItemStack(output, outputCount), color),
-                        iconWithColor(new ItemStack(input, inputCount), color))
+                    inputIngredient)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/" + blockType + "/" + path + "/" + color));
+    }
+    private void createRecipe(RecipeOutput consumer, String color, String blockType, ItemLike output, int outputCount, TagKey<Item> input, int inputCount, String path) {
+
+        WorktableRecipeBuilder.worktableRecipeBuilder(iconWithColor(new ItemStack(output, outputCount), color),
+                        Ingredient.of(input))
                 .unlockedBy("has_item", has(input))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/" + blockType + "/" + path + "/" + color));
     }

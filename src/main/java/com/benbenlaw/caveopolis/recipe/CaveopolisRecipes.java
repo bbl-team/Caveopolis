@@ -1,9 +1,10 @@
 package com.benbenlaw.caveopolis.recipe;
 
 import com.benbenlaw.caveopolis.Caveopolis;
+import com.benbenlaw.core.block.colored.ColoredBlock;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.*;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -23,6 +24,21 @@ public class CaveopolisRecipes {
 
     public static final Supplier<RecipeType<WorktableRecipe>> WORKTABLE_TYPE =
             TYPES.register("worktable", () -> WorktableRecipe.Type.INSTANCE);
+
+
+    public static final Supplier<RecipeSerializer<ColoringRecipe>> COLORING_SERIALIZER =
+            SERIALIZER.register("coloring", () -> new SimpleCraftingRecipeSerializer<>(ColoringRecipe::new));
+
+
+    public static final Supplier<RecipeType<ColoringRecipe>> COLORING_TYPE =
+            TYPES.register("coloring", () -> new RecipeType<ColoringRecipe>() {});
+
+    /*
+    public static final Supplier<RecipeType<ColoringRecipe>> COLORING_TYPE =
+            TYPES.register("coloring", () -> ColoringRecipe.Type.INSTANCE);
+
+     */
+
 
     public static void register(IEventBus eventBus) {
 
