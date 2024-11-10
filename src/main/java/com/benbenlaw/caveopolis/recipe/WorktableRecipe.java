@@ -12,22 +12,18 @@ import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
 import org.jetbrains.annotations.NotNull;
 
-public record WorktableRecipe(SizedIngredient input, ItemStack output) implements Recipe<RecipeInput> {
+public record WorktableRecipe(ItemStack input, ItemStack output) implements Recipe<RecipeInput> {
 
     @Override
     public @NotNull NonNullList<Ingredient> getIngredients() {
         NonNullList<Ingredient> ingredients = NonNullList.createWithCapacity(1);
-        ingredients.add(input.ingredient());
+        ingredients.add(Ingredient.of(input.getItem()));
         return ingredients;
     }
 
     @Override
     public boolean matches(RecipeInput container, @NotNull Level level) {
-
-        if (input.test(container.getItem(0))) {
-            return container.getItem(0).getCount() >= this.getIngredientStackCount();
-        }
-        return false;
+        return input.is(container.getItem(0).getItem());
     }
 
     @Override
@@ -45,9 +41,6 @@ public record WorktableRecipe(SizedIngredient input, ItemStack output) implement
         return this.output.copy();
     }
 
-    public int getIngredientStackCount() {
-        return this.input.count();
-    }
 
     @Override
     public @NotNull RecipeSerializer<?> getSerializer() {
@@ -74,7 +67,7 @@ public record WorktableRecipe(SizedIngredient input, ItemStack output) implement
 
         public final MapCodec<WorktableRecipe> CODEC = RecordCodecBuilder.mapCodec(instance ->
                 instance.group(
-                        SizedIngredient.FLAT_CODEC.fieldOf("input").forGetter(WorktableRecipe::input),
+                        ItemStack.CODEC.fieldOf("input").forGetter(WorktableRecipe::input),
                         ItemStack.CODEC.fieldOf("output").forGetter(WorktableRecipe::output)
                 ).apply(instance, WorktableRecipe::new));
 
@@ -92,13 +85,13 @@ public record WorktableRecipe(SizedIngredient input, ItemStack output) implement
         }
 
         private static WorktableRecipe read(RegistryFriendlyByteBuf buffer) {
-            SizedIngredient input = SizedIngredient.STREAM_CODEC.decode(buffer);
+            ItemStack input = ItemStack.STREAM_CODEC.decode(buffer);
             ItemStack output = ItemStack.STREAM_CODEC.decode(buffer);
             return new WorktableRecipe(input, output);
         }
 
         private static void write(RegistryFriendlyByteBuf buffer, WorktableRecipe recipe) {
-            SizedIngredient.STREAM_CODEC.encode(buffer, recipe.input);
+            ItemStack.STREAM_CODEC.encode(buffer, recipe.input);
             ItemStack.STREAM_CODEC.encode(buffer, recipe.output);
         }
     }

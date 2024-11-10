@@ -1,0 +1,19 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "components": {
+      "core:color": "light_gray",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_stone"
+  },
+  "output": {
+    "components": {
+      "core:color": "light_gray",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_stone_wall"
+  }
+}

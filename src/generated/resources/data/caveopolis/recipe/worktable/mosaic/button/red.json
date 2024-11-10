@@ -1,0 +1,19 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "components": {
+      "core:color": "red",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_mosaic"
+  },
+  "output": {
+    "components": {
+      "core:color": "red",
+      "core:lit": false
+    },
+    "count": 4,
+    "id": "caveopolis:colored_mosaic_button"
+  }
+}

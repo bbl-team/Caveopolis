@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "item": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "item": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "item": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "item": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "item": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "item": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "item": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "item": "caveopolis:yellow_spray_can"
+    }
+  ],
+  "result": {
+    "components": {
+      "core:color": "yellow",
+      "core:lit": false
+    },
+    "count": 8,
+    "id": "caveopolis:colored_stone_bricks"
+  }
+}

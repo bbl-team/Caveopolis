@@ -8,6 +8,52 @@
     "block.caveopolis.colored_stone_pressure_plate": "Colored Stone Bricks Stairs",
     "block.caveopolis.colored_stone_button": "Colored Stone Button",
 
+    "block.caveopolis.colored_stone_bricks": "Colored Stone Bricks",
+    "block.caveopolis.colored_stone_brick_stairs": "Colored Stone Brick Stairs",
+    "block.caveopolis.colored_stone_brick_slab": "Colored Stone Brick Slab",
+    "block.caveopolis.colored_stone_brick_wall": "Colored Stone Brick Wall",
+    "block.caveopolis.colored_stone_brick_pressure_plate": "Colored Stone Brick Pressure Plate",
+    "block.caveopolis.colored_stone_brick_button": "Colored Stone Brick Button",
+
+    "block.caveopolis.colored_cobblestone": "Colored Cobblestone",
+    "block.caveopolis.colored_cobblestone_stairs": "Colored Cobblestone Stairs",
+    "block.caveopolis.colored_cobblestone_slab": "Colored Cobblestone Slab",
+    "block.caveopolis.colored_cobblestone_wall": "Colored Cobblestone Wall",
+    "block.caveopolis.colored_cobblestone_pressure_plate": "Colored Cobblestone Pressure Plate",
+    "block.caveopolis.colored_cobblestone_button": "Colored Cobblestone Button",
+
+    "block.caveopolis.colored_cobblestone_bricks": "Colored Cobblestone Bricks",
+    "block.caveopolis.colored_cobblestone_brick_stairs": "Colored Cobblestone Brick Stairs",
+    "block.caveopolis.colored_cobblestone_brick_slab": "Colored Cobblestone Brick Slab",
+    "block.caveopolis.colored_cobblestone_brick_wall": "Colored Cobblestone Brick Wall",
+    "block.caveopolis.colored_cobblestone_brick_pressure_plate": "Colored Cobblestone Brick Pressure Plate",
+    "block.caveopolis.colored_cobblestone_brick_button": "Colored Cobblestone Brick Button",
+
+    "block.caveopolis.colored_bricks": "Colored Bricks",
+    "block.caveopolis.colored_brick_stairs": "Colored Brick Stairs",
+    "block.caveopolis.colored_brick_slab": "Colored Brick Slab",
+    "block.caveopolis.colored_brick_wall": "Colored Brick Wall",
+    "block.caveopolis.colored_brick_pressure_plate": "Colored Brick Pressure Plate",
+    "block.caveopolis.colored_brick_button": "Colored Brick Button",
+
+    "block.caveopolis.colored_marble": "Colored Marble",
+    "block.caveopolis.colored_marble_stairs": "Colored Marble Stairs",
+    "block.caveopolis.colored_marble_slab": "Colored Marble Slab",
+    "block.caveopolis.colored_marble_wall": "Colored Marble Wall",
+    "block.caveopolis.colored_marble_pressure_plate": "Colored Marble Pressure Plate",
+    "block.caveopolis.colored_marble_button": "Colored Marble Button",
+
+    "block.caveopolis.colored_marble_bricks": "Colored Marble Bricks",
+    "block.caveopolis.colored_marble_brick_stairs": "Colored Marble Brick Stairs",
+    "block.caveopolis.colored_marble_brick_slab": "Colored Marble Brick Slab",
+    "block.caveopolis.colored_marble_brick_wall": "Colored Marble Brick Wall",
+    "block.caveopolis.colored_marble_brick_pressure_plate": "Colored Marble Brick Pressure Plate",
+    "block.caveopolis.colored_marble_brick_button": "Colored Marble Brick Button",
+
+
+
+
+
     "block.caveopolis.colored_mosaic": "Colored Mosaic",
     "block.caveopolis.colored_mosaic_stairs": "Colored Mosaic Stairs",
     "block.caveopolis.colored_mosaic_slab": "Colored Mosaic Slab",

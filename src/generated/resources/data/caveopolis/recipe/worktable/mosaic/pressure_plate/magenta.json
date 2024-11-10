@@ -1,0 +1,19 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "components": {
+      "core:color": "magenta",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_mosaic"
+  },
+  "output": {
+    "components": {
+      "core:color": "magenta",
+      "core:lit": false
+    },
+    "count": 3,
+    "id": "caveopolis:colored_mosaic_pressure_plate"
+  }
+}

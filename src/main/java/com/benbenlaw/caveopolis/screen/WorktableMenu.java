@@ -6,6 +6,7 @@ import com.benbenlaw.core.block.IColored;
 import com.benbenlaw.core.item.CoreDataComponents;
 import com.google.common.collect.Lists;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -44,6 +45,7 @@ public class WorktableMenu extends AbstractContainerMenu {
     public ItemStack lastInput = ItemStack.EMPTY;
     long lastSoundTime;
     public Slot inputSlot;
+    public Slot copySlot;
     public Slot resultSlot;
     Runnable slotUpdateListener = () -> {
     };
@@ -57,7 +59,7 @@ public class WorktableMenu extends AbstractContainerMenu {
     public final ResultContainer resultContainer = new ResultContainer();
 
     public WorktableMenu(int containerID, Inventory inventory, FriendlyByteBuf extraData) {
-        this(containerID, inventory, extraData.readBlockPos(), new SimpleContainerData(2));
+        this(containerID, inventory, extraData.readBlockPos(), new SimpleContainerData(3));
     }
 
     public WorktableMenu(int containerID, Inventory inventory, BlockPos blockPos, ContainerData data) {
@@ -65,6 +67,7 @@ public class WorktableMenu extends AbstractContainerMenu {
         this.access = ContainerLevelAccess.create(inventory.player.level(), blockPos);
         this.level = inventory.player.level();
         this.inputSlot = this.addSlot(new Slot(this.container, 0, 26, 44));
+        this.copySlot = this.addSlot(new Slot(this.container, 2, 142, 32));
         this.resultSlot = this.addSlot(new Slot(this.resultContainer, 1, 142, 56) {
 
             public boolean mayPlace(@NotNull ItemStack p_40362_) {
@@ -91,7 +94,7 @@ public class WorktableMenu extends AbstractContainerMenu {
 
                 // Deal with normally
                 if (!level.isClientSide)
-                    input.shrink(WorktableMenu.this.recipes.get(WorktableMenu.this.selectedRecipeIndex.get()).value().getIngredientStackCount());
+                    input.shrink(1);
                 WorktableMenu.this.inputSlot.setChanged();
                 WorktableMenu.this.setupResultSlot();
 
@@ -148,11 +151,7 @@ public class WorktableMenu extends AbstractContainerMenu {
     }
 
     public boolean stillValid(@NotNull Player player) {
-
-        //if (player.getItemInHand(player.getUsedItemHand()).is(ModItems.PORTABLE_GUI))
-            return true;
-
-      //  return stillValid(this.access, player, ModBlocks.CATALOGUE.get());
+         return true;
     }
 
     public boolean clickMenuButton(@NotNull Player pPlayer, int pId) {
@@ -175,9 +174,15 @@ public class WorktableMenu extends AbstractContainerMenu {
 
     }
 
-
     private void setupRecipeList(Container pContainer, ItemStack pStack) {
         this.recipes = new ArrayList<>();
+
+        // Retrieve the components of the input
+        DataComponentMap inputComponents = input.getComponents();
+        DataComponentMap containerComponents = container.getItem(0).getComponents();
+
+        Object inputColor = inputComponents.get(CoreDataComponents.COLOR.get());
+        Object containerColor = containerComponents != null ? containerComponents.get(CoreDataComponents.COLOR.get()) : null;
 
         if (!this.input.is(pStack.getItem())) {
             if (!this.input.is(Items.AIR) && !this.input.is(lastInput.getItem()) && !this.lastInput.is(Items.AIR))
@@ -187,11 +192,23 @@ public class WorktableMenu extends AbstractContainerMenu {
         }
 
         if (!pStack.isEmpty()) {
-            // Filter recipes based on the input item
-            this.recipes = this.level.getRecipeManager().getAllRecipesFor(WorktableRecipe.Type.INSTANCE).stream().filter(recipe ->
-                            recipe.value().getIngredients().stream().anyMatch(ingredient -> ingredient.test(pStack)))
-                    .filter(recipe -> recipe.value().getIngredientStackCount() <= pStack.getCount()).collect(Collectors.toList());
+            // Filter recipes based on the input item and matching input/output color
+            this.recipes = this.level.getRecipeManager()
+                    .getAllRecipesFor(WorktableRecipe.Type.INSTANCE)
+                    .stream()
+                    .filter(recipe -> {
+                        // Check if the recipe can be crafted with the input item
+                        boolean matchesInput = recipe.value().getIngredients().stream().anyMatch(ingredient -> ingredient.test(pStack));
 
+                        // Get the output item and retrieve its color
+                        ItemStack outputStack = recipe.value().getResultItem(this.level.registryAccess());
+                        DataComponentMap outputComponents = outputStack.getComponents();
+                        Object outputColor = outputComponents.get(CoreDataComponents.COLOR.get());
+
+                        // Check if both colors are non-null and match
+                        return matchesInput && inputColor != null && inputColor.equals(outputColor);
+                    })
+                    .collect(Collectors.toList());
         }
 
         if (this.recipesSize != this.recipes.size() && this.selectedRecipeIndex.get() != -1) {
@@ -212,6 +229,7 @@ public class WorktableMenu extends AbstractContainerMenu {
                 setupResultSlot();
         }
     }
+
 
 
     void setupResultSlot() {

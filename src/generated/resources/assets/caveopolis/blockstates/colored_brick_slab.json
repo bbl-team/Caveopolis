@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "caveopolis:block/colored_brick_slab"
+    },
+    "type=double": {
+      "model": "caveopolis:block/colored_bricks"
+    },
+    "type=top": {
+      "model": "caveopolis:block/colored_brick_slab_top"
+    }
+  }
+}

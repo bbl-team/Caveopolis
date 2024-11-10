@@ -82,6 +82,55 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_ROAD.get());
         buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_ROAD_BUTTON.get(), CaveopolisBlocks.COLORED_ROAD.get());
 
+        //Colored Stone Bricks
+        blockWithItem(CaveopolisBlocks.COLORED_STONE_BRICKS);
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_STONE_BRICK_SLAB.get(), CaveopolisBlocks.COLORED_STONE_BRICKS.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_STONE_BRICK_STAIRS.get(), CaveopolisBlocks.COLORED_STONE_BRICKS.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_STONE_BRICK_WALL.get(), CaveopolisBlocks.COLORED_STONE_BRICKS.get());
+        pressurePlateWithElements((PressurePlateBlock)CaveopolisBlocks.COLORED_STONE_BRICK_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_STONE_BRICKS.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.get(), CaveopolisBlocks.COLORED_STONE_BRICKS.get());
+
+        //Colored Brick
+        blockWithItem(CaveopolisBlocks.COLORED_BRICKS);
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_BRICK_SLAB.get(), CaveopolisBlocks.COLORED_BRICKS.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_BRICK_STAIRS.get(), CaveopolisBlocks.COLORED_BRICKS.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_BRICK_WALL.get(), CaveopolisBlocks.COLORED_BRICKS.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_BRICK_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_BRICKS.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_BRICK_BUTTON.get(), CaveopolisBlocks.COLORED_BRICKS.get());
+
+        //Colored Cobblestone
+        blockWithItem(CaveopolisBlocks.COLORED_COBBLESTONE);
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_COBBLESTONE_SLAB.get(), CaveopolisBlocks.COLORED_COBBLESTONE.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_COBBLESTONE_STAIRS.get(), CaveopolisBlocks.COLORED_COBBLESTONE.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_COBBLESTONE_WALL.get(), CaveopolisBlocks.COLORED_COBBLESTONE.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_COBBLESTONE_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_COBBLESTONE.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_COBBLESTONE_BUTTON.get(), CaveopolisBlocks.COLORED_COBBLESTONE.get());
+
+        //Colored Cobblestone Bricks
+        blockWithItem(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS);
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_SLAB.get(), CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_STAIRS.get(), CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_WALL.get(), CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_BUTTON.get(), CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
+
+        //Colored Marble
+        blockWithItem(CaveopolisBlocks.COLORED_MARBLE);
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_MARBLE_SLAB.get(), CaveopolisBlocks.COLORED_MARBLE.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_MARBLE_STAIRS.get(), CaveopolisBlocks.COLORED_MARBLE.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_MARBLE_WALL.get(), CaveopolisBlocks.COLORED_MARBLE.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_MARBLE_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_MARBLE.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_MARBLE_BUTTON.get(), CaveopolisBlocks.COLORED_MARBLE.get());
+
+        //Colored Marble Bricks
+        blockWithItem(CaveopolisBlocks.COLORED_MARBLE_BRICKS);
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_MARBLE_BRICK_SLAB.get(), CaveopolisBlocks.COLORED_MARBLE_BRICKS.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_MARBLE_BRICK_STAIRS.get(), CaveopolisBlocks.COLORED_MARBLE_BRICKS.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_MARBLE_BRICK_WALL.get(), CaveopolisBlocks.COLORED_MARBLE_BRICKS.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_MARBLE_BRICK_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_MARBLE_BRICKS.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_MARBLE_BRICK_BUTTON.get(), CaveopolisBlocks.COLORED_MARBLE_BRICKS.get());
+
+
 
 
         //Colored Wood
@@ -99,13 +148,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
 
 
-        blockWithItem(CaveopolisBlocks.COLORED_BRICKS);
-        blockWithItem(CaveopolisBlocks.COLORED_STONE_BRICKS);
         blockWithItem(CaveopolisBlocks.COLORED_DIRT);
-        blockWithItem(CaveopolisBlocks.COLORED_COBBLESTONE);
-        blockWithItem(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS);
-        blockWithItem(CaveopolisBlocks.COLORED_MARBLE);
-        blockWithItem(CaveopolisBlocks.COLORED_MARBLE_BRICKS);
 
 
 

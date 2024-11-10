@@ -1,0 +1,19 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "components": {
+      "core:color": "brown",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_marble_bricks"
+  },
+  "output": {
+    "components": {
+      "core:color": "brown",
+      "core:lit": false
+    },
+    "count": 3,
+    "id": "caveopolis:colored_marble_brick_pressure_plate"
+  }
+}

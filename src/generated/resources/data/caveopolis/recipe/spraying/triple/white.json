@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "caveopolis:colored_triple"
+    },
+    {
+      "item": "caveopolis:colored_triple"
+    },
+    {
+      "item": "caveopolis:colored_triple"
+    },
+    {
+      "item": "caveopolis:colored_triple"
+    },
+    {
+      "item": "caveopolis:colored_triple"
+    },
+    {
+      "item": "caveopolis:colored_triple"
+    },
+    {
+      "item": "caveopolis:colored_triple"
+    },
+    {
+      "item": "caveopolis:colored_triple"
+    },
+    {
+      "item": "caveopolis:white_spray_can"
+    }
+  ],
+  "result": {
+    "components": {
+      "core:color": "white",
+      "core:lit": false
+    },
+    "count": 8,
+    "id": "caveopolis:colored_triple"
+  }
+}

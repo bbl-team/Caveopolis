@@ -2,6 +2,7 @@ package com.benbenlaw.caveopolis.screen;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
+import com.benbenlaw.core.item.CoreDataComponents;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
@@ -256,8 +257,9 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
 
         if (this.menu.getSelectedRecipeIndex() != -1 && this.menu.getRecipes().size() >= this.menu.getSelectedRecipeIndex() + 1) {
             WorktableRecipe recipe = this.menu.getRecipes().get(this.menu.getSelectedRecipeIndex()).value();
-            ItemStack stack = recipe.getIngredients().get(0).getItems()[0];
-            stack.setCount(recipe.getIngredientStackCount());
+            ItemStack stack = recipe.input();
+            stack.setCount(1);
+            stack.set(CoreDataComponents.COLOR,  recipe.output().get(CoreDataComponents.COLOR));
 
             guiGraphics.renderItem(stack, this.leftPos + 142, this.topPos + 32);
             guiGraphics.renderItemDecorations(this.font, stack, this.leftPos + 142, this.topPos + 32);

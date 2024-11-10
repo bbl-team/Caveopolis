@@ -1,0 +1,19 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "components": {
+      "core:color": "purple",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_triple"
+  },
+  "output": {
+    "components": {
+      "core:color": "purple",
+      "core:lit": false
+    },
+    "count": 3,
+    "id": "caveopolis:colored_triple_pressure_plate"
+  }
+}

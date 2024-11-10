@@ -1,0 +1,19 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "components": {
+      "core:color": "cyan",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_braid"
+  },
+  "output": {
+    "components": {
+      "core:color": "cyan",
+      "core:lit": false
+    },
+    "count": 3,
+    "id": "caveopolis:colored_braid_pressure_plate"
+  }
+}

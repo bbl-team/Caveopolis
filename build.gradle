@@ -67,8 +67,8 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     //BBL Core
-    compileOnly "curse.maven:bbl-core-1135181:5888806"
-    runtimeOnly "curse.maven:bbl-core-1135181:5888806"
+    compileOnly "curse.maven:bbl-core-1135181:5890780"
+    runtimeOnly "curse.maven:bbl-core-1135181:5890780"
 
     //JEI
 

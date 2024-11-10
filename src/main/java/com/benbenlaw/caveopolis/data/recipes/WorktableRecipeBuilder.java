@@ -23,17 +23,17 @@ import java.util.Map;
 public class WorktableRecipeBuilder implements RecipeBuilder {
 
     protected String group;
-    protected SizedIngredient input;
+    protected ItemStack input;
     protected ItemStack output;
     protected final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
 
-    public WorktableRecipeBuilder(SizedIngredient input, ItemStack output) {
+    public WorktableRecipeBuilder(ItemStack output, ItemStack input) {
         this.input = input;
         this.output = output;
     }
 
-    public static WorktableRecipeBuilder worktableRecipeBuilder(SizedIngredient input, ItemStack output) {
-        return new WorktableRecipeBuilder(input, output);
+    public static WorktableRecipeBuilder worktableRecipeBuilder(ItemStack output, ItemStack input) {
+        return new WorktableRecipeBuilder(output, input);
     }
 
 

@@ -47,6 +47,54 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_STONE_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_STONE_BUTTON.get())
 
+                //Colored Stone Bricks
+                .add(CaveopolisBlocks.COLORED_STONE_BRICKS.get())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.get())
+
+                //Colored Bricks
+                .add(CaveopolisBlocks.COLORED_BRICKS.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_BUTTON.get())
+
+                //Colored Cobblestone
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BUTTON.get())
+
+                //Colored Cobblestone Bricks
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_BUTTON.get())
+
+                //Colored Marble
+                .add(CaveopolisBlocks.COLORED_MARBLE.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BUTTON.get())
+
+                //Colored Marble Bricks
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICKS.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_BUTTON.get())
+
                 //Colored Mosaic
                 .add(CaveopolisBlocks.COLORED_MOSAIC.get())
                 .add(CaveopolisBlocks.COLORED_MOSAIC_SLAB.get())
@@ -140,6 +188,12 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
         //Buttons
         tag(BlockTags.BUTTONS)
                 .add(CaveopolisBlocks.COLORED_STONE_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_MOSAIC_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_CHAOTIC_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_TRIPLE_BUTTON.get())
@@ -151,6 +205,12 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
         //Walls
         tag(BlockTags.WALLS)
                 .add(CaveopolisBlocks.COLORED_STONE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_WALL.get())
                 .add(CaveopolisBlocks.COLORED_MOSAIC_WALL.get())
                 .add(CaveopolisBlocks.COLORED_CHAOTIC_WALL.get())
                 .add(CaveopolisBlocks.COLORED_TRIPLE_WALL.get())
@@ -162,6 +222,12 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
         //Pressure Plates
         tag(BlockTags.PRESSURE_PLATES)
                 .add(CaveopolisBlocks.COLORED_STONE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_MOSAIC_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_CHAOTIC_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_TRIPLE_PRESSURE_PLATE.get())

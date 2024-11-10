@@ -34,6 +34,54 @@ public class CaveopolisCreativeTab {
                         () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_PRESSURE_PLATE.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_BUTTON.get()),
 
+                        //Colored Stone Bricks
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_BRICKS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_BRICK_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_BRICK_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_BRICK_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_BRICK_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.get()),
+
+                        //Colored Bricks
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BRICKS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BRICK_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BRICK_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BRICK_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BRICK_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BRICK_BUTTON.get()),
+
+                        //Colored Cobblestone
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BUTTON.get()),
+
+                        //Colored Cobblestone Bricks
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_BUTTON.get()),
+
+                        //Colored Marble
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BUTTON.get()),
+
+                        //Colored Marble Bricks
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BRICKS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BRICK_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BRICK_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BRICK_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BRICK_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BRICK_BUTTON.get()),
+
                         //Colored Mosaic
                         () -> new ItemStack(CaveopolisBlocks.COLORED_MOSAIC.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_MOSAIC_SLAB.get()),

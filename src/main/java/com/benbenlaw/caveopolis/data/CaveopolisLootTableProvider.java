@@ -1,6 +1,7 @@
 package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
+import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
@@ -12,6 +13,8 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -45,6 +48,55 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_WALL.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_PRESSURE_PLATE.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_BUTTON.get());
+
+        //Colored Stone Bricks
+        this.dropSelf(CaveopolisBlocks.COLORED_STONE_BRICKS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_STONE_BRICK_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_STONE_BRICK_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_STONE_BRICK_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_STONE_BRICK_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.get());
+
+        //Colored Bricks
+        this.dropSelf(CaveopolisBlocks.COLORED_BRICKS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BRICK_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BRICK_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BRICK_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BRICK_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BRICK_BUTTON.get());
+
+        //Colored Cobblestone
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_BUTTON.get());
+
+        //Colored Cobblestone Bricks
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_BUTTON.get());
+
+        //Colored Marble
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_BUTTON.get());
+
+        //Colored Marble Bricks
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_BRICKS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_BRICK_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_BRICK_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_BRICK_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_BRICK_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_BRICK_BUTTON.get());
+
 
         //Colored Mosaic
         this.dropSelf(CaveopolisBlocks.COLORED_MOSAIC.get());
@@ -136,6 +188,9 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
     protected Iterable<Block> getKnownBlocks() {
         return knownBlocks;
     }
+
+
+
 
     private static final float[] NORMAL_LEAVES_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
 

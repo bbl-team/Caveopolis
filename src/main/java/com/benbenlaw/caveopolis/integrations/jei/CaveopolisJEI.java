@@ -27,6 +27,54 @@ public class CaveopolisJEI implements IModPlugin {
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_BUTTON.asItem(), new BlockSubtypeInterpreter());
 
+        //Colored Stone Bricks
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_BRICKS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_BRICK_STAIRS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_BRICK_SLAB.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_BRICK_WALL.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_BRICK_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.asItem(), new BlockSubtypeInterpreter());
+
+        //Colored Bricks
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BRICKS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BRICK_STAIRS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BRICK_SLAB.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BRICK_WALL.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BRICK_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BRICK_BUTTON.asItem(), new BlockSubtypeInterpreter());
+
+        //Colored Cobblestone
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_STAIRS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_SLAB.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_WALL.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_BUTTON.asItem(), new BlockSubtypeInterpreter());
+
+        //Colored Cobblestone Bricks
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_STAIRS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_SLAB.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_WALL.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_BUTTON.asItem(), new BlockSubtypeInterpreter());
+
+        //Colored Marble
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_STAIRS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_SLAB.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_WALL.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_BUTTON.asItem(), new BlockSubtypeInterpreter());
+
+        //Colored Marble Bricks
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_BRICKS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_BRICK_STAIRS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_BRICK_SLAB.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_BRICK_WALL.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_BRICK_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MARBLE_BRICK_BUTTON.asItem(), new BlockSubtypeInterpreter());
+
         //Colored Mosaic
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MOSAIC.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_MOSAIC_STAIRS.asItem(), new BlockSubtypeInterpreter());

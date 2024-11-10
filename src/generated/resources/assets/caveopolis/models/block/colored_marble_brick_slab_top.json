@@ -1,0 +1,9 @@
+{
+  "parent": "caveopolis:block/slab/tintable_slab_top",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "caveopolis:block/colored_marble_bricks",
+    "side": "caveopolis:block/colored_marble_bricks",
+    "top": "caveopolis:block/colored_marble_bricks"
+  }
+}

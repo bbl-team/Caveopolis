@@ -1,0 +1,19 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "components": {
+      "core:color": "cyan",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_encased"
+  },
+  "output": {
+    "components": {
+      "core:color": "cyan",
+      "core:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_encased_wall"
+  }
+}

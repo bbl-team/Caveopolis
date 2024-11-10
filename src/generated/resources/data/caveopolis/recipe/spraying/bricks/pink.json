@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "caveopolis:colored_bricks"
+    },
+    {
+      "item": "caveopolis:colored_bricks"
+    },
+    {
+      "item": "caveopolis:colored_bricks"
+    },
+    {
+      "item": "caveopolis:colored_bricks"
+    },
+    {
+      "item": "caveopolis:colored_bricks"
+    },
+    {
+      "item": "caveopolis:colored_bricks"
+    },
+    {
+      "item": "caveopolis:colored_bricks"
+    },
+    {
+      "item": "caveopolis:colored_bricks"
+    },
+    {
+      "item": "caveopolis:pink_spray_can"
+    }
+  ],
+  "result": {
+    "components": {
+      "core:color": "pink",
+      "core:lit": false
+    },
+    "count": 8,
+    "id": "caveopolis:colored_bricks"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "caveopolis:colored_marble"
+    },
+    {
+      "item": "caveopolis:colored_marble"
+    },
+    {
+      "item": "caveopolis:colored_marble"
+    },
+    {
+      "item": "caveopolis:colored_marble"
+    },
+    {
+      "item": "caveopolis:colored_marble"
+    },
+    {
+      "item": "caveopolis:colored_marble"
+    },
+    {
+      "item": "caveopolis:colored_marble"
+    },
+    {
+      "item": "caveopolis:colored_marble"
+    },
+    {
+      "item": "caveopolis:orange_spray_can"
+    }
+  ],
+  "result": {
+    "components": {
+      "core:color": "orange",
+      "core:lit": false
+    },
+    "count": 8,
+    "id": "caveopolis:colored_marble"
+  }
+}
