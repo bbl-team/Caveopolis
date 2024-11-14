@@ -145,9 +145,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         strippedLogBlockWithElement((RotatedPillarBlock) CaveopolisBlocks.STRIPPED_COLORED_LOG.get(), CaveopolisBlocks.STRIPPED_COLORED_LOG.get());
         strippedWoodBlockWithElement((RotatedPillarBlock) CaveopolisBlocks.STRIPPED_COLORED_WOOD.get(), CaveopolisBlocks.STRIPPED_COLORED_LOG.get());
         blockWithItem(CaveopolisBlocks.COLORED_LEAVES);
-
-
-
+        
 
         blockWithItem(CaveopolisBlocks.COLORED_DIRT);
 
@@ -170,6 +168,9 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
         ModelFile sapling = models().withExistingParent(saplingBlockRegistryName.getPath(), "caveopolis:block/tintable_cross")
                 .texture("cross", texture).renderType("cutout");
+
+        getVariantBuilder(saplingBlock).forAllStates(state ->
+                ConfiguredModel.builder().modelFile(sapling).build());
     }
 
     private void blockItem(DeferredBlock<Block> blockRegistryObject) {

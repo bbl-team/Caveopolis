@@ -2,6 +2,7 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
+import com.benbenlaw.core.block.colored.ColoredLeaves;
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.core.HolderLookup;
@@ -162,7 +163,6 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
         //Change when colored apples and sapling are added
         this.add(CaveopolisBlocks.COLORED_LEAVES.get(), block ->
                 createColoredLeavesDrops(block, Blocks.OAK_SAPLING, Items.APPLE, NORMAL_LEAVES_SAPLING_CHANCES));
-
 
         this.dropSelf(CaveopolisBlocks.COLORED_BRICKS.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_BRICKS.get());
