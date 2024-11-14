@@ -15,8 +15,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.StonecutterMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.item.crafting.StonecutterRecipe;
 import org.jetbrains.annotations.NotNull;
 import org.lwjgl.glfw.GLFW;
 
@@ -24,340 +26,157 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+
+
 public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
-
-    private static final ResourceLocation TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "textures/gui/worktable.png");
-
+    private static final ResourceLocation SCROLLER_SPRITE = ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "scroller");
+    private static final ResourceLocation SCROLLER_DISABLED_SPRITE = ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "scroller_disabled");
+    private static final ResourceLocation RECIPE_SELECTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "recipe_selected");
+    private static final ResourceLocation RECIPE_HIGHLIGHTED_SPRITE = ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "recipe_highlighted");
+    private static final ResourceLocation RECIPE_SPRITE = ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID,"recipe");
+    private static final ResourceLocation BG_LOCATION = ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "textures/gui/worktable/worktable.png");
     private static final int SCROLLER_WIDTH = 12;
     private static final int SCROLLER_HEIGHT = 15;
     private static final int RECIPES_COLUMNS = 4;
     private static final int RECIPES_ROWS = 3;
-    private static final int RECIPES_IMAGE_SIZE_WIDTH = 18;
+    private static final int RECIPES_IMAGE_SIZE_WIDTH = 16;
     private static final int RECIPES_IMAGE_SIZE_HEIGHT = 18;
     private static final int SCROLLER_FULL_HEIGHT = 54;
-    private static final int RECIPES_X = 48;
-    private static final int RECIPES_Y = 23;
+    private static final int RECIPES_X = 52;
+    private static final int RECIPES_Y = 14;
     private float scrollOffs;
     private boolean scrolling;
     private int startIndex;
     private boolean displayRecipes;
-    private EditBox searchBar;
-    private int selectedRecipeIndex = -1;
-    private List<RecipeHolder<WorktableRecipe>> filteredRecipes;
 
-    public WorktableScreen(WorktableMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
-        super(pMenu, pPlayerInventory, pTitle);
-        pMenu.registerUpdateListener(this::containerChanged);
-        this.titleLabelY = 4;
-        this.titleLabelX = 4;
-        this.inventoryLabelY = 100000;
-        this.inventoryLabelX = 9;
+    public WorktableScreen(WorktableMenu p_99310_, Inventory p_99311_, Component p_99312_) {
+        super(p_99310_, p_99311_, p_99312_);
+        p_99310_.registerUpdateListener(this::containerChanged);
+        this.titleLabelY--;
     }
 
     @Override
-    protected void init() {
-        super.init();
-        this.font = this.getMinecraft().font;
-        this.searchBar = new EditBox(this.font, this.width / 2 - 21, this.height / 2 - 77, 100, 14, Component.literal("")) {
-            @Override
-            public boolean mouseClicked(double mouseX, double mouseY, int button) {
-                boolean result = super.mouseClicked(mouseX, mouseY, button);
-                if (button == 1) { // Right-click
-                    if (isMouseOver(mouseX, mouseY)) {
-                        setValue(""); // Clear the search bar
-                        return true;
-                    }
-                }
-                this.setFocused(result);
-                return result;
-            }
-
-        };
-
-        this.searchBar.setMaxLength(50);
-        this.addWidget(this.searchBar);
-        filteredRecipes = menu.getRecipes();
-    }
-
-    public void render(@NotNull GuiGraphics guiGraphics, int pMouseX, int pMouseY, float pPartialTick) {
-        super.render(guiGraphics, pMouseX, pMouseY, pPartialTick);
-        this.renderTooltip(guiGraphics, pMouseX, pMouseY);
-        this.searchBar.render(guiGraphics, pMouseX, pMouseY, pPartialTick);
-    }
-
-    private void updateFilteredRecipes() {
-        String searchQuery = searchBar.getValue().toLowerCase();
-
-        if (searchQuery.isEmpty()) {
-            filteredRecipes = menu.getRecipes(); // Show all recipes if the search query is empty
-        } else {
-            filteredRecipes = menu.getRecipes().stream()
-                    .filter(recipe -> recipe.value().getResultItem(Minecraft.getInstance().level.registryAccess())
-                            .getHoverName().getString().toLowerCase().contains(searchQuery))
-                    .collect(Collectors.toList());
-        }
+    public void render(GuiGraphics p_281735_, int p_282517_, int p_282840_, float p_282389_) {
+        super.render(p_281735_, p_282517_, p_282840_, p_282389_);
+        this.renderTooltip(p_281735_, p_282517_, p_282840_);
     }
 
     @Override
-    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
-        if (this.searchBar.keyPressed(keyCode, scanCode, modifiers) || this.searchBar.canConsumeInput()) {
-            String searchQuery = searchBar.getValue().toLowerCase();
-
-            if (searchQuery.isEmpty()) {
-                filteredRecipes = menu.getRecipes(); // Show all recipes if the search query is empty
-            } else {
-                filteredRecipes = menu.getRecipes().stream()
-                        .filter(recipe -> recipe.value().getResultItem(Minecraft.getInstance().level.registryAccess())
-                                .getHoverName().getString().toLowerCase().contains(searchQuery))
-                        .collect(Collectors.toList());
-            }
-            startIndex = 0;
-            selectedRecipeIndex = -1;
-
-            return true;
-        }
-        return super.keyPressed(keyCode, scanCode, modifiers);
-    }
-
-    @Override
-    public boolean keyReleased(int keyCode, int scanCode, int modifiers) {
-        if (keyCode == GLFW.GLFW_KEY_ESCAPE) {
-            this.onClose();
-            return true;
-        }
-        return super.keyReleased(keyCode, scanCode, modifiers);
-    }
-
-    @Override
-    public boolean charTyped(char charTyped, int keyCode) {
-        if (this.searchBar.charTyped(charTyped, keyCode)) {
-            return true;
-        }
-        return super.charTyped(charTyped, keyCode);
-    }
-
-    protected void renderBg(@NotNull GuiGraphics guiGraphics, float pPartialTick, int pX, int pY) {
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-        RenderSystem.setShaderTexture(0, TEXTURE);
+    protected void renderBg(GuiGraphics p_283115_, float p_282453_, int p_282940_, int p_282328_) {
         int i = this.leftPos;
         int j = this.topPos;
-        guiGraphics.blit(TEXTURE, i, j, 0, 0, imageWidth, imageHeight);
-        int k = (int) (39.0F * this.scrollOffs);
-
-        guiGraphics.blit(TEXTURE, i + 123, j + 26 + k, 220 + (!this.isScrollBarActive() ? 24 : scrolling ? 12 : 0), 0, 12, 15);
-        int l = this.leftPos + RECIPES_X;
-        int i1 = this.topPos + RECIPES_Y;
+        p_283115_.blit(BG_LOCATION, i, j, 0, 0, this.imageWidth, this.imageHeight);
+        int k = (int) (41.0F * this.scrollOffs);
+        ResourceLocation resourcelocation = this.isScrollBarActive() ? SCROLLER_SPRITE : SCROLLER_DISABLED_SPRITE;
+        p_283115_.blitSprite(resourcelocation, i + 119, j + 15 + k, 12, 15);
+        int l = this.leftPos + 52;
+        int i1 = this.topPos + 14;
         int j1 = this.startIndex + 12;
-        this.renderButtons(guiGraphics, pX, pY, l, i1, j1, false);
-        this.renderRecipes(guiGraphics, l, i1, j1);
-        RenderSystem.setShaderTexture(0, TEXTURE);
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-
-        if (!this.menu.resultContainer.isEmpty()) {
-            guiGraphics.blit(TEXTURE, i + 146, j + 46, 211, 0, 8, 11);
-        }
+        this.renderButtons(p_283115_, p_282940_, p_282328_, l, i1, j1);
+        this.renderRecipes(p_283115_, l, i1, j1);
     }
 
-    protected void renderTooltip(GuiGraphics guiGraphics, int pX, int pY) {
-        super.renderTooltip(guiGraphics, pX, pY);
-
-        boolean searchBarFocused = this.searchBar.isFocused();
-        boolean shouldRenderTooltips = this.displayRecipes || searchBarFocused;
-
-        if (shouldRenderTooltips) {
-            int i = this.leftPos + RECIPES_X;
-            int j = this.topPos + RECIPES_Y;
+    @Override
+    protected void renderTooltip(GuiGraphics p_282396_, int p_283157_, int p_282258_) {
+        super.renderTooltip(p_282396_, p_283157_, p_282258_);
+        if (this.displayRecipes) {
+            int i = this.leftPos + 52;
+            int j = this.topPos + 14;
             int k = this.startIndex + 12;
-            List<RecipeHolder<WorktableRecipe>> list = searchBarFocused ? this.filteredRecipes : this.menu.getRecipes();
+            List<RecipeHolder<WorktableRecipe>> list = this.menu.getRecipes();
 
-            for (int l = this.startIndex; l < k && l < list.size(); ++l) {
+            for (int l = this.startIndex; l < k && l < this.menu.getNumRecipes(); l++) {
                 int i1 = l - this.startIndex;
-                int j1 = i + i1 % RECIPES_COLUMNS * RECIPES_IMAGE_SIZE_WIDTH + 2;
-                int k1 = j + i1 / RECIPES_COLUMNS * RECIPES_IMAGE_SIZE_HEIGHT + 2;
-                if (pX >= j1 && pX < j1 + RECIPES_IMAGE_SIZE_WIDTH && pY >= k1 && pY < k1 + RECIPES_IMAGE_SIZE_HEIGHT) {
-                    WorktableRecipe recipe = list.get(l).value();
-                    ItemStack result = recipe.getResultItem(Minecraft.getInstance().level.registryAccess());
-                    assert Minecraft.getInstance().level != null;
-                    guiGraphics.renderTooltip(this.font, result, pX, pY);
-
-                    if (!searchBarFocused) {
-                        this.selectedRecipeIndex = this.menu.getRecipes().indexOf(recipe);
-                    }
-
-                    return;
+                int j1 = i + i1 % 4 * 16;
+                int k1 = j + i1 / 4 * 18 + 2;
+                if (p_283157_ >= j1 && p_283157_ < j1 + 16 && p_282258_ >= k1 && p_282258_ < k1 + 18) {
+                    p_282396_.renderTooltip(this.font, list.get(l).value().getResultItem(this.minecraft.level.registryAccess()), p_283157_, p_282258_);
                 }
             }
         }
+    }
 
-        if (WorktableScreen.isHovering((double) pX, pY, this.leftPos + 142, this.topPos + 32, 16, 16)) {
-            guiGraphics.renderTooltip(this.font, Component.translatable("Price"), pX, pY);
+    private void renderButtons(GuiGraphics p_282733_, int p_282136_, int p_282147_, int p_281987_, int p_281276_, int p_282688_) {
+        for (int i = this.startIndex; i < p_282688_ && i < this.menu.getNumRecipes(); i++) {
+            int j = i - this.startIndex;
+            int k = p_281987_ + j % 4 * 16;
+            int l = j / 4;
+            int i1 = p_281276_ + l * 18 + 2;
+            ResourceLocation resourcelocation;
+            if (i == this.menu.getSelectedRecipeIndex()) {
+                resourcelocation = RECIPE_SELECTED_SPRITE;
+            } else if (p_282136_ >= k && p_282147_ >= i1 && p_282136_ < k + 16 && p_282147_ < i1 + 18) {
+                resourcelocation = RECIPE_HIGHLIGHTED_SPRITE;
+            } else {
+                resourcelocation = RECIPE_SPRITE;
+            }
+
+            p_282733_.blitSprite(resourcelocation, k, i1 - 1, 16, 18);
         }
     }
 
-    public static boolean isHovering(double mouseX, double mouseY, double x, double y, double width, double height) {
-        return mouseX >= x && mouseX < x + width && mouseY >= y && mouseY < y + height;
-    }
-
-    private void renderButtons(GuiGraphics guiGraphics, int pMouseX, int pMouseY, int pX, int pY, int pLastVisibleElementIndex, boolean overlay) {
+    private void renderRecipes(GuiGraphics p_281999_, int p_282658_, int p_282563_, int p_283352_) {
         List<RecipeHolder<WorktableRecipe>> list = this.menu.getRecipes();
 
-        for (int i = this.startIndex; i < pLastVisibleElementIndex && i < list.size(); ++i) {
+        for (int i = this.startIndex; i < p_283352_ && i < this.menu.getNumRecipes(); i++) {
             int j = i - this.startIndex;
-            int k = pX + j % RECIPES_COLUMNS * RECIPES_IMAGE_SIZE_WIDTH;
-            int l = j / RECIPES_COLUMNS;
-            int i1 = pY + l * RECIPES_IMAGE_SIZE_HEIGHT + 2;
-            int j1 = 0;
-            int xOffset = overlay ? 22 : 0;
-
-            if (i < filteredRecipes.size() || searchBar.getValue().isEmpty()) {
-                if (i == this.menu.getSelectedRecipeIndex()) {
-                    j1 += 22;
-                } else if (pMouseX >= k + 2 && pMouseY >= i1 + 2 && pMouseX < k + 2 + RECIPES_IMAGE_SIZE_WIDTH && pMouseY < i1 + 2 + RECIPES_IMAGE_SIZE_HEIGHT) {
-                    j1 += 44;
-                }
-
-                guiGraphics.pose();
-                if (overlay) {
-                    guiGraphics.pose().translate(0, 50, 100);
-                }
-
-                guiGraphics.blit(TEXTURE, k, i1 - 1, xOffset, 122 + j1 + 50, 22, 22);
-                guiGraphics.pose();
-            }
+            int k = p_282658_ + j % 4 * 16;
+            int l = j / 4;
+            int i1 = p_282563_ + l * 18 + 2;
+            p_281999_.renderItem(list.get(i).value().getResultItem(this.minecraft.level.registryAccess()), k, i1);
         }
     }
 
-    private void renderRecipes(GuiGraphics guiGraphics, int pLeft, int pTop, int pRecipeIndexOffsetMax) {
-        List<RecipeHolder<WorktableRecipe>> list = this.menu.getRecipes();
-
-        for (int i = this.startIndex; i < pRecipeIndexOffsetMax && i < list.size(); ++i) {
-            int j = i - this.startIndex;
-            int k = pLeft + j % RECIPES_COLUMNS * RECIPES_IMAGE_SIZE_WIDTH + 3;
-            int l = j / RECIPES_COLUMNS;
-            int i1 = pTop + l * RECIPES_IMAGE_SIZE_HEIGHT + 4;
-
-            if (i < filteredRecipes.size() || searchBar.getValue().isEmpty()) {
-                WorktableRecipe recipe;
-                ItemStack result;
-
-                if (searchBar.getValue().isEmpty()) {
-                    recipe = list.get(i).value();
-                } else {
-                    recipe = filteredRecipes.get(i).value();
-                }
-                result = recipe.getResultItem(Minecraft.getInstance().level.registryAccess());
-
-                guiGraphics.renderItem(result, k, i1);
-                guiGraphics.renderItemDecorations(this.font, result, k, i1);
-            }
-        }
-
-        if (this.menu.getSelectedRecipeIndex() != -1 && this.menu.getRecipes().size() >= this.menu.getSelectedRecipeIndex() + 1) {
-            WorktableRecipe recipe = this.menu.getRecipes().get(this.menu.getSelectedRecipeIndex()).value();
-            ItemStack stack = recipe.input().getItems()[0];
-            stack.setCount(1);
-            stack.set(CoreDataComponents.COLOR,  recipe.output().get(CoreDataComponents.COLOR));
-
-            guiGraphics.renderItem(stack, this.leftPos + 142, this.topPos + 32);
-            guiGraphics.renderItemDecorations(this.font, stack, this.leftPos + 142, this.topPos + 32);
-        }
-    }
-
-
-    public boolean mouseClicked(double pMouseX, double pMouseY, int pButton) {
-        if (this.searchBar.mouseClicked(pMouseX, pMouseY, pButton)) {
-            return true;
-        }
+    @Override
+    public boolean mouseClicked(double p_99318_, double p_99319_, int p_99320_) {
         this.scrolling = false;
         if (this.displayRecipes) {
-            int i = this.leftPos + RECIPES_X;
-            int j = this.topPos + RECIPES_Y;
+            int i = this.leftPos + 52;
+            int j = this.topPos + 14;
             int k = this.startIndex + 12;
 
-            for (int l = this.startIndex; l < k; ++l) {
+            for (int l = this.startIndex; l < k; l++) {
                 int i1 = l - this.startIndex;
-                double d0 = pMouseX - (double) (i + i1 % RECIPES_COLUMNS * RECIPES_IMAGE_SIZE_WIDTH + 2);
-                double d1 = pMouseY - (double) (j + i1 / RECIPES_COLUMNS * RECIPES_IMAGE_SIZE_HEIGHT + 3);
-
-                if (d0 >= 0.0D && d1 >= 0.0D && d0 < RECIPES_IMAGE_SIZE_WIDTH && d1 < RECIPES_IMAGE_SIZE_HEIGHT && this.menu.clickMenuButton(this.minecraft.player, l)) {
-
-                    int recipeIndex = this.startIndex + i1;
-
-                    if (recipeIndex >= 0 && recipeIndex < filteredRecipes.size()) {
-                        WorktableRecipe recipe = filteredRecipes.get(recipeIndex).value();
-                        int originalIndex = -1;
-
-                        List<RecipeHolder<WorktableRecipe>> recipeHolders = menu.getRecipes();
-                        for (int x = 0; x < recipeHolders.size(); x++) {
-                            WorktableRecipe holderRecipe = recipeHolders.get(x).value();
-
-                            if (holderRecipe.equals(recipe)) {
-                                originalIndex = x;
-                                break;
-                            }
-                        }
-
-                        if (originalIndex >= 0) {
-                            assert Minecraft.getInstance().level != null;
-                            ItemStack result = recipe.getResultItem(Minecraft.getInstance().level.registryAccess());
-
-                            if (!result.isEmpty()) {
-                                Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.UI_STONECUTTER_SELECT_RECIPE, 1.0F));
-                                assert Objects.requireNonNull(this.minecraft).gameMode != null;
-                                assert this.minecraft.gameMode != null;
-                                this.minecraft.gameMode.handleInventoryButtonClick(getMenu().containerId, originalIndex);
-                                selectedRecipeIndex = originalIndex;
-
-                                // Reset the search bar value
-                                this.searchBar.setValue("");
-                                return true;
-                            }
-                        }
-                    }
+                double d0 = p_99318_ - (double) (i + i1 % 4 * 16);
+                double d1 = p_99319_ - (double) (j + i1 / 4 * 18);
+                if (d0 >= 0.0 && d1 >= 0.0 && d0 < 16.0 && d1 < 18.0 && this.menu.clickMenuButton(this.minecraft.player, l)) {
+                    Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(SoundEvents.UI_STONECUTTER_SELECT_RECIPE, 1.0F));
+                    this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, l);
+                    return true;
                 }
             }
 
-            i = this.leftPos + 123;
-            j = this.topPos + 26;
-            if (pMouseX >= (double) i && pMouseX < (double) (i + 12) && pMouseY >= (double) j && pMouseY < (double) (j + 54)) {
-                if (this.isScrollBarActive()) {
-                    this.scrolling = true;
-                    i = this.topPos + 26;
-                    j = i + 54;
-                    this.scrollOffs = ((float) pMouseY - (float) i - 7.5F) / ((float) (j - i) - 15.0F);
-                    this.scrollOffs = Mth.clamp(this.scrollOffs, 0.0F, 1.0F);
-                    this.startIndex = Math.max(0, ((int) ((double) (this.scrollOffs * (float) this.getOffscreenRows()) + 0.5D) * RECIPES_COLUMNS));
-                } else {
-                    this.scrollOffs = 0;
-                    this.startIndex = 0;
-                }
+            i = this.leftPos + 119;
+            j = this.topPos + 9;
+            if (p_99318_ >= (double) i && p_99318_ < (double) (i + 12) && p_99319_ >= (double) j && p_99319_ < (double) (j + 54)) {
+                this.scrolling = true;
             }
         }
-        return super.mouseClicked(pMouseX, pMouseY, pButton);
+
+        return super.mouseClicked(p_99318_, p_99319_, p_99320_);
     }
 
-    public boolean mouseDragged(double pMouseX, double pMouseY, int pButton, double pDragX, double pDragY) {
+    @Override
+    public boolean mouseDragged(double p_99322_, double p_99323_, int p_99324_, double p_99325_, double p_99326_) {
         if (this.scrolling && this.isScrollBarActive()) {
-            int i = this.topPos + 26;
+            int i = this.topPos + 14;
             int j = i + 54;
-            this.scrollOffs = ((float) pMouseY - (float) i - 7.5F) / ((float) (j - i) - 15.0F);
+            this.scrollOffs = ((float) p_99323_ - (float) i - 7.5F) / ((float) (j - i) - 15.0F);
             this.scrollOffs = Mth.clamp(this.scrollOffs, 0.0F, 1.0F);
-            this.startIndex = Math.max(0, ((int) ((double) (this.scrollOffs * (float) this.getOffscreenRows()) + 0.5D) * RECIPES_COLUMNS));
+            this.startIndex = (int) ((double) (this.scrollOffs * (float) this.getOffscreenRows()) + 0.5) * 4;
             return true;
         } else {
-            return super.mouseDragged(pMouseX, pMouseY, pButton, pDragX, pDragY);
+            return super.mouseDragged(p_99322_, p_99323_, p_99324_, p_99325_, p_99326_);
         }
     }
 
-    public boolean mouseScrolled(double pMouseX, double pMouseY, double pScrollX, double pScrollY) {
+    @Override
+    public boolean mouseScrolled(double p_99314_, double p_99315_, double p_99316_, double p_295672_) {
         if (this.isScrollBarActive()) {
             int i = this.getOffscreenRows();
-            float f = (float) pScrollY / (float) i;
+            float f = (float) p_295672_ / (float) i;
             this.scrollOffs = Mth.clamp(this.scrollOffs - f, 0.0F, 1.0F);
-            this.startIndex = Math.max(0, ((int) ((double) (this.scrollOffs * (float) i) + 0.5D) * RECIPES_COLUMNS));
+            this.startIndex = (int) ((double) (this.scrollOffs * (float) i) + 0.5) * 4;
         }
 
         return true;
@@ -368,7 +187,7 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
     }
 
     protected int getOffscreenRows() {
-        return (this.menu.getNumRecipes() + RECIPES_COLUMNS - 1) / RECIPES_COLUMNS - 3;
+        return (this.menu.getNumRecipes() + 4 - 1) / 4 - 3;
     }
 
     private void containerChanged() {
@@ -377,11 +196,5 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
             this.scrollOffs = 0.0F;
             this.startIndex = 0;
         }
-        if (!this.isScrollBarActive()) {
-            this.scrollOffs = 0;
-            this.startIndex = 0;
-        }
-
-        updateFilteredRecipes();
     }
 }

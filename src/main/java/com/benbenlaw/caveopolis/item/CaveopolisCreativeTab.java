@@ -136,6 +136,7 @@ public class CaveopolisCreativeTab {
                         () -> new ItemStack(CaveopolisBlocks.STRIPPED_COLORED_LOG.get()),
                         () -> new ItemStack(CaveopolisBlocks.STRIPPED_COLORED_WOOD.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_LEAVES.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_SAPLING.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_PLANKS.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_FENCE.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.get()),

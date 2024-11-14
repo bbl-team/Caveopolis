@@ -45,11 +45,19 @@ public class CaveopolisItemModelProvider extends ItemModelProvider {
         simpleItem(CaveopolisItems.GLOWSTONE_SPRAY_CAN);
 
         simpleItem(CaveopolisItems.COLORED_PLANK_DOOR);
+        simpleItem(CaveopolisItems.WORKTABLE);
+        saplingItem(CaveopolisItems.COLORED_SAPLING);
 
 
 
     }
 
+
+    private void saplingItem(DeferredItem<Item> item) {
+        withExistingParent(item.getId().getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/" + item.getId().getPath()));
+    }
 
     private void simpleItem(DeferredItem<Item> item) {
         withExistingParent(item.getId().getPath(),

@@ -21,6 +21,10 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
 
+        //Saplings
+        tag(BlockTags.SAPLINGS)
+                .add(CaveopolisBlocks.COLORED_SAPLING.get());
+
         //Hoe
         tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(CaveopolisBlocks.COLORED_LEAVES.get());
@@ -162,13 +166,6 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_WOOD.get())
                 .add(CaveopolisBlocks.STRIPPED_COLORED_WOOD.get());
 
-        //Wooden Logs
-        tag(BlockTags.LOGS)
-                .add(CaveopolisBlocks.COLORED_LOG.get())
-                .add(CaveopolisBlocks.STRIPPED_COLORED_LOG.get())
-                .add(CaveopolisBlocks.COLORED_WOOD.get())
-                .add(CaveopolisBlocks.STRIPPED_COLORED_WOOD.get());
-
         //Wooden Doors
         tag(BlockTags.WOODEN_DOORS)
                 .add(CaveopolisBlocks.COLORED_PLANK_DOOR.get());
@@ -239,13 +236,7 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
 
         //Stone
         tag(Tags.Blocks.STONES)
-                .add(CaveopolisBlocks.COLORED_STONE.get())
-                .add(CaveopolisBlocks.COLORED_MOSAIC.get())
-                .add(CaveopolisBlocks.COLORED_CHAOTIC.get())
-                .add(CaveopolisBlocks.COLORED_TRIPLE.get())
-                .add(CaveopolisBlocks.COLORED_BRAID.get())
-                .add(CaveopolisBlocks.COLORED_ENCASED.get())
-                .add(CaveopolisBlocks.COLORED_ROAD.get());
+                .add(CaveopolisBlocks.COLORED_STONE.get());
 
         //Stairs
         tag(BlockTags.STAIRS)

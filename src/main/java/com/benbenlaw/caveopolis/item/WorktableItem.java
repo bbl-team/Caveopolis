@@ -32,7 +32,7 @@ public class WorktableItem extends Item {
 
             level.getBlockEntity(player.blockPosition());
             player.openMenu(new SimpleMenuProvider(
-                    (windowId, playerInventory, playerEntity) -> new WorktableMenu(windowId, playerInventory, player.blockPosition(), null),
+                    (windowId, playerInventory, playerEntity) -> new WorktableMenu(windowId, playerInventory, ContainerLevelAccess.create(level, player.blockPosition())),
                     Component.translatable("item.caveopolis.worktable")), (buf -> buf.writeBlockPos(player.blockPosition())));
 
         }

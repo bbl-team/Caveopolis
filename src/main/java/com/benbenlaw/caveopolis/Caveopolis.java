@@ -1,26 +1,26 @@
 package com.benbenlaw.caveopolis;
 
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
-import com.benbenlaw.caveopolis.block.LogMaps;
+import com.benbenlaw.caveopolis.util.LogMaps;
 import com.benbenlaw.caveopolis.item.CaveopolisCreativeTab;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
 import com.benbenlaw.caveopolis.screen.CaveopolisMenuTypes;
 import com.benbenlaw.caveopolis.screen.WorktableScreen;
 import com.benbenlaw.caveopolis.util.CaveopolisColorHandler;
+import com.benbenlaw.caveopolis.util.TreeGrowerMap;
+import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
+import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTrunkPlacers;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -39,6 +39,7 @@ public class Caveopolis {
 
         CaveopolisMenuTypes.MENUS.register(modEventBus);
         CaveopolisRecipes.register(modEventBus);
+        CaveopolisTrunkPlacers.TRUNK_PLACER.register(modEventBus);
 
 
 
@@ -73,6 +74,9 @@ public class Caveopolis {
     private void commonSetup(final FMLCommonSetupEvent event) {
         LogMaps logMaps = new LogMaps();
         logMaps.updateLogMaps();
+
+        TreeGrowerMap treeGrowerMaps = new TreeGrowerMap();
+        treeGrowerMaps.updateTreeGrowerMap();
 
         event.enqueueWork(() -> {
           //  ComposterBlock.COMPOSTABLES.put(ModBlocks.BLACK_COLORED_SAPLING.get().asItem(),  0.3F);

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "G": {
+      "tag": "c:dyes/cyan"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " I ",
+    "IGI",
+    "IGI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "caveopolis:cyan_spray_can"
+  }
+}

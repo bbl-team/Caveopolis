@@ -1,11 +1,14 @@
 {
-  "type": "caveopolis:worktable",
-  "input": {
-    "count": 1,
-    "item": "caveopolis:colored_stone"
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:stone"
   },
-  "output": {
+  "result": {
     "count": 1,
-    "id": "caveopolis:colored_stone"
+    "id": "caveopolis:colored_stone",
+    "components": {
+      "core:color": "black",
+      "core:lit": false
+    }
   }
 }

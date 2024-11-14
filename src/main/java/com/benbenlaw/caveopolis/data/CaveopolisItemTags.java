@@ -2,6 +2,7 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
+import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -22,12 +23,38 @@ public class CaveopolisItemTags extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
 
+        //Saplings
+        tag(ItemTags.SAPLINGS)
+                .add(CaveopolisBlocks.COLORED_SAPLING.asItem());
+
+        tag(Tags.Items.ENCHANTABLES)
+                .add(CaveopolisItems.BLACK_SPRAY_CAN.asItem());
+
+        tag(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(CaveopolisItems.BLACK_SPRAY_CAN.get())
+                .add(CaveopolisItems.BLUE_SPRAY_CAN.get())
+                .add(CaveopolisItems.GREEN_SPRAY_CAN.get())
+                .add(CaveopolisItems.RED_SPRAY_CAN.get())
+                .add(CaveopolisItems.YELLOW_SPRAY_CAN.get())
+                .add(CaveopolisItems.PURPLE_SPRAY_CAN.get())
+                .add(CaveopolisItems.ORANGE_SPRAY_CAN.get())
+                .add(CaveopolisItems.LIGHT_BLUE_SPRAY_CAN.get())
+                .add(CaveopolisItems.LIME_SPRAY_CAN.get())
+                .add(CaveopolisItems.PINK_SPRAY_CAN.get())
+                .add(CaveopolisItems.CYAN_SPRAY_CAN.get())
+                .add(CaveopolisItems.LIGHT_GRAY_SPRAY_CAN.get())
+                .add(CaveopolisItems.GRAY_SPRAY_CAN.get())
+                .add(CaveopolisItems.BROWN_SPRAY_CAN.get())
+                .add(CaveopolisItems.MAGENTA_SPRAY_CAN.get())
+                .add(CaveopolisItems.WHITE_SPRAY_CAN.get())
+                .add(CaveopolisItems.GLOWSTONE_SPRAY_CAN.get());
+
         //Leaves
         tag(ItemTags.LEAVES)
                 .add(CaveopolisBlocks.COLORED_LEAVES.asItem());
 
         //Logs
-        tag(ItemTags.LOGS)
+        tag(ItemTags.LOGS_THAT_BURN)
                 .add(CaveopolisBlocks.COLORED_LOG.asItem())
                 .add(CaveopolisBlocks.STRIPPED_COLORED_LOG.asItem())
                 .add(CaveopolisBlocks.COLORED_WOOD.asItem())
@@ -56,13 +83,7 @@ public class CaveopolisItemTags extends ItemTagsProvider {
 
         //Stone
         tag(Tags.Items.STONES)
-                .add(CaveopolisBlocks.COLORED_STONE.asItem())
-                .add(CaveopolisBlocks.COLORED_MOSAIC.asItem())
-                .add(CaveopolisBlocks.COLORED_CHAOTIC.asItem())
-                .add(CaveopolisBlocks.COLORED_TRIPLE.asItem())
-                .add(CaveopolisBlocks.COLORED_BRAID.asItem())
-                .add(CaveopolisBlocks.COLORED_ENCASED.asItem())
-                .add(CaveopolisBlocks.COLORED_ROAD.asItem());
+                .add(CaveopolisBlocks.COLORED_STONE.asItem());
 
 
         //Stairs

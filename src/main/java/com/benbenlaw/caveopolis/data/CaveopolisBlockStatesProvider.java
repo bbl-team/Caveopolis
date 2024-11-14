@@ -134,6 +134,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
 
         //Colored Wood
+        saplingWithElements((SaplingBlock) CaveopolisBlocks.COLORED_SAPLING.get());
         blockWithItem(CaveopolisBlocks.COLORED_PLANKS);
         fenceWithElements((FenceBlock) CaveopolisBlocks.COLORED_PLANK_FENCE.get(), CaveopolisBlocks.COLORED_PLANKS.get());
         fenceGateWithElements((FenceGateBlock) CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.get(), CaveopolisBlocks.COLORED_PLANKS.get());
@@ -160,6 +161,15 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
     private void blockWithItem(DeferredBlock<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(), blockWithElements(blockRegistryObject.get().defaultBlockState().getBlock()));
+    }
+
+    private void saplingWithElements(SaplingBlock saplingBlock) {
+
+        ResourceLocation saplingBlockRegistryName = BuiltInRegistries.BLOCK.getKey(saplingBlock);
+        ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(saplingBlockRegistryName.getNamespace(), "block/" + saplingBlockRegistryName.getPath());
+
+        ModelFile sapling = models().withExistingParent(saplingBlockRegistryName.getPath(), "caveopolis:block/tintable_cross")
+                .texture("cross", texture).renderType("cutout");
     }
 
     private void blockItem(DeferredBlock<Block> blockRegistryObject) {
@@ -311,6 +321,8 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
         simpleBlockItem(trapDoorBlock, new ModelFile.UncheckedModelFile("caveopolis:block/" + trapDoorBlockRegistryName.getPath() + "_bottom"));
     }
+
+
 
     private void doorWithElements(DoorBlock doorBlock, Block block) {
 

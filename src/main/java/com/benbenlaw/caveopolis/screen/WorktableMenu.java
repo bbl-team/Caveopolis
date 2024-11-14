@@ -8,6 +8,7 @@ import com.google.common.collect.Lists;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -25,6 +26,7 @@ import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.item.crafting.StonecutterRecipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
 import org.jetbrains.annotations.NotNull;
 
@@ -34,104 +36,84 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class WorktableMenu extends AbstractContainerMenu {
-    public final ContainerLevelAccess access;
-    public final DataSlot selectedRecipeIndex = DataSlot.standalone();
-    public final Level level;
-    public List<RecipeHolder<WorktableRecipe>> recipes = Lists.newArrayList();
-    public WorktableRecipe lastUsedRecipe = null;
-    public int recipesSize = 0;
-    public ItemStack input = ItemStack.EMPTY;
-    public ItemStack lastNonAirInput = ItemStack.EMPTY;
-    public ItemStack lastInput = ItemStack.EMPTY;
+    public static final int INPUT_SLOT = 0;
+    public static final int RESULT_SLOT = 1;
+    private static final int INV_SLOT_START = 2;
+    private static final int INV_SLOT_END = 29;
+    private static final int USE_ROW_SLOT_START = 29;
+    private static final int USE_ROW_SLOT_END = 38;
+    private final ContainerLevelAccess access;
+    private final DataSlot selectedRecipeIndex = DataSlot.standalone();
+    private final Level level;
+    private List<RecipeHolder<WorktableRecipe>> recipes = Lists.newArrayList();
+    private ItemStack input = ItemStack.EMPTY;
     long lastSoundTime;
-    public Slot inputSlot;
-    public Slot resultSlot;
+    final Slot inputSlot;
+    final Slot resultSlot;
     Runnable slotUpdateListener = () -> {
     };
     public final Container container = new SimpleContainer(1) {
+        @Override
         public void setChanged() {
             super.setChanged();
             WorktableMenu.this.slotsChanged(this);
             WorktableMenu.this.slotUpdateListener.run();
         }
     };
-    public final ResultContainer resultContainer = new ResultContainer();
+    final ResultContainer resultContainer = new ResultContainer();
 
-    public WorktableMenu(int containerID, Inventory inventory, FriendlyByteBuf extraData) {
-        this(containerID, inventory, extraData.readBlockPos(), new SimpleContainerData(2));
+    public WorktableMenu(int p_40294_, Inventory p_40295_, FriendlyByteBuf buf) {
+        this(p_40294_, p_40295_, ContainerLevelAccess.NULL);
     }
 
-    public WorktableMenu(int containerID, Inventory inventory, BlockPos blockPos, ContainerData data) {
-        super(CaveopolisMenuTypes.WORKTABLE_MENU.get(), containerID);
-        this.access = ContainerLevelAccess.create(inventory.player.level(), blockPos);
-        this.level = inventory.player.level();
-        this.inputSlot = this.addSlot(new Slot(this.container, 0, 26, 44));
-        this.resultSlot = this.addSlot(new Slot(this.resultContainer, 1, 142, 56) {
 
-            public boolean mayPlace(@NotNull ItemStack p_40362_) {
+    public WorktableMenu(int p_40297_, Inventory p_40298_, final ContainerLevelAccess p_40299_) {
+        super(CaveopolisMenuTypes.WORKTABLE_MENU.get(), p_40297_);
+        this.access = p_40299_;
+        this.level = p_40298_.player.level();
+        this.inputSlot = this.addSlot(new Slot(this.container, 0, 20, 33));
+        this.resultSlot = this.addSlot(new Slot(this.resultContainer, 1, 143, 33) {
+            @Override
+            public boolean mayPlace(ItemStack p_40362_) {
                 return false;
             }
 
             @Override
-            public boolean mayPickup(@NotNull Player pPlayer) {
+            public void onTake(Player p_150672_, ItemStack p_150673_) {
+                p_150673_.onCraftedBy(p_150672_.level(), p_150672_, p_150673_.getCount());
+                WorktableMenu.this.resultContainer.awardUsedRecipes(p_150672_, this.getRelevantItems());
+                ItemStack itemstack = WorktableMenu.this.inputSlot.remove(1);
+                if (!itemstack.isEmpty()) {
+                    WorktableMenu.this.setupResultSlot();
+                }
 
-                if (WorktableMenu.this.selectedRecipeIndex.get() == -1)
-                    return false;
-                if (recipes.isEmpty())
-                    return false;
-                if (recipes.size() < WorktableMenu.this.selectedRecipeIndex.get())
-                    return false;
-
-                return super.mayPickup(pPlayer);
-            }
-
-            public void onTake(@NotNull Player player, @NotNull ItemStack stack) {
-                stack.onCraftedBy(player.level(), player, stack.getCount());
-                WorktableMenu.this.resultContainer.awardUsedRecipes(player, this.getRelevantItems());
-                ItemStack input = WorktableMenu.this.inputSlot.getItem();
-
-                // Deal with normally
-                if (!level.isClientSide)
-                    input.shrink(1);
-                WorktableMenu.this.inputSlot.setChanged();
-                WorktableMenu.this.setupResultSlot();
-
-
-
-                access.execute((p_40364_, p_40365_) -> {
+                p_40299_.execute((p_40364_, p_40365_) -> {
                     long l = p_40364_.getGameTime();
                     if (WorktableMenu.this.lastSoundTime != l) {
-                        p_40364_.playSound(null, p_40365_, SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.BLOCKS, 0.4F, 1.0F);
+                        p_40364_.playSound(null, p_40365_, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
                         WorktableMenu.this.lastSoundTime = l;
                     }
                 });
-
-                WorktableMenu.this.slotsChanged(WorktableMenu.this.container);
-                super.onTake(player, stack);
+                super.onTake(p_150672_, p_150673_);
             }
 
             private List<ItemStack> getRelevantItems() {
                 return List.of(WorktableMenu.this.inputSlot.getItem());
             }
-
         });
 
-        for(int i = 0; i < 3; ++i) {
-            for(int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(inventory, l + i * 9 + 9, 8 + l * 18, 86 + i * 18));
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 9; j++) {
+                this.addSlot(new Slot(p_40298_, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
             }
         }
 
-        for(int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(inventory, i, 8 + i * 18, 144));
+        for (int k = 0; k < 9; k++) {
+            this.addSlot(new Slot(p_40298_, k, 8 + k * 18, 142));
         }
 
         this.addDataSlot(this.selectedRecipeIndex);
-        this.selectedRecipeIndex.set(-1);
     }
-
-
-
     public int getSelectedRecipeIndex() {
         return this.selectedRecipeIndex.get();
     }
@@ -148,49 +130,49 @@ public class WorktableMenu extends AbstractContainerMenu {
         return this.inputSlot.hasItem() && !this.recipes.isEmpty();
     }
 
-    public boolean stillValid(@NotNull Player player) {
-         return true;
+    @Override
+    public boolean stillValid(Player p_40307_) {
+        return true;
     }
 
-    public boolean clickMenuButton(@NotNull Player pPlayer, int pId) {
-        if (this.isValidRecipeIndex(pId)) {
-            this.selectedRecipeIndex.set(pId);
+    @Override
+    public boolean clickMenuButton(Player p_40309_, int p_40310_) {
+        if (this.isValidRecipeIndex(p_40310_)) {
+            this.selectedRecipeIndex.set(p_40310_);
             this.setupResultSlot();
         }
 
         return true;
     }
 
-    private boolean isValidRecipeIndex(int pRecipeIndex) {
-        return pRecipeIndex >= 0 && pRecipeIndex < this.recipes.size();
+    private boolean isValidRecipeIndex(int p_40335_) {
+        return p_40335_ >= 0 && p_40335_ < this.recipes.size();
     }
 
-    public void slotsChanged(@NotNull Container pInventory) {
-        ItemStack itemstack = this.inputSlot.getItem().copy();
-        this.setupRecipeList(pInventory, itemstack);
-        this.input = itemstack.copy();
+    @Override
+    public void slotsChanged(Container p_40302_) {
+        ItemStack itemstack = this.inputSlot.getItem();
+        if (!itemstack.is(this.input.getItem())) {
+            this.input = itemstack.copy();
+            this.setupRecipeList(p_40302_, itemstack);
+        }
+    }
 
+    private static SingleRecipeInput createRecipeInput(Container p_346312_) {
+        return new SingleRecipeInput(p_346312_.getItem(0));
     }
 
     private void setupRecipeList(Container pContainer, ItemStack pStack) {
         this.recipes = new ArrayList<>();
 
-        // Retrieve the components of the input
         DataComponentMap inputComponents = input.getComponents();
         DataComponentMap containerComponents = container.getItem(0).getComponents();
 
         Object inputColor = inputComponents.get(CoreDataComponents.COLOR.get());
-        Object containerColor = containerComponents != null ? containerComponents.get(CoreDataComponents.COLOR.get()) : null;
-
-        if (!this.input.is(pStack.getItem())) {
-            if (!this.input.is(Items.AIR) && !this.input.is(lastInput.getItem()) && !this.lastInput.is(Items.AIR))
-                this.selectedRecipeIndex.set(-1);
-            if (!this.input.is(lastInput.getItem()))
-                this.lastInput = this.input;
-        }
+        Object inputLit = inputComponents.get(CoreDataComponents.LIT.get());
 
         if (!pStack.isEmpty()) {
-            // Filter recipes based on the input item and matching input/output color
+            // Filter recipes based on the input item and matching input/output color and lit values
             this.recipes = this.level.getRecipeManager()
                     .getAllRecipesFor(WorktableRecipe.Type.INSTANCE)
                     .stream()
@@ -198,103 +180,92 @@ public class WorktableMenu extends AbstractContainerMenu {
                         // Check if the recipe can be crafted with the input item
                         boolean matchesInput = recipe.value().getIngredients().stream().anyMatch(ingredient -> ingredient.test(pStack));
 
-                        // Get the output item and retrieve its color
+                        // Get the output item and retrieve its color and lit data
                         ItemStack outputStack = recipe.value().getResultItem(this.level.registryAccess());
                         DataComponentMap outputComponents = outputStack.getComponents();
                         Object outputColor = outputComponents.get(CoreDataComponents.COLOR.get());
+                        Object outputLit = outputComponents.get(CoreDataComponents.LIT.get());
 
-                        // If inputColor is null, allow all color outputs
-                        if (inputColor == null) {
+                        // If both inputColor and inputLit are null, allow all outputs
+                        if (inputColor == null && inputLit == null) {
                             return matchesInput;  // Only filter based on the input match
                         }
 
-                        // Check if both colors are non-null and match
-                        return matchesInput && inputColor != null && inputColor.equals(outputColor);
+                        // Check if color and lit values are non-null and match
+                        boolean colorMatches = inputColor == null || inputColor.equals(outputColor);
+                        boolean litMatches = inputLit == null || inputLit.equals(outputLit);
+
+                        return matchesInput && colorMatches && litMatches;
                     })
                     .collect(Collectors.toList());
         }
-
-        if (this.recipesSize != this.recipes.size() && this.selectedRecipeIndex.get() != -1) {
-            for (int i = 0; i < this.recipes.size(); i++) {
-                if (this.recipes.get(i).value() == this.lastUsedRecipe) {
-                    this.selectedRecipeIndex.set(i);
-                    break;
-                }
-            }
-        }
-
-        this.recipes = this.recipes.stream().sorted(Comparator.comparing(r -> r.id().toString())).toList();
-        this.recipesSize = this.recipes.size();
-
-        if (!this.input.is(pStack.getItem()) || pStack.getCount() != this.input.getCount()) {
-            this.resultSlot.set(ItemStack.EMPTY);
-            if (this.lastInput.is(Items.AIR))
-                setupResultSlot();
-        }
     }
+
 
     void setupResultSlot() {
         if (!this.recipes.isEmpty() && this.isValidRecipeIndex(this.selectedRecipeIndex.get())) {
-            RecipeHolder<WorktableRecipe> catalogueRecipe = this.recipes.get(this.selectedRecipeIndex.get());
-            ItemStack itemstack = catalogueRecipe.value().assemble(createRecipeInput(this.container), this.level.registryAccess());
-            this.resultContainer.setRecipeUsed(catalogueRecipe);
-            this.lastUsedRecipe = catalogueRecipe.value();
-            this.resultSlot.set(itemstack);
+            RecipeHolder<WorktableRecipe> recipeholder = this.recipes.get(this.selectedRecipeIndex.get());
+            ItemStack itemstack = recipeholder.value().assemble(createRecipeInput(this.container), this.level.registryAccess());
+            if (itemstack.isItemEnabled(this.level.enabledFeatures())) {
+                this.resultContainer.setRecipeUsed(recipeholder);
+                this.resultSlot.set(itemstack);
+            } else {
+                this.resultSlot.set(ItemStack.EMPTY);
+            }
         } else {
             this.resultSlot.set(ItemStack.EMPTY);
         }
-        this.lastNonAirInput = this.input;
 
         this.broadcastChanges();
     }
-    private static SingleRecipeInput createRecipeInput(Container container) {
-        return new SingleRecipeInput(container.getItem(0));
-    }
 
-    public @NotNull MenuType<?> getType() {
+    @Override
+    public MenuType<?> getType() {
         return CaveopolisMenuTypes.WORKTABLE_MENU.get();
     }
 
-    public void registerUpdateListener(Runnable pListener) {
-        this.slotUpdateListener = pListener;
+    public void registerUpdateListener(Runnable p_40324_) {
+        this.slotUpdateListener = p_40324_;
     }
 
-    public boolean canTakeItemForPickAll(@NotNull ItemStack pStack, Slot pSlot) {
-        return pSlot.container != this.resultContainer && super.canTakeItemForPickAll(pStack, pSlot);
+    @Override
+    public boolean canTakeItemForPickAll(ItemStack p_40321_, Slot p_40322_) {
+        return p_40322_.container != this.resultContainer && super.canTakeItemForPickAll(p_40321_, p_40322_);
     }
 
-    public @NotNull ItemStack quickMoveStack(@NotNull Player pPlayer, int pIndex) {
+    @Override
+    public ItemStack quickMoveStack(Player p_40328_, int p_40329_) {
         ItemStack itemstack = ItemStack.EMPTY;
-        Slot slot = this.slots.get(pIndex);
-        if (slot.hasItem()) {
+        Slot slot = this.slots.get(p_40329_);
+        if (slot != null && slot.hasItem()) {
             ItemStack itemstack1 = slot.getItem();
             Item item = itemstack1.getItem();
             itemstack = itemstack1.copy();
-
-            if (pIndex == 1) {
-                item.onCraftedBy(itemstack1, pPlayer.level(), pPlayer);
+            if (p_40329_ == 1) {
+                item.onCraftedBy(itemstack1, p_40328_.level(), p_40328_);
                 if (!this.moveItemStackTo(itemstack1, 2, 38, true)) {
                     return ItemStack.EMPTY;
                 }
+
                 slot.onQuickCraft(itemstack1, itemstack);
-            } else if (pIndex == 0) {
+            } else if (p_40329_ == 0) {
                 if (!this.moveItemStackTo(itemstack1, 2, 38, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (this.level.getRecipeManager().getRecipeFor(WorktableRecipe.Type.INSTANCE, new SingleRecipeInput(itemstack1), this.level).isPresent()) {
+            } else if (this.level.getRecipeManager().getRecipeFor(CaveopolisRecipes.WORKTABLE_TYPE.get(), new SingleRecipeInput(itemstack1), this.level).isPresent()) {
                 if (!this.moveItemStackTo(itemstack1, 0, 1, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (pIndex >= 2 && pIndex < 29) {
+            } else if (p_40329_ >= 2 && p_40329_ < 29) {
                 if (!this.moveItemStackTo(itemstack1, 29, 38, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (pIndex >= 29 && pIndex < 38 && !this.moveItemStackTo(itemstack1, 2, 29, false)) {
+            } else if (p_40329_ >= 29 && p_40329_ < 38 && !this.moveItemStackTo(itemstack1, 2, 29, false)) {
                 return ItemStack.EMPTY;
             }
 
             if (itemstack1.isEmpty()) {
-                slot.set(ItemStack.EMPTY);
+                slot.setByPlayer(ItemStack.EMPTY);
             }
 
             slot.setChanged();
@@ -302,20 +273,17 @@ public class WorktableMenu extends AbstractContainerMenu {
                 return ItemStack.EMPTY;
             }
 
-            slot.onTake(pPlayer, itemstack1);
+            slot.onTake(p_40328_, itemstack1);
             this.broadcastChanges();
         }
 
         return itemstack;
     }
 
-    public void removed(@NotNull Player pPlayer) {
-        super.removed(pPlayer);
-        this.selectedRecipeIndex.set(-1);
+    @Override
+    public void removed(Player p_40326_) {
+        super.removed(p_40326_);
         this.resultContainer.removeItemNoUpdate(1);
-        this.access.execute((p_40313_, p_40314_) -> {
-            this.clearContainer(pPlayer, this.container);
-        });
+        this.access.execute((p_40313_, p_40314_) -> this.clearContainer(p_40326_, this.container));
     }
-
 }

@@ -27,19 +27,20 @@ public class DataGenerators {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeServer(), new CaveopolisRecipeBuilder(packOutput, event.getLookupProvider()));
-//
+
         generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(CaveopolisLootTableProvider::new, LootContextParamSets.BLOCK)), event.getLookupProvider()));
-//
+
         CaveopolisBlockTags blockTags = new CaveopolisBlockTags(packOutput, lookupProvider, event.getExistingFileHelper());
         generator.addProvider(event.includeServer(), blockTags);
-//
+
         CaveopolisItemTags itemTags = new CaveopolisItemTags(packOutput, lookupProvider, blockTags, event.getExistingFileHelper());
         generator.addProvider(event.includeServer(), itemTags);
-//
+
         generator.addProvider(event.includeClient(), new CaveopolisItemModelProvider(packOutput, event.getExistingFileHelper()));
         generator.addProvider(event.includeClient(), new CaveopolisBlockStatesProvider(packOutput, event.getExistingFileHelper()));
 
+        generator.addProvider(event.includeServer(), new CaveopolisWorldGenProviders(packOutput, lookupProvider));
 
     }
 }

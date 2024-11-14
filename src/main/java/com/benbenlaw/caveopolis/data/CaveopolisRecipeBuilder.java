@@ -2,9 +2,10 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
-import com.benbenlaw.caveopolis.data.recipes.ColorSprayCanMap;
 import com.benbenlaw.caveopolis.data.recipes.WorktableRecipeBuilder;
+import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.ColoringRecipe;
+import com.benbenlaw.caveopolis.recipe.LightingRecipe;
 import com.benbenlaw.core.item.CoreDataComponents;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -15,16 +16,12 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.BookCloningRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
-import net.neoforged.neoforge.common.crafting.SizedIngredient;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.function.Consumer;
 
 public class CaveopolisRecipeBuilder extends RecipeProvider {
 
@@ -39,24 +36,25 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
                 "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"
         };
 
-        SpecialRecipeBuilder.special(ColoringRecipe::new).save(consumer, "coloring");
+        SpecialRecipeBuilder.special(ColoringRecipe::new).save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "coloring"));
+        SpecialRecipeBuilder.special(LightingRecipe::new).save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "lighting"));
 
         for (String color : colors) {
 
             //Vanilla To Caveopolis
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_STONE.get(), 1, Tags.Items.STONES, 1, "colored_stone");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_STONE_BRICKS.get(), 1, ItemTags.STONE_BRICKS, 1, "colored_stone_bricks");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_STONE.get(), 1, Items.STONE, 1, "colored_stone");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_STONE_BRICKS.get(), 1, Items.STONE_BRICKS, 1, "colored_stone_bricks");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_BRICKS.get(), 1, Blocks.BRICKS, 1, "colored_bricks");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_COBBLESTONE.get(), 1, Tags.Items.COBBLESTONES, 1, "colored_cobblestone");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get(), 1, Tags.Items.COBBLESTONES, 1, "colored_cobblestone_bricks");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_COBBLESTONE.get(), 1, Items.COBBLESTONE, 1, "colored_cobblestone");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get(), 1, Items.COBBLESTONE, 1, "colored_cobblestone_bricks");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_MARBLE.get(), 1, Items.CALCITE, 1, "colored_marble");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_MARBLE_BRICKS.get(), 1, Items.CALCITE, 1, "colored_marble_bricks");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_MOSAIC.get(), 1, Tags.Items.STONES, 1, "colored_mosaic");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_CHAOTIC.get(), 1, Tags.Items.STONES, 1, "colored_chaotic");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_TRIPLE.get(), 1, Tags.Items.STONES, 1, "colored_triple");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_BRAID.get(), 1, Tags.Items.STONES, 1, "colored_braid");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_ENCASED.get(), 1, Tags.Items.STONES, 1, "colored_encased");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_ROAD.get(), 1, Tags.Items.STONES, 1, "colored_road");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_MOSAIC.get(), 1, Items.STONE, 1, "colored_mosaic");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_CHAOTIC.get(), 1, Items.STONE, 1, "colored_chaotic");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_TRIPLE.get(), 1, Items.STONE, 1, "colored_triple");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_BRAID.get(), 1, Items.STONE, 1, "colored_braid");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_ENCASED.get(), 1, Items.STONE, 1, "colored_encased");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_ROAD.get(), 1, Items.STONE, 1, "colored_road");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_LOG.get(), 1, ItemTags.LOGS, 1, "colored_log");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_WOOD.get(), 1, ItemTags.LOGS, 1, "colored_wood");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.STRIPPED_COLORED_LOG.get(), 1, ItemTags.LOGS, 1, "stripped_colored_log");
@@ -167,8 +165,173 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
             createRecipe(consumer, color, "road", CaveopolisBlocks.COLORED_ROAD_WALL.get(), 1, CaveopolisBlocks.COLORED_ROAD.get(), 1, "wall");
             createRecipe(consumer, color, "road", CaveopolisBlocks.COLORED_ROAD_BUTTON.get(), 4, CaveopolisBlocks.COLORED_ROAD.get(), 1, "button");
             createRecipe(consumer, color, "road", CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get(), 3, CaveopolisBlocks.COLORED_ROAD.get(), 1, "pressure_plate");
-
         }
+
+        //Worktable
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.WORKTABLE.get())
+                .define('S', Tags.Items.RODS_WOODEN)
+                .define('C', Tags.Items.PLAYER_WORKSTATIONS_CRAFTING_TABLES)
+                .pattern(" CC")
+                .pattern(" SC")
+                .pattern("S  ")
+                .unlockedBy("has_item", has(Tags.Items.PLAYER_WORKSTATIONS_CRAFTING_TABLES))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable"));
+
+        //Spray Cans
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.BLACK_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_BLACK)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/black"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.BLUE_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_BLUE)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/blue"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.BROWN_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_BROWN)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/brown"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.CYAN_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_CYAN)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/cyan"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.GRAY_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_GRAY)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/gray"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.GREEN_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_GREEN)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/green"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.LIGHT_BLUE_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_LIGHT_BLUE)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/light_blue"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.LIGHT_GRAY_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_LIGHT_GRAY)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/light_gray"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.LIME_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_LIME)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/lime"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.MAGENTA_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_MAGENTA)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/magenta"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.ORANGE_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_ORANGE)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/orange"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.PINK_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_PINK)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/pink"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.PURPLE_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_PURPLE)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/purple"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.RED_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_RED)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/red"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.WHITE_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_WHITE)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/white"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.YELLOW_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DYES_YELLOW)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/yellow"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, CaveopolisItems.GLOWSTONE_SPRAY_CAN)
+                .define('I', Items.IRON_INGOT)
+                .define('G', Tags.Items.DUSTS_GLOWSTONE)
+                .pattern(" I ")
+                .pattern("IGI")
+                .pattern("IGI")
+                .unlockedBy("has_item", has(Items.IRON_INGOT))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/glowstone"));
 
 
 
@@ -178,7 +341,7 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
 
         Ingredient inputIngredient = Ingredient.of(iconWithColor(new ItemStack(input, inputCount), color));
         WorktableRecipeBuilder.worktableRecipeBuilder(iconWithColor(new ItemStack(output, outputCount), color),
-                    inputIngredient)
+                        inputIngredient)
                 .unlockedBy("has_item", has(input))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/" + blockType + "/" + path + "/" + color));
     }

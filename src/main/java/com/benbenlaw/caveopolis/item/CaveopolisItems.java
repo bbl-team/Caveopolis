@@ -21,73 +21,77 @@ public class CaveopolisItems {
     //Misc Items
     public static final DeferredItem<Item> WORKTABLE = ITEMS.register("worktable",
             () -> new WorktableItem(new Item.Properties()));
+
+    public static final DeferredItem<Item> COLORED_SAPLING = ITEMS.register("colored_sapling",
+            () -> new ColoredBlockItem((ColoredSapling) CaveopolisBlocks.COLORED_SAPLING.get(), new Item.Properties()));
+
     //Spray Cans
     public static final DeferredItem<Item> BLUE_SPRAY_CAN = ITEMS.register("blue_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolie:blue_spray_can")))
                     , DyeColor.BLUE));
     public static final DeferredItem<Item> RED_SPRAY_CAN = ITEMS.register("red_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:red_spray_can")))
                     , DyeColor.RED));
     public static final DeferredItem<Item> GREEN_SPRAY_CAN = ITEMS.register("green_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:green_spray_can")))
                     , DyeColor.GREEN));
     public static final DeferredItem<Item> YELLOW_SPRAY_CAN = ITEMS.register("yellow_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:yellow_spray_can")))
                     ,DyeColor.YELLOW));
     public static final DeferredItem<Item> PINK_SPRAY_CAN = ITEMS.register("pink_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:pink_spray_can")))
                     , DyeColor.PINK));
     public static final DeferredItem<Item> ORANGE_SPRAY_CAN = ITEMS.register("orange_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:orange_spray_can")))
                     , DyeColor.ORANGE));
     public static final DeferredItem<Item> PURPLE_SPRAY_CAN = ITEMS.register("purple_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:purple_spray_can")))
                     , DyeColor.PURPLE));
     public static final DeferredItem<Item> WHITE_SPRAY_CAN = ITEMS.register("white_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:white_spray_can"))),
                     DyeColor.WHITE));
     public static final DeferredItem<Item> BLACK_SPRAY_CAN = ITEMS.register("black_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:black_spray_can")))
                     , DyeColor.BLACK));
     public static final DeferredItem<Item> BROWN_SPRAY_CAN = ITEMS.register("brown_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:brown_spray_can")))
                     , DyeColor.BROWN));
     public static final DeferredItem<Item> CYAN_SPRAY_CAN = ITEMS.register("cyan_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:cyan_spray_can")))
                     , DyeColor.CYAN));
     public static final DeferredItem<Item> GRAY_SPRAY_CAN = ITEMS.register("gray_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:gray_spray_can")))
                     , DyeColor.GRAY));
     public static final DeferredItem<Item> LIGHT_BLUE_SPRAY_CAN = ITEMS.register("light_blue_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:light_blue_spray_can")))
                     , DyeColor.LIGHT_BLUE));
     public static final DeferredItem<Item> LIGHT_GRAY_SPRAY_CAN = ITEMS.register("light_gray_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:light_gray_spray_can")))
                     , DyeColor.LIGHT_GRAY));
     public static final DeferredItem<Item> LIME_SPRAY_CAN = ITEMS.register("lime_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:lime_spray_can")))
                     , DyeColor.LIME));
     public static final DeferredItem<Item> MAGENTA_SPRAY_CAN = ITEMS.register("magenta_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(512)
+            () -> new ColoringItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:magenta_spray_can")))
                     , DyeColor.MAGENTA));
     public static final DeferredItem<Item> GLOWSTONE_SPRAY_CAN = ITEMS.register("glowstone_spray_can",
-            () -> new LightingItem(new Item.Properties().durability(512)
+            () -> new LightingItem(new Item.Properties().durability(2048)
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:glowstone_spray_can")))
             ));
 

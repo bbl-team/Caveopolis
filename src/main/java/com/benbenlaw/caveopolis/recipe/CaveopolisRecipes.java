@@ -21,17 +21,22 @@ public class CaveopolisRecipes {
 
     public static final Supplier<RecipeSerializer<WorktableRecipe>> WORKTABLE_SERIALIZER =
             SERIALIZER.register("worktable", () -> WorktableRecipe.Serializer.INSTANCE);
-
     public static final Supplier<RecipeType<WorktableRecipe>> WORKTABLE_TYPE =
             TYPES.register("worktable", () -> WorktableRecipe.Type.INSTANCE);
 
-
+    //Coloring
     public static final Supplier<RecipeSerializer<ColoringRecipe>> COLORING_SERIALIZER =
             SERIALIZER.register("coloring", () -> new SimpleCraftingRecipeSerializer<>(ColoringRecipe::new));
 
-
     public static final Supplier<RecipeType<ColoringRecipe>> COLORING_TYPE =
             TYPES.register("coloring", () -> new RecipeType<ColoringRecipe>() {});
+
+    //Lighting
+    public static final Supplier<RecipeSerializer<LightingRecipe>> LIGHTING_SERIALIZER =
+            SERIALIZER.register("lighting", () -> new SimpleCraftingRecipeSerializer<>(LightingRecipe::new));
+
+    public static final Supplier<RecipeType<LightingRecipe>> LIGHTING_TYPE =
+            TYPES.register("lighting", () -> new RecipeType<LightingRecipe>() {});
 
     /*
     public static final Supplier<RecipeType<ColoringRecipe>> COLORING_TYPE =

@@ -1,10 +1,13 @@
 package com.benbenlaw.caveopolis.block;
 
 import com.benbenlaw.caveopolis.Caveopolis;
+import com.benbenlaw.caveopolis.worldgen.CaveopolisConfiguredFeatures;
+import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
 import com.benbenlaw.core.block.colored.*;
 import com.benbenlaw.core.block.flammable.*;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -330,8 +333,8 @@ public class CaveopolisBlocks {
 
 
     //Colored Wood
-
-
+    public static final DeferredBlock<Block> COLORED_SAPLING = registerBlockWithoutBlockItem("colored_sapling",
+            () -> new ColoredSapling(CaveopolisTreeGrowers.WHITE_TREE, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_LOG = registerBlockWithoutBlockItem("colored_log",
             () -> new FlammableColoredLog(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_WOOD = registerBlockWithoutBlockItem("colored_wood",

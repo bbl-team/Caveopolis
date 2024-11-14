@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": {
+      "tag": "c:player_workstations/crafting_tables"
+    },
+    "S": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    " CC",
+    " SC",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "caveopolis:worktable"
+  }
+}

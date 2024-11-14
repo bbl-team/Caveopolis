@@ -1,7 +1,7 @@
 {
   "type": "caveopolis:worktable",
   "input": {
-    "tag": "minecraft:stone_bricks"
+    "item": "minecraft:stone_bricks"
   },
   "output": {
     "components": {

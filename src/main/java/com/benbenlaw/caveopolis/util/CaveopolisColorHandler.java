@@ -113,6 +113,7 @@ public class CaveopolisColorHandler {
         event.register(new IColored.BlockColors(), CaveopolisBlocks.STRIPPED_COLORED_LOG.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.STRIPPED_COLORED_WOOD.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_LEAVES.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_SAPLING.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANKS.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_FENCE.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.get());
@@ -250,6 +251,7 @@ public class CaveopolisColorHandler {
         event.register(new IColored.ItemColors(), CaveopolisItems.STRIPPED_COLORED_LOG.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.STRIPPED_COLORED_WOOD.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_LEAVES.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_SAPLING.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANKS.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_FENCE.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_FENCE_GATE.get().asItem());
