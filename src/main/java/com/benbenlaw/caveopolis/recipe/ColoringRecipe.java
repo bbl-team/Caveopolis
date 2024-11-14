@@ -13,11 +13,6 @@ import net.minecraft.world.level.Level;
 
 public class ColoringRecipe extends CustomRecipe {
 
-    String[] colors = {
-            "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
-            "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"
-    };
-
     public ColoringRecipe(CraftingBookCategory category) {
         super(category);
     }
@@ -29,7 +24,7 @@ public class ColoringRecipe extends CustomRecipe {
         for (int i = 0; i < craftingInput.size(); i++) {
             ItemStack stack = craftingInput.getItem(i);
             if (!stack.isEmpty()) {
-                if (stack.getItem() instanceof ColoredBlockItem || stackContainsColor(stack)) {
+                if (stack.getItem() instanceof ColoredBlockItem) {
                     if (!coloredBlockItem.isEmpty()) {
                         return false;
                     }
@@ -97,14 +92,6 @@ public class ColoringRecipe extends CustomRecipe {
             return coloredBlock;
         }
         return ItemStack.EMPTY;
-    }
-
-    private boolean stackContainsColor(ItemStack stack) {
-        String coloredStack = stack.getItem().asItem().toString();
-        for (String colorCheck : colors) {
-            return coloredStack.contains(colorCheck);
-        }
-        return false;
     }
 
     @Override
