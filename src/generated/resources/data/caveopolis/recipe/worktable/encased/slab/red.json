@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "red",
-      "core:lit": false
+      "bblcore:color": "red",
+      "bblcore:lit": false
     },
     "count": 2,
     "id": "caveopolis:colored_encased_slab"

@@ -28,7 +28,12 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "minecraft:stone"
+          "Name": "caveopolis:colored_sapling",
+          "Properties": {
+            "color": "white",
+            "lit": "true",
+            "stage": "0"
+          }
         }
       }
     }

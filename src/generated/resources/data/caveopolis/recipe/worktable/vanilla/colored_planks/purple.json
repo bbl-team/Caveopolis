@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "purple",
-      "core:lit": false
+      "bblcore:color": "purple",
+      "bblcore:lit": false
     },
     "count": 1,
     "id": "caveopolis:colored_planks"

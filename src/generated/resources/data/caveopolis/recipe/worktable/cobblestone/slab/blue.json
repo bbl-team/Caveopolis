@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "blue",
-      "core:lit": false
+      "bblcore:color": "blue",
+      "bblcore:lit": false
     },
     "count": 2,
     "id": "caveopolis:colored_cobblestone_slab"

@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "gray",
-      "core:lit": false
+      "bblcore:color": "gray",
+      "bblcore:lit": false
     },
     "count": 3,
     "id": "caveopolis:colored_cobblestone_brick_pressure_plate"

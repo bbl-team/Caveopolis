@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "purple",
-      "core:lit": false
+      "bblcore:color": "purple",
+      "bblcore:lit": false
     },
     "count": 4,
     "id": "caveopolis:colored_cobblestone_brick_button"

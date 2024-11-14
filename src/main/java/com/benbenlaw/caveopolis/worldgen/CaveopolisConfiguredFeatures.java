@@ -12,6 +12,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
@@ -21,12 +22,15 @@ import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.*;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.*;
+import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
+import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
 public class CaveopolisConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLACK_TREE_KEY = registerKey("black_tree");
@@ -46,7 +50,22 @@ public class CaveopolisConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAGENTA_TREE_KEY = registerKey("magenta_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIGHT_GRAY_TREE_KEY = registerKey("light_gray_tree");
 
-
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BLACK_STONE_KEY = registerKey("black_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> RED_STONE_KEY = registerKey("red_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BLUE_STONE_KEY = registerKey("blue_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GREEN_STONE_KEY = registerKey("green_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> YELLOW_STONE_KEY = registerKey("yellow_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORANGE_STONE_KEY = registerKey("orange_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PURPLE_STONE_KEY = registerKey("purple_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> PINK_STONE_KEY = registerKey("pink_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> CYAN_STONE_KEY = registerKey("cyan_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> WHITE_STONE_KEY = registerKey("white_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BROWN_STONE_KEY = registerKey("brown_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> GRAY_STONE_KEY = registerKey("gray_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIGHT_BLUE_STONE_KEY = registerKey("light_blue_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIME_STONE_KEY = registerKey("lime_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MAGENTA_STONE_KEY = registerKey("magenta_stone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> LIGHT_GRAY_STONE_KEY = registerKey("light_gray_stone");
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -212,9 +231,72 @@ public class CaveopolisConfiguredFeatures {
                 .dirt(BlockStateProvider.simple(CaveopolisBlocks.COLORED_DIRT.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.BROWN).setValue(ColoredBlock.LIT, false)))
                 .build());
 
+        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
+        //Black Stone
+        register(context, BLACK_STONE_KEY, Feature.ORE, new OreConfiguration(deepslateReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.BLACK).setValue(ColoredBlock.LIT, false), 48));
 
+        //Red Stone
+        register(context, RED_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.RED).setValue(ColoredBlock.LIT, false), 48));
 
+        //Blue Stone
+        register(context, BLUE_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.BLUE).setValue(ColoredBlock.LIT, false), 48));
+
+        //Green Stone
+        register(context, GREEN_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.GREEN).setValue(ColoredBlock.LIT, false), 48));
+
+        //Yellow Stone
+        register(context, YELLOW_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.YELLOW).setValue(ColoredBlock.LIT, false), 48));
+
+        //Orange Stone
+        register(context, ORANGE_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.ORANGE).setValue(ColoredBlock.LIT, false), 48));
+
+        //Purple Stone
+        register(context, PURPLE_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.PURPLE).setValue(ColoredBlock.LIT, false), 48));
+
+        //Pink Stone
+        register(context, PINK_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.PINK).setValue(ColoredBlock.LIT, false), 48));
+
+        //Cyan Stone
+        register(context, CYAN_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.CYAN).setValue(ColoredBlock.LIT, false), 48));
+
+        //White Stone
+        register(context, WHITE_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.WHITE).setValue(ColoredBlock.LIT, false), 48));
+
+        //Brown Stone
+        register(context, BROWN_STONE_KEY, Feature.ORE, new OreConfiguration(deepslateReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.BROWN).setValue(ColoredBlock.LIT, false), 48));
+
+        //Gray Stone
+        register(context, GRAY_STONE_KEY, Feature.ORE, new OreConfiguration(deepslateReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.GRAY).setValue(ColoredBlock.LIT, false), 48));
+
+        //Light Blue Stone
+        register(context, LIGHT_BLUE_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.LIGHT_BLUE).setValue(ColoredBlock.LIT, false), 48));
+
+        //Lime Stone
+        register(context, LIME_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.LIME).setValue(ColoredBlock.LIT, false), 48));
+
+        //Magenta Stone
+        register(context, MAGENTA_STONE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.MAGENTA).setValue(ColoredBlock.LIT, false), 48));
+
+        //Light Gray Stone
+        register(context, LIGHT_GRAY_STONE_KEY, Feature.ORE, new OreConfiguration(deepslateReplaceables,
+                CaveopolisBlocks.COLORED_STONE.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.LIGHT_GRAY).setValue(ColoredBlock.LIT, false), 48));
 
     }
 

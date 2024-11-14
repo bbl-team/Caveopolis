@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "cyan",
-      "core:lit": false
+      "bblcore:color": "cyan",
+      "bblcore:lit": false
     },
     "count": 1,
     "id": "caveopolis:colored_chaotic_stairs"

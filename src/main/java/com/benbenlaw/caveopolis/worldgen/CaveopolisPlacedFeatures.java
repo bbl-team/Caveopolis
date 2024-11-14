@@ -15,6 +15,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate;
 import net.minecraft.world.level.levelgen.blockpredicates.WouldSurvivePredicate;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
@@ -39,6 +40,23 @@ public class CaveopolisPlacedFeatures {
     public static final ResourceKey<PlacedFeature> MAGENTA_TREE_PLACED_KEY = registerKey("magenta_tree_placed");
     public static final ResourceKey<PlacedFeature> GRAY_TREE_PLACED_KEY = registerKey("gray_tree_placed");
     public static final ResourceKey<PlacedFeature> LIGHT_BLUE_TREE_PLACED_KEY = registerKey("light_blue_tree_placed");
+
+    public static final ResourceKey<PlacedFeature> BLACK_STONE_PLACED_KEY = registerKey("black_stone_placed");
+    public static final ResourceKey<PlacedFeature> RED_STONE_PLACED_KEY = registerKey("red_stone_placed");
+    public static final ResourceKey<PlacedFeature> BLUE_STONE_PLACED_KEY = registerKey("blue_stone_placed");
+    public static final ResourceKey<PlacedFeature> GREEN_STONE_PLACED_KEY = registerKey("green_stone_placed");
+    public static final ResourceKey<PlacedFeature> YELLOW_STONE_PLACED_KEY = registerKey("yellow_stone_placed");
+    public static final ResourceKey<PlacedFeature> PURPLE_STONE_PLACED_KEY = registerKey("purple_stone_placed");
+    public static final ResourceKey<PlacedFeature> ORANGE_STONE_PLACED_KEY = registerKey("orange_stone_placed");
+    public static final ResourceKey<PlacedFeature> WHITE_STONE_PLACED_KEY = registerKey("white_stone_placed");
+    public static final ResourceKey<PlacedFeature> BROWN_STONE_PLACED_KEY = registerKey("brown_stone_placed");
+    public static final ResourceKey<PlacedFeature> PINK_STONE_PLACED_KEY = registerKey("pink_stone_placed");
+    public static final ResourceKey<PlacedFeature> CYAN_STONE_PLACED_KEY = registerKey("cyan_stone_placed");
+    public static final ResourceKey<PlacedFeature> LIGHT_GRAY_STONE_PLACED_KEY = registerKey("light_gray_stone_placed");
+    public static final ResourceKey<PlacedFeature> LIME_STONE_PLACED_KEY = registerKey("lime_stone_placed");
+    public static final ResourceKey<PlacedFeature> MAGENTA_STONE_PLACED_KEY = registerKey("magenta_stone_placed");
+    public static final ResourceKey<PlacedFeature> GRAY_STONE_PLACED_KEY = registerKey("gray_stone_placed");
+    public static final ResourceKey<PlacedFeature> LIGHT_BLUE_STONE_PLACED_KEY = registerKey("light_blue_stone_placed");
 
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
@@ -219,6 +237,120 @@ public class CaveopolisPlacedFeatures {
                 InSquarePlacement.spread(),
                 PlacementUtils.filteredByBlockSurvival(
                        Blocks.SPRUCE_SAPLING)));
+
+        //Black Stone
+        register(context, BLACK_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.BLACK_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Red Stone
+        register(context, RED_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.RED_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Blue Stone
+        register(context, BLUE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.BLUE_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Green Stone
+        register(context, GREEN_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.GREEN_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Yellow Stone
+        register(context, YELLOW_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.YELLOW_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Purple Stone
+        register(context, PURPLE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.PURPLE_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Orange Stone
+        register(context, ORANGE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.ORANGE_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //White Stone
+        register(context, WHITE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.WHITE_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Brown Stone
+        register(context, BROWN_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.BROWN_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(10)),
+                BiomeFilter.biome()));
+
+        //Pink Stone
+        register(context, PINK_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.PINK_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Cyan Stone
+        register(context, CYAN_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.CYAN_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Light Gray Stone
+        register(context, LIGHT_GRAY_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.LIGHT_GRAY_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(10)),
+                BiomeFilter.biome()));
+
+        //Lime Stone
+        register(context, LIME_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.LIME_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Magenta Stone
+        register(context, MAGENTA_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.MAGENTA_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
+                BiomeFilter.biome()));
+
+        //Gray Stone
+        register(context, GRAY_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.GRAY_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(10)),
+                BiomeFilter.biome()));
+
+        //Light Blue Stone
+        register(context, LIGHT_BLUE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.LIGHT_BLUE_STONE_KEY), List.of(
+                CountPlacement.of(1),
+                InSquarePlacement.spread(),
+                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(10)),
+                BiomeFilter.biome()));
+
+
 
 
 

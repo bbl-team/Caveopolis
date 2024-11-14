@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "light_gray",
-      "core:lit": false
+      "bblcore:color": "light_gray",
+      "bblcore:lit": false
     },
     "count": 1,
     "id": "caveopolis:colored_marble_brick_wall"

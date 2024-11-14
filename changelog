@@ -2,33 +2,33 @@ Caveopolis Mod Changelog
 
 //Todo//
 Make the spray cans work in the enchanting table (probably something im missing)
-
+2x2 sapling for black sapling
+mass spraying (partially done)
+Colored stone in world
+colored crafting tables
+colored furnace?
+colored flowers
+sort creative tab color by color always the same order
 
 //*******//
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING
 //*******//
 
 
-5.0.0
+5.0.7
 
 Caveopolis 2 - NOT COMPATIBLE WITH OLDER VERSIONS OF CAVEOPOLIS (4.5.5 and below)
 This is a full rewrite of the mod stuff will be missing/broken
-
-todo:
-2x2 sapling for black sapling
-mass spraying
-Colored stone in world
-make spray cans work on all block
-colored crafting tables
-colored furnace?
-colored flowers
-sort creative tab color by color alwasy the same order
+If you have any textures you would like to submit please do so on the discord
 
 Removed:
 Sprayer, Mixed Stone (plus ore), Bright Stone (plus ores), Signs, Hanging Signs, Torches
+Opolis Utilities no longer a dependency
 
 Added:
 Worktable - item - used to craft colored block variants and block variants
+New Building blocks
+BBL Core now a dependency
 
 Changes:
 Spray Cans - now now work on all colored blocks in world including doors
@@ -36,6 +36,7 @@ Spray Cans - Durability is now a lot higher
 Spray Cans - Now can be used in a crafting table to make colored blocks, place one colored block and a spray can to craft
 Spray Cans - Glowstone Spray Can now works on all colored blocks in world,
     can now be used in crafting table to make lit versions of colored blocks
+Spray Cans with crafting and in world converting will now work on ANY block that was the spray color the can is assigned to (excluding block entities)
 Most trees now have a more unique look
 
 4.5.5

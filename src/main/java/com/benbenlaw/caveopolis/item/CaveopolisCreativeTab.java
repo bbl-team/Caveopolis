@@ -24,7 +24,7 @@ public class CaveopolisCreativeTab {
             .title(Component.translatable("creative." + Caveopolis.MOD_ID + ".tab"))
             .displayItems((parameters, output) -> {
                 // List of block types that share similar properties
-                @SuppressWarnings("RedundantTypeArguments (explicit type arguments speedup compilation and analysis time)") List<Supplier<ItemStack>> blocks = Arrays.<Supplier<ItemStack>>asList(
+                List<Supplier<ItemStack>> blocks = Arrays.<Supplier<ItemStack>>asList(
 
                         //Colored Stone
                         () -> new ItemStack(CaveopolisBlocks.COLORED_STONE.get()),
@@ -152,13 +152,11 @@ public class CaveopolisCreativeTab {
                 );
 
                 // Add color variants for each block
-                ColorMap.COLOR_MAP.forEach((color, value) -> {
-                    blocks.forEach(block -> {
-                        ItemStack item = block.get();
-                        setColorAndLit(item, String.valueOf(color));
-                        output.accept(item);
-                    });
-                });
+                ColorMap.COLOR_MAP.forEach((color, value) -> blocks.forEach(block -> {
+                    ItemStack item = block.get();
+                    setColorAndLit(item, String.valueOf(color));
+                    output.accept(item);
+                }));
 
                 // Add spray cans
                 Arrays.asList(
@@ -178,8 +176,9 @@ public class CaveopolisCreativeTab {
                         CaveopolisItems.RED_SPRAY_CAN.get(),
                         CaveopolisItems.WHITE_SPRAY_CAN.get(),
                         CaveopolisItems.YELLOW_SPRAY_CAN.get(),
-                        CaveopolisItems.GLOWSTONE_SPRAY_CAN.get()
-                ).forEach(item -> output.accept(item));
+                        CaveopolisItems.GLOWSTONE_SPRAY_CAN.get(),
+                        CaveopolisItems.WORKTABLE.get()
+                ).forEach(output::accept);
             }).build());
 
     private static void setColorAndLit(ItemStack item, String color) {

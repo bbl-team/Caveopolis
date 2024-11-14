@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "black",
-      "core:lit": false
+      "bblcore:color": "black",
+      "bblcore:lit": false
     },
     "count": 1,
     "id": "caveopolis:colored_stone_bricks"

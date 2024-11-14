@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "white",
-      "core:lit": false
+      "bblcore:color": "white",
+      "bblcore:lit": false
     },
     "count": 1,
     "id": "caveopolis:stripped_colored_wood"

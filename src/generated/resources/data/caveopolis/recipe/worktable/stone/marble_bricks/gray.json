@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "gray",
-      "core:lit": false
+      "bblcore:color": "gray",
+      "bblcore:lit": false
     },
     "count": 1,
     "id": "caveopolis:colored_marble_bricks"

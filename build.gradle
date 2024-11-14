@@ -67,8 +67,8 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     //BBL Core
-    compileOnly "curse.maven:bbl-core-1135181:5902051"
-    runtimeOnly "curse.maven:bbl-core-1135181:5902051"
+    compileOnly "curse.maven:bbl-core-1135181:5902649"
+    runtimeOnly "curse.maven:bbl-core-1135181:5902649"
 
     //JEI
 
@@ -141,7 +141,7 @@ tasks.register('publishCurseForge', TaskPublishCurseForge) {
 
     mainFile.changelog = changelog
     mainFile.addOptional("jei") // JEI
-    mainFile.addRequirement("opolis-utilities")
+    mainFile.addRequirement("bbl-core")
     mainFile.releaseType = "release"
     mainFile.gameVersions.addAll("1.21", "1.21.1")
 }
@@ -161,6 +161,6 @@ modrinth {
     changelog = project.changelog
     dependencies {
         optional.project "jei"
-        required.project "opolis-utilities"
+        required.project "bbl-core"
     }
 }

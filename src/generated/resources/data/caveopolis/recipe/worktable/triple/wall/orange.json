@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "orange",
-      "core:lit": false
+      "bblcore:color": "orange",
+      "bblcore:lit": false
     },
     "count": 1,
     "id": "caveopolis:colored_triple_wall"

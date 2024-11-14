@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "brown",
-      "core:lit": false
+      "bblcore:color": "brown",
+      "bblcore:lit": false
     },
     "count": 2,
     "id": "caveopolis:colored_mosaic_slab"

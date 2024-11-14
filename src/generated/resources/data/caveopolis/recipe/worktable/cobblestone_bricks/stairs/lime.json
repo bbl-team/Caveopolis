@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "lime",
-      "core:lit": false
+      "bblcore:color": "lime",
+      "bblcore:lit": false
     },
     "count": 1,
     "id": "caveopolis:colored_cobblestone_brick_stairs"

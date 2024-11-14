@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "light_blue",
-      "core:lit": false
+      "bblcore:color": "light_blue",
+      "bblcore:lit": false
     },
     "count": 3,
     "id": "caveopolis:colored_encased_pressure_plate"

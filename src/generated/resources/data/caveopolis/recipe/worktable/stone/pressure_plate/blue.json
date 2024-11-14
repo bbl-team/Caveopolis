@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "blue",
-      "core:lit": false
+      "bblcore:color": "blue",
+      "bblcore:lit": false
     },
     "count": 3,
     "id": "caveopolis:colored_stone_pressure_plate"

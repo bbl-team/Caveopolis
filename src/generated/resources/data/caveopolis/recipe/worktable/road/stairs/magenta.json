@@ -5,8 +5,8 @@
   },
   "output": {
     "components": {
-      "core:color": "magenta",
-      "core:lit": false
+      "bblcore:color": "magenta",
+      "bblcore:lit": false
     },
     "count": 1,
     "id": "caveopolis:colored_road_stairs"
