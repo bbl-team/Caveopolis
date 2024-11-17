@@ -23,6 +23,11 @@ public class CaveopolisItemTags extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
 
+        //Flowers
+        tag(ItemTags.FLOWERS)
+                .add(CaveopolisBlocks.COLORED_POPPY.asItem())
+                .add(CaveopolisBlocks.COLORED_DANDELION.asItem());
+
         //Saplings
         tag(ItemTags.SAPLINGS)
                 .add(CaveopolisBlocks.COLORED_SAPLING.asItem());
@@ -60,6 +65,12 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.COLORED_WOOD.asItem())
                 .add(CaveopolisBlocks.STRIPPED_COLORED_WOOD.asItem());
 
+        //Wooden Slabs
+        tag(ItemTags.WOODEN_SLABS).add(CaveopolisBlocks.COLORED_PLANK_SLAB.asItem());
+
+        //Wooden Stairs
+        tag(ItemTags.WOODEN_STAIRS).add(CaveopolisBlocks.COLORED_PLANK_STAIRS.asItem());
+
         //Wooden Doors
         tag(ItemTags.WOODEN_DOORS).add(CaveopolisBlocks.COLORED_PLANK_DOOR.asItem());
 
@@ -73,7 +84,21 @@ public class CaveopolisItemTags extends ItemTagsProvider {
         tag(ItemTags.FENCES).add(CaveopolisBlocks.COLORED_PLANK_FENCE.asItem());
 
         //Buttons
-        tag(ItemTags.BUTTONS).add(CaveopolisBlocks.COLORED_STONE_BUTTON.asItem());
+        tag(ItemTags.BUTTONS)
+                .add(CaveopolisBlocks.COLORED_PLANK_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_STONE_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_MOSAIC_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_CHAOTIC_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_TRIPLE_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_BRAID_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_ENCASED_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_ROAD_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.asItem());
+
+
+
 
         //Walls
         tag(ItemTags.WALLS).add(CaveopolisBlocks.COLORED_STONE_WALL.asItem());
@@ -88,6 +113,7 @@ public class CaveopolisItemTags extends ItemTagsProvider {
 
         //Stairs
         tag(ItemTags.STAIRS)
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_STAIRS.asItem())
                 .add(CaveopolisBlocks.COLORED_STONE_STAIRS.asItem())
                 .add(CaveopolisBlocks.COLORED_MOSAIC_STAIRS.asItem())
                 .add(CaveopolisBlocks.COLORED_CHAOTIC_STAIRS.asItem())
@@ -98,6 +124,7 @@ public class CaveopolisItemTags extends ItemTagsProvider {
 
         //Slabs
         tag(ItemTags.SLABS)
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.asItem())
                 .add(CaveopolisBlocks.COLORED_STONE_SLAB.asItem())
                 .add(CaveopolisBlocks.COLORED_MOSAIC_SLAB.asItem())
                 .add(CaveopolisBlocks.COLORED_CHAOTIC_SLAB.asItem())

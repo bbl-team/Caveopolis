@@ -26,6 +26,18 @@ public class CaveopolisCreativeTab {
                 // List of block types that share similar properties
                 List<Supplier<ItemStack>> blocks = Arrays.<Supplier<ItemStack>>asList(
 
+                        //Colored Flowers
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_POPPY.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_DANDELION.get()),
+
+                        //Colored Polished Stone
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_POLISHED_STONE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_POLISHED_STONE_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_POLISHED_STONE_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_POLISHED_STONE_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.get()),
+
                         //Colored Stone
                         () -> new ItemStack(CaveopolisBlocks.COLORED_STONE.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_SLAB.get()),
@@ -138,6 +150,10 @@ public class CaveopolisCreativeTab {
                         () -> new ItemStack(CaveopolisBlocks.COLORED_LEAVES.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_SAPLING.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_PLANKS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_BUTTON.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_FENCE.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_DOOR.get()),

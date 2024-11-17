@@ -11,6 +11,20 @@ public class CaveopolisColorHandler {
     @SubscribeEvent
     public void registerBlockColors(final RegisterColorHandlersEvent.Block event) {
 
+        //Colored Flowers
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POPPY.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POTTED_POPPY.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DANDELION.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POTTED_DANDELION.get());
+
+        //Colored Polished Stone
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POLISHED_STONE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POLISHED_STONE_STAIRS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POLISHED_STONE_WALL.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POLISHED_STONE_PRESSURE_PLATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.get());
+
         //Colored Stone
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_STONE.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_STONE_STAIRS.get());
@@ -115,6 +129,10 @@ public class CaveopolisColorHandler {
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_LEAVES.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_SAPLING.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANKS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_SLAB.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_STAIRS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_PRESSURE_PLATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_BUTTON.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_FENCE.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_DOOR.get());
@@ -135,6 +153,18 @@ public class CaveopolisColorHandler {
 
     @SubscribeEvent
     public void onItemColors(RegisterColorHandlersEvent.Item event) {
+
+        //Colored Flowers
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_POPPY.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DANDELION.get().asItem());
+
+        //Colored Polished Stone
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_POLISHED_STONE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_POLISHED_STONE_SLAB.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_POLISHED_STONE_STAIRS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_POLISHED_STONE_WALL.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_POLISHED_STONE_PRESSURE_PLATE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_POLISHED_STONE_BUTTON.get().asItem());
 
         //Colored Stone
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_STONE.get().asItem());
@@ -253,6 +283,10 @@ public class CaveopolisColorHandler {
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_LEAVES.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_SAPLING.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANKS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_SLAB.get());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_STAIRS.get());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_PRESSURE_PLATE.get());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_BUTTON.get());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_FENCE.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_FENCE_GATE.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_DOOR.get().asItem());

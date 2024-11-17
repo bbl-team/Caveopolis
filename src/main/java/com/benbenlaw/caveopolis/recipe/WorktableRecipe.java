@@ -12,7 +12,7 @@ import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
 import org.jetbrains.annotations.NotNull;
 
-public record WorktableRecipe(Ingredient input, ItemStack output) implements Recipe<RecipeInput> {
+public record WorktableRecipe(SizedIngredient input, ItemStack output) implements Recipe<RecipeInput> {
 
     @Override
     public @NotNull NonNullList<Ingredient> getIngredients() {
@@ -23,7 +23,7 @@ public record WorktableRecipe(Ingredient input, ItemStack output) implements Rec
 
     @Override
     public boolean matches(RecipeInput container, @NotNull Level level) {
-        return input.test(container.getItem(0));
+        return input.test(container.getItem(0)) && input.count() >= container.getItem(0).getCount();
     }
 
     @Override
@@ -67,7 +67,7 @@ public record WorktableRecipe(Ingredient input, ItemStack output) implements Rec
 
         public final MapCodec<WorktableRecipe> CODEC = RecordCodecBuilder.mapCodec(instance ->
                 instance.group(
-                        Ingredient.CODEC.fieldOf("input").forGetter(WorktableRecipe::input),
+                        SizedIngredient.FLAT_CODEC.fieldOf("input").forGetter(WorktableRecipe::input),
                         ItemStack.CODEC.fieldOf("output").forGetter(WorktableRecipe::output)
                 ).apply(instance, WorktableRecipe::new));
 
@@ -85,13 +85,13 @@ public record WorktableRecipe(Ingredient input, ItemStack output) implements Rec
         }
 
         private static WorktableRecipe read(RegistryFriendlyByteBuf buffer) {
-            Ingredient input = Ingredient.CONTENTS_STREAM_CODEC.decode(buffer);
+            SizedIngredient input = SizedIngredient.STREAM_CODEC.decode(buffer);
             ItemStack output = ItemStack.STREAM_CODEC.decode(buffer);
             return new WorktableRecipe(input, output);
         }
 
         private static void write(RegistryFriendlyByteBuf buffer, WorktableRecipe recipe) {
-            Ingredient.CONTENTS_STREAM_CODEC.encode(buffer, recipe.input);
+            SizedIngredient.STREAM_CODEC.encode(buffer, recipe.input);
             ItemStack.STREAM_CODEC.encode(buffer, recipe.output);
         }
     }

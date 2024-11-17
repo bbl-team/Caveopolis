@@ -31,6 +31,18 @@ public class CaveopolisJEIPlugin implements IModPlugin {
     @Override
     public void registerItemSubtypes(ISubtypeRegistration registration) {
 
+        //Colored Flower
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POPPY.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_DANDELION.asItem(), new BlockSubtypeInterpreter());
+
+        //Colored Polished Stone
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POLISHED_STONE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POLISHED_STONE_STAIRS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POLISHED_STONE_WALL.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POLISHED_STONE_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.asItem(), new BlockSubtypeInterpreter());
+
         //Colored Stone
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_STONE_STAIRS.asItem(), new BlockSubtypeInterpreter());
@@ -140,6 +152,10 @@ public class CaveopolisJEIPlugin implements IModPlugin {
 
 
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_PLANKS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_PLANK_SLAB.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_PLANK_STAIRS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_PLANK_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_PLANK_BUTTON.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_PLANK_FENCE.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_PLANK_DOOR.asItem(), new BlockSubtypeInterpreter());

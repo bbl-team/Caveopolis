@@ -1,5 +1,15 @@
 {
   "values": [
-    "caveopolis:colored_stone_button"
+    "caveopolis:colored_plank_button",
+    "caveopolis:colored_stone_button",
+    "caveopolis:colored_polished_stone_button",
+    "caveopolis:colored_mosaic_button",
+    "caveopolis:colored_chaotic_button",
+    "caveopolis:colored_triple_button",
+    "caveopolis:colored_braid_button",
+    "caveopolis:colored_encased_button",
+    "caveopolis:colored_road_button",
+    "caveopolis:colored_cobblestone_button",
+    "caveopolis:colored_stone_brick_button"
   ]
 }

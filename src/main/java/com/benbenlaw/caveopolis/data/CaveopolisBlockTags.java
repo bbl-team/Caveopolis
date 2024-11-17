@@ -21,6 +21,12 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
 
+
+        //Flowers
+        tag(BlockTags.FLOWERS)
+                .add(CaveopolisBlocks.COLORED_POPPY.get())
+                .add(CaveopolisBlocks.COLORED_DANDELION.get());
+
         //Saplings
         tag(BlockTags.SAPLINGS)
                 .add(CaveopolisBlocks.COLORED_SAPLING.get());
@@ -43,6 +49,15 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
 
         //Pickaxe
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
+
+                //Colored Polished Stone
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.get())
+
                 //Colored Stone
                 .add(CaveopolisBlocks.COLORED_STONE.get())
                 .add(CaveopolisBlocks.COLORED_STONE_SLAB.get())
@@ -152,7 +167,6 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
 
                 .add(CaveopolisBlocks.COLORED_BRICKS.get())
                 .add(CaveopolisBlocks.COLORED_STONE_BRICKS.get())
-                .add(CaveopolisBlocks.COLORED_COBBLESTONE.get())
                 .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
 
         //Leaves
@@ -184,6 +198,8 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
 
         //Buttons
         tag(BlockTags.BUTTONS)
+                .add(CaveopolisBlocks.COLORED_PLANK_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_STONE_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_BRICK_BUTTON.get())
@@ -201,6 +217,7 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
 
         //Walls
         tag(BlockTags.WALLS)
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_WALL.get())
                 .add(CaveopolisBlocks.COLORED_STONE_WALL.get())
                 .add(CaveopolisBlocks.COLORED_STONE_BRICK_WALL.get())
                 .add(CaveopolisBlocks.COLORED_BRICK_WALL.get())
@@ -218,6 +235,8 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
 
         //Pressure Plates
         tag(BlockTags.PRESSURE_PLATES)
+                .add(CaveopolisBlocks.COLORED_PLANK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_STONE_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_STONE_BRICK_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_BRICK_PRESSURE_PLATE.get())
@@ -238,8 +257,14 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
         tag(Tags.Blocks.STONES)
                 .add(CaveopolisBlocks.COLORED_STONE.get());
 
+        //Wooden Stairs
+        tag(BlockTags.WOODEN_STAIRS)
+                .add(CaveopolisBlocks.COLORED_PLANK_STAIRS.get());
+
         //Stairs
         tag(BlockTags.STAIRS)
+                .add(CaveopolisBlocks.COLORED_PLANK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_STAIRS.get())
                 .add(CaveopolisBlocks.COLORED_STONE_STAIRS.get())
                 .add(CaveopolisBlocks.COLORED_MOSAIC_STAIRS.get())
                 .add(CaveopolisBlocks.COLORED_CHAOTIC_STAIRS.get())
@@ -248,9 +273,15 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_ENCASED_STAIRS.get())
                 .add(CaveopolisBlocks.COLORED_ROAD_STAIRS.get());
 
+        //Wooden Slab
+        tag(BlockTags.WOODEN_SLABS)
+                .add(CaveopolisBlocks.COLORED_PLANK_SLAB.get());
 
         //Slabs
         tag(BlockTags.SLABS)
+                .add(CaveopolisBlocks.COLORED_PLANK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.get())
                 .add(CaveopolisBlocks.COLORED_STONE_SLAB.get())
                 .add(CaveopolisBlocks.COLORED_MOSAIC_SLAB.get())
                 .add(CaveopolisBlocks.COLORED_CHAOTIC_SLAB.get())

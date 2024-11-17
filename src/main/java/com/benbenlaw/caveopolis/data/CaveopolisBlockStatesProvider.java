@@ -2,9 +2,7 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
-import com.benbenlaw.core.block.colored.ColoredDoor;
-import com.benbenlaw.core.block.colored.ColoredFence;
-import com.benbenlaw.core.block.colored.ColoredStairs;
+import com.benbenlaw.core.block.colored.*;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -25,6 +23,24 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
+        //Colored Plants
+        flowerWithElements((FlowerBlock) CaveopolisBlocks.COLORED_POPPY.get());
+        simpleBlock(CaveopolisBlocks.COLORED_POTTED_POPPY.get(), models().singleTexture("colored_potted_poppy",
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "tintable_flower_pot_cross"), "plant",
+                blockTexture(CaveopolisBlocks.COLORED_POPPY.get())).renderType("cutout"));
+        flowerWithElements((FlowerBlock) CaveopolisBlocks.COLORED_DANDELION.get());
+        simpleBlock(CaveopolisBlocks.COLORED_POTTED_DANDELION.get(), models().singleTexture("colored_potted_dandelion",
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "tintable_flower_pot_cross"), "plant",
+                blockTexture(CaveopolisBlocks.COLORED_DANDELION.get())).renderType("cutout"));
+
+        //Colored Polished Stone
+        blockWithItem(CaveopolisBlocks.COLORED_POLISHED_STONE);
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.get(), CaveopolisBlocks.COLORED_POLISHED_STONE.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_POLISHED_STONE_STAIRS.get(), CaveopolisBlocks.COLORED_POLISHED_STONE.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_POLISHED_STONE_WALL.get(), CaveopolisBlocks.COLORED_POLISHED_STONE.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_POLISHED_STONE_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_POLISHED_STONE.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.get(), CaveopolisBlocks.COLORED_POLISHED_STONE.get());
 
         //Colored Stone
         blockWithItem(CaveopolisBlocks.COLORED_STONE);
@@ -136,6 +152,10 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         //Colored Wood
         saplingWithElements((SaplingBlock) CaveopolisBlocks.COLORED_SAPLING.get());
         blockWithItem(CaveopolisBlocks.COLORED_PLANKS);
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_PLANK_SLAB.get(), CaveopolisBlocks.COLORED_PLANKS.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_PLANK_STAIRS.get(), CaveopolisBlocks.COLORED_PLANKS.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_PLANK_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_PLANKS.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_PLANK_BUTTON.get(), CaveopolisBlocks.COLORED_PLANKS.get());
         fenceWithElements((FenceBlock) CaveopolisBlocks.COLORED_PLANK_FENCE.get(), CaveopolisBlocks.COLORED_PLANKS.get());
         fenceGateWithElements((FenceGateBlock) CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.get(), CaveopolisBlocks.COLORED_PLANKS.get());
         doorWithElements((DoorBlock) CaveopolisBlocks.COLORED_PLANK_DOOR.get(), CaveopolisBlocks.COLORED_PLANKS.get());
@@ -161,6 +181,18 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         simpleBlockWithItem(blockRegistryObject.get(), blockWithElements(blockRegistryObject.get().defaultBlockState().getBlock()));
     }
 
+    private void flowerWithElements(FlowerBlock flowerBlock) {
+
+        ResourceLocation saplingBlockRegistryName = BuiltInRegistries.BLOCK.getKey(flowerBlock);
+        ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(saplingBlockRegistryName.getNamespace(), "block/" + saplingBlockRegistryName.getPath());
+
+        ModelFile sapling = models().withExistingParent(saplingBlockRegistryName.getPath(), "caveopolis:block/tintable_cross")
+                .texture("cross", texture).renderType("cutout");
+
+        getVariantBuilder(flowerBlock).forAllStatesExcept(state ->
+                ConfiguredModel.builder().modelFile(sapling).build(), ColoredFlower.LIT, ColoredFlower.COLOR);
+    }
+
     private void saplingWithElements(SaplingBlock saplingBlock) {
 
         ResourceLocation saplingBlockRegistryName = BuiltInRegistries.BLOCK.getKey(saplingBlock);
@@ -169,8 +201,8 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         ModelFile sapling = models().withExistingParent(saplingBlockRegistryName.getPath(), "caveopolis:block/tintable_cross")
                 .texture("cross", texture).renderType("cutout");
 
-        getVariantBuilder(saplingBlock).forAllStates(state ->
-                ConfiguredModel.builder().modelFile(sapling).build());
+        getVariantBuilder(saplingBlock).forAllStatesExcept(state ->
+                ConfiguredModel.builder().modelFile(sapling).build(), ColoredSapling.LIT, ColoredSapling.COLOR);
     }
 
     private void blockItem(DeferredBlock<Block> blockRegistryObject) {
@@ -196,7 +228,8 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
                 .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.Z)
                 .modelForState().modelFile(logHorizontal).rotationX(90).addModel()
                 .partialState().with(RotatedPillarBlock.AXIS, Direction.Axis.X)
-                .modelForState().modelFile(logHorizontal).rotationX(90).rotationY(90).addModel();
+                .modelForState().modelFile(logHorizontal).rotationX(90).rotationY(90)
+                .addModel();
 
         simpleBlockItem(strippedWoodBlock, new ModelFile.UncheckedModelFile("caveopolis:block/" + woodBlockRegistryName.getPath()));
 
@@ -318,7 +351,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
                     .rotationX(xRot)
                     .rotationY(yRot)
                     .build();
-        }, TrapDoorBlock.POWERED, TrapDoorBlock.WATERLOGGED);
+        }, TrapDoorBlock.POWERED, TrapDoorBlock.WATERLOGGED, ColoredTrapDoor.COLOR, ColoredTrapDoor.LIT);
 
         simpleBlockItem(trapDoorBlock, new ModelFile.UncheckedModelFile("caveopolis:block/" + trapDoorBlockRegistryName.getPath() + "_bottom"));
     }
@@ -395,7 +428,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
             return ConfiguredModel.builder().modelFile(model)
                     .rotationY(yRot)
                     .build();
-        }, DoorBlock.POWERED, ColoredDoor.LIT);
+        }, DoorBlock.POWERED, ColoredDoor.LIT, ColoredDoor.COLOR);
     }
 
     private void fenceGateWithElements(FenceGateBlock fenceGateBlock, Block block) {
@@ -429,7 +462,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
                     .rotationY((int) state.getValue(FenceGateBlock.FACING).toYRot())
                     .uvLock(true)
                     .build();
-        }, FenceGateBlock.POWERED, ColoredFence.LIT);
+        }, FenceGateBlock.POWERED, ColoredFence.LIT, ColoredFence.COLOR);
 
         simpleBlockItem(fenceGateBlock, new ModelFile.UncheckedModelFile("caveopolis:block/" + fenceGateBlockRegistryName.getPath()));
 
@@ -471,7 +504,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         ModelFile buttonInventory = models().withExistingParent(buttonBlockRegistryName.getPath() + "_inventory",
                 "caveopolis:block/button/tintable_button_inventory").texture("texture", texture).renderType("cutout");
 
-        getVariantBuilder(buttonBlock).forAllStates(state -> {
+        getVariantBuilder(buttonBlock).forAllStatesExcept(state -> {
             Direction facing = state.getValue(ButtonBlock.FACING);
             AttachFace face = state.getValue(ButtonBlock.FACE);
             boolean powered = state.getValue(ButtonBlock.POWERED);
@@ -607,7 +640,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
                             .rotationY(yRot)
                             .uvLock(uvlock)
                             .build();
-                }, StairBlock.WATERLOGGED);
+                }, StairBlock.WATERLOGGED, ColoredStairs.LIT, ColoredStairs.COLOR);
 
         simpleBlockItem(stairsBlock, new ModelFile.UncheckedModelFile("caveopolis:block/" + stairBlockRegistryName.getPath()));
 

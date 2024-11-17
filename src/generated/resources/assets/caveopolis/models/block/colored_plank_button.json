@@ -1,0 +1,7 @@
+{
+  "parent": "caveopolis:block/button/tintable_button",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "caveopolis:block/colored_planks"
+  }
+}

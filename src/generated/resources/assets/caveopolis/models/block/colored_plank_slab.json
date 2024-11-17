@@ -1,0 +1,9 @@
+{
+  "parent": "caveopolis:block/slab/tintable_slab",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "caveopolis:block/colored_planks",
+    "side": "caveopolis:block/colored_planks",
+    "top": "caveopolis:block/colored_planks"
+  }
+}

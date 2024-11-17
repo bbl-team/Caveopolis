@@ -1,0 +1,7 @@
+{
+  "parent": "caveopolis:block/tintable_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "cross": "caveopolis:block/colored_dandelion"
+  }
+}

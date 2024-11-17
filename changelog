@@ -4,15 +4,26 @@ Caveopolis Mod Changelog
 Make the spray cans work in the enchanting table (probably something im missing)
 2x2 sapling for black sapling
 mass spraying (partially done)
-Colored stone in world
 colored crafting tables
 colored furnace?
 colored flowers
+colored bookshelves (custom tint area = yuuukkkkkk)
 sort creative tab color by color always the same order
+spray cans stop the working of blocks on the same color
 
 //*******//
-UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING
+UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
+
+5.0.9
+Added Colored Polished Stone
+Added Colored Poppy and Colored Dandelion and potted versions of them
+Added missing stairs, slabs, pressure plates, buttons for colored planks
+Added more missing item recipes to the worktable
+Re run data gen and reduced the size of some block states files (improve loading times maybe)
+Changed Worktable to used sized ingredients meaning counts are applied in inputs in recipes
+Worktable supports quick moving, improved various other parts of the worktable
+
 
 5.0.8
 

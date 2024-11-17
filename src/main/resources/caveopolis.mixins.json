@@ -1,0 +1,14 @@
+{
+    "required": true,
+    "package": "com.benbenlaw.caveopolis.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "mixins": [
+        "AllowColoredFlowerToSetBlockStateMixin"
+    ],
+    "client": [
+    ],
+    "injectors": {
+    "defaultRequire": 1
+    }
+
+}

@@ -95,6 +95,25 @@ public class CaveopolisItems {
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:glowstone_spray_can")))
             ));
 
+    //Colored Flowers
+    public static final DeferredItem<Item> COLORED_POPPY = ITEMS.register("colored_poppy",
+            () -> new ColoredBlockItem((ColoredFlower) CaveopolisBlocks.COLORED_POPPY.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_DANDELION = ITEMS.register("colored_dandelion",
+            () -> new ColoredBlockItem((ColoredFlower) CaveopolisBlocks.COLORED_DANDELION.get(), new Item.Properties()));
+
+    //Colored Polished Stone
+    public static final DeferredItem<Item> COLORED_POLISHED_STONE = ITEMS.register("colored_polished_stone",
+            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_POLISHED_STONE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_POLISHED_STONE_STAIRS = ITEMS.register("colored_polished_stone_stairs",
+            () -> new ColoredBlockItem((ColoredStairs) CaveopolisBlocks.COLORED_POLISHED_STONE_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_POLISHED_STONE_SLAB = ITEMS.register("colored_polished_stone_slab",
+            () -> new ColoredBlockItem((ColoredSlab) CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_POLISHED_STONE_WALL = ITEMS.register("colored_polished_stone_wall",
+            () -> new ColoredBlockItem((ColoredWall) CaveopolisBlocks.COLORED_POLISHED_STONE_WALL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_POLISHED_STONE_PRESSURE_PLATE = ITEMS.register("colored_polished_stone_pressure_plate",
+            () -> new ColoredBlockItem((ColoredPressurePlate) CaveopolisBlocks.COLORED_POLISHED_STONE_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_POLISHED_STONE_BUTTON = ITEMS.register("colored_polished_stone_button",
+            () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.get(), new Item.Properties()));
 
 
     //Colored Stone
@@ -300,6 +319,15 @@ public class CaveopolisItems {
             () -> new ColoredBlockItem((ColoredLeaves) CaveopolisBlocks.COLORED_LEAVES.get(), new Item.Properties()));
     public static final DeferredItem<Item> COLORED_PLANKS = ITEMS.register("colored_planks",
             () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_PLANKS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_PLANK_SLAB = ITEMS.register("colored_plank_slab",
+            () -> new ColoredBlockItem((ColoredSlab) CaveopolisBlocks.COLORED_PLANK_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_PLANK_STAIRS = ITEMS.register("colored_plank_stairs",
+            () -> new ColoredBlockItem((ColoredStairs) CaveopolisBlocks.COLORED_PLANK_STAIRS.get(), new Item.Properties()));
+
+    public static final DeferredItem<Item> COLORED_PLANK_PRESSURE_PLATE = ITEMS.register("colored_plank_pressure_plate",
+            () -> new ColoredBlockItem((ColoredPressurePlate) CaveopolisBlocks.COLORED_PLANK_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_PLANK_BUTTON = ITEMS.register("colored_plank_button",
+            () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_PLANK_BUTTON.get(), new Item.Properties()));
     public static final DeferredItem<Item> COLORED_PLANK_FENCE = ITEMS.register("colored_plank_fence",
             () -> new ColoredBlockItem((ColoredFence) CaveopolisBlocks.COLORED_PLANK_FENCE.get(), new Item.Properties()));
     public static final DeferredItem<Item> COLORED_PLANK_FENCE_GATE = ITEMS.register("colored_plank_fence_gate",

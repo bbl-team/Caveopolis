@@ -24,16 +24,16 @@ import java.util.Map;
 public class WorktableRecipeBuilder implements RecipeBuilder {
 
     protected String group;
-    protected Ingredient input;
+    protected SizedIngredient input;
     protected ItemStack output;
     protected final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
 
-    public WorktableRecipeBuilder(ItemStack output, Ingredient input) {
+    public WorktableRecipeBuilder(ItemStack output, SizedIngredient input) {
         this.input = input;
         this.output = output;
     }
 
-    public static WorktableRecipeBuilder worktableRecipeBuilder(ItemStack output, Ingredient input) {
+    public static WorktableRecipeBuilder worktableRecipeBuilder(ItemStack output, SizedIngredient input) {
         return new WorktableRecipeBuilder(output, input);
     }
 
@@ -68,7 +68,7 @@ public class WorktableRecipeBuilder implements RecipeBuilder {
                 .requirements(AdvancementRequirements.Strategy.OR);
         this.criteria.forEach(builder::addCriterion);
         WorktableRecipe catalogueRecipe = new WorktableRecipe(this.input, this.output);
-        recipeOutput.accept(id, catalogueRecipe, builder.build(id.withPrefix("recipes/catalogue/")));
+        recipeOutput.accept(id, catalogueRecipe, builder.build(id.withPrefix("recipes/worktable/")));
 
     }
 }

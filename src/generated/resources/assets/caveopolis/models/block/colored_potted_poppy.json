@@ -1,0 +1,7 @@
+{
+  "parent": "caveopolis:block/tintable_flower_pot_cross",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "plant": "caveopolis:block/colored_poppy"
+  }
+}

@@ -6,6 +6,8 @@ import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
 import com.benbenlaw.core.block.colored.*;
 import com.benbenlaw.core.block.flammable.*;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.grower.TreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -23,10 +25,37 @@ public class CaveopolisBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Caveopolis.MOD_ID);
 
+    //Colored Polished Stone
+    public static final DeferredBlock<Block> COLORED_POLISHED_STONE = registerBlockWithoutBlockItem("colored_polished_stone",
+            () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission()).noOcclusion()));
+    public static final DeferredBlock<Block> COLORED_POLISHED_STONE_SLAB = registerBlockWithoutBlockItem("colored_polished_stone_slab",
+            () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE_SLAB).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission()).noOcclusion()));
+    public static final DeferredBlock<Block> COLORED_POLISHED_STONE_STAIRS = registerBlockWithoutBlockItem("colored_polished_stone_stairs",
+            () -> {BlockState blockState = CaveopolisBlocks.COLORED_POLISHED_STONE.get().defaultBlockState();
+                return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE_STAIRS).sound(SoundType.STONE)
+                        .lightLevel(litBlockEmission()).noOcclusion());});
+    public static final DeferredBlock<Block> COLORED_POLISHED_STONE_WALL = registerBlockWithoutBlockItem("colored_polished_stone_wall",
+            () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission()).noOcclusion()));
+    public static final DeferredBlock<Block> COLORED_POLISHED_STONE_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_polished_stone_pressure_plate",
+            () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
+                            .lightLevel(litBlockEmission()), BlockSetType.STONE));
+    public static final DeferredBlock<Block> COLORED_POLISHED_STONE_BUTTON = registerBlockWithoutBlockItem("colored_polished_stone_button",
+            () -> new ColoredButton(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON)
+                    .lightLevel(litBlockEmission()).sound(SoundType.STONE),
+                    BlockSetType.STONE, 20, false));
+
+
     //Colored Stone
+
+
     public static final DeferredBlock<Block> COLORED_STONE = registerBlockWithoutBlockItem("colored_stone",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)
                     .lightLevel(litBlockEmission()).noOcclusion()));
+
     public static final DeferredBlock<Block> COLORED_STONE_SLAB = registerBlockWithoutBlockItem("colored_stone_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).sound(SoundType.STONE)
                     .lightLevel(litBlockEmission()).noOcclusion()));
@@ -330,6 +359,20 @@ public class CaveopolisBlocks {
                     .lightLevel(litBlockEmission()).sound(SoundType.STONE),
                     BlockSetType.STONE, 20, false));
 
+    //Colored Plants
+    public static final DeferredBlock<Block> COLORED_POPPY = registerBlockWithoutBlockItem("colored_poppy",
+            () -> new ColoredFlower(MobEffects.ABSORPTION, 0.0f, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).sound(SoundType.GRASS)
+                    .lightLevel(litBlockEmission()).noOcclusion()));
+    public static final DeferredBlock<Block> COLORED_POTTED_POPPY = registerBlockWithoutBlockItem("colored_potted_poppy",
+            () -> new ColoredFlowerPot(() -> (FlowerPotBlock) Blocks.FLOWER_POT, COLORED_POPPY, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_POPPY)
+                    .lightLevel(litBlockEmission()).noOcclusion()));
+
+    public static final DeferredBlock<Block> COLORED_DANDELION = registerBlockWithoutBlockItem("colored_dandelion",
+            () -> new ColoredFlower(MobEffects.ABSORPTION, 0.0f, BlockBehaviour.Properties.ofFullCopy(Blocks.DANDELION).sound(SoundType.GRASS)
+                    .lightLevel(litBlockEmission()).noOcclusion()));
+    public static final DeferredBlock<Block> COLORED_POTTED_DANDELION = registerBlockWithoutBlockItem("colored_potted_dandelion",
+            () -> new ColoredFlowerPot(() -> (FlowerPotBlock) Blocks.FLOWER_POT, COLORED_DANDELION, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)
+                    .lightLevel(litBlockEmission()).noOcclusion()));
 
 
     //Colored Wood
@@ -345,11 +388,27 @@ public class CaveopolisBlocks {
             () -> new FlammableColoredLog(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD).lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_LEAVES = registerBlockWithoutBlockItem("colored_leaves",
             () -> new FlammableColoredLeaves(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).sound(SoundType.GRASS)
-                    .noOcclusion().lightLevel(litBlockEmission()).isSuffocating((state, world, pos) -> false)
-            ));
+                    .noOcclusion().lightLevel(litBlockEmission()).isSuffocating((state, world, pos) -> false)));
     public static final DeferredBlock<Block> COLORED_PLANKS = registerBlockWithoutBlockItem("colored_planks",
             () -> new FlammableColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)
                     .lightLevel(litBlockEmission()).noOcclusion()));
+    public static final DeferredBlock<Block> COLORED_PLANK_SLAB = registerBlockWithoutBlockItem("colored_plank_slab",
+            () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).sound(SoundType.WOOD)
+                    .lightLevel(litBlockEmission()).noOcclusion()));
+    public static final DeferredBlock<Block> COLORED_PLANK_STAIRS = registerBlockWithoutBlockItem("colored_plank_stairs",
+            () -> {BlockState blockState = CaveopolisBlocks.COLORED_PLANKS.get().defaultBlockState();
+                return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS).sound(SoundType.WOOD)
+                        .lightLevel(litBlockEmission()).noOcclusion());});
+    public static final DeferredBlock<Block> COLORED_PLANK_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_plank_pressure_plate",
+            () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE).sound(SoundType.WOOD)
+                            .lightLevel(litBlockEmission()), BlockSetType.OAK));
+    public static final DeferredBlock<Block> COLORED_PLANK_BUTTON = registerBlockWithoutBlockItem("colored_plank_button",
+            () -> new ColoredButton(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON)
+                    .lightLevel(litBlockEmission()).sound(SoundType.WOOD),
+                    BlockSetType.OAK, 30, true));
+
+
     public static final DeferredBlock<Block> COLORED_PLANK_FENCE = registerBlockWithoutBlockItem("colored_plank_fence",
             () -> new FlammableColoredFence(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE).sound(SoundType.WOOD).lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_PLANK_FENCE_GATE = registerBlockWithoutBlockItem("colored_plank_fence_gate",

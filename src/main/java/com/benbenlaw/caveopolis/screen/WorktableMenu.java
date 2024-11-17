@@ -82,18 +82,30 @@ public class WorktableMenu extends AbstractContainerMenu {
             public void onTake(Player p_150672_, ItemStack p_150673_) {
                 p_150673_.onCraftedBy(p_150672_.level(), p_150672_, p_150673_.getCount());
                 WorktableMenu.this.resultContainer.awardUsedRecipes(p_150672_, this.getRelevantItems());
-                ItemStack itemstack = WorktableMenu.this.inputSlot.remove(1);
-                if (!itemstack.isEmpty()) {
-                    WorktableMenu.this.setupResultSlot();
+                RecipeHolder<WorktableRecipe> selectedRecipe = WorktableMenu.this.recipes.get(WorktableMenu.this.getSelectedRecipeIndex());
+                if (selectedRecipe != null) {
+                    WorktableRecipe recipe = selectedRecipe.value();
+
+                    recipe.getIngredients().forEach(ingredient -> {
+                        ItemStack inputStack = WorktableMenu.this.inputSlot.getItem();
+                        if (ingredient.test(inputStack)) {
+                            int requiredAmount = ingredient.getItems()[0].getCount();
+                            inputStack.shrink(requiredAmount);
+                            WorktableMenu.this.inputSlot.set(inputStack.isEmpty() ? ItemStack.EMPTY : inputStack);
+                            setupRecipeList(container, inputStack);
+                        }
+                    });
                 }
 
-                p_40299_.execute((p_40364_, p_40365_) -> {
-                    long l = p_40364_.getGameTime();
-                    if (WorktableMenu.this.lastSoundTime != l) {
-                        p_40364_.playSound(null, p_40365_, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
-                        WorktableMenu.this.lastSoundTime = l;
+                WorktableMenu.this.setupResultSlot();
+                WorktableMenu.this.access.execute((level, pos) -> {
+                    long gameTime = level.getGameTime();
+                    if (WorktableMenu.this.lastSoundTime != gameTime) {
+                        level.playSound(null, pos, SoundEvents.UI_STONECUTTER_TAKE_RESULT, SoundSource.BLOCKS, 1.0F, 1.0F);
+                        WorktableMenu.this.lastSoundTime = gameTime;
                     }
                 });
+
                 super.onTake(p_150672_, p_150673_);
             }
 
@@ -150,12 +162,18 @@ public class WorktableMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public void slotsChanged(Container p_40302_) {
+    public void slotsChanged(Container pContainer) {
         ItemStack itemstack = this.inputSlot.getItem();
-        if (!itemstack.is(this.input.getItem())) {
+
+        if (itemstack.isEmpty()) {
+            this.input = ItemStack.EMPTY;
+            this.resultSlot.set(ItemStack.EMPTY);
+            this.recipes.clear();
+        } else if (!itemstack.is(this.input.getItem())) {
             this.input = itemstack.copy();
-            this.setupRecipeList(p_40302_, itemstack);
+            this.setupRecipeList(pContainer, itemstack);
         }
+        this.setupResultSlot();
     }
 
     private static SingleRecipeInput createRecipeInput(Container p_346312_) {
@@ -172,30 +190,29 @@ public class WorktableMenu extends AbstractContainerMenu {
         Object inputLit = inputComponents.get(CoreDataComponents.LIT.get());
 
         if (!pStack.isEmpty()) {
-            // Filter recipes based on the input item and matching input/output color and lit values
             this.recipes = this.level.getRecipeManager()
                     .getAllRecipesFor(WorktableRecipe.Type.INSTANCE)
                     .stream()
                     .filter(recipe -> {
-                        // Check if the recipe can be crafted with the input item
                         boolean matchesInput = recipe.value().getIngredients().stream().anyMatch(ingredient -> ingredient.test(pStack));
+                        boolean sufficientCount = recipe.value().getIngredients().stream().allMatch(ingredient ->
+                                ingredient.getItems().length > 0 &&
+                                        ingredient.getItems()[0].getCount() <= pStack.getCount()
+                        );
 
-                        // Get the output item and retrieve its color and lit data
                         ItemStack outputStack = recipe.value().getResultItem(this.level.registryAccess());
                         DataComponentMap outputComponents = outputStack.getComponents();
                         Object outputColor = outputComponents.get(CoreDataComponents.COLOR.get());
                         Object outputLit = outputComponents.get(CoreDataComponents.LIT.get());
 
-                        // If both inputColor and inputLit are null, allow all outputs
                         if (inputColor == null && inputLit == null) {
-                            return matchesInput;  // Only filter based on the input match
+                            return matchesInput && sufficientCount;
                         }
 
-                        // Check if color and lit values are non-null and match
                         boolean colorMatches = inputColor == null || inputColor.equals(outputColor);
                         boolean litMatches = inputLit == null || inputLit.equals(outputLit);
 
-                        return matchesInput && colorMatches && litMatches;
+                        return matchesInput && sufficientCount && colorMatches && litMatches;
                     })
                     .collect(Collectors.toList());
         }
@@ -234,51 +251,56 @@ public class WorktableMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public ItemStack quickMoveStack(Player p_40328_, int p_40329_) {
+    public ItemStack quickMoveStack(Player player, int index) {
         ItemStack itemstack = ItemStack.EMPTY;
-        Slot slot = this.slots.get(p_40329_);
-        if (slot != null && slot.hasItem()) {
-            ItemStack itemstack1 = slot.getItem();
-            Item item = itemstack1.getItem();
-            itemstack = itemstack1.copy();
-            if (p_40329_ == 1) {
-                item.onCraftedBy(itemstack1, p_40328_.level(), p_40328_);
-                if (!this.moveItemStackTo(itemstack1, 2, 38, true)) {
-                    return ItemStack.EMPTY;
-                }
+        Slot slot = this.slots.get(index);
 
-                slot.onQuickCraft(itemstack1, itemstack);
-            } else if (p_40329_ == 0) {
-                if (!this.moveItemStackTo(itemstack1, 2, 38, false)) {
+        if (slot != null && slot.hasItem()) {
+            ItemStack stackInSlot = slot.getItem();
+            itemstack = stackInSlot.copy();
+
+            if (index == RESULT_SLOT) {
+                if (!this.moveItemStackTo(stackInSlot, INV_SLOT_START, USE_ROW_SLOT_END, true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (this.level.getRecipeManager().getRecipeFor(CaveopolisRecipes.WORKTABLE_TYPE.get(), new SingleRecipeInput(itemstack1), this.level).isPresent()) {
-                if (!this.moveItemStackTo(itemstack1, 0, 1, false)) {
+                slot.onQuickCraft(stackInSlot, itemstack);
+            } else if (index == INPUT_SLOT) {
+                if (!this.moveItemStackTo(stackInSlot, INV_SLOT_START, USE_ROW_SLOT_END, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (p_40329_ >= 2 && p_40329_ < 29) {
-                if (!this.moveItemStackTo(itemstack1, 29, 38, false)) {
-                    return ItemStack.EMPTY;
+            } else {
+                if (this.inputSlot.mayPlace(stackInSlot)) {
+                    if (!this.moveItemStackTo(stackInSlot, INPUT_SLOT, INPUT_SLOT + 1, false)) {
+                        return ItemStack.EMPTY;
+                    }
+                } else if (index >= INV_SLOT_START && index < USE_ROW_SLOT_START) {
+                    if (!this.moveItemStackTo(stackInSlot, USE_ROW_SLOT_START, USE_ROW_SLOT_END, false)) {
+                        return ItemStack.EMPTY;
+                    }
+                } else if (index >= USE_ROW_SLOT_START && index < USE_ROW_SLOT_END) {
+                    if (!this.moveItemStackTo(stackInSlot, INV_SLOT_START, USE_ROW_SLOT_START, false)) {
+                        return ItemStack.EMPTY;
+                    }
                 }
-            } else if (p_40329_ >= 29 && p_40329_ < 38 && !this.moveItemStackTo(itemstack1, 2, 29, false)) {
-                return ItemStack.EMPTY;
             }
 
-            if (itemstack1.isEmpty()) {
+            if (stackInSlot.isEmpty()) {
                 slot.setByPlayer(ItemStack.EMPTY);
             }
 
             slot.setChanged();
-            if (itemstack1.getCount() == itemstack.getCount()) {
+
+            if (stackInSlot.getCount() == itemstack.getCount()) {
                 return ItemStack.EMPTY;
             }
 
-            slot.onTake(p_40328_, itemstack1);
+            slot.onTake(player, stackInSlot);
             this.broadcastChanges();
         }
 
         return itemstack;
     }
+
 
     @Override
     public void removed(Player p_40326_) {

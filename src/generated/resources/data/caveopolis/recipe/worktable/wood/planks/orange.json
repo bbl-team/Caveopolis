@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "item": "caveopolis:colored_wood"
+  },
+  "output": {
+    "components": {
+      "bblcore:color": "orange",
+      "bblcore:lit": false
+    },
+    "count": 4,
+    "id": "caveopolis:colored_planks"
+  }
+}

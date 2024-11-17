@@ -11,6 +11,8 @@ import com.benbenlaw.caveopolis.util.CaveopolisColorHandler;
 import com.benbenlaw.caveopolis.util.TreeGrowerMap;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTrunkPlacers;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -79,6 +81,10 @@ public class Caveopolis {
         treeGrowerMaps.updateTreeGrowerMap();
 
         event.enqueueWork(() -> {
+
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(CaveopolisBlocks.COLORED_POPPY.getId(), CaveopolisBlocks.COLORED_POTTED_POPPY);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(CaveopolisBlocks.COLORED_DANDELION.getId(), CaveopolisBlocks.COLORED_POTTED_DANDELION);
+
           //  ComposterBlock.COMPOSTABLES.put(ModBlocks.BLACK_COLORED_SAPLING.get().asItem(),  0.3F);
         });
     }

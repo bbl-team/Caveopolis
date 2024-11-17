@@ -1,6 +1,7 @@
 {
   "type": "caveopolis:worktable",
   "input": {
+    "count": 1,
     "item": "caveopolis:colored_bricks"
   },
   "output": {

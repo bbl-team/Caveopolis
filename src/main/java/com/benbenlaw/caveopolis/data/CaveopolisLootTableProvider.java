@@ -2,12 +2,15 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
+import com.benbenlaw.core.block.colored.ColoredBlock;
 import com.benbenlaw.core.block.colored.ColoredLeaves;
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
 import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.packs.VanillaBlockLoot;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.Enchantment;
@@ -15,6 +18,7 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -23,6 +27,7 @@ import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.BonusLevelTableCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
@@ -30,6 +35,7 @@ import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.Map;
 import java.util.Set;
 
 public class CaveopolisLootTableProvider extends VanillaBlockLoot {
@@ -42,8 +48,23 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
     @Override
     protected void generate() {
 
+
+        //Colored Flower
+        this.dropSelf(CaveopolisBlocks.COLORED_POPPY.get());
+        this.add(CaveopolisBlocks.COLORED_POTTED_POPPY.get(), createPotFlowerItemTable(CaveopolisBlocks.COLORED_POPPY));
+        this.dropSelf(CaveopolisBlocks.COLORED_DANDELION.get());
+        this.add(CaveopolisBlocks.COLORED_POTTED_DANDELION.get(), createPotFlowerItemTable(CaveopolisBlocks.COLORED_DANDELION));
+
+        //Colored Polished Stone
+        this.dropSelf(CaveopolisBlocks.COLORED_POLISHED_STONE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_POLISHED_STONE_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_POLISHED_STONE_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_POLISHED_STONE_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_POLISHED_STONE_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.get());
+
         //Colored Stone
-        this.dropSelf(CaveopolisBlocks.COLORED_STONE.get());
+    //    this.dropSelf(CaveopolisBlocks.COLORED_STONE.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_SLAB.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_STAIRS.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_WALL.get());
@@ -151,6 +172,10 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
 
 
         this.dropSelf(CaveopolisBlocks.COLORED_PLANKS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PLANK_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PLANK_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PLANK_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PLANK_BUTTON.get());
         this.dropSelf(CaveopolisBlocks.COLORED_PLANK_FENCE.get());
         this.dropSelf(CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.get());
         this.createDoorTable(CaveopolisBlocks.COLORED_PLANK_DOOR.get());
@@ -190,6 +215,32 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
     }
 
 
+    protected LootTable.Builder createColoredBlockDrops(Block block, Item defaultDrop, Map<String, Item> colorSpecificDrops) {
+        LootTable.Builder lootTable = LootTable.lootTable();
+
+        for (Map.Entry<String, Item> entry : colorSpecificDrops.entrySet()) {
+            String color = entry.getKey();
+            Item colorSpecificDrop = entry.getValue();
+
+            // Add a loot pool for the specific color
+            lootTable.withPool(LootPool.lootPool()
+                    .setRolls(ConstantValue.exactly(1.0F))
+                    .add(LootItem.lootTableItem(colorSpecificDrop)
+                            .when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(block)
+                                    .setProperties(StatePropertiesPredicate.Builder.properties()
+                                            .hasProperty(ColoredBlock.COLOR, color)))
+                    )
+            );
+        }
+
+        // Default drop if no specific color condition matches
+        lootTable.withPool(LootPool.lootPool()
+                .setRolls(ConstantValue.exactly(1.0F))
+                .add(LootItem.lootTableItem(defaultDrop))
+        );
+
+        return lootTable;
+    }
 
 
     private static final float[] NORMAL_LEAVES_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
