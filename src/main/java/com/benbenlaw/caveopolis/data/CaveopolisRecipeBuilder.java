@@ -57,7 +57,7 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
             //Vanilla To Caveopolis
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_POPPY.get(), 1, Items.POPPY, 1, "colored_poppy");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_DANDELION.get(), 1, Items.DANDELION, 1, "colored_dandelion");
-            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_POLISHED_STONE.get(), 1, Items.SMOOTH_STONE, 1, "colored_polished_stone");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_POLISHED_STONE.get(), 1, Items.STONE, 1, "colored_polished_stone");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_STONE.get(), 1, Items.STONE, 1, "colored_stone");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_STONE_BRICKS.get(), 1, Items.STONE_BRICKS, 1, "colored_stone_bricks");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_BRICKS.get(), 1, Blocks.BRICKS, 1, "colored_bricks");

@@ -57,6 +57,7 @@ public class WorktableMenu extends AbstractContainerMenu {
         public void setChanged() {
             super.setChanged();
             WorktableMenu.this.slotsChanged(this);
+            setupRecipeList(this, WorktableMenu.this.inputSlot.getItem());
             WorktableMenu.this.slotUpdateListener.run();
         }
     };
@@ -184,8 +185,6 @@ public class WorktableMenu extends AbstractContainerMenu {
         this.recipes = new ArrayList<>();
 
         DataComponentMap inputComponents = input.getComponents();
-        DataComponentMap containerComponents = container.getItem(0).getComponents();
-
         Object inputColor = inputComponents.get(CoreDataComponents.COLOR.get());
         Object inputLit = inputComponents.get(CoreDataComponents.LIT.get());
 
@@ -195,6 +194,7 @@ public class WorktableMenu extends AbstractContainerMenu {
                     .stream()
                     .filter(recipe -> {
                         boolean matchesInput = recipe.value().getIngredients().stream().anyMatch(ingredient -> ingredient.test(pStack));
+
                         boolean sufficientCount = recipe.value().getIngredients().stream().allMatch(ingredient ->
                                 ingredient.getItems().length > 0 &&
                                         ingredient.getItems()[0].getCount() <= pStack.getCount()
@@ -205,18 +205,19 @@ public class WorktableMenu extends AbstractContainerMenu {
                         Object outputColor = outputComponents.get(CoreDataComponents.COLOR.get());
                         Object outputLit = outputComponents.get(CoreDataComponents.LIT.get());
 
-                        if (inputColor == null && inputLit == null) {
-                            return matchesInput && sufficientCount;
-                        }
-
                         boolean colorMatches = inputColor == null || inputColor.equals(outputColor);
                         boolean litMatches = inputLit == null || inputLit.equals(outputLit);
 
-                        return matchesInput && sufficientCount && colorMatches && litMatches;
+                        boolean matches = matchesInput && sufficientCount && colorMatches && litMatches;
+
+                        boolean inputEqualsOutput = ItemStack.isSameItem(pStack, outputStack);
+
+                        return matches && !inputEqualsOutput;
                     })
                     .collect(Collectors.toList());
         }
     }
+
 
 
     void setupResultSlot() {

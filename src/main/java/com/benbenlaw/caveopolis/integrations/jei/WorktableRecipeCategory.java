@@ -75,23 +75,18 @@ public class WorktableRecipeCategory implements IRecipeCategory<WorktableRecipe>
 
 
         if (Block.byItem(recipe.input().getItems()[0].getItem()) instanceof ColoredBlock) {
-
-            //System.out.println("input" + recipe.input().getItems()[0].getItem());
-
             String color = recipe.output().get(CoreDataComponents.COLOR);
-
             ItemStack coloredStack = new ItemStack(recipe.input().getItems()[0].getItem());
+            int coloredStackCount = recipe.input().count();
             coloredStack.set(CoreDataComponents.COLOR, color);
-
+            coloredStack.setCount(coloredStackCount);
             builder.addSlot(RecipeIngredientRole.INPUT, 4, 2).addItemStack(coloredStack);
         } else {
-            System.out.println("input" + recipe.input().getItems()[0].getItem());
-
-            builder.addSlot(RecipeIngredientRole.INPUT, 4, 2).addIngredients(VanillaTypes.ITEM_STACK, Arrays.asList(recipe.input().getItems()));
+            builder.addSlot(RecipeIngredientRole.INPUT, 4, 2).addItemStacks(Arrays.asList(recipe.input().getItems()));
         }
 
         assert Minecraft.getInstance().level != null;
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 51, 2).addItemStack(recipe.getResultItem(Minecraft.getInstance().level.registryAccess()));
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 51, 2).addItemStack(new ItemStack(recipe.output().getItem(), recipe.output().getCount()));
 
     }
 }

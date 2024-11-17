@@ -15,6 +15,13 @@ spray cans stop the working of blocks on the same color
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.0.10
+Fixed debug from JEI
+Worktable can now longer offer the same item as an output
+Fixed stone pressure plates having wrong name
+Polished stone now uses stone
+Worktable now dynamically updates recipes when items are added or removed from the worktable
+
 5.0.9
 Added Colored Polished Stone
 Added Colored Poppy and Colored Dandelion and potted versions of them

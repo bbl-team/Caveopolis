@@ -2,7 +2,7 @@
   "type": "caveopolis:worktable",
   "input": {
     "count": 1,
-    "item": "minecraft:smooth_stone"
+    "item": "minecraft:stone"
   },
   "output": {
     "components": {
