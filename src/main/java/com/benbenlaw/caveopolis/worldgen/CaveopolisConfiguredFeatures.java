@@ -83,9 +83,9 @@ public class CaveopolisConfiguredFeatures {
         //Red Tree
         register(context, RED_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(CaveopolisBlocks.COLORED_LOG.get().defaultBlockState().setValue(ColoredLog.COLOR, DyeColor.RED).setValue(ColoredLog.LIT, false)),
-                new HugeTrunkPlacer(20, 24, 7),  // Set height and base width hereL
+                new StraightTrunkPlacer(7, 5, 7),
                 BlockStateProvider.simple(CaveopolisBlocks.COLORED_LEAVES.get().defaultBlockState().setValue(ColoredLeaves.COLOR, DyeColor.RED).setValue(ColoredLeaves.LIT, false)),
-                new MegaJungleFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), 4),
+                new SpruceFoliagePlacer(ConstantInt.of(4), ConstantInt.of(0), ConstantInt.of(4)),
                 new TwoLayersFeatureSize(1, 0, 1))
                 .dirt(BlockStateProvider.simple(CaveopolisBlocks.COLORED_DIRT.get().defaultBlockState().setValue(ColoredBlock.COLOR, DyeColor.RED).setValue(ColoredBlock.LIT, false)))
                 .build());

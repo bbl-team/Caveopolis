@@ -31,6 +31,9 @@ public class CaveopolisJEIPlugin implements IModPlugin {
     @Override
     public void registerItemSubtypes(ISubtypeRegistration registration) {
 
+        //Colored Items
+        registration.registerSubtypeInterpreter(CaveopolisItems.COLORED_APPLE.asItem(), new BlockSubtypeInterpreter());
+
         //Colored Flower
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POPPY.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_DANDELION.asItem(), new BlockSubtypeInterpreter());

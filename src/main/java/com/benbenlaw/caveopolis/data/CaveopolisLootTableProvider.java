@@ -18,8 +18,6 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DoorBlock;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
@@ -178,7 +176,7 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
         this.dropSelf(CaveopolisBlocks.COLORED_PLANK_BUTTON.get());
         this.dropSelf(CaveopolisBlocks.COLORED_PLANK_FENCE.get());
         this.dropSelf(CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.get());
-        this.createDoorTable(CaveopolisBlocks.COLORED_PLANK_DOOR.get());
+        this.add(CaveopolisBlocks.COLORED_PLANK_DOOR.get(), this::createDoorTable);
         this.dropSelf(CaveopolisBlocks.COLORED_PLANK_TRAPDOOR.get());
         this.dropSelf(CaveopolisBlocks.COLORED_LOG.get());
         this.dropSelf(CaveopolisBlocks.COLORED_WOOD.get());
@@ -187,7 +185,7 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
 
         //Change when colored apples and sapling are added
         this.add(CaveopolisBlocks.COLORED_LEAVES.get(), block ->
-                createColoredLeavesDrops(block, Blocks.OAK_SAPLING, Items.APPLE, NORMAL_LEAVES_SAPLING_CHANCES));
+                createColoredLeavesDrops(block, CaveopolisBlocks.COLORED_SAPLING.get(), CaveopolisItems.COLORED_APPLE.asItem(), NORMAL_LEAVES_SAPLING_CHANCES));
 
         this.dropSelf(CaveopolisBlocks.COLORED_BRICKS.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_BRICKS.get());
@@ -207,6 +205,7 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
         knownBlocks.add(block);
     }
     private final Set<Block> knownBlocks = new ReferenceOpenHashSet<>();
+
 
     @NotNull
     @Override

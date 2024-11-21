@@ -10,10 +10,19 @@ colored flowers
 colored bookshelves (custom tint area = yuuukkkkkk)
 sort creative tab color by color always the same order
 spray cans stop the working of blocks on the same color
+recipes for colored logs to planks
 
 //*******//
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
+
+5.0.12
+Fixed doors not dropping when broken
+Re added colored apples
+Leaves now drop correct saplings and apples
+Red saplings now grow smaller red trees like the blue saplings
+Added red tree structure that spawns in plains biomes, roughly 1 per plains biome
+Colored Logs can be crafted into there colored planks now
 
 5.0.10
 Fixed debug from JEI

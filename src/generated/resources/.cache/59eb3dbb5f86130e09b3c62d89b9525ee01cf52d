@@ -1,4 +1,4 @@
-// 1.21	2024-11-17T11:20:40.351588	Loot Tables
+// 1.21	2024-11-20T15:01:08.229459	Loot Tables
 203505d247d821792932f8228deab67c1eda09a1 data/caveopolis/loot_table/blocks/colored_braid.json
 83899943d50f43fe06f10e32fd914c175e5e7a10 data/caveopolis/loot_table/blocks/colored_braid_button.json
 c77a1e5a5e3afe2edb0d64be104dbb7370d4b9e9 data/caveopolis/loot_table/blocks/colored_braid_pressure_plate.json
@@ -37,7 +37,7 @@ e3ea2f7acc9bb7aa8db6822b4364de65fcc8e130 data/caveopolis/loot_table/blocks/color
 d8a34037dedb34943bdf511e752ee1929d3c8c11 data/caveopolis/loot_table/blocks/colored_encased_slab.json
 b9eb503164ced9d084f0982a1392be830b00f3cb data/caveopolis/loot_table/blocks/colored_encased_stairs.json
 9e12ed6c18bf74c17f2563fb141c9664ed329ef0 data/caveopolis/loot_table/blocks/colored_encased_wall.json
-2e91bfbcecd5cf69120bbf7af405961356e5dc95 data/caveopolis/loot_table/blocks/colored_leaves.json
+90cfdb1c05e20a7da28717caaf9fbaaa78c26756 data/caveopolis/loot_table/blocks/colored_leaves.json
 7e7cd53ba7726cdb83145a0062e8eee85c5894c7 data/caveopolis/loot_table/blocks/colored_log.json
 88949e988fa36112b1a1321256bb49882d561e73 data/caveopolis/loot_table/blocks/colored_marble.json
 c42acc3fea05b8734e307822360218bfaeadd0e7 data/caveopolis/loot_table/blocks/colored_marble_bricks.json
@@ -59,6 +59,7 @@ df8a33c879998c88a174b9719b9c7174fd2c65dc data/caveopolis/loot_table/blocks/color
 cc253ab0233b3a35fb98807bddb206d38975c248 data/caveopolis/loot_table/blocks/colored_mosaic_wall.json
 c5cb0458176b15d37ee8d10d0c2f2c5134a46835 data/caveopolis/loot_table/blocks/colored_planks.json
 ff8f89abf765e391ef69c8a230bb7e1a343902a7 data/caveopolis/loot_table/blocks/colored_plank_button.json
+2749e18e8e88f279f2e9dee2abb559b2a99a2512 data/caveopolis/loot_table/blocks/colored_plank_door.json
 440a4fef28ac4f99f7e3fd518a3723ac61b118bf data/caveopolis/loot_table/blocks/colored_plank_fence.json
 757e8376e0852d776f9f57fb60dafc8006ab70ef data/caveopolis/loot_table/blocks/colored_plank_fence_gate.json
 c1d4d6a4dd57371dc417800121b351d2561fdf45 data/caveopolis/loot_table/blocks/colored_plank_pressure_plate.json

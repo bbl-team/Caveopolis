@@ -26,6 +26,9 @@ public class CaveopolisCreativeTab {
                 // List of block types that share similar properties
                 List<Supplier<ItemStack>> blocks = Arrays.<Supplier<ItemStack>>asList(
 
+                        //Colored Items
+                        () -> new ItemStack(CaveopolisItems.COLORED_APPLE.get()),
+
                         //Colored Flowers
                         () -> new ItemStack(CaveopolisBlocks.COLORED_POPPY.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_DANDELION.get()),

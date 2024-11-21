@@ -1,4 +1,4 @@
-// 1.21	2024-11-14T15:47:25.4777219	Registries
+// 1.21	2024-11-21T10:19:08.7206502	Registries
 3c23ded6ece506b4c8ede7c05936a0d09edabb75 data/caveopolis/neoforge/biome_modifier/add_stone_black.json
 464f21723f4f885d81c8cda0ea4aadef749a3f5f data/caveopolis/neoforge/biome_modifier/add_stone_blue.json
 71658dccb6abbaa6cd736a6386c6f4dd90440f26 data/caveopolis/neoforge/biome_modifier/add_stone_brown.json
@@ -58,7 +58,7 @@ a56aa047aa4375aa402f5443d2c509a300512eee data/caveopolis/worldgen/configured_fea
 c53643c290f157d0f93cc7b13804cc6d6b3ab7e9 data/caveopolis/worldgen/configured_feature/purple_stone.json
 05e3b15425a179f58d4094c8ffa816c21668f683 data/caveopolis/worldgen/configured_feature/purple_tree.json
 fea31dbe2aff6e3cb4a81699b548de4e58e0b339 data/caveopolis/worldgen/configured_feature/red_stone.json
-0e0d744661827b18fe8bb51534d6ca26d225ae25 data/caveopolis/worldgen/configured_feature/red_tree.json
+900f3e33bd8760890f31372bb625958d56bf30ae data/caveopolis/worldgen/configured_feature/red_tree.json
 618faebaf7f89c3f72858e6f96c99748e56ea612 data/caveopolis/worldgen/configured_feature/white_stone.json
 5b276ee759fc069b51b14e55255203dde519ce66 data/caveopolis/worldgen/configured_feature/white_tree.json
 c9b2b77c2ee905832a227bd4ba17b7dff70189fc data/caveopolis/worldgen/configured_feature/yellow_stone.json

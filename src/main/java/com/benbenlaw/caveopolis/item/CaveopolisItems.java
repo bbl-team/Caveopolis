@@ -4,12 +4,14 @@ import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.core.block.colored.*;
 import com.benbenlaw.core.item.ColoredBlockItem;
+import com.benbenlaw.core.item.ColoredItem;
 import com.benbenlaw.core.item.ColoringItem;
 import com.benbenlaw.core.item.LightingItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -24,6 +26,9 @@ public class CaveopolisItems {
 
     public static final DeferredItem<Item> COLORED_SAPLING = ITEMS.register("colored_sapling",
             () -> new ColoredBlockItem((ColoredSapling) CaveopolisBlocks.COLORED_SAPLING.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_APPLE = ITEMS.register("colored_apple",
+            () -> new ColoredItem(new Item.Properties()));
+
 
     //Spray Cans
     public static final DeferredItem<Item> BLUE_SPRAY_CAN = ITEMS.register("blue_spray_can",

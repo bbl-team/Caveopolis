@@ -154,6 +154,9 @@ public class CaveopolisColorHandler {
     @SubscribeEvent
     public void onItemColors(RegisterColorHandlersEvent.Item event) {
 
+        //Colored Items
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_APPLE.get().asItem());
+
         //Colored Flowers
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_POPPY.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DANDELION.get().asItem());

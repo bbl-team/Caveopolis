@@ -8,6 +8,9 @@ import com.benbenlaw.caveopolis.recipe.ColoringRecipe;
 import com.benbenlaw.caveopolis.recipe.LightingRecipe;
 import com.benbenlaw.core.item.CoreDataComponents;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponentMap;
+import net.minecraft.core.component.DataComponentPredicate;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -20,7 +23,10 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.crafting.CompoundIngredient;
+import net.neoforged.neoforge.common.crafting.DataComponentIngredient;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
+import net.neoforged.neoforge.common.data.internal.NeoForgeRecipeProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -42,12 +48,15 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
 
         for (String color : colors) {
 
-            //Logs to Planks (This will be added for 1.22 when crafting supports data components)
-        //    planksFromLog(consumer, color, "colored_logs", CaveopolisBlocks.COLORED_LOG.get(), CaveopolisBlocks.COLORED_PLANKS.get(), 4);
-        //    planksFromLog(consumer, color, "colored_wood",CaveopolisBlocks.COLORED_WOOD.get(), CaveopolisBlocks.COLORED_PLANKS.get(), 4);
-        //    planksFromLog(consumer, color, "stripped_colored_logs",CaveopolisBlocks.STRIPPED_COLORED_LOG.get(), CaveopolisBlocks.COLORED_PLANKS.get(), 4);
-        //    planksFromLog(consumer, color, "stripped_colored_wood",CaveopolisBlocks.STRIPPED_COLORED_WOOD.get(), CaveopolisBlocks.COLORED_PLANKS.get(), 4);
+            //******** Crafting ********//
+            //Logs To Planks
+            planksFromLog(consumer, color, "logs",CaveopolisBlocks.COLORED_PLANKS.get(), CaveopolisBlocks.COLORED_LOG.get(), 4);
+            planksFromLog(consumer, color, "wood",CaveopolisBlocks.COLORED_PLANKS.get(), CaveopolisBlocks.COLORED_WOOD.get(), 4);
+            planksFromLog(consumer, color, "stripped_logs",CaveopolisBlocks.COLORED_PLANKS.get(), CaveopolisBlocks.STRIPPED_COLORED_LOG.get(), 4);
+            planksFromLog(consumer, color, "stripped_wood",CaveopolisBlocks.COLORED_PLANKS.get(), CaveopolisBlocks.STRIPPED_COLORED_WOOD.get(), 4);
 
+
+            //******** WORKTABLE ********//
             //Logs To Planks
             createRecipe(consumer, color, "logs", CaveopolisBlocks.COLORED_PLANKS.get(), 4, CaveopolisBlocks.COLORED_LOG.get(), 1, "planks");
             createRecipe(consumer, color, "wood", CaveopolisBlocks.COLORED_PLANKS.get(), 4, CaveopolisBlocks.COLORED_WOOD.get(), 1, "planks");
@@ -387,14 +396,21 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/" + blockType + "/" + path + "/" + color));
     }
 
+
     private void planksFromLog(RecipeOutput consumer, String color, String blockType, ItemLike output, ItemLike input, int outputCount) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(output, outputCount), color).getItem(), outputCount)
-                .pattern("L")
-                .define('L', iconWithColor(new ItemStack(input), color).getItem())
+
+        final Ingredient coloredLog = DataComponentIngredient.of(false, DataComponentPredicate.builder()
+                        .expect(CoreDataComponents.COLOR.get(), color).build(),
+                iconWithColor(new ItemStack(input), color).getItem());
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(output, outputCount), color))
+                .requires(coloredLog)
                 .group("planks")
                 .unlockedBy("has_log", has(input))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + blockType + "/" + color));
     }
+
+
 
     private static ItemStack iconWithColor(ItemStack item, String color) {
         item.set(CoreDataComponents.COLOR, color);

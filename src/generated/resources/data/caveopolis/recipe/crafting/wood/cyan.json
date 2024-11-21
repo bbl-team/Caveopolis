@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "items": "caveopolis:colored_wood"
+    }
+  ],
+  "result": {
+    "components": {
+      "bblcore:color": "cyan",
+      "bblcore:lit": false
+    },
+    "count": 4,
+    "id": "caveopolis:colored_planks"
+  }
+}
