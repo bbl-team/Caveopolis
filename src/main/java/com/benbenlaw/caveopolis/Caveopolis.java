@@ -12,6 +12,7 @@ import com.benbenlaw.caveopolis.util.TreeGrowerMap;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTrunkPlacers;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -43,29 +44,12 @@ public class Caveopolis {
         CaveopolisRecipes.register(modEventBus);
         CaveopolisTrunkPlacers.TRUNK_PLACER.register(modEventBus);
 
-
-
-
         if (FMLEnvironment.dist == Dist.CLIENT) {
             modEventBus.register(new CaveopolisColorHandler());
         }
 
-    //    ModItems.register(modEventBus);
-    //    ModDataComponents.COMPONENTS.register(modEventBus);
-
-   //     ModBlocks.register(modEventBus);
-   //     ModCreativeModTab.register(modEventBus);
-//
         modEventBus.addListener(this::registerCapabilities);
-
-    //    ModParticles.register(modEventBus);
-   //     ModRecipes.register(modEventBus);
-
         modEventBus.addListener(this::commonSetup);
-       // modEventBus.addListener(this::commonSetupCompostable);
-
-     //   ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.STARTUP, ConfigFile.SPEC, "caveopolis.toml");
-
     }
 
     public void registerCapabilities(RegisterCapabilitiesEvent event) {
@@ -85,32 +69,14 @@ public class Caveopolis {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(CaveopolisBlocks.COLORED_POPPY.getId(), CaveopolisBlocks.COLORED_POTTED_POPPY);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(CaveopolisBlocks.COLORED_DANDELION.getId(), CaveopolisBlocks.COLORED_POTTED_DANDELION);
 
-          //  ComposterBlock.COMPOSTABLES.put(ModBlocks.BLACK_COLORED_SAPLING.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(CaveopolisItems.COLORED_APPLE.get().asItem(),  0.65F);
+            ComposterBlock.COMPOSTABLES.put(CaveopolisItems.COLORED_LEAVES.get().asItem(),  0.3F);
+            ComposterBlock.COMPOSTABLES.put(CaveopolisItems.COLORED_SAPLING.get().asItem(),  0.3F);
         });
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
-
-
-
         event.enqueueWork(() -> {
-        //    Sheets.addWoodType(ModWoodTypes.BROWN);
-        //    Sheets.addWoodType(ModWoodTypes.BLACK);
-        //    Sheets.addWoodType(ModWoodTypes.BLUE);
-        //    Sheets.addWoodType(ModWoodTypes.LIGHT_BLUE);
-        //    Sheets.addWoodType(ModWoodTypes.LIGHT_GRAY);
-        //    Sheets.addWoodType(ModWoodTypes.GRAY);
-        //    Sheets.addWoodType(ModWoodTypes.ORANGE);
-        //    Sheets.addWoodType(ModWoodTypes.YELLOW);
-        //    Sheets.addWoodType(ModWoodTypes.RED);
-        //    Sheets.addWoodType(ModWoodTypes.LIME);
-        //    Sheets.addWoodType(ModWoodTypes.GREEN);
-        //    Sheets.addWoodType(ModWoodTypes.PINK);
-        //    Sheets.addWoodType(ModWoodTypes.MAGENTA);
-        //    Sheets.addWoodType(ModWoodTypes.PURPLE);
-        //    Sheets.addWoodType(ModWoodTypes.WHITE);
-        //    Sheets.addWoodType(ModWoodTypes.CYAN);
-
         });
     }
 
@@ -119,11 +85,6 @@ public class Caveopolis {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
-
-
-
-            //    ModItemProperties.addCustomItemProperties();
-            //    ModItemProperties.addCustomItemProperties();
             });
         }
 

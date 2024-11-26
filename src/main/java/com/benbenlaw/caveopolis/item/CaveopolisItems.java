@@ -9,6 +9,8 @@ import com.benbenlaw.core.item.ColoringItem;
 import com.benbenlaw.core.item.LightingItem;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -27,7 +29,7 @@ public class CaveopolisItems {
     public static final DeferredItem<Item> COLORED_SAPLING = ITEMS.register("colored_sapling",
             () -> new ColoredBlockItem((ColoredSapling) CaveopolisBlocks.COLORED_SAPLING.get(), new Item.Properties()));
     public static final DeferredItem<Item> COLORED_APPLE = ITEMS.register("colored_apple",
-            () -> new ColoredItem(new Item.Properties()));
+            () -> new ColoredItem(new Item.Properties().food(Foods.APPLE)));
 
 
     //Spray Cans

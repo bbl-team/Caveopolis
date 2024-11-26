@@ -16,6 +16,11 @@ recipes for colored logs to planks
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.0.13
+
+Added leaves, saplings and apples to the composter
+Apples can now be eaten
+
 5.0.12
 Fixed doors not dropping when broken
 Re added colored apples
