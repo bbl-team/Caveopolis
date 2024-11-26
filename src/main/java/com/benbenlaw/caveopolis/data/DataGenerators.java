@@ -42,5 +42,7 @@ public class DataGenerators {
 
         generator.addProvider(event.includeServer(), new CaveopolisWorldGenProviders(packOutput, lookupProvider));
 
+        generator.addProvider(event.includeServer(), new CaveopolisDataMapProvider(packOutput, lookupProvider));
+
     }
 }

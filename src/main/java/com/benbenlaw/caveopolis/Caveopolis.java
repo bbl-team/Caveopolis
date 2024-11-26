@@ -65,13 +65,8 @@ public class Caveopolis {
         treeGrowerMaps.updateTreeGrowerMap();
 
         event.enqueueWork(() -> {
-
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(CaveopolisBlocks.COLORED_POPPY.getId(), CaveopolisBlocks.COLORED_POTTED_POPPY);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(CaveopolisBlocks.COLORED_DANDELION.getId(), CaveopolisBlocks.COLORED_POTTED_DANDELION);
-
-            ComposterBlock.COMPOSTABLES.put(CaveopolisItems.COLORED_APPLE.get().asItem(),  0.65F);
-            ComposterBlock.COMPOSTABLES.put(CaveopolisItems.COLORED_LEAVES.get().asItem(),  0.3F);
-            ComposterBlock.COMPOSTABLES.put(CaveopolisItems.COLORED_SAPLING.get().asItem(),  0.3F);
         });
     }
 
