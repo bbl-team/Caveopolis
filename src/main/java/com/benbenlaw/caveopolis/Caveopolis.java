@@ -1,18 +1,16 @@
 package com.benbenlaw.caveopolis;
 
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
-import com.benbenlaw.caveopolis.util.LogMaps;
 import com.benbenlaw.caveopolis.item.CaveopolisCreativeTab;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
 import com.benbenlaw.caveopolis.screen.CaveopolisMenuTypes;
 import com.benbenlaw.caveopolis.screen.WorktableScreen;
 import com.benbenlaw.caveopolis.util.CaveopolisColorHandler;
+import com.benbenlaw.caveopolis.util.LogMaps;
 import com.benbenlaw.caveopolis.util.TreeGrowerMap;
-import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTrunkPlacers;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;

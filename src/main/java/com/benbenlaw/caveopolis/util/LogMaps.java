@@ -2,7 +2,6 @@ package com.benbenlaw.caveopolis.util;
 
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.core.block.colored.ColoredLog;
-import com.benbenlaw.core.block.flammable.FlammableColoredLog;
 
 public class LogMaps {
 

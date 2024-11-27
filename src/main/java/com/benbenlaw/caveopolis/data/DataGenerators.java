@@ -1,8 +1,6 @@
 package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
-import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
-import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;

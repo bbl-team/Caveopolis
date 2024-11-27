@@ -1,8 +1,6 @@
 package com.benbenlaw.caveopolis.util;
 
-import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
-import com.benbenlaw.core.block.colored.ColoredLog;
 import com.benbenlaw.core.block.colored.ColoredSapling;
 import net.minecraft.world.item.DyeColor;
 

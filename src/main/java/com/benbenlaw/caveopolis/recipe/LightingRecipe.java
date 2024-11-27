@@ -1,11 +1,9 @@
 package com.benbenlaw.caveopolis.recipe;
 
-import com.benbenlaw.core.item.ColoredBlockItem;
-import com.benbenlaw.core.item.ColoringItem;
 import com.benbenlaw.core.item.CoreDataComponents;
-import com.benbenlaw.core.item.LightingItem;
+import com.benbenlaw.core.item.colored.ColoredBlockItem;
+import com.benbenlaw.core.item.colored.LightingItem;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.CraftingBookCategory;
 import net.minecraft.world.item.crafting.CraftingInput;

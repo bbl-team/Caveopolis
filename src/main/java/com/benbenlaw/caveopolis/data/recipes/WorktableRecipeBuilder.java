@@ -13,7 +13,6 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -22,6 +21,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class WorktableRecipeBuilder implements RecipeBuilder {
+
 
     protected String group;
     protected SizedIngredient input;

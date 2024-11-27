@@ -1,15 +1,15 @@
 package com.benbenlaw.caveopolis.block;
 
 import com.benbenlaw.caveopolis.Caveopolis;
-import com.benbenlaw.caveopolis.worldgen.CaveopolisConfiguredFeatures;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
 import com.benbenlaw.core.block.colored.*;
-import com.benbenlaw.core.block.flammable.*;
+import com.benbenlaw.core.block.colored.flammable.*;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.TreeGrower;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;

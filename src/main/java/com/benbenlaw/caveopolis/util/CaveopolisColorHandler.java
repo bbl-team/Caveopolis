@@ -2,7 +2,7 @@ package com.benbenlaw.caveopolis.util;
 
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
-import com.benbenlaw.core.block.IColored;
+import com.benbenlaw.core.block.colored.util.IColored;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 

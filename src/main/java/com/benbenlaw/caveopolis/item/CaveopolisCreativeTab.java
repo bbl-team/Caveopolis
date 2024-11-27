@@ -2,7 +2,7 @@ package com.benbenlaw.caveopolis.item;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
-import com.benbenlaw.core.block.ColorMap;
+import com.benbenlaw.core.block.colored.util.ColorMap;
 import com.benbenlaw.core.item.CoreDataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;

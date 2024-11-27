@@ -1,8 +1,6 @@
 package com.benbenlaw.caveopolis.util;
 
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.HashMap;

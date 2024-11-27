@@ -4,7 +4,6 @@ import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
 import com.benbenlaw.core.block.colored.ColoredBlock;
-import com.benbenlaw.core.item.ColoredBlockItem;
 import com.benbenlaw.core.item.CoreDataComponents;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;

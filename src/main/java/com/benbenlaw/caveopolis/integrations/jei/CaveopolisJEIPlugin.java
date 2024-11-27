@@ -7,7 +7,6 @@ import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
 import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
-import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
