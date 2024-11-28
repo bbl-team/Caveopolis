@@ -16,6 +16,9 @@ recipes for colored logs to planks
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.0.16
+Updated to core 1.1.1
+
 5.0.15
 Updated to core 1.0.94
 
