@@ -5,6 +5,7 @@ import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.data.recipes.WorktableRecipeBuilder;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.ColoringRecipe;
+import com.benbenlaw.caveopolis.recipe.FlowerDyeRecipe;
 import com.benbenlaw.caveopolis.recipe.LightingRecipe;
 import com.benbenlaw.core.item.CoreDataComponents;
 import net.minecraft.core.HolderLookup;
@@ -41,6 +42,7 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
 
         SpecialRecipeBuilder.special(ColoringRecipe::new).save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "coloring"));
         SpecialRecipeBuilder.special(LightingRecipe::new).save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "lighting"));
+        SpecialRecipeBuilder.special(FlowerDyeRecipe::new).save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "flower_to_dye"));
 
         for (String color : colors) {
 

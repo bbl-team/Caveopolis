@@ -1,5 +1,8 @@
 package com.benbenlaw.caveopolis.recipe;
 
+import com.benbenlaw.caveopolis.Caveopolis;
+import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
+import com.benbenlaw.caveopolis.util.CaveopolisTags;
 import com.benbenlaw.core.item.CoreDataComponents;
 import com.benbenlaw.core.item.colored.ColoredBlockItem;
 import com.benbenlaw.core.item.colored.ColoringItem;
@@ -25,16 +28,17 @@ public class ColoringRecipe extends CustomRecipe {
     public ColoringRecipe(CraftingBookCategory category) {
         super(category);
     }
-
+    
     @Override
     public boolean matches(CraftingInput craftingInput, Level level) {
+
         ItemStack coloredBlockItem = ItemStack.EMPTY;
         ItemStack sprayCanItem = ItemStack.EMPTY;
 
         for (int i = 0; i < craftingInput.size(); i++) {
             ItemStack stack = craftingInput.getItem(i);
             if (!stack.isEmpty()) {
-                if (stack.getItem() instanceof ColoredBlockItem) {
+                if (stack.getItem() instanceof ColoredBlockItem && !stack.is(CaveopolisTags.Items.COLORING_BANNED)) {
                     if (!coloredBlockItem.isEmpty()) {
                         return false;
                     }

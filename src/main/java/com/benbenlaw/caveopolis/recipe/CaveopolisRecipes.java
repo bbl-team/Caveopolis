@@ -38,6 +38,14 @@ public class CaveopolisRecipes {
     public static final Supplier<RecipeType<LightingRecipe>> LIGHTING_TYPE =
             TYPES.register("lighting", () -> new RecipeType<LightingRecipe>() {});
 
+    //Flower To Dye
+    public static final Supplier<RecipeSerializer<FlowerDyeRecipe>> FLOWER_TO_DYE_SERIALIZER =
+            SERIALIZER.register("flower_to_dye", () -> new SimpleCraftingRecipeSerializer<>(FlowerDyeRecipe::new));
+
+    public static final Supplier<RecipeType<FlowerDyeRecipe>> FLOWER_TO_DYE_TYPE =
+            TYPES.register("flower_to_dye", () -> new RecipeType<FlowerDyeRecipe>() {});
+
+
     /*
     public static final Supplier<RecipeType<ColoringRecipe>> COLORING_TYPE =
             TYPES.register("coloring", () -> ColoringRecipe.Type.INSTANCE);

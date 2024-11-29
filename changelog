@@ -16,6 +16,16 @@ recipes for colored logs to planks
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.0.18
+Added spray cans to dye tag, any recipe that calls for dye tags will now accept spray cans in there recipes
+Replacing dyes in recipes with tags will allow this to work in those recipes
+Added "caveopolis:coloring_banned" tag, items in this tag will not be colored by spray cans in crafting
+Updated to core 1.1.3
+Added Flower To Dye recipe type, any caveopolis flower will be craftable into its respected dye
+
+5.0.17
+Added colored apples to the food tag
+
 5.0.16
 Updated to core 1.1.1
 

@@ -1,4 +1,4 @@
-// 1.21	2024-11-21T16:23:35.5786009	Recipes
+// 1.21	2024-11-29T09:06:23.4741053	Recipes
 38da4cce0f9636a8a1bf696c84f6e84433e78978 data/caveopolis/advancement/recipes/building_blocks/crafting/logs/black.json
 7e7e868e16e9c90e57ab1a24c0f357df163fa12d data/caveopolis/advancement/recipes/building_blocks/crafting/logs/blue.json
 cc5db95c47d30d7913a9e359536ffc6dd6660692 data/caveopolis/advancement/recipes/building_blocks/crafting/logs/brown.json
@@ -2002,6 +2002,7 @@ a1a25dc90f53f892d8d112a9f9fba7ee6b6be832 data/caveopolis/recipe/crafting/wood/or
 ff48456b824ed80c0c9a47bc218d23ecc852eef3 data/caveopolis/recipe/crafting/wood/red.json
 e52a4036268bd82be13ae8a638705268995dca21 data/caveopolis/recipe/crafting/wood/white.json
 0929dab1a385fbe498bc14f61c765931558b319b data/caveopolis/recipe/crafting/wood/yellow.json
+eecd358d9e14d7f0ab594702f03647ec7b61309a data/caveopolis/recipe/flower_to_dye.json
 4b16a58a13a8a8de2551c536e81435c10711f7f1 data/caveopolis/recipe/lighting.json
 942a1d6ba601d0d6ea5a6edc8e08cba7f02ac7cb data/caveopolis/recipe/spray_cans/black.json
 8e05e269c8b89a4f5eeb950c94c494f654050869 data/caveopolis/recipe/spray_cans/blue.json

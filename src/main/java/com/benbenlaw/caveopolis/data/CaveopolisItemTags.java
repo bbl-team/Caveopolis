@@ -23,6 +23,29 @@ public class CaveopolisItemTags extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
 
+        //Dyes
+        tag(Tags.Items.DYES_BLACK).add(CaveopolisItems.BLACK_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_BLUE).add(CaveopolisItems.BLUE_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_GREEN).add(CaveopolisItems.GREEN_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_RED).add(CaveopolisItems.RED_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_YELLOW).add(CaveopolisItems.YELLOW_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_PURPLE).add(CaveopolisItems.PURPLE_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_ORANGE).add(CaveopolisItems.ORANGE_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_LIGHT_BLUE).add(CaveopolisItems.LIGHT_BLUE_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_LIME).add(CaveopolisItems.LIME_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_PINK).add(CaveopolisItems.PINK_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_CYAN).add(CaveopolisItems.CYAN_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_LIGHT_GRAY).add(CaveopolisItems.LIGHT_GRAY_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_GRAY).add(CaveopolisItems.GRAY_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_BROWN).add(CaveopolisItems.BROWN_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_MAGENTA).add(CaveopolisItems.MAGENTA_SPRAY_CAN.asItem());
+        tag(Tags.Items.DYES_WHITE).add(CaveopolisItems.WHITE_SPRAY_CAN.asItem());
+
+
+
+        //Foods
+        tag(Tags.Items.FOODS).add(CaveopolisItems.COLORED_APPLE.asItem());
+
         //Flowers
         tag(ItemTags.FLOWERS)
                 .add(CaveopolisBlocks.COLORED_POPPY.asItem())

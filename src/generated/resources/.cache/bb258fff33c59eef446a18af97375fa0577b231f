@@ -1,6 +1,23 @@
-// 1.21	2024-11-20T14:44:27.5515099	Tags for minecraft:item mod id caveopolis
+// 1.21	2024-11-29T08:36:40.1514822	Tags for minecraft:item mod id caveopolis
 d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/item/cobblestones.json
+95f5b03468bd3aa2c2a1c02cdd0e4256e6d25a82 data/c/tags/item/dyes/black.json
+0d5419b0a47a89516d5d2a3bd89c2a3356d0c338 data/c/tags/item/dyes/blue.json
+e63f379d799f87c06d3b8133fb9ad44647ace526 data/c/tags/item/dyes/brown.json
+8bc6baad67fe0f66b6e67c5be8ef5cfee56fbb3b data/c/tags/item/dyes/cyan.json
+e61a6cfa79a9991927fc02dc67439f8d353d44de data/c/tags/item/dyes/gray.json
+31df49a0ea42e4faa05e34e1e0988f5d7f6009eb data/c/tags/item/dyes/green.json
+0cc717a5e1c509b4a894b14cb1dc3a5c65e25c83 data/c/tags/item/dyes/light_blue.json
+38a73d9998783d016663272823fef47715b6ec37 data/c/tags/item/dyes/light_gray.json
+6ac6b5ec51c70442992f66d2a795ab9582e9a2e9 data/c/tags/item/dyes/lime.json
+6961f08ff65f917822d9d80a8df5f34da6526cf5 data/c/tags/item/dyes/magenta.json
+11ff53c1f36ba0c892005e693844f74db8e08914 data/c/tags/item/dyes/orange.json
+3e6b6c9426b4c6290768334cfdb2ef31b82067bd data/c/tags/item/dyes/pink.json
+dd529b34d5f6c355688ffec8a35c3653d9e23992 data/c/tags/item/dyes/purple.json
+11f20728b24febbc97577dac70d86c2d620390a1 data/c/tags/item/dyes/red.json
+8b18aee9d352736f204dfcec2c0f3085c3ee100a data/c/tags/item/dyes/white.json
+3ae477c390c04fbc6c9648a0be1656c0e50e6c73 data/c/tags/item/dyes/yellow.json
 95f5b03468bd3aa2c2a1c02cdd0e4256e6d25a82 data/c/tags/item/enchantables.json
+64ac4ce99ee53006bf927785e437f5e6496d54d5 data/c/tags/item/foods.json
 b75819d7071a4275dc5ead66d9f2b94e43d096ba data/c/tags/item/stones.json
 a0ef7c67869b22f1f5fac3e583317eaf05eae2cb data/minecraft/tags/item/buttons.json
 86c36de1c1071ab57ddc81f6262ac0325013dd1a data/minecraft/tags/item/dirt.json
