@@ -58,7 +58,7 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
         this.dropSelf(CaveopolisBlocks.COLORED_POLISHED_STONE_BUTTON.get());
 
         //Colored Stone
-    //    this.dropSelf(CaveopolisBlocks.COLORED_STONE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_STONE.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_SLAB.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_STAIRS.get());
         this.dropSelf(CaveopolisBlocks.COLORED_STONE_WALL.get());

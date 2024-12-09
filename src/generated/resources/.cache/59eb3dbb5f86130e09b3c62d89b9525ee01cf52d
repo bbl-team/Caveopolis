@@ -1,4 +1,4 @@
-// 1.21	2024-11-20T15:01:08.229459	Loot Tables
+// 1.21.1	2024-12-04T15:07:13.3223308	Loot Tables
 203505d247d821792932f8228deab67c1eda09a1 data/caveopolis/loot_table/blocks/colored_braid.json
 83899943d50f43fe06f10e32fd914c175e5e7a10 data/caveopolis/loot_table/blocks/colored_braid_button.json
 c77a1e5a5e3afe2edb0d64be104dbb7370d4b9e9 data/caveopolis/loot_table/blocks/colored_braid_pressure_plate.json
@@ -81,6 +81,7 @@ cb71f745765eb53b5b4b52d2a4fd0fea0e35f4d9 data/caveopolis/loot_table/blocks/color
 619de4d34c65fc86cb4aab98b6154e6763781282 data/caveopolis/loot_table/blocks/colored_road_slab.json
 649e9f9d1a30a2356a7892cd7ef714a586c7b7e7 data/caveopolis/loot_table/blocks/colored_road_stairs.json
 9cfd7acdb87acebd8992fccf291cc253d74e744b data/caveopolis/loot_table/blocks/colored_road_wall.json
+9d6fca5bd699b97bbdee3f3cafc3ef4905a7131d data/caveopolis/loot_table/blocks/colored_stone.json
 cb4e7f004524035c8e20306b9af767efd92218a6 data/caveopolis/loot_table/blocks/colored_stone_bricks.json
 898166a9f149fbd0628ffba72a7dc404de136daa data/caveopolis/loot_table/blocks/colored_stone_brick_button.json
 0ee6d58e4e73ffb8266c32d29e04933019cfbea6 data/caveopolis/loot_table/blocks/colored_stone_brick_pressure_plate.json
