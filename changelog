@@ -16,8 +16,13 @@ recipes for colored logs to planks
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
-5.1.0
-Updated to 1.21.1#
+
+5.0.20
+JEI/EMI should now show the recipe when clicking on colored blocks in JEI/EMI
+Added colored apple, colored dirt and colored sapling worktable recipes
+
+5.0.19
+Updated to 1.21.1
 Fixed colored stone missing its loot table
 
 5.0.18

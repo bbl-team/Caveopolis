@@ -84,6 +84,9 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.STRIPPED_COLORED_WOOD.get(), 1, ItemTags.LOGS, 1, "stripped_colored_wood");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_PLANKS.get(), 1, ItemTags.PLANKS, 1, "colored_planks");
             createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_LEAVES.get(), 1, ItemTags.LEAVES, 1, "colored_leaves");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_DIRT.get(), 1, ItemTags.DIRT, 1, "colored_dirt");
+            createRecipe(consumer, color, "vanilla", CaveopolisBlocks.COLORED_SAPLING.get(), 1, ItemTags.SAPLINGS, 1, "colored_sapling");
+            createRecipe(consumer, color, "vanilla", CaveopolisItems.COLORED_APPLE.get(), 1, Items.APPLE, 1, "colored_apple");
 
             //Colored Planks
             createRecipe(consumer, color, "planks", CaveopolisBlocks.COLORED_PLANK_STAIRS.get(), 1, CaveopolisBlocks.COLORED_PLANKS.get(), 1, "stairs");

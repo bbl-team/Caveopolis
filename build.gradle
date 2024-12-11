@@ -71,7 +71,6 @@ dependencies {
     runtimeOnly "curse.maven:bbl-core-1135181:5947687"
 
     //JEI
-
     compileOnly "curse.maven:jei-238222:5606861"
     runtimeOnly "curse.maven:jei-238222:5606861"
 }

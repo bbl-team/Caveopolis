@@ -4,7 +4,9 @@ import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
 import com.benbenlaw.core.block.colored.ColoredBlock;
+import com.benbenlaw.core.block.colored.util.IColored;
 import com.benbenlaw.core.item.CoreDataComponents;
+import com.benbenlaw.core.item.colored.ColoredItem;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
@@ -19,6 +21,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.block.Block;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
@@ -70,10 +73,10 @@ public class WorktableRecipeCategory implements IRecipeCategory<WorktableRecipe>
     }
 
     @Override
-    public void setRecipe(IRecipeLayoutBuilder builder, WorktableRecipe recipe, IFocusGroup focusGroup) {
+    public void setRecipe(@NotNull IRecipeLayoutBuilder builder, WorktableRecipe recipe, @NotNull IFocusGroup focusGroup) {
 
 
-        if (Block.byItem(recipe.input().getItems()[0].getItem()) instanceof ColoredBlock) {
+        if (Block.byItem(recipe.input().getItems()[0].getItem()) instanceof IColored || recipe.output().getItem() instanceof ColoredItem) {
             String color = recipe.output().get(CoreDataComponents.COLOR);
             ItemStack coloredStack = new ItemStack(recipe.input().getItems()[0].getItem());
             int coloredStackCount = recipe.input().count();
@@ -85,7 +88,17 @@ public class WorktableRecipeCategory implements IRecipeCategory<WorktableRecipe>
         }
 
         assert Minecraft.getInstance().level != null;
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 51, 2).addItemStack(new ItemStack(recipe.output().getItem(), recipe.output().getCount()));
 
+        if (Block.byItem(recipe.output().getItem()) instanceof IColored || recipe.output().getItem() instanceof ColoredItem) {
+            String color = recipe.output().get(CoreDataComponents.COLOR);
+            ItemStack coloredStack = new ItemStack(recipe.output().getItem());
+            int coloredStackCount = recipe.output().getCount();
+            coloredStack.set(CoreDataComponents.COLOR, color);
+            coloredStack.set(CoreDataComponents.LIT, false);
+            coloredStack.setCount(coloredStackCount);
+            builder.addSlot(RecipeIngredientRole.OUTPUT, 51, 2).addItemStack(coloredStack);
+        } else {
+            builder.addSlot(RecipeIngredientRole.OUTPUT, 51, 2).addItemStack(new ItemStack(recipe.output().getItem(), recipe.output().getCount()));
+        }
     }
 }
