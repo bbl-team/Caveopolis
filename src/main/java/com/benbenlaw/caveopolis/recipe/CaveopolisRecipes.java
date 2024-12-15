@@ -45,6 +45,13 @@ public class CaveopolisRecipes {
     public static final Supplier<RecipeType<FlowerDyeRecipe>> FLOWER_TO_DYE_TYPE =
             TYPES.register("flower_to_dye", () -> new RecipeType<FlowerDyeRecipe>() {});
 
+    //Log To Planks
+    public static final Supplier<RecipeSerializer<LogsToPlanksRecipe>> LOG_TO_PLANKS_SERIALIZER =
+            SERIALIZER.register("log_to_planks", () -> new SimpleCraftingRecipeSerializer<>(LogsToPlanksRecipe::new));
+
+    public static final Supplier<RecipeType<LogsToPlanksRecipe>> LOG_TO_PLANKS_TYPE =
+            TYPES.register("log_to_planks", () -> new RecipeType<LogsToPlanksRecipe>() {});
+
 
     /*
     public static final Supplier<RecipeType<ColoringRecipe>> COLORING_TYPE =

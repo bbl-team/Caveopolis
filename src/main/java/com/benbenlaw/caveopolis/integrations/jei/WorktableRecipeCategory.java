@@ -75,8 +75,10 @@ public class WorktableRecipeCategory implements IRecipeCategory<WorktableRecipe>
     @Override
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, WorktableRecipe recipe, @NotNull IFocusGroup focusGroup) {
 
+    }
 
-        if (Block.byItem(recipe.input().getItems()[0].getItem()) instanceof IColored || recipe.output().getItem() instanceof ColoredItem) {
+/*
+        if (Block.byItem(recipe.input().getItems()[0].getItem()) instanceof IColored || recipe.input().getItems()[0].getItem() instanceof ColoredItem) {
             String color = recipe.output().get(CoreDataComponents.COLOR);
             ItemStack coloredStack = new ItemStack(recipe.input().getItems()[0].getItem());
             int coloredStackCount = recipe.input().count();
@@ -87,7 +89,6 @@ public class WorktableRecipeCategory implements IRecipeCategory<WorktableRecipe>
             builder.addSlot(RecipeIngredientRole.INPUT, 4, 2).addItemStacks(Arrays.asList(recipe.input().getItems()));
         }
 
-        assert Minecraft.getInstance().level != null;
 
         if (Block.byItem(recipe.output().getItem()) instanceof IColored || recipe.output().getItem() instanceof ColoredItem) {
             String color = recipe.output().get(CoreDataComponents.COLOR);
@@ -101,4 +102,6 @@ public class WorktableRecipeCategory implements IRecipeCategory<WorktableRecipe>
             builder.addSlot(RecipeIngredientRole.OUTPUT, 51, 2).addItemStack(new ItemStack(recipe.output().getItem(), recipe.output().getCount()));
         }
     }
+
+ */
 }

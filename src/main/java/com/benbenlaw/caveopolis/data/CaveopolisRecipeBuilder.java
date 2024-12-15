@@ -46,14 +46,6 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
 
         for (String color : colors) {
 
-            //******** Crafting ********//
-            //Logs To Planks
-            planksFromLog(consumer, color, "logs",CaveopolisBlocks.COLORED_PLANKS.get(), CaveopolisBlocks.COLORED_LOG.get(), 4);
-            planksFromLog(consumer, color, "wood",CaveopolisBlocks.COLORED_PLANKS.get(), CaveopolisBlocks.COLORED_WOOD.get(), 4);
-            planksFromLog(consumer, color, "stripped_logs",CaveopolisBlocks.COLORED_PLANKS.get(), CaveopolisBlocks.STRIPPED_COLORED_LOG.get(), 4);
-            planksFromLog(consumer, color, "stripped_wood",CaveopolisBlocks.COLORED_PLANKS.get(), CaveopolisBlocks.STRIPPED_COLORED_WOOD.get(), 4);
-
-
             //******** WORKTABLE ********//
             //Logs To Planks
             createRecipe(consumer, color, "logs", CaveopolisBlocks.COLORED_PLANKS.get(), 4, CaveopolisBlocks.COLORED_LOG.get(), 1, "planks");
