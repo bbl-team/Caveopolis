@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "item": "caveopolis:colored_stone"
+  },
+  "output": {
+    "components": {
+      "bblcore:color": "light_blue",
+      "bblcore:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_cobblestone_bricks"
+  }
+}

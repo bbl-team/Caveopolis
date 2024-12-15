@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "item": "caveopolis:colored_stone"
+  },
+  "output": {
+    "components": {
+      "bblcore:color": "brown",
+      "bblcore:lit": false
+    },
+    "count": 3,
+    "id": "caveopolis:colored_stone_pressure_plate"
+  }
+}

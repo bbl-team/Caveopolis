@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "item": "caveopolis:colored_polished_stone"
+  },
+  "output": {
+    "components": {
+      "bblcore:color": "magenta",
+      "bblcore:lit": false
+    },
+    "count": 2,
+    "id": "caveopolis:colored_polished_stone_slab"
+  }
+}

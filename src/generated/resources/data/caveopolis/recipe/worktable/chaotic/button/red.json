@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "item": "caveopolis:colored_chaotic"
+  },
+  "output": {
+    "components": {
+      "bblcore:color": "red",
+      "bblcore:lit": false
+    },
+    "count": 4,
+    "id": "caveopolis:colored_chaotic_button"
+  }
+}

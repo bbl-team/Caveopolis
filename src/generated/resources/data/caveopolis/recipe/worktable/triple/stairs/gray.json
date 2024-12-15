@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "item": "caveopolis:colored_triple"
+  },
+  "output": {
+    "components": {
+      "bblcore:color": "gray",
+      "bblcore:lit": false
+    },
+    "count": 1,
+    "id": "caveopolis:colored_triple_stairs"
+  }
+}

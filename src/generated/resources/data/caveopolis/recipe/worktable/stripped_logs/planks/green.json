@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "item": "caveopolis:stripped_colored_log"
+  },
+  "output": {
+    "components": {
+      "bblcore:color": "green",
+      "bblcore:lit": false
+    },
+    "count": 4,
+    "id": "caveopolis:colored_planks"
+  }
+}
