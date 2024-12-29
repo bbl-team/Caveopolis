@@ -21,6 +21,9 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
 
+        //Crafting Tables
+        tag(Tags.Blocks.PLAYER_WORKSTATIONS_CRAFTING_TABLES)
+                .add(CaveopolisBlocks.COLORED_CRAFTING_TABLE.get());
 
         //Flowers
         tag(BlockTags.FLOWERS)
@@ -45,10 +48,19 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_LOG.get())
                 .add(CaveopolisBlocks.COLORED_WOOD.get())
                 .add(CaveopolisBlocks.STRIPPED_COLORED_LOG.get())
-                .add(CaveopolisBlocks.STRIPPED_COLORED_WOOD.get());
+                .add(CaveopolisBlocks.STRIPPED_COLORED_WOOD.get())
+                .add(CaveopolisBlocks.COLORED_CRAFTING_TABLE.get());
 
         //Pickaxe
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
+
+                //Colored Tile
+                .add(CaveopolisBlocks.COLORED_TILE.get())
+                .add(CaveopolisBlocks.COLORED_TILE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_TILE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_TILE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_TILE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_TILE_BUTTON.get())
 
                 //Colored Polished Stone
                 .add(CaveopolisBlocks.COLORED_POLISHED_STONE.get())
@@ -160,14 +172,7 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_ROAD_STAIRS.get())
                 .add(CaveopolisBlocks.COLORED_ROAD_WALL.get())
                 .add(CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get())
-                .add(CaveopolisBlocks.COLORED_ROAD_BUTTON.get())
-
-
-
-
-                .add(CaveopolisBlocks.COLORED_BRICKS.get())
-                .add(CaveopolisBlocks.COLORED_STONE_BRICKS.get())
-                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
+                .add(CaveopolisBlocks.COLORED_ROAD_BUTTON.get());
 
         //Leaves
         tag(BlockTags.LEAVES)
@@ -212,8 +217,8 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_TRIPLE_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_BRAID_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_ENCASED_BUTTON.get())
-                .add(CaveopolisBlocks.COLORED_ROAD_BUTTON.get());
-
+                .add(CaveopolisBlocks.COLORED_ROAD_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_TILE_BUTTON.get());
 
         //Walls
         tag(BlockTags.WALLS)
@@ -230,7 +235,8 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_TRIPLE_WALL.get())
                 .add(CaveopolisBlocks.COLORED_BRAID_WALL.get())
                 .add(CaveopolisBlocks.COLORED_ENCASED_WALL.get())
-                .add(CaveopolisBlocks.COLORED_ROAD_WALL.get());
+                .add(CaveopolisBlocks.COLORED_ROAD_WALL.get())
+                .add(CaveopolisBlocks.COLORED_TILE_WALL.get());
 
 
         //Pressure Plates
@@ -249,7 +255,8 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_TRIPLE_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_BRAID_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_ENCASED_PRESSURE_PLATE.get())
-                .add(CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get());
+                .add(CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_TILE_PRESSURE_PLATE.get());
 
 
 
@@ -271,7 +278,12 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_TRIPLE_STAIRS.get())
                 .add(CaveopolisBlocks.COLORED_BRAID_STAIRS.get())
                 .add(CaveopolisBlocks.COLORED_ENCASED_STAIRS.get())
-                .add(CaveopolisBlocks.COLORED_ROAD_STAIRS.get());
+                .add(CaveopolisBlocks.COLORED_ROAD_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_TILE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_STAIRS.get());
 
         //Wooden Slab
         tag(BlockTags.WOODEN_SLABS)
@@ -288,7 +300,14 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_TRIPLE_SLAB.get())
                 .add(CaveopolisBlocks.COLORED_BRAID_SLAB.get())
                 .add(CaveopolisBlocks.COLORED_ENCASED_SLAB.get())
-                .add(CaveopolisBlocks.COLORED_ROAD_SLAB.get());
+                .add(CaveopolisBlocks.COLORED_ROAD_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_TILE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_SLAB.get());
+
+
 
 
         //Stone Bricks

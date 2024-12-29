@@ -1,0 +1,53 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "type": "neoforge:components",
+    "components": {
+      "bblcore:color": "blue"
+    },
+    "count": 1,
+    "items": "caveopolis:colored_cobblestone_bricks"
+  },
+  "results": [
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 2,
+      "id": "caveopolis:colored_cobblestone_brick_slab"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cobblestone_brick_stairs"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cobblestone_brick_wall"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cobblestone_brick_pressure_plate"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cobblestone_brick_button"
+    }
+  ]
+}

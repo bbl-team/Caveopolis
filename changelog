@@ -12,9 +12,21 @@ sort creative tab color by color always the same order
 spray cans stop the working of blocks on the same color
 recipes for colored logs to planks
 
+ADD STRIPPED LOGS TAGS
+
 //*******//
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
+
+5.1.0
+Changed some tree spawning to support tags for biomes
+Rewrote the worktable to use a new system for crafting
+Rewrote JEI for the worktable to make a much clearer view of the recipes, all recipe should show up now in the worktable
+Spray cans can now effect the worktable output
+Added Colored Crafting tables
+Added Colored Tile (Stone type block with walls, stairs, slabs, pressure plates and buttons)
+Core is now version 1.1.26
+
 
 5.0.21
 Tweaked logs to planks recipes to use a hardcoded system to reduce the amount of recipes

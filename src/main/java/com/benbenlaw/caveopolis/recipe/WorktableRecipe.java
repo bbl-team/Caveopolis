@@ -1,18 +1,24 @@
 package com.benbenlaw.caveopolis.recipe;
 
+import com.benbenlaw.core.block.colored.util.ColorMap;
+import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
 import org.jetbrains.annotations.NotNull;
 
-public record WorktableRecipe(SizedIngredient input, ItemStack output) implements Recipe<RecipeInput> {
+import java.util.List;
+import java.util.stream.Collectors;
+
+public record WorktableRecipe(SizedIngredient input, List<ItemStack> results) implements Recipe<RecipeInput> {
 
     @Override
     public @NotNull NonNullList<Ingredient> getIngredients() {
@@ -23,7 +29,7 @@ public record WorktableRecipe(SizedIngredient input, ItemStack output) implement
 
     @Override
     public boolean matches(RecipeInput container, @NotNull Level level) {
-        return input.test(container.getItem(0)) && input.count() >= container.getItem(0).getCount();
+        return input.test(container.getItem(0)) && container.getItem(0).getCount() >= input.count();
     }
 
     @Override
@@ -32,13 +38,19 @@ public record WorktableRecipe(SizedIngredient input, ItemStack output) implement
     }
 
     @Override
-    public @NotNull ItemStack getResultItem(HolderLookup.Provider provider) {
-        return this.output.copy();
+    public @NotNull ItemStack getResultItem(HolderLookup.@NotNull Provider provider) {
+        return results.getFirst();
+    }
+
+    public List<ItemStack> getResults() {
+        return results.stream()
+                .map(ItemStack::copy)
+                .collect(Collectors.toList());
     }
 
     @Override
-    public @NotNull ItemStack assemble(@NotNull RecipeInput container, HolderLookup.@NotNull Provider provider) {
-        return this.output.copy();
+    public @NotNull ItemStack assemble(@NotNull RecipeInput input, HolderLookup.@NotNull Provider provider) {
+        return results.getFirst().copy();
     }
 
 
@@ -68,7 +80,8 @@ public record WorktableRecipe(SizedIngredient input, ItemStack output) implement
         public final MapCodec<WorktableRecipe> CODEC = RecordCodecBuilder.mapCodec(instance ->
                 instance.group(
                         SizedIngredient.FLAT_CODEC.fieldOf("input").forGetter(WorktableRecipe::input),
-                        ItemStack.CODEC.fieldOf("output").forGetter(WorktableRecipe::output)
+                        Codec.list(ItemStack.CODEC).fieldOf("results").forGetter(WorktableRecipe::results)
+
                 ).apply(instance, WorktableRecipe::new));
 
         public static final StreamCodec<RegistryFriendlyByteBuf, WorktableRecipe> STREAM_CODEC = StreamCodec.of(
@@ -86,13 +99,19 @@ public record WorktableRecipe(SizedIngredient input, ItemStack output) implement
 
         private static WorktableRecipe read(RegistryFriendlyByteBuf buffer) {
             SizedIngredient input = SizedIngredient.STREAM_CODEC.decode(buffer);
-            ItemStack output = ItemStack.STREAM_CODEC.decode(buffer);
-            return new WorktableRecipe(input, output);
+            int size = buffer.readVarInt();
+            NonNullList<ItemStack> outputs = NonNullList.withSize(size, ItemStack.EMPTY);
+            outputs.replaceAll(ignored -> ItemStack.STREAM_CODEC.decode(buffer));
+
+            return new WorktableRecipe(input, outputs);
         }
 
         private static void write(RegistryFriendlyByteBuf buffer, WorktableRecipe recipe) {
             SizedIngredient.STREAM_CODEC.encode(buffer, recipe.input);
-            ItemStack.STREAM_CODEC.encode(buffer, recipe.output);
+            buffer.writeVarInt(recipe.results.size());
+            for (ItemStack output : recipe.results) {
+                ItemStack.STREAM_CODEC.encode(buffer, output);
+            }
         }
     }
 

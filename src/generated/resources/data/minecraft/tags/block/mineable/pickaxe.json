@@ -1,5 +1,11 @@
 {
   "values": [
+    "caveopolis:colored_tile",
+    "caveopolis:colored_tile_slab",
+    "caveopolis:colored_tile_stairs",
+    "caveopolis:colored_tile_wall",
+    "caveopolis:colored_tile_pressure_plate",
+    "caveopolis:colored_tile_button",
     "caveopolis:colored_polished_stone",
     "caveopolis:colored_polished_stone_slab",
     "caveopolis:colored_polished_stone_stairs",
@@ -83,9 +89,6 @@
     "caveopolis:colored_road_stairs",
     "caveopolis:colored_road_wall",
     "caveopolis:colored_road_pressure_plate",
-    "caveopolis:colored_road_button",
-    "caveopolis:colored_bricks",
-    "caveopolis:colored_stone_bricks",
-    "caveopolis:colored_cobblestone_bricks"
+    "caveopolis:colored_road_button"
   ]
 }

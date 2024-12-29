@@ -67,12 +67,20 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     //BBL Core
-    compileOnly "curse.maven:bbl-core-1135181:5947687"
-    runtimeOnly "curse.maven:bbl-core-1135181:5947687"
+    compileOnly "curse.maven:bbl-core-1135181:6033214"
+    runtimeOnly "curse.maven:bbl-core-1135181:6033214"
 
     //JEI
-    compileOnly "curse.maven:jei-238222:5606861"
-    runtimeOnly "curse.maven:jei-238222:5606861"
+    compileOnly "curse.maven:jei-238222:5846880"
+    runtimeOnly "curse.maven:jei-238222:5846880"
+
+    //EMI
+    compileOnly "curse.maven:emi-580555:5872513"
+    runtimeOnly "curse.maven:emi-580555:5872513"
+
+
+
+
 }
 
 tasks.withType(ProcessResources).configureEach {

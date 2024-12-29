@@ -13,6 +13,7 @@
     "caveopolis:colored_triple_wall",
     "caveopolis:colored_braid_wall",
     "caveopolis:colored_encased_wall",
-    "caveopolis:colored_road_wall"
+    "caveopolis:colored_road_wall",
+    "caveopolis:colored_tile_wall"
   ]
 }

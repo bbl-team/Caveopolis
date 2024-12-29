@@ -10,6 +10,10 @@
     "caveopolis:colored_encased_button",
     "caveopolis:colored_road_button",
     "caveopolis:colored_cobblestone_button",
-    "caveopolis:colored_stone_brick_button"
+    "caveopolis:colored_stone_brick_button",
+    "caveopolis:colored_marble_button",
+    "caveopolis:colored_marble_brick_button",
+    "caveopolis:colored_cobblestone_brick_button",
+    "caveopolis:colored_tile_button"
   ]
 }

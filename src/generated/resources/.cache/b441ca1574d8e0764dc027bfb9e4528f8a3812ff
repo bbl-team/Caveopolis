@@ -1,23 +1,24 @@
-// 1.21.1	2024-12-04T15:07:13.3601121	caveopolis Block Tags
+// 1.21.1	2024-12-29T13:51:08.2243747	caveopolis Block Tags
 d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/block/cobblestones.json
+29eea73cbd8ec17dc53cd6945cae68731010ffa1 data/c/tags/block/player_workstations/crafting_tables.json
 b75819d7071a4275dc5ead66d9f2b94e43d096ba data/c/tags/block/stones.json
-aace3d357cb4cb9b1544e6c8d19ee66f28983918 data/minecraft/tags/block/buttons.json
+8439a4b2c1714b08d75da8e1e44ea37012daab9b data/minecraft/tags/block/buttons.json
 86c36de1c1071ab57ddc81f6262ac0325013dd1a data/minecraft/tags/block/dirt.json
 216122d541d4c8c3a2b032c32a0779c6f064cbd9 data/minecraft/tags/block/fences.json
 8c747cb3532b4a729a8ef7b053d59486ab17762b data/minecraft/tags/block/fence_gates.json
 250afd418ee663c95a8b65f0abda720eaa1591ba data/minecraft/tags/block/flowers.json
 fb427480bae956b646af4b3fdb08e622bcb5ad41 data/minecraft/tags/block/leaves.json
 4ca75022e59bb48bec31cff30f92c44cb17b1bde data/minecraft/tags/block/logs_that_burn.json
-30952bb8b8e1d8a1597c69ca1ae70adb66cd3a6a data/minecraft/tags/block/mineable/axe.json
+565ae80cd4dc823c64cbd3b849b6b4c16d94dee9 data/minecraft/tags/block/mineable/axe.json
 fb427480bae956b646af4b3fdb08e622bcb5ad41 data/minecraft/tags/block/mineable/hoe.json
-bfbaf4bb612eed9b1d843d84b72d8b20297ae6d9 data/minecraft/tags/block/mineable/pickaxe.json
+5ba9caf6fc54708e61e80a6d888e7d6013618653 data/minecraft/tags/block/mineable/pickaxe.json
 c7aa2d079ea9449c5e8e5e8728a5afc68ef7f0f1 data/minecraft/tags/block/planks.json
-9f33bd42d88d62081c3f5c988a8e9eb2887604a4 data/minecraft/tags/block/pressure_plates.json
+7983d5c85eec8b1615566757dfab9dfeb99d793a data/minecraft/tags/block/pressure_plates.json
 bdf59e3d37f450cd07de4aeb2077d1c5e5c51e02 data/minecraft/tags/block/saplings.json
-e7b7694930b8bd3316f3a0ac740f1882fdb93543 data/minecraft/tags/block/slabs.json
-1fb9b6d676ddb4946db677d31e17362573f28a03 data/minecraft/tags/block/stairs.json
+1ffa52d2103503b24ba8d42a56bcb0ed142b720e data/minecraft/tags/block/slabs.json
+88590c314a7bf54ad71cb7d0deb75041689091bb data/minecraft/tags/block/stairs.json
 1a54c464969f15e8ad47f25c7f5ee01130f7ddf1 data/minecraft/tags/block/stone_bricks.json
-d2a9708f9adcd62008bc1dea83a55d81e6bfd6fc data/minecraft/tags/block/walls.json
+b7dfbfa9e568786158942879c6d24f4d49cae6ce data/minecraft/tags/block/walls.json
 cb2da7e47f75a97d327fa16a3cdd19201713cb4f data/minecraft/tags/block/wooden_doors.json
 900edf6a7072a0f3fed1de33246e82a5eaf23444 data/minecraft/tags/block/wooden_slabs.json
 27a561f9d74556f65b8f526ef4e49fd71a0b4282 data/minecraft/tags/block/wooden_stairs.json

@@ -18,6 +18,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class WorktableRecipeBuilder implements RecipeBuilder {
@@ -25,16 +26,16 @@ public class WorktableRecipeBuilder implements RecipeBuilder {
 
     protected String group;
     protected SizedIngredient input;
-    protected ItemStack output;
+    protected List<ItemStack> results;
     protected final Map<String, Criterion<?>> criteria = new LinkedHashMap<>();
 
-    public WorktableRecipeBuilder(ItemStack output, SizedIngredient input) {
+    public WorktableRecipeBuilder(List<ItemStack> results, SizedIngredient input) {
         this.input = input;
-        this.output = output;
+        this.results = results;
     }
 
-    public static WorktableRecipeBuilder worktableRecipeBuilder(ItemStack output, SizedIngredient input) {
-        return new WorktableRecipeBuilder(output, input);
+    public static WorktableRecipeBuilder worktableRecipeBuilder(List<ItemStack> results, SizedIngredient input) {
+        return new WorktableRecipeBuilder(results, input);
     }
 
 
@@ -52,12 +53,11 @@ public class WorktableRecipeBuilder implements RecipeBuilder {
 
     @Override
     public @NotNull Item getResult() {
-        return output.getItem();
+        return results.getFirst().getItem();
     }
 
     public void save(@NotNull RecipeOutput recipeOutput) {
-        this.save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/" +
-                BuiltInRegistries.ITEM.getKey(this.output.getItem()).getPath()));
+        this.save(recipeOutput, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/"));
     }
 
     @Override
@@ -67,8 +67,8 @@ public class WorktableRecipeBuilder implements RecipeBuilder {
                 .rewards(AdvancementRewards.Builder.recipe(id))
                 .requirements(AdvancementRequirements.Strategy.OR);
         this.criteria.forEach(builder::addCriterion);
-        WorktableRecipe catalogueRecipe = new WorktableRecipe(this.input, this.output);
-        recipeOutput.accept(id, catalogueRecipe, builder.build(id.withPrefix("recipes/worktable/")));
+        WorktableRecipe worktableRecipe = new WorktableRecipe(this.input, this.results);
+        recipeOutput.accept(id, worktableRecipe, builder.build(id.withPrefix("recipes/worktable/")));
 
     }
 }

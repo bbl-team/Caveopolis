@@ -20,6 +20,10 @@ public class CaveopolisItems {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Caveopolis.MOD_ID);
 
+    //Colored Crafting Table
+    public static final DeferredItem<Item> COLORED_CRAFTING_TABLE = ITEMS.register("colored_crafting_table",
+            () -> new ColoredBlockItem((ColoredCraftingTable) CaveopolisBlocks.COLORED_CRAFTING_TABLE.get(), new Item.Properties()));
+
     //Misc Items
     public static final DeferredItem<Item> WORKTABLE = ITEMS.register("worktable",
             () -> new WorktableItem(new Item.Properties()));
@@ -105,6 +109,21 @@ public class CaveopolisItems {
             () -> new ColoredBlockItem((ColoredFlower) CaveopolisBlocks.COLORED_POPPY.get(), new Item.Properties()));
     public static final DeferredItem<Item> COLORED_DANDELION = ITEMS.register("colored_dandelion",
             () -> new ColoredBlockItem((ColoredFlower) CaveopolisBlocks.COLORED_DANDELION.get(), new Item.Properties()));
+
+    //Colored Tile
+    public static final DeferredItem<Item> COLORED_TILE = ITEMS.register("colored_tile",
+            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_TILE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_TILE_STAIRS = ITEMS.register("colored_tile_stairs",
+            () -> new ColoredBlockItem((ColoredStairs) CaveopolisBlocks.COLORED_TILE_STAIRS.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_TILE_SLAB = ITEMS.register("colored_tile_slab",
+            () -> new ColoredBlockItem((ColoredSlab) CaveopolisBlocks.COLORED_TILE_SLAB.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_TILE_WALL = ITEMS.register("colored_tile_wall",
+            () -> new ColoredBlockItem((ColoredWall) CaveopolisBlocks.COLORED_TILE_WALL.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_TILE_PRESSURE_PLATE = ITEMS.register("colored_tile_pressure_plate",
+            () -> new ColoredBlockItem((ColoredPressurePlate) CaveopolisBlocks.COLORED_TILE_PRESSURE_PLATE.get(), new Item.Properties()));
+    public static final DeferredItem<Item> COLORED_TILE_BUTTON = ITEMS.register("colored_tile_button",
+            () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_TILE_BUTTON.get(), new Item.Properties()));
+
 
     //Colored Polished Stone
     public static final DeferredItem<Item> COLORED_POLISHED_STONE = ITEMS.register("colored_polished_stone",

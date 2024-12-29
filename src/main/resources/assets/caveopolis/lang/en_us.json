@@ -1,6 +1,13 @@
 {
   "creative.caveopolis.tab": "Caveopolis",
 
+  "block.caveopolis.colored_tile": "Colored Tile",
+  "block.caveopolis.colored_tile_stairs": "Colored Tile Stairs",
+  "block.caveopolis.colored_tile_slab": "Colored Tile Slab",
+  "block.caveopolis.colored_tile_wall": "Colored Tile Wall",
+  "block.caveopolis.colored_tile_pressure_plate": "Colored Tile Pressure Plate",
+  "block.caveopolis.colored_tile_button": "Colored Tile Button",
+
   "block.caveopolis.colored_polished_stone": "Colored Polished Stone",
   "block.caveopolis.colored_polished_stone_stairs": "Colored Polished Stone Stairs",
   "block.caveopolis.colored_polished_stone_slab": "Colored Polished Stone Slab",
@@ -103,6 +110,7 @@
   "block.caveopolis.colored_sapling": "Colored Sapling",
   "block.caveopolis.colored_poppy": "Colored Poppy",
   "block.caveopolis.colored_dandelion": "Colored Dandelion",
+  "block.caveopolis.colored_crafting_table": "Colored Crafting Table",
 
   "item.caveopolis.white_spray_can": "White Spray Can",
   "item.caveopolis.gray_spray_can": "Gray Spray Can",
@@ -123,6 +131,15 @@
   "item.caveopolis.spray_can_remover": "Spray Can Remover",
   "item.caveopolis.glowstone_spray_can": "Glowstone Spray Can",
   "item.caveopolis.worktable": "Worktable",
-  "item.caveopolis.colored_apple": "Colored Apple"
+  "worktable.gui.input_slot": "Place item here",
+  "worktable.gui.spray_slot": "Use Spray Cans to change the color of the output item!",
+  "item.caveopolis.colored_apple": "Colored Apple",
+
+  "emi.category.minecraft.worktable": "Worktable",
+  "jei.tooltip.more_results": "Plus More!"
+
+
+
+
 
 }

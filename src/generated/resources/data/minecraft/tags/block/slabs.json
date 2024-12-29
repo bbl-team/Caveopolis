@@ -9,6 +9,11 @@
     "caveopolis:colored_triple_slab",
     "caveopolis:colored_braid_slab",
     "caveopolis:colored_encased_slab",
-    "caveopolis:colored_road_slab"
+    "caveopolis:colored_road_slab",
+    "caveopolis:colored_tile_slab",
+    "caveopolis:colored_marble_slab",
+    "caveopolis:colored_marble_brick_slab",
+    "caveopolis:colored_cobblestone_slab",
+    "caveopolis:colored_cobblestone_brick_slab"
   ]
 }

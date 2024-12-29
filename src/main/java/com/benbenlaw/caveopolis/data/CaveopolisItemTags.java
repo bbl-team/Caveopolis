@@ -23,6 +23,9 @@ public class CaveopolisItemTags extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
 
+        //Crafting Tables
+        tag(Tags.Items.PLAYER_WORKSTATIONS_CRAFTING_TABLES).add(CaveopolisBlocks.COLORED_CRAFTING_TABLE.asItem());
+
         //Dyes
         tag(Tags.Items.DYES_BLACK).add(CaveopolisItems.BLACK_SPRAY_CAN.asItem());
         tag(Tags.Items.DYES_BLUE).add(CaveopolisItems.BLUE_SPRAY_CAN.asItem());
@@ -118,7 +121,12 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.COLORED_ENCASED_BUTTON.asItem())
                 .add(CaveopolisBlocks.COLORED_ROAD_BUTTON.asItem())
                 .add(CaveopolisBlocks.COLORED_COBBLESTONE_BUTTON.asItem())
-                .add(CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.asItem());
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_TILE_BUTTON.asItem());
+
 
 
 

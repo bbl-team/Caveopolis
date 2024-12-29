@@ -1,0 +1,53 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "type": "neoforge:components",
+    "components": {
+      "bblcore:color": "purple"
+    },
+    "count": 1,
+    "items": "caveopolis:colored_chaotic"
+  },
+  "results": [
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 2,
+      "id": "caveopolis:colored_chaotic_slab"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_chaotic_stairs"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_chaotic_wall"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_chaotic_pressure_plate"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_chaotic_button"
+    }
+  ]
+}

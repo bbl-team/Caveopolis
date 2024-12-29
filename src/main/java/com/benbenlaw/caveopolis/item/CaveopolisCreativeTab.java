@@ -2,6 +2,7 @@ package com.benbenlaw.caveopolis.item;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
+import com.benbenlaw.caveopolis.integrations.jei.BlockSubtypeInterpreter;
 import com.benbenlaw.core.block.colored.util.ColorMap;
 import com.benbenlaw.core.item.CoreDataComponents;
 import net.minecraft.core.registries.Registries;
@@ -26,12 +27,22 @@ public class CaveopolisCreativeTab {
                 // List of block types that share similar properties
                 List<Supplier<ItemStack>> blocks = Arrays.<Supplier<ItemStack>>asList(
 
+                        //Crafting Table
+                        () -> new ItemStack(CaveopolisItems.COLORED_CRAFTING_TABLE.get()),
                         //Colored Items
                         () -> new ItemStack(CaveopolisItems.COLORED_APPLE.get()),
 
                         //Colored Flowers
                         () -> new ItemStack(CaveopolisBlocks.COLORED_POPPY.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_DANDELION.get()),
+
+                        //Colored Tile
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_TILE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_TILE_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_TILE_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_TILE_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_TILE_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_TILE_BUTTON.get()),
 
                         //Colored Polished Stone
                         () -> new ItemStack(CaveopolisBlocks.COLORED_POLISHED_STONE.get()),

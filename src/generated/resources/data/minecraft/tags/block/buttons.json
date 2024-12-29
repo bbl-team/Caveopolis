@@ -14,6 +14,7 @@
     "caveopolis:colored_triple_button",
     "caveopolis:colored_braid_button",
     "caveopolis:colored_encased_button",
-    "caveopolis:colored_road_button"
+    "caveopolis:colored_road_button",
+    "caveopolis:colored_tile_button"
   ]
 }

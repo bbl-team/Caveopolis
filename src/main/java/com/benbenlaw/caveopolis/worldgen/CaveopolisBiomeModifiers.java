@@ -61,7 +61,7 @@ public class CaveopolisBiomeModifiers {
 
         //Red Tree
         context.register(ADD_TREE_RED, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS)),
+                biomes.getOrThrow(Tags.Biomes.IS_JUNGLE),
                 HolderSet.direct(placedFeatures.getOrThrow(CaveopolisPlacedFeatures.RED_TREE_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 

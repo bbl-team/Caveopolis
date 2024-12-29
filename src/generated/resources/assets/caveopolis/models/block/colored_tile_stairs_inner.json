@@ -1,0 +1,9 @@
+{
+  "parent": "caveopolis:block/stairs/tintable_inner_stairs",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "caveopolis:block/colored_tile",
+    "side": "caveopolis:block/colored_tile",
+    "top": "caveopolis:block/colored_tile"
+  }
+}

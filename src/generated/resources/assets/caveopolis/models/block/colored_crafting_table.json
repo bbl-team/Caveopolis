@@ -1,0 +1,13 @@
+{
+  "parent": "caveopolis:block/tintable_cube",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "down": "caveopolis:block/colored_planks",
+    "east": "caveopolis:block/colored_crafting_table_side",
+    "north": "caveopolis:block/colored_crafting_table",
+    "particle": "caveopolis:block/colored_crafting_table",
+    "south": "caveopolis:block/colored_crafting_table_side",
+    "up": "caveopolis:block/colored_crafting_table_top",
+    "west": "caveopolis:block/colored_crafting_table"
+  }
+}

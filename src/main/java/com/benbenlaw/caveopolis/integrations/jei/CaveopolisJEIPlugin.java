@@ -7,6 +7,8 @@ import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
 import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.gui.drawable.IDrawableStatic;
+import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
@@ -14,12 +16,14 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import mezz.jei.api.registration.ISubtypeRegistration;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
 
 @JeiPlugin
 public class CaveopolisJEIPlugin implements IModPlugin {
 
+    public static IDrawableStatic slotDrawable;
     @Override
     public ResourceLocation getPluginUid() {
         return ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "jei_plugin");
@@ -30,12 +34,23 @@ public class CaveopolisJEIPlugin implements IModPlugin {
     @Override
     public void registerItemSubtypes(ISubtypeRegistration registration) {
 
+        //Crafting Table
+        registration.registerSubtypeInterpreter(CaveopolisItems.COLORED_CRAFTING_TABLE.get(), new BlockSubtypeInterpreter());
+
         //Colored Items
         registration.registerSubtypeInterpreter(CaveopolisItems.COLORED_APPLE.asItem(), new BlockSubtypeInterpreter());
 
         //Colored Flower
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POPPY.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_DANDELION.asItem(), new BlockSubtypeInterpreter());
+
+        //Colored Tile
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_TILE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_TILE_STAIRS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_TILE_SLAB.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_TILE_WALL.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_TILE_PRESSURE_PLATE.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_TILE_BUTTON.asItem(), new BlockSubtypeInterpreter());
 
         //Colored Polished Stone
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_POLISHED_STONE.asItem(), new BlockSubtypeInterpreter());
@@ -175,7 +190,7 @@ public class CaveopolisJEIPlugin implements IModPlugin {
     }
 
     public static RecipeType<WorktableRecipe> WORKTABLE_RECIPE =
-            new RecipeType<>(WorktableRecipeCategory.UID, WorktableRecipe.class);
+            new RecipeType<>(WorktableRecipeCategoryJei.UID, WorktableRecipe.class);
 
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
@@ -184,8 +199,13 @@ public class CaveopolisJEIPlugin implements IModPlugin {
 
     @Override
     public void registerCategories(IRecipeCategoryRegistration registration) {
+
+        IGuiHelper guiHelper = registration.getJeiHelpers().getGuiHelper();
+
         registration.addRecipeCategories(new
-                WorktableRecipeCategory(registration.getJeiHelpers().getGuiHelper()));
+                WorktableRecipeCategoryJei(registration.getJeiHelpers().getGuiHelper()));
+
+        slotDrawable = guiHelper.getSlotDrawable();
     }
 
     @Override
@@ -194,7 +214,7 @@ public class CaveopolisJEIPlugin implements IModPlugin {
         final var recipeManager = Minecraft.getInstance().level.getRecipeManager();
 
 
-        registration.addRecipes(WorktableRecipeCategory.RECIPE_TYPE,
+        registration.addRecipes(WorktableRecipeCategoryJei.RECIPE_TYPE,
                 recipeManager.getAllRecipesFor(CaveopolisRecipes.WORKTABLE_TYPE.get()).stream().map(RecipeHolder::value).toList());
     }
 }

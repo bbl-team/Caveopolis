@@ -42,12 +42,22 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
     @Override
     protected void generate() {
 
+        //Crafting Table
+        this.dropSelf(CaveopolisBlocks.COLORED_CRAFTING_TABLE.get());
 
         //Colored Flower
         this.dropSelf(CaveopolisBlocks.COLORED_POPPY.get());
         this.add(CaveopolisBlocks.COLORED_POTTED_POPPY.get(), createPotFlowerItemTable(CaveopolisBlocks.COLORED_POPPY));
         this.dropSelf(CaveopolisBlocks.COLORED_DANDELION.get());
         this.add(CaveopolisBlocks.COLORED_POTTED_DANDELION.get(), createPotFlowerItemTable(CaveopolisBlocks.COLORED_DANDELION));
+
+        //Colored Tile
+        this.dropSelf(CaveopolisBlocks.COLORED_TILE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_TILE_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_TILE_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_TILE_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_TILE_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_TILE_BUTTON.get());
 
         //Colored Polished Stone
         this.dropSelf(CaveopolisBlocks.COLORED_POLISHED_STONE.get());

@@ -8,6 +8,11 @@
     "caveopolis:colored_triple_stairs",
     "caveopolis:colored_braid_stairs",
     "caveopolis:colored_encased_stairs",
-    "caveopolis:colored_road_stairs"
+    "caveopolis:colored_road_stairs",
+    "caveopolis:colored_tile_stairs",
+    "caveopolis:colored_marble_stairs",
+    "caveopolis:colored_marble_brick_stairs",
+    "caveopolis:colored_cobblestone_stairs",
+    "caveopolis:colored_cobblestone_brick_stairs"
   ]
 }

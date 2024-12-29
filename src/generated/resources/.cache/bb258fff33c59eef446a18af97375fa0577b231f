@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-04T15:07:13.3213298	Tags for minecraft:item mod id caveopolis
+// 1.21.1	2024-12-29T13:51:08.2122735	Tags for minecraft:item mod id caveopolis
 d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/item/cobblestones.json
 95f5b03468bd3aa2c2a1c02cdd0e4256e6d25a82 data/c/tags/item/dyes/black.json
 0d5419b0a47a89516d5d2a3bd89c2a3356d0c338 data/c/tags/item/dyes/blue.json
@@ -18,8 +18,9 @@ dd529b34d5f6c355688ffec8a35c3653d9e23992 data/c/tags/item/dyes/purple.json
 3ae477c390c04fbc6c9648a0be1656c0e50e6c73 data/c/tags/item/dyes/yellow.json
 95f5b03468bd3aa2c2a1c02cdd0e4256e6d25a82 data/c/tags/item/enchantables.json
 64ac4ce99ee53006bf927785e437f5e6496d54d5 data/c/tags/item/foods.json
+29eea73cbd8ec17dc53cd6945cae68731010ffa1 data/c/tags/item/player_workstations/crafting_tables.json
 b75819d7071a4275dc5ead66d9f2b94e43d096ba data/c/tags/item/stones.json
-a0ef7c67869b22f1f5fac3e583317eaf05eae2cb data/minecraft/tags/item/buttons.json
+68ec7287bd463796681839c698d5e79ec0a1ba68 data/minecraft/tags/item/buttons.json
 86c36de1c1071ab57ddc81f6262ac0325013dd1a data/minecraft/tags/item/dirt.json
 32620efec50c58cf379debfa92aa5629cf629773 data/minecraft/tags/item/enchantable/durability.json
 216122d541d4c8c3a2b032c32a0779c6f064cbd9 data/minecraft/tags/item/fences.json

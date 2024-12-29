@@ -1,0 +1,777 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "tag": "minecraft:logs"
+  },
+  "results": [
+    {
+      "components": {
+        "bblcore:color": "white",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "white",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "white",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "white",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "white",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "white",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "green",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "green",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "green",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "green",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "green",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "green",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "red",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "red",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "red",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "red",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "red",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "red",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "black",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "black",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "black",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_log"
+    },
+    {
+      "components": {
+        "bblcore:color": "black",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_wood"
+    },
+    {
+      "components": {
+        "bblcore:color": "black",
+        "bblcore:lit": false
+      },
+      "count": 4,
+      "id": "caveopolis:colored_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "black",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_crafting_table"
+    }
+  ]
+}

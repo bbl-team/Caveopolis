@@ -3,9 +3,20 @@ package com.benbenlaw.caveopolis.data;
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.core.block.colored.*;
+import com.google.gson.JsonElement;
+import cpw.mods.util.LambdaExceptionUtils;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.models.blockstates.BlockStateGenerator;
+import net.minecraft.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.data.models.blockstates.Variant;
+import net.minecraft.data.models.blockstates.VariantProperties;
+import net.minecraft.data.models.model.ModelTemplates;
+import net.minecraft.data.models.model.TextureMapping;
+import net.minecraft.data.models.model.TextureSlot;
+import net.minecraft.data.models.model.TexturedModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.properties.*;
@@ -17,15 +28,25 @@ import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.Map;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
+
     public CaveopolisBlockStatesProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, Caveopolis.MOD_ID, existingFileHelper);
+
     }
 
     @Override
     protected void registerStatesAndModels() {
+
+        //Crafting Table
+        craftingTableBlock((ColoredCraftingTable) CaveopolisBlocks.COLORED_CRAFTING_TABLE.get(), CaveopolisBlocks.COLORED_PLANKS.get());
+
 
         //Colored Plants
         flowerWithElements((FlowerBlock) CaveopolisBlocks.COLORED_POPPY.get());
@@ -36,6 +57,15 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         simpleBlock(CaveopolisBlocks.COLORED_POTTED_DANDELION.get(), models().singleTexture("colored_potted_dandelion",
                 ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "tintable_flower_pot_cross"), "plant",
                 blockTexture(CaveopolisBlocks.COLORED_DANDELION.get())).renderType("cutout"));
+
+        //Colored Tiles
+        blockWithItem(CaveopolisBlocks.COLORED_TILE);
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_TILE_SLAB.get(), CaveopolisBlocks.COLORED_TILE.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_TILE_STAIRS.get(), CaveopolisBlocks.COLORED_TILE.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_TILE_WALL.get(), CaveopolisBlocks.COLORED_TILE.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_TILE_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_TILE.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_TILE_BUTTON.get(), CaveopolisBlocks.COLORED_TILE.get());
+
 
         //Colored Polished Stone
         blockWithItem(CaveopolisBlocks.COLORED_POLISHED_STONE);
@@ -175,8 +205,37 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
 
 
+
+
     }
 
+    private void craftingTableBlock(ColoredCraftingTable craftingTable, Block planksBlock) {
+
+        ResourceLocation craftingTableRegistryName = BuiltInRegistries.BLOCK.getKey(craftingTable);
+        ResourceLocation planksBlockRegistryName = BuiltInRegistries.BLOCK.getKey(planksBlock);
+        ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(planksBlockRegistryName.getNamespace(), "block/" + planksBlockRegistryName.getPath());
+        ResourceLocation textureFront = ResourceLocation.fromNamespaceAndPath(planksBlockRegistryName.getNamespace(), "block/" + craftingTableRegistryName.getPath());
+        ResourceLocation textureTop = ResourceLocation.fromNamespaceAndPath(craftingTableRegistryName.getNamespace(), "block/" + craftingTableRegistryName.getPath() + "_top");
+        ResourceLocation textureSide = ResourceLocation.fromNamespaceAndPath(craftingTableRegistryName.getNamespace(), "block/" + craftingTableRegistryName.getPath() + "_side");
+
+
+        ModelFile cubeSides = models().withExistingParent(craftingTableRegistryName.getPath(), "caveopolis:block/tintable_cube")
+                .texture("down", texture)
+                .texture("up", textureTop)
+                .texture("north", textureFront)
+                .texture("south", textureSide)
+                .texture("west", textureFront)
+                .texture("east", textureSide)
+                .texture("particle", textureFront)
+                .renderType("cutout");
+
+        simpleBlockItem(craftingTable, cubeSides);
+
+        getVariantBuilder(craftingTable).forAllStatesExcept(state ->
+                ConfiguredModel.builder().modelFile(cubeSides).build(), ColoredSapling.LIT, ColoredSapling.COLOR);
+
+
+    }
 
 
 
@@ -287,6 +346,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         simpleBlockItem(woodBlock, new ModelFile.UncheckedModelFile("caveopolis:block/" + woodBlockRegistryName.getPath()));
 
     }
+
 
     private void logBlockWithElement(Block block) {
         ResourceLocation blockRegistryName = BuiltInRegistries.BLOCK.getKey(block);

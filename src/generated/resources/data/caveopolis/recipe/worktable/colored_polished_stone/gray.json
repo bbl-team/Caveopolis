@@ -1,0 +1,53 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "type": "neoforge:components",
+    "components": {
+      "bblcore:color": "gray"
+    },
+    "count": 1,
+    "items": "caveopolis:colored_polished_stone"
+  },
+  "results": [
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 2,
+      "id": "caveopolis:colored_polished_stone_slab"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_polished_stone_stairs"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_polished_stone_wall"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_polished_stone_pressure_plate"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray",
+        "bblcore:lit": false
+      },
+      "count": 1,
+      "id": "caveopolis:colored_polished_stone_button"
+    }
+  ]
+}
