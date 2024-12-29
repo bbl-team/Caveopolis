@@ -31,9 +31,21 @@ public class WorktableMenu extends AbstractContainerMenu {
 
     protected static int INPUT_SLOT = 0;
     protected int SPRAY_SLOT = 1;
+
+    private int currentPage = 0;
+    private static final int ITEMS_PER_PAGE = 21;
+
+    int OUTPUT_SLOT = 2;
+    int xStart = 46;
+    int yStart = 16;
+    int xOffset = 18;
+    int yOffset = 18;
+    int rows = 3;  // Output rows
+    int columns = 7;  // Output columns
+    int totalItems = 7;  // Output columns
     protected Level level;
     protected Player player;
-    public final Container container = new SimpleContainer(23) {
+    public final Container container = new SimpleContainer(23) { // rows * columns + 2
         @Override
         public void setChanged() {
             super.setChanged();
@@ -53,7 +65,7 @@ public class WorktableMenu extends AbstractContainerMenu {
         addPlayerInventory(inventory);
         addPlayerHotbar(inventory);
 
-        this.addSlot(new Slot(container, INPUT_SLOT, 8, 16) {
+        this.addSlot(new Slot(container, INPUT_SLOT, 6, 16) {
 
             @Override
             public boolean mayPlace(ItemStack stack ) {
@@ -80,7 +92,8 @@ public class WorktableMenu extends AbstractContainerMenu {
         });
 
         // Spray Slot
-        this.addSlot(new Slot(container, SPRAY_SLOT, 8, 52) {
+
+        this.addSlot(new Slot(container, SPRAY_SLOT, 6, 52) {
 
             @Override
             public boolean mayPlace(ItemStack stack) {
@@ -90,26 +103,25 @@ public class WorktableMenu extends AbstractContainerMenu {
             @Override
             public void set(ItemStack stack) {
                 super.set(stack);
+                resetTotalItemsIfSprayCanChanged();
                 updateOutputSlots();
             }
 
             @Override
             public void onTake(Player player, ItemStack stack) {
                 super.onTake(player, stack);
+                resetTotalItemsIfSprayCanChanged();
                 updateOutputSlots();
             }
 
+            // Helper method to reset totalItems if spray can changes
+            private void resetTotalItemsIfSprayCanChanged() {
+                // If the spray can has been placed or removed, reset the totalItems
+                totalItems = 0;
+            }
         });
 
         // Define Output Slots
-        int OUTPUT_SLOT = 2;
-        int xStart = 43;
-        int yStart = 15;
-        int xOffset = 18;
-        int yOffset = 18;
-        int rows = 3;  // Output rows
-        int columns = 7;  // Output columns
-
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < columns; col++) {
                 int xPos = xStart + (col * xOffset);
@@ -150,11 +162,33 @@ public class WorktableMenu extends AbstractContainerMenu {
         return new SingleRecipeInput(p_346312_.getItem(0));
     }
 
-    private List<List<ItemStack>> getRecipeResults(ItemStack input) {
+    public List<List<ItemStack>> getRecipeResults(ItemStack input) {
         return getRecipesForInput(input, container, this.level)
                 .stream()
                 .map(recipeHolder -> recipeHolder.value().getResults())
                 .collect(Collectors.toList());
+    }
+
+    public int getRecipeOutputCount() {
+        int count = 0;
+
+        if (container.getItem(23).isEmpty())
+
+        // Loop through all output slots
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < columns; col++) {
+                // Calculate the slot index based on the row and column
+                int slotIndex = OUTPUT_SLOT + (row * columns) + col;
+                ItemStack stack = container.getItem(slotIndex);
+
+                // Check if the slot contains a non-empty item stack
+                if (!stack.isEmpty()) {
+                    count++; // Increment count for non-empty slots
+                }
+            }
+        }
+
+        return count;
     }
 
     public static List<RecipeHolder<WorktableRecipe>> getRecipesForInput(ItemStack input, Container container, Level level) {
@@ -187,41 +221,92 @@ public class WorktableMenu extends AbstractContainerMenu {
             for (int i = 2; i < container.getContainerSize(); i++) {
                 container.setItem(i, ItemStack.EMPTY);
             }
+            currentPage = 0;
+            totalItems = 0;
             return;
         }
 
-        List<List<ItemStack>> allResults = getRecipeResults(inputItem);
-        DyeColor sprayColor = getSprayColor();
 
-        // Clear all the output slots before applying the new results
+        // Flatten the recipe results
+        List<ItemStack> flattenedList = getRecipeResults(inputItem)
+                .stream()
+                .flatMap(List::stream)
+                .toList();
+
+        // Pagination logic
+        int startIndex = currentPage * ITEMS_PER_PAGE;
+        int endIndex = Math.min(startIndex + ITEMS_PER_PAGE, flattenedList.size());
+
+        // Clear all output slots before applying the new results
         for (int i = 2; i < container.getContainerSize(); i++) {
             container.setItem(i, ItemStack.EMPTY);
         }
 
-        int outputIndex = 2;
-        Set<ItemStack> addedItems = new HashSet<>(); // Set to track added items
+        // Get spray can color if available
+        DyeColor sprayColor = getSprayColor();
 
-        // Iterate over all recipe results
-        for (List<ItemStack> results : allResults) {
-            for (ItemStack result : results) {
-                if (outputIndex < container.getContainerSize()) {
+        // Maintain a set of added items to ensure uniqueness
+        Set<ItemStack> addedItems = new HashSet<>();
 
-                    // Apply spray color if available
-                    if (sprayColor != null) {
-                        result.set(CoreDataComponents.COLOR, sprayColor.toString());
-                    }
+        // Set items to output slots
+        for (int i = startIndex, outputIndex = 2; i < endIndex && outputIndex < container.getContainerSize(); i++) {
+            ItemStack resultItem = flattenedList.get(i).copy();
 
-                    // Check if this result has already been added (using a more robust comparison)
-                    if (!isItemInSet(addedItems, result)) {
-                        container.setItem(outputIndex, result.copy());
-                        addedItems.add(result.copy()); // Add the item to the set to prevent future duplicates
-                        outputIndex++;
-                    }
-                }
+            // Apply spray can color if available
+            if (sprayColor != null) {
+                resultItem.set(CoreDataComponents.COLOR, sprayColor.toString());
+            }
+
+            // Check if a similar item is already added to output slots
+            boolean isDuplicate = addedItems.stream().anyMatch(existingItem ->
+                    ItemStack.isSameItemSameComponents(existingItem, resultItem) &&
+                            Objects.equals(existingItem.getComponents(), resultItem.getComponents())
+            );
+
+            if (!isDuplicate) {
+                container.setItem(outputIndex, resultItem);
+                totalItems++;
+                addedItems.add(resultItem);
+                outputIndex++;
             }
         }
     }
 
+
+
+    public void nextPage() {
+        List<ItemStack> flattenedList = getRecipeResults(container.getItem(INPUT_SLOT))
+                .stream()
+                .flatMap(List::stream) // Flatten the nested lists
+                .toList();
+
+        int maxPages = (int) Math.ceil((double) flattenedList.size() / ITEMS_PER_PAGE);
+        System.out.println("Max Pages: " + maxPages);
+        System.out.println("total items: " + flattenedList.size());
+        if (currentPage < maxPages - 1) {
+            currentPage++;
+            System.out.println("Current Page: " + currentPage);
+            updateOutputSlots();
+        }
+    }
+
+    public void previousPage() {
+        List<ItemStack> flattenedList = getRecipeResults(container.getItem(INPUT_SLOT))
+                .stream()
+                .flatMap(List::stream) // Flatten the nested lists
+                .toList();
+
+        int maxPages = (int) Math.ceil((double) flattenedList.size() / ITEMS_PER_PAGE);
+        System.out.println("Max Pages: " + maxPages);
+
+        if (maxPages > 0) {
+            if (currentPage > 0) {
+                currentPage--;
+            }
+            System.out.println("Current Page: " + currentPage);
+            updateOutputSlots();
+        }
+    }
 
     // Helper method to compare item stacks more accurately
     private boolean isItemInSet(Set<ItemStack> addedItems, ItemStack result) {
@@ -260,9 +345,6 @@ public class WorktableMenu extends AbstractContainerMenu {
     private static final int VANILLA_SLOT_COUNT = HOTBAR_SLOT_COUNT + PLAYER_INVENTORY_SLOT_COUNT;
     private static final int VANILLA_FIRST_SLOT_INDEX = 0;
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
-
-
-
     private static final int TE_INVENTORY_SLOT_COUNT = 23;  // must be the number of slots you have!
 
     @Override

@@ -106,6 +106,12 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
                 .unlockedBy("has_item", has(Items.BRICKS.asItem()))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/vanilla/bricks"));
 
+        //Vanilla To Caveopolis - Planks
+        WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.PLANKS,
+                SizedIngredient.of(ItemTags.PLANKS, 1))
+                .unlockedBy("has_item", has(Items.OAK_PLANKS.asItem()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/vanilla/planks"));
+
         //Colored Tile
         createWorktableColoringRecipe(consumer, "blue", ColoredTileResults.BLUE_TILE, CaveopolisItems.COLORED_TILE.get(), "colored_tile");
         createWorktableColoringRecipe(consumer, "red", ColoredTileResults.RED_TILE, CaveopolisItems.COLORED_TILE.get(), "colored_tile");

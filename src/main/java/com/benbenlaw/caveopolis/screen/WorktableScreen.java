@@ -45,11 +45,13 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
     @Override
     protected void init() {
         super.init();
+        addMenuButtons();
     }
 
     @Override
     protected void containerTick() {
         this.clearWidgets();
+        addMenuButtons();
     }
     @Override
     protected void renderBg(GuiGraphics guiGraphics, float pPartialTick, int mouseX, int mouseY) {
@@ -90,5 +92,21 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
 
     }
 
+    private void addMenuButtons() {
+        // Check if the block entity exists
+        if (this.menu.container != null && menu.totalItems >= 21) {
+
+            // top button cycles backwards
+            this.addRenderableWidget(new ImageButton(this.leftPos + 24, this.height / 2 - 67, 20, 18, CoreButtons.INCREASE_BUTTONS, (pressed) -> {
+                this.menu.previousPage();
+            }));
+            // bottom button cycles forwards
+            this.addRenderableWidget(new ImageButton(this.leftPos + 24, this.height / 2 - 31, 20, 18, CoreButtons.DECREASE_BUTTONS, (pressed) -> {
+                this.menu.nextPage();
+            }));
+
+
+        }
+    }
 
 }

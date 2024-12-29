@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-29T13:51:08.2202799	Recipes
+// 1.21.1	2024-12-29T20:54:02.9801751	Recipes
 fa9b67ef4e0b219236a35466de35d2958ae18fb7 data/caveopolis/advancement/recipes/building_blocks/spray_cans/black.json
 8aef8c29ddfb35fe86d2a78f74bbea41876bf76a data/caveopolis/advancement/recipes/building_blocks/spray_cans/blue.json
 7f897fd0bc7911987c13489394c28e1a5360a28d data/caveopolis/advancement/recipes/building_blocks/spray_cans/brown.json
@@ -280,6 +280,7 @@ d607488f160bfe9fbed0315d1060fdc8e32061d6 data/caveopolis/advancement/recipes/wor
 455f8e65602f74ba65f99c7599cbd4b440510425 data/caveopolis/advancement/recipes/worktable/worktable/vanilla/dirt.json
 7a9698c9745a0d5d7201e45e11c83506aea567f6 data/caveopolis/advancement/recipes/worktable/worktable/vanilla/leaves.json
 fca479a252ef201c1efd9890ac27cd2387448164 data/caveopolis/advancement/recipes/worktable/worktable/vanilla/logs.json
+2080d91273c12b3af5bd9ba888468626f60e8813 data/caveopolis/advancement/recipes/worktable/worktable/vanilla/planks.json
 36761ac42d51a3220466a1343d7abe3ba3fa5f55 data/caveopolis/advancement/recipes/worktable/worktable/vanilla/poppy.json
 0cad3b6738e10f3e5cceaa7309b90b61017edae9 data/caveopolis/advancement/recipes/worktable/worktable/vanilla/sapling.json
 1c86e87f5ffa61c13e2a58ea5d2c19effbf9e0f5 data/caveopolis/advancement/recipes/worktable/worktable/vanilla/stone.json
@@ -568,6 +569,7 @@ d6e35b7d01076f06322587887fde48edfbe4271f data/caveopolis/recipe/worktable/vanill
 cfa8ec054d071aaf102d0a91b04a098e887161d5 data/caveopolis/recipe/worktable/vanilla/dirt.json
 31c882756b79a81f86682846fab1d1fa7488ff03 data/caveopolis/recipe/worktable/vanilla/leaves.json
 11a355eea5886d49317abc8c9f9a7b226ee57b5b data/caveopolis/recipe/worktable/vanilla/logs.json
+60d8476ef827554bd39dcb580e8751886bf5b92a data/caveopolis/recipe/worktable/vanilla/planks.json
 3f9bb61ac3073b026b88e61d7d4606e2846b6b5a data/caveopolis/recipe/worktable/vanilla/poppy.json
 6908e1c9596e2d1d3b324cfbcbce865e94803f10 data/caveopolis/recipe/worktable/vanilla/sapling.json
 9792529b6e1daf48f146dc5731e3d1b560312898 data/caveopolis/recipe/worktable/vanilla/stone.json

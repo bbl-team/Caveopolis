@@ -22,6 +22,7 @@ public class VanillaResults {
     public static final NonNullList<ItemStack> LEAVES;
     public static final NonNullList<ItemStack> SAPLING;
     public static final NonNullList<ItemStack> LOGS;
+    public static final NonNullList<ItemStack> PLANKS;
 
 
 
@@ -97,6 +98,11 @@ public class VanillaResults {
         BRICKS = NonNullList.create();
         for (String color : new VanillaResults().colors) {
             BRICKS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_BRICKS.get(), 1), color));
+        }
+
+        PLANKS = NonNullList.create();
+        for (String color : new VanillaResults().colors) {
+            PLANKS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_PLANKS.get(), 1), color));
         }
 
 
