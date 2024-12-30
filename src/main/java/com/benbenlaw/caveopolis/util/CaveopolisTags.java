@@ -1,10 +1,7 @@
 package com.benbenlaw.caveopolis.util;
 
 import com.benbenlaw.caveopolis.Caveopolis;
-import com.benbenlaw.core.Core;
 import com.benbenlaw.core.util.CoreTags;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;

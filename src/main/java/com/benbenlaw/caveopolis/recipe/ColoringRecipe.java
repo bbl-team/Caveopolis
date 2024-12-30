@@ -1,7 +1,5 @@
 package com.benbenlaw.caveopolis.recipe;
 
-import com.benbenlaw.caveopolis.Caveopolis;
-import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.util.CaveopolisTags;
 import com.benbenlaw.core.item.CoreDataComponents;
 import com.benbenlaw.core.item.colored.ColoredBlockItem;

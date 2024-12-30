@@ -1,29 +1,21 @@
 package com.benbenlaw.caveopolis.screen;
 
 import com.benbenlaw.caveopolis.Caveopolis;
-import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
+import com.benbenlaw.caveopolis.network.payload.NextPagePayload;
+import com.benbenlaw.caveopolis.network.payload.PreviousPagePayload;
 import com.benbenlaw.core.screen.util.CoreButtons;
 import com.benbenlaw.core.screen.util.TooltipArea;
 import com.benbenlaw.core.util.MouseUtil;
 import com.mojang.blaze3d.systems.RenderSystem;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
-import net.minecraft.client.resources.sounds.SimpleSoundInstance;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.crafting.RecipeHolder;
 import net.neoforged.neoforge.network.PacketDistributor;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
 
 
 
@@ -98,15 +90,16 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
 
             // top button cycles backwards
             this.addRenderableWidget(new ImageButton(this.leftPos + 24, this.height / 2 - 67, 20, 18, CoreButtons.INCREASE_BUTTONS, (pressed) -> {
+                PacketDistributor.sendToServer(new PreviousPagePayload(0));
+
                 this.menu.previousPage();
             }));
             // bottom button cycles forwards
             this.addRenderableWidget(new ImageButton(this.leftPos + 24, this.height / 2 - 31, 20, 18, CoreButtons.DECREASE_BUTTONS, (pressed) -> {
-                this.menu.nextPage();
+                PacketDistributor.sendToServer(new NextPagePayload(0));
             }));
 
 
         }
     }
-
 }

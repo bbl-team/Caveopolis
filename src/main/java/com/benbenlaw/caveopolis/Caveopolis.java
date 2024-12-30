@@ -3,6 +3,7 @@ package com.benbenlaw.caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.item.CaveopolisCreativeTab;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
+import com.benbenlaw.caveopolis.network.CaveopolisMessages;
 import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
 import com.benbenlaw.caveopolis.screen.CaveopolisMenuTypes;
 import com.benbenlaw.caveopolis.screen.WorktableScreen;
@@ -22,6 +23,7 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -46,14 +48,19 @@ public class Caveopolis {
             modEventBus.register(new CaveopolisColorHandler());
         }
 
+
         modEventBus.addListener(this::registerCapabilities);
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::networkingSetup);
     }
 
     public void registerCapabilities(RegisterCapabilitiesEvent event) {
        // ModBlockEntities.registerCapabilities(event);
     }
 
+    public void networkingSetup(RegisterPayloadHandlersEvent event) {
+        CaveopolisMessages.registerNetworking(event);
+    }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         LogMaps logMaps = new LogMaps();

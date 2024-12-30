@@ -2,7 +2,6 @@ package com.benbenlaw.caveopolis.item;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
-import com.benbenlaw.caveopolis.integrations.jei.BlockSubtypeInterpreter;
 import com.benbenlaw.core.block.colored.util.ColorMap;
 import com.benbenlaw.core.item.CoreDataComponents;
 import net.minecraft.core.registries.Registries;

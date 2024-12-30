@@ -1,14 +1,10 @@
 package com.benbenlaw.caveopolis.recipe;
 
-import com.benbenlaw.caveopolis.util.CaveopolisTags;
 import com.benbenlaw.core.block.colored.ColoredFlower;
 import com.benbenlaw.core.block.colored.util.ColorMap;
 import com.benbenlaw.core.item.CoreDataComponents;
 import com.benbenlaw.core.item.colored.ColoredBlockItem;
-import com.benbenlaw.core.item.colored.ColoringItem;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;

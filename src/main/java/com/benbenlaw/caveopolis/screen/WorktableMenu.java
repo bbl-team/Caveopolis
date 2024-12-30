@@ -4,16 +4,19 @@ import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
 import com.benbenlaw.core.item.CoreDataComponents;
 import com.benbenlaw.core.item.colored.ColoringItem;
 import com.benbenlaw.core.screen.util.CoreSlotTextures;
-import com.benbenlaw.core.screen.util.slot.CoreSlot;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.*;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.InventoryMenu;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -22,9 +25,11 @@ import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 public class WorktableMenu extends AbstractContainerMenu {
@@ -65,22 +70,23 @@ public class WorktableMenu extends AbstractContainerMenu {
         addPlayerInventory(inventory);
         addPlayerHotbar(inventory);
 
+        //Input Slot
         this.addSlot(new Slot(container, INPUT_SLOT, 6, 16) {
 
             @Override
-            public boolean mayPlace(ItemStack stack ) {
+            public boolean mayPlace(@NotNull ItemStack stack ) {
                 return !(stack.getItem() instanceof ColoringItem);
 
             }
 
             @Override
-            public void set(ItemStack stack) {
+            public void set(@NotNull ItemStack stack) {
                 super.set(stack);
                 updateOutputSlots();
             }
 
             @Override
-            public void onTake(Player player, ItemStack stack) {
+            public void onTake(@NotNull Player player, @NotNull ItemStack stack) {
                 super.onTake(player, stack);
                 updateOutputSlots();
             }
@@ -92,36 +98,33 @@ public class WorktableMenu extends AbstractContainerMenu {
         });
 
         // Spray Slot
-
         this.addSlot(new Slot(container, SPRAY_SLOT, 6, 52) {
 
             @Override
-            public boolean mayPlace(ItemStack stack) {
+            public boolean mayPlace(@NotNull ItemStack stack) {
                 return stack.getItem() instanceof ColoringItem;
             }
 
             @Override
-            public void set(ItemStack stack) {
+            public void set(@NotNull ItemStack stack) {
                 super.set(stack);
                 resetTotalItemsIfSprayCanChanged();
                 updateOutputSlots();
             }
 
             @Override
-            public void onTake(Player player, ItemStack stack) {
+            public void onTake(@NotNull Player player, @NotNull ItemStack stack) {
                 super.onTake(player, stack);
                 resetTotalItemsIfSprayCanChanged();
                 updateOutputSlots();
             }
 
-            // Helper method to reset totalItems if spray can changes
             private void resetTotalItemsIfSprayCanChanged() {
-                // If the spray can has been placed or removed, reset the totalItems
                 totalItems = 0;
             }
         });
 
-        // Define Output Slots
+        // Output Slots
         for (int row = 0; row < rows; row++) {
             for (int col = 0; col < columns; col++) {
                 int xPos = xStart + (col * xOffset);
@@ -133,7 +136,7 @@ public class WorktableMenu extends AbstractContainerMenu {
                     }
 
                     @Override
-                    public void onTake(Player player, ItemStack stack) {
+                    public void onTake(@NotNull Player player, @NotNull ItemStack stack) {
                         super.onTake(player, stack);
 
                         updateOutputSlots();
@@ -169,28 +172,6 @@ public class WorktableMenu extends AbstractContainerMenu {
                 .collect(Collectors.toList());
     }
 
-    public int getRecipeOutputCount() {
-        int count = 0;
-
-        if (container.getItem(23).isEmpty())
-
-        // Loop through all output slots
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < columns; col++) {
-                // Calculate the slot index based on the row and column
-                int slotIndex = OUTPUT_SLOT + (row * columns) + col;
-                ItemStack stack = container.getItem(slotIndex);
-
-                // Check if the slot contains a non-empty item stack
-                if (!stack.isEmpty()) {
-                    count++; // Increment count for non-empty slots
-                }
-            }
-        }
-
-        return count;
-    }
-
     public static List<RecipeHolder<WorktableRecipe>> getRecipesForInput(ItemStack input, Container container, Level level) {
         RecipeManager recipeManager = level.getRecipeManager();
 
@@ -217,47 +198,31 @@ public class WorktableMenu extends AbstractContainerMenu {
         ItemStack inputItem = container.getItem(INPUT_SLOT);
 
         if (inputItem.isEmpty()) {
-            // Clear output slots if no input item exists
-            for (int i = 2; i < container.getContainerSize(); i++) {
-                container.setItem(i, ItemStack.EMPTY);
-            }
+            clearOutputSlots();
             currentPage = 0;
             totalItems = 0;
             return;
         }
 
-
-        // Flatten the recipe results
         List<ItemStack> flattenedList = getRecipeResults(inputItem)
                 .stream()
                 .flatMap(List::stream)
                 .toList();
 
-        // Pagination logic
         int startIndex = currentPage * ITEMS_PER_PAGE;
         int endIndex = Math.min(startIndex + ITEMS_PER_PAGE, flattenedList.size());
 
-        // Clear all output slots before applying the new results
-        for (int i = 2; i < container.getContainerSize(); i++) {
-            container.setItem(i, ItemStack.EMPTY);
-        }
-
-        // Get spray can color if available
+        clearOutputSlots();
         DyeColor sprayColor = getSprayColor();
-
-        // Maintain a set of added items to ensure uniqueness
         Set<ItemStack> addedItems = new HashSet<>();
 
-        // Set items to output slots
         for (int i = startIndex, outputIndex = 2; i < endIndex && outputIndex < container.getContainerSize(); i++) {
             ItemStack resultItem = flattenedList.get(i).copy();
 
-            // Apply spray can color if available
             if (sprayColor != null) {
                 resultItem.set(CoreDataComponents.COLOR, sprayColor.toString());
             }
 
-            // Check if a similar item is already added to output slots
             boolean isDuplicate = addedItems.stream().anyMatch(existingItem ->
                     ItemStack.isSameItemSameComponents(existingItem, resultItem) &&
                             Objects.equals(existingItem.getComponents(), resultItem.getComponents())
@@ -265,62 +230,54 @@ public class WorktableMenu extends AbstractContainerMenu {
 
             if (!isDuplicate) {
                 container.setItem(outputIndex, resultItem);
-                totalItems++;
                 addedItems.add(resultItem);
                 outputIndex++;
             }
         }
+
+        totalItems = addedItems.size();
+        container.setChanged();
     }
 
+
+    private void clearOutputSlots() {
+        for (int i = 2; i < container.getContainerSize(); i++) {
+            container.setItem(i, ItemStack.EMPTY);
+        }
+    }
 
 
     public void nextPage() {
         List<ItemStack> flattenedList = getRecipeResults(container.getItem(INPUT_SLOT))
                 .stream()
-                .flatMap(List::stream) // Flatten the nested lists
+                .flatMap(List::stream)
                 .toList();
 
         int maxPages = (int) Math.ceil((double) flattenedList.size() / ITEMS_PER_PAGE);
-        System.out.println("Max Pages: " + maxPages);
-        System.out.println("total items: " + flattenedList.size());
         if (currentPage < maxPages - 1) {
             currentPage++;
-            System.out.println("Current Page: " + currentPage);
+            clearOutputSlots();
             updateOutputSlots();
+            slotsChanged(container);
+
         }
     }
 
     public void previousPage() {
         List<ItemStack> flattenedList = getRecipeResults(container.getItem(INPUT_SLOT))
                 .stream()
-                .flatMap(List::stream) // Flatten the nested lists
+                .flatMap(List::stream)
                 .toList();
 
         int maxPages = (int) Math.ceil((double) flattenedList.size() / ITEMS_PER_PAGE);
-        System.out.println("Max Pages: " + maxPages);
 
         if (maxPages > 0) {
             if (currentPage > 0) {
                 currentPage--;
             }
-            System.out.println("Current Page: " + currentPage);
+            clearOutputSlots();
             updateOutputSlots();
         }
-    }
-
-    // Helper method to compare item stacks more accurately
-    private boolean isItemInSet(Set<ItemStack> addedItems, ItemStack result) {
-        // Compare by item, count, and NBT data (if necessary)
-        for (ItemStack stack : addedItems) {
-            // Compare the base item and count first
-            if (ItemStack.isSameItem(stack, result) && stack.getCount() == result.getCount()) {
-                // Compare NBT data (use the getOrCreateTag method)
-                if (stack.getComponents().equals(result.getComponents())) {
-                    return true;  // The items are considered the same
-                }
-            }
-        }
-        return false;
     }
 
     boolean hasSprayCan() {
@@ -335,6 +292,27 @@ public class WorktableMenu extends AbstractContainerMenu {
     }
 
 
+    protected void clearContainer(Player player, Container container) {
+        if (!player.isAlive() || player instanceof ServerPlayer && ((ServerPlayer) player).hasDisconnected()) {
+            for (int slot : new int[]{0, 1}) {
+                player.drop(container.removeItemNoUpdate(slot), false);
+            }
+        } else {
+            Inventory inventory = player.getInventory();
+            for (int slot : new int[]{0, 1}) {
+                if (inventory.player instanceof ServerPlayer) {
+                    inventory.placeItemBackInInventory(container.removeItemNoUpdate(slot));
+                }
+            }
+        }
+    }
+
+    @Override
+    public void removed(@NotNull Player player) {
+        this.clearContainer(player, container);
+
+
+    }
 
 
 
@@ -367,7 +345,6 @@ public class WorktableMenu extends AbstractContainerMenu {
                 return ItemStack.EMPTY;
             }
         } else {
-            System.out.println("Invalid slotIndex:" + index);
             return ItemStack.EMPTY;
         }
         // If stack size == 0 (the entire stack was moved) set slot contents to null
@@ -398,4 +375,5 @@ public class WorktableMenu extends AbstractContainerMenu {
             this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
         }
     }
+
 }
