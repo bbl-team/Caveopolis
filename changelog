@@ -18,6 +18,10 @@ ADD STRIPPED LOGS TAGS
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.1.4
+Core Version is now 1.1.27
+Fixed fixed JEI/ EMI showing a black texture for the items in recipes
+
 5.1.3
 Tweaks to Occlusion of blocks
 
