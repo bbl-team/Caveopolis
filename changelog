@@ -18,6 +18,9 @@ ADD STRIPPED LOGS TAGS
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.1.1
+Fixed some recipes not showing full list of outputs when a spray can is being used
+
 5.1.0
 Changed some tree spawning to support tags for biomes
 Rewrote the worktable to use a new system for crafting

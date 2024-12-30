@@ -26,10 +26,7 @@ import net.minecraft.world.item.crafting.SingleRecipeInput;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class WorktableMenu extends AbstractContainerMenu {
@@ -209,26 +206,47 @@ public class WorktableMenu extends AbstractContainerMenu {
                 .flatMap(List::stream)
                 .toList();
 
+        // Apply spray color before filtering out duplicates
+        DyeColor sprayColor = getSprayColor();
+        if (sprayColor != null) {
+            flattenedList.forEach(item -> item.set(CoreDataComponents.COLOR, sprayColor.toString()));
+        }
+
+        // Track duplicates and maintain order
+        List<ItemStack> uniqueItemList = new ArrayList<>();
+        Set<ItemStack> seenItems = new HashSet<>();
+
+        for (ItemStack item : flattenedList) {
+            boolean isDuplicate = seenItems.stream().anyMatch(existingItem ->
+                    ItemStack.isSameItemSameComponents(existingItem, item) &&
+                            Objects.equals(existingItem.getComponents(), item.getComponents())
+            );
+
+            // Add the item to the unique list if it's not a duplicate
+            if (!isDuplicate) {
+                uniqueItemList.add(item);
+                seenItems.add(item);  // Track this item as seen
+            }
+        }
+
+        // Adjust paging logic: Recalculate start and end indices based on the number of unique items
         int startIndex = currentPage * ITEMS_PER_PAGE;
-        int endIndex = Math.min(startIndex + ITEMS_PER_PAGE, flattenedList.size());
+        int endIndex = Math.min(startIndex + ITEMS_PER_PAGE, uniqueItemList.size());
 
         clearOutputSlots();
-        DyeColor sprayColor = getSprayColor();
         Set<ItemStack> addedItems = new HashSet<>();
 
+        // Loop through the unique items list and add them to the container
         for (int i = startIndex, outputIndex = 2; i < endIndex && outputIndex < container.getContainerSize(); i++) {
-            ItemStack resultItem = flattenedList.get(i).copy();
+            ItemStack resultItem = uniqueItemList.get(i).copy();
 
+            // Ensure spray color is applied only once after deduplication
             if (sprayColor != null) {
                 resultItem.set(CoreDataComponents.COLOR, sprayColor.toString());
             }
 
-            boolean isDuplicate = addedItems.stream().anyMatch(existingItem ->
-                    ItemStack.isSameItemSameComponents(existingItem, resultItem) &&
-                            Objects.equals(existingItem.getComponents(), resultItem.getComponents())
-            );
-
-            if (!isDuplicate) {
+            // Insert unique items into the container, ensuring no duplicates
+            if (!addedItems.contains(resultItem)) {
                 container.setItem(outputIndex, resultItem);
                 addedItems.add(resultItem);
                 outputIndex++;
@@ -238,6 +256,7 @@ public class WorktableMenu extends AbstractContainerMenu {
         totalItems = addedItems.size();
         container.setChanged();
     }
+
 
 
     private void clearOutputSlots() {
