@@ -28,22 +28,22 @@ public class CaveopolisBlocks {
     //Misc Blocks
     public static final DeferredBlock<Block> COLORED_CRAFTING_TABLE = registerBlockWithoutBlockItem("colored_crafting_table",
             () -> new ColoredCraftingTable(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE).sound(SoundType.WOOD)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
 
     //Colored Tiles
     public static final DeferredBlock<Block> COLORED_TILE = registerBlockWithoutBlockItem("colored_tile",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_TILE_SLAB = registerBlockWithoutBlockItem("colored_tile_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_TILE_STAIRS = registerBlockWithoutBlockItem("colored_tile_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_TILE.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_TILE_WALL = registerBlockWithoutBlockItem("colored_tile_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_TILE_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_tile_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -57,17 +57,17 @@ public class CaveopolisBlocks {
     //Colored Polished Stone
     public static final DeferredBlock<Block> COLORED_POLISHED_STONE = registerBlockWithoutBlockItem("colored_polished_stone",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_POLISHED_STONE_SLAB = registerBlockWithoutBlockItem("colored_polished_stone_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_POLISHED_STONE_STAIRS = registerBlockWithoutBlockItem("colored_polished_stone_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_POLISHED_STONE.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_ANDESITE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_POLISHED_STONE_WALL = registerBlockWithoutBlockItem("colored_polished_stone_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_POLISHED_STONE_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_polished_stone_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -83,18 +83,18 @@ public class CaveopolisBlocks {
 
     public static final DeferredBlock<Block> COLORED_STONE = registerBlockWithoutBlockItem("colored_stone",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
 
     public static final DeferredBlock<Block> COLORED_STONE_SLAB = registerBlockWithoutBlockItem("colored_stone_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_STONE_STAIRS = registerBlockWithoutBlockItem("colored_stone_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_STONE.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_STONE_WALL = registerBlockWithoutBlockItem("colored_stone_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_STONE_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_stone_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -108,17 +108,17 @@ public class CaveopolisBlocks {
 
     public static final DeferredBlock<Block> COLORED_STONE_BRICKS = registerBlockWithoutBlockItem("colored_stone_bricks",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_STONE_BRICK_SLAB = registerBlockWithoutBlockItem("colored_stone_brick_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_STONE_BRICK_STAIRS = registerBlockWithoutBlockItem("colored_stone_brick_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_STONE_BRICKS.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_STONE_BRICK_WALL = registerBlockWithoutBlockItem("colored_stone_brick_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_STONE_BRICK_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_stone_brick_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -132,17 +132,17 @@ public class CaveopolisBlocks {
 
     public static final DeferredBlock<Block> COLORED_BRICKS = registerBlockWithoutBlockItem("colored_bricks",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICKS).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_BRICK_SLAB = registerBlockWithoutBlockItem("colored_brick_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_BRICK_STAIRS = registerBlockWithoutBlockItem("colored_brick_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_BRICKS.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_BRICK_WALL = registerBlockWithoutBlockItem("colored_brick_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.BRICK_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_BRICK_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_brick_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -156,17 +156,17 @@ public class CaveopolisBlocks {
 
     public static final DeferredBlock<Block> COLORED_COBBLESTONE = registerBlockWithoutBlockItem("colored_cobblestone",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_COBBLESTONE_SLAB = registerBlockWithoutBlockItem("colored_cobblestone_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_COBBLESTONE_STAIRS = registerBlockWithoutBlockItem("colored_cobblestone_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_COBBLESTONE.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_COBBLESTONE_WALL = registerBlockWithoutBlockItem("colored_cobblestone_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_COBBLESTONE_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_cobblestone_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -180,17 +180,17 @@ public class CaveopolisBlocks {
 
     public static final DeferredBlock<Block> COLORED_COBBLESTONE_BRICKS = registerBlockWithoutBlockItem("colored_cobblestone_bricks",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_COBBLESTONE_BRICK_SLAB = registerBlockWithoutBlockItem("colored_cobblestone_brick_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_COBBLESTONE_BRICK_STAIRS = registerBlockWithoutBlockItem("colored_cobblestone_brick_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_COBBLESTONE_BRICK_WALL = registerBlockWithoutBlockItem("colored_cobblestone_brick_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_COBBLESTONE_BRICK_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_cobblestone_brick_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -204,17 +204,17 @@ public class CaveopolisBlocks {
 
     public static final DeferredBlock<Block> COLORED_MARBLE = registerBlockWithoutBlockItem("colored_marble",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_MARBLE_SLAB = registerBlockWithoutBlockItem("colored_marble_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_MARBLE_STAIRS = registerBlockWithoutBlockItem("colored_marble_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_MARBLE.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_MARBLE_WALL = registerBlockWithoutBlockItem("colored_marble_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_MARBLE_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_marble_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -228,17 +228,17 @@ public class CaveopolisBlocks {
 
     public static final DeferredBlock<Block> COLORED_MARBLE_BRICKS = registerBlockWithoutBlockItem("colored_marble_bricks",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_MARBLE_BRICK_SLAB = registerBlockWithoutBlockItem("colored_marble_brick_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_MARBLE_BRICK_STAIRS = registerBlockWithoutBlockItem("colored_marble_brick_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_MARBLE_BRICKS.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_MARBLE_BRICK_WALL = registerBlockWithoutBlockItem("colored_marble_brick_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_MARBLE_BRICK_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_marble_brick_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -253,17 +253,17 @@ public class CaveopolisBlocks {
     //Colored Mosaic
     public static final DeferredBlock<Block> COLORED_MOSAIC = registerBlockWithoutBlockItem("colored_mosaic",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_MOSAIC_SLAB = registerBlockWithoutBlockItem("colored_mosaic_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_MOSAIC_STAIRS = registerBlockWithoutBlockItem("colored_mosaic_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_MOSAIC.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_MOSAIC_WALL = registerBlockWithoutBlockItem("colored_mosaic_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_MOSAIC_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_mosaic_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -276,17 +276,17 @@ public class CaveopolisBlocks {
     //Colored Chaotic
     public static final DeferredBlock<Block> COLORED_CHAOTIC = registerBlockWithoutBlockItem("colored_chaotic",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_CHAOTIC_SLAB = registerBlockWithoutBlockItem("colored_chaotic_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_CHAOTIC_STAIRS = registerBlockWithoutBlockItem("colored_chaotic_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_CHAOTIC.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_CHAOTIC_WALL = registerBlockWithoutBlockItem("colored_chaotic_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_CHAOTIC_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_chaotic_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -299,17 +299,17 @@ public class CaveopolisBlocks {
     //Colored Triple
     public static final DeferredBlock<Block> COLORED_TRIPLE = registerBlockWithoutBlockItem("colored_triple",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_TRIPLE_SLAB = registerBlockWithoutBlockItem("colored_triple_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_TRIPLE_STAIRS = registerBlockWithoutBlockItem("colored_triple_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_TRIPLE.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_TRIPLE_WALL = registerBlockWithoutBlockItem("colored_triple_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_TRIPLE_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_triple_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -322,17 +322,17 @@ public class CaveopolisBlocks {
     //Colored Braid
     public static final DeferredBlock<Block> COLORED_BRAID = registerBlockWithoutBlockItem("colored_braid",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_BRAID_SLAB = registerBlockWithoutBlockItem("colored_braid_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_BRAID_STAIRS = registerBlockWithoutBlockItem("colored_braid_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_BRAID.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_BRAID_WALL = registerBlockWithoutBlockItem("colored_braid_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_BRAID_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_braid_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -345,17 +345,17 @@ public class CaveopolisBlocks {
     //Colored Encased
     public static final DeferredBlock<Block> COLORED_ENCASED = registerBlockWithoutBlockItem("colored_encased",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_ENCASED_SLAB = registerBlockWithoutBlockItem("colored_encased_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_ENCASED_STAIRS = registerBlockWithoutBlockItem("colored_encased_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_ENCASED.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_ENCASED_WALL = registerBlockWithoutBlockItem("colored_encased_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_ENCASED_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_encased_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -368,17 +368,17 @@ public class CaveopolisBlocks {
     //Colored Road
     public static final DeferredBlock<Block> COLORED_ROAD = registerBlockWithoutBlockItem("colored_road",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_ROAD_SLAB = registerBlockWithoutBlockItem("colored_road_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_ROAD_STAIRS = registerBlockWithoutBlockItem("colored_road_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_ROAD.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).sound(SoundType.STONE)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_ROAD_WALL = registerBlockWithoutBlockItem("colored_road_wall",
             () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).sound(SoundType.STONE)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_ROAD_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_road_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
@@ -420,14 +420,14 @@ public class CaveopolisBlocks {
                     .noOcclusion().lightLevel(litBlockEmission()).isSuffocating((state, world, pos) -> false)));
     public static final DeferredBlock<Block> COLORED_PLANKS = registerBlockWithoutBlockItem("colored_planks",
             () -> new FlammableColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).sound(SoundType.WOOD)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_PLANK_SLAB = registerBlockWithoutBlockItem("colored_plank_slab",
             () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).sound(SoundType.WOOD)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
     public static final DeferredBlock<Block> COLORED_PLANK_STAIRS = registerBlockWithoutBlockItem("colored_plank_stairs",
             () -> {BlockState blockState = CaveopolisBlocks.COLORED_PLANKS.get().defaultBlockState();
                 return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS).sound(SoundType.WOOD)
-                        .lightLevel(litBlockEmission()).noOcclusion());});
+                        .lightLevel(litBlockEmission()));});
     public static final DeferredBlock<Block> COLORED_PLANK_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_plank_pressure_plate",
             () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.EVERYTHING,
                     BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE).sound(SoundType.WOOD)
@@ -452,7 +452,7 @@ public class CaveopolisBlocks {
 
     public static final DeferredBlock<Block> COLORED_DIRT = registerBlockWithoutBlockItem("colored_dirt",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).sound(SoundType.GRAVEL)
-                    .lightLevel(litBlockEmission()).noOcclusion()));
+                    .lightLevel(litBlockEmission())));
 
 
 

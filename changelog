@@ -18,6 +18,12 @@ ADD STRIPPED LOGS TAGS
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.1.3
+Tweaks to Occlusion of blocks
+
+5.1.2
+Caveopolis Blocks should now longer allow light through
+
 5.1.1
 Fixed some recipes not showing full list of outputs when a spray can is being used
 
