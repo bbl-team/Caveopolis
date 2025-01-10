@@ -11,8 +11,9 @@ public class CaveopolisColorHandler {
     @SubscribeEvent
     public void registerBlockColors(final RegisterColorHandlersEvent.Block event) {
 
-        //Colored Crafting Table
+        //Misc Blocks
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_CRAFTING_TABLE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DIRT.get());
 
         //Colored Flowers
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POPPY.get());
@@ -51,6 +52,14 @@ public class CaveopolisColorHandler {
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_STONE_BRICK_WALL.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_STONE_BRICK_PRESSURE_PLATE.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_STONE_BRICK_BUTTON.get());
+
+        //Colored Brick
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BRICKS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BRICK_SLAB.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BRICK_STAIRS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BRICK_WALL.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BRICK_PRESSURE_PLATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BRICK_BUTTON.get());
 
         //Colored Cobblestone
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_COBBLESTONE.get());
@@ -132,7 +141,7 @@ public class CaveopolisColorHandler {
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_ROAD_BUTTON.get());
 
-
+        //Colored Planks/Logs
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_LOG.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_WOOD.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.STRIPPED_COLORED_LOG.get());
@@ -152,21 +161,14 @@ public class CaveopolisColorHandler {
 
 
 
-        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BRICKS.get());
-        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_STONE_BRICKS.get());
-        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DIRT.get());
-        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_COBBLESTONE.get());
-        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
-        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_MARBLE.get());
-        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_MARBLE_BRICKS.get());
-
     }
 
     @SubscribeEvent
         public void onItemColors(RegisterColorHandlersEvent.Item event) {
 
-        //Colored Crafting Table
+        //Misc Items Blocks
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_CRAFTING_TABLE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DIRT.get().asItem());
 
         //Colored Items
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_APPLE.get().asItem());
@@ -297,10 +299,6 @@ public class CaveopolisColorHandler {
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_ROAD_BUTTON.get().asItem());
 
 
-
-
-
-
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_LOG.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_WOOD.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.STRIPPED_COLORED_LOG.get().asItem());
@@ -319,13 +317,6 @@ public class CaveopolisColorHandler {
 
 
 
-        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BRICKS.get().asItem());
-        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_STONE_BRICKS.get().asItem());
-        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DIRT.get().asItem());
-        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_COBBLESTONE.get().asItem());
-        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_COBBLESTONE_BRICKS.get().asItem());
-        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_MARBLE.get().asItem());
-        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_MARBLE_BRICKS.get().asItem());
 
     }
 }

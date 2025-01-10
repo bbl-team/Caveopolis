@@ -460,7 +460,7 @@ public class CaveopolisBlocks {
 
 
     private static <T extends Block> DeferredBlock<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
-        return (DeferredBlock<T>) BLOCKS.register(name, block);
+        return BLOCKS.register(name, block);
     }
 
     private static ToIntFunction<BlockState> litBlockEmission() {

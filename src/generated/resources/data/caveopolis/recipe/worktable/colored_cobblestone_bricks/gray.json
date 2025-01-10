@@ -11,40 +11,35 @@
   "results": [
     {
       "components": {
-        "bblcore:color": "gray",
-        "bblcore:lit": false
+        "bblcore:color": "gray"
       },
       "count": 2,
       "id": "caveopolis:colored_cobblestone_brick_slab"
     },
     {
       "components": {
-        "bblcore:color": "gray",
-        "bblcore:lit": false
+        "bblcore:color": "gray"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_brick_stairs"
     },
     {
       "components": {
-        "bblcore:color": "gray",
-        "bblcore:lit": false
+        "bblcore:color": "gray"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_brick_wall"
     },
     {
       "components": {
-        "bblcore:color": "gray",
-        "bblcore:lit": false
+        "bblcore:color": "gray"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_brick_pressure_plate"
     },
     {
       "components": {
-        "bblcore:color": "gray",
-        "bblcore:lit": false
+        "bblcore:color": "gray"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_brick_button"

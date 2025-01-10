@@ -11,64 +11,56 @@
   "results": [
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 2,
       "id": "caveopolis:colored_plank_slab"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_plank_stairs"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_plank_pressure_plate"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_plank_button"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_plank_fence"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_plank_fence_gate"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_plank_door"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_plank_trapdoor"

@@ -11,40 +11,35 @@
   "results": [
     {
       "components": {
-        "bblcore:color": "blue",
-        "bblcore:lit": false
+        "bblcore:color": "blue"
       },
       "count": 2,
       "id": "caveopolis:colored_road_slab"
     },
     {
       "components": {
-        "bblcore:color": "blue",
-        "bblcore:lit": false
+        "bblcore:color": "blue"
       },
       "count": 1,
       "id": "caveopolis:colored_road_stairs"
     },
     {
       "components": {
-        "bblcore:color": "blue",
-        "bblcore:lit": false
+        "bblcore:color": "blue"
       },
       "count": 1,
       "id": "caveopolis:colored_road_wall"
     },
     {
       "components": {
-        "bblcore:color": "blue",
-        "bblcore:lit": false
+        "bblcore:color": "blue"
       },
       "count": 1,
       "id": "caveopolis:colored_road_pressure_plate"
     },
     {
       "components": {
-        "bblcore:color": "blue",
-        "bblcore:lit": false
+        "bblcore:color": "blue"
       },
       "count": 1,
       "id": "caveopolis:colored_road_button"

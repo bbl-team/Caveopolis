@@ -18,6 +18,13 @@ ADD STRIPPED LOGS TAGS
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.1.6
+Fixed Colored Bricks Tint not being applied in world for its stairs, slabs, walls and buttons and pressure plates
+Fixed normal blocks not using the correct model causing the block to be visible all the time
+
+5.1.5
+Release version
+
 5.1.4
 Core Version is now 1.1.27
 Fixed fixed JEI/ EMI showing a black texture for the items in recipes

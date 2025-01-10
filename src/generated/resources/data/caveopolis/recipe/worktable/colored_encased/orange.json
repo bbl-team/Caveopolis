@@ -11,40 +11,35 @@
   "results": [
     {
       "components": {
-        "bblcore:color": "orange",
-        "bblcore:lit": false
+        "bblcore:color": "orange"
       },
       "count": 2,
       "id": "caveopolis:colored_encased_slab"
     },
     {
       "components": {
-        "bblcore:color": "orange",
-        "bblcore:lit": false
+        "bblcore:color": "orange"
       },
       "count": 1,
       "id": "caveopolis:colored_encased_stairs"
     },
     {
       "components": {
-        "bblcore:color": "orange",
-        "bblcore:lit": false
+        "bblcore:color": "orange"
       },
       "count": 1,
       "id": "caveopolis:colored_encased_wall"
     },
     {
       "components": {
-        "bblcore:color": "orange",
-        "bblcore:lit": false
+        "bblcore:color": "orange"
       },
       "count": 1,
       "id": "caveopolis:colored_encased_pressure_plate"
     },
     {
       "components": {
-        "bblcore:color": "orange",
-        "bblcore:lit": false
+        "bblcore:color": "orange"
       },
       "count": 1,
       "id": "caveopolis:colored_encased_button"

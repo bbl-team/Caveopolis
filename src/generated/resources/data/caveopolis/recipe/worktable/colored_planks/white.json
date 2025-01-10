@@ -10,66 +10,34 @@
   },
   "results": [
     {
-      "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
-      },
       "count": 2,
       "id": "caveopolis:colored_plank_slab"
     },
     {
-      "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
-      },
       "count": 1,
       "id": "caveopolis:colored_plank_stairs"
     },
     {
-      "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
-      },
       "count": 1,
       "id": "caveopolis:colored_plank_pressure_plate"
     },
     {
-      "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
-      },
       "count": 1,
       "id": "caveopolis:colored_plank_button"
     },
     {
-      "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
-      },
       "count": 1,
       "id": "caveopolis:colored_plank_fence"
     },
     {
-      "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
-      },
       "count": 1,
       "id": "caveopolis:colored_plank_fence_gate"
     },
     {
-      "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
-      },
       "count": 1,
       "id": "caveopolis:colored_plank_door"
     },
     {
-      "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
-      },
       "count": 1,
       "id": "caveopolis:colored_plank_trapdoor"
     }

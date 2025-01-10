@@ -6,257 +6,219 @@
   },
   "results": [
     {
+      "count": 1,
+      "id": "caveopolis:colored_cobblestone"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_cobblestone_bricks"
+    },
+    {
       "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
+        "bblcore:color": "orange"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "white",
-        "bblcore:lit": false
+        "bblcore:color": "orange"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "orange",
-        "bblcore:lit": false
+        "bblcore:color": "magenta"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "orange",
-        "bblcore:lit": false
+        "bblcore:color": "magenta"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "magenta",
-        "bblcore:lit": false
+        "bblcore:color": "light_blue"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "magenta",
-        "bblcore:lit": false
+        "bblcore:color": "light_blue"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "light_blue",
-        "bblcore:lit": false
+        "bblcore:color": "yellow"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "light_blue",
-        "bblcore:lit": false
+        "bblcore:color": "yellow"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "yellow",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "yellow",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "pink"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "pink"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "pink",
-        "bblcore:lit": false
+        "bblcore:color": "gray"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "pink",
-        "bblcore:lit": false
+        "bblcore:color": "gray"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "gray",
-        "bblcore:lit": false
+        "bblcore:color": "light_gray"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "gray",
-        "bblcore:lit": false
+        "bblcore:color": "light_gray"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "light_gray",
-        "bblcore:lit": false
+        "bblcore:color": "cyan"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "light_gray",
-        "bblcore:lit": false
+        "bblcore:color": "cyan"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "cyan",
-        "bblcore:lit": false
+        "bblcore:color": "purple"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "cyan",
-        "bblcore:lit": false
+        "bblcore:color": "purple"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "purple",
-        "bblcore:lit": false
+        "bblcore:color": "blue"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "purple",
-        "bblcore:lit": false
+        "bblcore:color": "blue"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "blue",
-        "bblcore:lit": false
+        "bblcore:color": "brown"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "blue",
-        "bblcore:lit": false
+        "bblcore:color": "brown"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "brown",
-        "bblcore:lit": false
+        "bblcore:color": "green"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "brown",
-        "bblcore:lit": false
+        "bblcore:color": "green"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "green",
-        "bblcore:lit": false
+        "bblcore:color": "red"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "green",
-        "bblcore:lit": false
+        "bblcore:color": "red"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"
     },
     {
       "components": {
-        "bblcore:color": "red",
-        "bblcore:lit": false
+        "bblcore:color": "black"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone"
     },
     {
       "components": {
-        "bblcore:color": "red",
-        "bblcore:lit": false
-      },
-      "count": 1,
-      "id": "caveopolis:colored_cobblestone_bricks"
-    },
-    {
-      "components": {
-        "bblcore:color": "black",
-        "bblcore:lit": false
-      },
-      "count": 1,
-      "id": "caveopolis:colored_cobblestone"
-    },
-    {
-      "components": {
-        "bblcore:color": "black",
-        "bblcore:lit": false
+        "bblcore:color": "black"
       },
       "count": 1,
       "id": "caveopolis:colored_cobblestone_bricks"

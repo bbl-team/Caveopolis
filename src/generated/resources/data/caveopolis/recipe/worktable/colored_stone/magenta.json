@@ -11,40 +11,35 @@
   "results": [
     {
       "components": {
-        "bblcore:color": "magenta",
-        "bblcore:lit": false
+        "bblcore:color": "magenta"
       },
       "count": 2,
       "id": "caveopolis:colored_stone_slab"
     },
     {
       "components": {
-        "bblcore:color": "magenta",
-        "bblcore:lit": false
+        "bblcore:color": "magenta"
       },
       "count": 1,
       "id": "caveopolis:colored_stone_stairs"
     },
     {
       "components": {
-        "bblcore:color": "magenta",
-        "bblcore:lit": false
+        "bblcore:color": "magenta"
       },
       "count": 1,
       "id": "caveopolis:colored_stone_wall"
     },
     {
       "components": {
-        "bblcore:color": "magenta",
-        "bblcore:lit": false
+        "bblcore:color": "magenta"
       },
       "count": 1,
       "id": "caveopolis:colored_stone_pressure_plate"
     },
     {
       "components": {
-        "bblcore:color": "magenta",
-        "bblcore:lit": false
+        "bblcore:color": "magenta"
       },
       "count": 1,
       "id": "caveopolis:colored_stone_button"

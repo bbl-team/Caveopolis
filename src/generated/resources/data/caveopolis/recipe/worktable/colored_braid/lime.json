@@ -11,40 +11,35 @@
   "results": [
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 2,
       "id": "caveopolis:colored_braid_slab"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_braid_stairs"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_braid_wall"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_braid_pressure_plate"
     },
     {
       "components": {
-        "bblcore:color": "lime",
-        "bblcore:lit": false
+        "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_braid_button"

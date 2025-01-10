@@ -11,40 +11,35 @@
   "results": [
     {
       "components": {
-        "bblcore:color": "green",
-        "bblcore:lit": false
+        "bblcore:color": "green"
       },
       "count": 2,
       "id": "caveopolis:colored_tile_slab"
     },
     {
       "components": {
-        "bblcore:color": "green",
-        "bblcore:lit": false
+        "bblcore:color": "green"
       },
       "count": 1,
       "id": "caveopolis:colored_tile_stairs"
     },
     {
       "components": {
-        "bblcore:color": "green",
-        "bblcore:lit": false
+        "bblcore:color": "green"
       },
       "count": 1,
       "id": "caveopolis:colored_tile_wall"
     },
     {
       "components": {
-        "bblcore:color": "green",
-        "bblcore:lit": false
+        "bblcore:color": "green"
       },
       "count": 1,
       "id": "caveopolis:colored_tile_pressure_plate"
     },
     {
       "components": {
-        "bblcore:color": "green",
-        "bblcore:lit": false
+        "bblcore:color": "green"
       },
       "count": 1,
       "id": "caveopolis:colored_tile_button"

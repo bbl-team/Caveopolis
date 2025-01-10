@@ -11,40 +11,35 @@
   "results": [
     {
       "components": {
-        "bblcore:color": "light_blue",
-        "bblcore:lit": false
+        "bblcore:color": "light_blue"
       },
       "count": 2,
       "id": "caveopolis:colored_chaotic_slab"
     },
     {
       "components": {
-        "bblcore:color": "light_blue",
-        "bblcore:lit": false
+        "bblcore:color": "light_blue"
       },
       "count": 1,
       "id": "caveopolis:colored_chaotic_stairs"
     },
     {
       "components": {
-        "bblcore:color": "light_blue",
-        "bblcore:lit": false
+        "bblcore:color": "light_blue"
       },
       "count": 1,
       "id": "caveopolis:colored_chaotic_wall"
     },
     {
       "components": {
-        "bblcore:color": "light_blue",
-        "bblcore:lit": false
+        "bblcore:color": "light_blue"
       },
       "count": 1,
       "id": "caveopolis:colored_chaotic_pressure_plate"
     },
     {
       "components": {
-        "bblcore:color": "light_blue",
-        "bblcore:lit": false
+        "bblcore:color": "light_blue"
       },
       "count": 1,
       "id": "caveopolis:colored_chaotic_button"
