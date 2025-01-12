@@ -1,0 +1,7 @@
+{
+  "parent": "caveopolis:block/tintable_cube_all",
+  "textures": {
+    "all": "caveopolis:block/colored_prismarine_bricks",
+    "particle": "caveopolis:block/colored_prismarine_bricks"
+  }
+}

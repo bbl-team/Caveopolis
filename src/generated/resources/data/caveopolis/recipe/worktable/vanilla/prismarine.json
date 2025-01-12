@@ -1,0 +1,336 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "count": 1,
+    "item": "minecraft:prismarine"
+  },
+  "results": [
+    {
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "red"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "red"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "red"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_prismarine_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine"
+    }
+  ]
+}

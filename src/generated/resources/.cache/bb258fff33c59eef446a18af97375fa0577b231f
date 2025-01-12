@@ -1,4 +1,4 @@
-// 1.21.1	2024-12-29T13:51:08.2122735	Tags for minecraft:item mod id caveopolis
+// 1.21.1	2025-01-10T19:58:54.6964662	Tags for minecraft:item mod id caveopolis
 d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/item/cobblestones.json
 95f5b03468bd3aa2c2a1c02cdd0e4256e6d25a82 data/c/tags/item/dyes/black.json
 0d5419b0a47a89516d5d2a3bd89c2a3356d0c338 data/c/tags/item/dyes/blue.json
@@ -20,7 +20,7 @@ dd529b34d5f6c355688ffec8a35c3653d9e23992 data/c/tags/item/dyes/purple.json
 64ac4ce99ee53006bf927785e437f5e6496d54d5 data/c/tags/item/foods.json
 29eea73cbd8ec17dc53cd6945cae68731010ffa1 data/c/tags/item/player_workstations/crafting_tables.json
 b75819d7071a4275dc5ead66d9f2b94e43d096ba data/c/tags/item/stones.json
-68ec7287bd463796681839c698d5e79ec0a1ba68 data/minecraft/tags/item/buttons.json
+7a84dbb4a25def62422bb2e4fb06ce01c260b96c data/minecraft/tags/item/buttons.json
 86c36de1c1071ab57ddc81f6262ac0325013dd1a data/minecraft/tags/item/dirt.json
 32620efec50c58cf379debfa92aa5629cf629773 data/minecraft/tags/item/enchantable/durability.json
 216122d541d4c8c3a2b032c32a0779c6f064cbd9 data/minecraft/tags/item/fences.json
@@ -30,10 +30,10 @@ fb427480bae956b646af4b3fdb08e622bcb5ad41 data/minecraft/tags/item/leaves.json
 4ca75022e59bb48bec31cff30f92c44cb17b1bde data/minecraft/tags/item/logs_that_burn.json
 c7aa2d079ea9449c5e8e5e8728a5afc68ef7f0f1 data/minecraft/tags/item/planks.json
 bdf59e3d37f450cd07de4aeb2077d1c5e5c51e02 data/minecraft/tags/item/saplings.json
-6da082083135dafc9a0f14e8bdffcc72bb5993d4 data/minecraft/tags/item/slabs.json
-e16f38d65a0492691a20b03f8b5bacc45c9b87eb data/minecraft/tags/item/stairs.json
-1a54c464969f15e8ad47f25c7f5ee01130f7ddf1 data/minecraft/tags/item/stone_bricks.json
-229fc20d5e7b3c7ca136bf2064197f5237dab12e data/minecraft/tags/item/walls.json
+d3b719a39bfa886246370e4217ce8e663310a52d data/minecraft/tags/item/slabs.json
+fbb4a9ff270a0903fa4871bcaa7a7fe8c5ae9ed0 data/minecraft/tags/item/stairs.json
+214eeb20a6abccaea31825d80170ccf880b487ca data/minecraft/tags/item/stone_bricks.json
+46792c02f24e0b3ee1ccadd5004f95283a9e6880 data/minecraft/tags/item/walls.json
 cb2da7e47f75a97d327fa16a3cdd19201713cb4f data/minecraft/tags/item/wooden_doors.json
 900edf6a7072a0f3fed1de33246e82a5eaf23444 data/minecraft/tags/item/wooden_slabs.json
 27a561f9d74556f65b8f526ef4e49fd71a0b4282 data/minecraft/tags/item/wooden_stairs.json

@@ -35,6 +35,38 @@ public class CaveopolisCreativeTab {
                         () -> new ItemStack(CaveopolisBlocks.COLORED_POPPY.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_DANDELION.get()),
 
+                        //Colored Cracked Stone Bricks
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_BUTTON.get()),
+
+                        //Colored Prismarine
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_BUTTON.get()),
+
+                        //Colored Prismarine Bricks
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_BUTTON.get()),
+
+                        //Colored Dark Prismarine
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_DARK_PRISMARINE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_DARK_PRISMARINE_WALL.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_DARK_PRISMARINE_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_DARK_PRISMARINE_BUTTON.get()),
+
                         //Colored Tile
                         () -> new ItemStack(CaveopolisBlocks.COLORED_TILE.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_TILE_SLAB.get()),

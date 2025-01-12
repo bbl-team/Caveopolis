@@ -14,6 +14,11 @@
     "caveopolis:colored_marble_slab",
     "caveopolis:colored_marble_brick_slab",
     "caveopolis:colored_cobblestone_slab",
-    "caveopolis:colored_cobblestone_brick_slab"
+    "caveopolis:colored_cobblestone_brick_slab",
+    "caveopolis:colored_brick_slab",
+    "caveopolis:colored_cracked_stone_brick_slab",
+    "caveopolis:colored_dark_prismarine_slab",
+    "caveopolis:colored_prismarine_slab",
+    "caveopolis:colored_prismarine_brick_slab"
   ]
 }

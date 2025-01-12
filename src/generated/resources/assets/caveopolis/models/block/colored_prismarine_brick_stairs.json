@@ -1,0 +1,9 @@
+{
+  "parent": "caveopolis:block/stairs/tintable_stairs",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "caveopolis:block/colored_prismarine_bricks",
+    "side": "caveopolis:block/colored_prismarine_bricks",
+    "top": "caveopolis:block/colored_prismarine_bricks"
+  }
+}

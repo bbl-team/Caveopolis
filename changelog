@@ -4,13 +4,12 @@ Caveopolis Mod Changelog
 Make the spray cans work in the enchanting table (probably something im missing)
 2x2 sapling for black sapling
 mass spraying (partially done)
-colored crafting tables
 colored furnace?
-colored flowers
 colored bookshelves (custom tint area = yuuukkkkkk)
 sort creative tab color by color always the same order
 spray cans stop the working of blocks on the same color
 recipes for colored logs to planks
+config for durations
 
 ADD STRIPPED LOGS TAGS
 
@@ -18,9 +17,16 @@ ADD STRIPPED LOGS TAGS
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
-5.1.6
+5.2.0
 Fixed Colored Bricks Tint not being applied in world for its stairs, slabs, walls and buttons and pressure plates
 Fixed normal blocks not using the correct model causing the block to be visible all the time
+Fixed some blocks still using vanilla models when caveopolis ones should be used
+Added tintable_cube_all.json allows blocks to be tinted used for simple blocks
+Added missing block tags and item tags for blocks (still could be missing some)
+Added stone to stone bricks in worktable
+Added Cracked Stone Bricks, Prismarine, Dark Prismarine and Prismarine Bricks block types
+Implemented a few new configs, recipe, startup nd world gen (BETA) currently only the startup config is used
+    can change the durability of the spray cans
 
 5.1.5
 Release version
@@ -57,7 +63,6 @@ Tweaked logs to planks recipes to use a hardcoded system to reduce the amount of
 JEI/EMI should now show the recipe when clicking on colored blocks in JEI/EMI
 Added colored apple, colored dirt and colored sapling worktable recipes
 Added Cloche Recipes for Caveopolis 5.0.0 and above
-
 
 5.0.19
 Updated to 1.21.1

@@ -50,6 +50,14 @@
       "id": "caveopolis:colored_tile"
     },
     {
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
       "components": {
         "bblcore:color": "orange"
       },
@@ -125,6 +133,20 @@
       },
       "count": 1,
       "id": "caveopolis:colored_tile"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
     },
     {
       "components": {
@@ -205,6 +227,20 @@
     },
     {
       "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "light_blue"
       },
       "count": 1,
@@ -279,6 +315,20 @@
       },
       "count": 1,
       "id": "caveopolis:colored_tile"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
     },
     {
       "components": {
@@ -359,6 +409,20 @@
     },
     {
       "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "lime"
       },
       "count": 1,
@@ -433,6 +497,20 @@
       },
       "count": 1,
       "id": "caveopolis:colored_tile"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
     },
     {
       "components": {
@@ -513,6 +591,20 @@
     },
     {
       "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "gray"
       },
       "count": 1,
@@ -590,6 +682,20 @@
     },
     {
       "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "light_gray"
       },
       "count": 1,
@@ -667,6 +773,20 @@
     },
     {
       "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "cyan"
       },
       "count": 1,
@@ -744,6 +864,20 @@
     },
     {
       "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "purple"
       },
       "count": 1,
@@ -821,6 +955,20 @@
     },
     {
       "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "blue"
       },
       "count": 1,
@@ -898,6 +1046,20 @@
     },
     {
       "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "brown"
       },
       "count": 1,
@@ -975,6 +1137,20 @@
     },
     {
       "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "green"
       },
       "count": 1,
@@ -1052,6 +1228,20 @@
     },
     {
       "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "red"
       },
       "count": 1,
@@ -1129,6 +1319,20 @@
     },
     {
       "components": {
+        "bblcore:color": "red"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "red"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
+    },
+    {
+      "components": {
         "bblcore:color": "black"
       },
       "count": 1,
@@ -1203,6 +1407,20 @@
       },
       "count": 1,
       "id": "caveopolis:colored_tile"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_stone_bricks"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_bricks"
     }
   ]
 }

@@ -23,6 +23,7 @@ public class VanillaResults {
     public static final NonNullList<ItemStack> SAPLING;
     public static final NonNullList<ItemStack> LOGS;
     public static final NonNullList<ItemStack> PLANKS;
+    public static final NonNullList<ItemStack> PRISMARINE;
 
 
 
@@ -42,6 +43,8 @@ public class VanillaResults {
             STONE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_ENCASED.get(), 1), color));
             STONE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_COBBLESTONE.get(), 1), color));
             STONE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_TILE.get(), 1), color));
+            STONE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_STONE_BRICKS.get(), 1), color));
+            STONE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), 1), color));
         }
 
         COBBLESTONE = NonNullList.create();
@@ -105,6 +108,12 @@ public class VanillaResults {
             PLANKS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_PLANKS.get(), 1), color));
         }
 
+        PRISMARINE = NonNullList.create();
+        for (String color : new VanillaResults().colors) {
+            PRISMARINE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_PRISMARINE.get(), 1), color));
+            PRISMARINE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), 1), color));
+            PRISMARINE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_DARK_PRISMARINE.get(), 1), color));
+        }
 
     }
 

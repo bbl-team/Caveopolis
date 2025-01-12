@@ -14,6 +14,10 @@
     "caveopolis:colored_braid_wall",
     "caveopolis:colored_encased_wall",
     "caveopolis:colored_road_wall",
-    "caveopolis:colored_tile_wall"
+    "caveopolis:colored_tile_wall",
+    "caveopolis:colored_cracked_stone_brick_wall",
+    "caveopolis:colored_dark_prismarine_wall",
+    "caveopolis:colored_prismarine_wall",
+    "caveopolis:colored_prismarine_brick_wall"
   ]
 }

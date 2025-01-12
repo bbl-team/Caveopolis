@@ -54,6 +54,38 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
         //Pickaxe
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
 
+                //Colored Cracked Stone Bricks
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_BUTTON.get())
+
+                //Colored Prismarine
+                .add(CaveopolisBlocks.COLORED_PRISMARINE.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BUTTON.get())
+
+                //Colored Dark Prismarine
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_BUTTON.get())
+
+                //Colored Prismarine Bricks
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_BUTTON.get())
+
                 //Colored Tile
                 .add(CaveopolisBlocks.COLORED_TILE.get())
                 .add(CaveopolisBlocks.COLORED_TILE_SLAB.get())
@@ -218,7 +250,11 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_BRAID_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_ENCASED_BUTTON.get())
                 .add(CaveopolisBlocks.COLORED_ROAD_BUTTON.get())
-                .add(CaveopolisBlocks.COLORED_TILE_BUTTON.get());
+                .add(CaveopolisBlocks.COLORED_TILE_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BUTTON.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_BUTTON.get());
 
         //Walls
         tag(BlockTags.WALLS)
@@ -236,7 +272,11 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_BRAID_WALL.get())
                 .add(CaveopolisBlocks.COLORED_ENCASED_WALL.get())
                 .add(CaveopolisBlocks.COLORED_ROAD_WALL.get())
-                .add(CaveopolisBlocks.COLORED_TILE_WALL.get());
+                .add(CaveopolisBlocks.COLORED_TILE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_WALL.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_WALL.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_WALL.get());
 
 
         //Pressure Plates
@@ -256,9 +296,11 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_BRAID_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_ENCASED_PRESSURE_PLATE.get())
                 .add(CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get())
-                .add(CaveopolisBlocks.COLORED_TILE_PRESSURE_PLATE.get());
-
-
+                .add(CaveopolisBlocks.COLORED_TILE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_PRESSURE_PLATE.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_PRESSURE_PLATE.get());
 
         //Stone
         tag(Tags.Blocks.STONES)
@@ -283,7 +325,13 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_MARBLE_STAIRS.get())
                 .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_STAIRS.get())
                 .add(CaveopolisBlocks.COLORED_COBBLESTONE_STAIRS.get())
-                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_STAIRS.get());
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_STAIRS.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_STAIRS.get());
+
 
         //Wooden Slab
         tag(BlockTags.WOODEN_SLABS)
@@ -305,14 +353,18 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_MARBLE_SLAB.get())
                 .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_SLAB.get())
                 .add(CaveopolisBlocks.COLORED_COBBLESTONE_SLAB.get())
-                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_SLAB.get());
-
-
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_SLAB.get())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_SLAB.get());
 
 
         //Stone Bricks
         tag(BlockTags.STONE_BRICKS)
-                .add(CaveopolisBlocks.COLORED_STONE_BRICKS.get());
+                .add(CaveopolisBlocks.COLORED_STONE_BRICKS.get())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get());
 
         //Planks
         tag(BlockTags.PLANKS)

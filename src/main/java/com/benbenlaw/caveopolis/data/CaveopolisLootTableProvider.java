@@ -51,6 +51,39 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
         this.dropSelf(CaveopolisBlocks.COLORED_DANDELION.get());
         this.add(CaveopolisBlocks.COLORED_POTTED_DANDELION.get(), createPotFlowerItemTable(CaveopolisBlocks.COLORED_DANDELION));
 
+        //Colored Cracked Stone Bricks
+        this.dropSelf(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_BUTTON.get());
+
+        //Colored Prismarine
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_BUTTON.get());
+
+        //Colored Prismarine Bricks
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_BUTTON.get());
+
+        //Colored Dark Prismarine
+        this.dropSelf(CaveopolisBlocks.COLORED_DARK_PRISMARINE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_DARK_PRISMARINE_WALL.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_DARK_PRISMARINE_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_DARK_PRISMARINE_BUTTON.get());
+
+
         //Colored Tile
         this.dropSelf(CaveopolisBlocks.COLORED_TILE.get());
         this.dropSelf(CaveopolisBlocks.COLORED_TILE_SLAB.get());

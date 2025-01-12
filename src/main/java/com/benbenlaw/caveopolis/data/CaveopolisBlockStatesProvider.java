@@ -30,8 +30,8 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
 
         //Misc Blocks
-        simpleBlockWithElements(CaveopolisBlocks.COLORED_DIRT.get());
         craftingTableBlock((ColoredCraftingTable) CaveopolisBlocks.COLORED_CRAFTING_TABLE.get(), CaveopolisBlocks.COLORED_PLANKS.get());
+        simpleBlockWithElements(CaveopolisBlocks.COLORED_DIRT.get());
 
         //Colored Plants
         flowerWithElements((FlowerBlock) CaveopolisBlocks.COLORED_POPPY.get());
@@ -42,6 +42,38 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         simpleBlock(CaveopolisBlocks.COLORED_POTTED_DANDELION.get(), models().singleTexture("colored_potted_dandelion",
                 ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "tintable_flower_pot_cross"), "plant",
                 blockTexture(CaveopolisBlocks.COLORED_DANDELION.get())).renderType("cutout"));
+
+        //Colored Cracked Stone Bricks
+        simpleBlockWithElements(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get());
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_SLAB.get(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_STAIRS.get(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_WALL.get(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_BUTTON.get(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get());
+
+        //Colored Prismarine
+        simpleBlockWithElements(CaveopolisBlocks.COLORED_PRISMARINE.get());
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_PRISMARINE_SLAB.get(), CaveopolisBlocks.COLORED_PRISMARINE.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_PRISMARINE_STAIRS.get(), CaveopolisBlocks.COLORED_PRISMARINE.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_PRISMARINE_WALL.get(), CaveopolisBlocks.COLORED_PRISMARINE.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_PRISMARINE_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_PRISMARINE.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_PRISMARINE_BUTTON.get(), CaveopolisBlocks.COLORED_PRISMARINE.get());
+
+        //Colored Prismarine Bricks
+        simpleBlockWithElements(CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get());
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_SLAB.get(), CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_STAIRS.get(), CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_WALL.get(), CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_BUTTON.get(), CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get());
+
+        //Colored Dark Prismarine
+        simpleBlockWithElements(CaveopolisBlocks.COLORED_DARK_PRISMARINE.get());
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.get(), CaveopolisBlocks.COLORED_DARK_PRISMARINE.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.get(), CaveopolisBlocks.COLORED_DARK_PRISMARINE.get());
+        wallWithElements((WallBlock) CaveopolisBlocks.COLORED_DARK_PRISMARINE_WALL.get(), CaveopolisBlocks.COLORED_DARK_PRISMARINE.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_DARK_PRISMARINE_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_DARK_PRISMARINE.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_DARK_PRISMARINE_BUTTON.get(), CaveopolisBlocks.COLORED_DARK_PRISMARINE.get());
 
         //Colored Tiles
         simpleBlockWithElements(CaveopolisBlocks.COLORED_TILE.get());
@@ -191,18 +223,8 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
 
 
-    }
-    
-    private void simpleBlockWithElements(Block block) {
-        ResourceLocation blockRegistryName = BuiltInRegistries.BLOCK.getKey(block);
-        ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(blockRegistryName.getNamespace(), "block/" + blockRegistryName.getPath());
 
-        ModelFile cube = models().withExistingParent(blockRegistryName.getPath(), "caveopolis:block/tintable_cube")
-                .texture("all", texture).renderType("cutout");
-
-        simpleBlockItem(block, cube);
     }
-    
 
     private void craftingTableBlock(ColoredCraftingTable craftingTable, Block planksBlock) {
 
@@ -232,6 +254,21 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
     }
 
+
+    private void simpleBlockWithElements(Block block) {
+        ResourceLocation blockRegistryName = BuiltInRegistries.BLOCK.getKey(block);
+        ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(blockRegistryName.getNamespace(), "block/" + blockRegistryName.getPath());
+
+        ModelFile cube = models().withExistingParent(blockRegistryName.getPath(),  "caveopolis:block/tintable_cube_all")
+                .texture("all",texture)
+                .texture("particle", texture);
+
+        simpleBlockItem(block, cube);
+
+        getVariantBuilder(block).forAllStatesExcept(state ->
+                ConfiguredModel.builder().modelFile(cube).build(), ColoredBlock.COLOR, ColoredBlock.LIT);
+    }
+    
     private void flowerWithElements(FlowerBlock flowerBlock) {
 
         ResourceLocation saplingBlockRegistryName = BuiltInRegistries.BLOCK.getKey(flowerBlock);
@@ -243,8 +280,6 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         getVariantBuilder(flowerBlock).forAllStatesExcept(state ->
                 ConfiguredModel.builder().modelFile(sapling).build(), ColoredFlower.LIT, ColoredFlower.COLOR);
     }
-    
-    
 
     private void saplingWithElements(SaplingBlock saplingBlock) {
 
@@ -362,6 +397,18 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
     }
 
+    private ModelFile blockWithElements(Block block) {
+
+        ResourceLocation blockRegistryName = BuiltInRegistries.BLOCK.getKey(block);
+        ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(blockRegistryName.getNamespace(), "block/" + blockRegistryName.getPath());
+
+        return models().cubeAll(blockRegistryName.getPath(), texture)
+                .element()
+                .from(0, 0, 0)
+                .to(16, 16, 16)
+                .allFaces((direction, face) -> face.texture("#all").tintindex(0))
+                .end();
+    }
 
     private void trapDoorWithElements(TrapDoorBlock trapDoorBlock, Block block, boolean orientable) {
         ResourceLocation trapDoorBlockRegistryName = BuiltInRegistries.BLOCK.getKey(trapDoorBlock);
@@ -636,7 +683,8 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         ModelFile slabTop = models().withExistingParent(slabBlockRegistryName.getPath() + "_top", "caveopolis:block/slab/tintable_slab_top")
                 .texture("bottom", texture).texture("top", texture).texture("side", texture).renderType("cutout");
 
-        ModelFile doubleSlab = models().cubeAll(blockRegistryName.getPath(), texture);
+        ModelFile doubleSlab =  models().withExistingParent(blockRegistryName.getPath(),  ResourceLocation.parse("caveopolis:block/tintable_cube_all"))
+                .texture("all", texture);
 
         getVariantBuilder(slabBlock)
                 .partialState().with(SlabBlock.TYPE, SlabType.BOTTOM).addModels(new ConfiguredModel(slab))

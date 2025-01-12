@@ -30,6 +30,100 @@ public class CaveopolisBlocks {
             () -> new ColoredCraftingTable(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE).sound(SoundType.WOOD)
                     .lightLevel(litBlockEmission())));
 
+    //Colored Cracked Stone Bricks
+    public static final DeferredBlock<Block> COLORED_CRACKED_STONE_BRICKS = registerBlockWithoutBlockItem("colored_cracked_stone_bricks",
+            () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_CRACKED_STONE_BRICK_SLAB = registerBlockWithoutBlockItem("colored_cracked_stone_brick_slab",
+            () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_SLAB).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_CRACKED_STONE_BRICK_STAIRS = registerBlockWithoutBlockItem("colored_cracked_stone_brick_stairs",
+            () -> {BlockState blockState = CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get().defaultBlockState();
+                return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_STAIRS).sound(SoundType.STONE)
+                        .lightLevel(litBlockEmission()));});
+    public static final DeferredBlock<Block> COLORED_CRACKED_STONE_BRICK_WALL = registerBlockWithoutBlockItem("colored_cracked_stone_brick_wall",
+            () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_WALL).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_cracked_stone_brick_pressure_plate",
+            () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
+                            .lightLevel(litBlockEmission()), BlockSetType.STONE));
+    public static final DeferredBlock<Block> COLORED_CRACKED_STONE_BRICK_BUTTON = registerBlockWithoutBlockItem("colored_cracked_stone_brick_button",
+            () -> new ColoredButton(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON)
+                    .lightLevel(litBlockEmission()).sound(SoundType.STONE),
+                    BlockSetType.STONE, 20, false));
+
+    //Colored Prismarine
+    public static final DeferredBlock<Block> COLORED_PRISMARINE = registerBlockWithoutBlockItem("colored_prismarine",
+            () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_SLAB = registerBlockWithoutBlockItem("colored_prismarine_slab",
+            () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE_SLAB).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_STAIRS = registerBlockWithoutBlockItem("colored_prismarine_stairs",
+            () -> {BlockState blockState = CaveopolisBlocks.COLORED_PRISMARINE.get().defaultBlockState();
+                return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE_STAIRS).sound(SoundType.STONE)
+                        .lightLevel(litBlockEmission()));});
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_WALL = registerBlockWithoutBlockItem("colored_prismarine_wall",
+            () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE_WALL).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_prismarine_pressure_plate",
+            () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
+                            .lightLevel(litBlockEmission()), BlockSetType.STONE));
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_BUTTON = registerBlockWithoutBlockItem("colored_prismarine_button",
+            () -> new ColoredButton(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON)
+                    .lightLevel(litBlockEmission()).sound(SoundType.STONE),
+                    BlockSetType.STONE, 20, false));
+
+    //Colored Dark Prismarine
+    public static final DeferredBlock<Block> COLORED_DARK_PRISMARINE = registerBlockWithoutBlockItem("colored_dark_prismarine",
+            () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_DARK_PRISMARINE_SLAB = registerBlockWithoutBlockItem("colored_dark_prismarine_slab",
+            () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE_SLAB).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_DARK_PRISMARINE_STAIRS = registerBlockWithoutBlockItem("colored_dark_prismarine_stairs",
+            () -> {BlockState blockState = CaveopolisBlocks.COLORED_DARK_PRISMARINE.get().defaultBlockState();
+                return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_PRISMARINE_STAIRS).sound(SoundType.STONE)
+                        .lightLevel(litBlockEmission()));});
+    public static final DeferredBlock<Block> COLORED_DARK_PRISMARINE_WALL = registerBlockWithoutBlockItem("colored_dark_prismarine_wall",
+            () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_WALL).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_DARK_PRISMARINE_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_dark_prismarine_pressure_plate",
+            () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
+                            .lightLevel(litBlockEmission()), BlockSetType.STONE));
+    public static final DeferredBlock<Block> COLORED_DARK_PRISMARINE_BUTTON = registerBlockWithoutBlockItem("colored_dark_prismarine_button",
+            () -> new ColoredButton(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON)
+                    .lightLevel(litBlockEmission()).sound(SoundType.STONE),
+                    BlockSetType.STONE, 20, false));
+
+    //Colored Prismarine Bricks
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_BRICKS = registerBlockWithoutBlockItem("colored_prismarine_bricks",
+            () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE_BRICKS).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_BRICK_SLAB = registerBlockWithoutBlockItem("colored_prismarine_brick_slab",
+            () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE_BRICK_SLAB).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_BRICK_STAIRS = registerBlockWithoutBlockItem("colored_prismarine_brick_stairs",
+            () -> {BlockState blockState = CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get().defaultBlockState();
+                return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.PRISMARINE_BRICK_STAIRS).sound(SoundType.STONE)
+                        .lightLevel(litBlockEmission()));});
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_BRICK_WALL = registerBlockWithoutBlockItem("colored_prismarine_brick_wall",
+            () -> new ColoredWall(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICK_WALL).sound(SoundType.STONE)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_BRICK_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_prismarine_brick_pressure_plate",
+            () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).sound(SoundType.STONE)
+                            .lightLevel(litBlockEmission()), BlockSetType.STONE));
+    public static final DeferredBlock<Block> COLORED_PRISMARINE_BRICK_BUTTON = registerBlockWithoutBlockItem("colored_prismarine_brick_button",
+            () -> new ColoredButton(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON)
+                    .lightLevel(litBlockEmission()).sound(SoundType.STONE),
+                    BlockSetType.STONE, 20, false));
+
+
+
     //Colored Tiles
     public static final DeferredBlock<Block> COLORED_TILE = registerBlockWithoutBlockItem("colored_tile",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).sound(SoundType.STONE)

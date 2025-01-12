@@ -15,6 +15,10 @@
     "caveopolis:colored_braid_pressure_plate",
     "caveopolis:colored_encased_pressure_plate",
     "caveopolis:colored_road_pressure_plate",
-    "caveopolis:colored_tile_pressure_plate"
+    "caveopolis:colored_tile_pressure_plate",
+    "caveopolis:colored_cracked_stone_brick_pressure_plate",
+    "caveopolis:colored_dark_prismarine_pressure_plate",
+    "caveopolis:colored_prismarine_pressure_plate",
+    "caveopolis:colored_prismarine_brick_pressure_plate"
   ]
 }

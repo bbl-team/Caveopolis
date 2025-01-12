@@ -14,6 +14,11 @@
     "caveopolis:colored_marble_button",
     "caveopolis:colored_marble_brick_button",
     "caveopolis:colored_cobblestone_brick_button",
-    "caveopolis:colored_tile_button"
+    "caveopolis:colored_tile_button",
+    "caveopolis:colored_bricks",
+    "caveopolis:colored_cracked_stone_brick_button",
+    "caveopolis:colored_prismarine",
+    "caveopolis:colored_prismarine_brick_button",
+    "caveopolis:colored_dark_prismarine"
   ]
 }

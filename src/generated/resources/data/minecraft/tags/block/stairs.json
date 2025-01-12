@@ -13,6 +13,11 @@
     "caveopolis:colored_marble_stairs",
     "caveopolis:colored_marble_brick_stairs",
     "caveopolis:colored_cobblestone_stairs",
-    "caveopolis:colored_cobblestone_brick_stairs"
+    "caveopolis:colored_cobblestone_brick_stairs",
+    "caveopolis:colored_brick_stairs",
+    "caveopolis:colored_cracked_stone_brick_stairs",
+    "caveopolis:colored_dark_prismarine_stairs",
+    "caveopolis:colored_prismarine_stairs",
+    "caveopolis:colored_prismarine_brick_stairs"
   ]
 }

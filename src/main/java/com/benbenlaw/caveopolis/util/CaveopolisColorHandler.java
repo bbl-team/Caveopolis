@@ -21,6 +21,38 @@ public class CaveopolisColorHandler {
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DANDELION.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POTTED_DANDELION.get());
 
+        //Colored Cracked Stone Bricks
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_SLAB.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_STAIRS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_WALL.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_BUTTON.get());
+
+        //Colored Prismarine
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_SLAB.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_STAIRS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_WALL.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_PRESSURE_PLATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_BUTTON.get());
+
+        //Colored Prismarine Bricks
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_BRICK_SLAB.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_BRICK_STAIRS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_BRICK_WALL.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_BRICK_PRESSURE_PLATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PRISMARINE_BRICK_BUTTON.get());
+
+        //Colored Dark Prismarine
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DARK_PRISMARINE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DARK_PRISMARINE_WALL.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DARK_PRISMARINE_PRESSURE_PLATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DARK_PRISMARINE_BUTTON.get());
+
         //Colored Tile
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_TILE.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_TILE_SLAB.get());
@@ -176,6 +208,38 @@ public class CaveopolisColorHandler {
         //Colored Flowers
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_POPPY.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DANDELION.get().asItem());
+
+        //Colored Cracked Stone Bricks
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_CRACKED_STONE_BRICK_SLAB.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_CRACKED_STONE_BRICK_STAIRS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_CRACKED_STONE_BRICK_WALL.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_CRACKED_STONE_BRICK_BUTTON.get().asItem());
+
+        //Colored Prismarine
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_SLAB.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_STAIRS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_WALL.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_PRESSURE_PLATE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_BUTTON.get().asItem());
+
+        //Colored Prismarine Bricks
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_BRICKS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_BRICK_SLAB.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_BRICK_STAIRS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_BRICK_WALL.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_BRICK_PRESSURE_PLATE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PRISMARINE_BRICK_BUTTON.get().asItem());
+
+        //Colored Dark Prismarine
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DARK_PRISMARINE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DARK_PRISMARINE_SLAB.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DARK_PRISMARINE_STAIRS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DARK_PRISMARINE_WALL.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DARK_PRISMARINE_PRESSURE_PLATE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DARK_PRISMARINE_BUTTON.get().asItem());
 
         //Colored Tile
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_TILE.get().asItem());

@@ -1,6 +1,7 @@
 package com.benbenlaw.caveopolis;
 
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
+import com.benbenlaw.caveopolis.config.StartupConfig;
 import com.benbenlaw.caveopolis.item.CaveopolisCreativeTab;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.network.CaveopolisMessages;
@@ -16,8 +17,10 @@ import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
@@ -34,24 +37,27 @@ public class Caveopolis {
     public static final String MOD_ID = "caveopolis";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public Caveopolis(IEventBus modEventBus) {
+    public Caveopolis(final IEventBus eventBus, final ModContainer modContainer) {
 
-        CaveopolisBlocks.BLOCKS.register(modEventBus);
-        CaveopolisItems.ITEMS.register(modEventBus);
-        CaveopolisCreativeTab.CREATIVE_TABS.register(modEventBus);
+        CaveopolisBlocks.BLOCKS.register(eventBus);
+        CaveopolisItems.ITEMS.register(eventBus);
+        CaveopolisCreativeTab.CREATIVE_TABS.register(eventBus);
 
-        CaveopolisMenuTypes.MENUS.register(modEventBus);
-        CaveopolisRecipes.register(modEventBus);
-        CaveopolisTrunkPlacers.TRUNK_PLACER.register(modEventBus);
+        CaveopolisMenuTypes.MENUS.register(eventBus);
+        CaveopolisRecipes.register(eventBus);
+        CaveopolisTrunkPlacers.TRUNK_PLACER.register(eventBus);
 
         if (FMLEnvironment.dist == Dist.CLIENT) {
-            modEventBus.register(new CaveopolisColorHandler());
+            eventBus.register(new CaveopolisColorHandler());
         }
 
+        modContainer.registerConfig(ModConfig.Type.STARTUP, StartupConfig.SPEC, "bbl/caveopolis/startup.toml");
+        modContainer.registerConfig(ModConfig.Type.COMMON, StartupConfig.SPEC, "bbl/caveopolis/recipes.toml");
 
-        modEventBus.addListener(this::registerCapabilities);
-        modEventBus.addListener(this::commonSetup);
-        modEventBus.addListener(this::networkingSetup);
+        eventBus.addListener(this::registerCapabilities);
+        eventBus.addListener(this::commonSetup);
+        eventBus.addListener(this::networkingSetup);
+
     }
 
     public void registerCapabilities(RegisterCapabilitiesEvent event) {

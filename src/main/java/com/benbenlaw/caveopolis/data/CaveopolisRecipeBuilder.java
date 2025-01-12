@@ -38,7 +38,11 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
     @Override
     protected void buildRecipes(RecipeOutput consumer) {
 
-
+        //Vanilla To Caveopolis - Prismarine
+        WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.PRISMARINE,
+                SizedIngredient.of(Items.PRISMARINE.asItem(), 1))
+                .unlockedBy("has_item", has(Items.PRISMARINE.asItem()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/vanilla/prismarine"));
 
         //Vanilla To Caveopolis - Stone
         WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.STONE,
@@ -111,6 +115,78 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
                 SizedIngredient.of(ItemTags.PLANKS, 1))
                 .unlockedBy("has_item", has(Items.OAK_PLANKS.asItem()))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/vanilla/planks"));
+
+        //Colored Cracked Stone Bricks
+        createWorktableColoringRecipe(consumer, "blue", ColoredCrackedStoneBricksResults.BLUE_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "red", ColoredCrackedStoneBricksResults.RED_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "yellow", ColoredCrackedStoneBricksResults.YELLOW_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "green", ColoredCrackedStoneBricksResults.GREEN_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "orange", ColoredCrackedStoneBricksResults.ORANGE_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "purple", ColoredCrackedStoneBricksResults.PURPLE_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "pink", ColoredCrackedStoneBricksResults.PINK_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "cyan", ColoredCrackedStoneBricksResults.CYAN_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "black", ColoredCrackedStoneBricksResults.BLACK_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "white", ColoredCrackedStoneBricksResults.WHITE_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "light_gray", ColoredCrackedStoneBricksResults.LIGHT_GRAY_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "gray", ColoredCrackedStoneBricksResults.GRAY_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "light_blue", ColoredCrackedStoneBricksResults.LIGHT_BLUE_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "magenta", ColoredCrackedStoneBricksResults.MAGENTA_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "brown", ColoredCrackedStoneBricksResults.BROWN_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+        createWorktableColoringRecipe(consumer, "lime", ColoredCrackedStoneBricksResults.LIME_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");
+
+        //Colored Prismarine
+        createWorktableColoringRecipe(consumer, "blue", ColoredPrismarineResults.BLUE_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "red", ColoredPrismarineResults.RED_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "yellow", ColoredPrismarineResults.YELLOW_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "green", ColoredPrismarineResults.GREEN_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "orange", ColoredPrismarineResults.ORANGE_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "purple", ColoredPrismarineResults.PURPLE_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "pink", ColoredPrismarineResults.PINK_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "cyan", ColoredPrismarineResults.CYAN_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "black", ColoredPrismarineResults.BLACK_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "white", ColoredPrismarineResults.WHITE_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "light_gray", ColoredPrismarineResults.LIGHT_GRAY_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "gray", ColoredPrismarineResults.GRAY_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "light_blue", ColoredPrismarineResults.LIGHT_BLUE_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "magenta", ColoredPrismarineResults.MAGENTA_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "brown", ColoredPrismarineResults.BROWN_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+        createWorktableColoringRecipe(consumer, "lime", ColoredPrismarineResults.LIME_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE.get(), "colored_prismarine");
+
+        //Colored Prismarine Bricks
+        createWorktableColoringRecipe(consumer, "blue", ColoredPrismarineBricksResults.BLUE_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "red", ColoredPrismarineBricksResults.RED_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "yellow", ColoredPrismarineBricksResults.YELLOW_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "green", ColoredPrismarineBricksResults.GREEN_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "orange", ColoredPrismarineBricksResults.ORANGE_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "purple", ColoredPrismarineBricksResults.PURPLE_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "pink", ColoredPrismarineBricksResults.PINK_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "cyan", ColoredPrismarineBricksResults.CYAN_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "black", ColoredPrismarineBricksResults.BLACK_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "white", ColoredPrismarineBricksResults.WHITE_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "light_gray", ColoredPrismarineBricksResults.LIGHT_GRAY_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "gray", ColoredPrismarineBricksResults.GRAY_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "light_blue", ColoredPrismarineBricksResults.LIGHT_BLUE_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "magenta", ColoredPrismarineBricksResults.MAGENTA_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "brown", ColoredPrismarineBricksResults.BROWN_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+        createWorktableColoringRecipe(consumer, "lime", ColoredPrismarineBricksResults.LIME_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), "colored_prismarine_bricks");
+
+        //Colored Dark Prismarine
+        createWorktableColoringRecipe(consumer, "blue", ColoredDarkPrismarineResults.BLUE_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "red", ColoredDarkPrismarineResults.RED_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "yellow", ColoredDarkPrismarineResults.YELLOW_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "green", ColoredDarkPrismarineResults.GREEN_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "orange", ColoredDarkPrismarineResults.ORANGE_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "purple", ColoredDarkPrismarineResults.PURPLE_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "pink", ColoredDarkPrismarineResults.PINK_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "cyan", ColoredDarkPrismarineResults.CYAN_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "black", ColoredDarkPrismarineResults.BLACK_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "white", ColoredDarkPrismarineResults.WHITE_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "light_gray", ColoredDarkPrismarineResults.LIGHT_GRAY_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "gray", ColoredDarkPrismarineResults.GRAY_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "light_blue", ColoredDarkPrismarineResults.LIGHT_BLUE_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "magenta", ColoredDarkPrismarineResults.MAGENTA_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "brown", ColoredDarkPrismarineResults.BROWN_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
+        createWorktableColoringRecipe(consumer, "lime", ColoredDarkPrismarineResults.LIME_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE.get(), "colored_dark_prismarine");
 
         //Colored Tile
         createWorktableColoringRecipe(consumer, "blue", ColoredTileResults.BLUE_TILE, CaveopolisItems.COLORED_TILE.get(), "colored_tile");

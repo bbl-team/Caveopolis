@@ -1,7 +1,7 @@
 {
-  "parent": "caveopolis:block/tintable_cube",
-  "render_type": "minecraft:cutout",
+  "parent": "caveopolis:block/tintable_cube_all",
   "textures": {
-    "all": "caveopolis:block/colored_dirt"
+    "all": "caveopolis:block/colored_dirt",
+    "particle": "caveopolis:block/colored_dirt"
   }
 }

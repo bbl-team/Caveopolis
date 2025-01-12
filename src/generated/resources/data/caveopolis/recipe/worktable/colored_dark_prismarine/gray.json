@@ -1,0 +1,48 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "type": "neoforge:components",
+    "components": {
+      "bblcore:color": "gray"
+    },
+    "count": 1,
+    "items": "caveopolis:colored_dark_prismarine"
+  },
+  "results": [
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 2,
+      "id": "caveopolis:colored_dark_prismarine_slab"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine_stairs"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine_wall"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine_pressure_plate"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_dark_prismarine_button"
+    }
+  ]
+}

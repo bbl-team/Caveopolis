@@ -1,7 +1,7 @@
 {
-  "parent": "minecraft:block/cube_all",
-  "render_type": "minecraft:cutout",
+  "parent": "caveopolis:block/tintable_cube_all",
   "textures": {
-    "all": "caveopolis:block/colored_road"
+    "all": "caveopolis:block/colored_road",
+    "particle": "caveopolis:block/colored_road"
   }
 }

@@ -2,6 +2,7 @@ package com.benbenlaw.caveopolis.item;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
+import com.benbenlaw.caveopolis.config.StartupConfig;
 import com.benbenlaw.core.block.colored.*;
 import com.benbenlaw.core.item.CoreDataComponents;
 import com.benbenlaw.core.item.colored.*;
@@ -34,71 +35,71 @@ public class CaveopolisItems {
 
     //Spray Cans
     public static final DeferredItem<Item> BLUE_SPRAY_CAN = ITEMS.register("blue_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolie:blue_spray_can")))
                     , DyeColor.BLUE));
     public static final DeferredItem<Item> RED_SPRAY_CAN = ITEMS.register("red_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:red_spray_can")))
                     , DyeColor.RED));
     public static final DeferredItem<Item> GREEN_SPRAY_CAN = ITEMS.register("green_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:green_spray_can")))
                     , DyeColor.GREEN));
     public static final DeferredItem<Item> YELLOW_SPRAY_CAN = ITEMS.register("yellow_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:yellow_spray_can")))
                     ,DyeColor.YELLOW));
     public static final DeferredItem<Item> PINK_SPRAY_CAN = ITEMS.register("pink_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:pink_spray_can")))
                     , DyeColor.PINK));
     public static final DeferredItem<Item> ORANGE_SPRAY_CAN = ITEMS.register("orange_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:orange_spray_can")))
                     , DyeColor.ORANGE));
     public static final DeferredItem<Item> PURPLE_SPRAY_CAN = ITEMS.register("purple_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:purple_spray_can")))
                     , DyeColor.PURPLE));
     public static final DeferredItem<Item> WHITE_SPRAY_CAN = ITEMS.register("white_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:white_spray_can"))),
                     DyeColor.WHITE));
     public static final DeferredItem<Item> BLACK_SPRAY_CAN = ITEMS.register("black_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:black_spray_can")))
                     , DyeColor.BLACK));
     public static final DeferredItem<Item> BROWN_SPRAY_CAN = ITEMS.register("brown_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:brown_spray_can")))
                     , DyeColor.BROWN));
     public static final DeferredItem<Item> CYAN_SPRAY_CAN = ITEMS.register("cyan_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:cyan_spray_can")))
                     , DyeColor.CYAN));
     public static final DeferredItem<Item> GRAY_SPRAY_CAN = ITEMS.register("gray_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:gray_spray_can")))
                     , DyeColor.GRAY));
     public static final DeferredItem<Item> LIGHT_BLUE_SPRAY_CAN = ITEMS.register("light_blue_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:light_blue_spray_can")))
                     , DyeColor.LIGHT_BLUE));
     public static final DeferredItem<Item> LIGHT_GRAY_SPRAY_CAN = ITEMS.register("light_gray_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:light_gray_spray_can")))
                     , DyeColor.LIGHT_GRAY));
     public static final DeferredItem<Item> LIME_SPRAY_CAN = ITEMS.register("lime_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:lime_spray_can")))
                     , DyeColor.LIME));
     public static final DeferredItem<Item> MAGENTA_SPRAY_CAN = ITEMS.register("magenta_spray_can",
-            () -> new ColoringItem(new Item.Properties().durability(2048)
+            () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:magenta_spray_can")))
                     , DyeColor.MAGENTA));
     public static final DeferredItem<Item> GLOWSTONE_SPRAY_CAN = ITEMS.register("glowstone_spray_can",
-            () -> new LightingItem(new Item.Properties().durability(2048)
+            () -> new LightingItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get())
                     .craftRemainder(BuiltInRegistries.ITEM.get(ResourceLocation.parse("caveopolis:glowstone_spray_can")))
             ));
 
@@ -107,6 +108,64 @@ public class CaveopolisItems {
             () -> new ColoredBlockItem((ColoredFlower) CaveopolisBlocks.COLORED_POPPY.get(), new ColoredItemProperties()));
     public static final DeferredItem<Item> COLORED_DANDELION = ITEMS.register("colored_dandelion",
             () -> new ColoredBlockItem((ColoredFlower) CaveopolisBlocks.COLORED_DANDELION.get(), new ColoredItemProperties()));
+
+    //Colored Cracked Stone Bricks
+    public static final DeferredItem<Item> COLORED_CRACKED_STONE_BRICKS = ITEMS.register("colored_cracked_stone_bricks",
+            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_CRACKED_STONE_BRICK_STAIRS = ITEMS.register("colored_cracked_stone_brick_stairs",
+            () -> new ColoredBlockItem((ColoredStairs) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_STAIRS.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_CRACKED_STONE_BRICK_SLAB = ITEMS.register("colored_cracked_stone_brick_slab",
+            () -> new ColoredBlockItem((ColoredSlab) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_SLAB.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_CRACKED_STONE_BRICK_WALL = ITEMS.register("colored_cracked_stone_brick_wall",
+            () -> new ColoredBlockItem((ColoredWall) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_WALL.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE = ITEMS.register("colored_cracked_stone_brick_pressure_plate",
+            () -> new ColoredBlockItem((ColoredPressurePlate) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_CRACKED_STONE_BRICK_BUTTON = ITEMS.register("colored_cracked_stone_brick_button",
+            () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_BUTTON.get(), new ColoredItemProperties()));
+
+    //Colored Prismarine
+    public static final DeferredItem<Item> COLORED_PRISMARINE = ITEMS.register("colored_prismarine",
+            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_PRISMARINE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_STAIRS = ITEMS.register("colored_prismarine_stairs",
+            () -> new ColoredBlockItem((ColoredStairs) CaveopolisBlocks.COLORED_PRISMARINE_STAIRS.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_SLAB = ITEMS.register("colored_prismarine_slab",
+            () -> new ColoredBlockItem((ColoredSlab) CaveopolisBlocks.COLORED_PRISMARINE_SLAB.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_WALL = ITEMS.register("colored_prismarine_wall",
+            () -> new ColoredBlockItem((ColoredWall) CaveopolisBlocks.COLORED_PRISMARINE_WALL.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_PRESSURE_PLATE = ITEMS.register("colored_prismarine_pressure_plate",
+            () -> new ColoredBlockItem((ColoredPressurePlate) CaveopolisBlocks.COLORED_PRISMARINE_PRESSURE_PLATE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_BUTTON = ITEMS.register("colored_prismarine_button",
+            () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_PRISMARINE_BUTTON.get(), new ColoredItemProperties()));
+
+    //Colored Prismarine Bricks
+    public static final DeferredItem<Item> COLORED_PRISMARINE_BRICKS = ITEMS.register("colored_prismarine_bricks",
+            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_PRISMARINE_BRICKS.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_BRICK_STAIRS = ITEMS.register("colored_prismarine_brick_stairs",
+            () -> new ColoredBlockItem((ColoredStairs) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_STAIRS.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_BRICK_SLAB = ITEMS.register("colored_prismarine_brick_slab",
+            () -> new ColoredBlockItem((ColoredSlab) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_SLAB.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_BRICK_WALL = ITEMS.register("colored_prismarine_brick_wall",
+            () -> new ColoredBlockItem((ColoredWall) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_WALL.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_BRICK_PRESSURE_PLATE = ITEMS.register("colored_prismarine_brick_pressure_plate",
+            () -> new ColoredBlockItem((ColoredPressurePlate) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_PRESSURE_PLATE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_PRISMARINE_BRICK_BUTTON = ITEMS.register("colored_prismarine_brick_button",
+            () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_PRISMARINE_BRICK_BUTTON.get(), new ColoredItemProperties()));
+
+    //Colored Dark Prismarine
+    public static final DeferredItem<Item> COLORED_DARK_PRISMARINE = ITEMS.register("colored_dark_prismarine",
+            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_DARK_PRISMARINE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_DARK_PRISMARINE_STAIRS = ITEMS.register("colored_dark_prismarine_stairs",
+            () -> new ColoredBlockItem((ColoredStairs) CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_DARK_PRISMARINE_SLAB = ITEMS.register("colored_dark_prismarine_slab",
+            () -> new ColoredBlockItem((ColoredSlab) CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_DARK_PRISMARINE_WALL = ITEMS.register("colored_dark_prismarine_wall",
+            () -> new ColoredBlockItem((ColoredWall) CaveopolisBlocks.COLORED_DARK_PRISMARINE_WALL.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_DARK_PRISMARINE_PRESSURE_PLATE = ITEMS.register("colored_dark_prismarine_pressure_plate",
+            () -> new ColoredBlockItem((ColoredPressurePlate) CaveopolisBlocks.COLORED_DARK_PRISMARINE_PRESSURE_PLATE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_DARK_PRISMARINE_BUTTON = ITEMS.register("colored_dark_prismarine_button",
+            () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_DARK_PRISMARINE_BUTTON.get(), new ColoredItemProperties()));
+
+
 
     //Colored Tile
     public static final DeferredItem<Item> COLORED_TILE = ITEMS.register("colored_tile",

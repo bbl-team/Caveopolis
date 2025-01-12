@@ -125,14 +125,41 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.COLORED_MARBLE_BUTTON.asItem())
                 .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_BUTTON.asItem())
                 .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_BUTTON.asItem())
-                .add(CaveopolisBlocks.COLORED_TILE_BUTTON.asItem());
+                .add(CaveopolisBlocks.COLORED_TILE_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_BRICKS.asItem())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE.asItem())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE.asItem())
+                ;
+
 
 
 
 
 
         //Walls
-        tag(ItemTags.WALLS).add(CaveopolisBlocks.COLORED_STONE_WALL.asItem());
+        tag(ItemTags.WALLS)
+                .add(CaveopolisBlocks.COLORED_STONE_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_POLISHED_STONE_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_MOSAIC_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_CHAOTIC_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_TRIPLE_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_BRAID_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_ENCASED_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_ROAD_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_MARBLE_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_TILE_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_BRICKS.asItem())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_WALL.asItem())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_WALL.asItem());
+
 
         //Pressure Plates
 
@@ -151,7 +178,19 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.COLORED_TRIPLE_STAIRS.asItem())
                 .add(CaveopolisBlocks.COLORED_BRAID_STAIRS.asItem())
                 .add(CaveopolisBlocks.COLORED_ENCASED_STAIRS.asItem())
-                .add(CaveopolisBlocks.COLORED_ROAD_STAIRS.asItem());
+                .add(CaveopolisBlocks.COLORED_ROAD_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_MARBLE_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_TILE_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_BRICKS.asItem())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.asItem());
+
 
         //Slabs
         tag(ItemTags.SLABS)
@@ -162,14 +201,27 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.COLORED_TRIPLE_SLAB.asItem())
                 .add(CaveopolisBlocks.COLORED_BRAID_SLAB.asItem())
                 .add(CaveopolisBlocks.COLORED_ENCASED_SLAB.asItem())
-                .add(CaveopolisBlocks.COLORED_ROAD_SLAB.asItem());
+                .add(CaveopolisBlocks.COLORED_ROAD_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_STONE_BRICK_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_MARBLE_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_MARBLE_BRICK_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_COBBLESTONE_BRICK_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_TILE_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_BRICKS.asItem())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.asItem());
 
 
         //Planks
         tag(ItemTags.PLANKS).add(CaveopolisBlocks.COLORED_PLANKS.asItem());
 
         //Stone Bricks
-        tag(ItemTags.STONE_BRICKS).add(CaveopolisBlocks.COLORED_STONE_BRICKS.asItem());
+        tag(ItemTags.STONE_BRICKS)
+                .add(CaveopolisBlocks.COLORED_STONE_BRICKS.asItem())
+                .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICKS.asItem());
 
         //Dirt
         tag(ItemTags.DIRT).add(CaveopolisBlocks.COLORED_DIRT.asItem());

@@ -15,6 +15,10 @@
     "caveopolis:colored_braid_button",
     "caveopolis:colored_encased_button",
     "caveopolis:colored_road_button",
-    "caveopolis:colored_tile_button"
+    "caveopolis:colored_tile_button",
+    "caveopolis:colored_cracked_stone_brick_button",
+    "caveopolis:colored_dark_prismarine_button",
+    "caveopolis:colored_prismarine_button",
+    "caveopolis:colored_prismarine_brick_button"
   ]
 }

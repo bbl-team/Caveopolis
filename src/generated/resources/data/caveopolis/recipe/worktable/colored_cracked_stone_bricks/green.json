@@ -1,0 +1,48 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "type": "neoforge:components",
+    "components": {
+      "bblcore:color": "green"
+    },
+    "count": 1,
+    "items": "caveopolis:colored_cracked_stone_bricks"
+  },
+  "results": [
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 2,
+      "id": "caveopolis:colored_cracked_stone_brick_slab"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_brick_stairs"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_brick_wall"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_brick_pressure_plate"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_cracked_stone_brick_button"
+    }
+  ]
+}
