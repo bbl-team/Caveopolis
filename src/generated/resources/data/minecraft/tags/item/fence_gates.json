@@ -1,5 +1,7 @@
 {
   "values": [
-    "caveopolis:colored_plank_fence_gate"
+    "caveopolis:colored_plank_fence_gate",
+    "caveopolis:colored_bamboo_fence_gate",
+    "caveopolis:colored_bamboo_mosaic_fence_gate"
   ]
 }

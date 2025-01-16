@@ -24,6 +24,8 @@ public class VanillaResults {
     public static final NonNullList<ItemStack> LOGS;
     public static final NonNullList<ItemStack> PLANKS;
     public static final NonNullList<ItemStack> PRISMARINE;
+    public static final NonNullList<ItemStack> BAMBOO;
+    public static final NonNullList<ItemStack> COLORED_BAMBOO;
 
 
 
@@ -91,6 +93,12 @@ public class VanillaResults {
             LOGS.add(iconWithColor(new ItemStack(CaveopolisItems.STRIPPED_COLORED_WOOD.get(), 1), color));
             LOGS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_PLANKS.get(), 4), color));
             LOGS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_CRAFTING_TABLE.get(), 1), color));
+            //Added Bamboo
+            LOGS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_BAMBOO_BLOCK.get(), 1), color));
+            LOGS.add(iconWithColor(new ItemStack(CaveopolisItems.STRIPPED_COLORED_BAMBOO_BLOCK.get(), 1), color));
+            LOGS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), 4), color));
+            LOGS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), 4), color));
+
         }
 
         STONE_BRICKS = NonNullList.create();
@@ -113,6 +121,19 @@ public class VanillaResults {
             PRISMARINE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_PRISMARINE.get(), 1), color));
             PRISMARINE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_PRISMARINE_BRICKS.get(), 1), color));
             PRISMARINE.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_DARK_PRISMARINE.get(), 1), color));
+        }
+
+        BAMBOO = NonNullList.create();
+        for (String color : new VanillaResults().colors) {
+            BAMBOO.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_BAMBOO_BLOCK.get(), 1), color));
+            BAMBOO.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), 2), color));
+            BAMBOO.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), 2), color));
+        }
+
+        COLORED_BAMBOO = NonNullList.create();
+        for (String color : new VanillaResults().colors) {
+            COLORED_BAMBOO.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), 2), color));
+            COLORED_BAMBOO.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), 2), color));
         }
 
     }

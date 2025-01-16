@@ -1,0 +1,69 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "type": "neoforge:components",
+    "components": {
+      "bblcore:color": "magenta"
+    },
+    "count": 1,
+    "items": "caveopolis:colored_bamboo_mosaic"
+  },
+  "results": [
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 2,
+      "id": "caveopolis:colored_bamboo_mosaic_slab"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_mosaic_stairs"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_mosaic_pressure_plate"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_mosaic_button"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_mosaic_fence"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_mosaic_fence_gate"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_mosaic_door"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_mosaic_trapdoor"
+    }
+  ]
+}

@@ -92,22 +92,41 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.STRIPPED_COLORED_WOOD.asItem());
 
         //Wooden Slabs
-        tag(ItemTags.WOODEN_SLABS).add(CaveopolisBlocks.COLORED_PLANK_SLAB.asItem());
+        tag(ItemTags.WOODEN_SLABS)
+                .add(CaveopolisBlocks.COLORED_PLANK_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_SLAB.asItem());
+
 
         //Wooden Stairs
-        tag(ItemTags.WOODEN_STAIRS).add(CaveopolisBlocks.COLORED_PLANK_STAIRS.asItem());
+        tag(ItemTags.WOODEN_STAIRS)
+                .add(CaveopolisBlocks.COLORED_PLANK_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_STAIRS.asItem());
 
         //Wooden Doors
-        tag(ItemTags.WOODEN_DOORS).add(CaveopolisBlocks.COLORED_PLANK_DOOR.asItem());
+        tag(ItemTags.WOODEN_DOORS)
+                .add(CaveopolisBlocks.COLORED_PLANK_DOOR.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_DOOR.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_DOOR.asItem());
 
         //Wooden Trapdoors
-        tag(ItemTags.WOODEN_TRAPDOORS).add(CaveopolisBlocks.COLORED_PLANK_TRAPDOOR.asItem());
+        tag(ItemTags.WOODEN_TRAPDOORS)
+                .add(CaveopolisBlocks.COLORED_PLANK_TRAPDOOR.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_TRAPDOOR.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_TRAPDOOR.asItem());
 
         //Fence Gates
-        tag(ItemTags.FENCE_GATES).add(CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.asItem());
+        tag(ItemTags.FENCE_GATES)
+                .add(CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.asItem());
 
         //Fences
-        tag(ItemTags.FENCES).add(CaveopolisBlocks.COLORED_PLANK_FENCE.asItem());
+        tag(ItemTags.FENCES)
+                .add(CaveopolisBlocks.COLORED_PLANK_FENCE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.asItem());
 
         //Buttons
         tag(ItemTags.BUTTONS)
@@ -130,8 +149,9 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_BUTTON.asItem())
                 .add(CaveopolisBlocks.COLORED_PRISMARINE.asItem())
                 .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_BUTTON.asItem())
-                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE.asItem())
-                ;
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_BUTTON.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_BUTTON.asItem());
 
 
 
@@ -189,7 +209,9 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_STAIRS.asItem())
                 .add(CaveopolisBlocks.COLORED_PRISMARINE_STAIRS.asItem())
                 .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_STAIRS.asItem())
-                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.asItem());
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_STAIRS.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_STAIRS.asItem());
 
 
         //Slabs
@@ -212,11 +234,15 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.COLORED_CRACKED_STONE_BRICK_SLAB.asItem())
                 .add(CaveopolisBlocks.COLORED_PRISMARINE_SLAB.asItem())
                 .add(CaveopolisBlocks.COLORED_PRISMARINE_BRICK_SLAB.asItem())
-                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.asItem());
+                .add(CaveopolisBlocks.COLORED_DARK_PRISMARINE_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_SLAB.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_SLAB.asItem());
 
 
         //Planks
-        tag(ItemTags.PLANKS).add(CaveopolisBlocks.COLORED_PLANKS.asItem());
+        tag(ItemTags.PLANKS)
+                .add(CaveopolisBlocks.COLORED_PLANKS.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_PLANKS.asItem());
 
         //Stone Bricks
         tag(ItemTags.STONE_BRICKS)

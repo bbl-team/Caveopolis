@@ -40,6 +40,14 @@
     {
       "count": 1,
       "id": "caveopolis:colored_plank_trapdoor"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_mosaic"
     }
   ]
 }

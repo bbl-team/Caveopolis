@@ -1,8 +1,10 @@
-// 1.21.1	2025-01-10T19:58:54.6934638	caveopolis Item Models
+// 1.21.1	2025-01-16T12:11:51.211581	caveopolis Item Models
 8bf5230c0dc417e4ae84c5f1d3800566d02516b9 assets/caveopolis/models/item/black_spray_can.json
 48442832080370c214203c5c9b3f454ec945e75c assets/caveopolis/models/item/blue_spray_can.json
 87b643f0d904423647fb7747bd0d4b3ae5a2b443 assets/caveopolis/models/item/brown_spray_can.json
 fe49bc0d6c1bb539315ec8893da92b6986c8dc59 assets/caveopolis/models/item/colored_apple.json
+4dc7f66e7688c8c614d814a635d7f260ef6c1d20 assets/caveopolis/models/item/colored_bamboo_door.json
+6369256a45fed92e09f020feff40fb7bce5042d3 assets/caveopolis/models/item/colored_bamboo_mosaic_door.json
 6ee7c5656fc9515a45ec719605dd89e71b5c61da assets/caveopolis/models/item/colored_dandelion.json
 d190bc69b36654ebd89ec7694201604793ca37b2 assets/caveopolis/models/item/colored_plank_door.json
 8b671abb58932f720a62028a0cf5abb4452f223c assets/caveopolis/models/item/colored_poppy.json

@@ -40,6 +40,8 @@ public class CaveopolisItemModelProvider extends ItemModelProvider {
         simpleItem(CaveopolisItems.GLOWSTONE_SPRAY_CAN);
 
         simpleItem(CaveopolisItems.COLORED_PLANK_DOOR);
+        simpleItem(CaveopolisItems.COLORED_BAMBOO_DOOR);
+        simpleItem(CaveopolisItems.COLORED_BAMBOO_MOSAIC_DOOR);
         simpleItem(CaveopolisItems.WORKTABLE);
         simpleItem(CaveopolisItems.COLORED_APPLE);
         saplingItem(CaveopolisItems.COLORED_SAPLING);

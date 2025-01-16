@@ -9,6 +9,26 @@
     "caveopolis:colored_wood",
     "caveopolis:stripped_colored_log",
     "caveopolis:stripped_colored_wood",
-    "caveopolis:colored_crafting_table"
+    "caveopolis:colored_crafting_table",
+    "caveopolis:stripped_colored_bamboo_block",
+    "caveopolis:colored_bamboo_block",
+    "caveopolis:colored_bamboo_planks",
+    "caveopolis:colored_bamboo_slab",
+    "caveopolis:colored_bamboo_stairs",
+    "caveopolis:colored_bamboo_fence",
+    "caveopolis:colored_bamboo_fence_gate",
+    "caveopolis:colored_bamboo_door",
+    "caveopolis:colored_bamboo_trapdoor",
+    "caveopolis:colored_bamboo_pressure_plate",
+    "caveopolis:colored_bamboo_button",
+    "caveopolis:colored_bamboo_mosaic",
+    "caveopolis:colored_bamboo_mosaic_slab",
+    "caveopolis:colored_bamboo_mosaic_stairs",
+    "caveopolis:colored_bamboo_mosaic_fence",
+    "caveopolis:colored_bamboo_mosaic_fence_gate",
+    "caveopolis:colored_bamboo_mosaic_door",
+    "caveopolis:colored_bamboo_mosaic_trapdoor",
+    "caveopolis:colored_bamboo_mosaic_pressure_plate",
+    "caveopolis:colored_bamboo_mosaic_button"
   ]
 }

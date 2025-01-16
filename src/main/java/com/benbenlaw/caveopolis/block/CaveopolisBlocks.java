@@ -498,6 +498,71 @@ public class CaveopolisBlocks {
             () -> new ColoredFlowerPot(() -> (FlowerPotBlock) Blocks.FLOWER_POT, COLORED_DANDELION, BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)
                     .lightLevel(litBlockEmission()).noOcclusion()));
 
+    //Colored Bamboo
+    public static final DeferredBlock<Block> COLORED_BAMBOO_BLOCK = registerBlockWithoutBlockItem("colored_bamboo_block",
+            () -> new FlammableColoredLog(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_BLOCK).lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> STRIPPED_COLORED_BAMBOO_BLOCK = registerBlockWithoutBlockItem("stripped_colored_bamboo_block",
+            () -> new FlammableColoredLog(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_BLOCK).lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_PLANKS = registerBlockWithoutBlockItem("colored_bamboo_planks",
+            () -> new FlammableColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS).sound(SoundType.WOOD)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_SLAB = registerBlockWithoutBlockItem("colored_bamboo_slab",
+            () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_SLAB).sound(SoundType.WOOD)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_STAIRS = registerBlockWithoutBlockItem("colored_bamboo_stairs",
+            () -> {BlockState blockState = CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get().defaultBlockState();
+                return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_STAIRS).sound(SoundType.WOOD)
+                        .lightLevel(litBlockEmission()));});
+    public static final DeferredBlock<Block> COLORED_BAMBOO_FENCE = registerBlockWithoutBlockItem("colored_bamboo_fence",
+            () -> new FlammableColoredFence(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_FENCE).sound(SoundType.WOOD).lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_FENCE_GATE = registerBlockWithoutBlockItem("colored_bamboo_fence_gate",
+            () -> new FlammableColoredFenceGate(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_FENCE_GATE).sound(SoundType.WOOD).lightLevel(litBlockEmission()),
+                    SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_DOOR = registerBlockWithoutBlockItem("colored_bamboo_door",
+            () -> new ColoredDoor(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_DOOR).lightLevel(litBlockEmission()), BlockSetType.OAK));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_TRAPDOOR = registerBlockWithoutBlockItem("colored_bamboo_trapdoor",
+            () -> new ColoredTrapDoor(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_TRAPDOOR).lightLevel(litBlockEmission()), BlockSetType.OAK));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_bamboo_pressure_plate",
+            () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PRESSURE_PLATE).sound(SoundType.WOOD)
+                            .lightLevel(litBlockEmission()), BlockSetType.OAK));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_BUTTON = registerBlockWithoutBlockItem("colored_bamboo_button",
+            () -> new ColoredButton(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_BUTTON)
+                    .lightLevel(litBlockEmission()).sound(SoundType.WOOD),
+                    BlockSetType.OAK, 30, true));
+
+    //Bamboo Mosaic
+    public static final DeferredBlock<Block> COLORED_BAMBOO_MOSAIC = registerBlockWithoutBlockItem("colored_bamboo_mosaic",
+            () -> new FlammableColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_MOSAIC).sound(SoundType.WOOD)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_MOSAIC_SLAB = registerBlockWithoutBlockItem("colored_bamboo_mosaic_slab",
+            () -> new ColoredSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_MOSAIC_SLAB).sound(SoundType.WOOD)
+                    .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_MOSAIC_STAIRS = registerBlockWithoutBlockItem("colored_bamboo_mosaic_stairs",
+            () -> {BlockState blockState = CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get().defaultBlockState();
+                return new ColoredStairs(blockState, BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_MOSAIC_STAIRS).sound(SoundType.WOOD)
+                        .lightLevel(litBlockEmission()));});
+    public static final DeferredBlock<Block> COLORED_BAMBOO_MOSAIC_FENCE = registerBlockWithoutBlockItem("colored_bamboo_mosaic_fence",
+            () -> new FlammableColoredFence(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_FENCE).sound(SoundType.WOOD).lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_MOSAIC_FENCE_GATE = registerBlockWithoutBlockItem("colored_bamboo_mosaic_fence_gate",
+            () -> new FlammableColoredFenceGate(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_FENCE_GATE).sound(SoundType.WOOD).lightLevel(litBlockEmission()),
+                    SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_MOSAIC_DOOR = registerBlockWithoutBlockItem("colored_bamboo_mosaic_door",
+            () -> new ColoredDoor(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_DOOR).lightLevel(litBlockEmission()), BlockSetType.OAK));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_MOSAIC_TRAPDOOR = registerBlockWithoutBlockItem("colored_bamboo_mosaic_trapdoor",
+            () -> new ColoredTrapDoor(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_TRAPDOOR).lightLevel(litBlockEmission()), BlockSetType.OAK));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_MOSAIC_PRESSURE_PLATE = registerBlockWithoutBlockItem("colored_bamboo_mosaic_pressure_plate",
+            () -> new ColoredPressurePlate(BlockSetType.PressurePlateSensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PRESSURE_PLATE).sound(SoundType.WOOD)
+                            .lightLevel(litBlockEmission()), BlockSetType.OAK));
+    public static final DeferredBlock<Block> COLORED_BAMBOO_MOSAIC_BUTTON = registerBlockWithoutBlockItem("colored_bamboo_mosaic_button",
+            () -> new ColoredButton(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_BUTTON)
+                    .lightLevel(litBlockEmission()).sound(SoundType.WOOD),
+                    BlockSetType.OAK, 30, true));
+
+
+
+
 
     //Colored Wood
     public static final DeferredBlock<Block> COLORED_SAPLING = registerBlockWithoutBlockItem("colored_sapling",

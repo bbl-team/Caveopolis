@@ -42,6 +42,12 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
     @Override
     protected void buildRecipes(RecipeOutput consumer) {
 
+        //Vanilla To Caveopolis - Bamboo
+        WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.BAMBOO,
+                SizedIngredient.of(Items.BAMBOO_BLOCK.asItem(), 1))
+                .unlockedBy("has_item", has(Items.BAMBOO_BLOCK.asItem()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/vanilla/bamboo"));
+
         //Vanilla To Caveopolis - Prismarine
         WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.PRISMARINE,
                 SizedIngredient.of(Items.PRISMARINE.asItem(), 1))
@@ -119,6 +125,50 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
                 SizedIngredient.of(ItemTags.PLANKS, 1))
                 .unlockedBy("has_item", has(Items.OAK_PLANKS.asItem()))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/vanilla/planks"));
+
+        //Caveopolis To Caveopolis - Colored Bamboo
+        WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.COLORED_BAMBOO,
+                        SizedIngredient.of(CaveopolisItems.COLORED_BAMBOO_BLOCK, 1))
+                .unlockedBy("has_item", has(CaveopolisItems.COLORED_BAMBOO_BLOCK.asItem()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/caveopolis/bamboo"));
+
+
+        //Colored Bamboo
+        createWorktableColoringRecipe(consumer, "blue", ColoredBambooResults.BLUE_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "red", ColoredBambooResults.RED_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "yellow", ColoredBambooResults.YELLOW_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "green", ColoredBambooResults.GREEN_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "orange", ColoredBambooResults.ORANGE_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "purple", ColoredBambooResults.PURPLE_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "pink", ColoredBambooResults.PINK_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "cyan", ColoredBambooResults.CYAN_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "black", ColoredBambooResults.BLACK_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "white", ColoredBambooResults.WHITE_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "light_gray", ColoredBambooResults.LIGHT_GRAY_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "gray", ColoredBambooResults.GRAY_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "light_blue", ColoredBambooResults.LIGHT_BLUE_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "magenta", ColoredBambooResults.MAGENTA_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "brown", ColoredBambooResults.BROWN_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+        createWorktableColoringRecipe(consumer, "lime", ColoredBambooResults.LIME_BAMBOO, CaveopolisItems.COLORED_BAMBOO_PLANKS.get(), "colored_bamboo");
+
+        //Colored Bamboo Mosaic
+        createWorktableColoringRecipe(consumer, "blue", ColoredBambooMosaicResults.BLUE_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "red", ColoredBambooMosaicResults.RED_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "yellow", ColoredBambooMosaicResults.YELLOW_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "green", ColoredBambooMosaicResults.GREEN_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "orange", ColoredBambooMosaicResults.ORANGE_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "purple", ColoredBambooMosaicResults.PURPLE_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "pink", ColoredBambooMosaicResults.PINK_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "cyan", ColoredBambooMosaicResults.CYAN_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "black", ColoredBambooMosaicResults.BLACK_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "white", ColoredBambooMosaicResults.WHITE_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "light_gray", ColoredBambooMosaicResults.LIGHT_GRAY_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "gray", ColoredBambooMosaicResults.GRAY_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "light_blue", ColoredBambooMosaicResults.LIGHT_BLUE_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "magenta", ColoredBambooMosaicResults.MAGENTA_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "brown", ColoredBambooMosaicResults.BROWN_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+        createWorktableColoringRecipe(consumer, "lime", ColoredBambooMosaicResults.LIME_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), "colored_bamboo_mosaic");
+
 
         //Colored Cracked Stone Bricks
         createWorktableColoringRecipe(consumer, "blue", ColoredCrackedStoneBricksResults.BLUE_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS.get(), "colored_cracked_stone_bricks");

@@ -11,6 +11,7 @@ public class LogMaps {
 
         ColoredLog.updateLogStrippedMap(CaveopolisBlocks.COLORED_LOG.get(), CaveopolisBlocks.STRIPPED_COLORED_LOG.get());
         ColoredLog.updateWoodStrippedMap(CaveopolisBlocks.COLORED_WOOD.get(), CaveopolisBlocks.STRIPPED_COLORED_WOOD.get());
+        ColoredLog.updateLogStrippedMap(CaveopolisBlocks.COLORED_BAMBOO_BLOCK.get(), CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.get());
     }
 
 

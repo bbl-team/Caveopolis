@@ -205,9 +205,7 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
         this.dropSelf(CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get());
         this.dropSelf(CaveopolisBlocks.COLORED_ROAD_BUTTON.get());
 
-
-
-
+        //Colored Planks
         this.dropSelf(CaveopolisBlocks.COLORED_PLANKS.get());
         this.dropSelf(CaveopolisBlocks.COLORED_PLANK_SLAB.get());
         this.dropSelf(CaveopolisBlocks.COLORED_PLANK_STAIRS.get());
@@ -222,17 +220,38 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
         this.dropSelf(CaveopolisBlocks.STRIPPED_COLORED_LOG.get());
         this.dropSelf(CaveopolisBlocks.STRIPPED_COLORED_WOOD.get());
 
+        //Colored Bamboo
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_BUTTON.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_FENCE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.get());
+        this.add(CaveopolisBlocks.COLORED_BAMBOO_DOOR.get(), this::createDoorTable);
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_TRAPDOOR.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_BLOCK.get());
+        this.dropSelf(CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.get());
+
+        //Colored Bamboo Mosaic
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_SLAB.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_STAIRS.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_PRESSURE_PLATE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_BUTTON.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.get());
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.get());
+        this.add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_DOOR.get(), this::createDoorTable);
+        this.dropSelf(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_TRAPDOOR.get());
+
+
+
         //Change when colored apples and sapling are added
         this.add(CaveopolisBlocks.COLORED_LEAVES.get(), block ->
                 createColoredLeavesDrops(block, CaveopolisBlocks.COLORED_SAPLING.get(), CaveopolisItems.COLORED_APPLE.asItem(), NORMAL_LEAVES_SAPLING_CHANCES));
 
-        this.dropSelf(CaveopolisBlocks.COLORED_BRICKS.get());
-        this.dropSelf(CaveopolisBlocks.COLORED_STONE_BRICKS.get());
+        //Misc
         this.dropSelf(CaveopolisBlocks.COLORED_DIRT.get());
-        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE.get());
-        this.dropSelf(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get());
-        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE.get());
-        this.dropSelf(CaveopolisBlocks.COLORED_MARBLE_BRICKS.get());
 
 
     }

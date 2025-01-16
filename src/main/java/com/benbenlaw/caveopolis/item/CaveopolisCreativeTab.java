@@ -187,7 +187,7 @@ public class CaveopolisCreativeTab {
                         () -> new ItemStack(CaveopolisBlocks.COLORED_ROAD_PRESSURE_PLATE.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_ROAD_BUTTON.get()),
 
-
+                        //Colored Planks
                         () -> new ItemStack(CaveopolisBlocks.COLORED_LOG.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_WOOD.get()),
                         () -> new ItemStack(CaveopolisBlocks.STRIPPED_COLORED_LOG.get()),
@@ -209,7 +209,32 @@ public class CaveopolisCreativeTab {
                         () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE.get()),
-                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BRICKS.get())
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE_BRICKS.get()),
+
+                        //Colored Bamboo
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_BLOCK.get()),
+                        () -> new ItemStack(CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_BUTTON.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_FENCE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_DOOR.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_TRAPDOOR.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get()),
+
+                        //Colored Bamboo Moasic
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_SLAB.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_STAIRS.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_PRESSURE_PLATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_BUTTON.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_DOOR.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_TRAPDOOR.get())
+
                 );
 
                 // Add color variants for each block

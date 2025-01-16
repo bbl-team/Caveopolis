@@ -1,0 +1,8 @@
+{
+  "parent": "caveopolis:block/tintable_cube_column_horizontal",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "end": "caveopolis:block/colored_bamboo_block_top",
+    "side": "caveopolis:block/colored_bamboo_block"
+  }
+}

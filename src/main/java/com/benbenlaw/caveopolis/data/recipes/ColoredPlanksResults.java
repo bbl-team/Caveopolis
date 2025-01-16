@@ -54,7 +54,11 @@ public class ColoredPlanksResults {
                 new ItemStack(CaveopolisItems.COLORED_PLANK_FENCE.get(), 1),
                 new ItemStack(CaveopolisItems.COLORED_PLANK_FENCE_GATE.get(), 1),
                 new ItemStack(CaveopolisItems.COLORED_PLANK_DOOR.get(), 1),
-                new ItemStack(CaveopolisItems.COLORED_PLANK_TRAPDOOR.get(), 1)
+                new ItemStack(CaveopolisItems.COLORED_PLANK_TRAPDOOR.get(), 1),
+
+                //Added Bamboo Planks and Bamboo Mosaic
+                new ItemStack(CaveopolisItems.COLORED_BAMBOO_BLOCK.get(), 1),
+                new ItemStack(CaveopolisItems.COLORED_BAMBOO_MOSAIC.get(), 1)
         ))
 
 

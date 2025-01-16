@@ -190,6 +190,30 @@ public class CaveopolisColorHandler {
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_DOOR.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_PLANK_TRAPDOOR.get());
 
+        //Colored Bamboo
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_BLOCK.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_SLAB.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_STAIRS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_PRESSURE_PLATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_BUTTON.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_FENCE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_DOOR.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_TRAPDOOR.get());
+
+        //Colored Bamboo Mosaic
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_SLAB.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_STAIRS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_PRESSURE_PLATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_BUTTON.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_DOOR.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_TRAPDOOR.get());
+
 
 
 
@@ -362,7 +386,7 @@ public class CaveopolisColorHandler {
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_ROAD_PRESSURE_PLATE.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_ROAD_BUTTON.get().asItem());
 
-
+        //Colored Planks/Logs
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_LOG.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_WOOD.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.STRIPPED_COLORED_LOG.get().asItem());
@@ -378,6 +402,30 @@ public class CaveopolisColorHandler {
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_FENCE_GATE.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_DOOR.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_PLANK_TRAPDOOR.get().asItem());
+
+        //Colored Bamboo
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_BLOCK.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.STRIPPED_COLORED_BAMBOO_BLOCK.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_PLANKS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_SLAB.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_STAIRS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_PRESSURE_PLATE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_BUTTON.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_FENCE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_FENCE_GATE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_DOOR.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_TRAPDOOR.get().asItem());
+
+        //Colored Bamboo Mosaic
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_MOSAIC.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_MOSAIC_SLAB.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_MOSAIC_STAIRS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_MOSAIC_PRESSURE_PLATE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_MOSAIC_BUTTON.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_MOSAIC_FENCE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_MOSAIC_FENCE_GATE.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_MOSAIC_DOOR.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_BAMBOO_MOSAIC_TRAPDOOR.get().asItem());
 
 
 

@@ -30,6 +30,22 @@
       "id": "caveopolis:colored_crafting_table"
     },
     {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
       "components": {
         "bblcore:color": "orange"
       },
@@ -70,6 +86,34 @@
       },
       "count": 1,
       "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
     },
     {
       "components": {
@@ -115,6 +159,34 @@
     },
     {
       "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
+      "components": {
         "bblcore:color": "light_blue"
       },
       "count": 1,
@@ -154,6 +226,34 @@
       },
       "count": 1,
       "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
     },
     {
       "components": {
@@ -199,6 +299,34 @@
     },
     {
       "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
+      "components": {
         "bblcore:color": "lime"
       },
       "count": 1,
@@ -238,6 +366,34 @@
       },
       "count": 1,
       "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
     },
     {
       "components": {
@@ -283,6 +439,34 @@
     },
     {
       "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
+      "components": {
         "bblcore:color": "gray"
       },
       "count": 1,
@@ -322,6 +506,34 @@
       },
       "count": 1,
       "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
     },
     {
       "components": {
@@ -367,6 +579,34 @@
     },
     {
       "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
+      "components": {
         "bblcore:color": "cyan"
       },
       "count": 1,
@@ -406,6 +646,34 @@
       },
       "count": 1,
       "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
     },
     {
       "components": {
@@ -451,6 +719,34 @@
     },
     {
       "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
+      "components": {
         "bblcore:color": "blue"
       },
       "count": 1,
@@ -493,6 +789,34 @@
     },
     {
       "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
+      "components": {
         "bblcore:color": "brown"
       },
       "count": 1,
@@ -535,6 +859,34 @@
     },
     {
       "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
+      "components": {
         "bblcore:color": "green"
       },
       "count": 1,
@@ -577,6 +929,34 @@
     },
     {
       "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
+      "components": {
         "bblcore:color": "red"
       },
       "count": 1,
@@ -619,6 +999,34 @@
     },
     {
       "components": {
+        "bblcore:color": "red"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "red"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "red"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "red"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
+    },
+    {
+      "components": {
         "bblcore:color": "black"
       },
       "count": 1,
@@ -658,6 +1066,34 @@
       },
       "count": 1,
       "id": "caveopolis:colored_crafting_table"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 1,
+      "id": "caveopolis:stripped_colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_planks"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 4,
+      "id": "caveopolis:colored_bamboo_mosaic"
     }
   ]
 }

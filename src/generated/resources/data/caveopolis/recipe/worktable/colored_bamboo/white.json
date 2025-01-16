@@ -1,0 +1,45 @@
+{
+  "type": "caveopolis:worktable",
+  "input": {
+    "type": "neoforge:components",
+    "components": {
+      "bblcore:color": "white"
+    },
+    "count": 1,
+    "items": "caveopolis:colored_bamboo_planks"
+  },
+  "results": [
+    {
+      "count": 2,
+      "id": "caveopolis:colored_bamboo_slab"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_stairs"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_pressure_plate"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_button"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_fence"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_fence_gate"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_door"
+    },
+    {
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_trapdoor"
+    }
+  ]
+}

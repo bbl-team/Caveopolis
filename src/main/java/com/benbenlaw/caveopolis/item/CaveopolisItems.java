@@ -384,10 +384,7 @@ public class CaveopolisItems {
             () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_ROAD_BUTTON.get(), new ColoredItemProperties()));
 
 
-
-
-
-
+    //Colored Planks
     public static final DeferredItem<Item> COLORED_LOG = ITEMS.register("colored_log",
             () -> new ColoredBlockItem((ColoredLog) CaveopolisBlocks.COLORED_LOG.get(), new ColoredItemProperties()));
     public static final DeferredItem<Item> COLORED_WOOD = ITEMS.register("colored_wood",
@@ -418,7 +415,54 @@ public class CaveopolisItems {
     public static final DeferredItem<Item> COLORED_PLANK_TRAPDOOR = ITEMS.register("colored_plank_trapdoor",
             () -> new ColoredBlockItem((ColoredTrapDoor) CaveopolisBlocks.COLORED_PLANK_TRAPDOOR.get(), new ColoredItemProperties()));
 
+    //Colored Bamboo
+    public static final DeferredItem<Item> COLORED_BAMBOO_BLOCK = ITEMS.register("colored_bamboo_block",
+            () -> new ColoredBlockItem((ColoredLog) CaveopolisBlocks.COLORED_BAMBOO_BLOCK.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> STRIPPED_COLORED_BAMBOO_BLOCK = ITEMS.register("stripped_colored_bamboo_block",
+            () -> new ColoredBlockItem((ColoredLog) CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_PLANKS = ITEMS.register("colored_bamboo_planks",
+            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_SLAB = ITEMS.register("colored_bamboo_slab",
+            () -> new ColoredBlockItem((ColoredSlab) CaveopolisBlocks.COLORED_BAMBOO_SLAB.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_STAIRS = ITEMS.register("colored_bamboo_stairs",
+            () -> new ColoredBlockItem((ColoredStairs) CaveopolisBlocks.COLORED_BAMBOO_STAIRS.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_PRESSURE_PLATE = ITEMS.register("colored_bamboo_pressure_plate",
+            () -> new ColoredBlockItem((ColoredPressurePlate) CaveopolisBlocks.COLORED_BAMBOO_PRESSURE_PLATE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_BUTTON = ITEMS.register("colored_bamboo_button",
+            () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_BAMBOO_BUTTON.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_FENCE = ITEMS.register("colored_bamboo_fence",
+            () -> new ColoredBlockItem((ColoredFence) CaveopolisBlocks.COLORED_BAMBOO_FENCE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_FENCE_GATE = ITEMS.register("colored_bamboo_fence_gate",
+            () -> new ColoredBlockItem((ColoredFenceGate) CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_DOOR = ITEMS.register("colored_bamboo_door",
+            () -> new ColoredBlockItem((ColoredDoor) CaveopolisBlocks.COLORED_BAMBOO_DOOR.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_TRAPDOOR = ITEMS.register("colored_bamboo_trapdoor",
+            () -> new ColoredBlockItem((ColoredTrapDoor) CaveopolisBlocks.COLORED_BAMBOO_TRAPDOOR.get(), new ColoredItemProperties()));
 
+    //Colored Bamboo Mosaic
+    public static final DeferredItem<Item> COLORED_BAMBOO_MOSAIC = ITEMS.register("colored_bamboo_mosaic",
+            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_MOSAIC_STAIRS = ITEMS.register("colored_bamboo_mosaic_stairs",
+            () -> new ColoredBlockItem((ColoredStairs) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_STAIRS.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_MOSAIC_PRESSURE_PLATE = ITEMS.register("colored_bamboo_mosaic_pressure_plate",
+            () -> new ColoredBlockItem((ColoredPressurePlate) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_PRESSURE_PLATE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_MOSAIC_BUTTON = ITEMS.register("colored_bamboo_mosaic_button",
+            () -> new ColoredBlockItem((ColoredButton) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_BUTTON.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_MOSAIC_SLAB = ITEMS.register("colored_bamboo_mosaic_slab",
+            () -> new ColoredBlockItem((ColoredSlab) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_SLAB.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_MOSAIC_FENCE = ITEMS.register("colored_bamboo_mosaic_fence",
+            () -> new ColoredBlockItem((ColoredFence) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_MOSAIC_FENCE_GATE = ITEMS.register("colored_bamboo_mosaic_fence_gate",
+            () -> new ColoredBlockItem((ColoredFenceGate) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_MOSAIC_DOOR = ITEMS.register("colored_bamboo_mosaic_door",
+            () -> new ColoredBlockItem((ColoredDoor) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_DOOR.get(), new ColoredItemProperties()));
+    public static final DeferredItem<Item> COLORED_BAMBOO_MOSAIC_TRAPDOOR = ITEMS.register("colored_bamboo_mosaic_trapdoor",
+            () -> new ColoredBlockItem((ColoredTrapDoor) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_TRAPDOOR.get(), new ColoredItemProperties()));
+
+
+
+
+    //Misc
 
     public static final DeferredItem<Item> COLORED_DIRT = ITEMS.register("colored_dirt",
             () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_DIRT.get(), new ColoredItemProperties()));

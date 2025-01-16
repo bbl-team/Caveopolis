@@ -64,6 +64,20 @@
       },
       "count": 1,
       "id": "caveopolis:colored_plank_trapdoor"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_block"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_bamboo_mosaic"
     }
   ]
 }

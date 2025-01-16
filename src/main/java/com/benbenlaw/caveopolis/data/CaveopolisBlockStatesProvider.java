@@ -197,8 +197,6 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_MARBLE_BRICK_BUTTON.get(), CaveopolisBlocks.COLORED_MARBLE_BRICKS.get());
 
 
-
-
         //Colored Wood
         saplingWithElements((SaplingBlock) CaveopolisBlocks.COLORED_SAPLING.get());
         simpleBlockWithElements(CaveopolisBlocks.COLORED_PLANKS.get());
@@ -215,6 +213,32 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         strippedLogBlockWithElement((RotatedPillarBlock) CaveopolisBlocks.STRIPPED_COLORED_LOG.get(), CaveopolisBlocks.STRIPPED_COLORED_LOG.get());
         strippedWoodBlockWithElement((RotatedPillarBlock) CaveopolisBlocks.STRIPPED_COLORED_WOOD.get(), CaveopolisBlocks.STRIPPED_COLORED_LOG.get());
         simpleBlockWithElements(CaveopolisBlocks.COLORED_LEAVES.get());
+
+        //Colored Bamboo
+        simpleBlockWithElements(CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_BAMBOO_SLAB.get(), CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_BAMBOO_STAIRS.get(), CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_BAMBOO_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_BAMBOO_BUTTON.get(), CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        fenceWithElements((FenceBlock) CaveopolisBlocks.COLORED_BAMBOO_FENCE.get(), CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        fenceGateWithElements((FenceGateBlock) CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.get(), CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        doorWithElements((DoorBlock) CaveopolisBlocks.COLORED_BAMBOO_DOOR.get(), CaveopolisBlocks.COLORED_BAMBOO_PLANKS.get());
+        trapDoorWithElements((TrapDoorBlock) CaveopolisBlocks.COLORED_BAMBOO_TRAPDOOR.get(), CaveopolisBlocks.COLORED_BAMBOO_TRAPDOOR.get(), true);
+        logBlockWithElement(CaveopolisBlocks.COLORED_BAMBOO_BLOCK.get());
+        strippedLogBlockWithElement((RotatedPillarBlock) CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.get(), CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.get());
+
+        //Colored Bamboo Mosaic
+        simpleBlockWithElements(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        slabWithElements((SlabBlock) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_SLAB.get(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        stairsWithElements((StairBlock) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_STAIRS.get(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        pressurePlateWithElements((PressurePlateBlock) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_PRESSURE_PLATE.get(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        buttonWithElements((ButtonBlock) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_BUTTON.get(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        fenceWithElements((FenceBlock) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.get(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        fenceGateWithElements((FenceGateBlock) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.get(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        doorWithElements((DoorBlock) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_DOOR.get(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC.get());
+        trapDoorWithElements((TrapDoorBlock) CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_TRAPDOOR.get(), CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_TRAPDOOR.get(), true);
+
+
 
 
 

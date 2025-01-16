@@ -142,6 +142,32 @@
    "block.caveopolis.colored_dandelion": "Colored Dandelion",
    "block.caveopolis.colored_crafting_table": "Colored Crafting Table",
 
+   "block.caveopolis.colored_bamboo_block": "Colored Bamboo Block",
+   "block.caveopolis.stripped_colored_bamboo_block": "Stripped Colored Bamboo Block",
+   "block.caveopolis.colored_bamboo_planks": "Colored Bamboo Planks",
+   "block.caveopolis.colored_bamboo_stairs": "Colored Bamboo Stairs",
+   "block.caveopolis.colored_bamboo_slab": "Colored Bamboo Slab",
+   "block.caveopolis.colored_bamboo_fence": "Colored Bamboo Fence",
+   "block.caveopolis.colored_bamboo_fence_gate": "Colored Bamboo Fence Gate",
+   "block.caveopolis.colored_bamboo_pressure_plate": "Colored Bamboo Pressure Plate",
+   "block.caveopolis.colored_bamboo_button": "Colored Bamboo Button",
+   "block.caveopolis.colored_bamboo_door": "Colored Bamboo Door",
+   "block.caveopolis.colored_bamboo_trapdoor": "Colored Bamboo Trapdoor",
+
+   "block.caveopolis.colored_bamboo_mosaic": "Colored Bamboo Mosaic",
+   "block.caveopolis.colored_bamboo_mosaic_stairs": "Colored Bamboo Mosaic Stairs",
+   "block.caveopolis.colored_bamboo_mosaic_slab": "Colored Bamboo Mosaic Slab",
+   "block.caveopolis.colored_bamboo_mosaic_fence": "Colored Bamboo Mosaic Fence",
+   "block.caveopolis.colored_bamboo_mosaic_fence_gate": "Colored Bamboo Mosaic Fence Gate",
+   "block.caveopolis.colored_bamboo_mosaic_pressure_plate": "Colored Bamboo Mosaic Pressure Plate",
+   "block.caveopolis.colored_bamboo_mosaic_button": "Colored Bamboo Mosaic Button",
+   "block.caveopolis.colored_bamboo_mosaic_door": "Colored Bamboo Mosaic Door",
+   "block.caveopolis.colored_bamboo_mosaic_trapdoor": "Colored Bamboo Mosaic Trapdoor",
+
+
+
+
+
    "item.caveopolis.white_spray_can": "White Spray Can",
    "item.caveopolis.gray_spray_can": "Gray Spray Can",
    "item.caveopolis.light_gray_spray_can": "Light Gray Spray Can",

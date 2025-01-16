@@ -9,13 +9,20 @@ colored bookshelves (custom tint area = yuuukkkkkk)
 sort creative tab color by color always the same order
 spray cans stop the working of blocks on the same color
 recipes for colored logs to planks
-config for durations
 
 ADD STRIPPED LOGS TAGS
 
 //*******//
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
+
+5.4.0
+Added Colored Bamboo
+Added Colored Bamboo Mosaic
+Added Colored Bamboo Block and Stripped
+Worktable recipes added for the new blocks
+Logs -> Colored Bamboo, Colored Mosaic, Block and Stripped Block
+Planks -> Colored Bamboo, Colored Mosaic
 
 5.3.0
 Light level emitted by colored blocks can now be changed in the config file (Startup)

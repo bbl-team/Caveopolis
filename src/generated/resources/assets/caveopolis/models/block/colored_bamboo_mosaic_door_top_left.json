@@ -1,0 +1,7 @@
+{
+  "parent": "caveopolis:block/door/tintable_door_top_left",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "top": "caveopolis:block/colored_bamboo_mosaic_door_top"
+  }
+}
