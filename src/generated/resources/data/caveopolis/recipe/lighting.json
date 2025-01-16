@@ -1,4 +1,9 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "caveopolis:crafting_table_apply_lighting"
+    }
+  ],
   "type": "caveopolis:lighting",
   "category": "misc"
 }

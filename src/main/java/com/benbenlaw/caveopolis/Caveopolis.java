@@ -1,16 +1,20 @@
 package com.benbenlaw.caveopolis;
 
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
+import com.benbenlaw.caveopolis.config.RecipeConfig;
 import com.benbenlaw.caveopolis.config.StartupConfig;
+import com.benbenlaw.caveopolis.config.WorldGenConfig;
 import com.benbenlaw.caveopolis.item.CaveopolisCreativeTab;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.network.CaveopolisMessages;
 import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
+import com.benbenlaw.caveopolis.recipe.conditions.CaveopolisConditions;
 import com.benbenlaw.caveopolis.screen.CaveopolisMenuTypes;
 import com.benbenlaw.caveopolis.screen.WorktableScreen;
 import com.benbenlaw.caveopolis.util.CaveopolisColorHandler;
 import com.benbenlaw.caveopolis.util.LogMaps;
 import com.benbenlaw.caveopolis.util.TreeGrowerMap;
+import com.benbenlaw.caveopolis.worldgen.CaveopolisWorldGeneration;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTrunkPlacers;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -47,12 +51,18 @@ public class Caveopolis {
         CaveopolisRecipes.register(eventBus);
         CaveopolisTrunkPlacers.TRUNK_PLACER.register(eventBus);
 
+        CaveopolisConditions.CONDITIONALS.register(eventBus);
+
+        CaveopolisWorldGeneration.PLACEMENTS.register(eventBus);
+        CaveopolisWorldGeneration.FEATURES.register(eventBus);
+
         if (FMLEnvironment.dist == Dist.CLIENT) {
             eventBus.register(new CaveopolisColorHandler());
         }
 
         modContainer.registerConfig(ModConfig.Type.STARTUP, StartupConfig.SPEC, "bbl/caveopolis/startup.toml");
-        modContainer.registerConfig(ModConfig.Type.COMMON, StartupConfig.SPEC, "bbl/caveopolis/recipes.toml");
+        modContainer.registerConfig(ModConfig.Type.COMMON, RecipeConfig.SPEC, "bbl/caveopolis/recipes.toml");
+        modContainer.registerConfig(ModConfig.Type.STARTUP, WorldGenConfig.SPEC, "bbl/caveopolis/worldgen.toml");
 
         eventBus.addListener(this::registerCapabilities);
         eventBus.addListener(this::commonSetup);

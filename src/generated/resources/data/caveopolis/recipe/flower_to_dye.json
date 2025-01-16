@@ -1,4 +1,9 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "caveopolis:colored_flowers_to_dye"
+    }
+  ],
   "type": "caveopolis:flower_to_dye",
   "category": "misc"
 }

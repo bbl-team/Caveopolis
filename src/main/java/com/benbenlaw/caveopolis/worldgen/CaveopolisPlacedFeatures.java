@@ -65,6 +65,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.BLACK).getBlock())));
 
@@ -76,6 +77,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.RED).getBlock())));
 
@@ -87,6 +89,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         Blocks.SPRUCE_SAPLING)));
 
@@ -98,6 +101,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.GREEN).getBlock())));
 
@@ -109,6 +113,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         Blocks.CACTUS)));
 
@@ -120,6 +125,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.PURPLE).getBlock())));
 
@@ -131,6 +137,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         Blocks.DEAD_BUSH)));
 
@@ -142,6 +149,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.WHITE).getBlock())));
 
@@ -153,6 +161,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.BROWN).getBlock())));
 
@@ -164,6 +173,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.PINK).getBlock())));
 
@@ -175,6 +185,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         Blocks.SPRUCE_SAPLING)));
 
@@ -186,6 +197,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.LIGHT_GRAY).getBlock())));
 
@@ -197,6 +209,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.LIME).getBlock())));
 
@@ -208,6 +221,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.MAGENTA).getBlock())));
 
@@ -219,6 +233,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                         CaveopolisBlocks.COLORED_SAPLING.get().defaultBlockState().setValue(ColoredSapling.COLOR, DyeColor.GRAY).getBlock())));
 
@@ -230,6 +245,7 @@ public class CaveopolisPlacedFeatures {
                 BiomeFilter.biome(),
                 SurfaceWaterDepthFilter.forMaxDepth(0),
                 InSquarePlacement.spread(),
+                PlacementTrees.create(),
                 PlacementUtils.filteredByBlockSurvival(
                        Blocks.SPRUCE_SAPLING)));
 
@@ -237,6 +253,7 @@ public class CaveopolisPlacedFeatures {
         register(context, BLACK_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.BLACK_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -244,6 +261,7 @@ public class CaveopolisPlacedFeatures {
         register(context, RED_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.RED_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -251,6 +269,7 @@ public class CaveopolisPlacedFeatures {
         register(context, BLUE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.BLUE_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -258,6 +277,7 @@ public class CaveopolisPlacedFeatures {
         register(context, GREEN_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.GREEN_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -265,6 +285,7 @@ public class CaveopolisPlacedFeatures {
         register(context, YELLOW_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.YELLOW_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -272,6 +293,7 @@ public class CaveopolisPlacedFeatures {
         register(context, PURPLE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.PURPLE_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -279,6 +301,7 @@ public class CaveopolisPlacedFeatures {
         register(context, ORANGE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.ORANGE_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -286,6 +309,7 @@ public class CaveopolisPlacedFeatures {
         register(context, WHITE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.WHITE_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -293,6 +317,7 @@ public class CaveopolisPlacedFeatures {
         register(context, BROWN_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.BROWN_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(10)),
                 BiomeFilter.biome()));
 
@@ -300,6 +325,7 @@ public class CaveopolisPlacedFeatures {
         register(context, PINK_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.PINK_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -307,6 +333,7 @@ public class CaveopolisPlacedFeatures {
         register(context, CYAN_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.CYAN_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -314,6 +341,7 @@ public class CaveopolisPlacedFeatures {
         register(context, LIGHT_GRAY_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.LIGHT_GRAY_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(10)),
                 BiomeFilter.biome()));
 
@@ -321,6 +349,7 @@ public class CaveopolisPlacedFeatures {
         register(context, LIME_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.LIME_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -328,6 +357,7 @@ public class CaveopolisPlacedFeatures {
         register(context, MAGENTA_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.MAGENTA_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.absolute(150)),
                 BiomeFilter.biome()));
 
@@ -335,6 +365,7 @@ public class CaveopolisPlacedFeatures {
         register(context, GRAY_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.GRAY_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(10)),
                 BiomeFilter.biome()));
 
@@ -342,6 +373,7 @@ public class CaveopolisPlacedFeatures {
         register(context, LIGHT_BLUE_STONE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.LIGHT_BLUE_STONE_KEY), List.of(
                 CountPlacement.of(1),
                 InSquarePlacement.spread(),
+                PlacementStones.create(),
                 HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(10)),
                 BiomeFilter.biome()));
 

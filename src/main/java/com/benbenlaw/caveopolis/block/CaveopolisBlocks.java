@@ -1,6 +1,7 @@
 package com.benbenlaw.caveopolis.block;
 
 import com.benbenlaw.caveopolis.Caveopolis;
+import com.benbenlaw.caveopolis.config.StartupConfig;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
 import com.benbenlaw.core.block.colored.*;
 import com.benbenlaw.core.block.colored.flammable.*;
@@ -558,7 +559,7 @@ public class CaveopolisBlocks {
     }
 
     private static ToIntFunction<BlockState> litBlockEmission() {
-        return (blockState) -> blockState.getValue(BlockStateProperties.LIT) ? 15 : 0;
+        return (blockState) -> blockState.getValue(BlockStateProperties.LIT) ? StartupConfig.litBlockEmission.get() : 0;
     }
 
     public static void register(IEventBus eventBus) {

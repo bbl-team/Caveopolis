@@ -17,6 +17,14 @@ ADD STRIPPED LOGS TAGS
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.3.0
+Light level emitted by colored blocks can now be changed in the config file (Startup)
+Flowers to dye recipes can now be disabled in the config file (Recipes)
+Spray cans in crafting tables to change colors can now be disabled in the config file (Recipes)
+Glowstone spray cans in crafting tables to light blocks can now be disabled in the config file (Recipes)
+Tree spawning in world can now be disabled in the config file (World Gen)
+Colored stone spawning in world can now be disabled in the config file (World Gen)
+
 5.2.0
 Fixed Colored Bricks Tint not being applied in world for its stairs, slabs, walls and buttons and pressure plates
 Fixed normal blocks not using the correct model causing the block to be visible all the time

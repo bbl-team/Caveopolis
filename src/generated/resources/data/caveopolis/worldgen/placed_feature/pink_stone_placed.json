@@ -9,6 +9,9 @@
       "type": "minecraft:in_square"
     },
     {
+      "type": "caveopolis:colored_stones_placement"
+    },
+    {
       "type": "minecraft:height_range",
       "height": {
         "type": "minecraft:uniform",

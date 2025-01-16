@@ -24,6 +24,9 @@
       "type": "minecraft:in_square"
     },
     {
+      "type": "caveopolis:colored_trees_placement"
+    },
+    {
       "type": "minecraft:block_predicate_filter",
       "predicate": {
         "type": "minecraft:would_survive",

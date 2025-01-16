@@ -3,9 +3,12 @@ package com.benbenlaw.caveopolis.data;
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.data.recipes.*;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
+import com.benbenlaw.caveopolis.recipe.conditions.ColoredFlowersToDye;
+import com.benbenlaw.caveopolis.recipe.conditions.CraftingTableApplyColor;
 import com.benbenlaw.caveopolis.recipe.ColoringRecipe;
 import com.benbenlaw.caveopolis.recipe.FlowerDyeRecipe;
 import com.benbenlaw.caveopolis.recipe.LightingRecipe;
+import com.benbenlaw.caveopolis.recipe.conditions.CraftingTableApplyLighting;
 import com.benbenlaw.core.item.CoreDataComponents;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.component.DataComponentPredicate;
@@ -17,6 +20,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.conditions.ICondition;
 import net.neoforged.neoforge.common.crafting.DataComponentIngredient;
 import net.neoforged.neoforge.common.crafting.SizedIngredient;
 
@@ -482,13 +486,16 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
 
 
         //Special Recipes - Coloring
-        SpecialRecipeBuilder.special(ColoringRecipe::new).save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "coloring"));
+        SpecialRecipeBuilder.special(ColoringRecipe::new).save(consumer.withConditions(CraftingTableApplyColor.INSTANCE),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "coloring"));
 
         //Special Recipes - Lighting
-        SpecialRecipeBuilder.special(LightingRecipe::new).save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "lighting"));
+        SpecialRecipeBuilder.special(LightingRecipe::new).save(consumer.withConditions(CraftingTableApplyLighting.INSTANCE),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "lighting"));
 
         //Special Recipes - Flower Dye
-        SpecialRecipeBuilder.special(FlowerDyeRecipe::new).save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "flower_to_dye"));
+        SpecialRecipeBuilder.special(FlowerDyeRecipe::new).save(consumer.withConditions(ColoredFlowersToDye.INSTANCE),
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "flower_to_dye"));
 
         //Worktable
 
