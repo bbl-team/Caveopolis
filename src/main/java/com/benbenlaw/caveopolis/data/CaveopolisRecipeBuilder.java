@@ -42,6 +42,8 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
     @Override
     protected void buildRecipes(RecipeOutput consumer) {
 
+        //Logs To Planks
+
         //Vanilla To Caveopolis - Bamboo
         WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.BAMBOO,
                 SizedIngredient.of(Items.BAMBOO_BLOCK.asItem(), 1))

@@ -16,6 +16,10 @@ ADD STRIPPED LOGS TAGS
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+
+5.5.0
+Added new recipe type "caveopolis:colored_crafting", follows vanilla shaped crafting
+
 5.4.0
 Added Colored Bamboo
 Added Colored Bamboo Mosaic

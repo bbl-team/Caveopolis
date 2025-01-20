@@ -52,6 +52,13 @@ public class CaveopolisRecipes {
     public static final Supplier<RecipeType<LogsToPlanksRecipe>> LOG_TO_PLANKS_TYPE =
             TYPES.register("log_to_planks", () -> new RecipeType<LogsToPlanksRecipe>() {});
 
+    //Colored Crafting
+    public static final Supplier<RecipeSerializer<ColoredCraftingRecipe>> COLORED_CRAFTING_SERIALIZER =
+            SERIALIZER.register("colored_crafting", () -> ColoredCraftingRecipe.Serializer.INSTANCE);
+
+    public static final Supplier<RecipeType<ColoredCraftingRecipe>> COLORED_CRAFTING_TYPE =
+            TYPES.register("colored_crafting", () -> ColoredCraftingRecipe.Type.INSTANCE);
+
 
     /*
     public static final Supplier<RecipeType<ColoringRecipe>> COLORING_TYPE =
