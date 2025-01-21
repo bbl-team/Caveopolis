@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:colored_crafting",
+  "key": {
+    "S": {
+      "item": "caveopolis:colored_cobblestone_bricks"
+    }
+  },
+  "pattern": [
+    "SSS"
+  ],
+  "result": {
+    "count": 6,
+    "id": "caveopolis:colored_cobblestone_brick_slab"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:colored_crafting",
+  "key": {
+    "S": {
+      "item": "caveopolis:colored_triple"
+    }
+  },
+  "pattern": [
+    "S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "caveopolis:colored_triple_button"
+  }
+}

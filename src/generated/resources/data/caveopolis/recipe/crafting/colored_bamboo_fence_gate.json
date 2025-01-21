@@ -1,0 +1,19 @@
+{
+  "type": "caveopolis:colored_crafting",
+  "key": {
+    "F": {
+      "tag": "c:rods/wooden"
+    },
+    "S": {
+      "item": "caveopolis:colored_bamboo_planks"
+    }
+  },
+  "pattern": [
+    "FSF",
+    "FSF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "caveopolis:colored_bamboo_fence_gate"
+  }
+}

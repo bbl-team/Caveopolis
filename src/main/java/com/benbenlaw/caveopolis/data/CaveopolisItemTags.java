@@ -3,6 +3,7 @@ package com.benbenlaw.caveopolis.data;
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
+import com.benbenlaw.caveopolis.util.CaveopolisTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -25,6 +26,18 @@ public class CaveopolisItemTags extends ItemTagsProvider {
 
         //Crafting Tables
         tag(Tags.Items.PLAYER_WORKSTATIONS_CRAFTING_TABLES).add(CaveopolisBlocks.COLORED_CRAFTING_TABLE.asItem());
+
+        //Colored Bamboo
+        tag(CaveopolisTags.Items.COLORED_BAMBOO)
+                .add(CaveopolisItems.COLORED_BAMBOO_BLOCK.asItem())
+                .add(CaveopolisItems.STRIPPED_COLORED_BAMBOO_BLOCK.asItem());
+
+        //Colored Logs
+        tag(CaveopolisTags.Items.COLORED_LOGS)
+                .add(CaveopolisBlocks.COLORED_LOG.asItem())
+                .add(CaveopolisBlocks.STRIPPED_COLORED_LOG.asItem())
+                .add(CaveopolisBlocks.COLORED_WOOD.asItem())
+                .add(CaveopolisBlocks.STRIPPED_COLORED_WOOD.asItem());
 
         //Dyes
         tag(Tags.Items.DYES_BLACK).add(CaveopolisItems.BLACK_SPRAY_CAN.asItem());

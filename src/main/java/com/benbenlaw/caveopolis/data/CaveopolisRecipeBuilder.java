@@ -1,6 +1,7 @@
 package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
+import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.data.recipes.*;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.conditions.ColoredFlowersToDye;
@@ -9,15 +10,21 @@ import com.benbenlaw.caveopolis.recipe.ColoringRecipe;
 import com.benbenlaw.caveopolis.recipe.FlowerDyeRecipe;
 import com.benbenlaw.caveopolis.recipe.LightingRecipe;
 import com.benbenlaw.caveopolis.recipe.conditions.CraftingTableApplyLighting;
+import com.benbenlaw.caveopolis.util.CaveopolisTags;
 import com.benbenlaw.core.item.CoreDataComponents;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.component.DataComponentPredicate;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CraftingBookCategory;
+import net.minecraft.world.item.crafting.CustomRecipe;
+import net.minecraft.world.item.crafting.ShapedRecipePattern;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.conditions.ICondition;
@@ -39,10 +46,14 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
     };
 
 
+
     @Override
     protected void buildRecipes(RecipeOutput consumer) {
 
-        //Logs To Planks
+        //Crafting Recipes
+
+
+
 
         //Vanilla To Caveopolis - Bamboo
         WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.BAMBOO,
@@ -716,46 +727,161 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "spray_cans/glowstone"));
 
 
+        //Colored Crafting - Planks
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, CaveopolisItems.COLORED_PLANKS, 4)
+                .pattern("S")
+                .define('S', CaveopolisTags.Items.COLORED_LOGS)
+                .unlockedBy("has_item", has(CaveopolisTags.Items.COLORED_LOGS))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/colored_planks"));
 
+        //Colored Crafting - Bamboo Planks
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, CaveopolisItems.COLORED_BAMBOO_PLANKS, 2)
+                .pattern("S")
+                .define('S', CaveopolisTags.Items.COLORED_BAMBOO)
+                .unlockedBy("has_item", has(CaveopolisTags.Items.COLORED_BAMBOO))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/colored_bamboo_planks"));
 
+        //Colored Crafting - Planks
+        createPlankLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_PLANKS.get(), CaveopolisItems.COLORED_PLANK_STAIRS.get(), CaveopolisItems.COLORED_PLANK_SLAB.get(), CaveopolisItems.COLORED_PLANK_PRESSURE_PLATE.get(), CaveopolisItems.COLORED_PLANK_FENCE.get(), CaveopolisItems.COLORED_PLANK_FENCE_GATE.get(), CaveopolisItems.COLORED_PLANK_DOOR.get(), CaveopolisItems.COLORED_PLANK_TRAPDOOR.get(), CaveopolisItems.COLORED_PLANK_BUTTON.get());
+        createPlankLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_BAMBOO_PLANKS, CaveopolisItems.COLORED_BAMBOO_STAIRS, CaveopolisItems.COLORED_BAMBOO_SLAB, CaveopolisItems.COLORED_BAMBOO_PRESSURE_PLATE, CaveopolisItems.COLORED_BAMBOO_FENCE, CaveopolisItems.COLORED_BAMBOO_FENCE_GATE, CaveopolisItems.COLORED_BAMBOO_DOOR, CaveopolisItems.COLORED_BAMBOO_TRAPDOOR, CaveopolisItems.COLORED_BAMBOO_BUTTON);
+        createPlankLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_BAMBOO_MOSAIC, CaveopolisItems.COLORED_BAMBOO_MOSAIC_STAIRS, CaveopolisItems.COLORED_BAMBOO_MOSAIC_SLAB, CaveopolisItems.COLORED_BAMBOO_MOSAIC_PRESSURE_PLATE, CaveopolisItems.COLORED_BAMBOO_MOSAIC_FENCE, CaveopolisItems.COLORED_BAMBOO_MOSAIC_FENCE_GATE, CaveopolisItems.COLORED_BAMBOO_MOSAIC_DOOR, CaveopolisItems.COLORED_BAMBOO_MOSAIC_TRAPDOOR, CaveopolisItems.COLORED_BAMBOO_MOSAIC_BUTTON);
+
+        //Colored Crafting - Stones
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_STONE.get(), CaveopolisItems.COLORED_STONE_STAIRS.get(), CaveopolisItems.COLORED_STONE_SLAB.get(), CaveopolisItems.COLORED_STONE_WALL.get(), CaveopolisItems.COLORED_STONE_PRESSURE_PLATE.get(), CaveopolisItems.COLORED_STONE_BUTTON.get());
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_COBBLESTONE.get(), CaveopolisItems.COLORED_COBBLESTONE_STAIRS.get(), CaveopolisItems.COLORED_COBBLESTONE_SLAB.get(), CaveopolisItems.COLORED_COBBLESTONE_WALL.get(), CaveopolisItems.COLORED_COBBLESTONE_PRESSURE_PLATE.get(), CaveopolisItems.COLORED_COBBLESTONE_BUTTON.get());
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_STONE_BRICKS.get(), CaveopolisItems.COLORED_STONE_BRICK_STAIRS.get(), CaveopolisItems.COLORED_STONE_BRICK_SLAB.get(), CaveopolisItems.COLORED_STONE_BRICK_WALL.get(), CaveopolisItems.COLORED_STONE_BRICK_PRESSURE_PLATE.get(), CaveopolisItems.COLORED_STONE_BRICK_BUTTON.get());
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_COBBLESTONE_BRICKS.get(), CaveopolisItems.COLORED_COBBLESTONE_BRICK_STAIRS.get(), CaveopolisItems.COLORED_COBBLESTONE_BRICK_SLAB.get(), CaveopolisItems.COLORED_COBBLESTONE_BRICK_WALL.get(), CaveopolisItems.COLORED_COBBLESTONE_BRICK_PRESSURE_PLATE.get(), CaveopolisItems.COLORED_COBBLESTONE_BRICK_BUTTON.get());
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_CRACKED_STONE_BRICKS, CaveopolisItems.COLORED_CRACKED_STONE_BRICK_STAIRS, CaveopolisItems.COLORED_CRACKED_STONE_BRICK_SLAB, CaveopolisItems.COLORED_CRACKED_STONE_BRICK_WALL, CaveopolisItems.COLORED_CRACKED_STONE_BRICK_PRESSURE_PLATE, CaveopolisItems.COLORED_CRACKED_STONE_BRICK_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_PRISMARINE, CaveopolisItems.COLORED_PRISMARINE_STAIRS, CaveopolisItems.COLORED_PRISMARINE_SLAB, CaveopolisItems.COLORED_PRISMARINE_WALL, CaveopolisItems.COLORED_PRISMARINE_PRESSURE_PLATE, CaveopolisItems.COLORED_PRISMARINE_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_PRISMARINE_BRICKS, CaveopolisItems.COLORED_PRISMARINE_BRICK_STAIRS, CaveopolisItems.COLORED_PRISMARINE_BRICK_SLAB, CaveopolisItems.COLORED_PRISMARINE_BRICK_WALL, CaveopolisItems.COLORED_PRISMARINE_BRICK_PRESSURE_PLATE, CaveopolisItems.COLORED_PRISMARINE_BRICK_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_DARK_PRISMARINE, CaveopolisItems.COLORED_DARK_PRISMARINE_STAIRS, CaveopolisItems.COLORED_DARK_PRISMARINE_SLAB, CaveopolisItems.COLORED_DARK_PRISMARINE_WALL, CaveopolisItems.COLORED_DARK_PRISMARINE_PRESSURE_PLATE, CaveopolisItems.COLORED_DARK_PRISMARINE_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_TILE, CaveopolisItems.COLORED_TILE_STAIRS, CaveopolisItems.COLORED_TILE_SLAB, CaveopolisItems.COLORED_TILE_WALL, CaveopolisItems.COLORED_TILE_PRESSURE_PLATE, CaveopolisItems.COLORED_TILE_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_POLISHED_STONE, CaveopolisItems.COLORED_POLISHED_STONE_STAIRS, CaveopolisItems.COLORED_POLISHED_STONE_SLAB, CaveopolisItems.COLORED_POLISHED_STONE_WALL, CaveopolisItems.COLORED_POLISHED_STONE_PRESSURE_PLATE, CaveopolisItems.COLORED_POLISHED_STONE_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_BRICKS, CaveopolisItems.COLORED_BRICK_STAIRS, CaveopolisItems.COLORED_BRICK_SLAB, CaveopolisItems.COLORED_BRICK_WALL, CaveopolisItems.COLORED_BRICK_PRESSURE_PLATE, CaveopolisItems.COLORED_BRICK_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_MARBLE, CaveopolisItems.COLORED_MARBLE_STAIRS, CaveopolisItems.COLORED_MARBLE_SLAB, CaveopolisItems.COLORED_MARBLE_WALL, CaveopolisItems.COLORED_MARBLE_PRESSURE_PLATE, CaveopolisItems.COLORED_MARBLE_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_MARBLE_BRICKS, CaveopolisItems.COLORED_MARBLE_BRICK_STAIRS, CaveopolisItems.COLORED_MARBLE_BRICK_SLAB, CaveopolisItems.COLORED_MARBLE_BRICK_WALL, CaveopolisItems.COLORED_MARBLE_BRICK_PRESSURE_PLATE, CaveopolisItems.COLORED_MARBLE_BRICK_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_MOSAIC, CaveopolisItems.COLORED_MOSAIC_STAIRS, CaveopolisItems.COLORED_MOSAIC_SLAB, CaveopolisItems.COLORED_MOSAIC_WALL, CaveopolisItems.COLORED_MOSAIC_PRESSURE_PLATE, CaveopolisItems.COLORED_MOSAIC_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_CHAOTIC, CaveopolisItems.COLORED_CHAOTIC_STAIRS, CaveopolisItems.COLORED_CHAOTIC_SLAB, CaveopolisItems.COLORED_CHAOTIC_WALL, CaveopolisItems.COLORED_CHAOTIC_PRESSURE_PLATE, CaveopolisItems.COLORED_CHAOTIC_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_TRIPLE, CaveopolisItems.COLORED_TRIPLE_STAIRS, CaveopolisItems.COLORED_TRIPLE_SLAB, CaveopolisItems.COLORED_TRIPLE_WALL, CaveopolisItems.COLORED_TRIPLE_PRESSURE_PLATE, CaveopolisItems.COLORED_TRIPLE_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_BRAID, CaveopolisItems.COLORED_BRAID_STAIRS, CaveopolisItems.COLORED_BRAID_SLAB, CaveopolisItems.COLORED_BRAID_WALL, CaveopolisItems.COLORED_BRAID_PRESSURE_PLATE, CaveopolisItems.COLORED_BRAID_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_ENCASED, CaveopolisItems.COLORED_ENCASED_STAIRS, CaveopolisItems.COLORED_ENCASED_SLAB, CaveopolisItems.COLORED_ENCASED_WALL, CaveopolisItems.COLORED_ENCASED_PRESSURE_PLATE, CaveopolisItems.COLORED_ENCASED_BUTTON);
+        createStoneLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_ROAD, CaveopolisItems.COLORED_ROAD_STAIRS, CaveopolisItems.COLORED_ROAD_SLAB, CaveopolisItems.COLORED_ROAD_WALL, CaveopolisItems.COLORED_ROAD_PRESSURE_PLATE, CaveopolisItems.COLORED_ROAD_BUTTON);
     }
 
-    /*
-    private void createRecipe(RecipeOutput consumer, String color, String blockType, ItemLike output, int outputCount, ItemLike input, int inputCount, String path) {
+    public void createStoneLikeCraftingRecipes(RecipeOutput consumer, ItemLike stone, ItemLike stairs, ItemLike slab, ItemLike wall, ItemLike pressure_plate, ItemLike button) {
+        createStairsColoringRecipe(consumer, stone, stairs);
+        createSlabColoringRecipe(consumer, stone, slab);
+        createWallColoringRecipe(consumer, stone, wall);
+        createPressurePlateRecipe(consumer, stone, pressure_plate);
+        createButtonColoringRecipe(consumer, stone, button);
+    }
 
-        ItemLike inputStack = iconWithColor(new ItemStack(input, inputCount), color).getItem();
-        SizedIngredient inputIngredient = SizedIngredient.of(inputStack, inputCount);
-        WorktableRecipeBuilder.worktableRecipeBuilder(iconWithColor(new ItemStack(output, outputCount), color),
-                        inputIngredient)
+    public void createPlankLikeCraftingRecipes(RecipeOutput consumer, ItemLike planks, ItemLike stairs, ItemLike slab, ItemLike pressure_plate, ItemLike fence, ItemLike fence_gate, ItemLike door, ItemLike trapdoor, ItemLike button) {
+        createStairsColoringRecipe(consumer, planks, stairs);
+        createSlabColoringRecipe(consumer, planks, slab);
+        createPressurePlateRecipe(consumer, planks, pressure_plate);
+        createFenceColoringRecipe(consumer, planks, fence);
+        createFenceGateColoringRecipe(consumer, planks, fence_gate);
+        createDoorColoringRecipe(consumer, planks, door);
+        createTrapdoorColoringRecipe(consumer, planks, trapdoor);
+        createButtonColoringRecipe(consumer, planks, button);
+    }
+
+    public void createWallColoringRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 6)
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', input)
                 .unlockedBy("has_item", has(input))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/" + blockType + "/" + path + "/" + color));
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + outputPath));
     }
-    private void createRecipe(RecipeOutput consumer, String color, String blockType, ItemLike output, int outputCount, TagKey<Item> input, int inputCount, String path) {
 
-        WorktableRecipeBuilder.worktableRecipeBuilder(iconWithColor(new ItemStack(output, outputCount), color),
-                        SizedIngredient.of(input, inputCount))
+    public void createStairsColoringRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 4)
+                .pattern("S  ")
+                .pattern("SS ")
+                .pattern("SSS")
+                .define('S', input)
                 .unlockedBy("has_item", has(input))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/" + blockType + "/" + path + "/" + color));
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + outputPath));
+    }
+    public void createSlabColoringRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 6)
+                .pattern("SSS")
+                .define('S', input)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + outputPath));
+    }
+    public void createPressurePlateRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 2)
+                .pattern("SS")
+                .define('S', input)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + outputPath));
+    }
+    public void createFenceColoringRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 3)
+                .pattern("SFS")
+                .pattern("SFS")
+                .define('S', input)
+                .define('F', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + outputPath));
+    }
+    public void createFenceGateColoringRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 1)
+                .pattern("FSF")
+                .pattern("FSF")
+                .define('S', input)
+                .define('F', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + outputPath));
+    }
+    public void createDoorColoringRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 3)
+                .pattern("SS")
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', input)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + outputPath));
+    }
+    public void createTrapdoorColoringRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 2)
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', input)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + outputPath));
+    }
+    public void createButtonColoringRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 1)
+                .pattern("S")
+                .define('S', input)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + outputPath));
     }
 
 
-    private void planksFromLog(RecipeOutput consumer, String color, String blockType, ItemLike output, ItemLike input, int outputCount) {
-
-        final Ingredient coloredLog = DataComponentIngredient.of(false, DataComponentPredicate.builder()
-                        .expect(CoreDataComponents.COLOR.get(), color).build(),
-                iconWithColor(new ItemStack(input), color).getItem());
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, iconWithColor(new ItemStack(output, outputCount), color))
-                .requires(coloredLog)
-                .group("planks")
-                .unlockedBy("has_log", has(input))
-                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/" + blockType + "/" + color));
-    }
-
-*/
 
 
-    private void createWorktableColoringRecipe(RecipeOutput consumer, String color, List resultList, ItemLike ingredient, String type) {
+
+
+
+
+
+
+
+    public void createWorktableColoringRecipe(RecipeOutput consumer, String color, List resultList, ItemLike ingredient, String type) {
         WorktableRecipeBuilder.worktableRecipeBuilder(resultList,
                         new SizedIngredient(
                                 DataComponentIngredient.of(false, DataComponentPredicate.builder()
@@ -765,8 +891,7 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/" + type + "/" + color));
     }
 
-
-    private static ItemLike iconWithColor(ItemStack item, String color) {
+    public static ItemLike iconWithColor(ItemStack item, String color) {
         item.set(CoreDataComponents.COLOR, color);
         item.set(CoreDataComponents.LIT, false);
         return item.getItem();

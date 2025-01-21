@@ -1,0 +1,15 @@
+{
+  "type": "caveopolis:colored_crafting",
+  "key": {
+    "S": {
+      "tag": "caveopolis:colored_logs"
+    }
+  },
+  "pattern": [
+    "S"
+  ],
+  "result": {
+    "count": 4,
+    "id": "caveopolis:colored_planks"
+  }
+}

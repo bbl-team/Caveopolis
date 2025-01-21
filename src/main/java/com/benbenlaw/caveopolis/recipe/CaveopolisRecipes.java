@@ -4,8 +4,10 @@ import com.benbenlaw.caveopolis.Caveopolis;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.crafting.ShapedRecipe;
 import net.minecraft.world.item.crafting.SimpleCraftingRecipeSerializer;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -45,26 +47,12 @@ public class CaveopolisRecipes {
     public static final Supplier<RecipeType<FlowerDyeRecipe>> FLOWER_TO_DYE_TYPE =
             TYPES.register("flower_to_dye", () -> new RecipeType<FlowerDyeRecipe>() {});
 
-    //Log To Planks
-    public static final Supplier<RecipeSerializer<LogsToPlanksRecipe>> LOG_TO_PLANKS_SERIALIZER =
-            SERIALIZER.register("log_to_planks", () -> new SimpleCraftingRecipeSerializer<>(LogsToPlanksRecipe::new));
-
-    public static final Supplier<RecipeType<LogsToPlanksRecipe>> LOG_TO_PLANKS_TYPE =
-            TYPES.register("log_to_planks", () -> new RecipeType<LogsToPlanksRecipe>() {});
 
     //Colored Crafting
-    public static final Supplier<RecipeSerializer<ColoredCraftingRecipe>> COLORED_CRAFTING_SERIALIZER =
-            SERIALIZER.register("colored_crafting", () -> ColoredCraftingRecipe.Serializer.INSTANCE);
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<ColoredCraftingRecipe>> COLORED_CRAFTING_SERIALIZER =
+            SERIALIZER.register("colored_crafting", ColoredCraftingRecipe.Serializer::new
+    );
 
-    public static final Supplier<RecipeType<ColoredCraftingRecipe>> COLORED_CRAFTING_TYPE =
-            TYPES.register("colored_crafting", () -> ColoredCraftingRecipe.Type.INSTANCE);
-
-
-    /*
-    public static final Supplier<RecipeType<ColoringRecipe>> COLORING_TYPE =
-            TYPES.register("coloring", () -> ColoringRecipe.Type.INSTANCE);
-
-     */
 
 
     public static void register(IEventBus eventBus) {

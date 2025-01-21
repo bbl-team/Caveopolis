@@ -1,0 +1,17 @@
+{
+  "type": "caveopolis:colored_crafting",
+  "key": {
+    "S": {
+      "item": "caveopolis:colored_polished_stone"
+    }
+  },
+  "pattern": [
+    "S  ",
+    "SS ",
+    "SSS"
+  ],
+  "result": {
+    "count": 4,
+    "id": "caveopolis:colored_polished_stone_stairs"
+  }
+}

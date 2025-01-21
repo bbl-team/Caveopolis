@@ -8,9 +8,6 @@ colored furnace?
 colored bookshelves (custom tint area = yuuukkkkkk)
 sort creative tab color by color always the same order
 spray cans stop the working of blocks on the same color
-recipes for colored logs to planks
-
-ADD STRIPPED LOGS TAGS
 
 //*******//
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
@@ -19,6 +16,13 @@ UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 
 5.5.0
 Added new recipe type "caveopolis:colored_crafting", follows vanilla shaped crafting
+Removed log to planks recipe type and change to this system
+Added Colored Logs Tag
+Added Colored Bamboo Tag
+Added Stripped logs and stripped bamboo to the c:stripped_logs tag
+Added Stripped wood to the c:stripped_woods tag
+Added Vanilla crafting recipes for all caveopolis blocks, provides the expected recipes
+    for all caveopolis subtype blocks (stairs, slabs, walls, buttons, pressure plates, doors, trapdoors, fences, fence gates) if applicable
 
 5.4.0
 Added Colored Bamboo

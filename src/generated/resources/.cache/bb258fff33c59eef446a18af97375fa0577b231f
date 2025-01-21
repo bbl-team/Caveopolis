@@ -1,4 +1,6 @@
-// 1.21.1	2025-01-16T12:16:44.5805237	Tags for minecraft:item mod id caveopolis
+// 1.21.1	2025-01-21T18:32:48.9463921	Tags for minecraft:item mod id caveopolis
+8eae41385d6a307da4e2d5ed4f2c41bce72a8f42 data/caveopolis/tags/item/colored_bamboo.json
+4ca75022e59bb48bec31cff30f92c44cb17b1bde data/caveopolis/tags/item/colored_logs.json
 d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/item/cobblestones.json
 95f5b03468bd3aa2c2a1c02cdd0e4256e6d25a82 data/c/tags/item/dyes/black.json
 0d5419b0a47a89516d5d2a3bd89c2a3356d0c338 data/c/tags/item/dyes/blue.json

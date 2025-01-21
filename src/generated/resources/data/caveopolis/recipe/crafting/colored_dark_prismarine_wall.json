@@ -1,0 +1,16 @@
+{
+  "type": "caveopolis:colored_crafting",
+  "key": {
+    "S": {
+      "item": "caveopolis:colored_dark_prismarine"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SSS"
+  ],
+  "result": {
+    "count": 6,
+    "id": "caveopolis:colored_dark_prismarine_wall"
+  }
+}

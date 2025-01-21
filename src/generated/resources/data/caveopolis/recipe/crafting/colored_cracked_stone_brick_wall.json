@@ -1,0 +1,16 @@
+{
+  "type": "caveopolis:colored_crafting",
+  "key": {
+    "S": {
+      "item": "caveopolis:colored_cracked_stone_bricks"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SSS"
+  ],
+  "result": {
+    "count": 6,
+    "id": "caveopolis:colored_cracked_stone_brick_wall"
+  }
+}

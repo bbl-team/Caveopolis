@@ -2,7 +2,7 @@
   "type": "caveopolis:colored_crafting",
   "key": {
     "C": {
-      "item": "caveopolis:colored_log"
+      "item": "caveopolis:colored_planks"
     }
   },
   "pattern": [

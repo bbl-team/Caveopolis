@@ -2,6 +2,7 @@ package com.benbenlaw.caveopolis.data;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
+import com.benbenlaw.caveopolis.util.CaveopolisTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -24,6 +25,27 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
         //Crafting Tables
         tag(Tags.Blocks.PLAYER_WORKSTATIONS_CRAFTING_TABLES)
                 .add(CaveopolisBlocks.COLORED_CRAFTING_TABLE.get());
+
+        //Stripped Logs
+        tag(Tags.Blocks.STRIPPED_LOGS)
+                .add(CaveopolisBlocks.STRIPPED_COLORED_LOG.get())
+                .add(CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.get());
+
+        //Stripped Wood
+        tag(Tags.Blocks.STRIPPED_WOODS)
+                .add(CaveopolisBlocks.STRIPPED_COLORED_WOOD.get());
+
+        //Coloring Bamboo
+        tag(CaveopolisTags.Blocks.COLORED_BAMBOO)
+                .add(CaveopolisBlocks.COLORED_BAMBOO_BLOCK.get())
+                .add(CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.get());
+
+        //Colored Logs
+        tag(CaveopolisTags.Blocks.COLORED_LOGS)
+                .add(CaveopolisBlocks.COLORED_LOG.get())
+                .add(CaveopolisBlocks.STRIPPED_COLORED_LOG.get())
+                .add(CaveopolisBlocks.COLORED_WOOD.get())
+                .add(CaveopolisBlocks.STRIPPED_COLORED_WOOD.get());
 
         //Flowers
         tag(BlockTags.FLOWERS)

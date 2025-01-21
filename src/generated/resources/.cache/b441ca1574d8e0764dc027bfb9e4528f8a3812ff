@@ -1,7 +1,11 @@
-// 1.21.1	2025-01-16T11:48:36.5957292	caveopolis Block Tags
+// 1.21.1	2025-01-21T18:37:35.7168423	caveopolis Block Tags
+8eae41385d6a307da4e2d5ed4f2c41bce72a8f42 data/caveopolis/tags/block/colored_bamboo.json
+4ca75022e59bb48bec31cff30f92c44cb17b1bde data/caveopolis/tags/block/colored_logs.json
 d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/block/cobblestones.json
 29eea73cbd8ec17dc53cd6945cae68731010ffa1 data/c/tags/block/player_workstations/crafting_tables.json
 b75819d7071a4275dc5ead66d9f2b94e43d096ba data/c/tags/block/stones.json
+7d4dea4e1fc44b9dd6a6ffe33998f0840fceba23 data/c/tags/block/stripped_logs.json
+795baa9697057f6c5e0f0a43edbfb339b1858634 data/c/tags/block/stripped_woods.json
 0e31be432f776935d3e15d272a175adf97e5461e data/minecraft/tags/block/buttons.json
 86c36de1c1071ab57ddc81f6262ac0325013dd1a data/minecraft/tags/block/dirt.json
 dfa7dd6a04c950f801383ef40ce1274cf42bbbc6 data/minecraft/tags/block/fences.json
