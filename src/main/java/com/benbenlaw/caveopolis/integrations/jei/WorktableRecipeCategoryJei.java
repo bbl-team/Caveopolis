@@ -5,12 +5,15 @@ import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
 import com.benbenlaw.core.block.colored.util.IColored;
 import com.benbenlaw.core.item.CoreDataComponents;
+import com.benbenlaw.core.item.colored.ColoredBlockItem;
 import com.benbenlaw.core.item.colored.ColoredItem;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
+import mezz.jei.api.ingredients.ITypedIngredient;
+import mezz.jei.api.recipe.IFocus;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
@@ -21,6 +24,7 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
@@ -28,6 +32,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
 
 public class WorktableRecipeCategoryJei implements IRecipeCategory<WorktableRecipe> {
 
@@ -75,8 +81,33 @@ public class WorktableRecipeCategoryJei implements IRecipeCategory<WorktableReci
 
     private int backgroundWidth;
 
+
     @Override
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, WorktableRecipe recipe, @NotNull IFocusGroup focusGroup) {
+
+        ItemStack inputStack = focusGroup.getItemStackFocuses(RecipeIngredientRole.INPUT)
+                .map(focus -> focus.getTypedValue().getIngredient())
+                .findFirst()
+                .orElse(ItemStack.EMPTY);
+
+        ItemStack outputStack = focusGroup.getItemStackFocuses(RecipeIngredientRole.OUTPUT)
+                .map(focus -> focus.getTypedValue().getIngredient())
+                .findFirst()
+                .orElse(ItemStack.EMPTY);
+
+        Optional<?> inputStackas = focusGroup.getFocuses(RecipeIngredientRole.INPUT)
+                .map(focus -> focus.getTypedValue().getIngredient())
+                .findFirst();
+
+        Optional<?> outputStackas = focusGroup.getFocuses(RecipeIngredientRole.OUTPUT)
+                .map(focus -> focus.getTypedValue().getIngredient())
+                .findFirst();
+
+
+        System.out.println("Items: " + inputStack);
+        System.out.println("Outputs: " + outputStack);
+        System.out.println("Items: " + inputStackas);
+        System.out.println("Outputs: " + outputStackas);
 
         if (Block.byItem(recipe.input().getItems()[0].getItem()) instanceof IColored || recipe.input().getItems()[0].getItem() instanceof ColoredItem) {
             String color = recipe.getResults().getFirst().get(CoreDataComponents.COLOR);
