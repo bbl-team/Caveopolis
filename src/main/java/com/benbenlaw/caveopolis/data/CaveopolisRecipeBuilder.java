@@ -817,7 +817,7 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
     }
     public void createPressurePlateRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
         String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
-        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 2)
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, output, 1)
                 .pattern("SS")
                 .define('S', input)
                 .unlockedBy("has_item", has(input))
