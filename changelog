@@ -13,6 +13,9 @@ spray cans stop the working of blocks on the same color
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.5.2
+Re added sapling loot table
+
 5.5.1
 Fixed pressure plate recipe giving 2 instead of 1 in crafting
 
