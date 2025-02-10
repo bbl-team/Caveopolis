@@ -26,8 +26,14 @@ public class CaveopolisCreativeTab {
                 // List of block types that share similar properties
                 List<Supplier<ItemStack>> blocks = Arrays.<Supplier<ItemStack>>asList(
 
+                        //Dirt
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_DIRT.get()),
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_GRASS_BLOCK.get()),
+
+
                         //Crafting Table
                         () -> new ItemStack(CaveopolisItems.COLORED_CRAFTING_TABLE.get()),
+
                         //Colored Items
                         () -> new ItemStack(CaveopolisItems.COLORED_APPLE.get()),
 
@@ -205,7 +211,6 @@ public class CaveopolisCreativeTab {
                         () -> new ItemStack(CaveopolisBlocks.COLORED_PLANK_TRAPDOOR.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_BRICKS.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_STONE_BRICKS.get()),
-                        () -> new ItemStack(CaveopolisBlocks.COLORED_DIRT.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_COBBLESTONE_BRICKS.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_MARBLE.get()),

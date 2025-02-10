@@ -32,6 +32,7 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         //Misc Blocks
         craftingTableBlock((ColoredCraftingTable) CaveopolisBlocks.COLORED_CRAFTING_TABLE.get(), CaveopolisBlocks.COLORED_PLANKS.get());
         simpleBlockWithElements(CaveopolisBlocks.COLORED_DIRT.get());
+//        grassBlock((ColoredGrass) CaveopolisBlocks.COLORED_GRASS_BLOCK.get(), CaveopolisBlocks.COLORED_DIRT.get());
 
         //Colored Plants
         flowerWithElements((FlowerBlock) CaveopolisBlocks.COLORED_POPPY.get());
@@ -249,6 +250,30 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
 
     }
+    private void grassBlock(ColoredGrass craftingTable, Block dirt) {
+
+        ResourceLocation grassBlockRegistryName = BuiltInRegistries.BLOCK.getKey(craftingTable);
+        ResourceLocation dirtBlockRegistryName = BuiltInRegistries.BLOCK.getKey(dirt);
+        ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(dirtBlockRegistryName.getNamespace(), "block/" + dirtBlockRegistryName.getPath());
+        ResourceLocation textureFront = ResourceLocation.fromNamespaceAndPath(dirtBlockRegistryName.getNamespace(), "block/" + grassBlockRegistryName.getPath());
+        ResourceLocation textureTop = ResourceLocation.fromNamespaceAndPath(grassBlockRegistryName.getNamespace(), "block/" + grassBlockRegistryName.getPath() + "_top");
+        ResourceLocation textureSide = ResourceLocation.fromNamespaceAndPath(grassBlockRegistryName.getNamespace(), "block/" + grassBlockRegistryName.getPath() + "_side");
+
+
+        ModelFile cubeSides = models().withExistingParent(grassBlockRegistryName.getPath(), "caveopolis:block/tintable_cube_bottom_top")
+                .texture("bottom", texture)
+                .texture("top", textureTop)
+                .texture("side", textureSide)
+                .texture("particle", textureSide)
+                .renderType("cutout");
+
+        simpleBlockItem(craftingTable, cubeSides);
+
+        getVariantBuilder(craftingTable).forAllStatesExcept(state ->
+                ConfiguredModel.builder().modelFile(cubeSides).build(), ColoredSapling.LIT, ColoredSapling.COLOR);
+
+    }
+
 
     private void craftingTableBlock(ColoredCraftingTable craftingTable, Block planksBlock) {
 

@@ -31,6 +31,15 @@ public class CaveopolisBlocks {
             () -> new ColoredCraftingTable(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE).sound(SoundType.WOOD)
                     .lightLevel(litBlockEmission())));
 
+    public static final DeferredBlock<Block> COLORED_DIRT = registerBlockWithoutBlockItem("colored_dirt",
+            () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).sound(SoundType.GRAVEL)
+                    .lightLevel(litBlockEmission())));
+
+    //todo actually enable colored grass
+    public static final DeferredBlock<Block> COLORED_GRASS_BLOCK = registerBlockWithoutBlockItem("colored_grass_block",
+            () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK).sound(SoundType.GRASS)
+                    .lightLevel(litBlockEmission())));
+
     //Colored Cracked Stone Bricks
     public static final DeferredBlock<Block> COLORED_CRACKED_STONE_BRICKS = registerBlockWithoutBlockItem("colored_cracked_stone_bricks",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BRICKS).sound(SoundType.STONE)
@@ -608,11 +617,6 @@ public class CaveopolisBlocks {
 
 
 
-
-
-    public static final DeferredBlock<Block> COLORED_DIRT = registerBlockWithoutBlockItem("colored_dirt",
-            () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).sound(SoundType.GRAVEL)
-                    .lightLevel(litBlockEmission())));
 
 
 

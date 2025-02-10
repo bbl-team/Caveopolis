@@ -135,7 +135,23 @@ public class CaveopolisItemTags extends ItemTagsProvider {
                 .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.asItem())
                 .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.asItem());
 
+        tag(Tags.Items.FENCE_GATES_WOODEN)
+                .add(CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.asItem());
+
         //Fences
+
+        tag(Tags.Items.FENCES_WOODEN)
+                .add(CaveopolisBlocks.COLORED_PLANK_FENCE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.asItem());
+
+        tag(ItemTags.WOODEN_FENCES)
+                .add(CaveopolisBlocks.COLORED_PLANK_FENCE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE.asItem())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.asItem());
+
         tag(ItemTags.FENCES)
                 .add(CaveopolisBlocks.COLORED_PLANK_FENCE.asItem())
                 .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE.asItem())

@@ -239,6 +239,7 @@ public class CaveopolisJEIPlugin implements IModPlugin {
 
 
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_DIRT.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_GRASS_BLOCK.asItem(), new BlockSubtypeInterpreter());
     }
 
     public static RecipeType<WorktableRecipe> WORKTABLE_RECIPE =

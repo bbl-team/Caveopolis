@@ -13,6 +13,12 @@ spray cans stop the working of blocks on the same color
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.5.3
+Colored Grass Part 1
+Added Colored fences to the other 3 wooden fence tags, fixes fences not connecting to vanilla ones
+Added colored fence gates to the other 2 wooden fence gate tags
+
+
 5.5.2
 Re added sapling loot table
 

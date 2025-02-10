@@ -467,6 +467,9 @@ public class CaveopolisItems {
     public static final DeferredItem<Item> COLORED_DIRT = ITEMS.register("colored_dirt",
             () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_DIRT.get(), new ColoredItemProperties()));
 
+    public static final DeferredItem<Item> COLORED_GRASS_BLOCK = ITEMS.register("colored_grass_block",
+            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_GRASS_BLOCK.get(), new ColoredItemProperties()));
+
 
 
     public static void register(IEventBus eventBus) {

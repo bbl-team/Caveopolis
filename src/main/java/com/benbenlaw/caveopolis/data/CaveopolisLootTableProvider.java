@@ -45,6 +45,7 @@ public class CaveopolisLootTableProvider extends VanillaBlockLoot {
         //Crafting Table
         this.dropSelf(CaveopolisBlocks.COLORED_SAPLING.get());
         this.dropSelf(CaveopolisBlocks.COLORED_CRAFTING_TABLE.get());
+        this.createSingleItemTableWithSilkTouch(CaveopolisBlocks.COLORED_GRASS_BLOCK.get(), CaveopolisBlocks.COLORED_DIRT.get());
 
         //Colored Flower
         this.dropSelf(CaveopolisBlocks.COLORED_POPPY.get());

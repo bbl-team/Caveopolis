@@ -1,13 +1,15 @@
-// 1.21.1	2025-01-21T18:37:35.7168423	caveopolis Block Tags
+// 1.21.1	2025-02-10T09:56:52.9148458	caveopolis Block Tags
 8eae41385d6a307da4e2d5ed4f2c41bce72a8f42 data/caveopolis/tags/block/colored_bamboo.json
 4ca75022e59bb48bec31cff30f92c44cb17b1bde data/caveopolis/tags/block/colored_logs.json
 d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/block/cobblestones.json
+dfa7dd6a04c950f801383ef40ce1274cf42bbbc6 data/c/tags/block/fences/wooden.json
+3c1cb1419c2fd04968304da2f41ce6e82e0fa385 data/c/tags/block/fence_gates/wooden.json
 29eea73cbd8ec17dc53cd6945cae68731010ffa1 data/c/tags/block/player_workstations/crafting_tables.json
 b75819d7071a4275dc5ead66d9f2b94e43d096ba data/c/tags/block/stones.json
 7d4dea4e1fc44b9dd6a6ffe33998f0840fceba23 data/c/tags/block/stripped_logs.json
 795baa9697057f6c5e0f0a43edbfb339b1858634 data/c/tags/block/stripped_woods.json
 0e31be432f776935d3e15d272a175adf97e5461e data/minecraft/tags/block/buttons.json
-86c36de1c1071ab57ddc81f6262ac0325013dd1a data/minecraft/tags/block/dirt.json
+8e152cc6ca0f1d7282aab0e8b4c0a02385664510 data/minecraft/tags/block/dirt.json
 dfa7dd6a04c950f801383ef40ce1274cf42bbbc6 data/minecraft/tags/block/fences.json
 3c1cb1419c2fd04968304da2f41ce6e82e0fa385 data/minecraft/tags/block/fence_gates.json
 250afd418ee663c95a8b65f0abda720eaa1591ba data/minecraft/tags/block/flowers.json
@@ -24,6 +26,7 @@ dcb7ec1460ecf20173b817a1989d5e5469811ebe data/minecraft/tags/block/stairs.json
 214eeb20a6abccaea31825d80170ccf880b487ca data/minecraft/tags/block/stone_bricks.json
 839e22b8bdcfe45c80ad5664c672ac0b71db9d50 data/minecraft/tags/block/walls.json
 a4f1ea4899150405a57e4aa5f49b6bf35d7333d6 data/minecraft/tags/block/wooden_doors.json
+dfa7dd6a04c950f801383ef40ce1274cf42bbbc6 data/minecraft/tags/block/wooden_fences.json
 280c3708fb2ca9f7d19a6eb7cf75e1f73f7ccc12 data/minecraft/tags/block/wooden_slabs.json
 4269ecb1497f1811946d9b68b36d7e49e54da717 data/minecraft/tags/block/wooden_stairs.json
 a6186be75a5e07d67603283be7293ee46cc715dd data/minecraft/tags/block/wooden_trapdoors.json

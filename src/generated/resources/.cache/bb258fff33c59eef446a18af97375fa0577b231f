@@ -1,4 +1,4 @@
-// 1.21.1	2025-01-21T18:32:48.9463921	Tags for minecraft:item mod id caveopolis
+// 1.21.1	2025-02-10T09:59:32.5454452	Tags for minecraft:item mod id caveopolis
 8eae41385d6a307da4e2d5ed4f2c41bce72a8f42 data/caveopolis/tags/item/colored_bamboo.json
 4ca75022e59bb48bec31cff30f92c44cb17b1bde data/caveopolis/tags/item/colored_logs.json
 d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/item/cobblestones.json
@@ -19,6 +19,8 @@ dd529b34d5f6c355688ffec8a35c3653d9e23992 data/c/tags/item/dyes/purple.json
 8b18aee9d352736f204dfcec2c0f3085c3ee100a data/c/tags/item/dyes/white.json
 3ae477c390c04fbc6c9648a0be1656c0e50e6c73 data/c/tags/item/dyes/yellow.json
 95f5b03468bd3aa2c2a1c02cdd0e4256e6d25a82 data/c/tags/item/enchantables.json
+dfa7dd6a04c950f801383ef40ce1274cf42bbbc6 data/c/tags/item/fences/wooden.json
+3c1cb1419c2fd04968304da2f41ce6e82e0fa385 data/c/tags/item/fence_gates/wooden.json
 64ac4ce99ee53006bf927785e437f5e6496d54d5 data/c/tags/item/foods.json
 29eea73cbd8ec17dc53cd6945cae68731010ffa1 data/c/tags/item/player_workstations/crafting_tables.json
 b75819d7071a4275dc5ead66d9f2b94e43d096ba data/c/tags/item/stones.json
@@ -37,6 +39,7 @@ df50beafd7093811308dc842e1d115e8b8b104cb data/minecraft/tags/item/slabs.json
 214eeb20a6abccaea31825d80170ccf880b487ca data/minecraft/tags/item/stone_bricks.json
 46792c02f24e0b3ee1ccadd5004f95283a9e6880 data/minecraft/tags/item/walls.json
 a4f1ea4899150405a57e4aa5f49b6bf35d7333d6 data/minecraft/tags/item/wooden_doors.json
+dfa7dd6a04c950f801383ef40ce1274cf42bbbc6 data/minecraft/tags/item/wooden_fences.json
 280c3708fb2ca9f7d19a6eb7cf75e1f73f7ccc12 data/minecraft/tags/item/wooden_slabs.json
 4269ecb1497f1811946d9b68b36d7e49e54da717 data/minecraft/tags/item/wooden_stairs.json
 a6186be75a5e07d67603283be7293ee46cc715dd data/minecraft/tags/item/wooden_trapdoors.json

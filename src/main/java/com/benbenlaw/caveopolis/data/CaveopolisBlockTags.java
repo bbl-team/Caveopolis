@@ -22,6 +22,7 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
 
+
         //Crafting Tables
         tag(Tags.Blocks.PLAYER_WORKSTATIONS_CRAFTING_TABLES)
                 .add(CaveopolisBlocks.COLORED_CRAFTING_TABLE.get());
@@ -286,8 +287,23 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
                 .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.get())
                 .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.get());
 
+        tag(Tags.Blocks.FENCE_GATES_WOODEN)
+                .add(CaveopolisBlocks.COLORED_PLANK_FENCE_GATE.get())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE_GATE.get())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE_GATE.get());
+
         //Fences
         tag(BlockTags.FENCES)
+                .add(CaveopolisBlocks.COLORED_PLANK_FENCE.get())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE.get())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.get());
+
+        tag(Tags.Blocks.FENCES_WOODEN)
+                .add(CaveopolisBlocks.COLORED_PLANK_FENCE.get())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE.get())
+                .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.get());
+
+        tag(BlockTags.WOODEN_FENCES)
                 .add(CaveopolisBlocks.COLORED_PLANK_FENCE.get())
                 .add(CaveopolisBlocks.COLORED_BAMBOO_FENCE.get())
                 .add(CaveopolisBlocks.COLORED_BAMBOO_MOSAIC_FENCE.get());
@@ -445,7 +461,8 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
 
         //Dirt
         tag(BlockTags.DIRT)
-                .add(CaveopolisBlocks.COLORED_DIRT.get());
+                .add(CaveopolisBlocks.COLORED_DIRT.get())
+                .add(CaveopolisBlocks.COLORED_GRASS_BLOCK.get());
 
         //Cobblestone
         tag(Tags.Blocks.COBBLESTONES)
