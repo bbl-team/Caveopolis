@@ -16,6 +16,9 @@ public class VanillaResults {
     public static final NonNullList<ItemStack> BRICKS;
     public static final NonNullList<ItemStack> COBBLESTONE;
     public static final NonNullList<ItemStack> DIRT;
+    public static final NonNullList<ItemStack> GRASS_BLOCK;
+    public static final NonNullList<ItemStack> SHORT_GRASS;
+    public static final NonNullList<ItemStack> TALL_GRASS;
     public static final NonNullList<ItemStack> APPLE;
     public static final NonNullList<ItemStack> POPPY;
     public static final NonNullList<ItemStack> DANDELION;
@@ -58,6 +61,22 @@ public class VanillaResults {
         DIRT = NonNullList.create();
         for (String color : new VanillaResults().colors) {
             DIRT.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_DIRT.get(), 1), color));
+            DIRT.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_GRASS_BLOCK.get(), 1), color));
+        }
+
+        GRASS_BLOCK = NonNullList.create();
+        for (String color : new VanillaResults().colors) {
+            GRASS_BLOCK.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_GRASS_BLOCK.get(), 1), color));
+        }
+
+        SHORT_GRASS = NonNullList.create();
+        for (String color : new VanillaResults().colors) {
+            SHORT_GRASS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_SHORT_GRASS.get(), 1), color));
+        }
+
+        TALL_GRASS = NonNullList.create();
+        for (String color : new VanillaResults().colors) {
+            TALL_GRASS.add(iconWithColor(new ItemStack(CaveopolisItems.COLORED_TALL_GRASS.get(), 1), color));
         }
 
         APPLE = NonNullList.create();

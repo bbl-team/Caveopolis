@@ -15,7 +15,8 @@ public class CaveopolisColorHandler {
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_CRAFTING_TABLE.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_DIRT.get());
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_GRASS_BLOCK.get());
-
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_SHORT_GRASS.get());
+        event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_TALL_GRASS.get());
 
         //Colored Flowers
         event.register(new IColored.BlockColors(), CaveopolisBlocks.COLORED_POPPY.get());
@@ -228,6 +229,9 @@ public class CaveopolisColorHandler {
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_CRAFTING_TABLE.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_DIRT.get().asItem());
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_GRASS_BLOCK.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_SHORT_GRASS.get().asItem());
+        event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_TALL_GRASS.get().asItem());
+
 
         //Colored Items
         event.register(new IColored.ItemColors(), CaveopolisItems.COLORED_APPLE.get().asItem());

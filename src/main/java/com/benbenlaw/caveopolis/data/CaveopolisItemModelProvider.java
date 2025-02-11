@@ -47,11 +47,19 @@ public class CaveopolisItemModelProvider extends ItemModelProvider {
         saplingItem(CaveopolisItems.COLORED_SAPLING);
         saplingItem(CaveopolisItems.COLORED_POPPY);
         saplingItem(CaveopolisItems.COLORED_DANDELION);
+        saplingItem(CaveopolisItems.COLORED_SHORT_GRASS);
+        tallGrass(CaveopolisItems.COLORED_TALL_GRASS);
 
 
 
     }
 
+
+    private void tallGrass(DeferredItem<Item> item) {
+        withExistingParent(item.getId().getPath(),
+                ResourceLocation.withDefaultNamespace("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "block/" + item.getId().getPath() + "_top"));
+    }
 
     private void saplingItem(DeferredItem<Item> item) {
         withExistingParent(item.getId().getPath(),

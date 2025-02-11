@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "caveopolis:block/colored_tall_grass_bottom"
+    },
+    "half=upper": {
+      "model": "caveopolis:block/colored_tall_grass_top"
+    }
+  }
+}

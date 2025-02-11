@@ -24,6 +24,8 @@ public class CaveopolisDataMapProvider extends DataMapProvider {
         addCompostable(CaveopolisItems.COLORED_POPPY, 0.65F);
         addCompostable(CaveopolisItems.COLORED_LEAVES, 0.3F);
         addCompostable(CaveopolisItems.COLORED_SAPLING, 0.3F);
+        addCompostable(CaveopolisItems.COLORED_SHORT_GRASS, 0.3F);
+        addCompostable(CaveopolisItems.COLORED_TALL_GRASS, 0.3F);
     }
 
     @SuppressWarnings("deprecation")

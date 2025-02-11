@@ -14,6 +14,12 @@
     },
     "caveopolis:colored_sapling": {
       "chance": 0.3
+    },
+    "caveopolis:colored_short_grass": {
+      "chance": 0.3
+    },
+    "caveopolis:colored_tall_grass": {
+      "chance": 0.3
     }
   }
 }

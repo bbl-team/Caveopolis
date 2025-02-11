@@ -50,10 +50,23 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
     @Override
     protected void buildRecipes(RecipeOutput consumer) {
 
-        //Crafting Recipes
+        //Vanilla To Caveopolis - Grass Block
+        WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.GRASS_BLOCK,
+                SizedIngredient.of(Items.GRASS_BLOCK.asItem(), 1))
+                .unlockedBy("has_item", has(Items.GRASS_BLOCK.asItem()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/vanilla/grass_block"));
 
+        //Vanilla To Caveopolis - Short Grass
+        WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.SHORT_GRASS,
+                SizedIngredient.of(Items.SHORT_GRASS.asItem(), 1))
+                .unlockedBy("has_item", has(Items.SHORT_GRASS.asItem()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/vanilla/short_grass"));
 
-
+        //Vanilla To Caveopolis - Tall Grass
+        WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.TALL_GRASS,
+                SizedIngredient.of(Items.TALL_GRASS.asItem(), 1))
+                .unlockedBy("has_item", has(Items.TALL_GRASS.asItem()))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "worktable/vanilla/tall_grass"));
 
         //Vanilla To Caveopolis - Bamboo
         WorktableRecipeBuilder.worktableRecipeBuilder(VanillaResults.BAMBOO,

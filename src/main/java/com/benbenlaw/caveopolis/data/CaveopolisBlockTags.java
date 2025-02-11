@@ -61,6 +61,11 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(CaveopolisBlocks.COLORED_LEAVES.get());
 
+        //Shovel
+        tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(CaveopolisBlocks.COLORED_DIRT.get())
+                .add(CaveopolisBlocks.COLORED_GRASS_BLOCK.get());
+
         //Axe
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(CaveopolisBlocks.COLORED_PLANKS.get())
@@ -463,6 +468,16 @@ public class CaveopolisBlockTags extends BlockTagsProvider {
         tag(BlockTags.DIRT)
                 .add(CaveopolisBlocks.COLORED_DIRT.get())
                 .add(CaveopolisBlocks.COLORED_GRASS_BLOCK.get());
+
+        //Replaceable Plants
+        tag(BlockTags.REPLACEABLE)
+                .add(CaveopolisBlocks.COLORED_TALL_GRASS.get())
+                .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get());
+
+        //Replaceable by Trees
+        tag(BlockTags.REPLACEABLE_BY_TREES)
+                .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get())
+                .add(CaveopolisBlocks.COLORED_TALL_GRASS.get());
 
         //Cobblestone
         tag(Tags.Blocks.COBBLESTONES)

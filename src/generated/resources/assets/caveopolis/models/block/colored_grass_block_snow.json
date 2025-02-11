@@ -1,0 +1,10 @@
+{
+  "parent": "caveopolis:block/tintable_cube_bottom_top",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "caveopolis:block/colored_dirt",
+    "particle": "caveopolis:block/colored_grass_block_side_snow",
+    "side": "caveopolis:block/colored_grass_block_side_snow",
+    "top": "caveopolis:block/colored_grass_block_top_snow"
+  }
+}

@@ -26,10 +26,13 @@ public class CaveopolisCreativeTab {
                 // List of block types that share similar properties
                 List<Supplier<ItemStack>> blocks = Arrays.<Supplier<ItemStack>>asList(
 
+                        //Grass
+                        () -> new ItemStack(CaveopolisBlocks.COLORED_SHORT_GRASS.get()),
+                        () -> new ItemStack(CaveopolisItems.COLORED_TALL_GRASS.get()),
+
                         //Dirt
                         () -> new ItemStack(CaveopolisBlocks.COLORED_DIRT.get()),
                         () -> new ItemStack(CaveopolisBlocks.COLORED_GRASS_BLOCK.get()),
-
 
                         //Crafting Table
                         () -> new ItemStack(CaveopolisItems.COLORED_CRAFTING_TABLE.get()),

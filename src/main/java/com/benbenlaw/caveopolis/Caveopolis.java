@@ -14,6 +14,7 @@ import com.benbenlaw.caveopolis.screen.WorktableScreen;
 import com.benbenlaw.caveopolis.util.CaveopolisColorHandler;
 import com.benbenlaw.caveopolis.util.LogMaps;
 import com.benbenlaw.caveopolis.util.TreeGrowerMap;
+import com.benbenlaw.caveopolis.util.VegetationPlacementMap;
 import com.benbenlaw.caveopolis.worldgen.CaveopolisWorldGeneration;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTrunkPlacers;
 import net.minecraft.world.level.block.Blocks;
@@ -84,6 +85,9 @@ public class Caveopolis {
 
         TreeGrowerMap treeGrowerMaps = new TreeGrowerMap();
         treeGrowerMaps.updateTreeGrowerMap();
+
+        VegetationPlacementMap vegetationPlacementMap = new VegetationPlacementMap();
+        vegetationPlacementMap.updateVegetationPlacementMap();
 
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(CaveopolisBlocks.COLORED_POPPY.getId(), CaveopolisBlocks.COLORED_POTTED_POPPY);

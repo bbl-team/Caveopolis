@@ -13,6 +13,24 @@ spray cans stop the working of blocks on the same color
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.6.0 Colored Grass Update
+Update Curse Forge Page with new images and descriptions
+Added Colored Grass
+Added Colored Short Grass
+Added Colored Tall Grass
+Added some more missing tags
+Added VegetationPlacementMap for colored grass
+Colored grass will spread to adjacent colored dirt blocks and transform them into that colored grass
+Bone meal support, fully data driven uses custom BBL Core system to select the correct vegetation placement for the color
+Bone meal effects are both features and placements allowing for worldgen in the future (if wanted)
+These new block will be marked as BETA as the whole system for this in new and may have bugs
+Added these recipes to the worktable;
+    Dirt -> Colored Grass
+    Grass -> Colored Grass
+    Short Grass -> Colored Short Grass
+    Tall Grass -> Colored Tall Grass
+
+
 5.5.3
 Colored Grass Part 1
 Added Colored fences to the other 3 wooden fence tags, fixes fences not connecting to vanilla ones

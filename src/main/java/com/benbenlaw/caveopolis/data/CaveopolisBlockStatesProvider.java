@@ -32,7 +32,9 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         //Misc Blocks
         craftingTableBlock((ColoredCraftingTable) CaveopolisBlocks.COLORED_CRAFTING_TABLE.get(), CaveopolisBlocks.COLORED_PLANKS.get());
         simpleBlockWithElements(CaveopolisBlocks.COLORED_DIRT.get());
-//        grassBlock((ColoredGrass) CaveopolisBlocks.COLORED_GRASS_BLOCK.get(), CaveopolisBlocks.COLORED_DIRT.get());
+        grassBlockWithElements((ColoredGrassBlock) CaveopolisBlocks.COLORED_GRASS_BLOCK.get(), CaveopolisBlocks.COLORED_DIRT.get());
+        tallGrassWithElements((ColoredTallGrassBlock) CaveopolisBlocks.COLORED_SHORT_GRASS.get());
+        doublePlantWithElements((ColoredDoublePlantBlock) CaveopolisBlocks.COLORED_TALL_GRASS.get());
 
         //Colored Plants
         flowerWithElements((FlowerBlock) CaveopolisBlocks.COLORED_POPPY.get());
@@ -250,27 +252,39 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
 
 
     }
-    private void grassBlock(ColoredGrass craftingTable, Block dirt) {
 
-        ResourceLocation grassBlockRegistryName = BuiltInRegistries.BLOCK.getKey(craftingTable);
+
+
+    private void grassBlockWithElements(ColoredGrassBlock coloredGrassBlock, Block dirt) {
+
+        ResourceLocation grassBlockRegistryName = BuiltInRegistries.BLOCK.getKey(coloredGrassBlock);
         ResourceLocation dirtBlockRegistryName = BuiltInRegistries.BLOCK.getKey(dirt);
         ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(dirtBlockRegistryName.getNamespace(), "block/" + dirtBlockRegistryName.getPath());
-        ResourceLocation textureFront = ResourceLocation.fromNamespaceAndPath(dirtBlockRegistryName.getNamespace(), "block/" + grassBlockRegistryName.getPath());
         ResourceLocation textureTop = ResourceLocation.fromNamespaceAndPath(grassBlockRegistryName.getNamespace(), "block/" + grassBlockRegistryName.getPath() + "_top");
         ResourceLocation textureSide = ResourceLocation.fromNamespaceAndPath(grassBlockRegistryName.getNamespace(), "block/" + grassBlockRegistryName.getPath() + "_side");
+        ResourceLocation textureTopSnow = ResourceLocation.fromNamespaceAndPath(grassBlockRegistryName.getNamespace(), "block/" + grassBlockRegistryName.getPath() + "_top_snow");
+        ResourceLocation textureSideSnow = ResourceLocation.fromNamespaceAndPath(grassBlockRegistryName.getNamespace(), "block/" + grassBlockRegistryName.getPath() + "_side_snow");
 
-
-        ModelFile cubeSides = models().withExistingParent(grassBlockRegistryName.getPath(), "caveopolis:block/tintable_cube_bottom_top")
+        ModelFile grass = models().withExistingParent(grassBlockRegistryName.getPath(), "caveopolis:block/tintable_cube_bottom_top")
                 .texture("bottom", texture)
                 .texture("top", textureTop)
                 .texture("side", textureSide)
                 .texture("particle", textureSide)
                 .renderType("cutout");
 
-        simpleBlockItem(craftingTable, cubeSides);
+        ModelFile grassSnowed = models().withExistingParent(grassBlockRegistryName.getPath() + "_snow", "caveopolis:block/tintable_cube_bottom_top")
+                .texture("bottom", texture)
+                .texture("top", textureTopSnow)
+                .texture("side", textureSideSnow)
+                .texture("particle", textureSideSnow)
+                .renderType("cutout");
 
-        getVariantBuilder(craftingTable).forAllStatesExcept(state ->
-                ConfiguredModel.builder().modelFile(cubeSides).build(), ColoredSapling.LIT, ColoredSapling.COLOR);
+        simpleBlockItem(coloredGrassBlock, grass);
+
+        getVariantBuilder(coloredGrassBlock).forAllStatesExcept(state -> {
+                    boolean snowy = state.getValue(SnowyDirtBlock.SNOWY);
+                    return ConfiguredModel.allYRotations(snowy ? grassSnowed : grass, 0, false);
+                }, ColoredSapling.LIT, ColoredSapling.COLOR);
 
     }
 
@@ -317,7 +331,41 @@ public class CaveopolisBlockStatesProvider extends BlockStateProvider {
         getVariantBuilder(block).forAllStatesExcept(state ->
                 ConfiguredModel.builder().modelFile(cube).build(), ColoredBlock.COLOR, ColoredBlock.LIT);
     }
-    
+
+    private void tallGrassWithElements(ColoredTallGrassBlock flowerBlock) {
+
+        ResourceLocation saplingBlockRegistryName = BuiltInRegistries.BLOCK.getKey(flowerBlock);
+        ResourceLocation texture = ResourceLocation.fromNamespaceAndPath(saplingBlockRegistryName.getNamespace(), "block/" + saplingBlockRegistryName.getPath());
+
+        ModelFile sapling = models().withExistingParent(saplingBlockRegistryName.getPath(), "caveopolis:block/tintable_cross")
+                .texture("cross", texture).renderType("cutout");
+        
+        getVariantBuilder(flowerBlock).forAllStatesExcept(state ->
+                ConfiguredModel.builder().modelFile(sapling).build(), ColoredTallGrassBlock.LIT, ColoredTallGrassBlock.COLOR);
+    }
+
+    private void doublePlantWithElements(ColoredDoublePlantBlock flowerBlock) {
+
+        ResourceLocation saplingBlockRegistryName = BuiltInRegistries.BLOCK.getKey(flowerBlock);
+        ResourceLocation textureTop = ResourceLocation.fromNamespaceAndPath(saplingBlockRegistryName.getNamespace(), "block/" + saplingBlockRegistryName.getPath() + "_top");
+        ResourceLocation textureBottom = ResourceLocation.fromNamespaceAndPath(saplingBlockRegistryName.getNamespace(), "block/" + saplingBlockRegistryName.getPath() + "_bottom");
+
+        ModelFile doubleTop = models().withExistingParent(saplingBlockRegistryName.getPath() + "_top", "caveopolis:block/tintable_cross")
+                .texture("cross", textureTop).renderType("cutout");
+
+        ModelFile doubleBottom = models().withExistingParent(saplingBlockRegistryName.getPath() + "_bottom", "caveopolis:block/tintable_cross")
+                .texture("cross", textureBottom).renderType("cutout");
+
+        getVariantBuilder(flowerBlock).forAllStatesExcept(state -> {
+
+            boolean top = state.getValue(DoublePlantBlock.HALF).equals(DoubleBlockHalf.UPPER);
+            boolean lower = state.getValue(DoublePlantBlock.HALF).equals(DoubleBlockHalf.LOWER);
+            return ConfiguredModel.builder().modelFile(top ? doubleTop : doubleBottom).build();
+
+        }, ColoredDoublePlantBlock.LIT, ColoredDoublePlantBlock.COLOR);
+    }
+
+
     private void flowerWithElements(FlowerBlock flowerBlock) {
 
         ResourceLocation saplingBlockRegistryName = BuiltInRegistries.BLOCK.getKey(flowerBlock);

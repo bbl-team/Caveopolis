@@ -468,9 +468,14 @@ public class CaveopolisItems {
             () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_DIRT.get(), new ColoredItemProperties()));
 
     public static final DeferredItem<Item> COLORED_GRASS_BLOCK = ITEMS.register("colored_grass_block",
-            () -> new ColoredBlockItem((ColoredBlock) CaveopolisBlocks.COLORED_GRASS_BLOCK.get(), new ColoredItemProperties()));
+            () -> new ColoredBlockItem((ColoredGrassBlock) CaveopolisBlocks.COLORED_GRASS_BLOCK.get(), new ColoredItemProperties()));
 
+    //Grass
+    public static final DeferredItem<Item> COLORED_SHORT_GRASS = ITEMS.register("colored_short_grass",
+            () -> new ColoredBlockItem((ColoredTallGrassBlock) CaveopolisBlocks.COLORED_SHORT_GRASS.get(), new ColoredItemProperties()));
 
+    public static final DeferredItem<Item> COLORED_TALL_GRASS = ITEMS.register("colored_tall_grass",
+            () -> new ColoredBlockItem((ColoredDoublePlantBlock) CaveopolisBlocks.COLORED_TALL_GRASS.get(), new ColoredItemProperties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

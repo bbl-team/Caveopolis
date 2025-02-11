@@ -1,0 +1,38 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "caveopolis:block/colored_grass_block"
+      },
+      {
+        "model": "caveopolis:block/colored_grass_block",
+        "y": 90
+      },
+      {
+        "model": "caveopolis:block/colored_grass_block",
+        "y": 180
+      },
+      {
+        "model": "caveopolis:block/colored_grass_block",
+        "y": 270
+      }
+    ],
+    "snowy=true": [
+      {
+        "model": "caveopolis:block/colored_grass_block_snow"
+      },
+      {
+        "model": "caveopolis:block/colored_grass_block_snow",
+        "y": 90
+      },
+      {
+        "model": "caveopolis:block/colored_grass_block_snow",
+        "y": 180
+      },
+      {
+        "model": "caveopolis:block/colored_grass_block_snow",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -3,22 +3,56 @@ package com.benbenlaw.caveopolis.worldgen;
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.core.block.colored.ColoredSapling;
+import com.benbenlaw.core.block.colored.ColoredTallGrassBlock;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
+import net.minecraft.data.worldgen.features.VegetationFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
+import static com.benbenlaw.caveopolis.worldgen.CaveopolisConfiguredFeatures.*;
+
 public class CaveopolisPlacedFeatures {
+
+    //Vegetation
+    public static final ResourceKey<PlacedFeature> BLACK_GRASS_BONEMEAL = registerKey("black_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> RED_GRASS_BONEMEAL = registerKey("red_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> BLUE_GRASS_BONEMEAL = registerKey("blue_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> GREEN_GRASS_BONEMEAL = registerKey("green_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> YELLOW_GRASS_BONEMEAL = registerKey("yellow_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> PURPLE_GRASS_BONEMEAL = registerKey("purple_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> ORANGE_GRASS_BONEMEAL = registerKey("orange_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> WHITE_GRASS_BONEMEAL = registerKey("white_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> BROWN_GRASS_BONEMEAL = registerKey("brown_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> PINK_GRASS_BONEMEAL = registerKey("pink_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> CYAN_GRASS_BONEMEAL = registerKey("cyan_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> LIGHT_GRAY_GRASS_BONEMEAL = registerKey("light_gray_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> LIME_GRASS_BONEMEAL = registerKey("lime_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> MAGENTA_GRASS_BONEMEAL = registerKey("magenta_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> GRAY_GRASS_BONEMEAL = registerKey("gray_grass_bonemeal");
+    public static final ResourceKey<PlacedFeature> LIGHT_BLUE_GRASS_BONEMEAL = registerKey("light_blue_grass_bonemeal");
+
+    //Flowers
+
+    //Tree
     public static final ResourceKey<PlacedFeature> BLACK_TREE_PLACED_KEY = registerKey("black_tree_placed");
     public static final ResourceKey<PlacedFeature> RED_TREE_PLACED_KEY = registerKey("red_tree_placed");
     public static final ResourceKey<PlacedFeature> BLUE_TREE_PLACED_KEY = registerKey("blue_tree_placed");
@@ -36,6 +70,7 @@ public class CaveopolisPlacedFeatures {
     public static final ResourceKey<PlacedFeature> GRAY_TREE_PLACED_KEY = registerKey("gray_tree_placed");
     public static final ResourceKey<PlacedFeature> LIGHT_BLUE_TREE_PLACED_KEY = registerKey("light_blue_tree_placed");
 
+    //Stone
     public static final ResourceKey<PlacedFeature> BLACK_STONE_PLACED_KEY = registerKey("black_stone_placed");
     public static final ResourceKey<PlacedFeature> RED_STONE_PLACED_KEY = registerKey("red_stone_placed");
     public static final ResourceKey<PlacedFeature> BLUE_STONE_PLACED_KEY = registerKey("blue_stone_placed");
@@ -56,6 +91,42 @@ public class CaveopolisPlacedFeatures {
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
+
+        //Bonemeal
+        PlacementUtils.register(context, BLACK_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_BLACK_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, RED_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_RED_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, BLUE_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_BLUE_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, GREEN_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_GREEN_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, YELLOW_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_YELLOW_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, PURPLE_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_PURPLE_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, ORANGE_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_ORANGE_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, WHITE_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_WHITE_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, BROWN_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_BROWN_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, PINK_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_PINK_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, CYAN_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_CYAN_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, LIGHT_GRAY_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_LIGHT_GRAY_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, LIME_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_LIME_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, MAGENTA_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_MAGENTA_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, GRAY_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_GRAY_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+        PlacementUtils.register(context, LIGHT_BLUE_GRASS_BONEMEAL, configuredFeatures.getOrThrow(BONEMEAL_LIGHT_BLUE_GRASS_KEY),
+                RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP);
+
+
 
         //Black Tree
         register(context, BLACK_TREE_PLACED_KEY, configuredFeatures.getOrThrow(CaveopolisConfiguredFeatures.BLACK_TREE_KEY), List.of(

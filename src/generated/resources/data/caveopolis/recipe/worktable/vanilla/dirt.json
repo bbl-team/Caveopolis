@@ -10,11 +10,22 @@
       "id": "caveopolis:colored_dirt"
     },
     {
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
+    },
+    {
       "components": {
         "bblcore:color": "orange"
       },
       "count": 1,
       "id": "caveopolis:colored_dirt"
+    },
+    {
+      "components": {
+        "bblcore:color": "orange"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
     },
     {
       "components": {
@@ -25,10 +36,24 @@
     },
     {
       "components": {
+        "bblcore:color": "magenta"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
+    },
+    {
+      "components": {
         "bblcore:color": "light_blue"
       },
       "count": 1,
       "id": "caveopolis:colored_dirt"
+    },
+    {
+      "components": {
+        "bblcore:color": "light_blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
     },
     {
       "components": {
@@ -39,10 +64,24 @@
     },
     {
       "components": {
+        "bblcore:color": "yellow"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
+    },
+    {
+      "components": {
         "bblcore:color": "lime"
       },
       "count": 1,
       "id": "caveopolis:colored_dirt"
+    },
+    {
+      "components": {
+        "bblcore:color": "lime"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
     },
     {
       "components": {
@@ -53,10 +92,24 @@
     },
     {
       "components": {
+        "bblcore:color": "pink"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
+    },
+    {
+      "components": {
         "bblcore:color": "gray"
       },
       "count": 1,
       "id": "caveopolis:colored_dirt"
+    },
+    {
+      "components": {
+        "bblcore:color": "gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
     },
     {
       "components": {
@@ -67,10 +120,24 @@
     },
     {
       "components": {
+        "bblcore:color": "light_gray"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
+    },
+    {
+      "components": {
         "bblcore:color": "cyan"
       },
       "count": 1,
       "id": "caveopolis:colored_dirt"
+    },
+    {
+      "components": {
+        "bblcore:color": "cyan"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
     },
     {
       "components": {
@@ -81,10 +148,24 @@
     },
     {
       "components": {
+        "bblcore:color": "purple"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
+    },
+    {
+      "components": {
         "bblcore:color": "blue"
       },
       "count": 1,
       "id": "caveopolis:colored_dirt"
+    },
+    {
+      "components": {
+        "bblcore:color": "blue"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
     },
     {
       "components": {
@@ -95,10 +176,24 @@
     },
     {
       "components": {
+        "bblcore:color": "brown"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
+    },
+    {
+      "components": {
         "bblcore:color": "green"
       },
       "count": 1,
       "id": "caveopolis:colored_dirt"
+    },
+    {
+      "components": {
+        "bblcore:color": "green"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
     },
     {
       "components": {
@@ -109,10 +204,24 @@
     },
     {
       "components": {
+        "bblcore:color": "red"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
+    },
+    {
+      "components": {
         "bblcore:color": "black"
       },
       "count": 1,
       "id": "caveopolis:colored_dirt"
+    },
+    {
+      "components": {
+        "bblcore:color": "black"
+      },
+      "count": 1,
+      "id": "caveopolis:colored_grass_block"
     }
   ]
 }

@@ -2,19 +2,23 @@ package com.benbenlaw.caveopolis.block;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.config.StartupConfig;
+import com.benbenlaw.caveopolis.worldgen.CaveopolisConfiguredFeatures;
+import com.benbenlaw.caveopolis.worldgen.CaveopolisPlacedFeatures;
 import com.benbenlaw.caveopolis.worldgen.tree.CaveopolisTreeGrowers;
 import com.benbenlaw.core.block.colored.*;
 import com.benbenlaw.core.block.colored.flammable.*;
+import net.minecraft.data.worldgen.features.MiscOverworldFeatures;
+import net.minecraft.data.worldgen.features.NetherFeatures;
+import net.minecraft.data.worldgen.features.VegetationFeatures;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -30,15 +34,19 @@ public class CaveopolisBlocks {
     public static final DeferredBlock<Block> COLORED_CRAFTING_TABLE = registerBlockWithoutBlockItem("colored_crafting_table",
             () -> new ColoredCraftingTable(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE).sound(SoundType.WOOD)
                     .lightLevel(litBlockEmission())));
-
     public static final DeferredBlock<Block> COLORED_DIRT = registerBlockWithoutBlockItem("colored_dirt",
             () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).sound(SoundType.GRAVEL)
                     .lightLevel(litBlockEmission())));
-
-    //todo actually enable colored grass
-    public static final DeferredBlock<Block> COLORED_GRASS_BLOCK = registerBlockWithoutBlockItem("colored_grass_block",
-            () -> new ColoredBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK).sound(SoundType.GRASS)
+    public static final DeferredBlock<Block> COLORED_TALL_GRASS = registerBlockWithoutBlockItem("colored_tall_grass",
+            () -> new ColoredDoublePlantBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).sound(SoundType.GRASS)
                     .lightLevel(litBlockEmission())));
+    public static final DeferredBlock<Block> COLORED_SHORT_GRASS = registerBlockWithoutBlockItem("colored_short_grass",
+            () -> new ColoredTallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).sound(SoundType.GRASS)
+                    .lightLevel(litBlockEmission()), (ColoredDoublePlantBlock) COLORED_TALL_GRASS.get()));
+    public static final DeferredBlock<Block> COLORED_GRASS_BLOCK = registerBlockWithoutBlockItem("colored_grass_block",
+            () -> new ColoredGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK).sound(SoundType.GRASS)
+                    .lightLevel(litBlockEmission()), (ColoredBlock) COLORED_DIRT.get(),
+                    (ColoredTallGrassBlock) COLORED_SHORT_GRASS.get(), CaveopolisConfiguredFeatures.BONEMEAL_BLACK_GRASS_KEY));
 
     //Colored Cracked Stone Bricks
     public static final DeferredBlock<Block> COLORED_CRACKED_STONE_BRICKS = registerBlockWithoutBlockItem("colored_cracked_stone_bricks",

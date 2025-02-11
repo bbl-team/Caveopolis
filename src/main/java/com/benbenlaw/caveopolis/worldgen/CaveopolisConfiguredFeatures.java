@@ -2,34 +2,59 @@ package com.benbenlaw.caveopolis.worldgen;
 
 import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
-import com.benbenlaw.core.block.colored.ColoredBlock;
-import com.benbenlaw.core.block.colored.ColoredLeaves;
-import com.benbenlaw.core.block.colored.ColoredLog;
+import com.benbenlaw.core.block.colored.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
-import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.AcaciaFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.MegaJungleFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.SpruceFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.GiantTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
+
+import static net.minecraft.data.worldgen.features.CaveFeatures.MOSS_VEGETATION;
 
 public class CaveopolisConfiguredFeatures {
+    //Bonemeal Colored Grass
+
+    //Flowers
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_BLACK_GRASS_KEY = registerKey("bonemeal_black_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_RED_GRASS_KEY = registerKey("bonemeal_red_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_BLUE_GRASS_KEY = registerKey("bonemeal_blue_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_GREEN_GRASS_KEY = registerKey("bonemeal_green_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_YELLOW_GRASS_KEY = registerKey("bonemeal_yellow_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_ORANGE_GRASS_KEY = registerKey("bonemeal_orange_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_PURPLE_GRASS_KEY = registerKey("bonemeal_purple_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_PINK_GRASS_KEY = registerKey("bonemeal_pink_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_CYAN_GRASS_KEY = registerKey("bonemeal_cyan_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_WHITE_GRASS_KEY = registerKey("bonemeal_white_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_BROWN_GRASS_KEY = registerKey("bonemeal_brown_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_GRAY_GRASS_KEY = registerKey("bonemeal_gray_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_LIGHT_BLUE_GRASS_KEY = registerKey("bonemeal_light_blue_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_LIME_GRASS_KEY = registerKey("bonemeal_lime_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_MAGENTA_GRASS_KEY = registerKey("bonemeal_magenta_grass_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_LIGHT_GRAY_GRASS_KEY = registerKey("bonemeal_light_gray_grass_key");
+
+    //Tree
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLACK_TREE_KEY = registerKey("black_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RED_TREE_KEY = registerKey("red_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLUE_TREE_KEY = registerKey("blue_tree");
@@ -46,7 +71,7 @@ public class CaveopolisConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIME_TREE_KEY = registerKey("lime_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAGENTA_TREE_KEY = registerKey("magenta_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIGHT_GRAY_TREE_KEY = registerKey("light_gray_tree");
-
+    //Stone
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLACK_STONE_KEY = registerKey("black_stone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> RED_STONE_KEY = registerKey("red_stone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BLUE_STONE_KEY = registerKey("blue_stone");
@@ -64,8 +89,136 @@ public class CaveopolisConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> MAGENTA_STONE_KEY = registerKey("magenta_stone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LIGHT_GRAY_STONE_KEY = registerKey("light_gray_stone");
 
-
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+
+        //Bonemeal Grass Black
+        FeatureUtils.register(context, BONEMEAL_BLACK_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.BLACK), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.BLACK), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.BLACK), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.BLACK), 5))));
+
+        //Bonemeal Grass Red
+        FeatureUtils.register(context, BONEMEAL_RED_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.RED), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.RED), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.RED), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.RED), 5))));
+
+        //Bonemeal Grass Blue
+        FeatureUtils.register(context, BONEMEAL_BLUE_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.BLUE), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.BLUE), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.BLUE), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.BLUE), 5))));
+
+        //Bonemeal Grass Green
+        FeatureUtils.register(context, BONEMEAL_GREEN_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.GREEN), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.GREEN), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.GREEN), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.GREEN), 5))));
+
+        //Bonemeal Grass Yellow
+        FeatureUtils.register(context, BONEMEAL_YELLOW_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.YELLOW), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.YELLOW), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.YELLOW), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.YELLOW), 5))));
+
+        //Bonemeal Grass Orange
+        FeatureUtils.register(context, BONEMEAL_ORANGE_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.ORANGE), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.ORANGE), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.ORANGE), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.ORANGE), 5))));
+
+        //Bonemeal Grass Purple
+        FeatureUtils.register(context, BONEMEAL_PURPLE_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.PURPLE), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.PURPLE), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.PURPLE), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.PURPLE), 5))));
+
+        //Bonemeal Grass Pink
+        FeatureUtils.register(context, BONEMEAL_PINK_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.PINK), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.PINK), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.PINK), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.PINK), 5))));
+
+        //Bonemeal Grass Cyan
+        FeatureUtils.register(context, BONEMEAL_CYAN_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.CYAN), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.CYAN), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.CYAN), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.CYAN), 5))));
+
+        //Bonemeal Grass White
+        FeatureUtils.register(context, BONEMEAL_WHITE_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.WHITE), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.WHITE), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.WHITE), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.WHITE), 5))));
+
+        //Bonemeal Grass Brown
+        FeatureUtils.register(context, BONEMEAL_BROWN_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.BROWN), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.BROWN), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.BROWN), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.BROWN), 5))));
+
+        //Bonemeal Grass Gray
+        FeatureUtils.register(context, BONEMEAL_GRAY_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.GRAY), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.GRAY), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.GRAY), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.GRAY), 5))));
+
+        //Bonemeal Grass Light Blue
+        FeatureUtils.register(context, BONEMEAL_LIGHT_BLUE_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.LIGHT_BLUE), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.LIGHT_BLUE), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.LIGHT_BLUE), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.LIGHT_BLUE), 5))));
+
+        //Bonemeal Grass Lime
+        FeatureUtils.register(context, BONEMEAL_LIME_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.LIME), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.LIME), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.LIME), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.LIME), 5))));
+
+        //Bonemeal Grass Magenta
+        FeatureUtils.register(context, BONEMEAL_MAGENTA_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.MAGENTA), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.MAGENTA), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.MAGENTA), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.MAGENTA), 5))));
+
+        //Bonemeal Grass Light Gray
+        FeatureUtils.register(context, BONEMEAL_LIGHT_GRAY_GRASS_KEY, Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                new WeightedStateProvider(new SimpleWeightedRandomList.Builder<BlockState>()
+                        .add(CaveopolisBlocks.COLORED_DANDELION.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.LIGHT_GRAY), 10)
+                        .add(CaveopolisBlocks.COLORED_POPPY.get().defaultBlockState().setValue(ColoredFlower.COLOR, DyeColor.LIGHT_GRAY), 10)
+                        .add(CaveopolisBlocks.COLORED_SHORT_GRASS.get().defaultBlockState().setValue(ColoredTallGrassBlock.COLOR, DyeColor.LIGHT_GRAY), 40)
+                        .add(CaveopolisBlocks.COLORED_TALL_GRASS.get().defaultBlockState().setValue(ColoredDoublePlantBlock.COLOR, DyeColor.LIGHT_GRAY), 5))));
+
 
         //Black Tree
         register(context, BLACK_TREE_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(

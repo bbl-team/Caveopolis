@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-10T09:56:52.9148458	caveopolis Block Tags
+// 1.21.1	2025-02-11T10:51:36.73206	caveopolis Block Tags
 8eae41385d6a307da4e2d5ed4f2c41bce72a8f42 data/caveopolis/tags/block/colored_bamboo.json
 4ca75022e59bb48bec31cff30f92c44cb17b1bde data/caveopolis/tags/block/colored_logs.json
 d65d38c5d09282f1c9bd98f61e0616c1d9c17717 data/c/tags/block/cobblestones.json
@@ -18,8 +18,11 @@ fb427480bae956b646af4b3fdb08e622bcb5ad41 data/minecraft/tags/block/leaves.json
 9a2a08ea8872e57f170978cadf32123de7127c63 data/minecraft/tags/block/mineable/axe.json
 fb427480bae956b646af4b3fdb08e622bcb5ad41 data/minecraft/tags/block/mineable/hoe.json
 3766b84da25469eef1d184d7eca607a32421cd87 data/minecraft/tags/block/mineable/pickaxe.json
+8e152cc6ca0f1d7282aab0e8b4c0a02385664510 data/minecraft/tags/block/mineable/shovel.json
 13c83c2b20f2868f4e32c183366bbef91b792db7 data/minecraft/tags/block/planks.json
 bcbb2ac2367b36b03ab1bb403e02e55f484b6788 data/minecraft/tags/block/pressure_plates.json
+81f87901c1e64b798183923340578369f8e283ea data/minecraft/tags/block/replaceable.json
+6bf8ed3e2a33a929667cd9573b622629894286a1 data/minecraft/tags/block/replaceable_by_trees.json
 bdf59e3d37f450cd07de4aeb2077d1c5e5c51e02 data/minecraft/tags/block/saplings.json
 7060fea4eebac5b7465aeee420192c884d6ea34d data/minecraft/tags/block/slabs.json
 dcb7ec1460ecf20173b817a1989d5e5469811ebe data/minecraft/tags/block/stairs.json

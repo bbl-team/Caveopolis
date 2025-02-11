@@ -1,0 +1,51 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "caveopolis:colored_dandelion",
+            "Properties": {
+              "color": "magenta",
+              "lit": "false"
+            }
+          },
+          "weight": 10
+        },
+        {
+          "data": {
+            "Name": "caveopolis:colored_poppy",
+            "Properties": {
+              "color": "magenta",
+              "lit": "false"
+            }
+          },
+          "weight": 10
+        },
+        {
+          "data": {
+            "Name": "caveopolis:colored_short_grass",
+            "Properties": {
+              "color": "magenta",
+              "lit": "false"
+            }
+          },
+          "weight": 40
+        },
+        {
+          "data": {
+            "Name": "caveopolis:colored_tall_grass",
+            "Properties": {
+              "color": "magenta",
+              "half": "lower",
+              "lit": "false"
+            }
+          },
+          "weight": 5
+        }
+      ]
+    }
+  }
+}

@@ -33,6 +33,10 @@ public class CaveopolisJEIPlugin implements IModPlugin {
     @Override
     public void registerItemSubtypes(ISubtypeRegistration registration) {
 
+        //Grass
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_SHORT_GRASS.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_TALL_GRASS.asItem(), new BlockSubtypeInterpreter());
+
         //Crafting Table
         registration.registerSubtypeInterpreter(CaveopolisItems.COLORED_CRAFTING_TABLE.get(), new BlockSubtypeInterpreter());
 
