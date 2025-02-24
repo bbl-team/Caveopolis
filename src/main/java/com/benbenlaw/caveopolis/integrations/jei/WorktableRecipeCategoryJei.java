@@ -7,10 +7,17 @@ import com.benbenlaw.core.block.colored.util.IColored;
 import com.benbenlaw.core.item.CoreDataComponents;
 import com.benbenlaw.core.item.colored.ColoredBlockItem;
 import com.benbenlaw.core.item.colored.ColoredItem;
+import com.benbenlaw.core.util.MouseUtil;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
+import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
+import mezz.jei.api.gui.ingredient.IRecipeSlotDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
+import mezz.jei.api.gui.placement.HorizontalAlignment;
+import mezz.jei.api.gui.placement.VerticalAlignment;
+import mezz.jei.api.gui.widgets.IRecipeExtrasBuilder;
+import mezz.jei.api.gui.widgets.IScrollGridWidget;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.ingredients.ITypedIngredient;
 import mezz.jei.api.recipe.IFocus;
@@ -31,9 +38,12 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.awt.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+
+import static com.benbenlaw.core.util.MouseUtil.isMouseOver;
 
 public class WorktableRecipeCategoryJei implements IRecipeCategory<WorktableRecipe> {
 
@@ -54,7 +64,7 @@ public class WorktableRecipeCategoryJei implements IRecipeCategory<WorktableReci
     }
 
     public WorktableRecipeCategoryJei(IGuiHelper helper) {
-        this.background = helper.createBlankDrawable(144, 92);
+        this.background = helper.createBlankDrawable(160, 92);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(CaveopolisItems.WORKTABLE.get()));
     }
 
@@ -84,31 +94,6 @@ public class WorktableRecipeCategoryJei implements IRecipeCategory<WorktableReci
 
     @Override
     public void setRecipe(@NotNull IRecipeLayoutBuilder builder, WorktableRecipe recipe, @NotNull IFocusGroup focusGroup) {
-
-        ItemStack inputStack = focusGroup.getItemStackFocuses(RecipeIngredientRole.INPUT)
-                .map(focus -> focus.getTypedValue().getIngredient())
-                .findFirst()
-                .orElse(ItemStack.EMPTY);
-
-        ItemStack outputStack = focusGroup.getItemStackFocuses(RecipeIngredientRole.OUTPUT)
-                .map(focus -> focus.getTypedValue().getIngredient())
-                .findFirst()
-                .orElse(ItemStack.EMPTY);
-
-        Optional<?> inputStackas = focusGroup.getFocuses(RecipeIngredientRole.INPUT)
-                .map(focus -> focus.getTypedValue().getIngredient())
-                .findFirst();
-
-        Optional<?> outputStackas = focusGroup.getFocuses(RecipeIngredientRole.OUTPUT)
-                .map(focus -> focus.getTypedValue().getIngredient())
-                .findFirst();
-
-
-        System.out.println("Items: " + inputStack);
-        System.out.println("Outputs: " + outputStack);
-        System.out.println("Items: " + inputStackas);
-        System.out.println("Outputs: " + outputStackas);
-
         if (Block.byItem(recipe.input().getItems()[0].getItem()) instanceof IColored || recipe.input().getItems()[0].getItem() instanceof ColoredItem) {
             String color = recipe.getResults().getFirst().get(CoreDataComponents.COLOR);
             ItemStack coloredStack = new ItemStack(recipe.input().getItems()[0].getItem());
@@ -117,44 +102,29 @@ public class WorktableRecipeCategoryJei implements IRecipeCategory<WorktableReci
             coloredStack.setCount(coloredStackCount);
             coloredStack.set(CoreDataComponents.LIT, false);
             builder.addSlot(RecipeIngredientRole.INPUT, 1, 1)
-                    .addItemStack(coloredStack).setBackground(CaveopolisJEIPlugin.slotDrawable, -1, -1);
-
+                    .addItemStack(coloredStack)
+                    .setBackground(CaveopolisJEIPlugin.slotDrawable, -1, -1);
         } else {
             builder.addSlot(RecipeIngredientRole.INPUT, 1, 1)
-                    .addItemStacks(Arrays.asList(recipe.input().getItems())).setBackground(CaveopolisJEIPlugin.slotDrawable, -1, -1);
+                    .addItemStacks(Arrays.asList(recipe.input().getItems()))
+                    .setBackground(CaveopolisJEIPlugin.slotDrawable, -1, -1);
         }
 
-        int maxColumns = 8;
-        int maxRows = 4;
-        int maxSlots = maxColumns * maxRows;
-
-        int row = 0;
-        int col = 0;
-        int visibleCount = 0;
-        int totalResults = recipe.getResults().size();
-
-        // Iterate through the results
+        // Output slots (added normally)
         for (ItemStack result : recipe.getResults()) {
-            if (visibleCount >= maxSlots) {
-                break;
-            }
-
-            int posX = 1 + col * 18; // 18 is the standard size of a slot
-            int posY = 21 + row * 18; // 18 is the standard size of a slot
-
-            builder.addSlot(RecipeIngredientRole.OUTPUT, posX, posY)
+            builder.addSlot(RecipeIngredientRole.OUTPUT, 0, 0) // Position handled in scroll grid
                     .addItemStack(result)
                     .setBackground(CaveopolisJEIPlugin.slotDrawable, -1, -1);
-
-            col++;
-            if (col >= maxColumns) {
-                col = 0;
-                row++;
-            }
-
-            visibleCount++;
         }
     }
+
+    @Override
+    public void createRecipeExtras(IRecipeExtrasBuilder builder, WorktableRecipe recipe, IFocusGroup focusGroup) {
+        List<IRecipeSlotDrawable> outputSlots = builder.getRecipeSlots().getSlots(RecipeIngredientRole.OUTPUT);
+        IScrollGridWidget scrollGridWidget = builder.addScrollGridWidget(outputSlots, 8, 4); // columns, rows
+        scrollGridWidget.setPosition(9, 38, 142, 54, HorizontalAlignment.CENTER, VerticalAlignment.BOTTOM);
+    }
+
 
     @Override
     public void draw(WorktableRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
@@ -162,12 +132,35 @@ public class WorktableRecipeCategoryJei implements IRecipeCategory<WorktableReci
         Minecraft minecraft = Minecraft.getInstance();
         Font font = minecraft.font;
 
-        if (recipe.getResults().size() > 32) {
-            int remaining = recipe.getResults().size() - 32;
+        if (recipe.getResults().size() > 28) {
+            int remaining = recipe.getResults().size() - 28;
 
-            guiGraphics.drawString(font, "Plus " + remaining + " more", 21, 5, Color.GRAY.getRGB(), false);
+            guiGraphics.renderItem(CaveopolisItems.WHITE_SPRAY_CAN.get().getDefaultInstance(), 16, 0);
+            guiGraphics.renderItem(CaveopolisItems.BLACK_SPRAY_CAN.get().getDefaultInstance(), 24, 0);
+            guiGraphics.renderItem(CaveopolisItems.RED_SPRAY_CAN.get().getDefaultInstance(), 32, 0);
+            guiGraphics.renderItem(CaveopolisItems.GREEN_SPRAY_CAN.get().getDefaultInstance(), 40, 0);
+            guiGraphics.renderItem(CaveopolisItems.BLUE_SPRAY_CAN.get().getDefaultInstance(), 48, 0);
+            guiGraphics.renderItem(CaveopolisItems.YELLOW_SPRAY_CAN.get().getDefaultInstance(), 56, 0);
+            guiGraphics.renderItem(CaveopolisItems.PURPLE_SPRAY_CAN.get().getDefaultInstance(), 64, 0);
+            guiGraphics.renderItem(CaveopolisItems.ORANGE_SPRAY_CAN.get().getDefaultInstance(), 72, 0);
+            guiGraphics.renderItem(CaveopolisItems.LIGHT_BLUE_SPRAY_CAN.get().getDefaultInstance(), 80, 0);
+            guiGraphics.renderItem(CaveopolisItems.PINK_SPRAY_CAN.get().getDefaultInstance(), 88, 0);
+            guiGraphics.renderItem(CaveopolisItems.LIME_SPRAY_CAN.get().getDefaultInstance(), 96, 0);
+            guiGraphics.renderItem(CaveopolisItems.CYAN_SPRAY_CAN.get().getDefaultInstance(), 104, 0);
+            guiGraphics.renderItem(CaveopolisItems.GRAY_SPRAY_CAN.get().getDefaultInstance(), 112, 0);
+            guiGraphics.renderItem(CaveopolisItems.LIGHT_GRAY_SPRAY_CAN.get().getDefaultInstance(), 120, 0);
+            guiGraphics.renderItem(CaveopolisItems.MAGENTA_SPRAY_CAN.get().getDefaultInstance(), 128, 0);
+            guiGraphics.renderItem(CaveopolisItems.BROWN_SPRAY_CAN.get().getDefaultInstance(), 136, 0);
+
+
+            if (MouseUtil.isMouseAboveArea((int) mouseX, (int) mouseY, 16, 0, 0, 0, 136, 12)) {
+                guiGraphics.renderTooltip(font, Component.translatable("jei.tooltip.spray_cans"), (int) mouseX, (int) mouseY);
+            }
+
+
         }
 
         IRecipeCategory.super.draw(recipe, recipeSlotsView, guiGraphics, mouseX, mouseY);
     }
+
 }

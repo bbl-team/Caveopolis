@@ -13,6 +13,12 @@ spray cans stop the working of blocks on the same color
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.6.1
+Fixed JEI not showing the colored blocks
+Disabled JEI lgo spam when using the worktable recipe viewer
+Implemented a scroll bar for the worktable recipe viewer, this allows for all recipes to be recipes
+Fixes issue where item would not show a recipe if it was not inside the first 32 items in the recipe
+
 5.6.0 Colored Grass Update
 Update Curse Forge Page with new images and descriptions
 Added Colored Grass

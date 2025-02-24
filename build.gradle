@@ -80,8 +80,8 @@ dependencies {
     runtimeOnly "curse.maven:jei-238222:5846880"
 
     //EMI
-    compileOnly "curse.maven:emi-580555:5872513"
-    runtimeOnly "curse.maven:emi-580555:5872513"
+    //compileOnly "curse.maven:emi-580555:5872513"
+    //runtimeOnly "curse.maven:emi-580555:5872513"
 
 
 
