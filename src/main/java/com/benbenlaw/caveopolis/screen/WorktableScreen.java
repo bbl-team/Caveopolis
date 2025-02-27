@@ -70,8 +70,8 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
     private void renderSlotTooltips(GuiGraphics guiGraphics, int mouseX, int mouseY, int x, int y) {
 
         TooltipArea[] tooltipAreas = {
-                new TooltipArea(8, 16, 16, 16, "worktable.gui.input_slot"),
-                new TooltipArea(8, 52, 16, 16, "worktable.gui.spray_slot"),
+                new TooltipArea(6, 16, 16, 16, "worktable.gui.input_slot"),
+                new TooltipArea(6, 52, 16, 16, "worktable.gui.spray_slot"),
         };
 
         for (TooltipArea area : tooltipAreas) {
@@ -84,6 +84,19 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
 
     }
 
+    @Override
+    public boolean mouseScrolled(double mouseX, double mouseY, double scrollDirection, double delta) {
+        if (this.menu.container != null && menu.totalItems >= 21) {
+            if (delta > 0) {
+                PacketDistributor.sendToServer(new PreviousPagePayload(0));
+            } else if (delta < 0) {
+                PacketDistributor.sendToServer(new NextPagePayload(0));
+            }
+            return true;
+        }
+        return super.mouseScrolled(mouseX, mouseY, scrollDirection, delta);
+    }
+
     private void addMenuButtons() {
         // Check if the block entity exists
         if (this.menu.container != null && menu.totalItems >= 21) {
@@ -92,7 +105,7 @@ public class WorktableScreen extends AbstractContainerScreen<WorktableMenu> {
             this.addRenderableWidget(new ImageButton(this.leftPos + 24, this.height / 2 - 67, 20, 18, CoreButtons.INCREASE_BUTTONS, (pressed) -> {
                 PacketDistributor.sendToServer(new PreviousPagePayload(0));
 
-                this.menu.previousPage();
+             //   this.menu.previousPage();
             }));
             // bottom button cycles forwards
             this.addRenderableWidget(new ImageButton(this.leftPos + 24, this.height / 2 - 31, 20, 18, CoreButtons.DECREASE_BUTTONS, (pressed) -> {

@@ -191,7 +191,7 @@
    "item.caveopolis.glowstone_spray_can": "Glowstone Spray Can",
    "item.caveopolis.worktable": "Worktable",
    "worktable.gui.input_slot": "Place item here",
-   "worktable.gui.spray_slot": "Use Spray Cans to change the color of the output item!",
+   "worktable.gui.spray_slot": "Filter with Colored Items or Spray Cans!",
    "item.caveopolis.colored_apple": "Colored Apple",
 
    "emi.category.minecraft.worktable": "Worktable",

@@ -2,6 +2,8 @@ package com.benbenlaw.caveopolis.screen;
 
 import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
 import com.benbenlaw.core.item.CoreDataComponents;
+import com.benbenlaw.core.item.colored.ColoredBlockItem;
+import com.benbenlaw.core.item.colored.ColoredItem;
 import com.benbenlaw.core.item.colored.ColoringItem;
 import com.benbenlaw.core.screen.util.CoreSlotTextures;
 import com.mojang.datafixers.util.Pair;
@@ -32,7 +34,7 @@ import java.util.stream.Collectors;
 public class WorktableMenu extends AbstractContainerMenu {
 
     protected static int INPUT_SLOT = 0;
-    protected int SPRAY_SLOT = 1;
+    protected int FILTER_SLOT = 1;
 
     private int currentPage = 0;
     private static final int ITEMS_PER_PAGE = 21;
@@ -94,12 +96,12 @@ public class WorktableMenu extends AbstractContainerMenu {
             }
         });
 
-        // Spray Slot
-        this.addSlot(new Slot(container, SPRAY_SLOT, 6, 52) {
+        // Filter Slot
+        this.addSlot(new Slot(container, FILTER_SLOT, 6, 52) {
 
             @Override
             public boolean mayPlace(@NotNull ItemStack stack) {
-                return stack.getItem() instanceof ColoringItem;
+                return stack.getItem() instanceof ColoringItem || stack.getItem() instanceof ColoredItem|| stack.getItem() instanceof ColoredBlockItem;
             }
 
             @Override
@@ -114,6 +116,11 @@ public class WorktableMenu extends AbstractContainerMenu {
                 super.onTake(player, stack);
                 resetTotalItemsIfSprayCanChanged();
                 updateOutputSlots();
+            }
+
+            @Override
+            public int getMaxStackSize() {
+                return 1;
             }
 
             private void resetTotalItemsIfSprayCanChanged() {
@@ -147,7 +154,7 @@ public class WorktableMenu extends AbstractContainerMenu {
                         }
 
                         if (hasSprayCan()) {
-                            container.getItem(SPRAY_SLOT).setDamageValue(container.getItem(SPRAY_SLOT).getDamageValue() + 1);
+                            container.getItem(FILTER_SLOT).setDamageValue(container.getItem(FILTER_SLOT).getDamageValue() + 1);
                         }
 
                     }
@@ -210,6 +217,17 @@ public class WorktableMenu extends AbstractContainerMenu {
         DyeColor sprayColor = getSprayColor();
         if (sprayColor != null) {
             flattenedList.forEach(item -> item.set(CoreDataComponents.COLOR, sprayColor.toString()));
+        }
+
+        // Filter for item in slot
+        ItemStack filterItem = getColoredItem();
+        boolean hasFilterItem = hasColoredItem();
+        String filterColor = hasFilterItem ? filterItem.get(CoreDataComponents.COLOR) : null;
+        if (hasFilterItem) {
+            flattenedList = flattenedList.stream()
+                    .filter(item -> ItemStack.isSameItemSameComponents(item, filterItem) &&
+                            Objects.equals(item.get(CoreDataComponents.COLOR), filterColor))
+                    .toList();
         }
 
         // Track duplicates and maintain order
@@ -310,6 +328,16 @@ public class WorktableMenu extends AbstractContainerMenu {
         return null;
     }
 
+    boolean hasColoredItem() {
+        return container.getItem(1).getItem() instanceof ColoredBlockItem || container.getItem(1).getItem() instanceof ColoredItem;
+    }
+
+    public ItemStack getColoredItem() {
+        if (hasColoredItem()) {
+            return container.getItem(1);
+        }
+        return null;
+    }
 
     protected void clearContainer(Player player, Container container) {
         if (!player.isAlive() || player instanceof ServerPlayer && ((ServerPlayer) player).hasDisconnected()) {
