@@ -10,6 +10,9 @@
   ],
   "result": {
     "count": 4,
-    "id": "caveopolis:colored_planks"
+    "id": "caveopolis:colored_planks",
+    "components": {
+      "bblcore:color": "orange"
+    }
   }
 }

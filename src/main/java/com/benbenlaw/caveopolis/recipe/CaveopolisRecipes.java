@@ -53,6 +53,9 @@ public class CaveopolisRecipes {
             SERIALIZER.register("colored_crafting", ColoredCraftingRecipe.Serializer::new
     );
 
+    //public static final DeferredHolder<RecipeType<?>, RecipeType<ColoredCraftingRecipe>> COLORED_CRAFTING_TYPE =
+    //        TYPES.register("colored_crafting", ColoredCraftingRecipe.Type::new);
+
 
 
     public static void register(IEventBus eventBus) {

@@ -4,6 +4,7 @@ import com.benbenlaw.caveopolis.Caveopolis;
 import com.benbenlaw.caveopolis.block.CaveopolisBlocks;
 import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
+import com.benbenlaw.caveopolis.recipe.ColoredCraftingRecipe;
 import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
@@ -17,6 +18,8 @@ import mezz.jei.api.registration.ISubtypeRegistration;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
 
 @JeiPlugin
@@ -249,9 +252,15 @@ public class CaveopolisJEIPlugin implements IModPlugin {
     public static RecipeType<WorktableRecipe> WORKTABLE_RECIPE =
             new RecipeType<>(WorktableRecipeCategoryJei.UID, WorktableRecipe.class);
 
+    public static RecipeType<ColoredCraftingRecipe> COLORED_CRAFTING_RECIPE =
+            new RecipeType<>(ColoredCraftingRecipeCategoryJei.UID, ColoredCraftingRecipe.class);
+
+
+
     @Override
     public void registerRecipeCatalysts(IRecipeCatalystRegistration registration) {
         registration.addRecipeCatalyst(new ItemStack(CaveopolisItems.WORKTABLE.get()), WORKTABLE_RECIPE);
+   //     registration.addRecipeCatalyst(new ItemStack(Items.CRAFTING_TABLE), COLORED_CRAFTING_RECIPE);
     }
 
     @Override
@@ -262,6 +271,9 @@ public class CaveopolisJEIPlugin implements IModPlugin {
         registration.addRecipeCategories(new
                 WorktableRecipeCategoryJei(registration.getJeiHelpers().getGuiHelper()));
 
+        registration.addRecipeCategories(new
+                ColoredCraftingRecipeCategoryJei(registration.getJeiHelpers().getGuiHelper()));
+
         slotDrawable = guiHelper.getSlotDrawable();
     }
 
@@ -270,8 +282,12 @@ public class CaveopolisJEIPlugin implements IModPlugin {
         assert Minecraft.getInstance().level != null;
         final var recipeManager = Minecraft.getInstance().level.getRecipeManager();
 
-
         registration.addRecipes(WorktableRecipeCategoryJei.RECIPE_TYPE,
                 recipeManager.getAllRecipesFor(CaveopolisRecipes.WORKTABLE_TYPE.get()).stream().map(RecipeHolder::value).toList());
+
+        registration.addRecipes(ColoredCraftingRecipeCategoryJei.RECIPE_TYPE,
+                recipeManager.getAllRecipesFor(net.minecraft.world.item.crafting.RecipeType.CRAFTING).stream().map(RecipeHolder::value).toList());
     }
+
+
 }

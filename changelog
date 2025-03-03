@@ -13,6 +13,9 @@ spray cans stop the working of blocks on the same color
 UPDATE CHANGELOG AND VERSION BEFORE PUSHING AND UPDATING AND CORE DEPENDENCY
 //*******//
 
+5.6.3
+Updating JEI to show colored recipes part 1
+
 5.6.2
 Added scroll wheel support to the worktable
 Changed filter slot to accept any colored item as well allowing to filter for the exact item you have
