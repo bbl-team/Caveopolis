@@ -754,6 +754,22 @@ public class CaveopolisRecipeBuilder extends RecipeProvider {
                 .unlockedBy("has_item", has(CaveopolisTags.Items.COLORED_BAMBOO))
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/colored_bamboo_planks"));
 
+        //Colored Crafting - Stone Bricks
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, CaveopolisItems.COLORED_STONE_BRICKS, 4)
+                .pattern("SS")
+                .pattern("SS")
+                .define('S', CaveopolisItems.COLORED_STONE)
+                .unlockedBy("has_item", has(CaveopolisItems.COLORED_STONE))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/colored_stone_bricks"));
+
+        //Colored Crafting - Crafting Table
+        ColoredCraftingRecipeBuilder.shaped(RecipeCategory.MISC, CaveopolisItems.COLORED_CRAFTING_TABLE)
+                .pattern("PP")
+                .pattern("PP")
+                .define('P', CaveopolisItems.COLORED_PLANKS)
+                .unlockedBy("has_item", has(CaveopolisItems.COLORED_PLANKS))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Caveopolis.MOD_ID, "crafting/colored_crafting_table"));
+
         //Colored Crafting - Planks
         createPlankLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_PLANKS.get(), CaveopolisItems.COLORED_PLANK_STAIRS.get(), CaveopolisItems.COLORED_PLANK_SLAB.get(), CaveopolisItems.COLORED_PLANK_PRESSURE_PLATE.get(), CaveopolisItems.COLORED_PLANK_FENCE.get(), CaveopolisItems.COLORED_PLANK_FENCE_GATE.get(), CaveopolisItems.COLORED_PLANK_DOOR.get(), CaveopolisItems.COLORED_PLANK_TRAPDOOR.get(), CaveopolisItems.COLORED_PLANK_BUTTON.get());
         createPlankLikeCraftingRecipes(consumer, CaveopolisItems.COLORED_BAMBOO_PLANKS, CaveopolisItems.COLORED_BAMBOO_STAIRS, CaveopolisItems.COLORED_BAMBOO_SLAB, CaveopolisItems.COLORED_BAMBOO_PRESSURE_PLATE, CaveopolisItems.COLORED_BAMBOO_FENCE, CaveopolisItems.COLORED_BAMBOO_FENCE_GATE, CaveopolisItems.COLORED_BAMBOO_DOOR, CaveopolisItems.COLORED_BAMBOO_TRAPDOOR, CaveopolisItems.COLORED_BAMBOO_BUTTON);

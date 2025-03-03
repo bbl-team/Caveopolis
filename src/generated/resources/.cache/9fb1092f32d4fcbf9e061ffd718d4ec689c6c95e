@@ -1,4 +1,4 @@
-// 1.21.1	2025-02-11T17:53:38.9037796	Recipes
+// 1.21.1	2025-03-03T15:27:08.4701603	Recipes
 fa9b67ef4e0b219236a35466de35d2958ae18fb7 data/caveopolis/advancement/recipes/building_blocks/spray_cans/black.json
 8aef8c29ddfb35fe86d2a78f74bbea41876bf76a data/caveopolis/advancement/recipes/building_blocks/spray_cans/blue.json
 7f897fd0bc7911987c13489394c28e1a5360a28d data/caveopolis/advancement/recipes/building_blocks/spray_cans/brown.json
@@ -118,6 +118,7 @@ a25c808891d31dd5a6051f1b780ba2b43bc440a6 data/caveopolis/advancement/recipes/mis
 ac71516c3f918cd2de36344d24f454820def2d7b data/caveopolis/advancement/recipes/misc/crafting/colored_road_slab.json
 9544734c9c9056a27aacfcec0561931116d74081 data/caveopolis/advancement/recipes/misc/crafting/colored_road_stairs.json
 70696ed24ae687101d174c1847ede9910f55a759 data/caveopolis/advancement/recipes/misc/crafting/colored_road_wall.json
+7c660d675d53e1cfce1e7324541ee39dfc2c27dc data/caveopolis/advancement/recipes/misc/crafting/colored_stone_bricks.json
 a2e7ec794e460c35206be235e08a34b03535df10 data/caveopolis/advancement/recipes/misc/crafting/colored_stone_brick_button.json
 12c0ab42e9395126bd861633b16a0a4eefddb77d data/caveopolis/advancement/recipes/misc/crafting/colored_stone_brick_pressure_plate.json
 b9db522b15b6e925e6aa2dad697a39503b343bcc data/caveopolis/advancement/recipes/misc/crafting/colored_stone_brick_slab.json
@@ -610,6 +611,7 @@ d237cd9a757fd4695e69ef4c948cffe94ffac5ac data/caveopolis/recipe/crafting/colored
 33cf14c1f8c9631cc261e7d5835d55bd16eee2ee data/caveopolis/recipe/crafting/colored_road_slab.json
 7cbdd47e609e478ee443070bc117b3e2b23eaa2d data/caveopolis/recipe/crafting/colored_road_stairs.json
 a31d31753c03c956effd06d1f0ddf003218dc2b9 data/caveopolis/recipe/crafting/colored_road_wall.json
+022da345fd8738889c2ffaeb2543bb106cbd5bf4 data/caveopolis/recipe/crafting/colored_stone_bricks.json
 252cca6a716efcd84f55a91d3064817eec0230c9 data/caveopolis/recipe/crafting/colored_stone_brick_button.json
 8c01f0d264e9eff6d9619ccc4fa5e66aa0aba15e data/caveopolis/recipe/crafting/colored_stone_brick_pressure_plate.json
 07cd60c64b1f96e100d2572c794a315ddb93f173 data/caveopolis/recipe/crafting/colored_stone_brick_slab.json

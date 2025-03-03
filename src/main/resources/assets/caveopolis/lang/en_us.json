@@ -195,5 +195,8 @@
    "item.caveopolis.colored_apple": "Colored Apple",
 
    "emi.category.minecraft.worktable": "Worktable",
-   "jei.tooltip.spray_cans": "Use Spray Cans to filter outputs!"
+   "jei.tooltip.spray_cans": "Use Spray Cans to filter outputs!",
+   "jei.tooltip.any_crafting_table": "Recipe Works in All Crafting tables!",
+   "jei.information.colored_flowers": "Can be crafted into dye!",
+   "jei.information.spray_can": "Spray cans can be used to Caveopolis blocks in world as well as color blocks in the crafting grid. This also works on some modded and vanilla blocks as long as the block has a color in its name. Try it out on wools, terracotta and much more!\n\nThis also works on items in the crafting grid to dye them\n\nThe glowstone Spray Can works the same accept only for Caveopolis Blocks to Light them up! Both in world and crafting"
 }

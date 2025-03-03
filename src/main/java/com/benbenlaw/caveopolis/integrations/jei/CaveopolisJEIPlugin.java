@@ -6,8 +6,10 @@ import com.benbenlaw.caveopolis.item.CaveopolisItems;
 import com.benbenlaw.caveopolis.recipe.CaveopolisRecipes;
 import com.benbenlaw.caveopolis.recipe.ColoredCraftingRecipe;
 import com.benbenlaw.caveopolis.recipe.WorktableRecipe;
+import com.benbenlaw.core.item.CoreDataComponents;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
+import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.drawable.IDrawableStatic;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.RecipeType;
@@ -16,11 +18,18 @@ import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import mezz.jei.api.registration.ISubtypeRegistration;
 import net.minecraft.client.Minecraft;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CraftingRecipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
+import net.minecraft.world.level.ItemLike;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @JeiPlugin
 public class CaveopolisJEIPlugin implements IModPlugin {
@@ -221,6 +230,7 @@ public class CaveopolisJEIPlugin implements IModPlugin {
 
         //Colored Bamboo
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BAMBOO_BLOCK.asItem(), new BlockSubtypeInterpreter());
+        registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BAMBOO_PLANKS.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.STRIPPED_COLORED_BAMBOO_BLOCK.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BAMBOO_SLAB.asItem(), new BlockSubtypeInterpreter());
         registration.registerSubtypeInterpreter(CaveopolisBlocks.COLORED_BAMBOO_STAIRS.asItem(), new BlockSubtypeInterpreter());
@@ -287,6 +297,54 @@ public class CaveopolisJEIPlugin implements IModPlugin {
 
         registration.addRecipes(ColoredCraftingRecipeCategoryJei.RECIPE_TYPE,
                 recipeManager.getAllRecipesFor(net.minecraft.world.item.crafting.RecipeType.CRAFTING).stream().map(RecipeHolder::value).toList());
+
+
+        //Flowers
+        for (DyeColor color : DyeColor.values()) {
+            ItemStack coloredPoppy = new ItemStack(CaveopolisItems.COLORED_POPPY.get());
+            ItemStack coloredDandelion = new ItemStack(CaveopolisItems.COLORED_DANDELION.get());
+
+            iconWithColor(coloredPoppy, color.getName());
+            registration.addIngredientInfo(coloredPoppy, VanillaTypes.ITEM_STACK,
+                    Component.translatable("jei.information.colored_flowers"));
+
+            iconWithColor(coloredDandelion, color.getName());
+            registration.addIngredientInfo(coloredDandelion, VanillaTypes.ITEM_STACK,
+                    Component.translatable("jei.information.colored_flowers"));
+        }
+
+        //Spray Cans
+        List<ItemStack> sprayCans = new ArrayList<>();
+        sprayCans.add(new ItemStack(CaveopolisItems.BLACK_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.BLUE_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.BROWN_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.CYAN_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.GRAY_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.GREEN_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.LIGHT_BLUE_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.LIGHT_GRAY_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.LIME_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.MAGENTA_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.ORANGE_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.PINK_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.PURPLE_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.RED_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.WHITE_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.YELLOW_SPRAY_CAN.get()));
+        sprayCans.add(new ItemStack(CaveopolisItems.GLOWSTONE_SPRAY_CAN.get()));
+
+        for (ItemStack sprayCan : sprayCans) {
+            registration.addIngredientInfo(sprayCan, VanillaTypes.ITEM_STACK,
+                    Component.translatable("jei.information.spray_can"));
+        }
+
+
+    }
+
+    public static ItemLike iconWithColor(ItemStack item, String color) {
+        item.set(CoreDataComponents.COLOR, color);
+        item.set(CoreDataComponents.LIT, false);
+        return item.getItem();
     }
 
 
